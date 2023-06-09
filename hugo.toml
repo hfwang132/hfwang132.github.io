@@ -505,8 +505,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # Valine 评论系统设置 (https://github.com/xCss/Valine)
       [params.page.comment.valine]
         enable = true
-        appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-        appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
+        appId = "VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI"
+        appKey = "dv86fnCL7DsYQl47DmJm7mHg"
         placeholder = ""
         avatar = "mp"
         meta= ""
@@ -838,17 +838,17 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [languages.en.params]
       [languages.en.params.search]
         enable = true
-        type = "algolia"
+        type = "lunr"
         contentLength = 4000
         placeholder = ""
         maxResultLength = 10
         snippetLength = 30
         highlightTag = "em"
         absoluteURL = false
-        [languages.en.params.search.algolia]
-          index = "index.en"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+        # [languages.en.params.search.algolia]
+        #   index = "index.en"
+        #   appID = "PASDMWALPK"
+        #   searchKey = "b42948e51daaa93df92381c8e2ac0f93"
       [languages.en.params.home]
         rss = 10
         [languages.en.params.home.profile]
@@ -924,17 +924,17 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [languages.zh-cn.params]
       [languages.zh-cn.params.search]
         enable = true
-        type = "algolia"
+        type = "lunr"
         contentLength = 4000
         placeholder = ""
         maxResultLength = 10
         snippetLength = 50
         highlightTag = "em"
         absoluteURL = false
-        [languages.zh-cn.params.search.algolia]
-          index = "index.zh-cn"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+        # [languages.zh-cn.params.search.algolia]
+        #   index = "index.zh-cn"
+        #   appID = "PASDMWALPK"
+        #   searchKey = "b42948e51daaa93df92381c8e2ac0f93"
       [languages.zh-cn.params.home]
         rss = 10
         [languages.zh-cn.params.home.profile]
