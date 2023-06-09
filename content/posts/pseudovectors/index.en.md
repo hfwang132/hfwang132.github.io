@@ -16,13 +16,13 @@ When equipped with an inner product (or non-degenerate bilinear form), there exi
 
 In fact, a pseudo-vector on a 3-dimensional manifold is mathematically equivalent to a 2-vector (bivector). It is similar in definition to a 2-form, with the distinction that a 2-vector belongs to the exterior product of the tangent space, $v\in\bigwedge^2(T_pM)$, while a 2-form belongs to the exterior product of the cotangent space, $\omega\in\bigwedge^2(T_p^*M)$.
 
-## Space Inversion
+## 2 Space Inversion
 
 Recalling why we call "pseudo-vectors" pseudo-vectors in the first place. It is because they exhibit exotic behaviors under space inversion transformations. However, if we consider them as the exterior product of two vectors, all the peculiar behaviors can be explained.
 
 Specifically, as shown in the figure below, under a space inversion transformation, the magnetic field reverses its direction. It's similar to you moving in one direction, but the reflection of you in the mirror moves in the opposite direction, which is a spooky and paranormal event.
 
-{{< figure src="pseudovector.svg" title="The magnetic field is a bivector. If you consider it as a vector, you will encounter this strange phenomenon in the picture: the magnetic field takes a look in the mirror and finds its head turned into feet." >}}
+{{< figure src="pseudovector.svg" title="The magnetic field is a bivector. If you consider it as a vector, you will encounter this spooky phenomenon in the picture: the magnetic field takes a look in the mirror and finds its head turned into feet." >}}
 
 In fact, the magnetic field at point $p$ is not a vector but a bivector, denoted as $B|_p\in (T_pM)\wedge (T_pM)$. Its basis consists of $\frac{\partial}{\partial x}\wedge \frac{\partial}{\partial y},\\,\frac{\partial}{\partial y}\wedge \frac{\partial}{\partial z},\\,\frac{\partial}{\partial z}\wedge \frac{\partial}{\partial x}$.
 
@@ -36,7 +36,7 @@ In practice, treating a bivector as a vector using the right-hand rule is only a
 
 In five-dimensional manifolds, a bivector can be dualized into a trivector, and so on. In an n-dimensional manifold, a bivector can be dualized into an (n-2)-vector.
 
-## Maxwell Equations in Exterior Algebra
+## 3 Maxwell Equations in Exterior Algebra
 
 By the way, the electric field is also a bivector. Its basis consists of $\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial x},\\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial y},\\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial z}$, involving a time dimension. The reason it doesn't appear as a "pseudo-vector" is that we only consider space inversion transformations rather than time inversion transformations.
 
