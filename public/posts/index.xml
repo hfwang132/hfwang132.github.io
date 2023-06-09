@@ -4,7 +4,23 @@
         <link>https://example.com/posts/</link>
         <description>All Posts | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Pseudovectors</title>
+    <link>https://example.com/pseudovectors/</link>
+    <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
+    <author>hfwang</author>
+    <guid>https://example.com/pseudovectors/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Blog Migration</title>
+    <link>https://example.com/blog_migration/</link>
+    <pubDate>Sat, 10 Jun 2023 01:51:11 &#43;0800</pubDate>
+    <author>hfwang</author>
+    <guid>https://example.com/blog_migration/</guid>
+    <description><![CDATA[I recently discovered this fantastic tool for creating personal websites - Hugo. Feels really cool and user-friendly! Plan to gradually migrate my blogs from Zhihu to here in the future.]]></description>
+</item>
+<item>
     <title>A Beginners Guide to Differential Manifolds and Lie Algebras</title>
     <link>https://example.com/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
