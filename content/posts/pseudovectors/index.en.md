@@ -2,6 +2,8 @@
 title: "What on earth are the pseudovectors?"
 date: 2023-06-10T02:21:13+08:00
 draft: false
+tags: ["Exterior Algebra"]
+categories: ["Mathematical Physics"]
 ---
 
 ## 1 Introduction

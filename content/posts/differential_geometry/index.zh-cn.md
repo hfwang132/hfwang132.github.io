@@ -3,7 +3,7 @@ title: "一文拿下微分流形与李代数"
 date: 2023-06-09T14:49:49+08:00
 draft: false
 tags: ["微分几何", "李代数"]
-categories: ["Math"]
+categories: ["数学物理方法"]
 ---
 前言
 ----
