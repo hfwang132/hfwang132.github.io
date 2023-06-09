@@ -1,3 +1,3 @@
 # README
 
-This is [Haifei's personal website](hfwang132.github.io)
+This is [Haifei's personal website](https://hfwang132.github.io)
