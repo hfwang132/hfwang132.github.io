@@ -1,26 +1,3 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Mathematical Physics - Category - Haifei&#39;s Home</title>
-        <link>https://hfwang132.github.io/categories/mathematical-physics/</link>
-        <description>Mathematical Physics - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</lastBuildDate><atom:link href="https://hfwang132.github.io/categories/mathematical-physics/" rel="self" type="application/rss+xml" /><item>
-    <title>What on earth are the pseudovectors?</title>
-    <link>https://hfwang132.github.io/pseudovectors/</link>
-    <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://hfwang132.github.io/pseudovectors/</guid>
-    <description><![CDATA[1 Introduction In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Mathematical Physics - Category - Haifei's Home</title><link>https://hfwang132.github.io/categories/mathematical-physics/</link><description>Mathematical Physics - Category - Haifei's Home</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor><webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 02:21:13 +0800</lastBuildDate><atom:link href="https://hfwang132.github.io/categories/mathematical-physics/" rel="self" type="application/rss+xml"/><item><title>What on earth are the pseudovectors?</title><link>https://hfwang132.github.io/pseudovectors/</link><pubDate>Sat, 10 Jun 2023 02:21:13 +0800</pubDate><author>hfwang</author><guid>https://hfwang132.github.io/pseudovectors/</guid><description><![CDATA[1 Introduction In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;
 In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
-When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector.]]></description>
-</item>
-<item>
-    <title>A Beginners Guide to Differential Manifolds and Lie Algebras</title>
-    <link>https://hfwang132.github.io/differential_geometry/</link>
-    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://hfwang132.github.io/differential_geometry/</guid>
-    <description><![CDATA[TBD Chinese version here]]></description>
-</item>
-</channel>
-</rss>
+When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector.]]></description></item><item><title>A Beginners Guide to Differential Manifolds and Lie Algebras</title><link>https://hfwang132.github.io/differential_geometry/</link><pubDate>Fri, 09 Jun 2023 14:49:49 +0800</pubDate><author>hfwang</author><guid>https://hfwang132.github.io/differential_geometry/</guid><description>TBD Chinese version here</description></item></channel></rss>

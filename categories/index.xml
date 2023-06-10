@@ -1,31 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Category - Haifei&#39;s Home</title>
-        <link>https://hfwang132.github.io/categories/</link>
+        <link>https://example.com/categories/</link>
         <description>Categories - Category - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</lastBuildDate><atom:link href="https://hfwang132.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>Mathematics</title>
-    <link>https://hfwang132.github.io/categories/mathematics/</link>
-    <pubDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</pubDate>
+            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Math</title>
+    <link>https://example.com/categories/math/</link>
+    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
     <author>hfwang</author>
-    <guid>https://hfwang132.github.io/categories/mathematics/</guid>
+    <guid>https://example.com/categories/math/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Mathematical Physics</title>
-    <link>https://hfwang132.github.io/categories/mathematical-physics/</link>
-    <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
+    <title>Documentation</title>
+    <link>https://example.com/categories/documentation/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>hfwang</author>
-    <guid>https://hfwang132.github.io/categories/mathematical-physics/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Diary</title>
-    <link>https://hfwang132.github.io/categories/diary/</link>
-    <pubDate>Sat, 10 Jun 2023 01:51:11 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://hfwang132.github.io/categories/diary/</guid>
+    <guid>https://example.com/categories/documentation/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
