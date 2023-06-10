@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数学物理方法 - 分类 - Haifei&#39;s Home</title>
+        <link>https://hfwang132.github.io/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
+        <description>数学物理方法 - 分类 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 02:21:18 &#43;0800</lastBuildDate><atom:link href="https://hfwang132.github.io/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>赝矢量到底是什么？</title>
+    <link>https://hfwang132.github.io/zh-cn/pseudovectors/</link>
+    <pubDate>Sat, 10 Jun 2023 02:21:18 &#43;0800</pubDate>
+    <author>hfwang</author>
+    <guid>https://hfwang132.github.io/zh-cn/pseudovectors/</guid>
+    <description><![CDATA[1 引子 我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。 其实，在 3 维流形上]]></description>
+</item>
+<item>
+    <title>一文拿下微分流形与李代数</title>
+    <link>https://hfwang132.github.io/zh-cn/differential_geometry/</link>
+    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
+    <author>hfwang</author>
+    <guid>https://hfwang132.github.io/zh-cn/differential_geometry/</guid>
+    <description><![CDATA[前言 作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因]]></description>
+</item>
+</channel>
+</rss>
