@@ -669,7 +669,7 @@ $v_i\mapsto v^j$ 就是该自然同构的坐标表示。在量子力学中，常
 >   
 > 例如，我们可以将一个切向量场“降”为余切向量场：  
 >   
->  $$ \begin{align} \flat:TM&\rightarrow T^\*M \\\\ X^i&\mapsto g_{ij} X^i=X_j \end{align} $$  
+>  $$ \begin{aligned} \flat:TM&\rightarrow T^\*M \\\\ X^i&\mapsto g_{ij} X^i=X_j \end{aligned} $$  
 >   
 > 当我们在做张量的指标升降时，我们其实是在绘制一张张动听的乐谱！  
 >   
@@ -724,13 +724,13 @@ $v_i\mapsto v^j$ 就是该自然同构的坐标表示。在量子力学中，常
 
 交替多重线性映射是这样一个多重线性映射，当交换两个输入时，结果会多一个负号。 具体来说，交替 $n$ 重线性映射定义为 $f:V^n\rightarrow W$ ，且满足如下性质：
 
-a) $$ \begin{align} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n) \\\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{align}
+a) $$ \begin{aligned} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n) \\\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}
 $$
 
 b) 
 
 $$
-\begin{align} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n) \\\\ &=-f(v_1,\cdots,v_j,\cdots,v_i,\cdots,v_n) \end{align}
+\begin{aligned} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n) \\\\ &=-f(v_1,\cdots,v_j,\cdots,v_i,\cdots,v_n) \end{aligned}
 $$
 
 ### 3.2 外积、外代数（Exterior Product, Exterior Algebra）
@@ -869,7 +869,7 @@ $$
 > 它作用到两个切向量 $u=\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^3}+3\frac{\partial}{\partial x^3}$ 和 $v=3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^3}+\frac{\partial}{\partial x^3}$ 上得到：
 >
 > $$
-> \begin{align} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^1(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \\\\ \mathrm{d}x^2(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^2(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \end{vmatrix}\\\\ &-2\begin{vmatrix} \mathrm{d}x^2(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^2(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \\\\ \mathrm{d}x^3(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^3(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \end{vmatrix} \\\\ &=5\cdot\begin{vmatrix}1&3 \\\\ 2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2 \\\\ 3 & 1\end{vmatrix} \\\\ &=-48 \end{align}
+> \begin{aligned} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^1(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \\\\ \mathrm{d}x^2(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^2(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \end{vmatrix}\\\\ &-2\begin{vmatrix} \mathrm{d}x^2(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^2(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \\\\ \mathrm{d}x^3(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^3(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \end{vmatrix} \\\\ &=5\cdot\begin{vmatrix}1&3 \\\\ 2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2 \\\\ 3 & 1\end{vmatrix} \\\\ &=-48 \end{aligned}
 > $$
 
 具体地，一个一般的 $m$ 阶微分形式可以写成下式：
@@ -897,7 +897,7 @@ $\mathrm{d}\varphi=\sum_{I}\sum_{i}\frac{\partial f_I}{\partial x_i}\mathrm{d}x_
 > 对于一个 3 维流形上的二阶微分形式： $\varphi=z^2\mathrm{d}x\wedge\mathrm{d}y+x\sin y \\,\mathrm{d}y\wedge \mathrm{d}z$ ，其外微分为：
 >
 > $$
-> \begin{align} \mathrm{d}\varphi &=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y \\\\ & +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z \\\\ &=(2z+\sin y) \\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z \end{align}
+> \begin{aligned} \mathrm{d}\varphi &=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y \\\\ & +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z \\\\ &=(2z+\sin y) \\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z \end{aligned}
 > $$
 
 上文是一种显式的定义。我们也可以用外微分算子的性质来定义它自身。具体来说，外微分满足如下三个性质：
@@ -957,13 +957,13 @@ $$
 > 外微分算子 $\mathrm{d}$ 作用到一个一阶微分形式（余切向量场）后，会得到一个二阶微分形式：
 >
 > $$
-> \begin{align} \mathrm{d}(f_i\mathrm{d}x^i)&=\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\\\ &+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\\\ &+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3 \end{align}
+> \begin{aligned} \mathrm{d}(f_i\mathrm{d}x^i)&=\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\\\ &+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\\\ &+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3 \end{aligned}
 > $$
 >
 > 对它使用一次 Hodge 星算子，会得到一个一阶微分形式：
 >
 > $$
-> \begin{align} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\\\ &\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{ \\, \\, \\, \\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3} -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\\\ &\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1 \\\\ &=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3 \end{align}
+> \begin{aligned} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\\\ &\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{ \\, \\, \\, \\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3} -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\\\ &\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1 \\\\ &=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3 \end{aligned}
 > $$
 >
 > 它可以写成旋度和切向量的内积： $\star\mathrm{d}f:\star\mathrm{d}f(v)=\langle \nabla \times f^{\sharp}\mid v \rangle$
