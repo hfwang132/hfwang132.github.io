@@ -38,7 +38,7 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Build
-        run: hugo --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
