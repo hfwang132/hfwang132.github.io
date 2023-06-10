@@ -2,6 +2,8 @@
 title: "Curl in high dimension"
 date: 2023-06-10T10:55:34+08:00
 draft: false
+categories: ["Mathematics"]
+tags: ["Vector Calculus"]
 ---
 
 ### 1 Differential Forms
