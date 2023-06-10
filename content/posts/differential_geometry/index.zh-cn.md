@@ -970,7 +970,7 @@ $$
 >
 > 注意到我们用了一个升号： $\sharp$ 。这是因为旋度是作用在切向量场，而非余切向量场上的。具体来说，旋度 $\nabla\times$ 把切向量场映射成切向量场：  $\Gamma(TM)\rightarrow \Gamma(TM)$ 。但是 $f\in \Gamma(T^\*M)$ 是一个余切向量场（一阶微分形式），因此我们先要给将它“升”为切向量场： $f^\sharp\in \Gamma(TM)$ 。
 >
-> 我们在**第 3.7 节**将会介绍什么是 Hodge 星算子，现在，你只需要知道，在 3 维流形上，Hodge 算子作用到一个的 n 阶微分形式上会得到一个 $(3-n)$ 阶微分形式。具体地：
+> 我们在**第 3.7 节**将会介绍什么是 Hodge 星算子，现在，你只需要知道，在 3 维流形上，Hodge 算子作用到一个的 n 阶微分形式上会得到一个 $(3-n)$ 阶微分形式。具体地，如果配备了内积 $\langle\mathrm{d}x^i,\mathrm{d}x^j\rangle=\delta^{j}_i$ ，则有：
 >
 > $\star(\mathrm{d}x^i \wedge \mathrm{d}x^j)=\mathrm{d}x^k$ ，
 > $\star\mathrm{d}x^i = \mathrm{d}x^j\wedge \mathrm{d}x^k$ ，
