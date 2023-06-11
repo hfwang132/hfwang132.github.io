@@ -1231,10 +1231,12 @@ $\mathrm{det}(\alpha \wedge \star\beta)=\langle\alpha\mid\beta\rangle$
 >
 > 感兴趣的读者可以自行推导上式。计算并不复杂。
 
-第四章 流形上的联络和曲率
+第四章 流形上的导数
 -------------------
 
-> 跳过本章不影响第五章的阅读。
+> **评论**
+> 
+> 在第三章中，我们研究了外微分（或称外导数，因为其英文名是 exterior derivative）。在本章中，我们会介绍另外两种导数，分别是协变导数（covariant derivative）和李导数（Lie derivative）。协变导数与李导数都是一个张量场在某一点关于某一个切向量的导数，即，它们都表示张量沿着某一个切向量的方向的变化。它们的区别在于，李导数要求知道该切向量的邻域的情况，而协变导数只需要知道该点的切向量即可。但是，协变导数需要配备一个度规才能被唯一确定下来。
 
 ### 4.1 协变导数、联络（Covariant Derivative, Connection）
 
@@ -1244,7 +1246,7 @@ $\mathrm{det}(\alpha \wedge \star\beta)=\langle\alpha\mid\beta\rangle$
 > 
 > 如果我们做不到这一点，后果是很严重的。想想经典力学中的加速度，为了定义它，我们需要比较 $t$ 时刻和 $t+\epsilon$ 时刻的速度，而这两个速度矢量存在于不同的切空间中。如果我们没办法比较这两个速度矢量，那么我们甚至无法定义加速度！
 > 
-> 为了比较点 $p$ 处的矢量和点 $q$ 处的矢量，我们必须设法将点 $p$ 处的矢量**平移**（parallel transport）到点 $q$ 处。为了使该操作成为可能，我们需要一个**联络**（connection）。一个联络可以由一个协变导数（covariant derivative）来刻画。
+> 为了比较点 $p$ 处的矢量和点 $q$ 处的矢量，我们必须设法将点 $p$ 处的矢量**平移**（parallel transport）到点 $q$ 处。为了使该操作成为可能，我们需要一个**联络**（connection）。一个联络可以由一个 **协变导数（covariant derivative）** 来刻画。
 >
 > 之所以在欧几里德空间中我们没有注意到上述的问题，是因为欧几里德空间中有一个很自然的联络，自然到我们无法意识到每天都在使用它。
 
@@ -1276,7 +1278,7 @@ $$
 \nabla_W \circ C = C \circ \nabla_W
 $$
 
-5) 对于标量场 $f$，$\nabla_W$ 作用到 $f$ 上等同于 $W$ 作用到 $f$ 上（见**第2.2节**）：
+5) 对于标量场 $f$，$\nabla_W$ 作用到 $f$ 上等同于 $W$ 作用到 $f$ 上（见 **第2.2节**）：
 $$
 \nabla_W f = Wf
 $$
@@ -1328,9 +1330,9 @@ $\Gamma^i_{jk}$ 就是大名鼎鼎的 **克氏符号（Christoffel symbol）** �
 > (\nabla_W A)^l = W^k \partial_k A^l + \Gamma_{jk}^l W^k A^j
 > $$
 
-计算了切向量场的协变导数之后，我们再来计算余切向量场 $\alpha = \alpha_j\mathrm{d}x^j$ 的协变导数 $(\nabla_W \alpha)_l$。
+计算了切向量场的协变导数之后，我们再来计算余切向量场 $\alpha = \alpha_j\mathrm{d}x^j$ 的协变导数 $\nabla_W \alpha$。
 
-我们下面来计算 $\nabla_k \mathrm{d}x^j$。
+我们下面先来计算 $\nabla_k \mathrm{d}x^j$。
 
 > **例 4.2**
 > 
@@ -1346,9 +1348,9 @@ $\Gamma^i_{jk}$ 就是大名鼎鼎的 **克氏符号（Christoffel symbol）** �
 > 
 > $$ \nabla_k(\mathrm{d}x^i(\partial_j)) = (\nabla_k \mathrm{d}x^i)\partial_j + \mathrm{d}x^i(\nabla_W \partial_j) $$
 > 
-> 注意到等式左边的 $\mathrm{d}x^i(\partial_j)$ 是一个常标量场（要么恒为1，要么恒为0），所以等式左边等于零。
+> 注意，在上式中，我们对 $(1,1)$ 型张量进行了缩并运算。因此等式左边的 $\mathrm{d}x^i(\partial_j)$ 是一个常标量场（要么恒为1，要么恒为0），从而等式左边等于零。
 > 
-> 因此 $$ \nabla_k \mathrm{d}x^i = -\Gamma^i_{jk}\mathrm{d}x^j $$
+> 移项并缩并得 $$ \nabla_k \mathrm{d}x^i = -\Gamma^i_{jk}\mathrm{d}x^j $$
 >
 > 进一步地，$$ \nabla_W \mathrm{d}x^i = -(\Gamma^i_{jk}W^k)\mathrm{d}x^j $$
 > 
@@ -1370,6 +1372,8 @@ $\Gamma^i_{jk}$ 就是大名鼎鼎的 **克氏符号（Christoffel symbol）** �
 > \end{aligned}
 > $$
 
+### 4.2 黎曼-列维-奇维塔联络（Riemann-Levi-Civita Connection）
+
 > **评论** 
 > 
 > 到目前为止，给定一个流形，其上满足上述五个性质的协变导数有很多种。如何找到一个唯一的（典范的）协变导数呢？
@@ -1384,13 +1388,15 @@ $$
 \nabla_V W - \nabla_W V = [V, W]
 $$
 
+如果 $\nabla$ 满足上式，那么我们称 $\nabla$ 是无挠的。
+
 > **评论** 
 > 
 > $[V, W]$ 定义为 $[V, W]: [V, W]f = V(W(f))-W(V(f))$
 
 > **评论** 
 >  
-> 虽然 $\Gamma^i_{jk}: \nabla_k e_j = \Gamma^i_{jk} e_i $ 不是一个张量，但 $T(V,W) := \nabla_V W - \nabla_W V - [V, W]$ 确实是一个张量，它叫做挠率张量（torsion tensor）。
+> 虽然 $\Gamma^i_{jk}: \nabla_k e_j = \Gamma^i_{jk} e_i $ 不是一个张量，但 $T(V,W) := \nabla_V W - \nabla_W V - [V, W]$ 确实是一个张量，它叫做挠率张量（torsion tensor），证略。
 > 
 > 对于每一个协变导数，我们都可以定义一个挠率张量。当挠率张量为零时，我们说该协变导数是无挠的。
 > 
@@ -1398,11 +1404,11 @@ $$
 > 
 > $$ \Gamma^i_{jk} = \Gamma^i_{kj} $$
 
-协变导数的无挠性等价于 $ \Gamma^i_{jk} = \Gamma^i_{kj} $。
+协变导数的无挠性表现为 $ \Gamma^i_{jk} = \Gamma^i_{kj} $。
 
 > **评论**
 > 
-> 容易看出，$T(V,W)$ 是一个反对称张量。令它为零，我们可以得到 $n\cdot n(n-1)/2$ 个约束（对于三个指标 $i,j,k$ 而言；$n$ 为流形的维数）。
+> 容易看出，$T(V,W)$ 是一个反对称张量。令它为零，我们可以得到 $n\cdot n(n-1)/2$ 个约束（对于三个指标 $i,j,k$ 而言），其中 $n$ 为流形的维数。
 
 加上了无挠性之后，我们限制了可能的协变导数的数量，但是我们还不能将其限制到唯一一个。接下来我们考虑度规，从而将可能的协变导数限制到一个。
 
@@ -1460,11 +1466,11 @@ $$
 
 因此，在给定无挠性和保度规性之后，协变导数可以被唯一确定下来。与该协变导数对应的联络 $\Gamma^i_{ij}$ 叫做 **黎曼联络（Riemann Connection）** 或者 **列维-奇维塔联络（Levi-Civita Connection）** 。
 
-> 由于涉及了三个人名，我们不妨干脆就叫它 RLC 联络，将三个人姓名的首字母都包含进去。注意，RLC 不是电阻、电感、电容的意思！
+> 由于涉及了三个人名，我们不妨干脆就叫它黎曼-列维-奇维塔联络，或者 RLC 联络，将三个人姓名的首字母都包含进去。注意，RLC 不是电阻、电感、电容的意思！
 
 RLC 联络的表达式为 $$ \Gamma^i_{jk} = \frac{g^{il}}{2}(g_{lj,k}+g_{lk,j}-g_{jk,l}). $$
 
-### 4.2 平移（Parallel Transport）
+### 4.3 平移（Parallel Transport）
 
 > **评论** 
 > 
@@ -1503,15 +1509,17 @@ $$
 
 这就是平移的公式。它是一组关于 $V^i$ 的一阶常微分方程。对其进行求解，既可得到向量 $V$ 沿着曲线 $\gamma$ 平移后的坐标分量。
 
-我们可以将沿着曲线 $\gamma$ 的平移算子记作 $\tau^\gamma_{x,y}$，其中下标 $x,y$ 表示从 $x$ 点平移到 $y$ 点。也可以记作 $\tau^\gamma_t:=\tau^\gamma_{\gamma(s),\gamma(s+t)}$（对于任意的 $s$）。很自然地，我们有下面几个性质：
+我们可以将沿着曲线 $\gamma$ 的平移算子记作 $\tau^\gamma_{y,x}$，其中下标 $y,x$ 表示从 $x$ 点平移到 $y$ 点。
 
- $$\tau^\gamma_t \circ \tau^\gamma_s = \tau^\gamma_{(t+s)}$$
- 
- $$\tau^\gamma\_0 = \text{Id}$$
- 
- $$\tau^\gamma_{-t}=(\tau^\gamma\_{t})^{-1}$$
+很自然地，我们有下面几个性质：
 
-### 4.3 测地线（Geodesics）
+ $$\tau^\gamma_{z,y} \circ \tau^\gamma_{y,x} = \tau^\gamma_{z,x}$$
+ 
+ $$\tau^\gamma\_{x,x} = \text{Id}$$
+ 
+ $$\tau^\gamma_{x,y}=(\tau^\gamma\_{t})^{y,x}$$
+
+### 4.4 测地线（Geodesics）
 
 > **评论** 
 > 
@@ -1565,10 +1573,6 @@ $$
 
 可见这是一组关于 $\gamma(t)$ 的二阶常微分方程。对其进行求解，我们即可得到流形上的测地线的方程。
 
-### 4.4 李导数（Lie Derivative）
-
-（未完待续...）
-
 ### 4.5 曲率（Curvature）
 
 > **评论**
@@ -1577,30 +1581,133 @@ $$
 
 {{< figure src="holonomy.png" title="北极处的一个矢量先沿经线平移至赤道，接着沿赤道平移，最后沿经线平移回到北极，和初始状态不重合。" >}}
 
-<!-- 现在，让我们考虑一个沿坐标系的环路，如下所示：
+现在，让我们考虑一个沿坐标系的环路，如下所示：
 
 {{< figure src="iloop.jpg" title="点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处，结果不同" >}}
 
 如图所示，点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处。这两条路径分别是：
 
 1) 先改变 $x_\nu$，再改变 $x_\mu$；
-2) 先改变 $x_\mu$，再改变 $x_\nu$。 -->
+2) 先改变 $x_\mu$，再改变 $x_\nu$。
 
-<!-- 将这条环路不断缩小，那么切矢量的一个基 $e_\beta$ 通过这两条路径平移的结果的差值可以表示为：
+将这条环路不断缩小，那么切矢量的一个基 $e_\beta$ 通过这两条路径平移的结果的差值可以表示为：
 
 $$
 \begin{aligned}
-& \phantom{=} \partial_\mu\partial_\nu e_\beta - \partial_\nu\partial_\mu e_\beta \\\\
-& = \partial_\mu(\Gamma^\alpha_{\beta\nu}e_\alpha) - \partial_\nu(\Gamma^\alpha_{\beta\mu}e_\alpha) \\\\
-& = 
+& \phantom{=} \nabla_\mu\nabla_\nu e_\beta - \nabla_\nu\nabla_\mu e_\beta \\\\
+& = \nabla_\mu(\Gamma^{\alpha}\_{\beta\nu}e_\alpha) - \nabla_\nu(\Gamma^{\alpha}\_{\beta\mu}e_\alpha) \\\\
+& = (\partial_\mu\Gamma^{\alpha}\_{\beta\nu}) + \Gamma^{\alpha}\_{\beta\nu}(\nabla_\mu e_\alpha) - (\nabla_\nu\Gamma^{\alpha}\_{\beta\mu})e_\alpha - \Gamma^{\alpha}\_{\beta\mu}(\nabla\_\nu e_\alpha)\\\\
+& = (\Gamma^{\alpha}\_{\beta\nu,\mu} + \Gamma^\lambda\_{\beta\nu}\Gamma^{\alpha}\_{\lambda\mu} - \Gamma^{\alpha}\_{\beta\mu,\nu} - \Gamma^\lambda\_{\beta\mu}\Gamma^{\alpha}\_{\lambda\nu}) e_\alpha
 \end{aligned}
-$$ -->
+$$
 
-（未完待续...）
+> $\Gamma^{\alpha}\_{\beta\nu,\mu}$ 表示 $\partial_\mu \Gamma^{\alpha}\_{\beta\nu}$。这是一个惯例，即用逗号 $A_{,\alpha}$ 来表示关于分量的偏导 $\partial_\alpha A$。
+> 
+> 有时候，我们还会用分号 $A_{;\alpha}$ 来表示协变导数 $\nabla_\alpha A$。
+
+令 $R^{\alpha}\_{\beta\mu\nu} = \Gamma^{\alpha}\_{\beta\nu,\mu} - \Gamma^{\alpha}\_{\beta\mu,\nu} + \Gamma^\lambda\_{\beta\nu}\Gamma^{\alpha}\_{\lambda\mu} - \Gamma^\lambda\_{\beta\mu}\Gamma^{\alpha}\_{\lambda\nu}$，可以证明，$R^{\alpha}\_{\beta\mu\nu}$ 是一个张量。我们称之为 **黎曼曲率张量（Riemann Curvature Tensor）**。
+
+换言之，黎曼张量定义为：
+
+$$
+\begin{aligned}
+R^{\alpha}\_{\beta\mu\nu} & := (\nabla_\mu\nabla_\nu e_\beta - \nabla_\nu\nabla_\mu e_\beta)^\alpha \\\\
+& = \Gamma^{\alpha}\_{\beta\nu,\mu} - \Gamma^{\alpha}\_{\beta\mu,\nu} + \Gamma^\lambda\_{\beta\nu}\Gamma^{\alpha}\_{\lambda\mu} - \Gamma^\lambda\_{\beta\mu}\Gamma^{\alpha}\_{\lambda\nu}
+\end{aligned}
+$$
+
+> **评论**
+>
+> 我们现在停下来想想黎曼曲率张量 $R^{\alpha}\_{\beta\mu\nu}$ 的几何意义是什么。它表示第 $\beta$ 个基通过两条不同的路径（先沿着 $x_\mu$ 和先沿着 $x_\nu$）平移的结果的差值的第 $\alpha$ 个分量。
+
+根据黎曼曲率张量的定义，我们立即就能得到它的一个性质：$R^\alpha\_{\beta\mu\nu}$ = $R^\alpha\_{\beta\nu\mu}$，利用这个性质，我们可以将 $n^4$ 个独立分量约束到 $n^3(n+1)/2$ 个。但是实际上，黎曼曲率张量还满足更多性质，这些性质可以将独立分量的个数约束到 $n^2(n^2-1)/12$ 个。我们这里暂时就不介绍这些性质了，感兴趣的读者可以阅读相关教材。
+
+接下来，我们可以定义 **里奇张量（Ricci Tensor）**：
+
+$$
+R_{\beta\nu} := R^\lambda\_{\beta \lambda \nu}
+$$
+
+里奇张量是黎曼曲率张量经过缩并得到的。至于 $\alpha$ 为什么和 $\mu$ 缩并，而不是和 $\nu$ 缩并：其实这两者只相差了一个负号。而如果让 $\alpha$ 和 $\beta$ 缩并，则会得到零，证略。
+
+里奇张量是一个对称张量：$R_{\mu\nu}=R_{\mu\nu}$，证略。
+
+最后，我们可以通过度规来得到里奇标量（Ricci curvature），或称标量曲率（scalar curvature）：
+
+$$
+R = g^{\mu\nu}R_{\mu\nu}
+$$
 
 ### 4.6 广义相对论简介（Introduction to General Relativity）
 
-> 广义相对论的核心——爱因斯坦方程（Einstein's Equation），给出了空间的曲率和能动张量之间的关系。前者描述时空如何弯曲，后者描述时空中的能量和动量。
+> 广义相对论的核心——爱因斯坦场方程（Einstein Field Equations），给出了时空的曲率和物质运动之间的关系。前者描述时空如何弯曲，后者描述时空中能量和动量的演化。它们互为因果。
+
+定义爱因斯坦张量 $G_{\mu\nu} := R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}$。则爱因斯坦场方程可以写成：
+
+$$
+G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
+$$
+
+其中 $T_{\mu\nu}$ 叫做能动张量（Energy-Momentum Tensor）。
+
+我们来解释一下能动张量，它有 16 个分量：
+
+$$
+T = \begin{pmatrix}
+T_{tt} & T_{tx} & T_{ty} & T_{tz} \\\\
+T_{xt} & T_{xx} & T_{xy} & T_{xz} \\\\
+T_{yt} & T_{yx} & T_{yy} & T_{yz} \\\\
+T_{zt} & T_{zx} & T_{zy} & T_{zz}
+\end{pmatrix}
+$$
+
+其中 $T_{tt}$ 代表能量密度，$(T_{tx}, T_{ty}, T_{tz})$ 代表动量密度，
+
+$$
+\begin{pmatrix}
+T_{xx} & T_{xy} & T_{xz} \\\\
+T_{yx} & T_{yy} & T_{yz} \\\\
+T_{zx} & T_{zy} & T_{zz}
+\end{pmatrix}
+$$
+
+代表应力张量。特别地，对角元 $T_{xx},T_{yy},T_{zz}$ 分别代表三个方向上的压力。
+
+> **评论**
+> 
+> 在爱因斯坦场方程 $G_{ab} = 8\pi T_{ab}$（自然单位制）中，等式左边描述了时空如何弯曲，等式右边描述了物质如何演化。
+>
+> 就像麦克斯韦方程是电动力学的基本假设一样，爱因斯坦场方程也是广义相对论的基本假设，它不能从其他的式子中推导出来。
+
+如果我们认为电动力学=麦克斯韦方程+求解+应用，那么我们在某种程度上也可以说广义相对论=爱因斯坦场方程+求解+应用。
+
+<!-- 由于本文的初衷是数学（微分几何），因此本节的目的仅仅是介绍爱因斯坦场方程及其求解。下面我们给出它 -->
+
+### 4.7 拉回映射（Pull-back）
+
+（未完待续...）
+
+### 4.8 李导数（Lie Derivative）
+
+> **评论**
+> 
+> 现在，对于协变导数的介绍已经告一段落。接下来，我们介绍另一种导数，叫做李导数。不过在那之前，我们还要介绍其他一些概念。
+
+我们先来定义 **积分曲线（integral curve）**。给定一个切向量场，它的积分曲线是这样一条曲线，它在每一点的导数都等于该点处的切向量。
+
+> 我们常说的电场线，就是电场的积分曲线。
+
+无数条积分曲线很像一条河流。如果我们“随波逐流”，我们就会从流形上的一点漂移到另一点：
+
+$$
+\Phi_t: M\rightarrow M \quad \gamma(0)\mapsto \gamma(t)
+$$
+
+$\phi_t$ 是一个微分同胚（见 **第 1.8 节末**，证略）
+
+（未完待续...）
+
+### 4.9 Killing 向量场
 
 （未完待续...）
 
