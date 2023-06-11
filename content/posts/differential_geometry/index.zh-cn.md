@@ -280,6 +280,8 @@ b)（导子） $v_p(fg)=f(p)v_p(g)+g(p)v_p(f)$
 
 在上式中我们用到了爱因斯坦求和约定（Einstein Convention），也就是对相同的指标进行求和。后面如无特别说明，对上下标一律使用爱因斯坦求和约定。
 
+可以看出，切空间的基可以写成 $\\{\frac{\partial}{\partial x^i}\\}$，简记为 $\\{ \partial_i \\}$。
+
 > **评论**
 >
 > 你可以把点 $p$ 处的切空间想象成与点 $p$ 相切的那个超平面。
@@ -416,7 +418,7 @@ $f:v^{\*\*}\mapsto v \quad\text{s.t.}\quad v^{\*\*}(v^\*)=v^\*(v)$
 
 > **例 2.1** 现有 3 维微分流形上点 $p$ 处的一个向量 $v|_p=\left.\left(\frac{\partial}{\partial x}+2\frac{\partial}{\partial y}-\frac{\partial}{\partial z}\right)\right|_p$ 。 标量场 $f$ 的微分 $\mathbb{d}f$ 作用到 $v$ 身上后得到 $(\mathbb{d}f)|_p(v|_p)=v|_p(f)=\left.\left(\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y}-\frac{\partial f}{\partial z}\right)\right|_p$
 
-点 $p$ 处的微分所在的余切空间有什么样的基呢？以 3 维流形上的一点 $p$ 为例，该点的切空间有三个基 $\\{\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2},\frac{\partial}{\partial x^3}\\}$ 。根据**定理 2.1**，我们可以找到这三个基在余切空间中的对偶基 $\\{\mathrm{d}x^1,\mathrm{d}x^2,\mathrm{d}x^3\\}$ ，使得 $\mathrm{d}x^j\left(\frac{\partial}{\partial x^i}\right)=\delta_i^j$ 。某点处的微分可以表示成这些基的线性组合： $\mathrm{d}f=a_i\mathrm{d}x^i$ 。
+点 $p$ 处的微分所在的余切空间有什么样的基呢？以 3 维流形上的一点 $p$ 为例，该点的切空间有三个基 $\\{\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2},\frac{\partial}{\partial x^3}\\}$ ，简记为 $\\{ \partial_1, \partial_2, \partial_3 \\}$。根据**定理 2.1**，我们可以找到这三个基在余切空间中的对偶基 $\\{\mathrm{d}x^1,\mathrm{d}x^2,\mathrm{d}x^3\\}$ ，使得 $\mathrm{d}x^j\partial_i=\delta_i^j$ 。某点处的微分可以表示成这些基的线性组合： $\mathrm{d}f=a_i\mathrm{d}x^i$ 。
 
 ### 2.6 多重线性映射（Multilinear Map）
 
@@ -654,7 +656,7 @@ $v \rightarrow \langle v\mid \cdot \rangle$
 >   
 > 正因为如此，在很多情况下，物理人都会把内积和非退化厄米形式统称为内积，也就是将内积的定义扩大了。下文我们也会用内积来同时代指这两者。
 
-注意到内积是一个双线性映射，因此它可以用一个 $(0,2)$ 型张量来刻画。根据上文所说的典范同构，我们可以利用内积，将一个 $(1,0)$ 型张量变为一个 (0,1) 型张量： $g_{ij}v^i=v_j$ 。
+注意到内积是一个双线性映射，因此它可以用一个 $(0,2)$ 型张量来刻画。根据上文所说的典范同构，我们可以利用内积，将一个 $(1,0)$ 型张量变为一个 $(0,1)$ 型张量： $g_{ij}v^i=v_j$ 。
 
 $v_i\mapsto v^j$ 就是该典范同构的坐标表示。在量子力学中，这写成 $|v\rangle \mapsto \langle v|$ 。
 
@@ -839,7 +841,6 @@ $\bigwedge^n(T_p^\*M)$ 里的元素（n-form），根据 universal property，�
 > 之所以花这么多笔墨讲这些不同的构造方式，是为了展示 universal property 的优越性：如果对外积采用传统的“正统”定义，那么从外积到交替多重线性映射之间需要经过多层推导和多种不同的构造。  
 >  
 > 而 universal property 则洞察了所有构造都满足的共有性质，并以这个性质作为外积的定义。由于不同构造之间最多相差一个同构，所以我们采取哪种构造都可以，哪个方便就用哪个。
-> $$
 
 为了方便计算（这才是物理人关心的），我们需要显式地给出 n-form 的计算方法。
 
@@ -1228,15 +1229,28 @@ $\mathrm{det}(\alpha \wedge \star\beta)=\langle\alpha\mid\beta\rangle$
 >
 > 感兴趣的读者可以自行推导上式。计算并不复杂。
 
-### *3.8 联络、曲率、广义相对论简介（Connection, Curvature, and General Relativity）
+第四章 流形上的联络和曲率
+-------------------
+
+> 跳过本章不影响第五章的阅读。
+
+### 4.1 协变导数（Covariant Derivative）
 
 > **评论**
 > 
-> 虽然在**第2.1节**中我们定义了切空间，让流形上的矢量有了容身之所，但是我们还是无法直接比较两点的切矢量，因为点 $p$ 处的切空间与点 $q$ 处的切空间是两个不同的空间。如果需要比较点 $p$ 处的矢量和点 $q$ 处的矢量，我们必须设法将点 $p$ 处的矢量**平移**（parallel transport）到点 $q$ 处，这就是一个**联络**（connection），它可以由协变导数（covariant derivative）来刻画。
+> 虽然在**第2.1节**中我们定义了切空间，让流形上的矢量有了容身之所，但是我们还是无法直接比较两点的切矢量，因为点 $p$ 处的切空间与点 $q$ 处的切空间是两个不同的空间。
+> 
+> 如果我们做不到这一点，后果是很严重的。想想经典力学中的加速度，为了定义它，我们需要比较 $t$ 时刻和 $t+\epsilon$ 时刻的速度，而这两个速度矢量存在于不同的切空间中。如果我们没办法比较这两个速度矢量，那么我们甚至无法定义加速度！
+> 
+> 为了比较点 $p$ 处的矢量和点 $q$ 处的矢量，我们必须设法将点 $p$ 处的矢量**平移**（parallel transport）到点 $q$ 处。为了使该操作成为可能，我们需要一个**联络**（connection）。一个联络可以由一个协变导数（covariant derivative）来刻画。
+>
+> 之所以在欧几里德空间中我们没有注意到上述的问题，是因为欧几里德空间中有一个很自然的联络，自然到我们无法意识到每天都在使用它。
 
-流形 $M$ 上某一点 $p$ 处的向量 $u$ 沿着另一个向量 $v$ 的协变导数记为 $\nabla_v u$，它也是一个点 $p$ 处的向量。如果 $u$ 属于向量场 $A$，$v$ 属于向量场 $W$，那么协变导数实际上可以作用在两个两个向量场上：$\nabla_W A$。
+流形 $M$ 上某一点 $p$ 处的向量 $u$ 沿着另一个向量 $v$ 的**协变导数**记为 $\nabla_v u$，它也是一个点 $p$ 处的向量。它表示向量 $u$ 沿着向量 $v$ 的变化量。
 
-协变导数不仅可以作用在向量场 $A$ 上，还可以作用在一般的张量场上（包括标量场，因为标量场也是一种特殊的张量场）。现在我们给出它的定义：
+如果 $u$ 属于向量场 $A$，$v$ 属于向量场 $W$，那么协变导数实际上是作用在两个向量场上的：$\nabla_W A$。
+
+协变导数不仅可以作用在向量场 $A$ 上，还可以推广到作用在一般的张量场上（包括标量场，因为标量场也是一种特殊的张量场）。现在我们给出协变导数的定义：
 
 协变导数是这样一个映射 $\mathcal{T}^m_n(M)\rightarrow \mathcal{T}^m_n(M)$，满足下列性质：
 
@@ -1245,7 +1259,7 @@ $$
 \nabla_W(\lambda A+\mu B) = \lambda \nabla_W A + \mu \nabla_W B
 $$
 
-2) 对 $W$ 的$\mathcal{F}$-线性：
+2) 对 $W$ 的 $\mathcal{F}$-线性：
 $$
 \nabla_{V+fW} = \nabla_V + f\nabla_W \quad f\in\mathcal{F}(M)
 $$
@@ -1260,30 +1274,109 @@ $$
 \nabla_W \circ C = C \circ \nabla_W
 $$
 
-5) 对于标量场 $f$，$\nabla_W$ 作用到 $f$ 上等同于 $W$ 作用到 $f$ 上：
+5) 对于标量场 $f$，$\nabla_W$ 作用到 $f$ 上等同于 $W$ 作用到 $f$ 上（见**第2.2节**）：
 $$
-\nabla_W f = W(f)
+\nabla_W f = Wf
 $$
-
-> **评论**  
-> 还记得吗？$W$ 作用到 $f$ 上的意思是在流形上的每一点都对 $f$ 求方向导数。
 
 现在，在表达式 $\nabla_W A$ 中，令 $W=e_k$，其中 $e_k$ 是一个坐标系的其中一个基所构成的向量场，然后令 $A=e_j$，其中 $e_j$ 是坐标系的另外一个基所构成的向量场；那么，$\nabla_{W}$ 作用到 $A$ 上就可以写成 $\nabla_{e_k}e_j$，不妨将其简记为 $\nabla_{k} e_j$。由于 $\nabla_{k} e_j$ 也是一个向量场，我们可以将它写成向量场的线性组合：$$\nabla_{k} e_j = \Gamma^i_{jk}e_i.$$
 
-$\Gamma^i_{jk}$ 就是大名鼎鼎的克氏符号（Christoffel Symbol）。
+$\Gamma^i_{jk}$ 就是大名鼎鼎的 **克氏符号（Christoffel symbol）** 。我们有时候也称它为一个 **线性联络（linear connection）** 。
 
 可以证明，$\Gamma^i_{jk}$ 可以唯一确定一个协变导数。利用协变导数定义中的五个性质可以证明这一点，证略。
 
 > **评论**  
+> 
 > 现在停下来想一想 $\Gamma^i_{jk}$ 三个下标分别的意思：$k$ 代表沿第 $k$ 个方向移动，$j$ 表示我们在考虑第 $j$ 个基的变化，$i$ 代表变化量在第 $i$ 个基上的分量。
 
 > **注**  
-> 可以证明，$\Gamma^i_{jk}$ 并非一个张量。但是有些作者认为，在给定了坐标系的意义下，可以说它是一个张量。
+> 
+> 可以证明，$\Gamma^i_{jk}$ 并非一个张量。在数学上，一个张量的分量表示只是它的表象，在坐标变换下，张量**本身**是不变的，只是坐标变了。但是 $\Gamma^i_{jk}$ **本身**也会随着坐标系的变化而变化——它不满足张量的坐标变换规则。
+> 
+> 但是有些作者认为，在给定了坐标系的意义下，可以说克氏符号是一个张量，或者说是“坐标系依赖的张量”。
+>
+> 物理人和数学人为了“克氏符号是不是张量”这件事，可以大打一架。
+
+现在，我们讨论协变导数的计算方法。
+
+对于切向量场 $A^j\partial_j$，由于我们已经知道 $\nabla_k\partial_j = \Gamma^i_{jk} \partial_i$，所以它的协变导数很容易计算：
+
+> **例 4.1**
+> 
+> 计算切向量场 $A = A^j\partial_j$ 的协变导数 $\nabla_W A$。
+> 
+> 解：
+> 
+> $$
+> \begin{aligned}
+> \nabla_W A &= \nabla_{W^k\partial_k}(A^j\partial_j) \\\\
+> &\stackrel{2}{=} W^k \nabla_k (A^j\partial_j) \\\\
+> &\stackrel{3,4}{=} W^k (\nabla_k A^j \partial_j + A^j \nabla_k \partial_j ) \\\\
+> &\stackrel{5}{=} W^k (\partial_k A^j \partial_j + A^j \nabla_k \partial_j ) \\\\
+> &:= W^k (\partial_k A^j \partial_j + A^j \Gamma^l_{jk}\partial_l) \\\\
+> &= W^k (\partial_k A^l + A^j \Gamma^l_{jk}) \partial_l
+> \end{aligned}
+> $$
+> 
+> 等号上的数字表示用到了哪一条性质。
+> 
+> 可见，$\nabla_W A$ 在 $\partial_l$ 上的分量为：
+> 
+> $$
+> (\nabla_W A)^l = W^k \partial_k A^l + \Gamma_{jk}^l W^k A^j
+> $$
+
+计算了切向量场的协变导数之后，我们再来计算余切向量场 $\alpha = \alpha_j\mathrm{d}x^j$ 的协变导数 $(\nabla_W \alpha)_l$。
+
+我们下面来计算 $\nabla_k \mathrm{d}x^j$。
+
+> **例 4.2**
+> 
+> 计算 $\nabla_k \mathrm{d}x^j$。
+> 
+> 解：
+> 
+> 由于协变导数与张量缩并运算对易，且满足莱布尼茨律，所以
+> 
+> $$ \nabla_k(\alpha(A)) = (\nabla_k\alpha)A + \alpha(\nabla_k A) $$
+> 
+> 选取 $\alpha = \mathrm{d}x^i$，$A=\partial_j$，则有
+> 
+> $$ \nabla_k(\mathrm{d}x^i(\partial_j)) = (\nabla_k \mathrm{d}x^i)\partial_j + \mathrm{d}x^i(\nabla_W \partial_j) $$
+> 
+> 注意到等式左边的 $\mathrm{d}x^i(\partial_j)$ 是一个常标量场（要么恒为1，要么恒为0），所以等式左边等于零。
+> 
+> 因此 $$ \nabla_k \mathrm{d}x^i = -\Gamma^i_{jk}\mathrm{d}x^j $$
+>
+> 进一步地，$$ \nabla_W \mathrm{d}x^i = -(\Gamma^i_{jk}W^k)\mathrm{d}x^j $$
+> 
+> 对于一般的余切向量场 $\alpha = \alpha_j\mathrm{d}x^j$，其协变导数的推到留给读者联系。提示：仿照 **例 4.1** 的方法。
+
+现在我们有了切向量场和余切向量场的协变导数。那么，对于一般的 $(p,q)$ 型张量，它的协变导数 $(\nabla_W A)^{i...j}_{k...l}$ 应该如何计算呢？这里我们直接给出公式。感兴趣的读者，可以利用 **例 4.1** 和 **例 4.2** 介绍的方法和结果来自行推导：
+
+> **例 4.3**
+> 
+> 计算张量 $A$ 的协变导数 $(\nabla_W A)^{i...j}_{k...l}$。
+> 
+> 解（过程略）：
+>
+> $$
+> \begin{aligned}
+> (\nabla_W A)^{i...j}\_{k...l} & = W^{m} \partial_{m} A^{i...j}\_{k...l} \\\\ 
+> & - \Gamma^{n}\_{km} W^{m} A^{i...j}\_{n...l} - \cdots - \Gamma^{n}\_{lm} W^m A^{i...j}\_{k...n} \\\\
+> & + \Gamma^{i}\_{nm} W^{m} A^{n...j}\_{k...l} + \cdots + \Gamma^{j}\_{nm} W^m A^{i...n}\_{k...l}
+> \end{aligned}
+> $$
 
 > **评论** 
-> 到目前为止，给定一个流形，其上满足上述五个性质的协变导数有很多种。之后，我们逐步给出一些限制条件，将可能的协变导数最终唯一确定下来。
+> 
+> 到目前为止，给定一个流形，其上满足上述五个性质的协变导数有很多种。如何找到一个唯一的（典范的）协变导数呢？
+> 
+> 你可能马上就想到了度规。的确，如果没有度规，那么协变导数的选取是相当任意的。我们没有理由选取一个特殊的协变导数。或者说，我们没有理由选取一个特殊的联络 $\Gamma^i_{jk}$。
+> 
+> 不过，实际上，为了诱导一个唯一的协变导数，我们不仅需要度规，还需要无挠性（torsion-free）。因此，我们下面先来介绍无挠性。
 
-现在，我们考虑一个额外的性质，叫做无挠性（torsion-free）。它规定：
+协变导数 $\nabla$ 的无挠性定义如下：
 
 $$
 \nabla_V W - \nabla_W V = [V, W]
@@ -1295,25 +1388,138 @@ $$
 
 > **评论** 
 >  
-> 虽然 $\Gamma^i_{jk}: \nabla_k e_j = \Gamma^i_{jk} e_i $ 不是一个张量，但 $T(V,W) := \nabla_V W - \nabla_W V - [V, W]$ 确实是一个张量，它叫做挠率张量（torsion tensor）。对于每一个协变导数，我们都可以定义一个挠率张量。当挠率张量为零时，我们说该协变导数是无挠的。
+> 虽然 $\Gamma^i_{jk}: \nabla_k e_j = \Gamma^i_{jk} e_i $ 不是一个张量，但 $T(V,W) := \nabla_V W - \nabla_W V - [V, W]$ 确实是一个张量，它叫做挠率张量（torsion tensor）。
+> 
+> 对于每一个协变导数，我们都可以定义一个挠率张量。当挠率张量为零时，我们说该协变导数是无挠的。
 > 
 > 可以证明，$T(V,W)$ 在 $e^i$ 下的分量为 $ T^{i}\_{jk}=\Gamma^{i}\_{kj}-\Gamma^{i}\_{jk} $ 。令 $T(V,W)$ 为零，我们就得到 
 > 
 > $$ \Gamma^i_{jk} = \Gamma^i_{kj} $$
+
+协变导数的无挠性等价于 $ \Gamma^i_{jk} = \Gamma^i_{kj} $。
+
+> **评论**
 > 
-> 容易看出，$T(V,W)$ 是一个反对称张量，因此令它为零，我们就可以得到 $n\cdot n(n-1)/2$ 个约束（对于三个指标 $i,j,k$ 而言）。
+> 容易看出，$T(V,W)$ 是一个反对称张量。令它为零，我们可以得到 $n\cdot n(n-1)/2$ 个约束（对于三个指标 $i,j,k$ 而言；$n$ 为流形的维数）。
 
-加上了无挠性之后，我们限制了可能的协变导数的数量，但是我们还不能将其限制到唯一一个。接下来我们考虑度规，从而设法将可能的协变导数限制到一个。
+加上了无挠性之后，我们限制了可能的协变导数的数量，但是我们还不能将其限制到唯一一个。接下来我们考虑度规，从而将可能的协变导数限制到一个。
 
-> 为了将协变导数唯一确定下来，我们需要 $n^3$ 个约束。
+> 为了将协变导数唯一确定下来，我们需要 $n^3$ 个约束。上面我们已经得到了 $n\cdot n(n-1)/2$ 个约束，接下来，我们还需要 $n\cdot n(n+1)/2$ 个约束，它们是由度规不变性得到的。
 
+我们现在要求，协变导数应该保度规（preserves metric），或者说满足度规不变性。这是因为我们希望一个矢量在沿着一条曲线平移时，它的长度应当不变。换言之，我们要求度规张量的协变导数为零：
 
+$$
+\nabla_k g_{ij}=0
+$$
+
+> **例 4.4**
+> 
+> 推导无挠且满足度规不变性的协变导数所对应的克氏符号的公式。换言之，写出 $\Gamma^i_{ij}$ 关于 $g_ij$ 的表达式。
+>
+> **解**： 
+>
+> 根据 **例 4.3**，我们可以求得度规张量的协变导数：
+> 
+> $$
+> \nabla_k g_{ij} = \partial_k g\_{ij} - \Gamma^l\_{ik}g\_{lj} - \Gamma^l\_{jk}g_{il}
+> $$
+> 
+> 我们现在定义 **第一类克氏符号（Christoffel Symbol of the first kind）** 为 $\Gamma_{ijk} = g_{il}\Gamma^l_{jk}$。之前介绍的克氏符号 $\Gamma^{i}_{jk}$ 其实属于 **第二类克氏符号（Christoffel Symbol of the second kind）**。
+> 
+> 定义了第二类克氏符号 $\Gamma_{ijk}$ 之后，上式就可以写为：
+> 
+> $$
+> \nabla_k g_{ij} = \partial_k g\_{ij} - \Gamma_{jik} - \Gamma_{ijk}
+> $$
+> 
+> 令 $\nabla_k g_{ij} = 0$，则有
+> 
+> $$
+> \partial_k g\_{ij} = \Gamma_{ijk} + \Gamma_{jik}
+> $$
+> 
+> 又因为无挠性，我们有
+> 
+> $$
+> \Gamma_{ijk} - \Gamma_{ikj} = 0
+> $$
+> 
+> 综合以上两式，我们可以解出第一类克氏符号：
+> 
+> $$
+> \Gamma_{ijk} = \frac{1}{2}(g_{ij,k} + g_{ik,j} - g_{jk,i})
+> $$
+> 
+> 其中 $g_{ij,k}:=\partial_k g_{ij}$。由此，我们又可以得到第二类克氏符号：
+> 
+> $$
+> \Gamma^i_{jk} = \frac{g^{il}}{2}(g_{lj,k}+g_{lk,j}-g_{jk,l})
+> $$
+
+因此，在给定无挠性和保度规性之后，协变导数可以被唯一确定下来。与该协变导数对应的联络 $\Gamma^i_{ij}$ 叫做 **黎曼联络（Riemann Connection）** 或者 **列维-奇维塔联络（Levi-Civita Connection）** 。
+
+> 由于涉及了三个人名，我们不妨干脆就叫它 RLC 联络，将三个人姓名的首字母都包含进去。注意，RLC 不是电阻、电感、电容的意思！
+
+RLC 联络的表达式为 $$ \Gamma^i_{jk} = \frac{g^{il}}{2}(g_{lj,k}+g_{lk,j}-g_{jk,l}). $$
+
+### 4.2 平移（Parallel Transport）
+
+> **评论** 
+> 
+> 在给定一个联络（协变导数）之后，我们就可以定义平移了。这也是我们定义联络的初衷：为了比较两处不同的点的矢量。
+
+平移（Parallel Transport）定义如下：
+
+给定 $M$ 上的一条曲线 $\gamma: [0,T] \rightarrow M$，以及点 $\gamma(0)$ 处的一个向量 $V_0 \in T_{\gamma(0)}M$，定义 $V_0$ 沿着曲线 $\gamma(t)$ 的平移 $V(t)$ 为如下方程的解：
+
+$$
+\nabla_{\gamma^\prime(t)}V(t) = 0
+$$
+
+其中 $t\in[0,T]$，$V(0)=V_0$。
+
+> **评论** 
+> 
+> 协变导数表示向量的变化，而平移是希望向量在移动的过程中不发生变化，因此我们可以用“沿曲线的协变导数为零”来定义平移。
+
+下面我们推导平移的坐标表达式。为此，我们需要将 $\nabla_{\gamma^\prime(t)}V(t)$ 展开（参照 **例 4.1** ）：
+
+$$
+\begin{aligned}
+\nabla_{\gamma^\prime(t)}V(t) &= \nabla_{\frac{\mathrm{d}\gamma^k}{\mathrm{d}t}\partial_k}(V^j(t)\partial_j) \\\\
+& = \frac{\mathrm{d}\gamma^k}{\mathrm{d}t} (\partial_k V^j \partial_j + V^j \Gamma^i_{jk} \partial_i) \\\\
+& = \frac{\mathrm{d}V^j}{\mathrm{d}t} \partial_j + \frac{\mathrm{d}\gamma^k}{\mathrm{d}t} V^j \Gamma^i_{jk} \partial_i \\\\ 
+& = \left(\frac{\mathrm{d}V^i}{\mathrm{d}t}  + \frac{\mathrm{d}\gamma^k}{\mathrm{d}t} V^j \Gamma^i_{jk} \right)\partial_i 
+\end{aligned}
+$$
+
+令 $\nabla_{\gamma^\prime(t)}V(t) = 0$，则有：
+
+$$
+\frac{\mathrm{d}V^i}{\mathrm{d}t} + \Gamma^i_{jk} \frac{\mathrm{d}\gamma^k}{\mathrm{d}t} V^j = 0
+$$
+
+这就是平移的公式。它是一个关于 $V^i$ 的一阶常微分方程。对其进行求解，既可得到向量 $V$ 沿着曲线 $\gamma$ 平移后的坐标分量。
+
+### 4.3 测地线（Geodesics）
+
+> **评论** 回想一下牛顿第一定律。它说的是一个质点在不受到任何外部作用时，会保持它的速度不变。换句话说，它的加速度为零。
+> 
+> 当这个质点处于我们所熟悉的欧式空间中时，由于欧式空间上有一个很自然的联络，我们可以很容易地对速度矢量进行平移。由此可得，该质点的运动轨迹是一条直线（或静止不动）。
+> 
+> 但是，当我们处在一个一般的流形上时，情况变得不同：速度矢量的平移不再像欧式空间中那样的自然和平凡。
+
+（未完待续...）
+
+### 4.4 曲率（Curvature）
 
 （未完待续...）
 
 > 一般来说，点 $p$ 处的矢量通过不同的路径（通过一个联络）平移到点 $q$ 处，结果是不同的，这个现象引出了曲率的概念。
 
 （未完待续...）
+
+### 4.5 广义相对论简介（Introduction to General Relativity）
 
 > 广义相对论的核心——爱因斯坦方程（Einstein's Equation），给出了空间的曲率和能动张量之间的关系。前者描述时空如何弯曲，后者描述时空中的能量和动量。
 
@@ -1329,7 +1535,7 @@ $$
 
 最后，我们将上述理论应用到梯度、旋度、散度、赝矢量、赝标量这些耳熟能详的概念中，并且基于它们，进一步引入 Hodge 对偶的概念。Hodge 对偶以一种自然的方式将内积和外积联系在了一起。特别地，在三维流形上，它还可以诱导出叉积。我们每一次使用叉积和右手螺旋定则，我们都是在使用 Hodge 对偶。
 
-第四章 流形上的积分
+第五章 流形上的积分
 -------------------
 
 在第三章中，我们研究了流形上的微分形式。在本章中，我们研究如何在流形上对微分形式进行积分。
@@ -1340,7 +1546,7 @@ $$
 
 最后，既然已经介绍了边界算子 $\delta$ 、外导数算子 $\mathrm{d}$ 、以及斯托克斯定理，那么我们就不得不提到同调和上同调。同调和上同调理论将以上所有概念都以一种不可思议地方式联系在了一起，并用它们来处理流形上的“孔洞”。
 
-### 4.1 胞腔、单形、链（Cell, Simplex, Chain）
+### 5.1 胞腔、单形、链（Cell, Simplex, Chain）
 
 一个 $m$ 维胞腔（m-cell） $\sigma$ ，指的是 $n$ 维流形上的一个参数化（parameterized）的 $m$ 维区域，是 $\phi:[0,1]^m\rightarrow M$ 这个映射的像 $\sigma=\mathrm{Im}(\phi)$ 。
 
@@ -1350,7 +1556,7 @@ $$
 
 在上述定义中，我们只用从 0 到 1 的实数来分配参数。但有时候，为了方便起见，我们也可以用 $[a,b]$ 来代替 $[0,1]$ ，反正它们只相差了一个系数和偏移。换言之，只要是一个“矩形”区域就可以。
 
-> **例 4.1**
+> **例 5.1**
 >
 > 卫生纸滚筒上的一个点是一个 0-cell。0-cell 是一种特殊情况，它所代表的区域就仅仅是一个点。
 >
@@ -1383,11 +1589,11 @@ m-chain 的集合记作 $C_m(M)$ 。
 >
 > 你可能现在很好奇 $c=\sum_i m_i\sigma_i$ 究竟指的是什么，即，把两个 m-cells 加在一起到底是什么意思？别着急，我们会在**第 4.3 节**介绍这个线性组合的意义。现在你只需要把它当作一种“形式上”的线性组合（formal linear combination）。
 
-### 4.2 边界算子（Boundary Operator）
+### 5.2 边界算子（Boundary Operator）
 
 (未完待续...)
 
-### 4.3 微分形式的积分（Integration of Differential Forms）
+### 5.3 微分形式的积分（Integration of Differential Forms）
 
 > **评论**
 >
@@ -1437,20 +1643,20 @@ $$ \begin{aligned} \int_c\omega=\sum_i m_i\int_{\sigma_i}\omega \end{aligned} $$
 > 在**第 4.1 节**中，我们定义 m-chain 是 m-cells 的线性组合。现在，这个线性组合的意义体现了出来：  
 > m-cells 的线性组合（m-chain）上的积分，定义为 m-cells 上的积分的线性组合。
 
-### 4.4 斯托克斯定理（Stokes' Theorem）
+### 5.4 斯托克斯定理（Stokes' Theorem）
 
 （未完待续...）
 
-### 4.5 同调和上同调（Homology & Cohomology）
+### 5.5 同调和上同调（Homology & Cohomology）
 
 （未完待续...）
 
-第五章 李群和李代数
+第六章 李群和李代数
 ----------
 
 （未完待续...）
 
-第六章 收藏点赞，好运不断！
+第七章 收藏点赞，好运不断！
 --------------
 
 本文还在更新中，请收藏并定期复查哦！
