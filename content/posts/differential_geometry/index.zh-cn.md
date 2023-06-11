@@ -1236,7 +1236,7 @@ $\mathrm{det}(\alpha \wedge \star\beta)=\langle\alpha\mid\beta\rangle$
 
 > 跳过本章不影响第五章的阅读。
 
-### 4.1 协变导数（Covariant Derivative）
+### 4.1 协变导数、联络（Covariant Derivative, Connection）
 
 > **评论**
 > 
@@ -1352,7 +1352,7 @@ $\Gamma^i_{jk}$ 就是大名鼎鼎的 **克氏符号（Christoffel symbol）** �
 >
 > 进一步地，$$ \nabla_W \mathrm{d}x^i = -(\Gamma^i_{jk}W^k)\mathrm{d}x^j $$
 > 
-> 对于一般的余切向量场 $\alpha = \alpha_j\mathrm{d}x^j$，其协变导数的推到留给读者联系。提示：仿照 **例 4.1** 的方法。
+> 对于一般的余切向量场 $\alpha = \alpha_j\mathrm{d}x^j$，其协变导数的推导留给读者练习。提示：仿照 **例 4.1** 的方法。
 
 现在我们有了切向量场和余切向量场的协变导数。那么，对于一般的 $(p,q)$ 型张量，它的协变导数 $(\nabla_W A)^{i...j}_{k...l}$ 应该如何计算呢？这里我们直接给出公式。感兴趣的读者，可以利用 **例 4.1** 和 **例 4.2** 介绍的方法和结果来自行推导：
 
@@ -1503,6 +1503,14 @@ $$
 
 这就是平移的公式。它是一组关于 $V^i$ 的一阶常微分方程。对其进行求解，既可得到向量 $V$ 沿着曲线 $\gamma$ 平移后的坐标分量。
 
+我们可以将沿着曲线 $\gamma$ 的平移算子记作 $\tau^\gamma_{x,y}$，其中下标 $x,y$ 表示从 $x$ 点平移到 $y$ 点。也可以记作 $\tau^\gamma_t:=\tau^\gamma_{\gamma(s),\gamma(s+t)}$（对于任意的 $s$）。很自然地，我们有下面几个性质：
+
+ $$\tau^\gamma_t \circ \tau^\gamma_s = \tau^\gamma_{(t+s)}$$
+ 
+ $$\tau^\gamma\_0 = \text{Id}$$
+ 
+ $$\tau^\gamma_{-t}=(\tau^\gamma\_{t})^{-1}$$
+
 ### 4.3 测地线（Geodesics）
 
 > **评论** 
@@ -1557,7 +1565,11 @@ $$
 
 可见这是一组关于 $\gamma(t)$ 的二阶常微分方程。对其进行求解，我们即可得到流形上的测地线的方程。
 
-### 4.4 曲率（Curvature）
+### 4.4 李导数（Lie Derivative）
+
+（未完待续...）
+
+### 4.5 曲率（Curvature）
 
 > **评论**
 > 
@@ -1565,14 +1577,14 @@ $$
 
 {{< figure src="holonomy.png" title="北极处的一个矢量先沿经线平移至赤道，接着沿赤道平移，最后沿经线平移回到北极，和初始状态不重合。" >}}
 
-现在，让我们考虑一个沿坐标系的环路，如下所示：
+<!-- 现在，让我们考虑一个沿坐标系的环路，如下所示：
 
 {{< figure src="iloop.jpg" title="点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处，结果不同" >}}
 
 如图所示，点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处。这两条路径分别是：
 
 1) 先改变 $x_\nu$，再改变 $x_\mu$；
-2) 先改变 $x_\mu$，再改变 $x_\nu$。
+2) 先改变 $x_\mu$，再改变 $x_\nu$。 -->
 
 <!-- 将这条环路不断缩小，那么切矢量的一个基 $e_\beta$ 通过这两条路径平移的结果的差值可以表示为：
 
@@ -1586,7 +1598,7 @@ $$ -->
 
 （未完待续...）
 
-### 4.5 广义相对论简介（Introduction to General Relativity）
+### 4.6 广义相对论简介（Introduction to General Relativity）
 
 > 广义相对论的核心——爱因斯坦方程（Einstein's Equation），给出了空间的曲率和能动张量之间的关系。前者描述时空如何弯曲，后者描述时空中的能量和动量。
 
