@@ -2,7 +2,7 @@
 title: "Curl in high dimension"
 date: 2023-06-10T10:55:34+08:00
 draft: false
-categories: ["Mathematics"]
+categories: ["Mathematical Physics"]
 tags: ["Vector Calculus"]
 ---
 

@@ -2,7 +2,7 @@
 title: "高维空间中的旋度"
 date: 2023-06-10T10:55:38+08:00
 draft: false
-categories: ["数学"]
+categories: ["数学物理方法"]
 tags: ["矢量微积分"]
 ---
 
