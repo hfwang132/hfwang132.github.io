@@ -113,6 +113,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # website images for Open Graph and Twitter Cards
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
+  # busuanzi
+  busuanzi = true
+  busuanzi_site_offset = 10000
 
   # Header config
   # 页面头部导航栏配置
