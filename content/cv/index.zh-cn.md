@@ -4,6 +4,8 @@ date: 2023-06-12T15:24:46+08:00
 draft: false
 ---
 
+王海飞 | hfwang132@gmail.com
+
 # 教育背景
 ---
 

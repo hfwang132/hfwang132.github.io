@@ -4,6 +4,8 @@ date: 2023-06-12T15:24:39+08:00
 draft: false
 ---
 
+Haifei Wang | hfwang132@gmail.com
+
 # Education
 ---
 
