@@ -1,5 +1,5 @@
 ---
-title: "Access the Internet from a single board computer via your PC"
+title: "Access the Internet from evaluation boards via PC"
 date: 2023-06-12T23:22:45+08:00
 draft: false
 categories: ["EECS"]
