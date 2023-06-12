@@ -115,7 +115,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   images = ["/logo.png"]
   # busuanzi
   busuanzi = true
-  busuanzi_site_offset = 10000
 
   # Header config
   # 页面头部导航栏配置
