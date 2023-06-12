@@ -287,7 +287,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # Social config in home page
   # 主页的社交信息设置
   [params.social]
-    GitHub = "hfwang132"
+    # GitHub = "hfwang132"
+    # Zhihu = "hypercube-33"
     #Linkedin = ""
     #Twitter = ""
     #Instagram = ""
@@ -306,7 +307,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #Codepen = ""
     #FreeCodeCamp = ""
     #Bitbucket = ""
-    Stackoverflow = "godfly666"
+    # Stackoverflow = "godfly666"
     #Weibo = ""
     #Odnoklassniki = ""
     #VK = ""
@@ -330,7 +331,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #Strava = ""
     #Skype = ""
     #Whatsapp = ""
-    Zhihu = "Godfly666"
     #Douban = ""
     #Angellist = ""
     #Slidershare = ""
@@ -348,7 +348,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #Gitea = ""
     #XMPP = ""
     #Matrix = ""
-    Bilibili = ""
+    # Bilibili = "34151110"
     #Discord = ""
     #DiscordInvite = ""
     #Lichess = ""
@@ -359,8 +359,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     #Plume = ""
     #HackTheBox = ""
     #RootMe= ""
-    Email = "hfwang132@gmail.com"
-    RSS = ""
+    # Email = "hfwang132@gmail.com"
+    # RSS = ""
 
   # Page global config
   # 文章页面全局配置
@@ -820,6 +820,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         url = "/categories/"
         title = ""
       [[languages.en.menu.main]]
+        weight = 4
+        identifier = "cv"
+        pre = ""
+        post = ""
+        name = "CV"
+        url = "/cv/"
+        title = ""
+      [[languages.en.menu.main]]
         weight = 5
         identifier = "about"
         pre = ""
@@ -868,6 +876,8 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         #Telegram = "xxxx"
         #Youtubelegacy = "xxxx"
         #Phone = "555-555-555"
+        # Zhihu = "hypercube-33"
+        Stackoverflow = "godfly666"
         Email = "hfwang132@gmail.com"
         RSS = true
         #[languages.en.params.social.Mastodon]
@@ -904,6 +914,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         post = ""
         name = "分类"
         url = "/categories/"
+        title = ""
+      [[languages.zh-cn.menu.main]]
+        weight = 4
+        identifier = "cv"
+        pre = ""
+        post = ""
+        name = "简历"
+        url = "/CV/"
         title = ""
       [[languages.zh-cn.menu.main]]
         weight = 5
@@ -954,6 +972,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         #Douban = "xxxx"
         #Devto = "xxxx"
         Bilibili = "34151110"
+        Stackoverflow = "godfly666"
         Email = "hfwang132@gmail.com"
         #Phone = ""
         RSS = true
