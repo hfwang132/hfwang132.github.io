@@ -2,7 +2,7 @@
 title: "在 Windows 中挂载 EFI 分区的方法"
 date: 2023-06-12T22:17:46+08:00
 draft: false
-categories: ["CS"]
+categories: ["EECS"]
 tags: ["存储/分区", "Linux"]
 ---
 

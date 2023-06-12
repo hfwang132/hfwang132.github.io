@@ -2,7 +2,7 @@
 title: "Mounting the EFI partition in Windows OS"
 date: 2023-06-12T22:26:16+08:00
 draft: false
-categories: ["CS"]
+categories: ["EECS"]
 tags: ["Storage/Partition", "Linux"]
 ---
 

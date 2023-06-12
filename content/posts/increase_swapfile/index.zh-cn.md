@@ -2,7 +2,7 @@
 title: "给 Linux 增加 swapfile"
 date: 2023-06-12T22:59:29+08:00
 draft: false
-categories: ["CS"]
+categories: ["EECS"]
 tags: ["存储/分区", "Linux"]
 ---
 

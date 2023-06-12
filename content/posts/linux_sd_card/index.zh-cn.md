@@ -2,7 +2,7 @@
 title: "在 Linux 中给 SD 卡分区并创建文件系统"
 date: 2023-06-12T22:43:39+08:00
 draft: false
-categories: ["CS"]
+categories: ["EECS"]
 tags: ["存储/分区", "Linux"]
 ---
 
