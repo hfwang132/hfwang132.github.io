@@ -12,25 +12,25 @@ categories: ["数学物理方法"]
 
 本文的结构如下：
 
-a) 在第一章中，我们引入物理学的舞台：微分流形，并定义流形上的标量场。
+a. 在第一章中，我们引入物理学的舞台：微分流形，并定义流形上的标量场。
 
-b) 在第二章中，我们引入切空间和切丛等概念，并定义流形上的矢量场和张量场。最后，我们还定义内积和度规张量，它们是通往黎曼流形和广义相对论的门票。
+b. 在第二章中，我们引入切空间和切丛等概念，并定义流形上的矢量场和张量场。最后，我们还定义内积和度规张量，它们是通往黎曼流形和广义相对论的门票。
 
-c) 在第三章中，我们引入外积、外代数等概念，并在流形上研究微分。最后，我们介绍一下Hodge对偶，它将内积与外积一种美妙的方式联系起来。
+c. 在第三章中，我们引入外积、外代数等概念，并在流形上研究微分。最后，我们介绍一下Hodge对偶，它将内积与外积一种美妙的方式联系起来。
 
-d) 在第四章中，我们引入流形上的联络，并用它来定义平移和测地线。接着，我们介绍流形上的曲率。最后，我们简要介绍广义相对论。
+d. 在第四章中，我们引入流形上的联络，并用它来定义平移和测地线。接着，我们介绍流形上的曲率。最后，我们简要介绍广义相对论。
 
-e) 在第五章中，我们引入链等概念，并在流形上研究积分。另外，我们简单介绍同调和上同调，它们负责处理流形上的孔洞。
+e. 在第五章中，我们引入链等概念，并在流形上研究积分。另外，我们简单介绍同调和上同调，它们负责处理流形上的孔洞。
 
-f) 在第六章中，我们引入作为微分流形的群——李群，并研究李群的切空间——李代数，并介绍它们在物理学中的应用。
+f. 在第六章中，我们引入作为微分流形的群——李群，并研究李群的切空间——李代数，并介绍它们在物理学中的应用。
 
 以下是一些关于本文的声明和注意事项：
 
-a) **免责声明**
+a. **免责声明**
 
  本文只是我的笔记。我假想了读者的存在，这不仅有可能帮助到其他人，而且可以加深我自己的理解。然而，正因为本文只是一个笔记，所以难免会出错。如果读者发现了任何事实错误，请及时指出，我会及时修改，避免误导他人。
 
-b) **目标读者**
+b. **目标读者**
 
  本文需要的前置知识有：初等微积分、初等线性代数、（可选）向量微积分。
 
@@ -40,7 +40,7 @@ b) **目标读者**
 
  严谨性与易懂性永远是对立和互补的。本文为了易懂，难免在语言上牺牲一些严谨性。因此请数学系读者包容。我会尽可能将严谨性的损失降到最低。
 
-c) **阅读建议**
+c. **阅读建议**
 
  本文旨在**梳理和解读概念**，因此不推荐作为教程来阅读。当然，如果你只是感兴趣，那么阅读本文绝对是没有坏处的。但要注意，本文不是科普文。你可能需要花费一些时间来搞懂每一个细节。
 
@@ -50,7 +50,7 @@ c) **阅读建议**
 
  本文附带一个目录，高级的读者可以浏览目录，并直接跳到感兴趣的章节阅读。
 
-d) **更新**
+d. **更新**
 
  本文尚在更新中，如果读者觉得有用并且想看下去，可以收藏并耐心等待～
 
@@ -65,11 +65,11 @@ d) **更新**
 
 **非空集合** X 的 **拓扑** 定义为 X 的子集的集合 $\mathcal{F}$ ，且 $\mathcal{F}$ 满足如下三条性质：
 
-a) $\emptyset，X \in \mathcal{F}$ ；
+a. $\emptyset，X \in \mathcal{F}$ ；
 
-b) $\mathcal{F}$ 中有限个元素的交集仍在 $\mathcal{F}$ 中；
+b. $\mathcal{F}$ 中有限个元素的交集仍在 $\mathcal{F}$ 中；
 
-c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
+c. $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 
 > **评论**
 >
@@ -100,7 +100,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > 实际上，根据集合论的分离公理，我们总是应该将集合写成前者的形式，否则可能会导致罗素悖论（考虑这么一个“集合”： $\\{x\mid x\notin x\\}$ ）。只不过，在确定无害的情况下，可以将其省略，写成后者。详见我的另一篇[笔记](https://zhuanlan.zhihu.com/p/346371552)。
 
-### **1.2 拓扑空间（Topological Space）**
+### 1.2 拓扑空间（Topological Space）
 
 定义了拓扑的集合叫做**拓扑空间**。更具体地，拓扑空间定义为 $(X,\mathcal{F})$，其中 $\mathcal{F}$ 是 $X$ 的一个拓扑。
 
@@ -116,7 +116,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > 你可能想问，为什么我们不用“可数交”和“有限并”来定义闭集，然后以此来定义拓扑呢？为什么选择开集，而不是闭集？我想这可能涉及各种历史因素，详见这个[问题](https://www.zhihu.com/question/396132316?utm_id=0)。
 
-### **1.3 连续（Continuity）**
+### 1.3 连续（Continuity）
 
 设 $(X,\mathcal{F})$ 和 $(Y,\mathcal{S})$ 是拓扑空间， $f:X\rightarrow Y$ 是一个映射。如果 $\forall O \in \mathcal{S} \\,(f^{-1}[O] \in \mathcal{F})$ ，则称 $f$ 是连续的。其中 $f^{-1}[O]$ 代表 O 在 $f$ 下的原像（Inverse Image）。
 
@@ -138,7 +138,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 > 不是一个连续映射，因为开集 $\\{x\in \mathbb{R}\mid -1<x<1\\}$ 在映射 f 下的原像为 $\\{0\\}$ ，不是一个开集。
 > $$
 
-### **1.4 同胚（Homeomorphism）**
+### 1.4 同胚（Homeomorphism）
 
 若 $f:X\rightarrow Y$ 是**连续**的**双射**，则称 $f$ 是从 $X$ 到 $Y$ 的一个**同胚**。
 
@@ -150,7 +150,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > 没有什么东西可以阻止你在一个（球形）糖果和一个甜甜圈之间建立双射。但是有一点是肯定的，这样的双射一定不是连续的。也就是说，甜甜圈不同胚于一个糖果。
 
-### **1.5 邻域（Neighborhood）**
+### 1.5 邻域（Neighborhood）
 
 如果 $X$ 是一个拓扑空间， $p \in X$ 且 $p \in O \subseteq N \subseteq X$ ，其中 $O$ 是一个开集，则称 $N$ 是 $p$ 的一个邻域。
 
@@ -160,7 +160,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > 当然，有些作者把邻域定义成开邻域，这取决于你在看哪本书。在数学中，对同一个概念有着许多不同的定义，这没关系，关键是要保持上下文的一致性。
 
-### **1.6 豪斯多夫空间（Hausdorff Space）**
+### 1.6 豪斯多夫空间（Hausdorff Space）
 
 如果对于拓扑空间 $X$ 的任意两个元素 $x,y$ ，都可以找到 $x$ 的邻域 $U$ 和 $y$ 的邻域 $V$ ，使得 $U\cap V=\emptyset$ ，则称 $X$ 是一个豪斯多夫空间。
 
@@ -170,7 +170,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > 它的性质非常好，以至于我们后面介绍的流形，在定义上都属于豪斯多夫空间。
 
-### **1.7 拓扑流形（Topological Manifold）**
+### 1.7 拓扑流形（Topological Manifold）
 
 若豪斯多夫拓扑空间 $M$ 有可数开覆盖 $M=\bigcup_\alpha O_\alpha$（ $O_\alpha$ 为开集），且每一个 $O_\alpha$ 都同胚于 $\mathbb{R}^n$ 的一个开子集（这个 $\mathbb{R}^n$ 的拓扑是传统意义上的欧几里得拓扑），则称 $M$ 为一个 $n$ 维的拓扑流形。
 
@@ -200,7 +200,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > 从现在开始，我们用的符号会逐渐变得抽象。你可能需要时不时地停下来，好好思考每一个符号分别代表了什么意思。也就是说，你不能再将本文当做是科普文或者小说来阅读。
 
-### **1.8 微分流形（Differentiable Manifold）**
+### 1.8 微分流形（Differentiable Manifold）
 
 记拓扑流形 $M$ 的开覆盖到 $\mathbb{R}^n$ 的开子集的同胚为 $\varphi_\alpha:O_\alpha\rightarrow \varphi_\alpha[O_\alpha]\subseteq \mathbb{R}^n$。
 
@@ -226,7 +226,7 @@ c) $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 
 如果 $f:M\rightarrow N$ 是光滑的双射，那么我们称 $f$ 是一个微分同胚（diffeomorphism）。也可以说， $M$ 与 $N$ 微分同胚。
 
-### **1.9 标量场（Scalar Field）**
+### 1.9 标量场（Scalar Field）
 
 定义微分流形上的（实）标量场 $f:M\rightarrow \mathbb{R}$ 为两个映射的复合： $f=F\circ \varphi$ 。
 
@@ -266,7 +266,7 @@ $M$ 上所有光滑标量场的集合记为 $\mathcal{F}(M)$ 。
 
 最后，我们介绍内积和度规张量，它们是微分流形上的额外结构。在配备了度规张量之后，一个微分流形就成为了一个（伪）黎曼流形。
 
-### **2.1 切向量、切空间（Tangent Vector, Tangent Space）**
+### 2.1 切向量、切空间（Tangent Vector, Tangent Space）
 
 记 $\mathcal{F}(M)$ 为微分流形 $M$ 上所有光滑标量场 $f:M\rightarrow \mathbb{R}$ 构成的集合。
 
@@ -418,7 +418,7 @@ $f:v^{\*\*}\mapsto v \quad\text{s.t.}\quad v^{\*\*}(v^\*)=v^\*(v)$
 
 流形上光滑标量场 $f$ 的微分，定义为上述余切向量构成的余切向量场。
 
-> **例 2.1** 现有 3 维微分流形上点 $p$ 处的一个向量 $v|_p=\left.\left(\frac{\partial}{\partial x}+2\frac{\partial}{\partial y}-\frac{\partial}{\partial z}\right)\right|_p$ 。 标量场 $f$ 的微分 $\mathbb{d}f$ 作用到 $v$ 身上后得到 $(\mathbb{d}f)|_p(v|_p)=v|_p(f)=\left.\left(\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y}-\frac{\partial f}{\partial z}\right)\right|_p$
+> **例 2.2** 现有 3 维微分流形上点 $p$ 处的一个向量 $v|_p=\left.\left(\frac{\partial}{\partial x}+2\frac{\partial}{\partial y}-\frac{\partial}{\partial z}\right)\right|_p$ 。 标量场 $f$ 的微分 $\mathbb{d}f$ 作用到 $v$ 身上后得到 $(\mathbb{d}f)|_p(v|_p)=v|_p(f)=\left.\left(\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y}-\frac{\partial f}{\partial z}\right)\right|_p$
 
 点 $p$ 处的微分所在的余切空间有什么样的基呢？以 3 维流形上的一点 $p$ 为例，该点的切空间有三个基 $\\{\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2},\frac{\partial}{\partial x^3}\\}$ ，简记为 $\\{ \partial_1, \partial_2, \partial_3 \\}$。根据**定理 2.1**，我们可以找到这三个基在余切空间中的对偶基 $\\{\mathrm{d}x^1,\mathrm{d}x^2,\mathrm{d}x^3\\}$ ，使得 $\mathrm{d}x^j\partial_i=\delta_i^j$ 。某点处的微分可以表示成这些基的线性组合： $\mathrm{d}f=a_i\mathrm{d}x^i$ 。
 
@@ -477,10 +477,10 @@ $$
 >   
 > 由于本篇文章的重点不是这三者，现在仅作简要的说明：  
 >   
-> a) 直积可以理解为群的笛卡尔积。  
-> b) 由于向量空间本身就是一个阿贝尔群，所以对于向量空间，我们既可以说笛卡尔积，也可以说直积，以至于它们的符号是一样的，都是 $\times$ 。  
-> c ) 直积与直和的区别在于：直积可以做可数无穷次，而直和只能做有限次。  
-> d) 在有限次直积/直和的情况下，可以把直积与直和看成是同一个东西。  
+> a. 直积可以理解为群的笛卡尔积。  
+> b. 由于向量空间本身就是一个阿贝尔群，所以对于向量空间，我们既可以说笛卡尔积，也可以说直积，以至于它们的符号是一样的，都是 $\times$ 。  
+> c. 直积与直和的区别在于：直积可以做可数无穷次，而直和只能做有限次。  
+> d. 在有限次直积/直和的情况下，可以把直积与直和看成是同一个东西。  
 >   
 > 张量积与这三者都不同。$m$ 维向量空间和 $n$ 维向量空间的张量积是 $m\times n$ 维的，而它们的直积/直和/笛卡尔积是 $(m+n)$ 维的。  
 >   
@@ -490,34 +490,34 @@ $$
 >   
 > 采取这种定义还有一个目的，是为了为后文的交替线性映射与外积作铺垫。即在后文中，我们也会使用 universal property 来定义外积。
 
+### 2.8 张量、张量场（Tensor, Tensor Field）
+
 现在我们考虑一种特别的张量积，它是一个向量空间 $V$ 与自己的对偶空间 $V^\*$ 进行了若干次张量积：
 
 $\underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots \otimes V^\*}_n$，
 
 其中 $V$ 有 $m$ 个， $V^\*$ 有 $n$ 个。我们把这个空间里的元素 $t\in \underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots \otimes V^\*}_n$ 叫做 $(m, n)$ 型张量。
 
-我们还可以将 $\underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots \otimes V^\*}_n$ 写成更紧凑的形式 $V^{\otimes m}\otimes V^{\*\otimes n}$ 。其中上标 $^{\otimes n}$ 的意思是自己和自己做张量积。例如 $(V)^{\otimes 2}$ 指的是 $V \otimes V$ 。
-
-$V^{\otimes n}$ 也可以写成 $\bigotimes^n(V)$ 。
+> 我们还可以将 $\underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots \otimes V^\*}_n$ 写成更紧凑的形式 $V^{\otimes m}\otimes V^{\*\otimes n}$ 。其中上标 $^{\otimes n}$ 的意思是自己和自己做张量积。例如 $(V)^{\otimes 2}$ 指的是 $V \otimes V$ 。
+> 
+> $V^{\otimes n}$ 也可以写成 $\bigotimes^n(V)$ 。
 
 特别地，我们把标量叫做零阶张量，或者 $(0,0)$ 型张量；切向量叫做 $(1,0)$ 型张量；余切向量叫做 $(0,1)$ 型张量。
 
-在有些物理书中， $(m,n)$ 型张量被定义为一个多重线性映射 $f:\underbrace{V^\*\times\cdots\times V^\*}_m\times \underbrace{V \times \cdots \times V}_n\rightarrow \mathbb{R}$ ，其中 $V^\*$ 有 $m$ 个， $V$ 有 $n$ 个。并且把 $M$ 上所有 $(m,n)$ 型张量的集合记作 $\mathcal{T}_n^m(M)$ 。
+在很多物理书中， $(m,n)$ 型张量被定义为一个多重线性映射 $f:\underbrace{V^\*\times\cdots\times V^\*}_m\times \underbrace{V \times \cdots \times V}_n\rightarrow \mathbb{R}$ ，其中 $V^\*$ 有 $m$ 个， $V$ 有 $n$ 个。并且把 $M$ 上所有 $(m,n)$ 型张量的集合记作 $\mathcal{T}_n^m(M)$ 。
 
-这两种定义之间是等价的。因为对于每一个这样的多重线性映射，都能在张量积 $\underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots \otimes V^\*}_n$ 中找到唯一的一个元素与其对应（换句话说，它们之间有一个同构）。注意，在后者中， $V$ 有 $m$ 个， $V^\*$ 有 $n$ 个，与前者相反。
+这两种定义之间是等价的。因为对于每一个这样的多重线性映射，都能在张量积 $\underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots \otimes V^\*}_n$ 中找到唯一的一个元素与其对应（根据 universal property）。注意，在后者中， $V$ 有 $m$ 个， $V^\*$ 有 $n$ 个，与前者相反。
 
 
-> **评论**  
->   
-> 为了方便物理人理解，下面我们用基和矩阵的方式写出一个例子：  
+> **例 2.1**  **二次型**
 >   
 > 以双线性映射 $V\times V\rightarrow \mathbb{R}$ 为例，其中 $V$ 是二维线性空间。取 $V$ 的基为 $\\{e_1,e_2\\}$ ，向量 $v$ 在这组基下的坐标为 $(v^1,v^2)$ ，向量 $w$ 在这组基下的坐标为 $(w^1,w^2)$ 。  
 >   
-> 我们知道这个双线性映射可以用一个矩阵来表示： $$\begin{pmatrix} v^1 & v^2 \end{pmatrix} \begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix} \begin{pmatrix} w^1 \\\\ w^2 \end{pmatrix} \in \mathbb{R},$$  它将两个向量映射为一个实数。  
+> 我们在线性代数中学过，这个双线性映射（即二次型）可以用一个矩阵来表示： $$\begin{pmatrix} v^1 & v^2 \end{pmatrix} \begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \end{pmatrix} \begin{pmatrix} w^1 \\\\ w^2 \end{pmatrix} \in \mathbb{R},$$  它将两个向量映射为一个实数。  
 >   
-> 你可以直接定义张量 $a$ 就是这个双线性映射。而根据 universal property，它对应 $V\otimes V$ 上唯一的一个线性泛函 $a:V\otimes V\rightarrow\mathbb{R}$ ，即 $a\in(V\otimes V)^\*$ 。  
+> 根据第二种定义，我们可以直接定义张量 $a$ 就是这个双线性映射。而根据第一种定义（universal property），它对应 $V\otimes V$ 上唯一的一个线性泛函 $a:V\otimes V\rightarrow\mathbb{R}$ ，即 $a\in(V\otimes V)^\*$ 。  
 >   
-> 进一步地，我们不妨把 $(V\otimes V)^\*$ 的括号“去掉”，直接考察 $V^\*\otimes V^\*$。看起来，张量 $a$ 可以直接写成 $V^\*\otimes V^\*$ 这个线性空间里的一个元素： $a=a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}$ 。  
+> 进一步地，我们可以把 $(V\otimes V)^\*$ 的括号“去掉”，变成 $V^\*\otimes V^\*$。看起来，张量 $a$ 可以直接写成 $V^\*\otimes V^\*$ 这个线性空间里的一个元素： $a=a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}$ 。  
 >   
 > 实际上，这些定义彼此之间都是等价的，即有  
 >  $$\mathcal{L}(V\times V,\mathbb{R})=: L(V\otimes V,\mathbb{R})=:(V\otimes V)^\*\cong V^\*\otimes V^\*$$
@@ -526,42 +526,35 @@ $V^{\otimes n}$ 也可以写成 $\bigotimes^n(V)$ 。
 >   
 > 而 $L(V\otimes V,R)$ ，按照定义，就是 $V\otimes V$ 的对偶空间 $(V\otimes V)^\*$ ，它显然与 $V^\*\otimes V^\*$ 同构，因为它们的维数相同。具体来说，我们可以指定这样一个同构： $(e_i\otimes e_j)^\*\mapsto e_i^\*\otimes e_j^\*=e^i\otimes e^j$ ，其中 $(e_i\otimes e_j)^\*$ 是 $e_i\otimes e_j$ 的对偶基。  
 >   
-> 按照正文中的定义， $a\in V^\*\otimes V^\*$ 是一个 $(0,2)$ 型张量。根据 universal property，它将两个 $(1,0)$ 型张量（也就是切向量）映射为一个实数。用我们物理人熟悉的指标写法，就是 $a_{ij}v^iv^j\in \mathbb{R}$ 。  
+> 可见，$a\in V^\*\otimes V^\*$ 是一个 $(0,2)$ 型张量。根据 universal property，它将两个 $(1,0)$ 型张量（也就是切向量）映射为一个实数。用我们物理人熟悉的指标写法，就是 $a_{ij}v^iv^j\in \mathbb{R}$ 。
+>
+> 如果把基也写出来，就是下面这个式子：  
 >   
-> 可见，我们可以在这些不同的构造（定义）之间来回自如的切换，这就是 universal property 的好处。  
->  
-> **评论**  
->   
-> 正如 universal property 所说，对于每一个双线性映射 $f:V\times V\rightarrow \mathbb{R}$ ，我们都能找到唯一的一个线性空间 $V\otimes V$ 以及映射 $g:V\times V\rightarrow V \otimes V$ 和映射 $h:V\otimes V\rightarrow \mathbb{R}$  ，使得 $f = h \circ g$ 。这个 $h$ 正是 $(V\otimes V)^\*$ 中的元素，也就是说 $h\in (V\otimes V)^\*:=L(V\otimes V,\mathbb{R})$ 。而由于 $(V\otimes V)^\*\cong V^\*\otimes V^\*$  ，所以我们不妨也可以说，在相差一个同构的意义（up to an isomorphism）上，有 $h \in V^\*\otimes V^\*$ 。  
->   
-> 为了方便物理人理解，下面我们在 $\\{e_{i}\\}$ 及其对偶基下，来考察这些上述数学对象的坐标表示。  
->   
->  $g$ 在该组基下就是 $g:(v^i,v^j)\mapsto v^{ij}$ 这个映射。  
-> 而 $h$ 在该组基下就是 $h:v^{ij}\mapsto a_{ij}v^{ij}$ 这个映射。  
-> 把 $h$ 和 $g$ 复合起来，也就得到了 $f:(v^i,v^j)\mapsto a_{ij}v^iv^j$ 这个映射。  
->   
-> 看到这，作为物理人的你可能已经很熟悉了： $g:(v^i,v^j)\mapsto v^{ij}$ 不就是物理书里的“**并矢**”嘛！$h:v^{ij}\mapsto a_{ij}v^{ij}\in \mathbb{R}$ 不就是物理书里的“**指标缩并**”嘛！  
->   
-> 但是！当你在做指标运算的时候，你应当时刻记住它们都是在某组基下发生的。如果把基也写出来，就是下面这个式子：  
->   
->  $$\begin{aligned} a(v,w)&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) (v^{1}e_1+v^2e_2,w^{2}e_1+w^2e_2) \\\\ &=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) \cdot \\\\ &\phantom{=} (v^1w^1e_1\otimes e_1+v^1w^2e_1\otimes e_2+v^2w^1e_2\otimes e_1+v^2w^2e_2\otimes e_2) \\\\ &=a_{ij}v^{i}w^{j} \end{aligned} $$ 
+> $$\begin{aligned} a(v,w)&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) (v^{1}e_1+v^2e_2,w^{2}e_1+w^2e_2) \\\\ &=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) \\\\ &\phantom{=} (v^1w^1e_1\otimes e_1+v^1w^2e_1\otimes e_2+v^2w^1e_2\otimes e_1+v^2w^2e_2\otimes e_2) \\\\ &=a_{ij}v^{i}w^{j} \end{aligned} $$ 
 >   
 > 或者写成更紧凑的形式：  
 >   
->  $$ a(v,w)=(a_{ij}e^{i}\otimes e^{j})(v^ie_i,w^je_j)=a(v\otimes w)=(a_{ij}e^{i}\otimes e^{j})(v^iw^je_i\otimes e_j)=a_{ij}v^{i}w^{j} $$  
+>  $$ (a_{ij}e^{i}\otimes e^{j})(v^ie_i,w^je_j)=a(v,w)=a(v\otimes w)=(a_{ij}e^{i}\otimes e^{j})(v^iw^je_i\otimes e_j)=a_{ij}v^{i}w^{j} $$  
 >   
-> 这才是数学家里脑子想的东西。只不过我们物理人更习惯在某一组基底下考虑张量的坐标表象。  
+> 在相差一个同构的意义上， $e^{i}\otimes e^{j}=e_i^\*\otimes e_j^\*\cong (e_i\otimes e_j)^\* $ 是 $ e_{i}\otimes e_{j}$ 的对偶基，也就是说 $(e^{i}\otimes e^{j})(e_{k}\otimes e_{l})=\delta_k^i \delta^j_l$ 。
+
+> **评论**  
 >   
-> 注意到，在相差一个同构的意义（up to an isomorphism）上， $e^{i}\otimes e^{j}=e_i^\*\otimes e_j^\*\cong (e_i\otimes e_j)^\* 是 e_{i}\otimes e_{j}$ 的对偶基，也就是说 $(e^{i}\otimes e^{j})(e_{k}\otimes e_{l})=\delta_k^i \delta^j_l$ 。
+> 正如 universal property 所说，对于每一个双线性映射 $f:V\times V\rightarrow \mathbb{R}$ ，我们都能找到唯一的一个线性空间 $V\otimes V$ 以及映射 $g:V\times V\rightarrow V \otimes V$ 和映射 $h:V\otimes V\rightarrow \mathbb{R}$  ，使得 $f = h \circ g$ 。我们现在来看一看 $g$ 和 $h$ 的坐标表示。
+>   
+>  $g$ 的坐标表示是 $g:(v^i,v^j)\mapsto v^{ij}$ 。  
+> 而 $h$ 的坐标表示是 $h:v^{ij}\mapsto a_{ij}v^{ij}$ 。  
+> 把 $h$ 和 $g$ 复合起来，也就得到了 $f:(v^i,v^j)\mapsto a_{ij}v^iv^j$ 。  
+>   
+> 我们将 $g:(v^i,v^j)\mapsto v^{ij}$ 称为“**并矢**”。并矢就是两个向量的张量积。如果一个张量可以被写成向量的并矢，那么我们称该张量是可分解的（separable）。
 
 如果你之前接触过一些张量分析，那么你可能早就发现了， $(m,n)$ 型张量写成坐标形式，有 $m$ 个上标和 $n$ 个下标，这就是我们常说的 $m$ 阶逆变（Contravariant） $n$ 阶协变（Covariant）张量。逆变对应切空间，协变对应余切空间。
 
-### 2.8 张量场（Tensor Field）
+> 最后，定义好张量之后，我们就可以来定义张量场了。
 
 （光滑）张量场定义为一个（光滑）映射 $f:M\rightarrow T_n^mM$。其中 $T_n^m M :=\\{(p,v)\mid  \\,p\in M,v \in (T_pM)^{\otimes m}\otimes (T_p^\*M)^{\otimes n}\\}$ 叫做张量丛。换言之，张量场是张量丛的一个截影。
 
 简单来说，一个张量场将流形上的每点 $p$ 映射为 $(p,v)$ ，其中 $v$ 是点 $p$ 处的一个 $(m,n)$ 型张量。如果这个映射还是光滑的，那么我们则称该张量场是光滑的。
-
 
 > **评论**  
 >   
@@ -1268,27 +1261,27 @@ $\mathrm{det}(\alpha \wedge \star\beta)=\langle\alpha\mid\beta\rangle$
 
 协变导数是这样一个映射 $\mathcal{T}^m_n(M)\rightarrow \mathcal{T}^m_n(M)$，满足下列性质：
 
-1) 线性：
+1. 线性：
 $$
 \nabla_W(\lambda A+\mu B) = \lambda \nabla_W A + \mu \nabla_W B
 $$
 
-2) 对 $W$ 的 $\mathcal{F}$-线性：
+2. 对 $W$ 的 $\mathcal{F}$-线性：
 $$
 \nabla_{V+fW} = \nabla_V + f\nabla_W \quad f\in\mathcal{F}(M)
 $$
 
-3) 莱布尼茨律
+3. 莱布尼茨律
 $$
 \nabla_W(A\otimes B) = (\nabla_W A)\otimes B + A \otimes (\nabla_W B)
 $$
 
-4) 与缩并运算对易
+4. 与缩并运算对易
 $$
 \nabla_W \circ C = C \circ \nabla_W
 $$
 
-5) 对于标量场 $f$，$\nabla_W$ 作用到 $f$ 上等同于 $W$ 作用到 $f$ 上（见 **第2.2节**）：
+5. 对于标量场 $f$，$\nabla_W$ 作用到 $f$ 上等同于 $W$ 作用到 $f$ 上（见 **第2.2节**）：
 $$
 \nabla_W f = Wf
 $$
@@ -1603,8 +1596,8 @@ $$
 
 如图所示，点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处。这两条路径分别是：
 
-1) 先改变 $x_\nu$，再改变 $x_\mu$；
-2) 先改变 $x_\mu$，再改变 $x_\nu$。
+1. 先改变 $x_\nu$，再改变 $x_\mu$；
+2. 先改变 $x_\mu$，再改变 $x_\nu$。
 
 将这条环路不断缩小，那么切矢量的一个基 $e_\beta$ 通过这两条路径平移的结果的差值可以表示为：
 
@@ -1677,7 +1670,7 @@ T_{zt} & T_{zx} & T_{zy} & T_{zz}
 \end{pmatrix}
 $$
 
-其中 $T_{tt}$ 代表能量密度，$(T_{tx}, T_{ty}, T_{tz})$ 代表动量密度，
+其中 $T_{tt}$ 代表能量密度，$(T_{tx}, T_{ty}, T_{tz})$ 代表动量密度，而
 
 $$
 \begin{pmatrix}
@@ -1696,6 +1689,8 @@ $$
 > 就像麦克斯韦方程是电动力学的基本假设一样，爱因斯坦场方程也是广义相对论的基本假设，它不能从其他的式子中推导出来。
 
 如果我们认为电动力学=麦克斯韦方程+求解+应用，那么我们在某种程度上也可以说广义相对论=爱因斯坦场方程+求解+应用。
+
+（未完待续...）
 
 <!-- 由于本文的初衷是数学（微分几何），因此本节的目的仅仅是介绍爱因斯坦场方程及其求解。下面我们给出它 -->
 
