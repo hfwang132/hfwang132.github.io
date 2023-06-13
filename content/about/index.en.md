@@ -23,6 +23,10 @@ draft: false
     padding: 0px;
     border: 0px;
 }  
+
+img {
+  border-radius: 10px;
+}
 </style>
 
 <div class="float-container">
