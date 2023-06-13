@@ -33,13 +33,13 @@ async def main():
     print("Hello world!")
 ```
 
-To execute the coroutine, you cannot directly call `main()`. Instead, you need to do the following:
+To execute the coroutine, you cannot directly call `main()`. Instead, you need to use `run()`:
 
 ```python
 asyncio.run(main())
 ```
 
-To nest one coroutine within another, similar to nesting one function within another, you can use the following approach:
+To nest one coroutine within another, similar to nesting one function within another, you can use `await`:
 
 ```python
 import asyncio
@@ -58,7 +58,7 @@ async def main():
 asyncio.run(main())
 ```
 
-When nesting coroutines within another coroutine, you need to use await to invoke them. If you write it directly as follows:
+When nesting coroutines within another coroutine, you need to use `await` to invoke them. If you write it directly as follows:
 
 ```python
 async def main():
@@ -83,7 +83,7 @@ As can been seen, `coro_1` and `coro_2` has not been called.
 
 ## Tasks
 
-If coroutines are used as shown in the previous section, they would lose their significance. The true value of coroutines lies in their ability to execute concurrently. Consider the following code:
+We would lose the point if we use coroutines in the way as shown in the previous section. The true significance of coroutines lies in their ability to be executed concurrently. Consider the following code:
 
 ```python
 import asyncio
@@ -144,7 +144,7 @@ I am the coroutine 2.
 Elapsed: 1.001298 s
 ```
 
-But if we do not use `create_task` but rather directly `await` the two coroutines:
+If we do not use `create_task` but rather directly `await` the two coroutines:
 
 ```python
 import asyncio
@@ -179,11 +179,11 @@ I am the coroutine 2.
 Elapsed: 2.002527 s
 ```
 
-In other words, if we don't use `create_task` to create tasks, `coro_2()` will actually start executing only after `coro_1()` has finished.
+In other words, if we don't use `create_task` to create tasks, `coro_2()` will not be executed until `coro_1()` has finished.
 
 From this example, we can observe that the true meaning of `await` is "wait for the task to complete".
 
-Furthermore, we can use `gather` to run both coroutines concurrently:
+Furthermore, we can use `gather` to run multiple coroutines concurrently:
 
 ```python
 import asyncio
@@ -247,7 +247,7 @@ The result is:
 Elasped: 10.013134 s
 ```
 
-By combining `async for` and `yield`, we can create an asynchronous generator. In reality, an asynchronous generator is an instance of a class that defines `__aiter__` and `__anext__` methods. Here's an equivalent implementation of the previous code:
+By combining `async for` and `yield`, we can create an asynchronous generator. In reality, an asynchronous generator is an instance of a class that has `__aiter__` and `__anext__` methods. Here's an equivalent implementation of the previous code:
 
 
 ```python
@@ -298,5 +298,4 @@ async def main():
 asyncio.run(main())
 ```
 
-This is an FM radio application that uses `async for` to read data from the radio and then demodulates and plays the data within the `async for` loop. This allows us to perform real-time processing and streaming of audio data.
-
+This is an FM radio application that uses `async for` to read data from the receiver, demodulate the data into audio signals and finally play the audio in a streamed manner. In other words, we are essentially processing and streaming the audio data in real time.

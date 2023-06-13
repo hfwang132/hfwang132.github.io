@@ -32,13 +32,13 @@ async def main():
     print("Hello world!")
 ```
 
-为了运行它，不能直接调用 `main()`，而是需要：
+为了运行它，不能直接调用 `main()`，而是需要用 `run()`：
 
 ```python
 asyncio.run(main())
 ```
 
-如何在一个协程里嵌套另一个协程呢？就像我们在一个函数里嵌套另一个函数那样。方法如下：
+如何在一个协程里嵌套另一个协程呢？就像我们在一个函数里嵌套另一个函数那样。你需要使用 `await` 语句：
 
 ```python
 import asyncio
