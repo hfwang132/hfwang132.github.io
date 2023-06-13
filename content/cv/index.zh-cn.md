@@ -75,3 +75,35 @@ draft: false
     - 构建了一个定制的 Linux 内核，支持 AD9361 和 PYNQ 驱动、
     - 将硬件设计从 ZCU102 板卡移植到 PYNQ-ZU 板卡上、
     - 基于 PYNQ 框架开发了一个简单的 FM 解调应用程序。
+
+# 获奖
+---
+
+- 国家奖学金，2022.09
+- 第十三届全国大学生数学竞赛一等奖，2021.12
+- 2022 Interdisciplinary Contest in Modeling (ICM) -- Meritorious Winner, 2022.05
+
+# 技能
+---
+
+### 编码
+
+- C/C++
+- Fortran
+- Python
+- $\LaTeX$
+- Matlab
+- Mathematica
+- Verilog
+
+### 软件
+
+- Simulink
+- LabVIEW
+- Vivado, Vitis HLS, PetaLinux
+
+### 语言
+
+- CET-6 633
+- TOEFL 103
+- GRE 331 (V: 163, Q: 168)
