@@ -2,13 +2,14 @@
 title: "About"
 date: 2023-06-09T22:38:34+08:00
 draft: false
+comment: false
 ---
 
 <style>
 .float-container {
     border: 0px;
     padding: 20px;
-    font-size: 18px
+    font-size: 18px;
 }
 
 .float-child1 {
