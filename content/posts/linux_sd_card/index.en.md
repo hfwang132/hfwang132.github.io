@@ -14,17 +14,13 @@ First, use `sudo fdisk -l` to confirm which device in `/dev` corresponds to the 
 
 Assuming we have determined that the SD card corresponds to `/dev/sde`, we can enter `sudo fdisk /dev/sde` to start the partitioning operation:
 
-Enter `d` to delete partitions. Keep entering until all partitions are deleted.
-
-Enter `n` to create the first partition as the boot partition.
-
-Enter `t` to change the partition type to `W95 FAT32`. Boot partitions are generally of this type.
-
-Enter `a` to set the partition as the boot partition.
-
-Enter `n` to create the second partition as the root file system partition.
-
-Since the root file system partition type is usually `Linux`, and the default partition type is already `Linux`, there is no need to enter `t` to change the partition type.
+- Enter `d` to delete partitions. Keep entering until all partitions are deleted.
+- Enter `n` to create the first partition as the boot partition.
+- Enter `t` to change the partition type to `W95 FAT32`. Boot partitions are generally of this type.
+- Enter `a` to set the partition as the boot partition.
+- Enter `n` to create the second partition as the root file system partition.
+- Since the root file system partition type is usually `Linux`, and the default partition type is already `Linux`, there is no need to enter `t` to change the partition type.
+- Enter `w` to save and exit.
 
 Finally, after partitioning, we can create the file systems:
 
