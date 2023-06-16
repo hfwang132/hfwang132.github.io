@@ -422,7 +422,7 @@ $f:v^{\*\*}\mapsto v \quad\text{s.t.}\quad v^{\*\*}(v^\*)=v^\*(v)$
 
 流形上光滑标量场 $f$ 的微分，定义为上述余切向量构成的余切向量场。
 
-> **例 2.2** 现有 3 维微分流形上点 $p$ 处的一个向量 $v|_p=\left.\left(\frac{\partial}{\partial x}+2\frac{\partial}{\partial y}-\frac{\partial}{\partial z}\right)\right|_p$ 。 标量场 $f$ 的微分 $\mathbb{d}f$ 作用到 $v$ 身上后得到 $(\mathbb{d}f)|_p(v|_p)=v|_p(f)=\left.\left(\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y}-\frac{\partial f}{\partial z}\right)\right|_p$
+> **例 2.1** 现有 3 维微分流形上点 $p$ 处的一个向量 $v|_p=\left.\left(\frac{\partial}{\partial x}+2\frac{\partial}{\partial y}-\frac{\partial}{\partial z}\right)\right|_p$ 。 标量场 $f$ 的微分 $\mathbb{d}f$ 作用到 $v$ 身上后得到 $(\mathbb{d}f)|_p(v|_p)=v|_p(f)=\left.\left(\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y}-\frac{\partial f}{\partial z}\right)\right|_p$
 
 点 $p$ 处的微分所在的余切空间有什么样的基呢？以 3 维流形上的一点 $p$ 为例，该点的切空间有三个基 $\\{\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2},\frac{\partial}{\partial x^3}\\}$ ，简记为 $\\{ \partial_1, \partial_2, \partial_3 \\}$。根据**定理 2.1**，我们可以找到这三个基在余切空间中的对偶基 $\\{\mathrm{d}x^1,\mathrm{d}x^2,\mathrm{d}x^3\\}$ ，使得 $\mathrm{d}x^j\partial_i=\delta_i^j$ 。某点处的微分可以表示成这些基的线性组合： $\mathrm{d}f=a_i\mathrm{d}x^i$ 。
 
@@ -512,7 +512,7 @@ $\underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots
 这两种定义之间是等价的。因为对于每一个这样的多重线性映射，都能在张量积 $\underbrace{V \otimes \cdots \otimes V}_m\otimes \underbrace{V^\*\otimes \cdots \otimes V^\*}_n$ 中找到唯一的一个元素与其对应（根据 universal property）。注意，在后者中， $V$ 有 $m$ 个， $V^\*$ 有 $n$ 个，与前者相反。
 
 
-> **例 2.1**  **二次型**
+> **例 2.2**  **二次型**
 >   
 > 以双线性映射 $V\times V\rightarrow \mathbb{R}$ 为例，其中 $V$ 是二维线性空间。取 $V$ 的基为 $\\{e_1,e_2\\}$ ，向量 $v$ 在这组基下的坐标为 $(v^1,v^2)$ ，向量 $w$ 在这组基下的坐标为 $(w^1,w^2)$ 。  
 >   
@@ -577,7 +577,7 @@ $M$ 上全体 $(m,n)$ 型张量场的集合记作 $\mathcal{T}^m_n(M)$ 。
 
 最后，我们再来看看作为线性变换的张量，它是一个 $(1,1)$ 型张量。
 
-> **例 2.2**  **线性变换与 (1,1) 型张量**
+> **例 2.3**  **线性变换与 (1,1) 型张量**
 > 
 > 我们都知道，线性变换是一个自同态（Endomorphism），也就是从向量空间 $V$ 到它自身的同态。$V$ 上全体自同态记为 $\mathrm{End}(V)$。当然，也可以写成 $L(V,V)$，表示 $V$ 到 $V$ 的线性映射。只不过符号 $\mathrm{End}$ 更加强调“到自身”这一属性。
 >
@@ -595,7 +595,7 @@ $M$ 上全体 $(m,n)$ 型张量场的集合记作 $\mathcal{T}^m_n(M)$ 。
 >
 > 我们可以这么来考虑这个同构：$(1,1)$ 型张量接受一个向量 $X$ 和一个对偶向量 $\omega$，并返回一个实数。如果我们现在已经给定一个输入向量 $X$，那么 $T(\cdot, X)$ 就是一个 $V^*$ 到 $\mathrm{R}$ 的线性映射，而后者构成的集合正是 $V^{**}$，它自然同构于 $V$。
 >
-> 现在回顾一下合同矩阵和相似矩阵。我们在初等线性代数中学过二次型和线性变换的矩阵，以及它们在基变换下是如何变化的，变化的规则分别对应合同矩阵和相似矩阵所满足的公式。实际上，合同矩阵和相似矩阵所满足的公式就是 $(0,2)$ 型张量和 $(1,1)$ 型张量所满足的坐标变换规则。
+> 现在回顾一下合同矩阵和相似矩阵。我们在初等线性代数中学过二次型（见**例 2.2**）和线性变换的矩阵，以及它们在基变换下是如何变化的，变化的规则分别对应**合同矩阵**和**相似矩阵**。实际上，合同矩阵和相似矩阵所满足的公式就是 $(0,2)$ 型张量和 $(1,1)$ 型张量所满足的坐标变换规则。
 >
 > **评论**
 > 
@@ -1805,16 +1805,14 @@ $\phi_t$ 是一个微分同胚（见 **第 1.8 节末**，证略）
 
 我们说这个 $m$ 维区域是镶嵌（embedded）到 $n$ 维流形中的。或者说它是 $n$ 维流形上的一个 $m$ 维超曲面。
 
-在上述定义中，我们只用从 0 到 1 的实数来分配参数。但有时候，为了方便起见，我们也可以用 $[a,b]$ 来代替 $[0,1]$ ，反正它们只相差了一个系数和偏移。换言之，只要是一个“矩形”区域就可以。
-
 > **例 5.1**
 >
-> 卫生纸滚筒上的一个点是一个 0-cell。0-cell 是一种特殊情况，它所代表的区域就仅仅是一个点。
+> 某流形上的一个点是一个 0-cell。0-cell 是一种特殊情况，它所代表的区域就仅仅是一个点。
 >
 > 2 维球面 $S^2$ 上的一条曲线是一个 1-cell（你可以想象地球仪上的北纬 30 度线）。我们为这条线上的每一个点分配一个参数 $[0,1]\rightarrow S^2$ 。显然，并非每个点对应唯一的一个参数。如果这条曲线与自己相交，那么相交的点会对应两个不同的参数 $u_1\neq u_2\in [0,1]$ 。
 >
 > 流形 $M=\mathbb{R}^3$ 中的一个曲面是一个 2-cell。我们为这个曲面上的每一个点分配一组参数 $[0,1]\times[0,1]\rightarrow \mathbb{R}^3$ 。
-> 更具体地，考虑一个第一象限中的 1/8 单位球面，我们可以这样分配参数： $\phi:[0,\pi/2]\times[0,\pi/2]\rightarrow\mathbb{R}^3$ ，使得 $\phi(u,v)\rightarrow (\cos u\sin v, \sin u\sin v, \cos v)$ 。
+> 更具体地，考虑一个第一象限中的 1/8 单位球面，我们可以这样分配参数： $\phi:[0,1]^2 \rightarrow\mathbb{R}^3$ ，使得 $\phi(u,v)\rightarrow \left(\cos(\frac{\pi}{2} u)\sin(\frac{\pi}{2} v), \sin(\frac{\pi}{2} u)\sin(\frac{\pi}{2} v), \cos(\frac{\pi}{2} v)\right)$ 。
 >
 > **评论**
 >
@@ -1822,7 +1820,7 @@ $\phi_t$ 是一个微分同胚（见 **第 1.8 节末**，证略）
 >
 > 在上例中，我们可以用 $u$ 和 $v$ 这两个参数来表示 1/8 单位球面上的点。但是对于例子中的 $\mathbb{R}^3$ 这个流形，我们本身就有一个很自然的坐标 $\mathrm{id}:\mathbb{R}^3\rightarrow\mathbb{R}^3$ ，它是一个恒等映射。
 
-还有一种参数化的方式，叫做 $m$ 维单形（m-simplex, pl. m-simplices）。与 $m$ 维胞腔使用的矩形区域 $[0,1]^m$ 不同，它使用的是三角形区域 $\\{(\theta_0,\theta_1,\cdots,\theta_m)\mid\sum_i\theta_i=1, \\, \theta_i\ge 0\\}$ 。
+还有一种参数化的方式，叫做 $m$ 维单形（m-simplex, pl. m-simplices）。与 $m$ 维胞腔使用的矩形区域 $[0,1]^m$ 不同，它使用的是三角形区域 $\left\\{(\theta\_0,\cdots,\theta_m)\mid\sum_i\theta_i=1, \\, \theta_i\ge 0\right\\}$ 。这个三角形区域叫做 $\mathbb{R^m}$ 中的标准单形。它关于 $\varphi$ 在流形上的像，就是流形上的一个 m-simplex。
 
 > **评论**
 >
@@ -1832,17 +1830,75 @@ $\phi_t$ 是一个微分同胚（见 **第 1.8 节末**，证略）
 
 一个 m-链（m-chain）指的是一系列 m-cells（或 m-simplices）的线性组合：
 
-$c=\sum_i m_i\sigma_i,\quad m_i\in \mathbb{Z}$
+$c=\sum_i c_i\sigma_i,\quad m_i\in \mathbb{Z}$
 
 m-chain 的集合记作 $C_m(M)$ 。
 
 > **评论**
 >
 > 你可能现在很好奇 $c=\sum_i m_i\sigma_i$ 究竟指的是什么，即，把两个 m-cells 加在一起到底是什么意思？别着急，我们会在**第 5.3 节**介绍这个线性组合的意义。现在你只需要把它当作一种“形式上”的线性组合（formal linear combination）。
+> 
+> 另外，注意到线性组合的系数只能是整数，这使得 $C_m(M)$ 并不构成一个向量空间，而是构成一个模（Module）。模和向量空间的区别在于模的数乘运算是 $R\times V \rightarrow V$，而不是 $F \times V \rightarrow V$，其中 $R$ 代表一个环，$F$ 代表一个域。由于整数集不构成域，而是只能构成环，因此 $C_m(M)$ 是一个模。
 
 ### 5.2 边界算子（Boundary Operator）
 
-(未完待续...)
+> **评论**
+> 
+> 现在我们来考虑如何定义一块区域的边界。有了胞腔/单形和链的概念之后，我们就可以来形式化地定义边界了。
+
+一个 (m+1)-cell，也就是 $\phi: [0,1]^{(m+1)} \rightarrow M$ 的像 $\sigma = \mathrm{Im}(\phi)$。它的边界 $\partial \sigma$ 定义为下述的 m-chain ：
+
+$$
+\sum_{i=0}^{m}(-1)^i [\phi(x_0,\cdots,x_{i-1},1,x_{i+1},\cdots,x_{m}) - \phi(x_1,\cdots,x_{i-1},0,x_{i+1},\cdots,x_{m})]
+$$
+
+一个 m-chain（$c_i\sigma_i$）的边界定义为 
+
+$$\partial(c_i\sigma_i):=c_i\partial(\sigma_i).$$
+
+我们将 $\partial: C_{m+1}(M)\rightarrow C_{m}(M)$ 称为边界算子。
+
+> **例 5.2** 
+>
+> 一个 1-cell（一条曲线）$\phi: [0,1]\rightarrow M$ 的边界是一个 0-chain： $\phi(1) - \phi(0)$。
+> 
+> 这里 $\phi(1) - \phi(0)$ 是抽象意义上的两个点（0-cell）的线性组合。
+> 
+> 特别地，如果这条曲线（1-cell）首尾相接，即 $\phi(1)=\phi(0)$，则它的**边界为零**。
+> 
+> 可见，当我们说一个首尾相接的曲线没有“边界”时，我们实际上是在说它的边界为零。
+>
+> **例 5.3**
+> 
+> 考虑流形 $\mathbb{R}^2$ 上的一个 2-cell：$\phi: [0,1]\times [0,1] \rightarrow \mathbb{R}^2$，$\phi(r,\theta) = (r\cos \theta, r\sin \theta)$。它实际上是第一象限中的 1/4 圆。
+> 
+> 该 2-cell 的边界是如下的 1-chain:
+>
+> $$
+> (\phi(1,\theta)-\phi(0,\theta)) - (\phi(r,1) - \phi(r,0))
+> $$
+> 
+> 可以看出，这四个 1-cell 分别对应 1/4 圆弧、原点、$y$ 方向上的半径和 $x$ 方向上的半径，它们的确构成了这个 1/4 圆盘的“边界”。如果我们把正负号解读为方向，我们还可以得到一个有方向的环路。
+
+用单形（simplex）的语言也可以定义边界。如果将一个 m-simplex 记作
+
+$$
+\langle p_0 ,\cdots, p_m \rangle
+$$
+
+其中 $p_0, \cdots, p_m$ 代表单形的顶点（即标准单形的顶点的像）；那么该 m-simplex 的边界是下述的 (m-1)-simplex：
+
+$$
+\partial(\langle p_0 ,\cdots, p_m \rangle) := \sum_i^m (-1)^i \langle p_0 ,\cdots, p_{i-1}, p_{i+1}, \cdots, p_m \rangle
+$$
+
+可见，m-cell 和 m-simplex 是两套平行的语言。
+
+与外微分算子类似，边界算子作用两次之后也会得到零：
+
+> **定理 5.1**
+> 
+> $\partial\partial=0$。证略。
 
 ### 5.3 微分形式的积分（Integration of Differential Forms）
 
@@ -1876,7 +1932,7 @@ $$
 
 的确，这样做是用计算方法代替了定义，类似于用坐标变换的规则去定义张量。它们都不是很好的做法。
 
-实际上，在微分几何中，有一个更好的，也是正统的定义方式，它涉及到**拉回映射**（pull-back）的概念。具体来说，$\omega$ 在 $\sigma$ 上的积分定义为 $\phi^\*\omega$ 在 $[0,1]^m$ 上的重积分。其中 $\phi^\*\omega$ 表示 $\phi$ 这个坐标变换将 $\omega$ 的“定义域”从流形上的区域 $\sigma$ “拉回”到 $[0,1]^m\subseteq \mathbb{R}^m$ 。限于篇幅，此处暂时不展开讨论 pull-back 。或许我以后会考虑写一个“选读”段落。
+实际上，在微分几何中，有一个更好的，也是正统的定义方式，它涉及到**拉回映射**（见**第 4.7 节**）。具体来说，$\omega$ 在 $\sigma$ 上的积分定义为 $\phi^\*\omega$ 在 $[0,1]^m$ 上的重积分。其中 $\phi^\*\omega$ 表示 $\phi$ 这个映射将 $\omega$ 从流形上的区域 $\sigma$ “拉回”到 $\mathbb{R}^m$ 中的区域 $[0,1]^m\subseteq \mathbb{R}^m$ 。也就是说 $\phi^\*\omega$ 是 $\mathbb{R}^m$ 上的一个微分形式。
 
 > **评论**
 >
@@ -1888,13 +1944,38 @@ $$ \begin{aligned} \int_c\omega=\sum_i m_i\int_{\sigma_i}\omega \end{aligned} $$
 
 其中 $\sigma_i$ 是一个 m-cell。
 
-
-> **评论**  
+<!-- > **评论**  
 >   
 > 在**第 5.1 节**中，我们定义 m-chain 是 m-cells 的线性组合。现在，这个线性组合的意义体现了出来：  
-> m-cells 的线性组合（m-chain）上的积分，定义为 m-cells 上的积分的线性组合。
+> m-cells 的线性组合（m-chain）上的积分，定义为 m-cells 上的积分的线性组合。 -->
 
 ### 5.4 斯托克斯定理（Stokes' Theorem）
+
+> 有了前几节的概念的铺垫之后，我们现在就可以来介绍大名鼎鼎的斯托克斯定理了。
+
+**定理 5.2**  **斯托克斯定理**
+
+给定一个 (m+1)-chain：$c\in C_{m+1}$ 和一个 m 阶微分形式： $\alpha \in \bigwedge^m(T^*M)$，有
+
+$$
+\int_c \mathrm{d} \alpha = \int_{\partial c} \alpha
+$$
+
+下面我们看看斯托克斯定理如何退化为我们熟悉的形式。
+
+> **例 5.4** **微积分基本定理**
+>
+> $$ \int_a^b f^\prime(x)\mathrm{d}x = f(b) - f(a) $$
+> 
+> 在斯托克斯定理中，取 $M=\mathbb{R}^1$，$c = [a,b]$ 即可得到。
+
+> **例 5.5** **格林定理**
+> 
+> $$
+> \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) \mathrm{d}x\mathrm{d}y = \oint_{\partial D} (P\mathrm{d}x+Q\mathrm{d}y)
+> $$
+>
+> 在斯托克斯定理中，取 $M=\mathbb{R}^2$，$c = D$，$\alpha = P\mathrm{d}x+Q\mathrm{d}y$ 即可得到。
 
 （未完待续...）
 
