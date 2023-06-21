@@ -14,6 +14,7 @@ hfwang132@gmail.com
 
 ### Bachelor of Science in Physics, *Wuhan University*, Sep 2019 -- Jun 2023
 
+- Honor Graduate of Hongyi Honor College
 - GPA: 3.97/4.00 (top 2\%)
 - Core Courses: Classical Mechanics (99), 
   Thermodynamics and Statistical Physics (99), Mathematical Physics (98), Electrodynamics (93), Quantum Mechanics (96), Solid-state Physics (91), Electronic Circuits (96), Electronic Design Automation (93), Digital IC Design (97).
@@ -82,9 +83,11 @@ Advisor: Professor Sheng Chang (Department of Physics, Wuhan University, changsh
 # Awards
 ---
 
-- National Scholarship (<1\%), Ministry of Education of PRC, 2022.09
-- 13th Chinese College Mathematics Competition -- First Prize, 2021.12
-- 2022 Interdisciplinary Contest in Modeling (ICM) -- Meritorious Winner, 2022.05
+- National Scholarship (<1\%), Ministry of Education of PRC, Sep 2022
+- 13th Chinese College Mathematics Competition -- First Prize, Dec 2021
+- 2022 Interdisciplinary Contest in Modeling (ICM) -- Meritorious Winner, May 2022
+- Honor Graduate of Hongyi Honor College, Jun 2023
+- Wuhan University 2023 Outstanding Bachelor's Degree Thesis, Jun 2023
 
 # Skills
 ---
