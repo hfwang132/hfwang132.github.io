@@ -831,6 +831,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         title = ""
       [[languages.en.menu.main]]
         weight = 5
+        identifier = "publication"
+        pre = ""
+        post = ""
+        name = "Publication"
+        url = "/publication/"
+        title = ""
+      [[languages.en.menu.main]]
+        weight = 9
         identifier = "about"
         pre = ""
         post = ""
@@ -838,7 +846,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         url = "/about/"
         title = ""
       [[languages.en.menu.main]]
-        weight = 6
+        weight = 10
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
         post = ""
@@ -898,7 +906,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         identifier = "posts"
         pre = ""
         post = ""
-        name = "所有文章"
+        name = "博客"
         url = "/posts/"
         title = ""
       [[languages.zh-cn.menu.main]]
@@ -927,6 +935,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         title = ""
       [[languages.zh-cn.menu.main]]
         weight = 5
+        identifier = "publication"
+        pre = ""
+        post = ""
+        name = "发表"
+        url = "/publication/"
+        title = ""
+      [[languages.zh-cn.menu.main]]
+        weight = 9
         identifier = "about"
         pre = ""
         post = ""
@@ -934,7 +950,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         url = "/about/"
         title = ""
       [[languages.zh-cn.menu.main]]
-        weight = 6
+        weight = 10
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
         post = ""

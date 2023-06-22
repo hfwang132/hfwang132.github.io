@@ -87,7 +87,8 @@ Advisor: Professor Sheng Chang (Department of Physics, Wuhan University, changsh
 - 13th Chinese College Mathematics Competition -- First Prize, Dec 2021
 - 2022 Interdisciplinary Contest in Modeling (ICM) -- Meritorious Winner, May 2022
 - Honor Graduate of Hongyi Honor College, Jun 2023
-- Wuhan University 2023 Outstanding Bachelor's Degree Thesis, Jun 2023
+- Wuhan University 2023 Outstanding Bachelor's Degree Thesis (5%), Jun 2023
+- Wuhan University 2023 Outstanding Graduate (10%), Jun 2023
 
 # Skills
 ---
