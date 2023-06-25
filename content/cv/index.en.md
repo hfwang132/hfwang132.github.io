@@ -14,8 +14,8 @@ hfwang132@gmail.com
 
 ### Bachelor of Science in Physics, *Wuhan University*, Sep 2019 -- Jun 2023
 
-- Honor Graduate of Hongyi Honor College
-- GPA: 3.97/4.00 (top 2\%)
+- [Honor Graduate of Hongyi Honor College](docs/Honor_Graduate.pdf)
+- [GPA: 3.97/4.00](docs/transcript-Haifei_Wang.pdf) (top 2\%)
 - Core Courses: Classical Mechanics (99), 
   Thermodynamics and Statistical Physics (99), Mathematical Physics (98), Electrodynamics (93), Quantum Mechanics (96), Solid-state Physics (91), Electronic Circuits (96), Electronic Design Automation (93), Digital IC Design (97).
 
@@ -83,12 +83,12 @@ Advisor: Professor Sheng Chang (Department of Physics, Wuhan University, changsh
 # Awards
 ---
 
-- National Scholarship (<1\%), Ministry of Education of PRC, Sep 2022
-- 13th Chinese College Mathematics Competition -- First Prize, Dec 2021
-- 2022 Interdisciplinary Contest in Modeling (ICM) -- Meritorious Winner, May 2022
-- Honor Graduate of Hongyi Honor College, Jun 2023
-- Wuhan University 2023 Outstanding Bachelor's Degree Thesis (5%), Jun 2023
-- Wuhan University 2023 Outstanding Graduate (10%), Jun 2023
+- [National Scholarship (<1\%), Ministry of Education of PRC](docs/MOE-National_Scholarship.pdf), Sep 2022
+- [13th Chinese College Mathematics Competition -- First Prize](docs/2021-math-1st-prize.pdf), Dec 2021
+- [2022 Interdisciplinary Contest in Modeling (ICM) -- Meritorious Winner](docs/ICM-Meritorious_Winner_2022.pdf), May 2022
+- [Honor Graduate of Hongyi Honor College](docs/Honor_Graduate.pdf), Jun 2023
+- [Wuhan University 2023 Outstanding Bachelor's Degree Thesis](docs/Outstanding_Thesis.pdf) (5%), Jun 2023
+- [Wuhan University 2023 Outstanding Graduate](docs/Outstanding_Graduate.pdf) (10%), Jun 2023
 
 # Skills
 ---
@@ -111,6 +111,6 @@ Advisor: Professor Sheng Chang (Department of Physics, Wuhan University, changsh
 
 ### Language
 
-- CET-6 633
-- TOEFL 103
-- GRE 331 (V: 163, Q: 168)
+- [CET-6 633](docs/CET-6.pdf)
+- [TOEFL 103](docs/TOEFL-Haifei_Wang.pdf)
+- [GRE 331 (V: 163, Q: 168)](docs/GRE-Haifei_Wang.pdf)

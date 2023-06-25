@@ -14,8 +14,8 @@ hfwang132@gmail.com
 
 ### 学士，武汉大学，弘毅学堂（珠峰计划荣誉学院），物理学方向，2021.3 -- 2021.6
 
-- 荣誉毕业生
-- GPA：3.97/4.00
+- [荣誉毕业生](docs/Honor_Graduate.pdf)
+- [GPA：3.97/4.00](docs/transcript-Haifei_Wang.pdf)
 - 经典力学（99）、热力学与统计力学（99）、数学物理方法（98）、电动力学（93）、量子力学（96）、固体物理（91）、电子线路（模电/数电）（96）、电子设计自动化（93）、数字集成电路设计（97）
 
 # 科研经历
@@ -83,12 +83,12 @@ hfwang132@gmail.com
 # 获奖
 ---
 
-- 国家奖学金，2022.09
-- 第十三届全国大学生数学竞赛一等奖，2021.12
-- 2022 Interdisciplinary Contest in Modeling (ICM) -- Meritorious Winner, 2022.05
-- 2023 年武汉大学弘毅学堂荣誉毕业生，2023.6
-- 武汉大学 2023 届优秀学士学位论文（5%），2023.6
-- 武汉大学 2023 届优秀本科毕业生（10%），2023.6
+- [国家奖学金](docs/MOE-National_Scholarship.pdf)，2022.09
+- [第十三届全国大学生数学竞赛一等奖](docs/2021-math-1st-prize.pdf)，2021.12
+- [2022 美国大学生数学建模竞赛 -- Meritorious Winner（一等奖）](docs/ICM-Meritorious_Winner_2022.pdf)，2022.05
+- [2023 年武汉大学弘毅学堂荣誉毕业生](docs/Honor_Graduate.pdf)，2023.6
+- [武汉大学 2023 届优秀学士学位论文](docs/Outstanding_Thesis.pdf)（5%），2023.6
+- [武汉大学 2023 届优秀本科毕业生](docs/Outstanding_Graduate.pdf)（10%），2023.6
 
 # 技能
 ---
@@ -111,6 +111,6 @@ hfwang132@gmail.com
 
 ### 语言
 
-- CET-6 633
-- TOEFL 103
-- GRE 331 (V: 163, Q: 168)
+- [CET-6 633](docs/CET-6.pdf)
+- [TOEFL 103](docs/TOEFL-Haifei_Wang.pdf)
+- [GRE 331 (V: 163, Q: 168)](docs/GRE-Haifei_Wang.pdf)
