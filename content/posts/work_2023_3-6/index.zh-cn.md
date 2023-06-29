@@ -168,17 +168,11 @@ function openFullImage(imageUrl) {
 | 电平标准 | 在 ZU 的原理图中确认了 VADJ 为 1.8V；VCCO 也为 1.8 V；符合要求。|
 | 驱动问题 | 可以确定不是软件问题，因为 S2/S3 和 V3 用的是同一个驱动程序。|
 
-<!-- **进一步 debug 应该需要使用实体示波器**。由于时间限制，搁置。 -->
-
 {{< admonition type=question title="重要进展！" open=true >}}
 ZCU104/102 + S2/S3 可以读到 MISO 返回的 0x0A。这说明是 ZU 本身 FMC 引脚的问题！
 {{< /admonition >}}
 
 {{< admonition type=info title="SPI 和硬件复位涉及的管脚" open=true >}}
-
-{{< admonition type=
-
->}}
 
 **PYNQ-ZU + FMCOMMS2/3**
 ```xdc
@@ -211,6 +205,16 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 ```
 {{< /admonition >}}
 
+{{< admonition type=info title="SPI 和硬件复位涉及的管脚" open=true >}}
+在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。
+
+但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。
+
+之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。
+
+进一步测试可能需要示波器。
+{{< /admonition >}}
+
 #### 3.2.2 \*Device Tree Overlay 问题
 
 在 ZCU102/ZCU104 上加载 DTO 没有报错，但并未出现 `/dev/spidev1.0` 文件。由于 PL 工程除了管脚约束和芯片型号以外都相同，因此通过 xsa 文件生成的 `pl.dtsi` 与 ZU 的没有区别。
@@ -223,5 +227,5 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 | - | - | - |
 | PYNQ-Z2 结合 RTL-SDR 使用 | [实现了一个基于 Jupyter Notebook 的 FM 收音机网页小程序](https://github.com/hfwang132/fm-demod-rtlsdr-pynqz2) | 性能还有提升空间 |
 | 将 AD9361 的驱动集成到 PYNQ 内核 | [PYNQ v2.4 + meta-adi 2019_R1 成功](https://github.com/hfwang132/zedboard-adi-pynq) | 在 2019 年以后的版本中，meta-adi 不支持 FPGA_MANAGER |
-| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了FFT和FIR的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。|
+| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了FFT和FIR的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。进一步测试可能需要示波器。|
 
