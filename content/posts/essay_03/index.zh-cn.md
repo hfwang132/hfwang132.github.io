@@ -1,7 +1,9 @@
 ---
 title: "随想-03"
 date: 2023-06-25T22:51:45+08:00
-draft: true
+draft: false
+categories: ["日常"]
+tags: ["日常"]
 ---
 
 > 本文写于 2020 年 1 月 18 日。

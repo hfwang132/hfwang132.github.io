@@ -2,7 +2,7 @@
 title: "Python 协程/异步IO"
 date: 2023-06-13T22:05:45+08:00
 draft: false
-categories: ["EECS"]
+categories: ["CS"]
 tags: ["Python"]
 ---
 

@@ -97,9 +97,18 @@ class pynq.overlay.Overlay(bitfile_name, dtbo=None, download=True, ignore_versio
 
 #### 2.2.1 SPI 通信问题
 
-> - AD9361 的寄存器地址为 10 位，第 11 位代表字节数，第 12 位代表写/读
-> - AD9361 的地址为 `0x037` 的寄存器中存储了 `PRODUCT_ID`。对于 AD9361 Rev 2，PRODUCT_ID  应当为 `0x0A`。
-> - AD9361 的驱动在初始化 AD9361 时，会先通过 `GPIO_RESETB` 进行硬件复位（至少 1us，实际采用了 1ms），再读取 `0x037` 寄存器。
+> - AD9361 的 SPI 指令为两个字节，格式为：
+> |D15|D14|D13|D12|D11|D10|D9:D0|
+> | - | - | - | - | - | - |  -  |
+> |W/R|NB2|NB1|NB0| X | X |A[9:0]|
+> 
+>   其中 
+>   - W/R 代表写还是读（1为写，0为读）；
+>   - NB2:NB0 代表读写的字节数；
+>   - A[9:0] 代表寄存器地址。
+>   在发送（写）数据的情况下，要发送的数据要跟在上述两字节的指令之后；在接收（读）数据的情况下，发送指令之后即可开始读取数据。
+> - AD9361 的地址为 `0x037` 的寄存器中存储了 `PRODUCT_ID`。对于 AD9361 Rev 2，`PRODUCT_ID`  应当为 `0x0A`。
+> - 初始化 AD9361 时，驱动先通过 `GPIO_RESETB` 进行硬件复位（至少 1us），再读取 `0x037` 寄存器，判断 `PRODUCT_ID`。
 
 在将 V3 的 FMC9361_1.0（以下简称 V3）换成 FMCOMMS2（以下简称 S2）和 FMCOMMS3（以下简称 S3），并修改了管脚约束之后，SPI 通信出现了问题。
 
@@ -122,11 +131,13 @@ function openFullImage(imageUrl) {
 
 |子卡|现象|波形|
 |-|-|-|
-|V3|MISO上正确返回`0x0A`|<img class="preview-image" src="files/V3_SPI.png" onclick="openFullImage('files/V3_SPI.png')">|
-|S2|MISO一直为低，因此读到的是`0x00`|<img class="preview-image" src="files/S2_SPI.png" onclick="openFullImage('files/S2_SPI.png')">|
-|S3|MISO一直为高，因此读到的是`0xFF`|<img class="preview-image" src="files/S3_SPI.png" onclick="openFullImage('files/S3_SPI.png')">|
+|V3|MISO上正确返回`0x0A`|<img class="preview-image" src="files/spi_write_then_read_v3.png" onclick="openFullImage('files/spi_write_then_read_v3.png')">|
+|S2|MISO一直为低，因此读到的是`0x00`|<img class="preview-image" src="files/spi_write_then_read_s2.png" onclick="openFullImage('files/spi_write_then_read_s2.png')">|
+|S3|MISO一直为高，因此读到的是`0xFF`|<img class="preview-image" src="files/spi_write_then_read_s3.png" onclick="openFullImage('files/spi_write_then_read_s3.png')">|
 
-涉及的因素如下
+尝试过 Linux 的 SPI 驱动以及裸机程序，现象相同。
+
+考虑的因素如下：
 
 - 管脚约束
   * 再三通过原理图确认过四线 SPI 的 MOSI、MISO、CS 和 CLK 的管脚约束
@@ -139,11 +150,11 @@ function openFullImage(imageUrl) {
 - 电平标准
   * 在 ZU 的原理图中确认了 VADJ 为 1.8V；VCCO 也为 1.8 V；符合要求。
 - 驱动问题
-  * 为软件问题的可能性较低，因为 S2/S3 和 V3 用的是同一个驱动。
+  * 应该不是软件问题，因为 S2/S3 和 V3 用的是同一个驱动程序。
 
-#### 2.2.2 DTO 问题
+#### 2.2.2 \*Device Tree Overlay 问题
 
-在 ZCU102/ZCU104 上加载 DTO 无报错，但并未出现 `/dev/spidev1.0` 文件。由于 PL 工程除了管脚约束和芯片型号以外都相同，因此通过 xsa 文件生成的 `pl.dtsi` 与 ZU 的没有区别。
+在 ZCU102/ZCU104 上加载 DTO 没有报错，但并未出现 `/dev/spidev1.0` 文件。由于 PL 工程除了管脚约束和芯片型号以外都相同，因此通过 xsa 文件生成的 `pl.dtsi` 与 ZU 的没有区别。
 
 初步判断原因可能和 dtc 编译器有关（之前似乎遇到过类似的问题，并且是 dtc 版本导致的）。
 
@@ -151,6 +162,10 @@ function openFullImage(imageUrl) {
 
 ### 3.1 现有工作
 
+这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接，配合使用。其中 RTL-SDR 将射频信号下变频为基带信号；PYNQ-Z2 通过 USB2.0 接口接收 RTL-SDR 返回的基带信号，并使用 FPGA 进行信号处理。最后，可以在 Jupyter Notebook 中实现一个简单的 FM 收音机的网页应用。
 
+详情见：https://github.com/hfwang132/fm-demod-rtlsdr-pynqz2。
 
 ### 3.2 可能的改进
+
+- 在 Jupyter Notebook 中使用滑块小组件调谐有些卡顿。如果将更多的 CPU 操作 offload 到 FPGA，就可以减轻 CPU 压力，从而减少卡顿。

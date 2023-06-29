@@ -2,7 +2,7 @@
 title: "Increasing the swapfile for Linux"
 date: 2023-06-12T22:59:26+08:00
 draft: false
-categories: ["EECS"]
+categories: ["CS"]
 tags: ["Storage/Partition", "Linux"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Python coroutines and asyncio"
 date: 2023-06-13T22:05:41+08:00
 draft: false
-categories: ["EECS"]
+categories: ["CS"]
 tags: ["Python"]
 ---
 
