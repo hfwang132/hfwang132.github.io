@@ -164,7 +164,13 @@ function openFullImage(imageUrl) {
 
 这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接，配合使用。其中 RTL-SDR 将射频信号下变频为基带信号；PYNQ-Z2 通过 USB2.0 接口接收 RTL-SDR 返回的基带信号，并使用 FPGA 进行信号处理。最后，可以在 Jupyter Notebook 中实现一个简单的 FM 收音机的网页应用。
 
-详情见：https://github.com/hfwang132/fm-demod-rtlsdr-pynqz2。
+{{< figure src="files/rtl-sdr.jpeg" title="PYNQ-Z2 + RTL-SDR" >}}
+
+详情见
+
+- [github 仓库](https://github.com/hfwang132/fm-demod-rtlsdr-pynqz2)
+
+- <a href="files/rtl-sdr.mp4">视频展示</a>
 
 ### 3.2 可能的改进
 
