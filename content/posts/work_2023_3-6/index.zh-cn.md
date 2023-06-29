@@ -1,5 +1,5 @@
 ---
-title: "3-6 月工作总结"
+title: "2023 年 3-6 月工作总结"
 date: 2023-06-25T14:14:15+08:00
 draft: false
 ---
@@ -10,7 +10,7 @@ draft: false
 
 ### 1.1 现有工作
 
-这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接，配合使用。其中 RTL-SDR 将射频信号下变频为基带信号；PYNQ-Z2 通过 USB2.0 接口接收 RTL-SDR 返回的基带信号，并使用 FPGA 进行信号处理。最后，可以在 Jupyter Notebook 中实现一个简单的 FM 收音机的网页应用。
+这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接来配合使用。RTL-SDR 将射频信号下变频为基带信号；PYNQ-Z2 通过 USB2.0 接口接收 RTL-SDR 返回的基带信号，并使用 FPGA 进行信号处理。最后，可以在 PYNQ Jupyter Notebook 中实现一个简单的 FM 收音机的网页应用。
 
 {{< figure src="files/rtl-sdr.jpeg" title="PYNQ-Z2 + RTL-SDR" >}}
 
@@ -109,7 +109,7 @@ class pynq.overlay.Overlay(bitfile_name, dtbo=None, download=True, ignore_versio
 > - `target` 表示修改哪一个节点。这里是 `<&amba>`，它会被扩展为符号为 `amba` 的节点的 phandle。例如，如果 `amba` 节点的 phandle 为 `70`，那么 `<&amba>` 实际上代表 `<70>`。一个 phandle 唯一标识了一个节点，往往是由编译器（dtc）分配的。
 > - 往往需要增加编译选项 `-@`。该选项启用符号功能，从而允许通过符号对设备树节点进行引用。否则，只能通过 phandle 的绝对值来引用。
 
-上述文件编译出的 DTO 配合 AXI SPI 是可以正常使用的。这就是启星他们之前的工作。但是，在将子卡从 V3 的 [FMC9361_1.0](files/files.html) 换成 [FMCOMMS2](https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz)/FMCOMMS3 之后，SPI 通信出现了一些问题，见下一节（第 3.2 节）。
+上述文件编译出的 DTO 配合 AXI SPI 是可以正常使用的。这就是启星他们之前的工作。但是，在将子卡从 V3 的 [FMC9361_1.0](files/files.html) 换成 [FMCOMMS2](https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz)/[FMCOMMS3](https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz) 之后，SPI 通信出现了一些问题，见下一节（第 3.2 节）。
 
 ### 3.2 遇到的问题
 
@@ -131,6 +131,8 @@ class pynq.overlay.Overlay(bitfile_name, dtbo=None, download=True, ignore_versio
 在将 V3 的 FMC9361_1.0（以下简称 V3）换成 FMCOMMS2（以下简称 S2）和 FMCOMMS3（以下简称 S3），并修改了管脚约束之后，SPI 通信出现了问题。
 
 > S2/S3 几乎可以看成同一张卡。它们的引脚定义是相同的。
+
+> V3 这张卡在网上没有公开的资料。因此希望转向 ADI 官方的 [FMCOMMS2](https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz)/[FMCOMMS3](https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz) 评估板。
 
 具体来说，在 Master（AXI SPI 控制器）向 MOSI 上发送 `0x037`（读地址为 `0x037` 的寄存器）之后，Slave（AD9361）并未在 MISO 上发送 `0x0A`（`PRODUCT_ID`）。实际情况如下：
 
@@ -227,5 +229,5 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 | - | - | - |
 | PYNQ-Z2 结合 RTL-SDR 使用 | [实现了一个基于 Jupyter Notebook 的 FM 收音机网页小程序](https://github.com/hfwang132/fm-demod-rtlsdr-pynqz2) | 性能还有提升空间 |
 | 将 AD9361 的驱动集成到 PYNQ 内核 | [PYNQ v2.4 + meta-adi 2019_R1 成功](https://github.com/hfwang132/zedboard-adi-pynq) | 在 2019 年以后的版本中，meta-adi 不支持 FPGA_MANAGER |
-| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了FFT和FIR的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。进一步测试可能需要示波器。|
+| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了 FFT 和 FIR 的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。进一步测试可能需要示波器。可以暂时放弃 ZU 板卡，而是转向 104 + S2 平台，实现后续的 PYNQ SDR 应用。|
 
