@@ -176,6 +176,10 @@ ZCU104/102 + S2/S3 可以读到 MISO 返回的 0x0A。这说明是 ZU 本身 FMC
 
 {{< admonition type=info title="SPI 和硬件复位涉及的管脚" open=true >}}
 
+{{< admonition type=
+
+>}}
+
 **PYNQ-ZU + FMCOMMS2/3**
 ```xdc
 # pynqzu + fmcomms2/3
@@ -189,11 +193,11 @@ set_property -dict {PACKAGE_PIN AE3 IOSTANDARD LVCMOS18	                 }	[get_
 **PYNQ-ZU + V3 (FMC9361_V1.0)**
 ```xdc
 # pynqzu + v3 (fmc9361_v1.0)
-#set_property -dict {PACKAGE_PIN AC9 IOSTANDARD LVCMOS18					 }	[get_ports gpio_resetb_v3]; # LA23_P
-#set_property -dict {PACKAGE_PIN AD1 IOSTANDARD LVCMOS18					 }	[get_ports spi_clk_v3];  	# LA18_N
-#set_property -dict {PACKAGE_PIN AB2 IOSTANDARD LVCMOS18  PULLTYPE PULLUP    } 	[get_ports spi_csn_v3];  	# LA19_P
-#set_property -dict {PACKAGE_PIN AB4 IOSTANDARD LVCMOS18	                 }	[get_ports spi_miso_v3];  	# LA20_P
-#set_property -dict {PACKAGE_PIN AD2 IOSTANDARD LVCMOS18	                 }	[get_ports spi_mosi_v3];  	# LA18_P
+#set_property -dict {PACKAGE_PIN AC9 IOSTANDARD LVCMOS18					 }	[get_ports gpio_resetb]; # LA23_P
+#set_property -dict {PACKAGE_PIN AD1 IOSTANDARD LVCMOS18					 }	[get_ports spi_clk];  	# LA18_N
+#set_property -dict {PACKAGE_PIN AB2 IOSTANDARD LVCMOS18  PULLTYPE PULLUP    } 	[get_ports spi_csn];  	# LA19_P
+#set_property -dict {PACKAGE_PIN AB4 IOSTANDARD LVCMOS18	                 }	[get_ports spi_miso];  	# LA20_P
+#set_property -dict {PACKAGE_PIN AD2 IOSTANDARD LVCMOS18	                 }	[get_ports spi_mosi];  	# LA18_P
 ```
 
 **ZCU104 + FMCOMMS2/3**
@@ -219,5 +223,5 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 | - | - | - |
 | PYNQ-Z2 结合 RTL-SDR 使用 | [实现了一个基于 Jupyter Notebook 的 FM 收音机网页小程序](https://github.com/hfwang132/fm-demod-rtlsdr-pynqz2) | 性能还有提升空间 |
 | 将 AD9361 的驱动集成到 PYNQ 内核 | [PYNQ v2.4 + meta-adi 2019_R1 成功](https://github.com/hfwang132/zedboard-adi-pynq) | 在 2019 年以后的版本中，meta-adi 不支持 FPGA_MANAGER |
-| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了FFT和FIR的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。之所以在 V3 上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。|
+| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了FFT和FIR的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。|
 
