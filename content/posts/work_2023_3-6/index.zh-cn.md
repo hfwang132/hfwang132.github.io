@@ -205,14 +205,14 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 ```
 {{< /admonition >}}
 
-{{< admonition type=info title="SPI 和硬件复位涉及的管脚" open=true >}}
-在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。
+{{< admonition type=abstract title="总结" open=true >}}
+- 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。
 
-但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。
+- 但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。
 
-之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。
+- 之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。
 
-进一步测试可能需要示波器。
+- 进一步测试可能需要示波器。
 {{< /admonition >}}
 
 #### 3.2.2 \*Device Tree Overlay 问题
