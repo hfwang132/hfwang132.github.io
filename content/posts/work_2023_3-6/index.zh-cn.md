@@ -170,9 +170,9 @@ function openFullImage(imageUrl) {
 | 电平标准 | 在 ZU 的原理图中确认了 VADJ 为 1.8V；VCCO 也为 1.8 V；符合要求。|
 | 驱动问题 | 可以确定不是软件问题，因为 S2/S3 和 V3 用的是同一个驱动程序。|
 
-{{< admonition type=question title="重要进展！" open=true >}}
-ZCU104/102 + S2/S3 可以读到 MISO 返回的 0x0A。这说明是 ZU 本身 FMC 引脚的问题！
-{{< /admonition >}}
+<!-- {{< admonition type=question title="重要！" open=true >}}
+ZCU104/102 + S2/S3 可以读到 MISO 返回的 0x0A。这说明*很可能*是 ZU 本身 FMC 引脚的问题。
+{{< /admonition >}} -->
 
 {{< admonition type=info title="SPI 和硬件复位涉及的管脚" open=true >}}
 
@@ -210,13 +210,13 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 {{< admonition type=abstract title="总结" open=true >}}
 - 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。
 
-- 但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。
+- 但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明问题*很可能*与 ZU 本身的 FMC 引脚相关。
 
-- 之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。
+- 之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/S3 的 SPI 对应的 FMC 引脚不同。
 
 - 进一步测试可能需要示波器。
 
-- 可以暂时放弃 ZU 板卡，而是转向 104 + S2 平台，实现后续的 PYNQ SDR 应用。
+- 可以暂时放弃 ZU 板卡，而是转向 104 + S2 平台，实现后续的 PYNQ + SDR 应用。
 {{< /admonition >}}
 
 #### 3.2.2 \*Device Tree Overlay 问题
@@ -227,11 +227,112 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 
 初步判断原因可能和 dtc 编译器有关（之前似乎遇到过类似的问题，并且是 dtc 版本导致的）。
 
+{{< admonition type=info title="xsa 生成的 pl.dtsi" open=true >}}
+```dts
+/dts-v1/;
+/plugin/;
+/ {
+	fragment@0 {
+		target = <&fpga_full>;
+		overlay0: __overlay__ {
+			...
+		};
+	};
+	fragment@1 {
+		target = <&amba>;
+		overlay1: __overlay__ {
+			...
+		};
+	};
+	fragment@2 {
+		target = <&amba>;
+		overlay2: __overlay__ {
+			#address-cells = <2>;
+			#size-cells = <2>;
+			...
+			axi_quad_spi_0: axi_quad_spi@80000000 {
+				bits-per-word = <8>;
+				clock-names = "ext_spi_clk", "s_axi_aclk";
+				clocks = <&zynqmp_clk 71>, <&zynqmp_clk 71>;
+				compatible = "xlnx,axi-quad-spi-3.2", "xlnx,xps-spi-2.00.a";
+				fifo-size = <16>;
+				interrupt-names = "ip2intc_irpt";
+				interrupt-parent = <&gic>;
+				interrupts = <0 104 1>;
+				num-cs = <0x1>;
+				reg = <0x0 0x80000000 0x0 0x10000>;
+				xlnx,num-ss-bits = <0x1>;
+				xlnx,spi-mode = <0>;
+			};
+			...
+		};
+	};
+};
+```
+{{< /admonition >}}
+
+{{< admonition type=info title="system.dtso" open=true >}}
+```dts
+/dts-v1/;
+/plugin/;
+/ {
+    fragment@0 {
+        target = <&amba>;
+        overlay0: __overlay__ {                       
+            axi_quad_spi_0: axi_quad_spi@80000000 {
+                bits-per-word = <8>;
+                clock-names = "ext_spi_clk", "s_axi_aclk";
+                clocks = <&zynqmp_clk 71>, <&zynqmp_clk 71>;
+                compatible = "xlnx,axi-quad-spi-3.2", "xlnx,xps-spi-2.00.a";
+                fifo-size = <16>;
+                interrupt-names = "ip2intc_irpt";
+                interrupt-parent = <&gic>;
+                interrupts = <0 104 1>;
+                num-cs = <0x1>;
+                reg = <0x0 0x80000000 0x0 0x10000>;
+                xlnx,num-ss-bits = <0x1>;
+                xlnx,spi-mode = <0>;
+                status = "okay";
+                #address-cells = <1>;
+                #size-cells = <0>;
+                spidev0: spidev@0 {
+                    compatible = "spidev";
+                    reg = <0>;
+                    spi-max-frequency = <5000000>;
+                };
+            };                
+        };
+    };
+};
+```
+
+将上述 `system.dtso` 文件通过`dtc -O dtb -o system.dtbo -b 0 -@ system.dtso` 编译得到的 `system.dtbo` 在 PYNQ-ZU 上可以正常工作，但是在 ZCU104 上，会找不到 `/dev/spidev1.0` 设备。
+{{< /admonition >}}
+
+{{< admonition type=info title="警告" open=true >}}
+另外，无论是在 PYNQ-ZU 还是在 ZCU104 上，`dmesg` 都会收到警告如下：
+
+```
+[  613.794326] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/overlay0
+[  613.804196] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/axi_quad_spi_0
+[  613.814601] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/spidev0
+```
+
+该警告似乎是可以忽略的。
+{{< /admonition >}}
+
+如果希望基于 104 + S2 平台，实现后续的 PYNQ SDR 应用，则需要解决这个问题。
+
+<!-- |板卡|现象|
+|-|-|
+|PYNQ-ZU|`/dev/spidev1.0`存在|
+|ZCU104|`/dev/spidev1.0`不存在| -->
+
+
 ## 4 总结
 
 | 项目 | 结果 | 问题 |
 | - | - | - |
 | PYNQ-Z2 结合 RTL-SDR 使用 | [实现了一个基于 Jupyter Notebook 的 FM 收音机网页小程序](https://github.com/hfwang132/fm-demod-rtlsdr-pynqz2) | 性能还有提升空间 |
 | 将 AD9361 的驱动集成到 PYNQ 内核 | [PYNQ v2.4 + meta-adi 2019_R1 成功](https://github.com/hfwang132/zedboard-adi-pynq) | 在 2019 年以后的版本中，meta-adi 不支持 FPGA_MANAGER |
-| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了 FFT 和 FIR 的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明是 ZU 本身 FMC 引脚的问题。之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。进一步测试可能需要示波器。可以暂时放弃 ZU 板卡，而是转向 104 + S2 平台，实现后续的 PYNQ SDR 应用。|
-
+| 在用户空间驱动 AD9361 | 在 V3 子卡上成功实现。硬件部分集成了 FFT 和 FIR 的数据处理 IP 核 | 在 ZU + S2/S3 平台上遇到了 SPI 读不到 PRODUCT_ID 的问题。但是 104/102 + S2/S3 平台可以读到 PRODUCT_ID，这说明问题*很可能*与 ZU 本身 FMC 引脚相关。之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/S3 的 SPI 对应的 FMC 引脚不同。进一步测试可能需要示波器。可以暂时放弃 ZU 板卡，而是转向 104 + S2 平台，实现后续的 PYNQ + SDR 应用。|
