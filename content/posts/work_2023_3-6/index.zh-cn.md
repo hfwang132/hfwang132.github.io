@@ -215,11 +215,15 @@ set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS18					 }	[get_ports spi_mos
 - 之所以在 V3 子卡上没有出现这个问题，是因为 V3 和 S2/3 的 SPI 对应的 FMC 引脚不同。
 
 - 进一步测试可能需要示波器。
+
+- 可以暂时放弃 ZU 板卡，而是转向 104 + S2 平台，实现后续的 PYNQ SDR 应用。
 {{< /admonition >}}
 
 #### 3.2.2 \*Device Tree Overlay 问题
 
-在 ZCU102/ZCU104 上加载 DTO 没有报错，但并未出现 `/dev/spidev1.0` 文件。由于 PL 工程除了管脚约束和芯片型号以外都相同，因此通过 xsa 文件生成的 `pl.dtsi` 与 ZU 的没有区别。
+在 ZCU102/ZCU104 上加载 Device Tree Overlay (`*.dtbo`) 没有报错，但并未出现 `/dev/spidev1.0` 设备。
+
+> ZCU102/104 的 Vivado 工程除了管脚约束和芯片型号以外都相同，因此通过 xsa 文件生成的 `pl.dtsi` 与 ZU 的没有区别。
 
 初步判断原因可能和 dtc 编译器有关（之前似乎遇到过类似的问题，并且是 dtc 版本导致的）。
 
