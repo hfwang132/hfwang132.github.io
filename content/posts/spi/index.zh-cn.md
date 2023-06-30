@@ -1,8 +1,8 @@
 ---
-title: "SPI IP 核的硬件设计和软件编程"
+title: "AXI SPI IP 核的软硬件设计"
 date: 2023-06-29T11:33:45+08:00
-draft: true
-categories: ["EECS"]
+draft: false
+categories: ["EE"]
 tags: ["硬件协议"]
 ---
 
@@ -17,11 +17,11 @@ SPI 有三线模式和四线模式。三线模式有 `SS`（Slave Select）, `SC
 |MOSI|Master-Out-Slave-In|主器件向从器件发送指令和数据|
 |MISO|Master-In-Slave-Out|从器件向主期间返回数据|
 
-SPI 的时钟有四种模式，分别对应 CPOL=0/1 和 CPHA=0/1。CPOL 代表时钟信号在空闲的时候是高还是低；CPHA 代表在时钟信号相位为 0 还是 180度 的时候读取数据。
+SPI 的时钟有四种模式，分别对应 CPOL=0/1 和 CPHA=0/1。CPOL 代表时钟信号在空闲的时候是高还是低；CPHA 代表在时钟信号相位为 0 度还是 180 度的时候读取数据。
 
 ### 2 AXI Quad SPI IP 核
 
-当 Zynq PS 的 SPI 不够用或者因为其他原因不方便使用的时候，可以在 PL 端使用 SPI 控制器的 IP 核，叫做 AXI Quad SPI。
+当 Zynq PS 的 SPI 控制器不够用，或者因为其他原因（例如 MIO 被占用）而无法使用的时候，可以在 PL 端使用 SPI 控制器的 IP 核，叫做 AXI Quad SPI。
 
 > 本文只涉及 Standard Mode + Master Mode，不涉及 Dual/Quad Mode 以及 Slave Mode / Multi-master Mode。
 
@@ -33,14 +33,14 @@ SPI 的时钟有四种模式，分别对应 CPOL=0/1 和 CPHA=0/1。CPOL 代表�
 
 ### 3 裸机编程
 
-SPI 的编程顺序如下
+编程顺序如下
 
-- 首先，初始化 SPI
+- 首先，初始化 SPI。将各个寄存器的值恢复到默认状态。
 - 其次，根据使用场景，配置 SPI 的模式，例如 CPHA 和 CPOL、片选模式为自动还是手动等等。
 - 再次，根据需要读写的字节数，向数据发送寄存器（DTR，Data Transmit Register）中写入相应数量的字节。每写入一个字节，该字节都会被压到 TX FIFO 中。
     - 注意，假设发送的字节数为 `n_tx`，接收的字节数为 `n_rx`，那么不仅要向 DTR 写入 `n_tx` 个发送的字节，还要再写入 `n_rx` 个 “dummy” 字节。这是因为 SPI 本质上是一种全双工的协议：为了接收 `n_rx` 个数据，编程人员也必须要发送 `n_rx` 个数据。
 - 最后，从数据接收寄存器（DRR，Data Receive Register）中依次读取字节。每读取一个字节，该字节就会从 RX FIFO 出队。
-    - 注意，根据场景，编程人员可能需要丢弃前 `n_tx` 个数据。这是因为在主器件发送指令/数据时，从器件可能还没有做出相应，而是要等到前 `n_tx` 个数据都发送完成之后才会返回有效的数据。而由于 SPI 的全双工特性，前 `n_tx` 个无效数据同样会被压入 DRR，因此需要丢弃这些数据。
+    - 注意，根据场景，编程人员可能需要丢弃前 `n_tx` 个数据。这是因为在主器件发送指令/数据时，从器件可能还没有做出相应，而是要等到前 `n_tx` 个数据都发送完成之后才会返回有效的数据。而由于 SPI 的全双工特性，前 `n_tx` 个无效数据同样会被压入 RX FIFO，因此需要丢弃这些数据。
 - 如果采用手动片选模式，需要在收发数据之前手动下拉片选信号，并在收发数据之后手动上拉片选信号。
 
 下述代码向 Slave 发送了 `[0x00 0x37]` 两个字节，并从 Slave 读取一个字节。
