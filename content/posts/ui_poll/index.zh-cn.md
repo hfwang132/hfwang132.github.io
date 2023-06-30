@@ -2,6 +2,8 @@
 title: "运行时拉取 Jupyter Widgets UI 组件的状态"
 date: 2023-06-30T20:07:39+08:00
 draft: false
+categories: ["CS"]
+tags: ["Python", "Jupyter Notebook"]
 ---
 
 先看一段 Jupyter Notebook 中的代码：

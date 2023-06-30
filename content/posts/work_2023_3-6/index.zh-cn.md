@@ -2,6 +2,8 @@
 title: "2023 年 3-6 月工作总结"
 date: 2023-06-25T14:14:15+08:00
 draft: false
+categories: ["EECS"]
+tags: ["SDR", "PYNQ", "FPGA", "设备树"]
 ---
 
 > 给从今年三月到现在断断续续的工作做一个总结
