@@ -86,15 +86,20 @@ c. $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 > 下面来看一些例子。
 >
 > **例 1.1**
+> 
 > $\\{\emptyset,\\{1,2,3\\}\\}$ 是集合 $\\{1,2,3\\}$ 的一个拓扑。
+> 
 > $\\{\emptyset,\\{1,2,3\\},\\{1\\}\\}$ 是集合 $\\{1,2,3\\}$ 的一个拓扑。
+> 
 > $\\{\emptyset,\\{1,2,3\\},\\{1\\},\\{2\\},\\{1,2\\}\\}$ 是集合 $\\{1,2,3\\}$ 的一个拓扑。
+> 
 > $\\{\emptyset,\\{1,2,3\\},\\{1\\},\\{2\\},\\{3\\},\\{1,2\\},\\{1,3\\},\\{2,3\\}\\}$ 是集合 $\\{1,2,3\\}$ 的一个拓扑。
 >
 > **例 1.2**
+> 
 > $\mathcal{O}=\\{\\{x|a<x<b\\}\in \mathcal{P(}\mathbb{R})\mid \\,a,b\in \mathbb{R}\\}$ 是集合 $\mathbb{R}$ 的一个拓扑。
-> $\mathcal{C}=\\{\\{x|a\le x\le b\\}\in \mathcal{P}(\mathbb{R})\mid \\,a,b\in \mathbb{R}\\}$ **不是**集合 $\mathbb{R}$ 的一个拓扑。这是因为 $\mathcal{C}$ 中无穷个元素的并集 $\bigcup_{k=2}^\infty S_k=\bigcup_{k=2}^\infty \\{x|\frac{1}{k}\le x \le 1-\frac{1}{k}\\}=\\{x|0 < x < 1\\}$
-> 不在 $\mathcal{C}$ 中。
+> 
+> $\mathcal{C}=\\{\\{x|a\le x\le b\\}\in \mathcal{P}(\mathbb{R})\mid \\,a,b\in \mathbb{R}\\}$ **不是**集合 $\mathbb{R}$ 的一个拓扑。这是因为 $\mathcal{C}$ 中无穷个元素的并集 $\bigcup_{k=2}^\infty S_k=\bigcup_{k=2}^\infty \\{x|\frac{1}{k}\le x \le 1-\frac{1}{k}\\}=\\{x|0 < x < 1\\}$ 不在 $\mathcal{C}$ 中。
 >
 > **选读 1.1**
 >
@@ -137,10 +142,8 @@ c. $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > 在例 1.2 中的拓扑上，映射
 >
-> $$
-> f:\mathbb{R}\rightarrow\mathbb{R}, \\,f(x)=\begin{cases}1, & x>0 \\\\ 0, & x=0 \\\\ -1, & x<0\end{cases}$$ 
+> $$ f:\mathbb{R}\rightarrow\mathbb{R}, \\,f(x)=\begin{cases}1, & x>0 \\\\ 0, & x=0 \\\\ -1, & x<0\end{cases}$$ 
 > 不是一个连续映射，因为开集 $\\{x\in \mathbb{R}\mid -1<x<1\\}$ 在映射 f 下的原像为 $\\{0\\}$ ，不是一个开集。
-> $$
 
 ### 1.4 同胚（Homeomorphism）
 
