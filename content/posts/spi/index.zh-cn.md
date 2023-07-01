@@ -2,8 +2,8 @@
 title: "AXI SPI IP 核的软硬件设计"
 date: 2023-06-29T11:33:45+08:00
 draft: false
-categories: ["EE"]
-tags: ["硬件协议"]
+categories: ["EECS"]
+tags: ["SPI", "嵌入式系统"]
 ---
 
 ### 1 基础
@@ -15,9 +15,9 @@ SPI 有三线模式和四线模式。三线模式有 `SS`（Slave Select）, `SC
 |SS|Slave Select|片选|
 |SCK|SPI Clock|时钟信号|
 |MOSI|Master-Out-Slave-In|主器件向从器件发送指令和数据|
-|MISO|Master-In-Slave-Out|从器件向主期间返回数据|
+|MISO|Master-In-Slave-Out|从器件向主器件返回数据|
 
-SPI 的时钟有四种模式，分别对应 CPOL=0/1 和 CPHA=0/1。CPOL 代表时钟信号在空闲的时候是高还是低；CPHA 代表在时钟信号相位为 0 度还是 180 度的时候读取数据。
+SPI 的时钟有四种模式，分别对应 CPOL=0/1 和 CPHA=0/1。CPOL（Clock Polarity）代表时钟信号在空闲的时候是高还是低；CPHA（Clock Phase）代表在时钟信号相位为 0 度还是 180 度的时候读取数据。
 
 ### 2 AXI Quad SPI IP 核
 
@@ -35,12 +35,12 @@ SPI 的时钟有四种模式，分别对应 CPOL=0/1 和 CPHA=0/1。CPOL 代表�
 
 编程顺序如下
 
-- 首先，初始化 SPI。将各个寄存器的值恢复到默认状态。
-- 其次，根据使用场景，配置 SPI 的模式，例如 CPHA 和 CPOL、片选模式为自动还是手动等等。
+- 首先，初始化 SPI 控制器。将各个寄存器的值恢复到默认状态。
+- 其次，根据使用场景，配置 SPI 控制器，例如时钟模式的 CPHA 和 CPOL、片选模式为自动还是手动等等。
 - 再次，根据需要读写的字节数，向数据发送寄存器（DTR，Data Transmit Register）中写入相应数量的字节。每写入一个字节，该字节都会被压到 TX FIFO 中。
     - 注意，假设发送的字节数为 `n_tx`，接收的字节数为 `n_rx`，那么不仅要向 DTR 写入 `n_tx` 个发送的字节，还要再写入 `n_rx` 个 “dummy” 字节。这是因为 SPI 本质上是一种全双工的协议：为了接收 `n_rx` 个数据，编程人员也必须要发送 `n_rx` 个数据。
 - 最后，从数据接收寄存器（DRR，Data Receive Register）中依次读取字节。每读取一个字节，该字节就会从 RX FIFO 出队。
-    - 注意，根据场景，编程人员可能需要丢弃前 `n_tx` 个数据。这是因为在主器件发送指令/数据时，从器件可能还没有做出相应，而是要等到前 `n_tx` 个数据都发送完成之后才会返回有效的数据。而由于 SPI 的全双工特性，前 `n_tx` 个无效数据同样会被压入 RX FIFO，因此需要丢弃这些数据。
+    - 注意，根据场景，编程人员在接收数据时可能需要丢弃前 `n_tx` 个数据。这是因为在主器件发送指令/数据时，从器件可能还没有做出相应，而是要等到前 `n_tx` 个数据都发送完成之后才会返回有效的数据。而由于 SPI 的全双工特性，前 `n_tx` 个无效数据同样会被压入 RX FIFO，因此需要丢弃这些数据。
 - 如果采用手动片选模式，需要在收发数据之前手动下拉片选信号，并在收发数据之后手动上拉片选信号。
 
 下述代码向 Slave 发送了 `[0x00 0x37]` 两个字节，并从 Slave 读取一个字节。
@@ -176,6 +176,6 @@ int main() {
 > 
 > - 需要在 `/dts-v1/;` 后面增加一行 `/plugin/;` 来表示这是一个 Device Tree Overlay 而不是普通的 Device Tree。[ADI 的 recipes-bsp](https://github.com/analogdevicesinc/meta-adi/blob/master/meta-adi-xilinx/recipes-bsp/device-tree/device-tree.bbappend#L151) 就是通过观察文件中是否包含 `/plugin/;` 来判断设备树是否是 Overlay。
 > - `target` 表示修改哪一个节点。这里是 `<&amba>`，它会被扩展为符号为 `amba` 的节点的 phandle。例如，如果 `amba` 节点的 phandle 为 `70`，那么 `<&amba>` 实际上代表 `<70>`。一个 phandle 唯一标识了一个节点，往往是由编译器（dtc）分配的。
-> - 往往需要增加编译选项 `-@`。该选项启用符号功能，从而允许通过符号对设备树节点进行引用。否则，只能通过 phandle 的绝对值来引用。
+> - 往往需要增加编译选项 `-@`。该选项启用符号功能，从而允许通过符号对设备树节点进行引用。否则，只能通过 phandle 的绝对值来引用。为了查看 phandle 的绝对值，需要对设备树二进制进行反编译。
 
 通过 DTO 增加 `spidev` 节点后，在 `/dev` 文件夹下就会多出一个 `/dev/spidev1.0` 文件。可以通过读写该文件来进行 SPI 通信。可以用 `ioctl` 来实现。
