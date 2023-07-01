@@ -1,5 +1,5 @@
 ---
-title: "Hardware & Software Design of AXI Quad SPI IP Core"
+title: "HW & SW Design of the AXI Quad SPI IP Core"
 date: 2023-07-01T17:49:31+08:00
 draft: false
 categories: ["EECS"]
