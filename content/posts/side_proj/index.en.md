@@ -1,6 +1,6 @@
 ---
 title: "Some fun side-projects"
-date: 2023-07-01T17:48:35+08:00
+date: 2023-07-06T22:55:37+08:00
 draft: false
 categories: ["Diary"]
 tags: ["Embedded Systems"]
