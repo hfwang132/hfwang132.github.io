@@ -417,17 +417,53 @@ $f:v^{\*\*}\mapsto v \quad\text{s.t.}\quad v^{\*\*}(v^\*)=v^\*(v)$
 
 我们可以把余切丛上所有（光滑）向量场的集合记作 $\Gamma(T^\*M)$ 。
 
-与**第 2.2 节**同理，我们也可以把（光滑）余切向量场定义为：从向量场 $\mathcal{T}^1_0(M)$ 到标量场 $\mathcal{F}(M)$ 的映射。并且将其记作 $\mathcal{T}^0_1(M)$ 。这些不同的定义之间彼此都是等价的。
+与**第 2.2 节**同理，我们也可以把（光滑）余切向量场定义为：从向量场 $\mathcal{T}^1_0(M)$ 到标量场 $\mathcal{F}(M)$ 的映射。并且将其记作 $\mathcal{T}^0_1(M)$ 。这两种定义是等价的。物理人通常采用后一种定义。
 
 ### 2.5 微分（Differential）
 
 点 $p$ 处关于标量场 $f$ 的微分 $(\mathrm{d}f)|_p$ 是一个余切向量，满足： $(\mathrm{d}f)|_p(v|_p)=v|_p(f)$ 。
 
-流形上光滑标量场 $f$ 的微分，定义为上述余切向量构成的余切向量场。
+流形上光滑标量场 $f$ 的微分，定义为上述余切向量构成的余切向量场。即 
+
+$\mathrm{d}f: \mathrm{d}f(V):=V(f)$
 
 > **例 2.1** 现有 3 维微分流形上点 $p$ 处的一个向量 $v|_p=\left.\left(\frac{\partial}{\partial x}+2\frac{\partial}{\partial y}-\frac{\partial}{\partial z}\right)\right|_p$ 。 标量场 $f$ 的微分 $\mathbb{d}f$ 作用到 $v$ 身上后得到 $(\mathbb{d}f)|_p(v|_p)=v|_p(f)=\left.\left(\frac{\partial f}{\partial x}+2\frac{\partial f}{\partial y}-\frac{\partial f}{\partial z}\right)\right|_p$
 
 点 $p$ 处的微分所在的余切空间有什么样的基呢？以 3 维流形上的一点 $p$ 为例，该点的切空间有三个基 $\\{\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2},\frac{\partial}{\partial x^3}\\}$ ，简记为 $\\{ \partial_1, \partial_2, \partial_3 \\}$。根据**定理 2.1**，我们可以找到这三个基在余切空间中的对偶基 $\\{\mathrm{d}x^1,\mathrm{d}x^2,\mathrm{d}x^3\\}$ ，使得 $\mathrm{d}x^j\partial_i=\delta_i^j$ 。某点处的微分可以表示成这些基的线性组合： $\mathrm{d}f=a_i\mathrm{d}x^i$ 。
+
+> **评论** **全微分**
+> 
+> 以上说的只是某一点处的情况。如果希望推广到流形上，就需要将 $\mathrm{d}x^i$ 定义为作为标量场的 $x^i$ 的微分，即 $g: (x^1,\cdots,x^n)\mapsto x^i$ 的微分。从这个定义出发，可以推导出全微分等式：
+> 
+> $$\mathrm{d}f=\frac{\partial f}{\partial x^i}\mathrm{d}x^i$$
+> 
+> 推导如下：
+> 
+> 设 $\mathrm{d}f=a_i\mathrm{d}x^i$，则有
+> 
+> $$
+> \frac{\partial f}{\partial x_j} =: \mathrm{d}f(\partial_{j}) = a_i\mathrm{d}x^i(\partial_{j}) = a_i\delta^{i}_{j} = a_j
+> $$
+
+> **评论** **雅可比矩阵**
+>
+> 如果我们换了一个坐标系，那么同一个标量场在新旧坐标系中的微分之间会有什么关系呢？答案就是雅可比矩阵（Jacobian Matrix）。
+>
+> 发生坐标变换时，我们记新坐标在旧坐标系下的坐标为 $x^{\prime i}(x)$，则雅可比矩阵定义为：
+>
+> $$
+> J^i_j := \frac{\partial x^{\prime i}}{\partial x^j}
+> $$
+>
+> 在坐标变换 $x^i \mapsto x^{\prime i}(x)$ 下，微分的变换 $\mathrm{d}x^i \mapsto \mathrm{d}x^{\prime i}$ 的公式如下：
+>
+> $$
+> \mathrm{d}x^{\prime i} = J^{i}_{j} \mathrm{d}x^j
+> $$
+>
+> 其实上式就是全微分公式 $\mathrm{d}x^{\prime i} = \frac{\partial x^{\prime i}}{\partial x^j} \mathrm{d}x^j$。只不过为了后文的方便，我们将 $\frac{\partial x^{\prime i}}{\partial x^j}$ 简写为 $J^i_j$，并将其叫做雅可比矩阵。
+>
+> 我们可以发现，雅可比矩阵给出了流形局部的余切空间的基的坐标变换公式。请记住这一点，在后面的**第2.8-9节**中会用到。
 
 ### 2.6 多重线性映射（Multilinear Map）
 
@@ -646,7 +682,16 @@ $$
 > 
 > 之所以叫它单位向量，是因为如果我们把 $(1,1)$ 型张量看作线性变换，那么单位张量对应的线性变换为恒等变换，它的坐标表示对应一个单位矩阵。
 
-（未完待续...缩并、张量的张量积）
+下面我们来介绍缩并运算 $C$，缩并运算定义如下：
+
+$$
+C: \mathcal{T}^p_q(V) \rightarrow \mathcal{T}^{p-1}_{q-1}(V) \quad
+T \mapsto Ct := T(\cdots, e_a, \cdots; \cdots, e^a, \cdots)
+$$
+
+缩并运算将 $(p,q)$ 型张量变为 $(p-1,q-1)$ 型张量。换句话说，它将一个协变维度（下标）和一个逆变维度（上标）给“抵消”掉了。抵消的方法是将这一对上下标变成同一个字母，再根据爱因斯坦约定求和。
+
+缩并运算和并矢（张量积）运算结合，可以用来描述张量之间的作用。例如，让一个 $(0,1)$ 型张量（即余切向量）作用到一个 $(1,0)$ 型张量（即切向量）上，可以先将它们做并矢（张量积）运算：$(v^i, \alpha_{j}) \mapsto T^i_{j}$，再做缩并运算：$T^{i}\_{j} \mapsto T^{i}\_{i} \in \mathbb{R}$。
 
 ### 2.9 张量场（Tensor Field）
 
@@ -674,7 +719,24 @@ $M$ 上全体 $(m,n)$ 型张量场的集合记作 $\mathcal{T}^m_n(M)$ 。
 
 这种定义方式更加适合物理人的胃口，因为它不需要讨论作为流形的张量丛 $T_n^mM$ 究竟是什么。
 
-（未完待续...Jacobi）
+> **例 2.6** 张量场的坐标变换
+>
+> 在**例 2.4**中我们考察了张量的坐标变换公式。现在我们把张量推广成张量场---张量场的坐标变换公式是什么样的？
+>
+> 实际上，我们只需要把**例 2.4**的公式中的矩阵 $A$ 换成雅可比矩阵的逆 $J^{-1}$ 即可：
+>
+> $$
+> (T^\prime)^{i...j}\_{k...l} = \left[J^{i}\_{p}\cdots J^{j}\_{q}(J^{-1})^{s}\_{k}\cdots (J^{-1})^{t}\_{l}\right] \\, T^{p...q}\_{s...t}
+> $$
+>
+> 其中 $ J^i_j := \frac{\partial x^{\prime i}}{\partial x^j} $ (见**第 2.1 节**)。
+> 
+> 这是因为雅可比矩阵是余切空间的基的变换矩阵（见**第 2.1 节**末），而根据**例 2.4**我们知道，坐标的变换矩阵与基的变换矩阵互为逆矩阵。
+>
+> 另外，根据**例 2.4**，我们知道切空间的基/坐标的变换矩阵与余切空间的基/坐标的变换矩阵也互为逆矩阵。
+>
+> 如果你能理解上面这几句话，那么你就算是完全掌握了张量（场）的坐标变换公式了。
+
 
 ### 2.10 内积、度规张量、黎曼流形（Inner Product, Metric Tensor, Riemann Manifold）
 
@@ -958,10 +1020,10 @@ $$
 >
 > 在 3 维流形上的点 p 处有一个 2-form 如下：
 > $\omega = 5\mathrm{d}x^1 \wedge \mathrm{d}x^3 -2\mathrm{d}x^2\wedge \mathrm{d}x^3 $
-> 它作用到两个切向量 $u=\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^3}+3\frac{\partial}{\partial x^3}$ 和 $v=3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^3}+\frac{\partial}{\partial x^3}$ 上得到：
+> 它作用到两个切向量 $u=\partial_1+2\partial_2+3\partial_3$ 和 $v=3\partial_1-2\partial_2+\partial_3$ 上得到：
 >
 > $$
-> \begin{aligned} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^1(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \\\\ \mathrm{d}x^2(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^2(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \end{vmatrix}\\\\ &-2\begin{vmatrix} \mathrm{d}x^2(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^2(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \\\\ \mathrm{d}x^3(\frac{\partial}{\partial x^1}+2\frac{\partial}{\partial x^2}+3\frac{\partial}{\partial x^3}) & \mathrm{d}x^3(3\frac{\partial}{\partial x^1}-2\frac{\partial}{\partial x^2}+\frac{\partial}{\partial x^3}) \end{vmatrix} \\\\ &=5\cdot\begin{vmatrix}1&3 \\\\ 2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2 \\\\ 3 & 1\end{vmatrix} \\\\ &=-48 \end{aligned}
+> \begin{aligned} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\partial\_1+2\partial\_2+3\partial\_3) & \mathrm{d}x^1(3\partial\_1-2\partial\_2+\partial\_3) \\\\  \mathrm{d}x^2(\partial\_1+2\partial\_2+3\partial\_3) & \mathrm{d}x^2(3\partial\_1-2\partial\_2+\partial\_3) \end{vmatrix}\\\\  &-2\begin{vmatrix} \mathrm{d}x^2(\partial\_1+2\partial\_2+3\partial\_3) & \mathrm{d}x^2(3\partial\_1-2\partial\_2+\partial\_3) \\\\  \mathrm{d}x^3(\partial\_1+2\partial\_2+3\partial\_3) & \mathrm{d}x^3(3\partial\_1-2\partial\_2+\partial\_3) \end{vmatrix} \\\\ &=5\cdot\begin{vmatrix}1&3\\\\ 2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2\\\\ 3 & 1\end{vmatrix} \\\\ &=-48 \end{aligned}
 > $$
 
 具体地，一个一般的 $m$ 阶微分形式可以写成下式：
@@ -993,7 +1055,7 @@ $ \omega = \sum_If_I \\,\mathrm{d}x^I=\sum_{i_1<\cdots<i_m}f_{(i_1,\cdots,i_m)}\
 
 外微分的定义如下：
 
-外微分是一个映射 $\mathrm{d}: \bigwedge^n(T_p^\*M)\rightarrow \bigwedge^{(n+1)}(T_p^\*M)$ ，它作用到一个 $n$ 阶微分形式： $\varphi=\sum_{I}f_I\mathrm{d}x^{I}=\sum_{(i_1,\cdots,i_n)}f_{(i_1,\cdots,i_n)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_n}$ 上，得到一个 $(n+1)$ 阶微分形式：
+外微分是一个映射 $\mathrm{d}: \bigwedge^n(T_p^\*M)\rightarrow \bigwedge^{n+1}(T_p^\*M)$ ，它作用到一个 $n$ 阶微分形式： $\varphi=\sum_{I}f_I\mathrm{d}x^{I}=\sum_{(i_1,\cdots,i_n)}f_{(i_1,\cdots,i_n)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_n}$ 上，得到一个 $(n+1)$ 阶微分形式：
 
 $\mathrm{d}\varphi=\sum_{I}\sum_{i}\frac{\partial f_I}{\partial x_i}\mathrm{d}x_i\wedge x_I$。
 
@@ -1818,7 +1880,27 @@ $$
 
 如果我们认为电动力学=麦克斯韦方程+求解+应用，那么我们在某种程度上也可以说广义相对论=爱因斯坦场方程+求解+应用。
 
-（未完待续...）
+> **例 4.5** 施瓦西度规和施瓦西黑洞
+>
+> 施瓦西度规描述了一个无电荷、无角动量、且质量为 $M$ 的球体的周围的时空：
+> 
+> $$
+> \left\\{\begin{aligned}
+> g_{tt} &= - (c^2 - \frac{2GM}{r}) \\\\
+> g_{rr} &= \frac{1}{1-\frac{2GM}{rc^2}} \\\\
+> g_{\theta\theta} &= r^2 \\\\
+> g_{\varphi\varphi} &= r^2 \sin^2 \theta \\\\
+> g_{\text{otherwise}} &= 0
+> \end{aligned}\right.
+> $$
+>
+> 它是爱因斯坦场方程的第一个非平凡的精确解。注意到 $r=\frac{2GM}{c^2}$ 是度规的一个奇点。当然，由于施瓦西度规只适用于球体外的时空，当球体的半径 $R>\frac{2GM}{c^2}$ 时，这不是一个问题。
+> 
+> 然而，如果球体的半径 $R<\frac{2GM}{c^2}$，那么该球体外的一个物体就有可能经过 $r=\frac{2GM}{c^2}$。
+> 
+> 而且，当 $r<\frac{2GM}{c^2}$ 时，$g_{rr}$ 由正变为负，$g_{tt}$ 由负变为正，换言之，$r$ 变成了一个类时坐标，这意味着在某种程度上，径向的空间维度变成了一个时间维度：落入中心将成为不可避免的未来。因此当 $R<\frac{2GM}{c^2}$ 时，球体会坍缩为一个很小的点（在广义相对论的模型中）。这就是常说的施瓦西黑洞。$r=\frac{2GM}{c^2}$ 处的球面叫做事件视界。
+>
+> 施瓦西解的求解过程过于冗长，本文就不介绍了。
 
 <!-- 由于本文的初衷是数学（微分几何），因此本节的目的仅仅是介绍爱因斯坦场方程及其求解。下面我们给出它 -->
 
@@ -1953,6 +2035,8 @@ $$
 \end{aligned}
 $$
 
+最后，请读者自行推导拉回映射和推前映射的显式计算公式。与**例 2.6**类似，结果中包含雅可比矩阵。
+
 ### 4.8 李导数（Lie Derivative）
 
 > **评论**
@@ -2041,7 +2125,7 @@ m-chain 的集合记作 $C_m(M)$ 。
 > 
 > 现在我们来考虑如何定义一块区域的边界。有了胞腔/单形和链的概念之后，我们就可以来形式化地定义边界了。
 
-一个 (m+1)-cell，也就是 $\phi: [0,1]^{(m+1)} \rightarrow M$ 的像 $\sigma = \mathrm{Im}(\phi)$。它的边界 $\partial \sigma$ 定义为下述的 m-chain ：
+一个 (m+1)-cell，也就是 $\phi: [0,1]^{m+1} \rightarrow M$ 的像 $\sigma = \mathrm{Im}(\phi)$。它的边界 $\partial \sigma$ 定义为下述的 m-chain ：
 
 $$
 \sum_{i=0}^{m}(-1)^i [\phi(x_0,\cdots,x_{i-1},1,x_{i+1},\cdots,x_{m}) - \phi(x_1,\cdots,x_{i-1},0,x_{i+1},\cdots,x_{m})]
@@ -2099,43 +2183,100 @@ $$
 
 > **评论**
 >
-> 当我们对一个微分形式进行积分的时候，我们总是要指定一个积分的“区域”。这个“区域”就是我们在第 5.1 节中介绍的 m-cells。
+> 当我们对一个微分形式进行积分的时候，我们总是要指定一个积分的“区域”。这个“区域”就是我们在第 5.1 节中介绍的 m-cells / m-chains。
 
-回想一下，一个 m-cell，记为 $\sigma$ ，是 $\phi:[0,1]^m\rightarrow M$ 这个映射的像 $\mathrm{Im}(\phi)$ ，它其实就是 $n$ 维流形上的一个 $m$ 维超曲面。接下来我们定义微分形式在一个 m-cell 上的积分：
+回想一下，一个 m-cell，记为 $\sigma$ ，是 $\phi:[0,1]^m\rightarrow M$ 这个映射的像 $\mathrm{Im}(\phi)$ ，它其实就是 $n$ 维流形上的一个 $m$ 维超曲面。接下来我们定义微分形式在一个 m-cell 上的积分。
 
-记 
+在微分几何中，积分的定义涉及到**拉回映射**（见**第 4.7 节**）的概念。具体来说，$\omega$ 在 $\sigma$ 上的积分定义为 $\phi^\*\omega$ 在 $[0,1]^m$ 上的重积分。其中 $\phi^\*\omega$ 表示 $\phi$ 这个映射将 $\omega$ 从流形上的区域 $\sigma$ 拉回到 $\mathbb{R}^m$ 中的区域 $[0,1]^m\subseteq \mathbb{R}^m$ 。也就是说 $\phi^\*\omega$ 是 $\mathbb{R}^m$ 上的一个微分形式。
+
+现在，我们将以上的关系总结为数学语言：
+
+$$
+\int_{\sigma} \omega = \int_{\phi[D]} \omega := \int_{D} \phi^{\*} \omega
+$$
+
+其中 $\phi[D]$ 代表一个 m-cell 或者一个 m-simplex。这取决于你使用胞腔的语言还是单形的语言。例如，如果是胞腔语言（也就是我们所采用的语言），那么 $D$ 代表一个矩形区域 $[0,1]^m \in \mathbb{R}^m$。在正统的教材中，一般使用单形的语言，但是我个人比较喜欢胞腔，因为它比较好计算。
+
+> **评论** 
+>
+> 由于微分形式可以看成一个反对称的 $(0,q)$ 型张量场，因此我们在**第 4.7 节**中介绍的拉回映射完全可以作用到一个微分形式上。
+
+现在，我们给出微分形式在一个 m-cell 上的积分的显式公式。
+
+根据 **第 3.3 节** 末，我们可以记一个微分形式 $\omega$ 为：
 
 $$
 \begin{aligned} \omega = \sum_{i_1<\cdots<i_m} f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m} \end{aligned}
 $$
 
-见 **第 3.3 节** 末），则定义 $\omega$ 在 $\sigma$ 上的积分为：
+> 为了方便起见，我们可以规定 $(i_1, \cdots, i_m)$ 是 $(1, \cdots, m)$ 的偶置换。
+
+那么 $\omega$ 在 $\sigma$ 上的积分可以显式写成：
 
 $$
 \begin{aligned} \int_\sigma \omega=\int_{[0,1]^m}\sum_{i_1<\cdots<i_m} f_{(i_1,\cdots,i_m)}|_{\phi( \mathbf{u})}\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}\mathrm{d}u^1\cdots\mathrm{d}u^m \end{aligned}
 $$
 
-其中 $(u^1,\cdots,u^m)\in[0,1]^m$ 。
+其中 $(u^1,\cdots,u^m)\in[0,1]^m$ ；$\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}$ 是雅可比行列式：
+
+$$
+\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)} := \begin{vmatrix}
+\frac{\partial x^{i_1}}{\partial u^1} & \cdots & \frac{\partial x^{i_1}}{\partial u^m} \\\\
+\vdots & \ddots & \vdots \\\\
+\frac{\partial x^{i_m}}{\partial u^1} & \cdots & \frac{\partial x^{i_m}}{\partial u^m}
+\end{vmatrix}
+$$
 
 注意，等式右边就是一个普通的重积分，而重积分在我们学习初等微积分时已经有过完善的讨论，因此不再赘述。
 
 > **评论**
+> 
+> 为了从定义出发得到积分的显式关系式，我们需要花一些精力。
 >
-> 如果你的初等微积分学得不错，你可以看出上述定义在初等微积分中就是积分的换元法。
-
-你可能对这个定义不太满意，因为这个定义里只有机械化的运算，毫无任何数学美感可言。
-
-的确，这样做是用计算方法代替了定义，类似于用坐标变换的规则去定义张量。它们都不是很好的做法。
-
-实际上，在微分几何中，有一个更好的，也是正统的定义方式，它涉及到**拉回映射**（见**第 4.7 节**）。具体来说，$\omega$ 在 $\sigma$ 上的积分定义为 $\phi^\*\omega$ 在 $[0,1]^m$ 上的重积分。其中 $\phi^\*\omega$ 表示 $\phi$ 这个映射将 $\omega$ 从流形上的区域 $\sigma$ “拉回”到 $\mathbb{R}^m$ 中的区域 $[0,1]^m\subseteq \mathbb{R}^m$ 。也就是说 $\phi^\*\omega$ 是 $\mathbb{R}^m$ 上的一个微分形式。
+> 具体来说，我们首先需要回想一下**第 4.7 节**介绍的 $(0,n)$ 型张量场的拉回：
+> 
+> $$
+> \begin{aligned}
+\phi^\*: \mathcal{T}^0\_l(N) &\rightarrow \mathcal{T}^0\_l(M) \\\\
+> \phi^\*T(v^1|\_p, \cdots, v^n|\_p) &:= T((\phi_\* v^1)|\_{\phi(p)}, \cdots, (\phi_\* v^n)|\_{\phi(p)})
+> \end{aligned}
+> $$
+>
+> 并且导出它的显式形式：
+>
+> $$
+> \phi^*(\mathrm{d}y^k \otimes \cdots \otimes \mathrm{d}y^l) = J^k\_i \cdots J^l\_j \mathrm{d}x^i \otimes \cdots \otimes \mathrm{d} x^j
+> $$
+> 
+> 其次，我们需要证明，对于一个 $n \times n$ 矩阵 $A$，它的行列式满足：
+>
+> $$
+> \operatorname{det} A = \epsilon_{k...l} A^k_1 \cdots A^l_n
+> $$
+>
+> 其中 $\epsilon$ 是广义 Levi-Citiva 符号，$\epsilon_{12...n} = 1$ ，且交换两个下标，符号相反。其实这只不过是行列式的通常定义的另一种写法。
+>
+> 最后，我们就能导出微分形式的拉回的公式：
+>
+> $$
+> \begin{aligned}
+> \phi^\*(\mathrm{d}x^{i\_1}\wedge\cdots\wedge\mathrm{d}x^{i\_m}) &= J^{i_1}\_{1} \cdots J^{i\_m}\_{m} \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m \\\\
+> &= \epsilon\_{i\_1...i\_m} J^{i_1}\_{1} \cdots J^{i\_m}\_{m} \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m \\\\
+> &= (\operatorname{det} J) \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m
+> \end{aligned}
+> $$
+>
+> 其中 $\operatorname{det} J$ 就是雅可比矩阵的行列式，或简称雅可比行列式。
+>
+> 根据上式我们就能导出正文中的公式了。
 
 > **评论**
 >
 > 现在我们定义好了微分形式在 m-cells 上的积分。接下来我们定义微分形式在 m-chain 上的积分。
 
-一个 $m$ 阶微分形式 $\omega$ 在一个 m-chain（ $c=\sum_i m_i\sigma_i$ ）上的积分定义如下：
+一个 $m$ 阶微分形式 $\omega$ 在一个 m-chain（ $c=\sum_i c_i\sigma_i$ ）上的积分定义如下：
 
-$$ \begin{aligned} \int_c\omega=\sum_i m_i\int_{\sigma_i}\omega \end{aligned} $$ 
+$$ \begin{aligned} \int_c\omega=\sum_i c_i\int_{\sigma_i}\omega \end{aligned} $$ 
 
 其中 $\sigma_i$ 是一个 m-cell。
 
