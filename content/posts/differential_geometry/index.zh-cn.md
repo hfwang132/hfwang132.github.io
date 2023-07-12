@@ -1,8 +1,8 @@
 ---
-title: "一文入门微分几何与李代数"
+title: "一文入门微分几何（物理人版）"
 date: 2023-06-09T14:49:49+08:00
 draft: false
-tags: ["微分几何", "李代数"]
+tags: ["微分几何"]
 categories: ["数学物理方法"]
 ---
 前言
@@ -24,7 +24,7 @@ d. 在第四章中，我们引入两种导数，即协变导数和李导数。
 
 李导数描述了流形上向量场的“流动”，它引出了 Holonomy 和 Killing 向量场，前者刻画流动是否与路径相关，后者刻画流动的度规不变性。
 
-e. 在第五章中，我们引入单形、链等概念，并在流形上研究积分。另外，我们简单介绍同调和上同调，它们负责处理流形上的孔洞。
+e. 在第五章中，我们引入单形、链等概念，并在流形上研究积分。另外，我们简单介绍同调和上同调，它们用来研究流形上的“孔洞”。
 
 f. 在第六章中，我们引入作为微分流形的群——李群，并研究李群的切空间——李代数，并介绍它们在物理学中的应用。
 
@@ -2267,11 +2267,12 @@ $$
 > 最后，我们就能导出微分形式的拉回的公式：
 >
 > $$
-> \begin{aligned}
-> \phi^\*(\mathrm{d}x^{i\_1}\wedge\cdots\wedge\mathrm{d}x^{i\_m}) &= J^{i_1}\_{1} \cdots J^{i\_m}\_{m} \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m \\\\
-> &= \epsilon\_{i\_1...i\_m} J^{i_1}\_{1} \cdots J^{i\_m}\_{m} \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m \\\\
-> &= (\operatorname{det} J) \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m
-> \end{aligned}
+>  \begin{aligned}
+>  \phi^\*(\mathrm{d}x^{i\_1}\wedge\cdots\wedge\mathrm{d}x^{i\_m}) &= \phi^\* \left(\frac{1}{p!} \epsilon\_{i\_1...i\_m} \mathrm{d}x^{i\_1}\otimes\cdots\otimes\mathrm{d}x^{i\_m}\right)\\\\
+> &= \frac{1}{p!} \epsilon\_{i\_1...i\_m}J^{i\_1}\_{1} \cdots J^{i\_m}\_{m} \mathrm{d}u^1 \otimes \cdots \otimes \mathrm{d}u^m  \\\\
+> &= \epsilon\_{i\_1...i\_m} J^{i\_1}\_{1} \cdots J^{i\_m}\_{m} \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m \\\\
+>  &= (\operatorname{det} J) \mathrm{d}u^1 \wedge \cdots \wedge \mathrm{d}u^m
+>  \end{aligned} 
 > $$
 >
 > 其中 $\operatorname{det} J$ 就是雅可比矩阵的行列式，或简称雅可比行列式。
@@ -2292,6 +2293,7 @@ $$ \begin{aligned} \int_c\omega=\sum_i c_i\int_{\sigma_i}\omega \end{aligned} $$
 >   
 > 在**第 5.1 节**中，我们定义 m-chain 是 m-cells 的线性组合。现在，这个线性组合的意义体现了出来：  
 > m-cells 的线性组合（m-chain）上的积分，定义为 m-cells 上的积分的线性组合。 -->
+
 
 ### 5.4 斯托克斯定理（Stokes' Theorem）
 
@@ -2329,21 +2331,112 @@ $$
 >
 > 
 
-> **例 5.8** Laplace-deRham Operator
+> **例 5.8** **Laplace-deRham Operator**
 
 （未完待续...）
 
-### 5.5 同调和上同调（Homology & Cohomology）
+### 5.5 同调和上同调简介（Introduction to Homology & Cohomology）
 
-（未完待续...）
+> **评论**
+> 
+> 在某种程度上，我们可以用“洞”的个数和类型来给流形分类。在一般的拓扑学科普中，人们通常用这一点来说明问题。
 
-第六章 李群和李代数
-----------
+同调（Homology）就是为了研究“洞”（Holes）而诞生的。如何定义一个“洞”呢？
 
-（未完待续...）
+注意到，在没有洞的流形上，一个没有边界（用自然语言来说就是闭合/首尾相接）的超曲面/曲线一定是某一个区域的边界，换句话说：一个边界为零（见**第 5.2 节**）的 p-链 总是另外一个 (p+1)-链的边界。
 
-第七章 收藏点赞，好运不断！
---------------
+但是在一个有洞的流形上，这一点是不成立的。你可以想象一个绕着甜甜圈一圈首尾相接的链：**它的边界为零，但它不是任何链的边界**。
+
+> **评论**
+> 
+> 当然，如果一个链是另一个链的边界，那么它的边界一定为零，这是因为 $\partial\partial=0$（**定理 5.1**）。
+
+在数学上，我们可以用代数的语言来定义这一类对象：
+
+$$
+H_p(M) := \frac{ \\{c_p \mid \partial c_p=0\\} }{ \\{c_p \mid \partial c_{p+1} = c_p \\} }
+$$
+
+其中 $c_p$ 代表一个 p-链。
+
+> **评论**
+> 
+> 或者写得更严谨一些：
+> 
+> $$
+> H_p(M) := \frac{ \\{c \in C_p \mid \partial c=0\\} }{ \\{c \in C_p \mid \partial c^{\prime} = c; c^{\prime} \in C_{p+1} \\} }
+> $$
+>
+> 如果你对这些符号有一些困惑，请回到**第 5.2 节**。
+
+或写成
+
+$$
+H_p(M) := \frac{\operatorname{Ker} \partial_{p}}{\operatorname{Im} \partial_{p+1}}
+$$
+
+$H_p(M)$ 叫做 $p$ 阶同调群，它是两个群的商群，而且是一个正规子群。同调群中的一个元素叫做同调类。
+
+> **评论**
+> 
+> 例如，$S_1$（一个首尾相接的曲线）的同调类为 $\mathbb{Z}$。这是因为你可以绕一圈、也可以绕两圈、三圈...也可以反向绕整数圈。当然，也可以不绕圈。这对应整数群。
+> 
+> 一个甜甜圈（数学上定义为 $T:=S^1\times S^1$）的 1 阶同调群为 $\mathbb{Z} \times \mathbb{Z}$。这从形式和图像上都是比较直观的，见下图：
+>
+> {{< figure src="image/torus_homology.png" title="甜甜圈的同调群是 $\mathbb{Z}\times\mathbb{Z}$，从图中可以直观地看出，有两种不同的环绕方法" >}}
+
+我们再来看看上同调所关心的事情。在物理中，我们通常默认一个闭形式是一个恰当形式的微分。例如，我们由电场的旋度（见**第 3.4-5 节**）为零推导出电势的存在，以及由磁场的散度（见**第 3.4-5 节**）为零推导出磁势的存在。
+
+> **评论**
+> 
+> 恰当形式指的是这样一种形式，它是另外一个形式的（外）微分。
+>
+> 闭形式指的是这样一种形式，它的（外）微分为零。
+
+然而，在一般的流形上，这未必是成立的。可能存在这样一种形式，**它的微分为零，但它不是任何形式的微分**。换句话说，存在不是恰当形式的闭形式。
+
+> **评论**
+> 
+> 想象一个圆柱体的侧面（$\mathbb{R}^1 \times S^1$），上面有一个均匀环绕它一圈的电场。可以证明，这样的电场是无散的，但不是一个保守场：一个电子朝电场的方向绕一圈回到原来的位置，能量会增加。此时电势是不存在的。
+>
+> 那么为什么在普通物理中，我们认为电势/磁势总是存在的呢？这是因为我们相信，我们所处的空间中没有“洞”。换句话说，在单连通（回想一下高等数学）的空间中，一个形式的微分为零，意味着它是一个恰当形式。
+
+**上同调**（Cohomology）所关心的问题就是：闭形式何时是恰当形式，以及有多少类不是恰当形式的闭形式。
+
+> **评论**
+> 
+> 当然，恰当形式一定是闭形式，这是因为 $\mathrm{dd} = 0$（**定理 3.1**）。
+
+可以定义上同调群为“所有恰当形式”商掉“所有闭形式”，即：
+
+$$
+H^p(M) = \frac{ \\{ \omega \mid \mathrm{d}\omega = 0 \\} }{ \\{ \omega \mid \mathrm{d} \alpha = \omega\\} }
+$$
+
+或写成
+
+$$
+H^p(M) = \frac{\operatorname{Ker}\mathrm{d}\_p}{\operatorname{Im}\mathrm{d}\_{p-1}}
+$$
+
+$H^p(M)$ 叫做 $p$ 阶上同调群，其中的元素叫做上同调类。
+
+最后，有一个定理可以将同调和上同调联系在一起，它就是德拉姆定理：
+
+> **德拉姆定理（De Rham's Theorem）**
+> 
+> $p$ 阶同调群自然同构于 $p$ 阶上同调群，即 $H_p(M)\cong H^p(M)$。这个同构由下式给出:
+>
+> $$
+> \begin{aligned}
+> H_p(M) &\rightarrow H^p(M) \\\\
+> c &\mapsto \omega \\\\
+> \text{s.t.} \quad \int_c \omega &= 0
+> \end{aligned}
+> $$
 
 本文还在更新中，请收藏并定期复查哦！
 
+---
+
+原本想把李群和李代数也放到这篇文章，但是感觉那样的话实在太长了。之后有空再开单独一篇笔记写李群和李代数吧。
