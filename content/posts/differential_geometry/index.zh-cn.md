@@ -1993,7 +1993,7 @@ $$
 
 $$
 \begin{aligned}
-% \phi\_\*: T^m\_0|\_pM &\rightarrow T^m\_0|\_p N \\\\
+\phi\_\*: T^m\_0|\_pM &\rightarrow T^m\_0|\_p N \\\\
 (\phi\_\* T)|_{\phi(p)}(\omega\_1, \cdots, \omega\_m) &:= T|\_{p}(\phi^\* \omega\_1, \cdots, \phi^\* \omega\_m)
 \end{aligned}
 $$
