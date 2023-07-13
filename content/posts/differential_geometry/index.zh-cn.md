@@ -2343,7 +2343,7 @@ $$
 
 （未完待续...）
 
-### 5.5 同调和上同调简介（Introduction to Homology & Cohomology）
+### 5.5 *同调和上同调简介（Introduction to Homology & Cohomology）
 
 > **评论**
 > 
