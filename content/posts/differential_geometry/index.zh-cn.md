@@ -1537,7 +1537,7 @@ $\Gamma^i_{jk}$ 就是大名鼎鼎的 **克氏符号（Christoffel symbol）** �
 
 > **例 4.2**
 > 
-> 计算 $\nabla_k \mathrm{d}x^j$。
+> 计算余切基向量的协变导数： $\nabla_k \mathrm{d}x^j$。
 > 
 > 解：
 > 
@@ -1557,7 +1557,7 @@ $\Gamma^i_{jk}$ 就是大名鼎鼎的 **克氏符号（Christoffel symbol）** �
 > 
 > 对于一般的余切向量场 $\alpha = \alpha_j\mathrm{d}x^j$，其协变导数的推导留给读者练习。提示：仿照 **例 4.1** 的方法。
 
-现在我们有了切向量场和余切向量场的协变导数。那么，对于一般的 $(p,q)$ 型张量，它的协变导数 $(\nabla_W A)^{i...j}_{k...l}$ 应该如何计算呢？这里我们直接给出公式。感兴趣的读者，可以利用 **例 4.1** 的方法和 **例 4.2** 的结果来自行推导：
+现在我们有了切向量场和余切向量场的协变导数。那么，对于一般的 $(p,q)$ 型张量，它的协变导数 $(\nabla_W A)^{i...j}_{k...l}$ 应该如何计算呢？这里我们直接给出公式。感兴趣的读者，可以利用 **例 4.1** 的方法和 **例 4.2** 的结果来自行推导（我保证，虽然这看起来很吓人，但实际上并不难）：
 
 > **例 4.3**
 > 
@@ -1918,7 +1918,7 @@ $$
 
 > **评论**
 > 
-> 拉回映射和推前映射是非常有用的概念。它们在以后要介绍的许多概念中都要被用到。因此单独用一节来介绍它们是很值得的。
+> 拉回映射和推前映射是非常有用的概念。它们在以后要介绍的许多概念中都要被用到（包括下一节介绍的李导数）。因此单独用一节来介绍它们是很值得的。
 
 让我们现在考虑一个从流形 $M$ 到流形 $N$ 的一个光滑映射 $\phi: M\rightarrow N$。如果 $N$ 上有一个标量场 $f$，那么借助 $\phi$，我们可以诱导出一个 $M$ 上的标量场：
 
@@ -2067,11 +2067,189 @@ $$
 \Phi_t: M\rightarrow M \quad \gamma(0)\mapsto \gamma(t)
 $$
 
-$\phi_t$ 是一个微分同胚（见 **第 1.8 节末**，证略）
+$\phi_t$ 是一个微分同胚，证略。我们可以把 $\Phi_t$ 叫做一个“流”。
+
+既然每一点都会随着积分曲线漂流到另一点，那么每一点处的张量也会随着点的漂流而漂流。这个想法应该怎么表达呢？上一节介绍的**拉回映射**此时就派上用场了：
+
+$$
+\Phi^\*\_t: \mathcal{T}^p\_q(M) \rightarrow \mathcal{T}^p\_q(M)
+$$
+
+$\Phi^\*\_t$ 可以叫做李平移（Lie Transport）。注意到由于它是拉回映射，所以它的方向是逆着流的方向的。如果我们想要表达顺着流的方向，我们可以使用 $\Phi^\*_{-t}$。
+
+现在你可能已经猜到我们要怎么定义李导数了：即让 $t\rightarrow 0$：
+
+$$
+\begin{aligned}
+\mathcal{L}\_V T &:= \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|\_{t=0} (\Phi^\*\_t T) \\\\
+&= \lim\_{t\rightarrow 0}\frac{\Phi^\*\_\epsilon A - A}{\epsilon}
+\end{aligned}
+$$
+
+其中 $T \in \mathcal{T}^p_q(M)$ 是一个张量场。
+
+可以证明，$\mathcal{L}\_V$ 满足如下性质：
+
+a. 导子
+
+$$
+\begin{aligned}
+\mathcal{L}\_V(\mu A + \lambda B) &= \mu \mathcal{L}\_V A + \lambda \mathcal{L}\_V B, \\\\
+\mathcal{L}\_V (A \otimes B) &= (\mathcal{L}\_V A)\otimes B + A \otimes (\mathcal{L}\_V B)
+\end{aligned}
+$$
+
+> 提示：证明 $\phi^\*(A \otimes B) = (\phi^\* A) \otimes (\phi^\* B)$，然后利用李导数的定义。
+>
+> 注意，这里的 $\mu$ 和 $\labmda$ 指的是常数而非标量场。
+
+b. 与缩并可交换
+
+$$
+\mathcal{L}\_V \circ C = C \circ \mathcal{L}\_V
+$$
+
+> 提示：先证明拉回映射与缩并可交换，然后利用李导数的定义
+
+c. 
+
+$$
+\begin{aligned}
+\mathcal{L}\_V (A(W,\cdots;\alpha,\cdots)) &= (\mathcal{L}\_V A)(W,\cdots;\alpha,\cdots) \\\\
+&+ A(\mathcal{L}\_V W,\cdots;\alpha,\cdots) + \cdots \\\\
+&+ A(W,\cdots;\mathcal{L}\_V\alpha,\cdots) + \cdots
+\end{aligned}
+$$
+
+特别地，
+
+$$
+\mathcal{L}\_V (\alpha(W)) = (\mathcal{L}\_V \alpha)(W) + \alpha(\mathcal{L}\_V W)
+$$
+
+> 提示：先证明 $\phi^\*(A(W,\cdots;\alpha,\cdots))=(\phi^\*A)(\phi^\*W,\cdots;\phi^\*\alpha,\cdots)$，然后利用李导数的定义
+
+上面是一些比较通用的性质。下面我们来看看一个李导数作用到具体的标量场、切向量场、余切向量场和一般的张量场之后会发生什么。
+
+> **例 4.6**
+> 
+> 证明李导数作用到标量场上，有：
+> 
+> $$
+> \mathcal{L}\_V f = V f = V^i f_{,i}
+> $$
+> 
+> 其中逗号下标表示求偏导。即 $f_{,i}=\frac{\partial f}{\partial x^i}$
+> 
+> 提示：利用拉回映射的定义和李导数的定义。
+
+> **例 4.7** 
+> 
+> 证明李导数作用到标量场的微分（余切向量场）上，有：
+>
+> $$
+> \mathcal{L}\_V(\mathrm{d} f) = \mathrm{d}(\mathcal{L}\_V f) = \mathrm{d}(V f) 
+> $$
+> 
+> 提示：利用拉回映射在切向量场上的定义，证明拉回映射和微分算子可交换，即 $\mathrm{d} \phi^\* = \phi^\* \mathrm{d}$。
+
+> **例 4.8** 
+> 
+> 证明李导数作用到余切基向量上，有：
+>
+> $$
+> \mathcal{L}\_V (\mathrm{d} x^i) = \mathrm{d}(V^i) = V^i\_{,j} \mathrm{d}x^j
+> $$
+> 
+> 提示：将 $f=x^i$ 代入 **例 4.7**
+
+> **例 4.9**
+> 
+> 证明李导数作用到一般的余切向量场上，有：
+> 
+> $$
+> \phi^\* \alpha = \left[V^j(\partial\_j\alpha\_i) + (\partial_i V^j) \alpha\_j \right]\mathrm{d} x^i
+> $$
+> 
+> 提示：将 $\alpha = \alpha\_i\mathrm{d}x^i$ 看成是标量场和微分 $\mathrm{d}x$ 的张量积，即 $\alpha = \alpha\_i \otimes \mathrm{d}x^i$，然后利用李导数的导子性。
+
+> **例 4.10** 
+> 
+> 证明李导数作用到切向量基上，有：
+> 
+> $$
+> \mathcal{L}\_V \partial\_i = -V^j\_{,i}\partial\_{j}
+> $$
+> 
+> 提示：参照**例 4.2**的方法。
+
+> **例 4.11**
+>
+> 对于一般的张量场，求李导数的公式如下：
+>
+> $$
+> \begin{aligned}
+> (\mathcal{L}\_V A)^{i...j}\_{k...l} &= V^m A^{i...j}\_{k...l,m} + \\\\
+> &+ V^m\_{,k} A^{i...j}\_{m...l} + \cdots + V^m\_{,l} A^{i...j}\_{k...m} \\\\
+> &+ V^i\_{,m}A^{m...j}\_{k...l} + \cdots + V^j\_{,m} A^{i...m}\_{k...l}
+> \end{aligned}
+> $$
+>
+> 利用 **例 4.8,10** 的结果和 **例 4.9** 介绍的方法，读者可以自行完成推导。
+
+你可能感觉 **例 4.11** 的公式很眼熟。没错，推导李导数的显式公式的步骤，和推导协变导数的显式公式的步骤（**例 4.3**）几乎是一样的。两个公式长得也很像。下面我们把它们放在一起比较一下：
+
+> 李导数：
+> 
+> $$
+> \begin{aligned}
+> (\mathcal{L}\_V A)^{i...j}\_{k...l} &= V^m A^{i...j}\_{k...l,m} + \\\\
+> &+ V^m\_{,k} A^{i...j}\_{m...l} + \cdots + V^m\_{,l} A^{i...j}\_{k...m} \\\\
+> &+ V^i\_{,m}A^{m...j}\_{k...l} + \cdots + V^j\_{,m} A^{i...m}\_{k...l}
+> \end{aligned}
+> $$
+>
+> 协变导数：
+>
+> $$
+> \begin{aligned}
+> (\nabla_W A)^{i...j}\_{k...l} & = W^{m} \partial_{m} A^{i...j}\_{k...l} \\\\ 
+> & - \Gamma^{n}\_{km} W^{m} A^{i...j}\_{n...l} - \cdots - \Gamma^{n}\_{lm} W^m A^{i...j}\_{k...n} \\\\
+> & + \Gamma^{i}\_{nm} W^{m} A^{n...j}\_{k...l} + \cdots + \Gamma^{j}\_{nm} W^m A^{i...n}\_{k...l}
+> \end{aligned}
+> $$
+
+最后，我们来说明李导数与李代数的关系。
+
+> **例 4.12** 证明
+>
+> $$\mathcal{L}\_V W = [V, W] := VW - WV$$
+>
+> 提示：利用**例 4.11**
+
+一般来说，$V$ 和 $W$ 的“积”（即 $VW:f\mapsto V(Wf)$） 不是一个向量场，但是通过 **例 4.12** 我们发现，$VW-WV$ 的确是一个向量场。换句话说，一阶求导算子的“积”不是一阶求导算子，但它们的对易子竟然是！
+
+可以证明，全体向量场的集合，配备上一个二元运算 $[\cdot, \cdot]$ ，可以构成一个李代数，即满足如下关系：
+
+a. $[V,W]=-[W,V]$
+
+b. $[\mu V\_1+\lambda V\_2, W] = \mu [V\_1, W] + \lambda [V\_2, W]$
+
+c. $0 = [[V,W],U] + [[U,V],W] + [[W,U],V]$
+
+### 4.9 Holonomy
+
+> Holonomy 我实在不知道怎么翻译了，干脆就不翻译吧。
+
+> **评论**
+> 
+> 在 **第 4.5 节** 中，我们通过考察一个张量先沿着坐标线 $\mu$ **平移**再沿着坐标线 $\nu$ 平移，和先沿着 $\nu$ 再沿着 $\mu$ 平移，有什么区别。通过这种方法，我们导出了黎曼张量。这是针对**协变导数**而言的。
+> 
+> 我们现在想要知道，对于**李导数**而言，一个张量先沿着坐标线 $\mu$ **流动**再沿着坐标线 $\nu$ 流动，和先沿着 $\nu$ 再沿着 $\mu$ 流动有什么区别。
 
 （未完待续...）
 
-### 4.9 Killing 向量场（Killing Vector Field）
+### 4.10 Killing 向量场（Killing Vector Field）
 
 （未完待续...）
 
