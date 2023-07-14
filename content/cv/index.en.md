@@ -79,6 +79,15 @@ Advisor: Professor Sheng Chang (Department of Physics, Wuhan University, changsh
     - built a customized Linux kernel with support for AD9361 and PYNQ drivers,
     - ported the hardware design from the ZCU102 board to the PYNQ-ZU board, and
     - developed a simple FM demodulation application based on the PYNQ framework.
+- **Skills involved**
+    - High Level Synthesis (HLS) for DSP algorithms
+    - PS-PL co-debugging
+    - Embedded Linux device trees
+    - Baremetal application development
+      - Baremetal programming of the SPI IP Core
+    - Linux OS application development
+      - C libraries for SPI communication
+      - Python wrapping of the C libraries for the ease of use
 
 # Awards
 ---
