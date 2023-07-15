@@ -2078,7 +2078,7 @@ $\Phi^\*\_t$ 可以叫做李平移（Lie Transport）。注意到由于它是拉
 $$
 \begin{aligned}
 \mathcal{L}\_V A &:= \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|\_{t=0} (\Phi^\*\_t A) \\\\
-&= \lim\_{t\rightarrow 0}\frac{\Phi^\*\_\epsilon A - A}{\epsilon}
+&= \lim\_{\epsilon\rightarrow 0}\frac{\Phi^\*\_\epsilon A - A}{\epsilon}
 \end{aligned}
 $$
 
