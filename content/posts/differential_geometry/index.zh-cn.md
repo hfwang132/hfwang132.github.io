@@ -2627,7 +2627,7 @@ $$
 >
 > 提示：
 >
-> 由于 $(\operatorname{div} V)\omega\_g =: \mathcal{L}\_V \omega\_g$，根据斯托克斯定理，只要证明 $\mathcal{L}\_V \omega\_g = V^i\mathrm{d}\Sigma\_i$ 即可。
+> 由于 $(\operatorname{div} V)\omega\_g =: \mathcal{L}\_V \omega\_g$，根据斯托克斯定理，只要证明 $\mathcal{L}\_V \omega\_g = \mathrm{d}(V^i\mathrm{d}\Sigma\_i)$ 即可。
 
 <!-- > **例 5.8** **Laplace-deRham Operator** -->
 
