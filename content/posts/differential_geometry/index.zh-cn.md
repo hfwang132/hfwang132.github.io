@@ -452,7 +452,7 @@ $\mathrm{d}f: \mathrm{d}f(V):=V(f)$
 > 设 $\mathrm{d}f=a_i\mathrm{d}x^i$，则有
 > 
 > $$
-> \frac{\partial f}{\partial x_j} =: \mathrm{d}f(\partial_{j}) = a_i\mathrm{d}x^i(\partial_{j}) = a_i\delta^{i}_{j} = a_j
+> \frac{\partial f}{\partial x_j} =: \mathrm{d}f(\partial_{j}) = a_i\mathrm{d}x^i(\partial_{j}) = a_i \partial_j x^i = a_i\delta^{i}_{j} = a_j
 > $$
 
 > **评论** **雅可比矩阵**
