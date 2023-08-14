@@ -837,7 +837,7 @@ $v_i\mapsto v^j$ 就是该典范同构的坐标表示。在量子力学中，这
 >   
 > 如果你是物理人，以后你可以跟你的同学炫耀：**张量的指标升降本质上是度规张量诱导的一个切丛与余切丛的音乐同构 (Musical Isomorphism）**。   
 >   
-> **音乐同构**指的是（配备了内积的）流形上每一点的切空间与余切空间之间都有典范同构。典范同构是相对于流形上的某一点来说的，而音乐同构是相对于整个流形来说的。   
+> **音乐同构**指的是（配备了度规的）流形上每一点的切空间与余切空间之间都有典范同构。典范同构是相对于流形上的某一点来说的，而音乐同构是相对于整个流形来说的。   
 >   
 > 我们知道，在五线谱中，有着升降号 $\sharp$ 和 $\flat$ 。在音乐同构的语言中，我们借用这两个符号来表示指标的升降。  
 >   
@@ -860,7 +860,7 @@ $v_i\mapsto v^j$ 就是该典范同构的坐标表示。在量子力学中，这
 >   
 > 长度（模）可以定义为一个向量与它自己的内积的正平方根： $ \langle v\mid v\rangle^{1/2} $ 。
 
-配备了内积的微分流形叫做**黎曼流形**。配备了非退化厄米形式的微分流形叫做**伪黎曼流形**。
+配备了度规的微分流形叫做**黎曼流形**。配备了非退化厄米形式的微分流形叫做**伪黎曼流形**。
 
 ### 小结
 
@@ -1111,14 +1111,14 @@ c) 对于任意两个 $n$ 阶微分形式 $\alpha$ 和 $\beta$ ，都有 $\mathr
 >
 > 用音乐同构（见**第 2.9 节**）的语言，我们还可以写成这样：
 >
-> $ \nabla f=(\mathrm{d}f)^{\sharp}$ 或 $ \mathrm{d}f=(\nabla f)^{\flat} $
+> $ \nabla f= \sharp \mathrm{d}f$ 或 $ \mathrm{d}f=\flat\nabla f $
 
 上述例子为梯度的定义提供了一些启发。现在，我们就可以来定义梯度了：
 
 梯度定义为：
 
 $$
-\begin{aligned} \nabla: \\,\mathcal{F}_M&\rightarrow \Gamma(TM) \\\\ f&\mapsto(\mathrm{d}f)^{\sharp} \end{aligned}
+\begin{aligned} \nabla: \\,\mathcal{F}_M&\rightarrow \Gamma(TM) \\\\ f &\mapsto \sharp \mathrm{d} f \end{aligned}
 $$
 
 其中 $f$ 是一个标量场（即零阶微分形式）。
@@ -1147,11 +1147,11 @@ $$
 > \begin{aligned} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\\\ &\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{ \\, \\, \\, \\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3} -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\\\ &\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1 \\\\ &=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3 \end{aligned}
 > $$
 >
-> 它可以写成旋度和切向量的内积： $\star\mathrm{d}f:\star\mathrm{d}f(v)=\langle \nabla \times f^{\sharp}\mid v \rangle$
+> 它可以写成旋度和切向量的内积： $\star\mathrm{d}f:\star\mathrm{d}f(v)=\langle \nabla \times \sharp f\mid v \rangle$
 >
-> 注意到我们用了一个升号： $\sharp$ 。这是因为旋度是作用在切向量场，而非余切向量场上的。具体来说，旋度 $\nabla\times$ 把切向量场映射成切向量场：  $\Gamma(TM)\rightarrow \Gamma(TM)$ 。但是 $f\in \Gamma(T^\*M)$ 是一个余切向量场（一阶微分形式），因此我们先要给将它“升”为切向量场： $f^\sharp\in \Gamma(TM)$ 。
+> 注意到我们用了一个升号： $\sharp$ 。这是因为旋度是作用在切向量场，而非余切向量场上的。具体来说，旋度 $\nabla\times$ 把切向量场映射成切向量场：  $\Gamma(TM)\rightarrow \Gamma(TM)$ 。但是 $f\in \Gamma(T^\*M)$ 是一个余切向量场（一阶微分形式），因此我们先要给将它“升”为切向量场： $\sharp f \in \Gamma(TM)$ 。
 >
-> 我们在**第 3.7 节**将会介绍什么是 Hodge 星算子，现在，你只需要知道，在 3 维流形上，Hodge 算子作用到一个的 n 阶微分形式上会得到一个 $(3-n)$ 阶微分形式。具体地，如果配备了内积 $\langle\mathrm{d}x^i,\mathrm{d}x^j\rangle=\delta^{j}_i$ ，则有：
+> 我们在**第 3.7 节**将会介绍什么是 Hodge 星算子，现在，你只需要知道，在 3 维流形上，Hodge 算子作用到一个的 n 阶微分形式上会得到一个 $(3-n)$ 阶微分形式。具体地，如果配备了度规 $\langle\mathrm{d}x^i,\mathrm{d}x^j\rangle=\delta^{j}_i$ ，则有：
 >
 > $\star(\mathrm{d}x^i \wedge \mathrm{d}x^j)=\mathrm{d}x^k$ ，
 > $\star\mathrm{d}x^i = \mathrm{d}x^j\wedge \mathrm{d}x^k$ ，
@@ -1162,26 +1162,26 @@ $$
 >
 > 回到上面的例子，我们有一个由内积诱导的自然同构（见**第 2.9 节**）：
 >
-> $\sharp:\star \mathrm{d}f\mapsto \nabla\times f^{\sharp}$
+> $\sharp:\star \mathrm{d}f\mapsto \nabla\times \sharp f$
 > 或写成：
-> $(\star \mathrm{d}f)^\sharp = \nabla\times f^{\sharp}$
+> $\sharp \star \mathrm{d}f = \nabla\times \sharp f$
 > 或写成：
-> $\star \mathrm{d}f(v) = \langle\nabla\times f^{\sharp}\mid v\rangle$
+> $\star \mathrm{d}f(v) = \langle\nabla\times \sharp f \mid v\rangle$
 >
 > 其中  $f\in \Gamma(T^\*M)$ 是一个一阶微分形式。
 >
 > 我们还可以写成：
 >
-> $\nabla\times F=(\star \mathrm{d} (F^{\flat}))^{\sharp}$
+> $\nabla\times F=\sharp \star \mathrm{d} \flat F$
 >
-> 其中 $F\in \Gamma(TM)$ ， $F^\flat \in \Gamma(T^\*M)$ 。
+> 其中 $F\in \Gamma(TM)$ ， $\flat F \in \Gamma(T^\*M)$ 。
 
 上述例子为旋度的定义提供了一些启发。现在，我们就可以来定义旋度了：
 
 旋度定义为
 
 $$
-\begin{aligned} (\nabla\times): \\, \Gamma(TM)&\rightarrow \Gamma\left(\bigwedge^{n-2} (TM)\right)\\\\ F&\mapsto(\star \mathrm{d} (F^{\flat}))^{\sharp} \end{aligned}
+\begin{aligned} (\nabla\times): \\, \Gamma(TM)&\rightarrow \Gamma\left(\bigwedge^{n-2} (TM)\right)\\\\ F&\mapsto \sharp \star \mathrm{d} \flat F \end{aligned}
 $$
 
 其中 $F\in \Gamma(TM)$ 是一个切向量场。
@@ -1200,7 +1200,7 @@ $$
 >
 > 它可以写成散度的形式：
 >
-> $\star\mathrm{d} f =\nabla \cdot (\star f)^{\sharp}$
+> $\star\mathrm{d} f =\nabla \cdot (\sharp \star f)$
 >
 > 其中 $f$ 是一个二阶微分形式。
 >
@@ -1210,18 +1210,18 @@ $$
 >
 > 再看等式的右边。由于 $\star f$ 是一个一阶微分形式，也就是一个余切向量场，而散度是作用在切向量场上的，因此我们需要一个升号 $\sharp$ 将余切向量场变为切向量场。
 >
-> 我们也可以把 $\star\mathrm{d} f =\nabla \cdot (\star f)^{\sharp}$ 写成：
+> 我们也可以把 $\star\mathrm{d} f =\nabla \cdot \sharp \star f$ 写成：
 >
-> $\nabla\cdot F=\star \mathrm{d}\star(F^{\flat})$
+> $\nabla\cdot F=\star \mathrm{d}\star \flat F$
 >
-> 其中， $F=(\star f)^\sharp$ 。
+> 其中， $F=\sharp \star f$ 。
 
 上述例子为散度的定义提供了一些启发。现在，我们就可以来定义散度了：
 
 散度定义为
 
 $$
-\begin{aligned} (\nabla\cdot):\Gamma(TM)&\rightarrow \mathcal{F}_M \\\\ F&\mapsto\star \mathrm{d}\star(F^{\flat}) \end{aligned}$$ 
+\begin{aligned} (\nabla\cdot):\Gamma(TM)&\rightarrow \mathcal{F}_M \\\\ F&\mapsto\star \mathrm{d}\star \flat F \end{aligned}$$ 
 
 其中 $F\in \Gamma(TM)$ 是一个切向量场。
 
@@ -1234,17 +1234,17 @@ $$
 
 a) 梯度：
 
-$$ \begin{aligned} \nabla: \\,\mathcal{F}_M&\rightarrow \Gamma(TM) \\\\ f&\mapsto(\mathrm{d}f)^{\sharp} \end{aligned}
+$$ \begin{aligned} \nabla: \\,\mathcal{F}_M&\rightarrow \Gamma(TM) \\\\ f&\mapsto \sharp \mathrm{d}f \end{aligned}
 $$
 
 b) 旋度：
 
 $$
-\begin{aligned} (\nabla\times): \\, \Gamma(TM)&\rightarrow \Gamma\left(\bigwedge^{n-2} (TM)\right)\\\\ F&\mapsto(\star \mathrm{d} (F^{\flat}))^{\sharp} \end{aligned} $$ 
+\begin{aligned} (\nabla\times): \\, \Gamma(TM)&\rightarrow \Gamma\left(\bigwedge^{n-2} (TM)\right)\\\\ F&\mapsto \sharp \star \mathrm{d} \flat F \end{aligned} $$ 
 
 c) 散度：
 
-$$ \begin{aligned} (\nabla\cdot):\Gamma(TM)&\rightarrow \mathcal{F}_M \\\\ F&\mapsto\star \mathrm{d}\star(F^{\flat}) \end{aligned}
+$$ \begin{aligned} (\nabla\cdot):\Gamma(TM)&\rightarrow \mathcal{F}_M \\\\ F&\mapsto\star \mathrm{d}\star \flat F \end{aligned}
 $$
 
 下面我们介绍一个重要的定理：
@@ -1385,7 +1385,7 @@ $\mathrm{det}(\alpha \wedge \star\beta)=\langle\alpha\mid\beta\rangle$
 >
 > $$ \begin{aligned} F &=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z \\\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned} $$   
 >  
-> 由于我们可以通过度规张量来任意升降一个张量的指标，所以对上式升指标，我们也可以写出一个 $(2,0)$ 型电磁张量，它以 $\frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}$ 的外积为基。不过我们暂时先采用 $(0,2)$ 型反对称张量（微分形式）的写法。反正在配备了内积的情况下， $(2,0)$ 型张量场与 $(0,2)$ 型张量场之间有典范同构，可以看作是等价的。  
+> 由于我们可以通过度规张量来任意升降一个张量的指标，所以对上式升指标，我们也可以写出一个 $(2,0)$ 型电磁张量，它以 $\frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}$ 的外积为基。不过我们暂时先采用 $(0,2)$ 型反对称张量（微分形式）的写法。反正在配备了度规的情况下， $(2,0)$ 型张量场与 $(0,2)$ 型张量场之间有典范同构，可以看作是等价的。  
 >  
 > 定义电流微分形式为：  
 >  
@@ -2240,7 +2240,7 @@ c. $0 = [[V,W],U] + [[U,V],W] + [[W,U],V]$
 > 在**第 3.5 节**我们定义散度为：
 > 
 > $$
-> (\nabla\cdot) : F \mapsto \star \mathrm{d} \star (F^\flat)
+> (\nabla\cdot) : F \mapsto \star \mathrm{d} \star \flat F
 > $$
 > 
 > 在学习了李导数之后，我们可以给散度一个更漂亮的定义：
