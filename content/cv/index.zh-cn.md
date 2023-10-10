@@ -1,7 +1,7 @@
 ---
 title: "简历"
 date: 2023-06-12T15:24:46+08:00
-draft: false
+draft: true
 comment: false
 ---
 
