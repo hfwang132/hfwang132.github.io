@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.com/zh-cn/</loc><lastmod>2024-01-26T23:36:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/</loc><lastmod>2024-01-26T23:50:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/"
@@ -11,7 +11,7 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/"
                     /></url><url>
-            <loc>http://example.com/zh-cn/posts/</loc><lastmod>2024-01-26T23:36:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/posts/</loc><lastmod>2024-01-26T23:50:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/posts/"
@@ -20,6 +20,9 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/posts/"
                     /></url><url>
+            <loc>http://example.com/zh-cn/lie_derivative/</loc><lastmod>2024-01-26T23:50:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.com/zh-cn/parseval/</loc><lastmod>2024-01-26T23:49:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.com/zh-cn/pointer0/</loc><lastmod>2024-01-26T23:49:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.com/zh-cn/povm/</loc><lastmod>2024-01-26T23:36:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.com/zh-cn/categories/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"

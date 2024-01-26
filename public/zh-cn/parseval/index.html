@@ -4,37 +4,37 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>广义量子测量：POVM 简介 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="广义量子测量：POVM 简介" />
-<meta property="og:description" content="投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过" />
+        <title>傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？ - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？" />
+<meta property="og:description" content="Link: [https://www.zhihu.com/question/640869828/answer/3373753127] 抛砖引玉一下。 Fourier-Plancherel 算子 定义 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ 为： $(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$ 它实际上是个酉算子： $\mathcal{F}^\dag\mathcal{F}=\mathbb{I}_{L^2(\mathbb{R})}$ 而 Parseval 定理无非就是这一事实的重新表述： $\langle\varphi \mathcal{F}^\dag|\mathcal{F\varphi}\rangle=\langle\varphi|\mathcal{F}^\dag\mathcal{F}|\varphi\rangle=\langle\varphi|\varphi\rangle=1$ 这个定理似乎并未涉及到任何物理量" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.com/zh-cn/povm/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-26T23:36:13+08:00" />
-<meta property="article:modified_time" content="2024-01-26T23:36:13+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
+<meta property="og:url" content="http://example.com/zh-cn/parseval/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-26T23:49:29+08:00" />
+<meta property="article:modified_time" content="2024-01-26T23:49:29+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="广义量子测量：POVM 简介"/>
-<meta name="twitter:description" content="投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过"/>
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？"/>
+<meta name="twitter:description" content="Link: [https://www.zhihu.com/question/640869828/answer/3373753127] 抛砖引玉一下。 Fourier-Plancherel 算子 定义 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ 为： $(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$ 它实际上是个酉算子： $\mathcal{F}^\dag\mathcal{F}=\mathbb{I}_{L^2(\mathbb{R})}$ 而 Parseval 定理无非就是这一事实的重新表述： $\langle\varphi \mathcal{F}^\dag|\mathcal{F\varphi}\rangle=\langle\varphi|\mathcal{F}^\dag\mathcal{F}|\varphi\rangle=\langle\varphi|\varphi\rangle=1$ 这个定理似乎并未涉及到任何物理量"/>
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/zh-cn/povm/" /><link rel="prev" href="http://example.com/zh-cn/side_proj/" /><link rel="next" href="http://example.com/zh-cn/pointer0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/zh-cn/parseval/" /><link rel="prev" href="http://example.com/zh-cn/pointer0/" /><link rel="next" href="http://example.com/zh-cn/lie_derivative/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "广义量子测量：POVM 简介",
+        "headline": "傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.com\/zh-cn\/povm\/"
+            "@id": "http:\/\/example.com\/zh-cn\/parseval\/"
         },"image": [{
                             "@type": "ImageObject",
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","wordcount":  1210 ,
-        "url": "http:\/\/example.com\/zh-cn\/povm\/","datePublished": "2024-01-26T23:36:13+08:00","dateModified": "2024-01-26T23:36:13+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","wordcount":  636 ,
+        "url": "http:\/\/example.com\/zh-cn\/parseval\/","datePublished": "2024-01-26T23:49:29+08:00","dateModified": "2024-01-26T23:49:29+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
                     "@type": "ImageObject",
@@ -70,7 +70,7 @@
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/povm/" selected>简体中文</option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/parseval/" selected>简体中文</option></select>
                 </a></div>
         </div>
     </div>
@@ -104,7 +104,7 @@
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/zh-cn/povm/" selected>简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/zh-cn/parseval/" selected>简体中文</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -120,10 +120,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">广义量子测量：POVM 简介</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-01-26">2024-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1210 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/zh-cn/povm/" class="leancloud_visitors" data-flag-title="广义量子测量：POVM 简介">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-01-26">2024-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 636 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/zh-cn/parseval/" class="leancloud_visitors" data-flag-title="傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -133,59 +133,67 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#投影测量">投影测量</a></li>
-    <li><a href="#广义测量generalized-measurements-povm">广义测量（Generalized Measurements, POVM）</a></li>
-    <li><a href="#如何实现-povm">如何实现 POVM</a></li>
-    <li><a href="#测量模型measurement-model">测量模型（Measurement Model）</a></li>
-    <li><a href="#测量后的状态">测量后的状态</a></li>
-    <li><a href="#量子仪器quantum-instruments">量子仪器（Quantum Instruments）</a></li>
+    <li><a href="#fourier-plancherel-算子">Fourier-Plancherel 算子</a></li>
+    <li><a href="#fourier-plancherel-算子的一些性质">Fourier-Plancherel 算子的一些性质</a></li>
+    <li><a href="#守恒量">守恒量</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="投影测量">投影测量</h2>
-<p>传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过初等量子力学的同学都很熟悉。</p>
-<p>除了 Von Neumann 测量外，还有一种更加一般的测量，叫做广义测量（Generalized Measurements），或称 POVM（Positive Operator Valued Measure）。</p>
-<h2 id="广义测量generalized-measurements-povm">广义测量（Generalized Measurements, POVM）</h2>
+            </div><div class="content" id="content"><p><strong>Link:</strong> [https://www.zhihu.com/question/640869828/answer/3373753127]</p>
+<p>抛砖引玉一下。</p>
+<h2 id="fourier-plancherel-算子">Fourier-Plancherel 算子</h2>
+<p>定义 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ 为：</p>
+<p>$(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$</p>
+<p>它实际上是个酉算子：</p>
+<p>$\mathcal{F}^\dag\mathcal{F}=\mathbb{I}_{L^2(\mathbb{R})}$</p>
+<p>而 Parseval 定理无非就是这一事实的重新表述：</p>
+<p>$\langle\varphi \mathcal{F}^\dag|\mathcal{F\varphi}\rangle=\langle\varphi|\mathcal{F}^\dag\mathcal{F}|\varphi\rangle=\langle\varphi|\varphi\rangle=1$</p>
+<p>这个定理似乎并未涉及到任何物理量的守恒？</p>
+<p>当然，我也可以说“恒等算子”对应的物理量守恒（也就是概率守恒）。</p>
+<p>$\langle\varphi|\mathcal{F}^\dag\mathbb{I}_{L^2(\mathbb{R})}\mathcal{F}|\varphi\rangle=\langle\varphi|\mathbb{I}_{L^2(\mathbb{R})}|\varphi\rangle=1$</p>
+<p>这是因为 $[\mathcal{F},\mathbb{I}_{L^2(\mathbb{R})}]=0$ 。</p>
+<p>但是所有算子都和恒等算子对易，所以这没有什么特别的。</p>
+<h2 id="fourier-plancherel-算子的一些性质">Fourier-Plancherel 算子的一些性质</h2>
+<p><strong>性质 1：</strong> $\mathcal{F}^\dag Q\mathcal{F} = P$ ， $\mathcal{F}P\mathcal{F}^\dag  = Q$</p>
+<p>其中 $Q$ 和 $P$ 分别是位置和动量算子，定义为：</p>
+<p>$(Q\varphi)(x)=x\varphi(x)$</p>
+<p>$(P\varphi)(x) = -\mathrm{i}\varphi^\prime(x)$</p>
+<p><strong>性质 2：</strong> $\mathcal{F}^2=(\mathcal{F}^*)^2=\mathcal{P}$</p>
+<p>其中 $\mathcal{P}$ 是宇称算子，定义为：</p>
+<p>$(\mathcal{P}\varphi)(x)=\varphi(-x)$</p>
+<p><strong>性质 3：</strong> $\mathcal{F}^4=\mathbb{I}_{L^2(\mathbb{R})}$</p>
+<p>这是因为 $\mathcal{P}^2=\mathbb{I}_{L^2(\mathbb{R})}$</p>
+<h2 id="守恒量">守恒量</h2>
+<p>我们知道宇称守恒所对应的对称性是宇称对称，即哈密顿量在宇称变换下不变。</p>
+<p>作为复习，下面简单推导一下宇称守恒。</p>
+<p>宇称变换用宇称算子 $\mathcal{P}$ 来表示。</p>
+<p>哈密顿量在宇称变换下不变，用公式写出来就是：</p>
+<p>$\mathcal{P}\mathcal{H}\mathcal{P}^\dag=\mathcal{H}$</p>
+<p>或</p>
+<p>$[\mathcal{H},\mathcal{P}]=0$</p>
+<p>此时有：</p>
+<p>$\frac{\mathrm{d}}{\mathrm{d}t}\langle \mathcal{P} \rangle = \frac{\mathrm{i}}{\hbar}\langle[\mathcal{H},\mathcal{P}]\rangle = 0$</p>
+<p>即宇称守恒。</p>
+<p>那么 Fourier-Plancherel 算子 $\mathcal{F}$ 有没有对应的守恒量呢？很遗憾， $\mathcal{F}$ 并非一个可观测量，因为它不是一个自伴算子。</p>
 <blockquote>
-<p><strong>定义：POVM</strong></p>
-<p>POVM 是一个映射 $\mathsf{E}: X \rightarrow \mathcal{L}(\mathcal{H})$ ，满足</p>
-<ol>
-<li>$\mathsf{E}(x) \ge 0,\quad \forall x\in X$</li>
-<li>$\sum_{x\in X}\mathsf{E}(x) = \mathbb{I}_{\mathcal{H}}$<br>
-其中 $X$ 代表有限个可能的测量结果的集合， $\mathcal{L}(\mathcal{H})$ 代表 $\mathcal{H}$ 上所有的有界算子的集合。</li>
-</ol>
-<p><strong>玻恩规则</strong></p>
-<p>对于一个量子态 $\rho$ 进行 POVM $\mathsf{E}$ 所给出的测量，结果为 $x$ 的概率为 $p_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)]$</p>
+<p>不过我们可以定义 $\mathcal{G} = \frac{\mathcal{F}+\mathcal{F}^\dag}{2}$ ，这样 $\mathcal{G}$ 就是一个自伴算子了。它对应傅里叶余弦变换。</p>
+<p>话说回来，虽然 $\mathcal{F}$ 不是自伴算子，但是它是一个正规算子，也就是说它可以被正交对角化，只不过特征值不一定是实数。</p>
+<p>有些作者将可观测量定义为正规算子而非自伴算子。在这个意义下， $\mathcal{F}$ 可以是可观测量。</p>
 </blockquote>
-<p>当我第一次看到 POVM 的时候，我并不清楚它是如何实现的。因为传统意义上的测量是一个投影算符，满足 $\mathsf{E}(x)^2=\mathsf{E}(x),\quad \forall x\in X$ 。而一般的 POVM 不满足这一条件。</p>
-<p>实际上，传统意义上的投影测量也叫做 PVM（Projection Valued Measure），是一类特殊的 POVM。</p>
-<p>PVM 之于 POVM，就像纯态之于混合态。也就是说，POVM 是 PVM 的统计混合（statistical mixture），正如混合态是纯态的统计混合。</p>
-<h2 id="如何实现-povm">如何实现 POVM</h2>
-<p>那么如何实现 POVM 呢？其实我们可以利用 PVM 和复合系统来实现 POVM。</p>
-<p>考虑一个系统，其希尔伯特空间为 $\mathcal{H}$ ，状态为 $\rho$ 。</p>
-<p>接着我们将系统 $\mathcal{H}$ 和另一个系统 $\mathcal{K}$ 耦合到一起。假设系统 $\mathcal{K}$ 的初态为 $\sigma$ ，于是复合系统的初态为 $\rho \otimes \sigma \in \mathcal{H} \otimes \mathcal{K}$ 。</p>
-<p>然后，我们让复合系统演化一段时间，于是系统状态变为 $U(\rho\otimes \sigma) U^\dag$ 。</p>
-<p>最后，我们对子系统 $\mathcal{K}$ 进行 PVM $\mathsf{Z}$ 所给出的测量，根据玻恩规则，得到结果 $x$ 的概率为 $\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。</p>
-<p>这样，我们就实现了一个 POVM $\mathsf{E}$ ，满足 $\operatorname{tr}[\rho \mathsf{E(x)}]=\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。</p>
-<h2 id="测量模型measurement-model">测量模型（Measurement Model）</h2>
-<p>我们整理一下上面实现 POVM 所涉及到的物理对象：辅助（ancilla）系统 $\mathcal{K}$ ，系统 $\mathcal{K}$ 的初态 $\sigma$ ，复合系统的演化 $U$ ，以及对辅助系统的投影测量 $\mathsf{Z}$ 。这些物理对象实现了一个 POVM 测量。</p>
-<p>于是我们可以定义 $\mathfrak{M}=(\mathcal{K},\sigma,U,\mathsf{Z})$ ，并称之为一个测量模型（Measurement Model）。</p>
-<p>在实际实验中，辅助（ancilla）系统 $\mathcal{K}$ 可以看作是仪器的探针，而 $\mathsf{Z}$ 就是对探针进行读数。</p>
-<h2 id="测量后的状态">测量后的状态</h2>
-<p>POVM 本身不能决定测量后的状态。真正决定测量后的状态的是测量的具体实现，即测量模型。</p>
-<p>对于测量模型 $\mathfrak{M}=(\mathcal{K},\sigma,U,\mathsf{Z})$ ，测量后系统 $\mathcal{H}$ 的状态为 $\rho_x=\operatorname{tr}_{\mathcal{K}}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ ，其中 $\operatorname{tr}_{\mathcal{K}}[\cdot]$ 表示取偏迹。</p>
-<h2 id="量子仪器quantum-instruments">量子仪器（Quantum Instruments）</h2>
-<p>POVM 给出了各个测量结果的概率，却没有给出测量后的状态。于是我们希望找到一个数学对象，能将测量概率和测量后的状态都包括进来。这个数学对象叫做 Quantum Instrument。</p>
-<blockquote>
-<p><strong>定义 Quantum Instrument</strong></p>
-<p>称 $\mathcal{I}_{x}: \mathcal{I}_{x}(\rho) = \rho_x$ 为一个 Quantum Instrument，如果 $\operatorname{tr}\left[\sum_{x\in X} \rho_x \right]=\operatorname{tr}[\rho]=1$ 。</p>
-</blockquote>
-<p>可以看出， $\mathcal{I}_x$ 不仅给出了测量的概率 $p_x=\operatorname{tr}[\rho_x]$ ，还给出了测量后的状态 $\frac{\rho_x}{\operatorname{tr}[\rho_x]}$ 。</p>
-<p>显然，同一个 POVM 对应无数个 Quantum Instrument。</p>
-<p>那么对于任意一个 Quantum Instrument，我们是否总是可以实现它？答案是肯定的。</p>
-<blockquote>
-<p><strong>定理</strong></p>
-<p>给定任意一个 Quantum Instrument，我们总是能找到一个 Measurement Model 来实现它（实际上有无数个）。证略。</p>
-</blockquote>
+<p>如果硬要守恒量貌似也不是不可以。假设有一个哈密顿量在 Fourier-Plancherel 变换下不变：</p>
+<p>$\mathcal{F}^\dag\mathcal{H}\mathcal{F} = \mathcal{H}$</p>
+<p>即</p>
+<p>$[\mathcal{H},\mathcal{F}]=0$</p>
+<p>则有：</p>
+<p>$\frac{\mathrm{d}}{\mathrm{d}t}\langle \mathcal{F} \rangle = \frac{\mathrm{i}}{\hbar}\langle[\mathcal{H},\mathcal{F}]\rangle = 0$</p>
+<p>此时 $\langle\mathcal{F}\rangle$ 是守恒量。不过我暂时不清楚这个守恒量有什么意义。</p>
+<p>你可能想问满足 $\mathcal{F}^\dag\mathcal{H}\mathcal{F} = \mathcal{H}$ 的哈密顿量是否存在。当然！我们喜闻乐见的谐振子哈密顿量 $\mathcal{H}=P^2+Q^2$ 就满足这一条件，这是因为</p>
+<p>$$
+\begin{aligned} \mathcal{F}^\dag\mathcal{H}\mathcal{F}&amp;=\mathcal{F}^\dag(P^2+Q^2)\mathcal{F} \\
+&amp;=(\mathcal{F}^\dag P\mathcal{F})^2+(\mathcal{F}^\dag Q\mathcal{F})^2 \\
+&amp;=(\mathcal{P}^\dag Q\mathcal{P})^2+P^2 \\
+&amp;=(-Q)^2+P^2 \\
+&amp;=\mathcal{H} \end{aligned}
+$$</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -195,7 +203,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/zh-cn/povm/" data-title="广义量子测量：POVM 简介"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/zh-cn/povm/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/zh-cn/povm/" data-title="广义量子测量：POVM 简介"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/zh-cn/povm/" data-title="广义量子测量：POVM 简介"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/zh-cn/povm/" data-title="广义量子测量：POVM 简介"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/zh-cn/parseval/" data-title="傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/zh-cn/parseval/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/zh-cn/parseval/" data-title="傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/zh-cn/parseval/" data-title="傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/zh-cn/parseval/" data-title="傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -207,8 +215,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/zh-cn/side_proj/" class="prev" rel="prev" title="做过的一些好玩（但无聊）的小项目"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>做过的一些好玩（但无聊）的小项目</a>
-            <a href="/zh-cn/pointer0/" class="next" rel="next" title="0指针不能访问，那那个位置的字节会不会很孤独?">0指针不能访问，那那个位置的字节会不会很孤独?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/zh-cn/pointer0/" class="prev" rel="prev" title="0指针不能访问，那那个位置的字节会不会很孤独?"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>0指针不能访问，那那个位置的字节会不会很孤独?</a>
+            <a href="/zh-cn/lie_derivative/" class="next" rel="next" title="李导数与协变导数有什么联系？">李导数与协变导数有什么联系？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

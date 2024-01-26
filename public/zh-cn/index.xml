@@ -4,9 +4,33 @@
         <link>http://example.com/zh-cn/</link>
         <description>Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jan 2024 23:36:13 &#43;0800</lastBuildDate>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</lastBuildDate>
             <atom:link href="http://example.com/zh-cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>李导数与协变导数有什么联系？</title>
+    <link>http://example.com/zh-cn/lie_derivative/</link>
+    <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/lie_derivative/</guid>
+    <description><![CDATA[一 性质上的异同点 李导数 $\mathcal{L}_V$ 和协变导数 $\nabla_V$ 有很多共同点： $\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}^p_q(M)$ 到 $\mathcal{T}^p_q(M)$ 的映射。 $\mathcal{T}^p_q(M)$ 表示 $M$ 上全体 (p, q) 型光滑张量场的集合 特别地，对]]></description>
+</item>
+<item>
+    <title>傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？</title>
+    <link>http://example.com/zh-cn/parseval/</link>
+    <pubDate>Fri, 26 Jan 2024 23:49:29 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/parseval/</guid>
+    <description><![CDATA[Link: [https://www.zhihu.com/question/640869828/answer/3373753127] 抛砖引玉一下。 Fourier-Plancherel 算子 定义 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ 为： $(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$ 它实际上是个酉算子： $\mathcal{F}^\dag\mathcal{F}=\mathbb{I}_{L^2(\mathbb{R})}$ 而 Parseval 定理无非就是这一事实的重新表述： $\langle\varphi \mathcal{F}^\dag|\mathcal{F\varphi}\rangle=\langle\varphi|\mathcal{F}^\dag\mathcal{F}|\varphi\rangle=\langle\varphi|\varphi\rangle=1$ 这个定理似乎并未涉及到任何物理量]]></description>
+</item>
+<item>
+    <title>0指针不能访问，那那个位置的字节会不会很孤独?</title>
+    <link>http://example.com/zh-cn/pointer0/</link>
+    <pubDate>Fri, 26 Jan 2024 23:49:00 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/pointer0/</guid>
+    <description><![CDATA[分两种情况讨论：物理地址和虚拟地址。 如果说的是物理地址 0x0，那他一点都不孤独，每次复位的时候，程序计数器都会跟他打个招呼： “嘿，哥们，请问]]></description>
+</item>
+<item>
     <title>广义量子测量：POVM 简介</title>
     <link>http://example.com/zh-cn/povm/</link>
     <pubDate>Fri, 26 Jan 2024 23:36:13 &#43;0800</pubDate>
@@ -61,30 +85,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/boards_networking/</guid>
     <description><![CDATA[Windows 在控制面板中设置能上网的网卡，共享给以太网。此时以太网的 IP 会变成 192.168.137.1。 然后在开发板终端中设置网关为 192.168.137.1 即可： sudo route add default gw]]></description>
-</item>
-<item>
-    <title>给 Linux 增加 swapfile</title>
-    <link>http://example.com/zh-cn/increase_swapfile/</link>
-    <pubDate>Mon, 12 Jun 2023 22:59:29 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/increase_swapfile/</guid>
-    <description><![CDATA[Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。 增加了 swapfile 之后就好很多了： 1 2 3 4 sudo swapoff /swapfile sudo]]></description>
-</item>
-<item>
-    <title>在 Linux 中给 SD 卡分区并创建文件系统</title>
-    <link>http://example.com/zh-cn/linux_sd_card/</link>
-    <pubDate>Mon, 12 Jun 2023 22:43:39 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/linux_sd_card/</guid>
-    <description><![CDATA[为了在 Linux 中给 SD 卡分区和格式化，先将 SD 卡接入 PC，然后在 bash 命令行使用 fdisk 给 SD 卡分区，最后使用 mkfs 给 SD 卡创建文件系统（即格式化）。 主要命令如下： 首先]]></description>
-</item>
-<item>
-    <title>在 Windows 中挂载 EFI 分区的方法</title>
-    <link>http://example.com/zh-cn/efi_partition/</link>
-    <pubDate>Mon, 12 Jun 2023 22:17:46 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/efi_partition/</guid>
-    <description><![CDATA[为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令 1 2 3 4 5 6 diskpart list disk # make sure which is the disk that contains the EFI partition. usually 0 select disk 0 list partition # make sure which is the EFI partition. normally 0 select disk 0 assign letter=z 然后我]]></description>
 </item>
 </channel>
 </rss>
