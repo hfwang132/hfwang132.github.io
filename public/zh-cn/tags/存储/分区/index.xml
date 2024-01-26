@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>存储/分区 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/</link>
+        <description>存储/分区 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://example.com/zh-cn/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>给 Linux 增加 swapfile</title>
+    <link>http://example.com/zh-cn/increase_swapfile/</link>
+    <pubDate>Mon, 12 Jun 2023 22:59:29 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/increase_swapfile/</guid>
+    <description><![CDATA[Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。 增加了 swapfile 之后就好很多了： 1 2 3 4 sudo swapoff /swapfile sudo]]></description>
+</item>
+<item>
+    <title>在 Linux 中给 SD 卡分区并创建文件系统</title>
+    <link>http://example.com/zh-cn/linux_sd_card/</link>
+    <pubDate>Mon, 12 Jun 2023 22:43:39 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/linux_sd_card/</guid>
+    <description><![CDATA[为了在 Linux 中给 SD 卡分区和格式化，先将 SD 卡接入 PC，然后在 bash 命令行使用 fdisk 给 SD 卡分区，最后使用 mkfs 给 SD 卡创建文件系统（即格式化）。 主要命令如下： 首先]]></description>
+</item>
+<item>
+    <title>在 Windows 中挂载 EFI 分区的方法</title>
+    <link>http://example.com/zh-cn/efi_partition/</link>
+    <pubDate>Mon, 12 Jun 2023 22:17:46 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/efi_partition/</guid>
+    <description><![CDATA[为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令 1 2 3 4 5 6 diskpart list disk # make sure which is the disk that contains the EFI partition. usually 0 select disk 0 list partition # make sure which is the EFI partition. normally 0 select disk 0 assign letter=z 然后我]]></description>
+</item>
+</channel>
+</rss>

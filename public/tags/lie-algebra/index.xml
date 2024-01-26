@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Lie Algebra - Tag - Haifei&#39;s Home</title>
-        <link>https://example.com/tags/lie-algebra/</link>
+        <link>http://example.com/tags/lie-algebra/</link>
         <description>Lie Algebra - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/lie-algebra/" rel="self" type="application/rss+xml" /><item>
-    <title>A Beginners Guide to Differential Manifolds and Lie Algebras</title>
-    <link>https://example.com/differential_geometry/</link>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/lie-algebra/" rel="self" type="application/rss+xml" /><item>
+    <title>A Beginners Guide to Differential Geometry and Lie Algebras</title>
+    <link>http://example.com/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/differential_geometry/</guid>
+    <author>hfwang132</author>
+    <guid>http://example.com/differential_geometry/</guid>
     <description><![CDATA[TBD Chinese version here]]></description>
 </item>
 </channel>

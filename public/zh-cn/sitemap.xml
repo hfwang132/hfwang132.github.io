@@ -2,98 +2,234 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://example.com/zh-cn/</loc><lastmod>2023-06-10T02:21:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/</loc><lastmod>2024-01-26T23:36:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/"
+                        href="http://example.com/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/"
+                    href="http://example.com/zh-cn/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/posts/</loc><lastmod>2023-06-10T02:21:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/posts/</loc><lastmod>2024-01-26T23:36:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/posts/"
+                        href="http://example.com/posts/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/posts/"
+                    href="http://example.com/zh-cn/posts/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/pseudovectors/</loc><lastmod>2023-06-10T02:21:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/povm/</loc><lastmod>2024-01-26T23:36:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.com/zh-cn/categories/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/pseudovectors/"
+                        href="http://example.com/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/pseudovectors/"
+                    href="http://example.com/zh-cn/categories/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/blog_migration/</loc><lastmod>2023-06-10T01:48:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/tags/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/blog_migration/"
+                        href="http://example.com/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/blog_migration/"
+                    href="http://example.com/zh-cn/tags/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/about/</loc><lastmod>2023-06-09T22:38:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/categories/%E6%97%A5%E5%B8%B8/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/side_proj/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/about/"
+                        href="http://example.com/side_proj/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/about/"
+                    href="http://example.com/zh-cn/side_proj/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/categories/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/categories/cs/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/categories/"
+                        href="http://example.com/categories/cs/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/categories/"
+                    href="http://example.com/zh-cn/categories/cs/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/categories/math/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/tags/jupyter-notebook/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/categories/math/"
+                        href="http://example.com/tags/jupyter-notebook/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/categories/math/"
+                    href="http://example.com/zh-cn/tags/jupyter-notebook/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/tags/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/tags/python/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/tags/"
+                        href="http://example.com/tags/python/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/tags/"
+                    href="http://example.com/zh-cn/tags/python/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/tags/%E6%9D%8E%E4%BB%A3%E6%95%B0/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/zh-cn/differential_geometry/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/ui_poll/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/differential_geometry/"
+                        href="http://example.com/ui_poll/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/differential_geometry/"
+                    href="http://example.com/zh-cn/ui_poll/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/tags/math/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/zh-cn/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://example.com/zh-cn/spi/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://example.com/categories/documentation/"
+                        href="http://example.com/spi/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://example.com/zh-cn/categories/documentation/"
+                    href="http://example.com/zh-cn/spi/"
                     /></url><url>
-            <loc>https://example.com/zh-cn/tags/physics/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/zh-cn/tags/tinkers/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>http://example.com/zh-cn/categories/eecs/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/categories/eecs/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/categories/eecs/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/spi/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/tags/spi/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/tags/spi/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/work_2023_3-6/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/tags/fpga/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/tags/pynq/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/tags/sdr/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/tags/%E8%AE%BE%E5%A4%87%E6%A0%91/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/publication/</loc><lastmod>2023-06-22T11:22:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/publication/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/publication/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/python_asyncio/</loc><lastmod>2023-06-13T22:05:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/python_asyncio/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/python_asyncio/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/linux/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/tags/linux/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/tags/linux/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/boards_networking/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/boards_networking/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/boards_networking/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/%E7%BD%91%E7%BB%9C/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/increase_swapfile/</loc><lastmod>2023-06-12T22:59:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/increase_swapfile/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/increase_swapfile/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/linux_sd_card/</loc><lastmod>2023-06-12T22:43:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/linux_sd_card/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/linux_sd_card/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/efi_partition/</loc><lastmod>2023-06-12T22:17:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/efi_partition/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/efi_partition/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/curl_in_n_dimension/</loc><lastmod>2023-06-10T10:55:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/curl_in_n_dimension/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/curl_in_n_dimension/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/</loc><lastmod>2023-06-10T10:55:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2023-06-10T10:55:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/tags/%E5%A4%96%E4%BB%A3%E6%95%B0/</loc><lastmod>2023-06-10T02:21:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/pseudovectors/</loc><lastmod>2023-06-10T02:21:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/pseudovectors/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/pseudovectors/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/blog_migration/</loc><lastmod>2023-06-10T01:48:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/blog_migration/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/blog_migration/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/%E6%97%A5%E5%B8%B8/</loc><lastmod>2023-06-10T01:48:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/about/</loc><lastmod>2023-06-09T22:38:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/about/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/about/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/zh-cn/differential_geometry/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/differential_geometry/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/differential_geometry/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

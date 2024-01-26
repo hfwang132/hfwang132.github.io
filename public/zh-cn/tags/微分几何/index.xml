@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>微分几何 - 标签 - Haifei&#39;s Home</title>
-        <link>https://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</link>
+        <link>http://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</link>
         <description>微分几何 - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="https://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/" rel="self" type="application/rss+xml" /><item>
-    <title>一文拿下微分流形与李代数</title>
-    <link>https://example.com/zh-cn/differential_geometry/</link>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/" rel="self" type="application/rss+xml" /><item>
+    <title>一文入门微分几何（物理人版）</title>
+    <link>http://example.com/zh-cn/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/zh-cn/differential_geometry/</guid>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/differential_geometry/</guid>
     <description><![CDATA[前言 作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因]]></description>
 </item>
 </channel>

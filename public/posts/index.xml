@@ -1,32 +1,107 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - Haifei&#39;s Home</title>
-        <link>https://example.com/posts/</link>
+        <link>http://example.com/posts/</link>
         <description>All Posts | Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Pseudovectors</title>
-    <link>https://example.com/pseudovectors/</link>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Some fun side-projects</title>
+    <link>http://example.com/side_proj/</link>
+    <pubDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/side_proj/</guid>
+    <description><![CDATA[ Projects Date Remark An FM Radio Receiver based on PYNQ-Z2 and RTL-SDR Jun 2023 Jupyter Notebook App rather than web app WIFI Weather Clock Jan 2023 Haven&rsquo;t learned LvGL yet &hellip; The GUI is rather simple Light Cube Jan 2023 Ordered the BOM and soldered them together, but the firmware is not mine &hellip; Conway&rsquo;s Game of Life Dec 2022 Touch screen used~ ]]></description>
+</item>
+<item>
+    <title>HW &amp; SW Design of the AXI Quad SPI IP Core</title>
+    <link>http://example.com/spi/</link>
+    <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/spi/</guid>
+    <description><![CDATA[1 Basics SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - SS (Slave Select), SCK (SPI Clock), and MOSI (Master-In-Slave-Out). The four wire mode has an extra line called MISO (Master-In-Slave-Out).
+Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Master-In-Slave-Out SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle.]]></description>
+</item>
+<item>
+    <title>Polling Jupyter Widget UI Events in Runtime</title>
+    <link>http://example.com/ui_poll/</link>
+    <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/ui_poll/</guid>
+    <description><![CDATA[Let&rsquo;s look at a code snippet in the Jupyter Notebook:
+1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) IntSlider is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.
+However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.]]></description>
+</item>
+<item>
+    <title>Python coroutines and asyncio</title>
+    <link>http://example.com/python_asyncio/</link>
+    <pubDate>Tue, 13 Jun 2023 22:05:41 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/python_asyncio/</guid>
+    <description><![CDATA[Recently, I have been using Python coroutines/asynchronous programming in a project. Now, I will summarize my experience.
+Import 1 import asyncio If asyncio is to be used in an IPython environment, we have to add two more lines：
+1 2 3 import nest_asyncio nest_asyncio.apply() import asyncio Coroutines Coroutines are the core of asynchronous programming in Python. To define a coroutine, you need to use async def.
+1 2 3 async def main(): # do something print(&#34;Hello world!]]></description>
+</item>
+<item>
+    <title>Access the Internet from evaluation boards via PC</title>
+    <link>http://example.com/boards_networking/</link>
+    <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/boards_networking/</guid>
+    <description><![CDATA[Windows Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to 192.168.137.1 (this is the default behavior in Windows).
+Then, set the gateway as 192.168.137.1 in the terminal of the development board:
+sudo route add default gw 192.168.137.1
+Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):]]></description>
+</item>
+<item>
+    <title>Increasing the swapfile for Linux</title>
+    <link>http://example.com/increase_swapfile/</link>
+    <pubDate>Mon, 12 Jun 2023 22:59:26 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/increase_swapfile/</guid>
+    <description><![CDATA[Xilinx&rsquo;s toolchain consumes soooo much memory! Sometimes it causes the system to freeze&hellip; After all, my laptop only has 8GB of RAM. So there&rsquo;s no other choice but to add virtual memories.
+After increase the swapfile, the system performance has improved a lot:
+1 2 3 4 sudo swapoff /swapfile sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 sudo mkswap /swapfile sudo swapon /swapfile ]]></description>
+</item>
+<item>
+    <title>Partitioning and Formatting SD Cards with Linux</title>
+    <link>http://example.com/linux_sd_card/</link>
+    <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/linux_sd_card/</guid>
+    <description><![CDATA[To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.
+The main commands are as follows:
+First, use sudo fdisk -l to confirm which device in /dev corresponds to the SD card.]]></description>
+</item>
+<item>
+    <title>Mounting the EFI partition in Windows OS</title>
+    <link>http://example.com/efi_partition/</link>
+    <pubDate>Mon, 12 Jun 2023 22:26:16 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/efi_partition/</guid>
+    <description><![CDATA[To mount the EFI partitions, run the following commands in PowerShell:
+1 2 3 4 5 6 diskpart list disk # make sure which is the disk that contains the EFI partition. usually 0 select disk 0 list partition # make sure which is the EFI partition. normally 0 select disk 0 assign letter=z Then we will mount the EFI partition as drive Z.
+This operation may be useful when using a dual-boot system with Windows and Ubuntu: Sometimes, after removing the Ubuntu system, only the Windows system remains, but the GRUB interface still appears every time the computer boots.]]></description>
+</item>
+<item>
+    <title>Curl in high dimension</title>
+    <link>http://example.com/curl_in_n_dimension/</link>
+    <pubDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/curl_in_n_dimension/</guid>
+    <description><![CDATA[1 Differential Forms Before introducing the concept of curl, we need to first introduce differential forms and the exterior derivative.
+An n-form can be defined as an alternating multilinear mapping $\omega:(T_p^*M)^n\rightarrow \mathbb{R}$. It maps multiple vectors to a real number. Additionally, it satisfies the alternating property, meaning that exchanging two input vectors results in an output multiplied by a negative sign.
+Therefore, an n-form can be explicitly defined as follows:]]></description>
+</item>
+<item>
+    <title>What on earth are the pseudovectors?</title>
+    <link>http://example.com/pseudovectors/</link>
     <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/pseudovectors/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Blog Migration</title>
-    <link>https://example.com/blog_migration/</link>
-    <pubDate>Sat, 10 Jun 2023 01:51:11 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/blog_migration/</guid>
-    <description><![CDATA[I recently discovered this fantastic tool for creating personal websites - Hugo. Feels really cool and user-friendly! Plan to gradually migrate my blogs from Zhihu to here in the future.]]></description>
-</item>
-<item>
-    <title>A Beginners Guide to Differential Manifolds and Lie Algebras</title>
-    <link>https://example.com/differential_geometry/</link>
-    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/differential_geometry/</guid>
-    <description><![CDATA[TBD Chinese version here]]></description>
+    <author>hfwang132</author>
+    <guid>http://example.com/pseudovectors/</guid>
+    <description><![CDATA[1 Introduction In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;
+In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
+When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector.]]></description>
 </item>
 </channel>
 </rss>

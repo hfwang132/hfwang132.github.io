@@ -1,0 +1,38 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>EECS - Category - Haifei&#39;s Home</title>
+        <link>http://example.com/categories/eecs/</link>
+        <description>EECS - Category - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/eecs/" rel="self" type="application/rss+xml" /><item>
+    <title>HW &amp; SW Design of the AXI Quad SPI IP Core</title>
+    <link>http://example.com/spi/</link>
+    <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/spi/</guid>
+    <description><![CDATA[1 Basics SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - SS (Slave Select), SCK (SPI Clock), and MOSI (Master-In-Slave-Out). The four wire mode has an extra line called MISO (Master-In-Slave-Out).
+Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Master-In-Slave-Out SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle.]]></description>
+</item>
+<item>
+    <title>Access the Internet from evaluation boards via PC</title>
+    <link>http://example.com/boards_networking/</link>
+    <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/boards_networking/</guid>
+    <description><![CDATA[Windows Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to 192.168.137.1 (this is the default behavior in Windows).
+Then, set the gateway as 192.168.137.1 in the terminal of the development board:
+sudo route add default gw 192.168.137.1
+Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):]]></description>
+</item>
+<item>
+    <title>Partitioning and Formatting SD Cards with Linux</title>
+    <link>http://example.com/linux_sd_card/</link>
+    <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/linux_sd_card/</guid>
+    <description><![CDATA[To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.
+The main commands are as follows:
+First, use sudo fdisk -l to confirm which device in /dev corresponds to the SD card.]]></description>
+</item>
+</channel>
+</rss>

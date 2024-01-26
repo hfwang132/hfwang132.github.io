@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Networking - Tag - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/networking/</link>
+        <description>Networking - Tag - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/networking/" rel="self" type="application/rss+xml" /><item>
+    <title>Access the Internet from evaluation boards via PC</title>
+    <link>http://example.com/boards_networking/</link>
+    <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/boards_networking/</guid>
+    <description><![CDATA[Windows Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to 192.168.137.1 (this is the default behavior in Windows).
+Then, set the gateway as 192.168.137.1 in the terminal of the development board:
+sudo route add default gw 192.168.137.1
+Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):]]></description>
+</item>
+</channel>
+</rss>

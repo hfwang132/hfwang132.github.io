@@ -1,0 +1,40 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>EECS - 分类 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/categories/eecs/</link>
+        <description>EECS - 分类 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/eecs/" rel="self" type="application/rss+xml" /><item>
+    <title>AXI SPI IP 核的软硬件设计</title>
+    <link>http://example.com/zh-cn/spi/</link>
+    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/spi/</guid>
+    <description><![CDATA[1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slav]]></description>
+</item>
+<item>
+    <title>2023 年 3-6 月工作总结</title>
+    <link>http://example.com/zh-cn/work_2023_3-6/</link>
+    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/work_2023_3-6/</guid>
+    <description><![CDATA[给从今年三月到现在断断续续的工作做一个总结 1 RTL-SDR &amp; PYNQ-Z2 1.1 现有工作 这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接来配合使用。RTL-SDR 将射频信号下变频为基带信号]]></description>
+</item>
+<item>
+    <title>开发板通过 PC 连接互联网</title>
+    <link>http://example.com/zh-cn/boards_networking/</link>
+    <pubDate>Mon, 12 Jun 2023 23:22:42 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/boards_networking/</guid>
+    <description><![CDATA[Windows 在控制面板中设置能上网的网卡，共享给以太网。此时以太网的 IP 会变成 192.168.137.1。 然后在开发板终端中设置网关为 192.168.137.1 即可： sudo route add default gw]]></description>
+</item>
+<item>
+    <title>在 Linux 中给 SD 卡分区并创建文件系统</title>
+    <link>http://example.com/zh-cn/linux_sd_card/</link>
+    <pubDate>Mon, 12 Jun 2023 22:43:39 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/linux_sd_card/</guid>
+    <description><![CDATA[为了在 Linux 中给 SD 卡分区和格式化，先将 SD 卡接入 PC，然后在 bash 命令行使用 fdisk 给 SD 卡分区，最后使用 mkfs 给 SD 卡创建文件系统（即格式化）。 主要命令如下： 首先]]></description>
+</item>
+</channel>
+</rss>

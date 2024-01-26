@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Jupyter Notebook - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/tags/jupyter-notebook/</link>
+        <description>Jupyter Notebook - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/jupyter-notebook/" rel="self" type="application/rss+xml" /><item>
+    <title>运行时拉取 Jupyter Widgets UI 组件的状态</title>
+    <link>http://example.com/zh-cn/ui_poll/</link>
+    <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/ui_poll/</guid>
+    <description><![CDATA[先看一段 Jupyter Notebook 中的代码： 1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) 运行上面的代码，IntSlider() 会显示一个可交互的滑块小]]></description>
+</item>
+</channel>
+</rss>

@@ -1,47 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - Haifei&#39;s Home</title>
-        <link>https://example.com/zh-cn/tags/</link>
+        <link>http://example.com/zh-cn/tags/</link>
         <description>Tags - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="https://example.com/zh-cn/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>李代数</title>
-    <link>https://example.com/zh-cn/tags/%E6%9D%8E%E4%BB%A3%E6%95%B0/</link>
-    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/zh-cn/tags/%E6%9D%8E%E4%BB%A3%E6%95%B0/</guid>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>嵌入式系统</title>
+    <link>http://example.com/zh-cn/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</link>
+    <pubDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>微分几何</title>
-    <link>https://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</link>
-    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</guid>
+    <title>Jupyter Notebook</title>
+    <link>http://example.com/zh-cn/tags/jupyter-notebook/</link>
+    <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/jupyter-notebook/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>数学</title>
-    <link>https://example.com/zh-cn/tags/math/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/zh-cn/tags/math/</guid>
+    <title>Python</title>
+    <link>http://example.com/zh-cn/tags/python/</link>
+    <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/python/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>物理</title>
-    <link>https://example.com/zh-cn/tags/physics/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/zh-cn/tags/physics/</guid>
+    <title>SPI</title>
+    <link>http://example.com/zh-cn/tags/spi/</link>
+    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/spi/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>折腾</title>
-    <link>https://example.com/zh-cn/tags/tinkers/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>hfwang</author>
-    <guid>https://example.com/zh-cn/tags/tinkers/</guid>
+    <title>FPGA</title>
+    <link>http://example.com/zh-cn/tags/fpga/</link>
+    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/fpga/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>PYNQ</title>
+    <link>http://example.com/zh-cn/tags/pynq/</link>
+    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/pynq/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>SDR</title>
+    <link>http://example.com/zh-cn/tags/sdr/</link>
+    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/sdr/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>设备树</title>
+    <link>http://example.com/zh-cn/tags/%E8%AE%BE%E5%A4%87%E6%A0%91/</link>
+    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/%E8%AE%BE%E5%A4%87%E6%A0%91/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Linux</title>
+    <link>http://example.com/zh-cn/tags/linux/</link>
+    <pubDate>Mon, 12 Jun 2023 23:22:42 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>网络</title>
+    <link>http://example.com/zh-cn/tags/%E7%BD%91%E7%BB%9C/</link>
+    <pubDate>Mon, 12 Jun 2023 23:22:42 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/%E7%BD%91%E7%BB%9C/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

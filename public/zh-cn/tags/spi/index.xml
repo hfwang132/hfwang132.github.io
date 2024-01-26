@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SPI - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/tags/spi/</link>
+        <description>SPI - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/spi/" rel="self" type="application/rss+xml" /><item>
+    <title>AXI SPI IP 核的软硬件设计</title>
+    <link>http://example.com/zh-cn/spi/</link>
+    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/spi/</guid>
+    <description><![CDATA[1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slav]]></description>
+</item>
+</channel>
+</rss>

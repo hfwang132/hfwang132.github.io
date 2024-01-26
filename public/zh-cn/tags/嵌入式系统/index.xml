@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>嵌入式系统 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</link>
+        <description>嵌入式系统 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>做过的一些好玩（但无聊）的小项目</title>
+    <link>http://example.com/zh-cn/side_proj/</link>
+    <pubDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/side_proj/</guid>
+    <description><![CDATA[项目 日期 评论 PYNQ-Z2 + RTL-SDR 收音机 2023.06 是 Jupyter Notebook 里的 App，不是独立的 Web App WIFI 天气时钟 2023.01 不会 LvGL。。界面有亿点简陋 光立方 2023.01 只是采购了 BOM 来焊接。。固件不是我]]></description>
+</item>
+<item>
+    <title>AXI SPI IP 核的软硬件设计</title>
+    <link>http://example.com/zh-cn/spi/</link>
+    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/spi/</guid>
+    <description><![CDATA[1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slav]]></description>
+</item>
+</channel>
+</rss>

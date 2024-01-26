@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Python - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/tags/python/</link>
+        <description>Python - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>运行时拉取 Jupyter Widgets UI 组件的状态</title>
+    <link>http://example.com/zh-cn/ui_poll/</link>
+    <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/ui_poll/</guid>
+    <description><![CDATA[先看一段 Jupyter Notebook 中的代码： 1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) 运行上面的代码，IntSlider() 会显示一个可交互的滑块小]]></description>
+</item>
+<item>
+    <title>Python 协程/异步IO</title>
+    <link>http://example.com/zh-cn/python_asyncio/</link>
+    <pubDate>Tue, 13 Jun 2023 22:05:45 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/python_asyncio/</guid>
+    <description><![CDATA[最近做项目用到 Python 协程/异步，现在总结一下： 导入 1 import asyncio 如果在 IPython 环境里使用，需要加两行： 1 2 3 import nest_asyncio nest_asyncio.apply() import asyncio 协程 协程（coroutines）是 Python 异步]]></description>
+</item>
+</channel>
+</rss>

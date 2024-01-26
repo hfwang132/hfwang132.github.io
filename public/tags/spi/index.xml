@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SPI - Tag - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/spi/</link>
+        <description>SPI - Tag - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/spi/" rel="self" type="application/rss+xml" /><item>
+    <title>HW &amp; SW Design of the AXI Quad SPI IP Core</title>
+    <link>http://example.com/spi/</link>
+    <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/spi/</guid>
+    <description><![CDATA[1 Basics SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - SS (Slave Select), SCK (SPI Clock), and MOSI (Master-In-Slave-Out). The four wire mode has an extra line called MISO (Master-In-Slave-Out).
+Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Master-In-Slave-Out SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle.]]></description>
+</item>
+</channel>
+</rss>
