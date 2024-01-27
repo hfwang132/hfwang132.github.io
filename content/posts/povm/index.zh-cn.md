@@ -2,6 +2,8 @@
 title: "广义量子测量：POVM 简介"
 date: 2024-01-26T23:36:13+08:00
 draft: false
+tags: ["量子测量理论"]
+categories: ["量子信息"]
 ---
 
 ## 投影测量  

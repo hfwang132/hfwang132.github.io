@@ -2,6 +2,8 @@
 title: "傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？"
 date: 2024-01-26T23:49:29+08:00
 draft: false
+tags: ["对称性"]
+categories: ["数学物理方法"]
 ---
 
 **Link:** [https://www.zhihu.com/question/640869828/answer/3373753127]
