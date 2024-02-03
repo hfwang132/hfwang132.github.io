@@ -887,7 +887,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         #Youtubelegacy = "xxxx"
         #Phone = "555-555-555"
         # Zhihu = "hypercube-33"
-        Stackoverflow = "godfly666"
+        Stackoverflow = "17097160/godfly666"
         Email = "hfwang132@gmail.com"
         RSS = true
         #[languages.en.params.social.Mastodon]
@@ -990,7 +990,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         #Douban = "xxxx"
         #Devto = "xxxx"
         Bilibili = "34151110"
-        Stackoverflow = "godfly666"
+        Stackoverflow = "17097160/godfly666"
         Email = "hfwang132@gmail.com"
         #Phone = ""
         RSS = true
