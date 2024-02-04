@@ -8,8 +8,7 @@ categories: ["量子信息"]
 
 上篇我们说了在 HBT 实验中，用非光子数分辨的单光子探测器测量量子二阶关联函数的原理。
 
-[https://zhuanlan.zhihu.com/p/679453473](https://zhuanlan.zhihu.com/p/679453473)
-
+[https://zhuanlan.zhihu.com/p/679453473](https://zhuanlan.zhihu.com/p/679453473)  
 这篇我们来看看量子二阶关联函数有什么用。除了老生常谈的用来区分【超泊松统计/泊松统计/亚泊松统计】以及区分【光子集聚/反集聚】以外，HBT 实验还可以用来测量多模压缩态的频谱纯度。
 
 ## SPDC 产生多模压缩态  
@@ -43,6 +42,8 @@ $\begin{aligned} H=i\hbar \chi \sum\_{k,l}\left( C\_{kl}a^\dag\_k b^\dag\_l - C^
 
 $\begin{aligned} H=i\hbar \chi \sum\_{k}\left( \lambda\_k A^\dag\_k B^\dag\_k - \lambda\_k A\_k B\_k\right) \end{aligned}$ 
 
+其中 $\sum\_k\lambda^2\_k=1$ 。
+
 
 > 注意：由于奇异值分解的谱总是非负实数，所以 $\lambda\_k$ 是实数且大于零。
 
@@ -58,9 +59,17 @@ $\begin{aligned} H=i\hbar \chi \sum\_{k}\left( \lambda\_k A^\dag\_k B^\dag\_k - 
 
 在薛定谔绘景下，
 
-$\begin{aligned} |\Psi\_{\text{out}}\rangle &=e^{\frac{H\tau}{i\hbar}}|\Psi\_{\text{in}}\rangle \\\\ &= \sum\_{k} \frac{1}{\cosh(r\_k)}\sum\_{n=0}^{\infty}\tanh^k(r\_k)|n\_k,n\_k\rangle \end{aligned}$ 
+$\begin{aligned} |\Psi\_{\text{out}}\rangle &=e^{\frac{H\tau}{i\hbar}}|\Psi\_{\text{in}}\rangle \\\\ &= \sum\_{k} \frac{1}{\cosh(r\_k)}\sum\_{n=0}^{\infty}\tanh^n(r\_k)|n\_k,n\_k\rangle \end{aligned}$ 
 
 其中 $r\_k=\chi \tau \lambda\_k$ 。注意到它拥有热光场的形式。
+
+当 $r\_k$ 很小时，有 
+
+$|\Psi\_{\text{out}}\rangle\approx \sum\_{k} \left(|0\_k,0\_k\rangle + r\_k|1\_k,1\_k\rangle\right)$ 
+
+
+> 这也是大多数实验所符合的情况。  
+> 在探测到光子的前提下，条件量子态（Conditional State）为 $|\Psi\_\text{conditional}\rangle=\sum\_k\lambda\_k|1\_k,1\_k\rangle$ 。这就是预报式单光子源的原理。
 
 在海森堡绘景下，
 
@@ -78,7 +87,7 @@ $\begin{aligned} B\_k &\rightarrow e^{\frac{H\tau}{i\hbar}} B\_k e^{-\frac{H\tau
 $\begin{aligned} K= \frac{1}{\sum\_k\lambda^4\_k} \end{aligned}$ 
 
 
-> \*\*例\*\*  
+> **例**  
 > 对于无关联的联合频谱，有 $\{\lambda\_k\}=\{1\}$ ， $K=1$ 。  
 > 对于有两个模式，且系数相等的联合频谱，有 $\{\lambda\_k\}=\{\frac{1}{2},\frac{1}{2}\}$ ， $K=2$ 。  
 > 对于有 n 个模式，且系数相等的联合频谱，有 $K=n$ 。  
@@ -87,9 +96,10 @@ $\begin{aligned} K= \frac{1}{\sum\_k\lambda^4\_k} \end{aligned}$
 为什么我们会关心频谱关联？这是因为它和光子的纯度有密切的关系：
 
 
-> \*\*性质\*\*  
-> 将两个光子中的其中一个 trace 掉（做偏迹运算），剩下光子的量子态的纯度为 $P=\frac{1}{K}$ 。这是因为：  
-> $\begin{aligned} P &= \operatorname{tr}[\operatorname{tr}\_2[|\psi\rangle\langle\psi|]^2] \\\\  &=  \operatorname{tr}\left[\operatorname{tr}\_2\left(\left|\sum\_{k}\lambda\_k a\_k \otimes b\_k\right\rangle\left\langle\sum\_{l}\lambda\_l a\_l \otimes b\_l\right|\right)^2\right] \\\\ &= \operatorname{tr}\left[\left(\sum\_{k}\left|\lambda\_k a\_k \right\rangle\left\langle\lambda\_k a\_k\right|\right)^2\right] \\\\ &= \operatorname{tr}\left[\sum\_{k}\left(\left|\lambda\_k a\_k \right\rangle\left\langle\lambda\_k a\_k\right|\right)^2\right] \\\\ &= \operatorname{tr}\left[\sum\_{k}\lambda\_k^4 |a\_k\rangle\langle a\_k|\right] \\\\ &=\sum\_{k}\lambda\_k^4=\frac{1}{K} \end{aligned}$ 
+> **性质**  
+> 在 $r\_k$ 很小，且探测到光子的前提下，量子态为 $|\Psi\_\text{conditional}\rangle=\sum\_k\lambda\_k|1\_k,1\_k\rangle$ 。  
+> 对于该量子态，将两个光子中的其中一个 trace 掉（做偏迹运算），剩下光子的量子态的纯度为 $P=\frac{1}{K}$ 。这是因为：  
+> $\begin{aligned} P &= \operatorname{tr}[\operatorname{tr}\_2[|\psi\rangle\langle\psi|]^2] \\\\  &=  \operatorname{tr}\left[\operatorname{tr}\_B\left(\sum\_{k}\lambda\_k \left| 1\_k, 1\_k\right\rangle\sum\_{l}\lambda\_l \left\langle 1\_l ,1\_l\right|\right)^2\right] \\\\ &= \operatorname{tr}\left[\left(\sum\_{k}\lambda\_k^2 \left|1\_k \right\rangle\left\langle 1\_k\right|\right)^2\right] \\\\ &= \operatorname{tr}\left[\sum\_{k}\left(\lambda\_k^2\left| 1\_k \right\rangle\left\langle 1\_k\right|\right)^2\right] \\\\ &= \operatorname{tr}\left[\sum\_{k}\lambda\_k^4 |1\_k\rangle\langle 1\_k|\right] \\\\ &=\sum\_{k}\lambda\_k^4=\frac{1}{K} \end{aligned}$ 
 
 可见，纯度与施密特数呈反比关系。也就是说，频谱关联越强，光子在频域上的纯度越低。这对预报式单光子源以及各种多光子干涉实验是不利的。对于前者，频谱关联会降低单光子的频域全同性，对于后者，频谱关联会降低干涉对比度。
 
@@ -128,4 +138,3 @@ $\begin{aligned} \langle n\_k\rangle&=\langle 0|A\_k^\dag A\_k|0\rangle \\\\ &\r
 
 [3] Paesani, S. *et al.* Near-ideal spontaneous photon sources in silicon quantum photonics. *Nat Commun* **11**, 2505 (2020).  
  
-
