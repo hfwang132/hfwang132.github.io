@@ -4,7 +4,23 @@
         <link>http://example.com/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 05 Feb 2024 00:12:16 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>HBT_spectral_correlation</title>
+    <link>http://example.com/zh-cn/hbt_spectral_correlation/</link>
+    <pubDate>Mon, 05 Feb 2024 00:12:16 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/hbt_spectral_correlation/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>非光子数分辨探测器测二阶关联函数（g2）的原理</title>
+    <link>http://example.com/zh-cn/hbt_g2/</link>
+    <pubDate>Mon, 05 Feb 2024 00:11:33 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/hbt_g2/</guid>
+    <description><![CDATA[HBT 实验 做量光实验的小伙伴一定知道 HBT 实验可以用来测二阶关联函数 g2，即将一束光用 50:50 的分束器分成两束，再分别用两个探测器探测，并统计两边光强的关]]></description>
+</item>
+<item>
     <title>李导数与协变导数有什么联系？</title>
     <link>http://example.com/zh-cn/lie_derivative/</link>
     <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
@@ -37,6 +53,14 @@
     <description><![CDATA[投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过]]></description>
 </item>
 <item>
+    <title>来坡读博两周杂感</title>
+    <link>http://example.com/zh-cn/essay_04/</link>
+    <pubDate>Mon, 14 Aug 2023 23:04:50 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/essay_04/</guid>
+    <description><![CDATA[7月31号来的新加坡。今天就是出国来坡的第二周了。 第一周很兴奋，在新加坡到处玩~尝试踏出舒适圈，和各种各样的人交流。但是这样很快就让我抑郁了]]></description>
+</item>
+<item>
     <title>做过的一些好玩（但无聊）的小项目</title>
     <link>http://example.com/zh-cn/side_proj/</link>
     <pubDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</pubDate>
@@ -59,30 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/spi/</guid>
     <description><![CDATA[1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slav]]></description>
-</item>
-<item>
-    <title>2023 年 3-6 月工作总结</title>
-    <link>http://example.com/zh-cn/work_2023_3-6/</link>
-    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/work_2023_3-6/</guid>
-    <description><![CDATA[给从今年三月到现在断断续续的工作做一个总结 1 RTL-SDR &amp; PYNQ-Z2 1.1 现有工作 这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接来配合使用。RTL-SDR 将射频信号下变频为基带信号]]></description>
-</item>
-<item>
-    <title>Python 协程/异步IO</title>
-    <link>http://example.com/zh-cn/python_asyncio/</link>
-    <pubDate>Tue, 13 Jun 2023 22:05:45 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/python_asyncio/</guid>
-    <description><![CDATA[最近做项目用到 Python 协程/异步，现在总结一下： 导入 1 import asyncio 如果在 IPython 环境里使用，需要加两行： 1 2 3 import nest_asyncio nest_asyncio.apply() import asyncio 协程 协程（coroutines）是 Python 异步]]></description>
-</item>
-<item>
-    <title>开发板通过 PC 连接互联网</title>
-    <link>http://example.com/zh-cn/boards_networking/</link>
-    <pubDate>Mon, 12 Jun 2023 23:22:42 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/boards_networking/</guid>
-    <description><![CDATA[Windows 在控制面板中设置能上网的网卡，共享给以太网。此时以太网的 IP 会变成 192.168.137.1。 然后在开发板终端中设置网关为 192.168.137.1 即可： sudo route add default gw]]></description>
 </item>
 </channel>
 </rss>

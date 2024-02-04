@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>量子测量理论 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</link>
+        <description>量子测量理论 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jan 2024 23:36:13 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>广义量子测量：POVM 简介</title>
+    <link>http://example.com/zh-cn/povm/</link>
+    <pubDate>Fri, 26 Jan 2024 23:36:13 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/povm/</guid>
+    <description><![CDATA[投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过]]></description>
+</item>
+</channel>
+</rss>

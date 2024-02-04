@@ -22,6 +22,14 @@
 Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Master-In-Slave-Out SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle.]]></description>
 </item>
 <item>
+    <title>Work Summary (Mar 2023 -- Jun 2023)</title>
+    <link>http://example.com/work_2023_3-6/</link>
+    <pubDate>Sat, 01 Jul 2023 17:49:20 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/work_2023_3-6/</guid>
+    <description><![CDATA[TBD Chinese version here]]></description>
+</item>
+<item>
     <title>Polling Jupyter Widget UI Events in Runtime</title>
     <link>http://example.com/ui_poll/</link>
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
@@ -92,16 +100,6 @@ This operation may be useful when using a dual-boot system with Windows and Ubun
     <description><![CDATA[1 Differential Forms Before introducing the concept of curl, we need to first introduce differential forms and the exterior derivative.
 An n-form can be defined as an alternating multilinear mapping $\omega:(T_p^*M)^n\rightarrow \mathbb{R}$. It maps multiple vectors to a real number. Additionally, it satisfies the alternating property, meaning that exchanging two input vectors results in an output multiplied by a negative sign.
 Therefore, an n-form can be explicitly defined as follows:]]></description>
-</item>
-<item>
-    <title>What on earth are the pseudovectors?</title>
-    <link>http://example.com/pseudovectors/</link>
-    <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/pseudovectors/</guid>
-    <description><![CDATA[1 Introduction In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;
-In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
-When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector.]]></description>
 </item>
 </channel>
 </rss>
