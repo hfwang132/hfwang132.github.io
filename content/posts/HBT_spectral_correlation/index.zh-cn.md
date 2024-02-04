@@ -122,10 +122,10 @@ $\begin{aligned} \langle n\_k\rangle&=\langle 0|A\_k^\dag A\_k|0\rangle \\\\ &\r
 利用 HBT 实验测频谱关联的文献见 [2] 和 [3]，它们引用的都是文献 [1]。
 
 ## 参考文献  
-[1] Christ, A., Laiho, K., Eckstein, A., Cassemiro, K. N. & Silberhorn, C. Probing multimode squeezing with correlation functions. \*New J. Phys.\* \*\*13\*\*, 033027 (2011).
+[1] Christ, A., Laiho, K., Eckstein, A., Cassemiro, K. N. & Silberhorn, C. Probing multimode squeezing with correlation functions. *New J. Phys.* **13**, 033027 (2011).
 
-[2] Faruque, I. I. \*et al.\* Estimating the Indistinguishability of Heralded Single Photons Using Second-Order Correlation. \*Phys. Rev. Applied\* \*\*12\*\*, 054029 (2019).
+[2] Faruque, I. I. *et al.* Estimating the Indistinguishability of Heralded Single Photons Using Second-Order Correlation. *Phys. Rev. Applied* **12**, 054029 (2019).
 
-[3] Paesani, S. \*et al.\* Near-ideal spontaneous photon sources in silicon quantum photonics. \*Nat Commun\* \*\*11\*\*, 2505 (2020).  
+[3] Paesani, S. *et al.* Near-ideal spontaneous photon sources in silicon quantum photonics. *Nat Commun* **11**, 2505 (2020).  
  
 
