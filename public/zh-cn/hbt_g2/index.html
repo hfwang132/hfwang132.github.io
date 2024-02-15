@@ -33,7 +33,7 @@
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","wordcount":  1393 ,
+                        }],"genre": "posts","keywords": "量子光学","wordcount":  1401 ,
         "url": "http:\/\/example.com\/zh-cn\/hbt_g2\/","datePublished": "2024-02-05T00:11:33+08:00","dateModified": "2024-02-05T00:11:33+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -121,8 +121,8 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">非光子数分辨探测器测二阶关联函数（g2）的原理</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-05">2024-02-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1393 字&nbsp;
+            <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-05">2024-02-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1401 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/zh-cn/hbt_g2/" class="leancloud_visitors" data-flag-title="非光子数分辨探测器测二阶关联函数（g2）的原理">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -147,7 +147,7 @@
 </figure>
 
 <p>经典 normalized g2 的定义为</p>
-<p>$\begin{aligned} g^{(2)}(r_1,r_2;\tau)&amp;=\frac{\langle E^<em>(r_1,t)E^</em>(r_2,t+\tau) E(r_2,t+\tau)E(r_1,t)\rangle}{\langle |E(r_1,t)|^2\rangle\langle |E(r_2,t+\tau)|^2\rangle}  \ &amp;= \frac{\langle I(r_1,t)I(r_2,t+\tau)\rangle}{\langle I(r_1,t)\rangle\langle I(r_2,t+\tau)\rangle} \end{aligned}$</p>
+<p>$\begin{aligned} g^{(2)}(r_1,r_2;\tau)&amp;=\frac{\langle E^*(r_1,t)E^*(r_2,t+\tau) E(r_2,t+\tau)E(r_1,t)\rangle}{\langle |E(r_1,t)|^2\rangle\langle |E(r_2,t+\tau)|^2\rangle}  \\ &amp;= \frac{\langle I(r_1,t)I(r_2,t+\tau)\rangle}{\langle I(r_1,t)\rangle\langle I(r_2,t+\tau)\rangle} \end{aligned}$</p>
 <p>其中 $E$ 代表电场， $I$ 代表光强。可见，根据定义，HBT 实验测量的就是经典 g2（将关联光强除以两边各自的光强的乘积即可）。</p>
 <h2 id="量子二阶光联函数">量子二阶光联函数</h2>
 <p>量子 normalized g2 的定义为：</p>
@@ -156,9 +156,9 @@
 <p>Comment：对于量子情况，分子里的算符要换成电场的 Counter-rotating Term $E^-$ 和 Co-rotating Term $E^+$ ，它们分别含有产生和湮灭算符。<br>
 而且，产生算符一定要在湮灭算符前面，因为一个光子被探测是一个湮灭的过程，这和经典情况不同。经典情况的相干态 $|\alpha\rangle$ 是湮灭算符的本征态 $a|\alpha\rangle=\alpha|\alpha\rangle$ ，多一个光子少一个光子没有什么区别。</p>
 </blockquote>
-<p>在<strong>单模</strong>的情况下，由于 $E^+=i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a$ ， $E^-=i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a^\dag$ ，于是量子 g2 可以化简为</p>
+<p>在**单模**的情况下，由于 $E^+=i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a$ ， $E^-=i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a^\dag$ ，于是量子 g2 可以化简为</p>
 <p>$\begin{aligned} g^{(2)}(r_1,r_2,\tau)&amp;=\frac{\langle a^\dag(r_1,t)a^\dag(r_2,t+\tau)a(r_2,t+\tau)a(r_1,t)\rangle}{\langle n(r_1,t)\rangle\langle n(r_2,t+\tau) \rangle} \end{aligned}$</p>
-<p>于是，为了测量子 g2，我们要把光强探测器换成光子探测器，<strong>并且这个光子探测器可以分辨光子数</strong>。</p>
+<p>于是，为了测量子 g2，我们要把光强探测器换成光子探测器，**并且这个光子探测器可以分辨光子数**。</p>
 <p>然而问题来了，目前可以分辨光子数的单光子探测器都不太行：TES 回复时间太长；空间和时间上 Demultiplex 的方案只是伪光子数分辨；而 SNSPD 又很昂贵，需要低温，且多光子效率也未必很高。</p>
 <h2 id="npnr-spd-测-g2">NPNR-SPD 测 g2</h2>
 <p>幸运的是，不能分辨光子数的单光子探测器（NPNR-SPD，Non-Photon-Number-Resolving Single-Photon-Detectors）也可以测 g2，即使它们不能分辨光子数！</p>
@@ -174,14 +174,14 @@
 <blockquote>
 <p>下面是正式（无聊）的数学推导，可以跳过：<br>
 设探测器 1 的计数率为 $S_1$ ，探测器 2 的计数率为 $S_2$ ，两个探测器的符合（同时探测到光子的）计数率为 $C_{12}$ ，单位时间内光束里的光子数为 $R$ ，则有：<br>
-$\begin{aligned} S_i &amp;=R\sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k[1-(1-\eta)^k] \ &amp;\approx R \sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k\cdot k\eta \ &amp;= R\frac{\eta}{2} \sum_{n=1}^{\infty} n P_n  \end{aligned}$<br>
-$\begin{aligned} C_{12}&amp;=R\sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n-1} C_n^k[1-(1-\eta)^k][1-(1-\eta)^{(n-k)}] \ &amp;\approx R \sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k\cdot k\eta \cdot (n-k)\eta \ &amp;= R \frac{\eta^2}{4} \sum_{n=2}^{\infty} n(n-1)P_n \end{aligned}$<br>
+$\begin{aligned} S_i &amp;=R\sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k[1-(1-\eta)^k] \\ &amp;\approx R \sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k\cdot k\eta \\ &amp;= R\frac{\eta}{2} \sum_{n=1}^{\infty} n P_n  \end{aligned}$<br>
+$\begin{aligned} C_{12}&amp;=R\sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n-1} C_n^k[1-(1-\eta)^k][1-(1-\eta)^{(n-k)}] \\ &amp;\approx R \sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k\cdot k\eta \cdot (n-k)\eta \\ &amp;= R \frac{\eta^2}{4} \sum_{n=2}^{\infty} n(n-1)P_n \end{aligned}$<br>
 于是<br>
-$\begin{aligned} \frac{C_{12} R}{S_1 S_2} &amp;= \frac{\sum_{n=2}^{\infty} n(n-1)P_n }{\left(\sum_{n=1}^{\infty} n P_n\right)^2} \ &amp;= \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} \end{aligned}$<br>
+$\begin{aligned} \frac{C_{12} R}{S_1 S_2} &amp;= \frac{\sum_{n=2}^{\infty} n(n-1)P_n }{\left(\sum_{n=1}^{\infty} n P_n\right)^2} \\ &amp;= \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} \end{aligned}$<br>
 熟悉量子光学的人应该已经看出这就是 g2 了。推导如下：<br>
 $\begin{aligned} g^{(2)}(r_1,r_2,\tau)&amp;=\frac{\langle a^\dag(r_1,0)a^\dag(r_2,\tau)a(r_2,\tau)a(r_1,0)\rangle}{\langle n(r_1)\rangle\langle n(r_2) \rangle} \end{aligned}$<br>
 令 $r_1=r_2,\quad \tau=0$ 得<br>
-$\begin{aligned} g^{(2)}(\tau=0)&amp;=\frac{\langle a^\dag a^\dag a a \rangle}{\langle n\rangle^2} \ &amp;= \frac{\langle a^\dag(aa^\dag -1) a\rangle}{\langle n\rangle^2} \ &amp;= \frac{\langle n^2-n\rangle}{\langle n\rangle^2}  \end{aligned}$</p>
+$\begin{aligned} g^{(2)}(\tau=0)&amp;=\frac{\langle a^\dag a^\dag a a \rangle}{\langle n\rangle^2} \\ &amp;= \frac{\langle a^\dag(aa^\dag -1) a\rangle}{\langle n\rangle^2} \\ &amp;= \frac{\langle n^2-n\rangle}{\langle n\rangle^2}  \end{aligned}$</p>
 </blockquote>
 <p>测 g2 有什么用呢？除了教科书里常见的区分【超泊松统计/泊松统计/亚泊松统计】以及区分【光子集聚/反集聚】以外，还有一个意想不到的作用：测量光子的频谱关联。下篇我们就来讨论这一点。</p>
 <h2 id="尾声多模情况">尾声：多模情况</h2>
@@ -205,20 +205,20 @@ $\begin{aligned} g^{(2)}(\tau=0)&amp;=\frac{\langle a^\dag a^\dag a a \rangle}{\
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/zh-cn/hbt_g2/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理" data-hashtags="量子光学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/zh-cn/hbt_g2/" data-hashtag="量子光学"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/zh-cn/hbt_g2/" data-title="非光子数分辨探测器测二阶关联函数（g2）的原理"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/">量子光学</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-cn/">主页</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/zh-cn/lie_derivative/" class="prev" rel="prev" title="李导数与协变导数有什么联系？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>李导数与协变导数有什么联系？</a>
-            <a href="/zh-cn/hbt_spectral_correlation/" class="next" rel="next" title="HBT_spectral_correlation">HBT_spectral_correlation<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+            <a href="/zh-cn/hbt_spectral_correlation/" class="next" rel="next" title="HBT实验测量SPDC多模压缩态的频谱关联与纯度">HBT实验测量SPDC多模压缩态的频谱关联与纯度<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

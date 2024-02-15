@@ -10,7 +10,7 @@
 
 ## Build draft
 
-`hugo server -D`
+`hugo server -D` or `hugo serve`
 
 ## Build
 
