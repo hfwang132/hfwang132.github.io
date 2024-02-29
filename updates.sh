@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # set -x
+hugo
 
 cd themes/LoveIt
 git add .

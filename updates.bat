@@ -1,3 +1,5 @@
+hugo
+
 cd themes/LoveIt
 git add .
 git commit -m "update theme"
