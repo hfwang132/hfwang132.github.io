@@ -1,4 +1,4 @@
-hugo
+hugo --cleanDestinationDir
 
 cd themes/LoveIt
 git add .
