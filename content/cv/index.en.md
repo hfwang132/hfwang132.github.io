@@ -5,7 +5,7 @@ draft: true
 comment: false
 ---
 
-# Haifei WANG
+<!-- # Haifei WANG
 ---
 hfwang132@gmail.com
 
@@ -122,4 +122,4 @@ Advisor: Professor Sheng Chang (Department of Physics, Wuhan University, changsh
 
 - [CET-6 633](docs/CET-6.pdf)
 - [TOEFL 103](docs/TOEFL-Haifei_Wang.pdf)
-- [GRE 331 (V: 163, Q: 168)](docs/GRE-Haifei_Wang.pdf)
+- [GRE 331 (V: 163, Q: 168)](docs/GRE-Haifei_Wang.pdf) -->
