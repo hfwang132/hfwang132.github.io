@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # set -x
+hugo --cleanDestinationDir
 
 cd themes/LoveIt
 git add .

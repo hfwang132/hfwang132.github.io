@@ -69,19 +69,19 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>日常</title>
-    <link>http://example.com/zh-cn/tags/%E6%97%A5%E5%B8%B8/</link>
-    <pubDate>Sun, 25 Jun 2023 22:51:45 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/tags/%E6%97%A5%E5%B8%B8/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>FPGA</title>
     <link>http://example.com/zh-cn/tags/fpga/</link>
     <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/tags/fpga/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>PYNQ</title>
+    <link>http://example.com/zh-cn/tags/pynq/</link>
+    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/pynq/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
