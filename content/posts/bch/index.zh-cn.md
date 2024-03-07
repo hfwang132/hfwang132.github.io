@@ -24,7 +24,7 @@ $e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$
 >   
 > **例 2：Beam Splitter（分束器）**  
 > 哈密顿量为 $H= \theta e^{i\varphi} a^{\dag}b + \theta e^{-i\varphi} a b^\dag$ ，演化如下：  
->  $\begin{aligned} e^{-iH} a e^{iH} &= \cos \theta \,a + i \sin\theta\, e^{i\varphi} b \\\\ e^{iH} b e^{-iH} &= i \sin\theta \,e^{-i\varphi} a  + \cos \theta \,b \end{aligned}$   
+>  $\begin{aligned} e^{-iH} a e^{iH} &= \cos \theta \,a + i \sin\theta\, e^{i\varphi} b \\\\ e^{-iH} b e^{iH} &= i \sin\theta \,e^{-i\varphi} a  + \cos \theta \,b \end{aligned}$   
 > 这就是熟悉的 Bogliubov Transformation  
 >   
 > 这俩例子感觉像是大炮打蚊子，下面来个有用点的：  
