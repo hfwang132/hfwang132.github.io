@@ -2,6 +2,8 @@
 title: "BCH 公式 - 量子力学爆算的大杀器"
 date: 2024-03-07T20:59:38+08:00
 draft: false
+tags: ["量子光学"]
+categories: ["数学物理方法"]
 ---
 
 **Baker-Campbell-Hausdorff 公式** 用来计算海森堡表象下的算符演化是非常好的：
