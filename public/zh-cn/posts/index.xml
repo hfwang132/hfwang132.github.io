@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 16 Feb 2024 00:32:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>BCH 公式 - 量子力学爆算的大杀器</title>
+    <link>http://example.com/zh-cn/bch/</link>
+    <pubDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/bch/</guid>
+    <description><![CDATA[Baker-Campbell-Hausdorff 公式 用来计算海森堡表象下的算符演化是非常好的： $e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$ 这个公式其实只是 BCH 公式的小弟 因为海森堡表象下的算符演化规则是 $A\rightarrow UAU^{\dag}$ ，其中 $U$ 是酉演化算符。]]></description>
+</item>
+<item>
     <title>复数对于描述电磁波有什么重要性？</title>
     <link>http://example.com/zh-cn/complex_numbers_in_em/</link>
     <pubDate>Fri, 16 Feb 2024 00:32:34 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/ui_poll/</guid>
     <description><![CDATA[先看一段 Jupyter Notebook 中的代码： 1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) 运行上面的代码，IntSlider() 会显示一个可交互的滑块小]]></description>
-</item>
-<item>
-    <title>AXI SPI IP 核的软硬件设计</title>
-    <link>http://example.com/zh-cn/spi/</link>
-    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/spi/</guid>
-    <description><![CDATA[1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slav]]></description>
 </item>
 </channel>
 </rss>
