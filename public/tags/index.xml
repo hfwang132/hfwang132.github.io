@@ -4,7 +4,23 @@
         <link>http://example.com/tags/</link>
         <description>Tags - Tag - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Quantum Optics</title>
+    <link>http://example.com/tags/quantum-optics/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/tags/quantum-optics/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Quantum Measurement Theory</title>
+    <link>http://example.com/tags/quantum-measurement-theory/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/tags/quantum-measurement-theory/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Embedded Systems</title>
     <link>http://example.com/tags/embedded-systems/</link>
     <pubDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</pubDate>
@@ -66,22 +82,6 @@
     <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/tags/exterior-algebra/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Diary</title>
-    <link>http://example.com/tags/diary/</link>
-    <pubDate>Sat, 10 Jun 2023 01:51:11 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/tags/diary/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Differential Geometry</title>
-    <link>http://example.com/tags/differential-geometry/</link>
-    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/tags/differential-geometry/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

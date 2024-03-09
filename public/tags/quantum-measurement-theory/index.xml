@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Quantum Measurement Theory - Tag - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/quantum-measurement-theory/</link>
+        <description>Quantum Measurement Theory - Tag - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-measurement-theory/" rel="self" type="application/rss+xml" /><item>
+    <title>POVM: a brief introduction</title>
+    <link>http://example.com/povm/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/povm/</guid>
+    <description><![CDATA[Projection Measurement Traditionally, a measurement, in the sense of Von Neumann, is a series of projection operators. By performing spectral decomposition on the self-adjoint operator corresponding to the observable, denoted as $ O = \sum_i \lambda_i |\varphi_i\rangle\langle\varphi_i| $, we obtain these projection operators $ |\varphi_i\rangle\langle\varphi_i| $. This part is well-known to students who have studied elementary quantum mechanics.
+Besides the Von Neumann measurement, there is a more general type of measurement called Generalized Measurements or Positive Operator Valued Measures (POVMs).]]></description>
+</item>
+</channel>
+</rss>

@@ -26,11 +26,11 @@ $\begin{aligned} g^{(2)}(r\_1,r\_2;\tau)&=\frac{\langle E^-(r\_1,t)E^-(r\_2,t+\t
 > Comment：对于量子情况，分子里的算符要换成电场的 Counter-rotating Term $E^-$ 和 Co-rotating Term $E^+$ ，它们分别含有产生和湮灭算符。  
 > 而且，产生算符一定要在湮灭算符前面，因为一个光子被探测是一个湮灭的过程，这和经典情况不同。经典情况的相干态 $|\alpha\rangle$ 是湮灭算符的本征态 $a|\alpha\rangle=\alpha|\alpha\rangle$ ，多一个光子少一个光子没有什么区别。
 
-在\*\*单模\*\*的情况下，由于 $E^+=i\sqrt{\frac{\hbar \omega}{2\epsilon\_0 V}}a$ ， $E^-=i\sqrt{\frac{\hbar \omega}{2\epsilon\_0 V}}a^\dag$ ，于是量子 g2 可以化简为
+在**单模**的情况下，由于 $E^+=i\sqrt{\frac{\hbar \omega}{2\epsilon\_0 V}}a$ ， $E^-=i\sqrt{\frac{\hbar \omega}{2\epsilon\_0 V}}a^\dag$ ，于是量子 g2 可以化简为
 
 $\begin{aligned} g^{(2)}(r\_1,r\_2,\tau)&=\frac{\langle a^\dag(r\_1,t)a^\dag(r\_2,t+\tau)a(r\_2,t+\tau)a(r\_1,t)\rangle}{\langle n(r\_1,t)\rangle\langle n(r\_2,t+\tau) \rangle} \end{aligned}$ 
 
-于是，为了测量子 g2，我们要把光强探测器换成光子探测器，\*\*并且这个光子探测器可以分辨光子数\*\*。
+于是，为了测量子 g2，我们要把光强探测器换成光子探测器，**并且这个光子探测器可以分辨光子数**。
 
 然而问题来了，目前可以分辨光子数的单光子探测器都不太行：TES 回复时间太长；空间和时间上 Demultiplex 的方案只是伪光子数分辨；而 SNSPD 又很昂贵，需要低温，且多光子效率也未必很高。
 

@@ -4,7 +4,60 @@
         <link>http://example.com/posts/</link>
         <description>All Posts | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Probing the spectral purity with unheralded g2 measurements in HBT experiment</title>
+    <link>http://example.com/hbt_spectral_correlation/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/hbt_spectral_correlation/</guid>
+    <description><![CDATA[In the previous section, we discussed the principle of measuring the quantum second-order correlation function with a non-photon-number-resolving single-photon detector in the HBT experiment.
+https://zhuanlan.zhihu.com/p/679453473
+In this section, let&rsquo;s see what the quantum second-order correlation function is used for. In addition to the common uses such as distinguishing between super-Poissonian statistics/Poissonian statistics/sub-Poissonian statistics and distinguishing between photon bunching/anti-bunching, the HBT experiment can also be used to measure the spectral purity of multimode squeezed states.]]></description>
+</item>
+<item>
+    <title>Probing g2 with non-photon-number-resolving detectors</title>
+    <link>http://example.com/hbt_g2/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:26 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/hbt_g2/</guid>
+    <description><![CDATA[HBT Experiment Those who have conducted quantum optics experiments must be familiar with the Hanbury Brown and Twiss (HBT) experiment, which can be used to measure the second-order correlation function g2. In this experiment, a beam of light is split into two using a 50:50 beamsplitter, and then each beam is detected separately by two detectors. The correlation of the intensities on both sides is measured as a function of delay, as shown in the figure below:]]></description>
+</item>
+<item>
+    <title>POVM: a brief introduction</title>
+    <link>http://example.com/povm/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/povm/</guid>
+    <description><![CDATA[Projection Measurement Traditionally, a measurement, in the sense of Von Neumann, is a series of projection operators. By performing spectral decomposition on the self-adjoint operator corresponding to the observable, denoted as $ O = \sum_i \lambda_i |\varphi_i\rangle\langle\varphi_i| $, we obtain these projection operators $ |\varphi_i\rangle\langle\varphi_i| $. This part is well-known to students who have studied elementary quantum mechanics.
+Besides the Von Neumann measurement, there is a more general type of measurement called Generalized Measurements or Positive Operator Valued Measures (POVMs).]]></description>
+</item>
+<item>
+    <title>Wave Function of Photons</title>
+    <link>http://example.com/photon_wave_func/</link>
+    <pubDate>Sun, 10 Mar 2024 02:21:37 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/photon_wave_func/</guid>
+    <description><![CDATA[The wave function of a photon in the spacetime representation is:
+$\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$
+Where $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$.
+Intuitively, this is to let the field operator $E^{-}(\mathbf{r},t)$ create a state $|\mathbf{r},t\rangle$ at the spacetime point $(\mathbf{r},t)$, and then calculate the overlap between this state and $|\psi\rangle$.
+When we talk about the spacetime modes of photons, such as Gaussian pulses, hyperbolic secant pulses, etc.]]></description>
+</item>
+<item>
+    <title>Baker-Campbell-Hausdorff Formula</title>
+    <link>http://example.com/bch/</link>
+    <pubDate>Sun, 10 Mar 2024 02:12:14 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/bch/</guid>
+    <description><![CDATA[Chinese version here
+Baker-Campbell-Hausdorff Formula can be used to compute operator evolution in the Heisenberg picture:
+$e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$
+This formula is actually just a younger sibling of the BCH formula.
+Because the evolution rule of operators in the Heisenberg picture is $A\rightarrow UAU^{\dag}$, where $U$ is a unitary evolution operator.
+If $U$ is generated by $H$, then it becomes $A\rightarrow e^{\frac{t}{i\hbar}H}Ae^{-\frac{t}{i\hbar}H}$.
+Example 1: Phase Shifter The Hamiltonian is $H=\varphi n$, and the annihilation operator $a$ evolves as: $\begin{aligned} e^{-i\varphi n} a e^{i\varphi n}&amp;= a + i\varphi [n, a] - \frac{\varphi}{2!]]></description>
+</item>
+<item>
     <title>Some fun side-projects</title>
     <link>http://example.com/side_proj/</link>
     <pubDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</pubDate>
@@ -52,56 +105,6 @@ Import 1 import asyncio If asyncio is to be used in an IPython environment, we h
 Then, set the gateway as 192.168.137.1 in the terminal of the development board:
 sudo route add default gw 192.168.137.1
 Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):]]></description>
-</item>
-<item>
-    <title>Increasing the swapfile for Linux</title>
-    <link>http://example.com/increase_swapfile/</link>
-    <pubDate>Mon, 12 Jun 2023 22:59:26 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/increase_swapfile/</guid>
-    <description><![CDATA[Xilinx&rsquo;s toolchain consumes soooo much memory! Sometimes it causes the system to freeze&hellip; After all, my laptop only has 8GB of RAM. So there&rsquo;s no other choice but to add virtual memories.
-After increase the swapfile, the system performance has improved a lot:
-1 2 3 4 sudo swapoff /swapfile sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 sudo mkswap /swapfile sudo swapon /swapfile ]]></description>
-</item>
-<item>
-    <title>Partitioning and Formatting SD Cards with Linux</title>
-    <link>http://example.com/linux_sd_card/</link>
-    <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/linux_sd_card/</guid>
-    <description><![CDATA[To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.
-The main commands are as follows:
-First, use sudo fdisk -l to confirm which device in /dev corresponds to the SD card.]]></description>
-</item>
-<item>
-    <title>Mounting the EFI partition in Windows OS</title>
-    <link>http://example.com/efi_partition/</link>
-    <pubDate>Mon, 12 Jun 2023 22:26:16 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/efi_partition/</guid>
-    <description><![CDATA[To mount the EFI partitions, run the following commands in PowerShell:
-1 2 3 4 5 6 diskpart list disk # make sure which is the disk that contains the EFI partition. usually 0 select disk 0 list partition # make sure which is the EFI partition. normally 0 select disk 0 assign letter=z Then we will mount the EFI partition as drive Z.
-This operation may be useful when using a dual-boot system with Windows and Ubuntu: Sometimes, after removing the Ubuntu system, only the Windows system remains, but the GRUB interface still appears every time the computer boots.]]></description>
-</item>
-<item>
-    <title>Curl in high dimension</title>
-    <link>http://example.com/curl_in_n_dimension/</link>
-    <pubDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/curl_in_n_dimension/</guid>
-    <description><![CDATA[1 Differential Forms Before introducing the concept of curl, we need to first introduce differential forms and the exterior derivative.
-An n-form can be defined as an alternating multilinear mapping $\omega:(T_p^*M)^n\rightarrow \mathbb{R}$. It maps multiple vectors to a real number. Additionally, it satisfies the alternating property, meaning that exchanging two input vectors results in an output multiplied by a negative sign.
-Therefore, an n-form can be explicitly defined as follows:]]></description>
-</item>
-<item>
-    <title>What on earth are the pseudovectors?</title>
-    <link>http://example.com/pseudovectors/</link>
-    <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/pseudovectors/</guid>
-    <description><![CDATA[1 Introduction In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;
-In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
-When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector.]]></description>
 </item>
 </channel>
 </rss>

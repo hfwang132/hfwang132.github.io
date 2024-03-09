@@ -4,7 +4,23 @@
         <link>http://example.com/categories/</link>
         <description>Categories - Category - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Quantum Information</title>
+    <link>http://example.com/categories/quantum-information/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/categories/quantum-information/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Mathematical Physics</title>
+    <link>http://example.com/categories/mathematical-physics/</link>
+    <pubDate>Sun, 10 Mar 2024 02:12:14 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/categories/mathematical-physics/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Diary</title>
     <link>http://example.com/categories/diary/</link>
     <pubDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</pubDate>
@@ -26,14 +42,6 @@
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/categories/cs/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Mathematical Physics</title>
-    <link>http://example.com/categories/mathematical-physics/</link>
-    <pubDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/categories/mathematical-physics/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

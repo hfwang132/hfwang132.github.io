@@ -1,0 +1,47 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Quantum Information - Category - Haifei&#39;s Home</title>
+        <link>http://example.com/categories/quantum-information/</link>
+        <description>Quantum Information - Category - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/quantum-information/" rel="self" type="application/rss+xml" /><item>
+    <title>Probing the spectral purity with unheralded g2 measurements in HBT experiment</title>
+    <link>http://example.com/hbt_spectral_correlation/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/hbt_spectral_correlation/</guid>
+    <description><![CDATA[In the previous section, we discussed the principle of measuring the quantum second-order correlation function with a non-photon-number-resolving single-photon detector in the HBT experiment.
+https://zhuanlan.zhihu.com/p/679453473
+In this section, let&rsquo;s see what the quantum second-order correlation function is used for. In addition to the common uses such as distinguishing between super-Poissonian statistics/Poissonian statistics/sub-Poissonian statistics and distinguishing between photon bunching/anti-bunching, the HBT experiment can also be used to measure the spectral purity of multimode squeezed states.]]></description>
+</item>
+<item>
+    <title>Probing g2 with non-photon-number-resolving detectors</title>
+    <link>http://example.com/hbt_g2/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:26 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/hbt_g2/</guid>
+    <description><![CDATA[HBT Experiment Those who have conducted quantum optics experiments must be familiar with the Hanbury Brown and Twiss (HBT) experiment, which can be used to measure the second-order correlation function g2. In this experiment, a beam of light is split into two using a 50:50 beamsplitter, and then each beam is detected separately by two detectors. The correlation of the intensities on both sides is measured as a function of delay, as shown in the figure below:]]></description>
+</item>
+<item>
+    <title>POVM: a brief introduction</title>
+    <link>http://example.com/povm/</link>
+    <pubDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/povm/</guid>
+    <description><![CDATA[Projection Measurement Traditionally, a measurement, in the sense of Von Neumann, is a series of projection operators. By performing spectral decomposition on the self-adjoint operator corresponding to the observable, denoted as $ O = \sum_i \lambda_i |\varphi_i\rangle\langle\varphi_i| $, we obtain these projection operators $ |\varphi_i\rangle\langle\varphi_i| $. This part is well-known to students who have studied elementary quantum mechanics.
+Besides the Von Neumann measurement, there is a more general type of measurement called Generalized Measurements or Positive Operator Valued Measures (POVMs).]]></description>
+</item>
+<item>
+    <title>Wave Function of Photons</title>
+    <link>http://example.com/photon_wave_func/</link>
+    <pubDate>Sun, 10 Mar 2024 02:21:37 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/photon_wave_func/</guid>
+    <description><![CDATA[The wave function of a photon in the spacetime representation is:
+$\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$
+Where $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$.
+Intuitively, this is to let the field operator $E^{-}(\mathbf{r},t)$ create a state $|\mathbf{r},t\rangle$ at the spacetime point $(\mathbf{r},t)$, and then calculate the overlap between this state and $|\psi\rangle$.
+When we talk about the spacetime modes of photons, such as Gaussian pulses, hyperbolic secant pulses, etc.]]></description>
+</item>
+</channel>
+</rss>
