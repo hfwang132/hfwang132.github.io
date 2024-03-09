@@ -12,7 +12,7 @@
     <pubDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/bch/</guid>
-    <description><![CDATA[Baker-Campbell-Hausdorff 公式 用来计算海森堡表象下的算符演化是非常好的： $e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$ 这个公式其实只是 BCH 公式的小弟 因为海森堡表象下的算符演化规则是 $A\rightarrow UAU^{\dag}$ ，其中 $U$ 是酉演化算符。]]></description>
+    <description><![CDATA[Baker-Campbell-Hausdorff 公式 可以用来计算海森堡表象下的算符演化： $e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$ 这个公式其实只是 BCH 公式的小弟 因为海森堡表象下的算符演化规则是 $A\rightarrow UAU^{\dag}$ ，其中 $U$ 是酉演化算符。 如果 $U$]]></description>
 </item>
 <item>
     <title>复数对于描述电磁波有什么重要性？</title>
