@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 09 Mar 2024 17:37:15 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>光子有波函数吗？</title>
+    <link>http://example.com/zh-cn/photon_wave_func/</link>
+    <pubDate>Sat, 09 Mar 2024 17:37:15 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/photon_wave_func/</guid>
+    <description><![CDATA[光子有时空表象下的波函数： $\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$ 其中 $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$ 。 直观来看，就是让场算符 $E^{-}(\mathbf{r},t)$ 在时空点 $(\mathbf{r},t)$ 处创造一个态 $|\mathbf{r},t\rangle$ ，再求这个态和 $|\psi\rangle$ 之]]></description>
+</item>
+<item>
     <title>BCH 公式 - 量子力学爆算的大杀器</title>
     <link>http://example.com/zh-cn/bch/</link>
     <pubDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/side_proj/</guid>
     <description><![CDATA[项目 日期 评论 PYNQ-Z2 + RTL-SDR 收音机 2023.06 是 Jupyter Notebook 里的 App，不是独立的 Web App WIFI 天气时钟 2023.01 不会 LvGL。。界面有亿点简陋 光立方 2023.01 只是采购了 BOM 来焊接。。固件不是我]]></description>
-</item>
-<item>
-    <title>运行时拉取 Jupyter Widgets UI 组件的状态</title>
-    <link>http://example.com/zh-cn/ui_poll/</link>
-    <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/ui_poll/</guid>
-    <description><![CDATA[先看一段 Jupyter Notebook 中的代码： 1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) 运行上面的代码，IntSlider() 会显示一个可交互的滑块小]]></description>
 </item>
 </channel>
 </rss>
