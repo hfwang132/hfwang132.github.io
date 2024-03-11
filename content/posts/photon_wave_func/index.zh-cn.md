@@ -24,3 +24,12 @@ $\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r}
 
 当我们说光子没有良定义的波函数时，我们实际上说的是它没有良定义的位置算符。但是我们有场算符 $E^{\pm}(\mathbf{r},t) $ 呀，所以也不需要位置算符。
 
+---
+
+光子波函数的说法在文献中是很常见的，举几个例子：
+
+[1] Xu, Y., Choudhary, S. & Boyd, R. W. Efficient Measurement of the Bi-photon Spatial Mode Entanglement with Stimulated Emission Tomography. Preprint at http://arxiv.org/abs/2403.05036 (2024).
+
+[2] Tian, Z., Liu, Q., Tian, Y. & Gu, Y. Wavepacket interference of two photons: from temporal entanglement to wavepacket shaping. Preprint at http://arxiv.org/abs/2403.04432 (2024).
+
+[3] Moura, A. G. da C. & Monken, C. H. Einstein-Podolsky-Rosen correlations in spontaneous parametric down-conversion: Beyond the Gaussian approximation. Preprint at http://arxiv.org/abs/2403.04561 (2024).

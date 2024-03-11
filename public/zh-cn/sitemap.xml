@@ -60,7 +60,7 @@
                     /></url><url>
             <loc>http://example.com/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2024-03-07T20:59:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.com/zh-cn/complex_numbers_in_em/</loc><lastmod>2024-02-16T00:32:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
-            <loc>http://example.com/zh-cn/hbt_spectral_correlation/</loc><lastmod>2024-02-05T00:12:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
+            <loc>http://example.com/zh-cn/hbt_spectral_correlation/</loc><lastmod>2024-02-05T00:12:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/hbt_spectral_correlation/"
@@ -69,7 +69,7 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/hbt_spectral_correlation/"
                     /></url><url>
-            <loc>http://example.com/zh-cn/hbt_g2/</loc><lastmod>2024-02-05T00:11:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
+            <loc>http://example.com/zh-cn/hbt_g2/</loc><lastmod>2024-02-05T00:11:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/hbt_g2/"

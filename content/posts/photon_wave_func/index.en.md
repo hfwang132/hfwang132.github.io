@@ -20,3 +20,13 @@ When we talk about the spacetime modes of photons, such as Gaussian pulses, hype
 Of course, this wave function is not in the "Schrödinger sense" because the Schrödinger equation belongs to non-relativistic quantum mechanics, while photons are relativistic particles.
 
 When we say that photons do not have a well-defined wave function, we are actually saying that they do not have a well-defined position operator. But we do have field operators $E^{\pm}(\mathbf{r},t)$, so we don't need a position operator either.
+
+---
+
+The tern "photon wave function" is nowadays common in literature. Few examples:
+
+[1] Xu, Y., Choudhary, S. & Boyd, R. W. Efficient Measurement of the Bi-photon Spatial Mode Entanglement with Stimulated Emission Tomography. Preprint at http://arxiv.org/abs/2403.05036 (2024).
+
+[2] Tian, Z., Liu, Q., Tian, Y. & Gu, Y. Wavepacket interference of two photons: from temporal entanglement to wavepacket shaping. Preprint at http://arxiv.org/abs/2403.04432 (2024).
+
+[3] Moura, A. G. da C. & Monken, C. H. Einstein-Podolsky-Rosen correlations in spontaneous parametric down-conversion: Beyond the Gaussian approximation. Preprint at http://arxiv.org/abs/2403.04561 (2024).
