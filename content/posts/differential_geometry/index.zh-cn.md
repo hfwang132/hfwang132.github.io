@@ -99,17 +99,7 @@ c. $\mathcal{F}$ 中任意多元素的并集仍在 $\mathcal{F}$ 中。
 >
 > **例 1.2**
 > 
-> $\mathcal{O}=\\{\\{x|a<x<b\\}\in \mathcal{P(}\mathbb{R})\mid \\,a,b\in \mathbb{R}\\}$ 是集合 $\mathbb{R}$ 的一个拓扑。
-> 
-> $\mathcal{C}=\\{\\{x|a\le x\le b\\}\in \mathcal{P}(\mathbb{R})\mid \\,a,b\in \mathbb{R}\\}$ **不是**集合 $\mathbb{R}$ 的一个拓扑。这是因为 $\mathcal{C}$ 中无穷个元素的并集 $\bigcup_{k=2}^\infty S_k=\bigcup_{k=2}^\infty \\{x|\frac{1}{k}\le x \le 1-\frac{1}{k}\\}=\\{x|0 < x < 1\\}$ 不在 $\mathcal{C}$ 中。
->
-> **选读 1.1**
->
-> $\mathcal{P}({\mathbb{R}})$ 表示 $\mathbb{R}$ 的幂集。一个集合的幂集指的是它的所有子集构成的集合。ZF 公理集合论的幂集公理告诉我们，给定一个已知集合，它的幂集总是存在。
->
-> 你可能想问，为什么不把 $\mathcal{O}=\\{\\{x|a<x<b\\}\in \mathcal{P}(\mathbb{R})\mid \\,a,b\in \mathbb{R}\\}$ 直接写成 $\mathcal{O}=\\{\\{x|a<x<b\\}\mid \\,a,b\in \mathbb{R}\\}$ ？这不是浪费笔墨吗？
->
-> 实际上，根据集合论的分离公理，我们总是应该将集合写成前者的形式，否则可能会导致罗素悖论（考虑这么一个“集合”： $\\{x\mid x\notin x\\}$ ）。只不过，在确定无害的情况下，可以将其省略，写成后者。详见我的另一篇[笔记](https://zhuanlan.zhihu.com/p/346371552)。
+> 初等微积分中的 $\mathbb{R}^n$ 中的所有开集是它的一个拓扑。
 
 ### 1.2 拓扑空间（Topological Space）
 
@@ -1714,16 +1704,6 @@ $$
 
 这就是平移的公式。它是一组关于 $V^i$ 的一阶常微分方程。对其进行求解，既可得到向量 $V$ 沿着曲线 $\gamma$ 平移后的坐标分量。
 
-我们可以将沿着曲线 $\gamma$ 的平移算子记作 $\tau^\gamma_{y,x}$，其中下标 $y,x$ 表示从 $x$ 点平移到 $y$ 点。
-
-很自然地，我们有下面几个性质：
-
- $$\tau^\gamma_{z,y} \circ \tau^\gamma_{y,x} = \tau^\gamma_{z,x}$$
- 
- $$\tau^\gamma\_{x,x} = \text{Id}$$
- 
- $$\tau^\gamma_{x,y}=(\tau^\gamma\_{t})^{y,x}$$
-
 ### 4.4 测地线（Geodesics）
 
 > **评论** 
@@ -2164,7 +2144,7 @@ $$
 > 证明李导数作用到一般的余切向量场上，有：
 > 
 > $$
-> \phi^\* \alpha = \left[V^j(\partial\_j\alpha\_i) + (\partial_i V^j) \alpha\_j \right]\mathrm{d} x^i
+> \mathcal{L}\_V \alpha = \left[V^j(\partial\_j\alpha\_i) + (\partial_i V^j) \alpha\_j \right]\mathrm{d} x^i
 > $$
 > 
 > 提示：将 $\alpha = \alpha\_i\mathrm{d}x^i$ 看成是标量场和微分 $\mathrm{d}x$ 的张量积，即 $\alpha = \alpha\_i \otimes \mathrm{d}x^i$，然后利用李导数的导子性。
@@ -2732,8 +2712,3 @@ $H^p(M)$ 叫做 $p$ 阶上同调群，其中的元素叫做上同调类。
 > 1.不是另一个形式的微分，但自己的微分为零的形式
 > 
 > 2.不是另一个链的边界，但自己的边界为零的链
-
-
----
-
-原本想把李群和李代数也放到这篇文章，但是感觉那样的话实在太长了。之后有空再开单独一篇笔记写李群和李代数吧。

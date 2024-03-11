@@ -33,7 +33,7 @@
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "微分几何","wordcount":  41649 ,
+                        }],"genre": "posts","keywords": "微分几何","wordcount":  41285 ,
         "url": "http:\/\/example.com\/zh-cn\/differential_geometry\/","datePublished": "2023-06-09T14:49:49+08:00","dateModified": "2023-06-09T14:49:49+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -122,8 +122,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">一文入门微分几何（物理人版）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-06-09">2023-06-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 41649 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 84 分钟&nbsp;<span id="/zh-cn/differential_geometry/" class="leancloud_visitors" data-flag-title="一文入门微分几何（物理人版）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-06-09">2023-06-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 41285 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 83 分钟&nbsp;<span id="/zh-cn/differential_geometry/" class="leancloud_visitors" data-flag-title="一文入门微分几何（物理人版）">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -250,12 +250,7 @@
 <p>$\{\emptyset,\{1,2,3\},\{1\},\{2\},\{1,2\}\}$ 是集合 $\{1,2,3\}$ 的一个拓扑。</p>
 <p>$\{\emptyset,\{1,2,3\},\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\}\}$ 是集合 $\{1,2,3\}$ 的一个拓扑。</p>
 <p><strong>例 1.2</strong></p>
-<p>$\mathcal{O}=\{\{x|a&lt;x&lt;b\}\in \mathcal{P(}\mathbb{R})\mid \,a,b\in \mathbb{R}\}$ 是集合 $\mathbb{R}$ 的一个拓扑。</p>
-<p>$\mathcal{C}=\{\{x|a\le x\le b\}\in \mathcal{P}(\mathbb{R})\mid \,a,b\in \mathbb{R}\}$ <strong>不是</strong>集合 $\mathbb{R}$ 的一个拓扑。这是因为 $\mathcal{C}$ 中无穷个元素的并集 $\bigcup_{k=2}^\infty S_k=\bigcup_{k=2}^\infty \{x|\frac{1}{k}\le x \le 1-\frac{1}{k}\}=\{x|0 &lt; x &lt; 1\}$ 不在 $\mathcal{C}$ 中。</p>
-<p><strong>选读 1.1</strong></p>
-<p>$\mathcal{P}({\mathbb{R}})$ 表示 $\mathbb{R}$ 的幂集。一个集合的幂集指的是它的所有子集构成的集合。ZF 公理集合论的幂集公理告诉我们，给定一个已知集合，它的幂集总是存在。</p>
-<p>你可能想问，为什么不把 $\mathcal{O}=\{\{x|a&lt;x&lt;b\}\in \mathcal{P}(\mathbb{R})\mid \,a,b\in \mathbb{R}\}$ 直接写成 $\mathcal{O}=\{\{x|a&lt;x&lt;b\}\mid \,a,b\in \mathbb{R}\}$ ？这不是浪费笔墨吗？</p>
-<p>实际上，根据集合论的分离公理，我们总是应该将集合写成前者的形式，否则可能会导致罗素悖论（考虑这么一个“集合”： $\{x\mid x\notin x\}$ ）。只不过，在确定无害的情况下，可以将其省略，写成后者。详见我的另一篇<a href="https://zhuanlan.zhihu.com/p/346371552" target="_blank" rel="noopener noreffer ">笔记</a>。</p>
+<p>初等微积分中的 $\mathbb{R}^n$ 中的所有开集是它的一个拓扑。</p>
 </blockquote>
 <h3 id="12-拓扑空间topological-space">1.2 拓扑空间（Topological Space）</h3>
 <p>定义了拓扑的集合叫做<strong>拓扑空间</strong>。更具体地，拓扑空间定义为 $(X,\mathcal{F})$，其中 $\mathcal{F}$ 是 $X$ 的一个拓扑。</p>
@@ -1316,11 +1311,6 @@ $$</p>
 \frac{\mathrm{d}V^i}{\mathrm{d}t} + \Gamma^i_{jk} \frac{\mathrm{d}\gamma^k}{\mathrm{d}t} V^j = 0
 $$</p>
 <p>这就是平移的公式。它是一组关于 $V^i$ 的一阶常微分方程。对其进行求解，既可得到向量 $V$ 沿着曲线 $\gamma$ 平移后的坐标分量。</p>
-<p>我们可以将沿着曲线 $\gamma$ 的平移算子记作 $\tau^\gamma_{y,x}$，其中下标 $y,x$ 表示从 $x$ 点平移到 $y$ 点。</p>
-<p>很自然地，我们有下面几个性质：</p>
-<p>$$\tau^\gamma_{z,y} \circ \tau^\gamma_{y,x} = \tau^\gamma_{z,x}$$</p>
-<p>$$\tau^\gamma_{x,x} = \text{Id}$$</p>
-<p>$$\tau^\gamma_{x,y}=(\tau^\gamma_{t})^{y,x}$$</p>
 <h3 id="44-测地线geodesics">4.4 测地线（Geodesics）</h3>
 <blockquote>
 <p><strong>评论</strong></p>
@@ -1664,7 +1654,7 @@ $$</p>
 <p><strong>例 4.9</strong></p>
 <p>证明李导数作用到一般的余切向量场上，有：</p>
 <p>$$
-\phi^* \alpha = \left[V^j(\partial_j\alpha_i) + (\partial_i V^j) \alpha_j \right]\mathrm{d} x^i
+\mathcal{L}_V \alpha = \left[V^j(\partial_j\alpha_i) + (\partial_i V^j) \alpha_j \right]\mathrm{d} x^i
 $$</p>
 <p>提示：将 $\alpha = \alpha_i\mathrm{d}x^i$ 看成是标量场和微分 $\mathrm{d}x$ 的张量积，即 $\alpha = \alpha_i \otimes \mathrm{d}x^i$，然后利用李导数的导子性。</p>
 </blockquote>
@@ -2078,8 +2068,6 @@ $$</p>
 <p>1.不是另一个形式的微分，但自己的微分为零的形式</p>
 <p>2.不是另一个链的边界，但自己的边界为零的链</p>
 </blockquote>
-<hr>
-<p>原本想把李群和李代数也放到这篇文章，但是感觉那样的话实在太长了。之后有空再开单独一篇笔记写李群和李代数吧。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
