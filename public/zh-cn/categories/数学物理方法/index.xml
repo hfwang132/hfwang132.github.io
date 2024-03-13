@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
         <description>数学物理方法 - 分类 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:34:09 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>微分的四层理解</title>
+    <link>http://example.com/zh-cn/understanding_differentials/</link>
+    <pubDate>Wed, 13 Mar 2024 18:34:09 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/understanding_differentials/</guid>
+    <description><![CDATA[一 微分是无穷小？ 物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。 实际上，它确实不严谨，第二次数学危机就]]></description>
+</item>
+<item>
     <title>BCH 公式 - 量子力学爆算的大杀器</title>
     <link>http://example.com/zh-cn/bch/</link>
     <pubDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</pubDate>

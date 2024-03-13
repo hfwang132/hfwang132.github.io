@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.com/categories/</loc><lastmod>2024-03-10T02:22:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/categories/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/categories/"
@@ -11,7 +11,8 @@
                     hreflang="en"
                     href="http://example.com/categories/"
                     /></url><url>
-            <loc>http://example.com/</loc><lastmod>2024-03-10T02:22:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/tags/differential-geometry/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.com/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/"
@@ -20,7 +21,8 @@
                     hreflang="en"
                     href="http://example.com/"
                     /></url><url>
-            <loc>http://example.com/posts/</loc><lastmod>2024-03-10T02:22:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/categories/mathematical-physics/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.com/posts/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/posts/"
@@ -28,6 +30,24 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://example.com/posts/"
+                    /></url><url>
+            <loc>http://example.com/tags/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/zh-cn/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/tags/"
+                    /></url><url>
+            <loc>http://example.com/understanding_differentials/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/zh-cn/understanding_differentials/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/understanding_differentials/"
                     /></url><url>
             <loc>http://example.com/hbt_spectral_correlation/</loc><lastmod>2024-03-10T02:22:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
@@ -40,15 +60,6 @@
                     /></url><url>
             <loc>http://example.com/categories/quantum-information/</loc><lastmod>2024-03-10T02:22:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.com/tags/quantum-optics/</loc><lastmod>2024-03-10T02:22:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.com/tags/</loc><lastmod>2024-03-10T02:22:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://example.com/zh-cn/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://example.com/tags/"
-                    /></url><url>
             <loc>http://example.com/hbt_g2/</loc><lastmod>2024-03-10T02:22:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -86,7 +97,6 @@
                     hreflang="en"
                     href="http://example.com/bch/"
                     /></url><url>
-            <loc>http://example.com/categories/mathematical-physics/</loc><lastmod>2024-03-10T02:12:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.com/categories/diary/</loc><lastmod>2023-07-06T22:55:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/embedded-systems/</loc><lastmod>2023-07-06T22:55:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/side_proj/</loc><lastmod>2023-07-06T22:55:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
@@ -273,6 +283,5 @@
                     hreflang="en"
                     href="http://example.com/differential_geometry/"
                     /></url><url>
-            <loc>http://example.com/tags/differential-geometry/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/lie-algebra/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/storage/partition/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

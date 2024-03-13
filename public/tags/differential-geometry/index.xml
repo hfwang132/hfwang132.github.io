@@ -4,7 +4,18 @@
         <link>http://example.com/tags/differential-geometry/</link>
         <description>Differential Geometry - Tag - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/differential-geometry/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/differential-geometry/" rel="self" type="application/rss+xml" /><item>
+    <title>Understanding differentials in four levels</title>
+    <link>http://example.com/understanding_differentials/</link>
+    <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/understanding_differentials/</guid>
+    <description><![CDATA[One Differential is an Infinitesimal? Physicists like to think of differentials as very small quantities, which is convenient for calculations but gives a feeling of lack of rigor.
+In fact, it is indeed lacking rigor, and the second mathematical crisis arose from this.
+Rigor and clarity are always complementary. Treating differentials as infinitesimal satisfies intuition but cannot withstand rational scrutiny.
+Two Differential as Linear Function I like to think of differentials as a machine, for example,]]></description>
+</item>
+<item>
     <title>A Beginners Guide to Differential Geometry and Lie Algebras</title>
     <link>http://example.com/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>

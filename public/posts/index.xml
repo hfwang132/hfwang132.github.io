@@ -4,7 +4,18 @@
         <link>http://example.com/posts/</link>
         <description>All Posts | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Understanding differentials in four levels</title>
+    <link>http://example.com/understanding_differentials/</link>
+    <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/understanding_differentials/</guid>
+    <description><![CDATA[One Differential is an Infinitesimal? Physicists like to think of differentials as very small quantities, which is convenient for calculations but gives a feeling of lack of rigor.
+In fact, it is indeed lacking rigor, and the second mathematical crisis arose from this.
+Rigor and clarity are always complementary. Treating differentials as infinitesimal satisfies intuition but cannot withstand rational scrutiny.
+Two Differential as Linear Function I like to think of differentials as a machine, for example,]]></description>
+</item>
+<item>
     <title>Probing the spectral purity with unheralded g2 measurements in HBT experiment</title>
     <link>http://example.com/hbt_spectral_correlation/</link>
     <pubDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</pubDate>
@@ -94,17 +105,6 @@ However, if you run the above codes, you will find that the printed value of the
 Import 1 import asyncio If asyncio is to be used in an IPython environment, we have to add two more lines：
 1 2 3 import nest_asyncio nest_asyncio.apply() import asyncio Coroutines Coroutines are the core of asynchronous programming in Python. To define a coroutine, you need to use async def.
 1 2 3 async def main(): # do something print(&#34;Hello world!]]></description>
-</item>
-<item>
-    <title>Access the Internet from evaluation boards via PC</title>
-    <link>http://example.com/boards_networking/</link>
-    <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/boards_networking/</guid>
-    <description><![CDATA[Windows Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to 192.168.137.1 (this is the default behavior in Windows).
-Then, set the gateway as 192.168.137.1 in the terminal of the development board:
-sudo route add default gw 192.168.137.1
-Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):]]></description>
 </item>
 </channel>
 </rss>

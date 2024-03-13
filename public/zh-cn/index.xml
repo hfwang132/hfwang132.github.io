@@ -4,9 +4,17 @@
         <link>http://example.com/zh-cn/</link>
         <description>Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 09 Mar 2024 17:37:15 &#43;0800</lastBuildDate>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:34:09 &#43;0800</lastBuildDate>
             <atom:link href="http://example.com/zh-cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>微分的四层理解</title>
+    <link>http://example.com/zh-cn/understanding_differentials/</link>
+    <pubDate>Wed, 13 Mar 2024 18:34:09 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/understanding_differentials/</guid>
+    <description><![CDATA[一 微分是无穷小？ 物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。 实际上，它确实不严谨，第二次数学危机就]]></description>
+</item>
+<item>
     <title>光子有波函数吗？</title>
     <link>http://example.com/zh-cn/photon_wave_func/</link>
     <pubDate>Sat, 09 Mar 2024 17:37:15 &#43;0800</pubDate>
@@ -77,14 +85,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/povm/</guid>
     <description><![CDATA[投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过]]></description>
-</item>
-<item>
-    <title>做过的一些好玩（但无聊）的小项目</title>
-    <link>http://example.com/zh-cn/side_proj/</link>
-    <pubDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/side_proj/</guid>
-    <description><![CDATA[项目 日期 评论 PYNQ-Z2 + RTL-SDR 收音机 2023.06 是 Jupyter Notebook 里的 App，不是独立的 Web App WIFI 天气时钟 2023.01 不会 LvGL。。界面有亿点简陋 光立方 2023.01 只是采购了 BOM 来焊接。。固件不是我]]></description>
 </item>
 </channel>
 </rss>

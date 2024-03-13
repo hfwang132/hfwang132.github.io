@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.com/zh-cn/categories/</loc><lastmod>2024-03-09T17:37:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/categories/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/categories/"
@@ -11,7 +11,7 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/categories/"
                     /></url><url>
-            <loc>http://example.com/zh-cn/</loc><lastmod>2024-03-09T17:37:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/"
@@ -20,7 +20,7 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/"
                     /></url><url>
-            <loc>http://example.com/zh-cn/posts/</loc><lastmod>2024-03-09T17:37:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/posts/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/posts/"
@@ -29,7 +29,7 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/posts/"
                     /></url><url>
-            <loc>http://example.com/zh-cn/tags/</loc><lastmod>2024-03-09T17:37:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/zh-cn/tags/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://example.com/tags/"
@@ -38,6 +38,17 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/tags/"
                     /></url><url>
+            <loc>http://example.com/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://example.com/zh-cn/understanding_differentials/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://example.com/understanding_differentials/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://example.com/zh-cn/understanding_differentials/"
+                    /></url><url>
+            <loc>http://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.com/zh-cn/photon_wave_func/</loc><lastmod>2024-03-09T17:37:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -58,7 +69,6 @@
                     hreflang="zh-cn"
                     href="http://example.com/zh-cn/bch/"
                     /></url><url>
-            <loc>http://example.com/zh-cn/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2024-03-07T20:59:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://example.com/zh-cn/complex_numbers_in_em/</loc><lastmod>2024-02-16T00:32:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>http://example.com/zh-cn/hbt_spectral_correlation/</loc><lastmod>2024-02-05T00:12:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
@@ -79,7 +89,6 @@
                     href="http://example.com/zh-cn/hbt_g2/"
                     /></url><url>
             <loc>http://example.com/zh-cn/lie_derivative/</loc><lastmod>2024-01-26T23:50:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/zh-cn/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</loc><lastmod>2024-01-26T23:50:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/zh-cn/tags/%E5%AF%B9%E7%A7%B0%E6%80%A7/</loc><lastmod>2024-01-26T23:49:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/zh-cn/parseval/</loc><lastmod>2024-01-26T23:49:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/zh-cn/pointer0/</loc><lastmod>2024-01-26T23:49:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

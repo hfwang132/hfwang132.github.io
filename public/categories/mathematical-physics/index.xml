@@ -4,7 +4,18 @@
         <link>http://example.com/categories/mathematical-physics/</link>
         <description>Mathematical Physics - Category - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:12:14 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/mathematical-physics/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/mathematical-physics/" rel="self" type="application/rss+xml" /><item>
+    <title>Understanding differentials in four levels</title>
+    <link>http://example.com/understanding_differentials/</link>
+    <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/understanding_differentials/</guid>
+    <description><![CDATA[One Differential is an Infinitesimal? Physicists like to think of differentials as very small quantities, which is convenient for calculations but gives a feeling of lack of rigor.
+In fact, it is indeed lacking rigor, and the second mathematical crisis arose from this.
+Rigor and clarity are always complementary. Treating differentials as infinitesimal satisfies intuition but cannot withstand rational scrutiny.
+Two Differential as Linear Function I like to think of differentials as a machine, for example,]]></description>
+</item>
+<item>
     <title>Baker-Campbell-Hausdorff Formula</title>
     <link>http://example.com/bch/</link>
     <pubDate>Sun, 10 Mar 2024 02:12:14 &#43;0800</pubDate>
