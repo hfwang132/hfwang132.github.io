@@ -2,6 +2,8 @@
 title: "Quantum state tomography"
 date: 2024-04-22T15:06:14+08:00
 draft: false
+tags: ["Quantum Optics"]
+categories: ["Quantum Information"]
 ---
 
 ## Quantum State Tomography

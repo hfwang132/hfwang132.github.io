@@ -2,6 +2,8 @@
 title: "【量光实验杂谈·三】量子态层析"
 date: 2024-04-22T14:43:42+08:00
 draft: false
+tags: ["量子光学"]
+categories: ["量子信息"]
 ---
 
 ## Quantum State Tomography（量子态层析）  

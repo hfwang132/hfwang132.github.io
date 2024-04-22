@@ -4,7 +4,17 @@
         <link>http://example.com/tags/quantum-optics/</link>
         <description>Quantum Optics - Tag - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-optics/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-optics/" rel="self" type="application/rss+xml" /><item>
+    <title>Quantum state tomography</title>
+    <link>http://example.com/state_tomography/</link>
+    <pubDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/state_tomography/</guid>
+    <description><![CDATA[Quantum State Tomography Quantum state tomography is the process of deducing the [quantum state] based on the [results of measurements on a quantum state ensemble]. Its formulation is straightforward, as follows:
+Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corresponding measurement probabilities $p_k = \operatorname{Tr}[\rho \Pi_k]$, find the quantum state $\rho$.
+In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, given $p_k$ and $\Pi_k$, find $\rho$.]]></description>
+</item>
+<item>
     <title>Probing the spectral purity with unheralded g2 measurements in HBT experiment</title>
     <link>http://example.com/hbt_spectral_correlation/</link>
     <pubDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</pubDate>
