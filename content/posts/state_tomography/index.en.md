@@ -79,13 +79,13 @@ Define a valid density operator $\rho(x,y,z) = \frac{\mathbb{I} + xX + yY + zZ}{
 
 Define the likelihood function as the probability of measuring the observed results, given quantum state $\rho$:
 
-\[
+$
 \begin{aligned}
 \mathcal{L}(x,y,z) &= P(N\_1 = n\_1, N\_2 = n\_2, \ldots) \\\\
 &= \prod\_k \exp\left[-\frac{(n\_k - \hat{n}\_k)^2}{2\hat{n}\_k}\right] \\\\
 &= \prod\_k \exp\left[-\frac{(n\_k - N \operatorname{Tr}[\rho \Pi\_k])^2}{2N \operatorname{Tr}[\rho \Pi\_k]}\right]
 \end{aligned}
-\]
+$
 
 > In this case, we use the continuous normal distribution instead of the discrete Poisson distribution because when counts are large (typically a few hundred to a few thousand), the normal distribution can closely approximate the Poisson distribution. More importantly, the likelihood function of the normal distribution provides an unbiased estimate, just as effective as the Poisson distribution (see appendix)!  
 > 

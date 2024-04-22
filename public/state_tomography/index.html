@@ -197,13 +197,13 @@ This new likelihood function can generally be interpreted as &ldquo;given this s
 <p>Let&rsquo;s convert these ideas into an algorithm:</p>
 <p>Define a valid density operator $\rho(x,y,z) = \frac{\mathbb{I} + xX + yY + zZ}{2}$, with $|x|, |y|, |z| \leq 1$.</p>
 <p>Define the likelihood function as the probability of measuring the observed results, given quantum state $\rho$:</p>
-<p>[
+<p>$
 \begin{aligned}
 \mathcal{L}(x,y,z) &amp;= P(N_1 = n_1, N_2 = n_2, \ldots) \\
 &amp;= \prod_k \exp\left[-\frac{(n_k - \hat{n}_k)^2}{2\hat{n}_k}\right] \\
 &amp;= \prod_k \exp\left[-\frac{(n_k - N \operatorname{Tr}[\rho \Pi_k])^2}{2N \operatorname{Tr}[\rho \Pi_k]}\right]
 \end{aligned}
-]</p>
+$</p>
 <blockquote>
 <p>In this case, we use the continuous normal distribution instead of the discrete Poisson distribution because when counts are large (typically a few hundred to a few thousand), the normal distribution can closely approximate the Poisson distribution. More importantly, the likelihood function of the normal distribution provides an unbiased estimate, just as effective as the Poisson distribution (see appendix)!</p>
 <p>Using the Poisson distribution for the likelihood function is also possible, but the result (see appendix) is less intuitive, and it poses a greater computational burden for computers.</p>
