@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 13 Apr 2024 16:10:38 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>【量光实验杂谈·三】量子态层析</title>
+    <link>http://example.com/zh-cn/state_tomography/</link>
+    <pubDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/state_tomography/</guid>
+    <description><![CDATA[Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非]]></description>
+</item>
+<item>
     <title>光子和电磁场波包有什么关系</title>
     <link>http://example.com/zh-cn/photon_wave_packets/</link>
     <pubDate>Sat, 13 Apr 2024 16:10:38 &#43;0800</pubDate>
@@ -45,7 +53,7 @@
     <description><![CDATA[在经典力学中，复数只是一个用来简化计算的数学技巧。 在量子力学中，复数不再只是一个数学技巧，而是有一定的物理意义。考虑经典矢势： $\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$]]></description>
 </item>
 <item>
-    <title>HBT实验测量SPDC多模压缩态的频谱关联与纯度</title>
+    <title>【量光实验杂谈·二】HBT实验测量SPDC多模压缩态的频谱关联与纯度</title>
     <link>http://example.com/zh-cn/hbt_spectral_correlation/</link>
     <pubDate>Mon, 05 Feb 2024 00:12:16 &#43;0800</pubDate>
     <author>hfwang132</author>
@@ -53,7 +61,7 @@
     <description><![CDATA[上篇我们说了在 HBT 实验中，用非光子数分辨的单光子探测器测量量子二阶关联函数的原理。 https://zhuanlan.zhihu.com/p/679453473 这篇我们来看看量子二阶关联函数有什么用。除了老生常谈的用来]]></description>
 </item>
 <item>
-    <title>非光子数分辨探测器测二阶关联函数（g2）的原理</title>
+    <title>【量光实验杂谈·一】非光子数分辨探测器测二阶关联函数（g2）的原理</title>
     <link>http://example.com/zh-cn/hbt_g2/</link>
     <pubDate>Mon, 05 Feb 2024 00:11:33 &#43;0800</pubDate>
     <author>hfwang132</author>
@@ -75,14 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/parseval/</guid>
     <description><![CDATA[Link: [https://www.zhihu.com/question/640869828/answer/3373753127] 抛砖引玉一下。 Fourier-Plancherel 算子 定义 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ 为： $(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$ 它实际上是个酉算子： $\mathcal{F}^\dag\mathcal{F}=\mathbb{I}_{L^2(\mathbb{R})}$ 而 Parseval 定理无非就是这一事实的重新表述： $\langle\varphi \mathcal{F}^\dag|\mathcal{F\varphi}\rangle=\langle\varphi|\mathcal{F}^\dag\mathcal{F}|\varphi\rangle=\langle\varphi|\varphi\rangle=1$ 这个定理似乎并未涉及到任何物理量]]></description>
-</item>
-<item>
-    <title>0指针不能访问，那那个位置的字节会不会很孤独?</title>
-    <link>http://example.com/zh-cn/pointer0/</link>
-    <pubDate>Fri, 26 Jan 2024 23:49:00 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/pointer0/</guid>
-    <description><![CDATA[分两种情况讨论：物理地址和虚拟地址。 如果说的是物理地址 0x0，那他一点都不孤独，每次复位的时候，程序计数器都会跟他打个招呼： “嘿，哥们，请问]]></description>
 </item>
 </channel>
 </rss>

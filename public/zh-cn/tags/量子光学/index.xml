@@ -29,7 +29,7 @@
     <description><![CDATA[在经典力学中，复数只是一个用来简化计算的数学技巧。 在量子力学中，复数不再只是一个数学技巧，而是有一定的物理意义。考虑经典矢势： $\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$]]></description>
 </item>
 <item>
-    <title>HBT实验测量SPDC多模压缩态的频谱关联与纯度</title>
+    <title>【量光实验杂谈·二】HBT实验测量SPDC多模压缩态的频谱关联与纯度</title>
     <link>http://example.com/zh-cn/hbt_spectral_correlation/</link>
     <pubDate>Mon, 05 Feb 2024 00:12:16 &#43;0800</pubDate>
     <author>hfwang132</author>
@@ -37,7 +37,7 @@
     <description><![CDATA[上篇我们说了在 HBT 实验中，用非光子数分辨的单光子探测器测量量子二阶关联函数的原理。 https://zhuanlan.zhihu.com/p/679453473 这篇我们来看看量子二阶关联函数有什么用。除了老生常谈的用来]]></description>
 </item>
 <item>
-    <title>非光子数分辨探测器测二阶关联函数（g2）的原理</title>
+    <title>【量光实验杂谈·一】非光子数分辨探测器测二阶关联函数（g2）的原理</title>
     <link>http://example.com/zh-cn/hbt_g2/</link>
     <pubDate>Mon, 05 Feb 2024 00:11:33 &#43;0800</pubDate>
     <author>hfwang132</author>

@@ -4,9 +4,19 @@
         <link>http://example.com/</link>
         <description>Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</lastBuildDate>
             <atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Quantum state tomography</title>
+    <link>http://example.com/state_tomography/</link>
+    <pubDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/state_tomography/</guid>
+    <description><![CDATA[Quantum State Tomography Quantum state tomography is the process of deducing the [quantum state] based on the [results of measurements on a quantum state ensemble]. Its formulation is straightforward, as follows:
+Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corresponding measurement probabilities $p_k = \operatorname{Tr}[\rho \Pi_k]$, find the quantum state $\rho$.
+In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, given $p_k$ and $\Pi_k$, find $\rho$.]]></description>
+</item>
+<item>
     <title>Understanding differentials in four levels</title>
     <link>http://example.com/understanding_differentials/</link>
     <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
@@ -96,17 +106,6 @@ Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Ma
     <description><![CDATA[Let&rsquo;s look at a code snippet in the Jupyter Notebook:
 1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) IntSlider is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.
 However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.]]></description>
-</item>
-<item>
-    <title>Python coroutines and asyncio</title>
-    <link>http://example.com/python_asyncio/</link>
-    <pubDate>Tue, 13 Jun 2023 22:05:41 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/python_asyncio/</guid>
-    <description><![CDATA[Recently, I have been using Python coroutines/asynchronous programming in a project. Now, I will summarize my experience.
-Import 1 import asyncio If asyncio is to be used in an IPython environment, we have to add two more lines：
-1 2 3 import nest_asyncio nest_asyncio.apply() import asyncio Coroutines Coroutines are the core of asynchronous programming in Python. To define a coroutine, you need to use async def.
-1 2 3 async def main(): # do something print(&#34;Hello world!]]></description>
 </item>
 </channel>
 </rss>
