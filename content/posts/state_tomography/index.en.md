@@ -1,5 +1,5 @@
 ---
-title: "Quantum state tomography"
+title: "Quantum state tomography - a beginner's guide"
 date: 2024-04-22T15:06:14+08:00
 draft: false
 tags: ["Quantum Optics"]

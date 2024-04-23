@@ -33,7 +33,7 @@
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "量子光学","wordcount":  4223 ,
+                        }],"genre": "posts","keywords": "量子光学","wordcount":  4168 ,
         "url": "http:\/\/example.com\/zh-cn\/state_tomography\/","datePublished": "2024-04-22T14:43:42+08:00","dateModified": "2024-04-22T14:43:42+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -122,7 +122,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【量光实验杂谈·三】量子态层析</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-22">2024-04-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 4223 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-22">2024-04-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 4168 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/zh-cn/state_tomography/" class="leancloud_visitors" data-flag-title="【量光实验杂谈·三】量子态层析">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -192,7 +192,7 @@ State tomography 之所以叫“tomography”，是因为连续变量光子态�
 <p>定义似然函数为假设量子态为 $\rho$ 时测量到实际结果的概率：</p>
 <p>$\begin{aligned} \mathcal{L}(x,y,z) &amp;= P(N_1=n_1,N_2=n_2,\cdots) \\  &amp;= \prod_k \exp\left[-\frac{(n_k-\hat{n}_k)^2}{2\hat{n}_k}\right]\\ &amp;= \prod_k \exp\left[-\frac{(n_k-N\operatorname{Tr}[\rho \Pi_k])^2}{2N\operatorname{Tr}[\rho \Pi_k]}\right] \end{aligned}$</p>
 <blockquote>
-<p>这里采用了连续的正态分布而不是离散的泊松分布，是因为在数量较大时（实验上通常为至少几百个到几千个），正态分布可以很好地近似泊松分布。更重要的是，正态分布的似然函数给出的也是一个无偏估计，和泊松分布同样有效（见附录）！</p>
+<p>这里采用了连续的正态分布而不是离散的泊松分布，是因为在数量较大时（实验上通常为至少几百个到几千个），正态分布可以很好地近似泊松分布。</p>
 <p>将似然函数取为泊松分布也可以，但是结果（见附录）没有那么直观，而且对于计算机来说负担也更大。</p>
 </blockquote>
 <p>为方便计算，对其取负对数，并去掉不必要的常数 $N$，得到：</p>
@@ -252,7 +252,7 @@ State tomography 之所以叫“tomography”，是因为连续变量光子态�
 <p>泊松分布对应的似然函数为</p>
 <p>$ \begin{aligned} \mathcal{L}(\mathbf{t}) &amp;= P(N_1=n_1,N_2=n_2,\cdots) \\ &amp;= \prod_k e^{-\lambda_k} \frac{\lambda_k^{n_k}}{n_k!} \\ &amp;\xrightarrow{-\log} \sum_k (\lambda_k - n_k \log \lambda_k + \cancel{\log n_k!}) \\  &amp;\xrightarrow{\frac{1}{N}} \sum_k(\hat{p}_k(\mathbf{t})-p_k \log \hat{p}_k(\mathbf{t})) \end{aligned}$</p>
 <p>其中 $\lambda_k = N \operatorname{Tr}[\rho(\mathbf{t}) \Pi_k]= N \hat{p}_k(\mathbf{t})$ 。</p>
-<p>对似然函数求导找极小值，可以发现极小值在 $\hat{p}_k(\mathbf{t}) = p_k$ 时取到。这说明采用泊松分布和正态分布一样，得到的都是无偏估计量。但是泊松分布的似然函数里有对数，而正态分布的似然函数里都是多项式，后者对于计算机更友好，收敛更快一些。所以我们一般采用正态分布对应的似然函数。</p>
+<p>对似然函数求导找极小值，可以发现极小值在 $\hat{p}_k(\mathbf{t}) = p_k$ 时取到。这说明采用泊松分布也是正确的。但是泊松分布的似然函数里有对数，而正态分布的似然函数里都是多项式，后者对于计算机更友好，收敛更快一些。所以我们一般采用正态分布对应的似然函数。</p>
 <h2 id="参考">参考</h2>
 <ol>
 <li><a href="#ref%5c_1%5c_0" rel="">^</a>James, D. F. V., Kwiat, P. G., Munro, W. J. &amp; White, A. G. Measurement of qubits. Phys. Rev. A 64, 052312 (2001).</li>
