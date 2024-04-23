@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>量子计量学（Quantum Metrology）简明入门</title>
+    <link>http://example.com/zh-cn/quantum_metrology/</link>
+    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/quantum_metrology/</guid>
+    <description><![CDATA[一、量子计量学介绍 所谓量子计量学（Quantum Metrology），就是利用量子物态的量子性质进行精密测量的学问。 之所以要研究量子计量学，]]></description>
+</item>
+<item>
     <title>【量光实验杂谈·三】量子态层析</title>
     <link>http://example.com/zh-cn/state_tomography/</link>
     <pubDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/lie_derivative/</guid>
     <description><![CDATA[一 性质上的异同点 李导数 $\mathcal{L}_V$ 和协变导数 $\nabla_V$ 有很多共同点： $\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}^p_q(M)$ 到 $\mathcal{T}^p_q(M)$ 的映射。 $\mathcal{T}^p_q(M)$ 表示 $M$ 上全体 (p, q) 型光滑张量场的集合 特别地，对]]></description>
-</item>
-<item>
-    <title>傅里叶变换的Parseval定理既然表示了一种守恒律，那么与之对应的对称性是什么？</title>
-    <link>http://example.com/zh-cn/parseval/</link>
-    <pubDate>Fri, 26 Jan 2024 23:49:29 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/parseval/</guid>
-    <description><![CDATA[Link: [https://www.zhihu.com/question/640869828/answer/3373753127] 抛砖引玉一下。 Fourier-Plancherel 算子 定义 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ 为： $(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$ 它实际上是个酉算子： $\mathcal{F}^\dag\mathcal{F}=\mathbb{I}_{L^2(\mathbb{R})}$ 而 Parseval 定理无非就是这一事实的重新表述： $\langle\varphi \mathcal{F}^\dag|\mathcal{F\varphi}\rangle=\langle\varphi|\mathcal{F}^\dag\mathcal{F}|\varphi\rangle=\langle\varphi|\varphi\rangle=1$ 这个定理似乎并未涉及到任何物理量]]></description>
 </item>
 </channel>
 </rss>

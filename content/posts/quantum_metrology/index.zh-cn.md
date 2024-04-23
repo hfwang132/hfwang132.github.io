@@ -1,7 +1,7 @@
 ---
 title: "量子计量学（Quantum Metrology）简明入门"
 date: 2024-04-23T19:05:46+08:00
-draft: true
+draft: false
 tags: ["量子计量"]
 categories: ["量子信息"]
 ---
@@ -45,27 +45,57 @@ categories: ["量子信息"]
 
 > **一致性**：一致性要求 $\lim_{n\rightarrow \infty} P(|\hat{\theta} - \theta|>\epsilon) = 0$ 对于任意正数 $\epsilon > 0$ 成立。其中 $n$ 是样本个数。这也叫做依概率收敛 $\plim_{n\rightarrow \infty} \hat{\theta} = \theta $。它比较 subtle，但不是本文的重点。
 
-统计学上对付参数估计问题最常用的方法就是极大似然估计（Maximum Likelihood Estimation）。它的思想很简单，就是在众多参数中找到这样一个参数，使得在该参数的前提下，测量到已有结果的概率是最大的。
+统计学上对付参数估计问题最常用的方法就是极大似然估计（Maximum Likelihood Estimation，MLE）。它的思想很简单，就是在众多参数中找到这样一个参数，使得在该参数的前提下，测量到已有结果的概率是最大的。
 
 具体步骤也很简单：
 
-> **极大似然估计**：设似然函数 $f(\theta; \mathbf{x}) = p(\mathbf{x}; \theta)$，并找它的最大点 $\hat{\theta}(\mathbf{x}) = \operatorname{arg\\,max} f(\theta; \mathbf{x})$。
+> **极大似然估计**：设似然函数（likelihood function） $f(\theta; \mathbf{x}) = p(\mathbf{x}; \theta)$，并找它的最大点 $\hat{\theta}(\mathbf{x}) = \operatorname{arg\\,max} f(\theta; \mathbf{x})$。
 > 
-> $\hat{\theta}(\mathbf{X})$ 就是要求的估计量。
-
-在实际操作中，人们通常先对似然函数取对数来简化计算。
+> $\hat{\theta}(\mathbf{X})$ 就是极大似然估计所给出的估计量。
+> 
+> 在实际操作中，人们通常先对似然函数取对数来简化计算，即 $\log f(\theta; \mathbf{x})$，称为对数似然函数（log-likehihood function）。
 
 实际上，极大似然估计通常不满足无偏性，但是人们依然非常青睐极大似然估计。这是因为极大似然估计总是渐近有效（样本趋于无穷时，方差能够达到 CR 下界），且渐近无偏的（样本数量趋于无穷时，估计量的均值趋于参数真实值）。
 
-> 其他的参数估计方法还有贝叶斯估计、矩估计。它们和极大似然估计构成最重要的三种参数估计方法。
-
 在量子测量中，人们在绝大部分情况下也使用极大似然估计。因此这篇文章将会集中在极大似然估计上。
+
+> 其他的参数估计方法还有贝叶斯估计、矩估计。它们和极大似然估计构成最重要的三种参数估计方法。
 
 # 三、Fisher 信息和 CR 下界
 
-Fisher 信息的定义如下：
+似然函数是极大似然估计的核心。我们来看看从似然函数出发能得到哪些量。
 
-> **Fisher 信息**：Fisher 信息是 Score function 关于参数的负导数的期望值：$F(\theta) = \mathbb{E}(-\frac{\partial}{\partial \theta} )$
+首先得到的量叫做 Score Function（不知道中文翻译），它是对数似然函数关于参数真实值的导数：
+
+> **Score Function**: Score Function $s(\theta; \mathbf{x})$ 定义为：
+> 
+> $s(\theta; \mathbf{x}) = \frac{\partial}{\partial \theta} \log f(\theta; \mathbf{x})$，
+> 
+> 其中 $f(\theta; \mathbf{x})$ 为似然函数。
+
+它的意义也很明确：就是参数值的变化对似然函数的影响。如果导数为正，说明参数值需要变大，因为参数真实值变大会导致似然函数变大（即概率更大）；反之，如果导数为负，说明参数值需要变小。那么什么时候参数值是理想的呢？那当然就是导数为零的时候啦。这也很好理解：似然函数最大点的导数为零。
+
+当然，导数为零只是必要条件，而不是充分条件。为了保证似然函数的导数零点对应最大值，还需要二阶导数为负。于是我们再定义 Fisher 信息：
+
+> **Fisher 信息（Fisher Information）**：Fisher 信息是对数似然函数（关于参数 $\theta$ 的）负二阶导数的（关于随机变量 $X$ 的）期望值：
+> 
+> $F(\theta) = \mathbb{E}\left(-\frac{\partial^2}{\partial \theta^2} f(\theta, X)\right)$
+
+实际上可以证明，Fisher 信息总是非负的。因此令似然函数的导数为零总是能得到极大值。
+
+> **Fisher 信息的意义**：Fisher 信息的意义是：似然函数在最大值附近对于参数的敏感程度。直觉上来说，似然函数越敏感，我们的估计就越有效。因为在似然函数对参数敏感的情况下，参数的少量变动就会导致似然函数的急剧下降，因此我们能以较高的确信度将参数确定下来。反之，如果似然函数对参数不敏感，那我们就不能将参数确定在较小的范围内，这是因为参数在较大的范围内变动不会导致似然函数的显著下降。
+
+理解了 Fisher 信息的意义之后，我们就能很快理解 Cramer-Rao 下界了：
+
+> **Cramér-Rao Bound**：估计量的方差有如下的下界：
+> 
+> $(\Delta \theta)^2 \le \frac{1}{F(\theta)}$
+> 
+> 其中 $F(\theta)$ 是 Fisher 信息。这叫做 Cramér-Rao 下界。
+
+这其实就是将 Fisher 信息的意义量化为了一个不等式。Fisher 信息越大，似然函数对参数越敏感，参数的估计量的方差就可以越小。反之，Fisher 信息越小，似然函数对参数越不敏感，参数的估计量的方差就越大。
+
+到此为止，我们介绍的极大似然估计、Fisher 信息以及 CR 下界，跟量子力学都没有任何关系，但它们都是必要的基础。在下一节中，我们将会引入量子 Fisher 信息和量子 CR 下界，并将它们应用到量子测量中。
 
 # 四、量子 Fisher 信息和量子 CR 下界
 

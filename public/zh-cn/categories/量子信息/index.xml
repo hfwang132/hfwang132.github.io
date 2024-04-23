@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
         <description>量子信息 - 分类 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>量子计量学（Quantum Metrology）简明入门</title>
+    <link>http://example.com/zh-cn/quantum_metrology/</link>
+    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/quantum_metrology/</guid>
+    <description><![CDATA[一、量子计量学介绍 所谓量子计量学（Quantum Metrology），就是利用量子物态的量子性质进行精密测量的学问。 之所以要研究量子计量学，]]></description>
+</item>
+<item>
     <title>【量光实验杂谈·三】量子态层析</title>
     <link>http://example.com/zh-cn/state_tomography/</link>
     <pubDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</pubDate>

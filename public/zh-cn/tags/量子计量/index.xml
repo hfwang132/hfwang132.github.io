@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>量子计量 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F/</link>
+        <description>量子计量 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>量子计量学（Quantum Metrology）简明入门</title>
+    <link>http://example.com/zh-cn/quantum_metrology/</link>
+    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/quantum_metrology/</guid>
+    <description><![CDATA[一、量子计量学介绍 所谓量子计量学（Quantum Metrology），就是利用量子物态的量子性质进行精密测量的学问。 之所以要研究量子计量学，]]></description>
+</item>
+</channel>
+</rss>
