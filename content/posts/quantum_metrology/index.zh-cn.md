@@ -304,7 +304,7 @@ $F(\theta) = 4 [ \langle \Psi_0 | (\hat{N} \otimes \mathbb{I})^2 | \Psi_0 \rangl
 
 我不打算给出压缩态的显式公式。实际上，你不需要公式也能理解压缩态。见下图
 
-{{< figure src="image/number_phase_uncertainty.png" title="相位压缩" >}}
+{{< figure src="image/phase_squeezing.png" title="相位压缩" >}}
 
 在相空间中，相干态是一个标准差为 1 的高斯函数。而压缩态其实就是将相干态在某一个 quadrature 上“压扁”了，从一个圆形变成了一个椭圆形。
 
