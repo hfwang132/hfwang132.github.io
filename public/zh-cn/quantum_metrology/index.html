@@ -33,7 +33,7 @@
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "量子计量","wordcount":  6876 ,
+                        }],"genre": "posts","keywords": "量子计量","wordcount":  7704 ,
         "url": "http:\/\/example.com\/zh-cn\/quantum_metrology\/","datePublished": "2024-04-23T19:05:46+08:00","dateModified": "2024-04-23T19:05:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -122,8 +122,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">量子计量学（Quantum Metrology）简明入门</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-23">2024-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 6876 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 14 分钟&nbsp;<span id="/zh-cn/quantum_metrology/" class="leancloud_visitors" data-flag-title="量子计量学（Quantum Metrology）简明入门">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-23">2024-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 7704 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 16 分钟&nbsp;<span id="/zh-cn/quantum_metrology/" class="leancloud_visitors" data-flag-title="量子计量学（Quantum Metrology）简明入门">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -141,6 +141,10 @@
       <ul>
         <li><a href="#51-二能级系统">5.1 二能级系统</a></li>
         <li><a href="#52-谐振子系统">5.2 谐振子系统</a></li>
+        <li><a href="#521-粒子数态number-state">5.2.1 粒子数态（number state）</a></li>
+        <li><a href="#522-相干态coherent-state">5.2.2 相干态（coherent state）</a></li>
+        <li><a href="#523-noon-态">5.2.3 NOON 态</a></li>
+        <li><a href="#524-压缩态">5.2.4 压缩态</a></li>
       </ul>
     </li>
     <li><a href="#六量子成像与量子照明">六、量子成像与量子照明</a></li>
@@ -165,7 +169,7 @@
 <p><strong>散粒噪声</strong>：你一定用过 CMOS 相机。你是否注意过，在环境较暗的情况下，拍出来的照片会有很多噪点？其实它们是由 <strong>散粒噪声</strong>（Shot noise） 导致的。</p>
 <p>什么是散粒噪声？光子激发出来的电子是一个一个的，且这些电子的产生符合泊松分布（产生的时间完全随机），其相对方差反比于平均电子数，这个方差就是散粒噪声。</p>
 <p>可见，当电子数量较少的时候，其相对方差会比较大，信噪比（SNR）较低，导致了噪点的出现。</p>
-<p>散粒噪声虽然是一种量子噪声，但它还没有达到海森堡极限。本文后面会介绍如何将噪声压到散粒噪声以下，并接近海森堡极限。</p>
+<p>散粒噪声是由粒子数-相位不确定性原理给出的，然而，由于一些历史原因，人们不把它叫做海森堡极限，而是把它叫做散粒噪声极限，或者标准量子极限，并把它与海森堡极限区分开来。</p>
 </blockquote>
 <blockquote>
 <p><strong>衍射极限</strong>：成像精度除了时间上的衡量（即信噪比）以外，还有空间上的衡量，即像素点的个数。如果我们无限增加像素点的个数，有可能达到无限的精度吗？</p>
@@ -293,21 +297,8 @@ F^{E}(\theta) &amp;= \mathbb{E}\left[\left(\frac{\partial}{\partial \theta} f^{E
 <p>可见 Fisher 信息有上界 $F^{E}(\theta) \le \operatorname{tr}[\rho L^2]$。现在的问题是能取到这个上界吗？答案是肯定的，上面的每一个小于等于号都可以取等。</p>
 <blockquote>
 <p>第一个不等号取等的条件是 $L$ 是厄米算符，此时有 $L \rho E(x) = E(x) \rho L = (L \rho E(x))^\dag$。这其实总是满足，因为 SLD 有一个性质是：如果 $H$ 厄米，则 $L_\rho(H)$ 也厄米。</p>
-<p>第二个不等号取等的条件就是柯西不等式的条件：$\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}$ 和 $\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$ 线性相关，即 $\exists k\in \mathbb{C}, \, \rho^{\frac{1}{2}}E(x)^{\frac{1}{2}} = k\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$。这是可以做到的。我们令 $E(x)$ 为投影算符（也就是最常用的 POVM，也称 von Neumann 测量），则有 $E(x)^{\frac{1}{2}} = E(x) = E(x)^2$，且 $\forall \sigma, \,\sigma E(x) = k E(x)$。此时只要 $L = \sum_x c_x E(x)$，即 $L$ 是诸投影算符的线性组合（即 $L$ 是一个可观测量），不等号就可以取等。</p>
+<p>第二个不等号取等的条件就是柯西不等式的条件：$\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}$ 和 $\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$ 线性相关，即 $\exists k\in \mathbb{C}, \, \rho^{\frac{1}{2}}E(x)^{\frac{1}{2}} = k\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$。这是可以做到的。我们令 $E(x)$ 为投影算符（也就是最常用的 POVM，也称 von Neumann 测量），则有 $E(x)^{\frac{1}{2}} = E(x) = E(x)^2$，且 $\forall \sigma, \,\sigma E(x) = k E(x)$。此时只要 $L = \sum_x c_x E(x)$，即 POVM 里的投影算符都是 $L$ 的特征向量，不等号就可以取等。</p>
 </blockquote>
-<!-- > 
-> 知道了 $L$ 要满足的条件，下面我们来推导一下 $H$ 要满足什么的条件？
-> 
-> 注意到：
-> 
-> $\begin{aligned}
-> H &= \frac{1}{2i} \sum_{k\ne l} \frac{\lambda_k + \lambda_l}{\lambda_k - \lambda_l} \langle k | L | l \rangle | k \rangle\langle l | + \cancel{\sum_m H_{mm} |m \rangle\langle m|} \\\\
-> &= \frac{1}{2i} \sum_{k\ne l} \frac{\lambda_k + \lambda_l}{\lambda_k - \lambda_l} | k \rangle\langle k | \sum_x c_x E(x) | l \rangle \langle l | \\\\
-> &= \sum_{x} a_{x} E(x)
-> \end{aligned}
-> $
-> 
-> 也就是说只要。所以取等的条件就是选取的可观测量正比于 $H$。$H$ 是酉变换的生成元，也就是哈密顿量。 -->
 <p>既然可以取等，那么我们就推导出了 Fisher 信息的上确界，也就是量子 Fisher 信息：</p>
 <blockquote>
 <p><strong>量子 Fisher 信息</strong>：$F(\theta) = \operatorname{tr}[\rho L^2]$，其中 $\rho = \rho(\theta) = e^{-iH\theta} \rho_0 e^{iH\theta}$，$L=L_{\rho}(H)$。</p>
@@ -353,34 +344,46 @@ F(\theta) &amp;= 4 \left(\Delta \hat{N}\right)^2 \\
 &amp;= 4 [\langle \psi | \hat{N}^2 | \psi \rangle - \langle \psi | \hat{N} | \psi \rangle^2]
 \end{aligned}$</p>
 <p>下面我们对不同的初态（probe state）进行分类讨论。</p>
-<ol>
-<li>
-<p><strong>粒子数态（number state）</strong> $| \psi_0 \rangle = | N \rangle$</p>
+<h3 id="521-粒子数态number-state">5.2.1 粒子数态（number state）</h3>
+<p>$| \psi_0 \rangle = | N \rangle$</p>
 <p>此时量子 Fisher 信息为：</p>
 <p>$F(\theta) = 0$。</p>
-<p>这是很好理解的，因为粒子数态的相位是完全随机的（根据粒子数-相位不确定性原理）。</p>
-</li>
-<li>
-<p><strong>相干态（coherent state）</strong>$|\psi_0 \rangle = | \alpha \rangle$</p>
+<p>这是很好理解的，因为粒子数态的相位是完全随机的（根据粒子数-相位不确定性原理）。可见粒子数态不能用来探测相位。</p>
+<h3 id="522-相干态coherent-state">5.2.2 相干态（coherent state）</h3>
+<p>$|\psi_0 \rangle = | \alpha \rangle$</p>
 <p>此时量子 Fisher 信息为：</p>
-<p>$F(\theta) = 4 |\alpha|^4 = 4 \bar{n}^2$。</p>
-<p>它给出了测量误差的 CR 下界：$\Delta \theta \ge \frac{1}{2 \bar{n}}$。这也叫海森堡极限。</p>
-<p>然而，正如前面所说，相干态实际上是达不到这个海森堡极限的（即达到 CR 下界）。在达到海森堡极限之前，精度就已经被散粒噪声限制住了。散粒噪声正比于 $\frac{1}{\sqrt{\bar{n}}}$，而海森堡极限正比于 $\frac{1}{\bar{n}}$。</p>
-</li>
-<li>
-<p><strong>NOON 态</strong> $|\Psi_0\rangle = \frac{|N\rangle \otimes |0\rangle + |0\rangle \otimes |N\rangle}{2}$</p>
+<p>$F(\theta) = 4 |\alpha|^2 = 4 \bar{n}$。</p>
+<p>它给出了测量误差的 CR 下界：$\Delta \theta \ge \frac{1}{2 \sqrt{\bar{n}}}$。这就是散粒噪声所允许的极限。它是由粒子数-相位不确定性关系给出的。然而，我们一般不把这个叫做海森堡极限，而是把它叫做散粒噪声极限，或者标准量子极限。文献中经常把这个与海森堡极限区分开来。这是因为我们还能继续提升 $\Delta N$，从而降低 $\Delta \theta$。当 $\Delta$ 正比于 $\bar{n}$，即 $\Delta \theta \sim \frac{1}{\bar{n}}$ 时，我们才把该情况叫海森堡极限。</p>
+<blockquote>
+<p>$\Delta N$ 还能正比于 $\bar{n}$ 的更高次方吗？例如， $\Delta N$ 可以正比于 $\bar{n}^2$ 吗？量子统计告诉我们不可以。 $\Delta N$ 最高只能正比于 $\bar{n}$ 。</p>
+<p>这是因为 $(\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle$ ，其中 $g^{(2)}$ 为二阶关联函数，它在 $t=0$ 处的取值是一个定值。可见，当 $g^{(2)}(0) &gt; 1 $ ，也就是使用聚束光（bunched light）时，我们能有$\Delta N  \propto \langle \hat{N}\rangle = \bar{n}$ 。然而，相干态的 $g^{(2)}(0)$ 正好等于 1，所以只有 $\Delta N  \propto \sqrt{\bar{n}}$ 。</p>
+<p>有趣的是，热辐射的 $g^{(2)}(0)=2$ ，也就是说，热辐射光比激光更有利于相位估计（很反直觉吧）<a href="#ref_1" rel="">[1]</a>！</p>
+<p>从这个角度来看，之所以人们不把相干态的海森堡极限叫做海森堡极限，是因为 bunched light 的海森堡极限比它要好。</p>
+</blockquote>
+<p>下面是理解粒子数-相位不确定性原理的一个直观图示。</p>
+<figure><img src="image/number_phase_uncertainty.png"/><figcaption>
+            <h4>在相空间中，相干态是一个标准差为 1 的高斯函数。简单的几何学可以推导出粒子数-相位不确定性原理。</h4>
+        </figcaption>
+</figure>
+
+<h3 id="523-noon-态">5.2.3 NOON 态</h3>
+<p>$|\Psi_0\rangle = \frac{|N\rangle \otimes |0\rangle + |0\rangle \otimes |N\rangle}{2}$</p>
 <p>在 NOON 态中，我们实际上引入了一个 ancilla （辅助）系统，并将探针态和 ancilla 纠缠起来：当探针有 n 个光子时，ancilla 有零个光子；反之亦然。此时整体的哈密顿量为 $\hat{N} \otimes \mathbb{I}$。</p>
 <p>此时量子 Fisher 信息为：</p>
 <p>$F(\theta) = 4 [ \langle \Psi_0 | (\hat{N} \otimes \mathbb{I})^2 | \Psi_0 \rangle - \langle \Psi_0 | \hat{N} \otimes \mathbb{I} | \Psi_0 \rangle^2 ] = N^2$。</p>
 <p>与相干态不同，NOON 态能够达到海森堡极限 $\Delta \theta = \frac{1}{N}$。选取观测量为 $N_X + iN_Y$，其中 $N_X = |+ \rangle\langle +| - |-\rangle\langle - |$，$N_Y = |+i \rangle\langle +i| - |-i\rangle\langle -i |$，且 $|\pm\rangle = \frac{|N\rangle \otimes |0\rangle \pm |0\rangle \otimes |N\rangle}{\sqrt{2}}$，$|\pm i\rangle = \frac{|N\rangle \otimes |0\rangle \pm i |0\rangle \otimes |N\rangle}{\sqrt{2}}$。请读者验证该观测量的期望值为 $e^{iN\theta}$，方差为 1，于是有 $1=|\Delta e^{iN\theta}| = |iN e^{iN\theta} \Delta \theta| = N\Delta \theta$，即 $\Delta \theta = \frac{1}{N}$，达到了海森堡极限。</p>
 <p>然而，NOON 态是很脆弱的，当 N 稍微大一些就会退相干。实验上还没有制备出 N&gt;10 的 NOON 态。这是因为 NOON 态是类似于薛定谔的猫，当 N 较大时很快就会退相干。从这一点来看，NOON 态并不实用，还不如相干态。</p>
-</li>
-<li>
-<p><strong>压缩态</strong></p>
-<p>压缩态是实验上实用的降低量子噪声的态。</p>
-<p>待写。</p>
-</li>
-</ol>
+<h3 id="524-压缩态">5.2.4 压缩态</h3>
+<p>我不打算给出压缩态的显式公式。实际上，你不需要公式也能理解压缩态。见下图</p>
+<figure><img src="image/number_phase_uncertainty.png"/><figcaption>
+            <h4>相位压缩</h4>
+        </figcaption>
+</figure>
+
+<p>在相空间中，相干态是一个标准差为 1 的高斯函数。而压缩态其实就是将相干态在某一个 quadrature 上“压扁”了，从一个圆形变成了一个椭圆形。</p>
+<p>压缩态仍然满足不确定性原理，只是在一个方向上的不确定性较大，在另一个方向上的不确定性较小。我们可以通过如上图所示的 Phase squeezing（相位压缩）来提高 $\Delta N$ 从而降低 $\Delta \theta$ 。反之，如果我们想要降低 $\Delta N$ ，我们可以通过提高 $\Delta \theta$ ，这就是 Amplitude squeezing（振幅压缩）。</p>
+<p>振幅压缩态的 $g^{(2)}(0)&lt;1$，而相位压缩态的 $g^{(2)}(0) &gt; 1$ 。回想一下，我们有$(\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle$ 。可见，对于压缩态， $\Delta N \propto \bar{n}$ ， $\Delta \theta \propto \frac{1}{\bar{n}}$ ，达到了海森堡极限。压缩强度越大， $g^{(2)}(0)$ 就越大， $\Delta \theta \sim \frac{1}{k\bar{n}}$ 的比例系数 $k$ 就越高。</p>
+<p>与脆弱的 NOON 态相比，压缩态更加实用一些。在文章开头我们就介绍过，著名的探测引力波的 LIGO 就使用了压缩态。另外，在样品损伤阈值较低的时候（例如生物样品），我们不能通过提高激光功率来降低散粒噪声，此时人们也使用压缩态来在不提升功率的前提下进一步提高成像精度。</p>
 <h2 id="六量子成像与量子照明">六、量子成像与量子照明</h2>
 <h2 id="七其他的量子参数估计问题">七、其他的量子参数估计问题</h2>
 <h3 id="71-gain-sensing">7.1 Gain sensing</h3>

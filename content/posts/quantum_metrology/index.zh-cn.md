@@ -25,9 +25,9 @@ categories: ["量子信息"]
 >   
 > 什么是散粒噪声？光子激发出来的电子是一个一个的，且这些电子的产生符合泊松分布（产生的时间完全随机），其相对方差反比于平均电子数，这个方差就是散粒噪声。  
 >   
-> 可见，当电子数量较少的时候，其相对方差会比较大，信噪比（SNR）较低，导致了噪点的出现。  
->   
-> 散粒噪声虽然是一种量子噪声，但它还没有达到海森堡极限。本文后面会介绍如何将噪声压到散粒噪声以下，并接近海森堡极限。
+> 可见，当电子数量较少的时候，其相对方差会比较大，信噪比（SNR）较低，导致了噪点的出现。
+>
+> 散粒噪声是由粒子数-相位不确定性原理给出的，然而，由于一些历史原因，人们不把它叫做海森堡极限，而是把它叫做散粒噪声极限，或者标准量子极限，并把它与海森堡极限区分开来。
 
 > **衍射极限**：成像精度除了时间上的衡量（即信噪比）以外，还有空间上的衡量，即像素点的个数。如果我们无限增加像素点的个数，有可能达到无限的精度吗？  
 >   
@@ -186,20 +186,7 @@ $F(\theta) = \mathbb{E}\left(-\frac{\partial^2}{\partial \theta^2} f(\theta, X)\
 
 > 第一个不等号取等的条件是 $L$ 是厄米算符，此时有 $L \rho E(x) = E(x) \rho L = (L \rho E(x))^\dag$。这其实总是满足，因为 SLD 有一个性质是：如果 $H$ 厄米，则 $L_\rho(H)$ 也厄米。
 > 
-> 第二个不等号取等的条件就是柯西不等式的条件：$\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}$ 和 $\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$ 线性相关，即 $\exists k\in \mathbb{C}, \\, \rho^{\frac{1}{2}}E(x)^{\frac{1}{2}} = k\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$。这是可以做到的。我们令 $E(x)$ 为投影算符（也就是最常用的 POVM，也称 von Neumann 测量），则有 $E(x)^{\frac{1}{2}} = E(x) = E(x)^2$，且 $\forall \sigma, \\,\sigma E(x) = k E(x)$。此时只要 $L = \sum_x c_x E(x)$，即 $L$ 是诸投影算符的线性组合（即 $L$ 是一个可观测量），不等号就可以取等。
-<!-- > 
-> 知道了 $L$ 要满足的条件，下面我们来推导一下 $H$ 要满足什么的条件？
-> 
-> 注意到：
-> 
-> $\begin{aligned}
-> H &= \frac{1}{2i} \sum_{k\ne l} \frac{\lambda_k + \lambda_l}{\lambda_k - \lambda_l} \langle k | L | l \rangle | k \rangle\langle l | + \cancel{\sum_m H_{mm} |m \rangle\langle m|} \\\\
-> &= \frac{1}{2i} \sum_{k\ne l} \frac{\lambda_k + \lambda_l}{\lambda_k - \lambda_l} | k \rangle\langle k | \sum_x c_x E(x) | l \rangle \langle l | \\\\
-> &= \sum_{x} a_{x} E(x)
-> \end{aligned}
-> $
-> 
-> 也就是说只要。所以取等的条件就是选取的可观测量正比于 $H$。$H$ 是酉变换的生成元，也就是哈密顿量。 -->
+> 第二个不等号取等的条件就是柯西不等式的条件：$\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}$ 和 $\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$ 线性相关，即 $\exists k\in \mathbb{C}, \\, \rho^{\frac{1}{2}}E(x)^{\frac{1}{2}} = k\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$。这是可以做到的。我们令 $E(x)$ 为投影算符（也就是最常用的 POVM，也称 von Neumann 测量），则有 $E(x)^{\frac{1}{2}} = E(x) = E(x)^2$，且 $\forall \sigma, \\,\sigma E(x) = k E(x)$。此时只要 $L = \sum_x c_x E(x)$，即 POVM 里的投影算符都是 $L$ 的特征向量，不等号就可以取等。
 
 既然可以取等，那么我们就推导出了 Fisher 信息的上确界，也就是量子 Fisher 信息：
 
@@ -264,41 +251,67 @@ F(\theta) &= 4 \left(\Delta \hat{N}\right)^2 \\\\
 
 下面我们对不同的初态（probe state）进行分类讨论。
 
-1. **粒子数态（number state）** $| \psi_0 \rangle = | N \rangle$
+### 5.2.1 粒子数态（number state）
 
-   此时量子 Fisher 信息为：
+$| \psi_0 \rangle = | N \rangle$
 
-    $F(\theta) = 0$。
-    
-    这是很好理解的，因为粒子数态的相位是完全随机的（根据粒子数-相位不确定性原理）。
+此时量子 Fisher 信息为：
 
-2. **相干态（coherent state）**$|\psi_0 \rangle = | \alpha \rangle$
+$F(\theta) = 0$。
 
-    此时量子 Fisher 信息为：
+这是很好理解的，因为粒子数态的相位是完全随机的（根据粒子数-相位不确定性原理）。可见粒子数态不能用来探测相位。
 
-    $F(\theta) = 4 |\alpha|^4 = 4 \bar{n}^2$。
+### 5.2.2 相干态（coherent state）
 
-    它给出了测量误差的 CR 下界：$\Delta \theta \ge \frac{1}{2 \bar{n}}$。这也叫海森堡极限。
-    
-    然而，正如前面所说，相干态实际上是达不到这个海森堡极限的（即达到 CR 下界）。在达到海森堡极限之前，精度就已经被散粒噪声限制住了。散粒噪声正比于 $\frac{1}{\sqrt{\bar{n}}}$，而海森堡极限正比于 $\frac{1}{\bar{n}}$。
+$|\psi_0 \rangle = | \alpha \rangle$
 
-3. **NOON 态** $|\Psi_0\rangle = \frac{|N\rangle \otimes |0\rangle + |0\rangle \otimes |N\rangle}{2}$
+此时量子 Fisher 信息为：
 
-    在 NOON 态中，我们实际上引入了一个 ancilla （辅助）系统，并将探针态和 ancilla 纠缠起来：当探针有 n 个光子时，ancilla 有零个光子；反之亦然。此时整体的哈密顿量为 $\hat{N} \otimes \mathbb{I}$。
+$F(\theta) = 4 |\alpha|^2 = 4 \bar{n}$。
 
-    此时量子 Fisher 信息为：
+它给出了测量误差的 CR 下界：$\Delta \theta \ge \frac{1}{2 \sqrt{\bar{n}}}$。这就是散粒噪声所允许的极限。它是由粒子数-相位不确定性关系给出的。然而，我们一般不把这个叫做海森堡极限，而是把它叫做散粒噪声极限，或者标准量子极限。文献中经常把这个与海森堡极限区分开来。这是因为我们还能继续提升 $\Delta N$，从而降低 $\Delta \theta$。当 $\Delta$ 正比于 $\bar{n}$，即 $\Delta \theta \sim \frac{1}{\bar{n}}$ 时，我们才把该情况叫海森堡极限。
 
-    $F(\theta) = 4 [ \langle \Psi_0 | (\hat{N} \otimes \mathbb{I})^2 | \Psi_0 \rangle - \langle \Psi_0 | \hat{N} \otimes \mathbb{I} | \Psi_0 \rangle^2 ] = N^2$。
+> $\Delta N$ 还能正比于 $\bar{n}$ 的更高次方吗？例如， $\Delta N$ 可以正比于 $\bar{n}^2$ 吗？量子统计告诉我们不可以。 $\Delta N$ 最高只能正比于 $\bar{n}$ 。
+>
+> 这是因为 $(\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle$ ，其中 $g^{(2)}$ 为二阶关联函数，它在 $t=0$ 处的取值是一个定值。可见，当 $g^{(2)}(0) > 1 $ ，也就是使用聚束光（bunched light）时，我们能有$\Delta N  \propto \langle \hat{N}\rangle = \bar{n}$ 。然而，相干态的 $g^{(2)}(0)$ 正好等于 1，所以只有 $\Delta N  \propto \sqrt{\bar{n}}$ 。
+>
+> 有趣的是，热辐射的 $g^{(2)}(0)=2$ ，也就是说，热辐射光比激光更有利于相位估计（很反直觉吧）[\[1\]](#ref_1)！
+>
+> 从这个角度来看，之所以人们不把相干态的海森堡极限叫做海森堡极限，是因为 bunched light 的海森堡极限比它要好。
 
-    与相干态不同，NOON 态能够达到海森堡极限 $\Delta \theta = \frac{1}{N}$。选取观测量为 $N_X + iN_Y$，其中 $N_X = |+ \rangle\langle +| - |-\rangle\langle - |$，$N_Y = |+i \rangle\langle +i| - |-i\rangle\langle -i |$，且 $|\pm\rangle = \frac{|N\rangle \otimes |0\rangle \pm |0\rangle \otimes |N\rangle}{\sqrt{2}}$，$|\pm i\rangle = \frac{|N\rangle \otimes |0\rangle \pm i |0\rangle \otimes |N\rangle}{\sqrt{2}}$。请读者验证该观测量的期望值为 $e^{iN\theta}$，方差为 1，于是有 $1=|\Delta e^{iN\theta}| = |iN e^{iN\theta} \Delta \theta| = N\Delta \theta$，即 $\Delta \theta = \frac{1}{N}$，达到了海森堡极限。
+下面是理解粒子数-相位不确定性原理的一个直观图示。
 
-    然而，NOON 态是很脆弱的，当 N 稍微大一些就会退相干。实验上还没有制备出 N>10 的 NOON 态。这是因为 NOON 态是类似于薛定谔的猫，当 N 较大时很快就会退相干。从这一点来看，NOON 态并不实用，还不如相干态。
+{{< figure src="image/number_phase_uncertainty.png" title="在相空间中，相干态是一个标准差为 1 的高斯函数。简单的几何学可以推导出粒子数-相位不确定性原理。" >}}
 
-4. **压缩态**
 
-    压缩态是实验上实用的降低量子噪声的态。
+### 5.2.3 NOON 态
 
-    待写。
+$|\Psi_0\rangle = \frac{|N\rangle \otimes |0\rangle + |0\rangle \otimes |N\rangle}{2}$
+
+在 NOON 态中，我们实际上引入了一个 ancilla （辅助）系统，并将探针态和 ancilla 纠缠起来：当探针有 n 个光子时，ancilla 有零个光子；反之亦然。此时整体的哈密顿量为 $\hat{N} \otimes \mathbb{I}$。
+
+此时量子 Fisher 信息为：
+
+$F(\theta) = 4 [ \langle \Psi_0 | (\hat{N} \otimes \mathbb{I})^2 | \Psi_0 \rangle - \langle \Psi_0 | \hat{N} \otimes \mathbb{I} | \Psi_0 \rangle^2 ] = N^2$。
+
+与相干态不同，NOON 态能够达到海森堡极限 $\Delta \theta = \frac{1}{N}$。选取观测量为 $N_X + iN_Y$，其中 $N_X = |+ \rangle\langle +| - |-\rangle\langle - |$，$N_Y = |+i \rangle\langle +i| - |-i\rangle\langle -i |$，且 $|\pm\rangle = \frac{|N\rangle \otimes |0\rangle \pm |0\rangle \otimes |N\rangle}{\sqrt{2}}$，$|\pm i\rangle = \frac{|N\rangle \otimes |0\rangle \pm i |0\rangle \otimes |N\rangle}{\sqrt{2}}$。请读者验证该观测量的期望值为 $e^{iN\theta}$，方差为 1，于是有 $1=|\Delta e^{iN\theta}| = |iN e^{iN\theta} \Delta \theta| = N\Delta \theta$，即 $\Delta \theta = \frac{1}{N}$，达到了海森堡极限。
+
+然而，NOON 态是很脆弱的，当 N 稍微大一些就会退相干。实验上还没有制备出 N>10 的 NOON 态。这是因为 NOON 态是类似于薛定谔的猫，当 N 较大时很快就会退相干。从这一点来看，NOON 态并不实用，还不如相干态。
+
+### 5.2.4 压缩态
+
+我不打算给出压缩态的显式公式。实际上，你不需要公式也能理解压缩态。见下图
+
+{{< figure src="image/number_phase_uncertainty.png" title="相位压缩" >}}
+
+在相空间中，相干态是一个标准差为 1 的高斯函数。而压缩态其实就是将相干态在某一个 quadrature 上“压扁”了，从一个圆形变成了一个椭圆形。
+
+压缩态仍然满足不确定性原理，只是在一个方向上的不确定性较大，在另一个方向上的不确定性较小。我们可以通过如上图所示的 Phase squeezing（相位压缩）来提高 $\Delta N$ 从而降低 $\Delta \theta$ 。反之，如果我们想要降低 $\Delta N$ ，我们可以通过提高 $\Delta \theta$ ，这就是 Amplitude squeezing（振幅压缩）。
+
+振幅压缩态的 $g^{(2)}(0)<1$，而相位压缩态的 $g^{(2)}(0) > 1$ 。回想一下，我们有$(\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle$ 。可见，对于压缩态， $\Delta N \propto \bar{n}$ ， $\Delta \theta \propto \frac{1}{\bar{n}}$ ，达到了海森堡极限。压缩强度越大， $g^{(2)}(0)$ 就越大， $\Delta \theta \sim \frac{1}{k\bar{n}}$ 的比例系数 $k$ 就越高。
+
+与脆弱的 NOON 态相比，压缩态更加实用一些。在文章开头我们就介绍过，著名的探测引力波的 LIGO 就使用了压缩态。另外，在样品损伤阈值较低的时候（例如生物样品），我们不能通过提高激光功率来降低散粒噪声，此时人们也使用压缩态来在不提升功率的前提下进一步提高成像精度。
+
 
 ## 六、量子成像与量子照明  
 ## 七、其他的量子参数估计问题  
