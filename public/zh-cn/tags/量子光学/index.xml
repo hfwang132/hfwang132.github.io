@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
         <description>量子光学 - 标签 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:42:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</title>
+    <link>http://example.com/zh-cn/spdc_optical_amp/</link>
+    <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/spdc_optical_amp/</guid>
+    <description><![CDATA[SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？ 我们先用极限思维，考虑两个极限： 极限1：放大器的增益等于1，也就是没]]></description>
+</item>
+<item>
     <title>激光的一种简单的量子描述</title>
     <link>http://example.com/zh-cn/laser_quantum/</link>
     <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
