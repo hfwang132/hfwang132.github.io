@@ -4,7 +4,31 @@
         <link>http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
         <description>量子信息 - 分类 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:42:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>激光的一种简单的量子描述</title>
+    <link>http://example.com/zh-cn/laser_quantum/</link>
+    <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/laser_quantum/</guid>
+    <description><![CDATA[本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发]]></description>
+</item>
+<item>
+    <title>光子的轨道角动量</title>
+    <link>http://example.com/zh-cn/oam/</link>
+    <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/oam/</guid>
+    <description><![CDATA[前言 1992 年发表在 PRA 上的一篇文章 [1] 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular]]></description>
+</item>
+<item>
+    <title>量子纠缠与经典关联的区别，以及量子测量问题</title>
+    <link>http://example.com/zh-cn/classical_correlation/</link>
+    <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/classical_correlation/</guid>
+    <description><![CDATA[很多物理工作者向大众科普量子纠缠的时候都会举一个例子： 想象你有两个盒子，其中一个放了披萨，另一个放了汉堡，在打开盒子之前无法知道其中是什么。]]></description>
+</item>
+<item>
     <title>量子计量学（Quantum Metrology）简明入门</title>
     <link>http://example.com/zh-cn/quantum_metrology/</link>
     <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>

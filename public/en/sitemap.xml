@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.com/categories/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/categories/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/categories/"
@@ -11,7 +11,7 @@
                     hreflang="en"
                     href="http://example.com/categories/"
                     /></url><url>
-            <loc>http://example.com/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/"
@@ -20,7 +20,7 @@
                     hreflang="en"
                     href="http://example.com/"
                     /></url><url>
-            <loc>http://example.com/posts/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/posts/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/posts/"
@@ -29,9 +29,9 @@
                     hreflang="en"
                     href="http://example.com/posts/"
                     /></url><url>
-            <loc>http://example.com/categories/quantum-information/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.com/tags/quantum-optics/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://example.com/state_tomography/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/categories/quantum-information/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/tags/quantum-optics/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/state_tomography/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/state_tomography/"
@@ -40,7 +40,7 @@
                     hreflang="en"
                     href="http://example.com/state_tomography/"
                     /></url><url>
-            <loc>http://example.com/tags/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://example.com/tags/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
                         href="http://example.com/zh-cn/tags/"

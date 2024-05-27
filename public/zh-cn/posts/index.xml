@@ -4,7 +4,31 @@
         <link>http://example.com/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:42:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>激光的一种简单的量子描述</title>
+    <link>http://example.com/zh-cn/laser_quantum/</link>
+    <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/laser_quantum/</guid>
+    <description><![CDATA[本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发]]></description>
+</item>
+<item>
+    <title>光子的轨道角动量</title>
+    <link>http://example.com/zh-cn/oam/</link>
+    <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/oam/</guid>
+    <description><![CDATA[前言 1992 年发表在 PRA 上的一篇文章 [1] 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular]]></description>
+</item>
+<item>
+    <title>量子纠缠与经典关联的区别，以及量子测量问题</title>
+    <link>http://example.com/zh-cn/classical_correlation/</link>
+    <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/classical_correlation/</guid>
+    <description><![CDATA[很多物理工作者向大众科普量子纠缠的时候都会举一个例子： 想象你有两个盒子，其中一个放了披萨，另一个放了汉堡，在打开盒子之前无法知道其中是什么。]]></description>
+</item>
+<item>
     <title>量子计量学（Quantum Metrology）简明入门</title>
     <link>http://example.com/zh-cn/quantum_metrology/</link>
     <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
@@ -59,30 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/complex_numbers_in_em/</guid>
     <description><![CDATA[在经典力学中，复数只是一个用来简化计算的数学技巧。 在量子力学中，复数不再只是一个数学技巧，而是有一定的物理意义。考虑经典矢势： $\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$]]></description>
-</item>
-<item>
-    <title>【量光实验杂谈·二】HBT实验测量SPDC多模压缩态的频谱关联与纯度</title>
-    <link>http://example.com/zh-cn/hbt_spectral_correlation/</link>
-    <pubDate>Mon, 05 Feb 2024 00:12:16 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/hbt_spectral_correlation/</guid>
-    <description><![CDATA[上篇我们说了在 HBT 实验中，用非光子数分辨的单光子探测器测量量子二阶关联函数的原理。 https://zhuanlan.zhihu.com/p/679453473 这篇我们来看看量子二阶关联函数有什么用。除了老生常谈的用来]]></description>
-</item>
-<item>
-    <title>【量光实验杂谈·一】非光子数分辨探测器测二阶关联函数（g2）的原理</title>
-    <link>http://example.com/zh-cn/hbt_g2/</link>
-    <pubDate>Mon, 05 Feb 2024 00:11:33 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/hbt_g2/</guid>
-    <description><![CDATA[HBT 实验 做量光实验的小伙伴一定知道 HBT 实验可以用来测二阶关联函数 g2，即将一束光用 50:50 的分束器分成两束，再分别用两个探测器探测，并统计两边光强的关]]></description>
-</item>
-<item>
-    <title>李导数与协变导数有什么联系？</title>
-    <link>http://example.com/zh-cn/lie_derivative/</link>
-    <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/lie_derivative/</guid>
-    <description><![CDATA[一 性质上的异同点 李导数 $\mathcal{L}_V$ 和协变导数 $\nabla_V$ 有很多共同点： $\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}^p_q(M)$ 到 $\mathcal{T}^p_q(M)$ 的映射。 $\mathcal{T}^p_q(M)$ 表示 $M$ 上全体 (p, q) 型光滑张量场的集合 特别地，对]]></description>
 </item>
 </channel>
 </rss>

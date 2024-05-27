@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</link>
         <description>量子测量理论 - 标签 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jan 2024 23:36:13 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:33:11 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>量子纠缠与经典关联的区别，以及量子测量问题</title>
+    <link>http://example.com/zh-cn/classical_correlation/</link>
+    <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/classical_correlation/</guid>
+    <description><![CDATA[很多物理工作者向大众科普量子纠缠的时候都会举一个例子： 想象你有两个盒子，其中一个放了披萨，另一个放了汉堡，在打开盒子之前无法知道其中是什么。]]></description>
+</item>
+<item>
     <title>广义量子测量：POVM 简介</title>
     <link>http://example.com/zh-cn/povm/</link>
     <pubDate>Fri, 26 Jan 2024 23:36:13 &#43;0800</pubDate>

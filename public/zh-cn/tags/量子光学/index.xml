@@ -4,7 +4,23 @@
         <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
         <description>量子光学 - 标签 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:42:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>激光的一种简单的量子描述</title>
+    <link>http://example.com/zh-cn/laser_quantum/</link>
+    <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/laser_quantum/</guid>
+    <description><![CDATA[本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发]]></description>
+</item>
+<item>
+    <title>光子的轨道角动量</title>
+    <link>http://example.com/zh-cn/oam/</link>
+    <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/oam/</guid>
+    <description><![CDATA[前言 1992 年发表在 PRA 上的一篇文章 [1] 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular]]></description>
+</item>
+<item>
     <title>【量光实验杂谈·三】量子态层析</title>
     <link>http://example.com/zh-cn/state_tomography/</link>
     <pubDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</pubDate>
