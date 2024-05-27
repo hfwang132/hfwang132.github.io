@@ -4,7 +4,23 @@
         <link>http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
         <description>量子信息 - 分类 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:42:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>位置测量的塌缩态</title>
+    <link>http://example.com/zh-cn/position_measurement/</link>
+    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/position_measurement/</guid>
+    <description><![CDATA[一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？ 太长不看版： 设待测系统的波]]></description>
+</item>
+<item>
+    <title>产生湮灭算符是怎么得到的？</title>
+    <link>http://example.com/zh-cn/annilation_op/</link>
+    <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/annilation_op/</guid>
+    <description><![CDATA[产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。 想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的： $\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$ 即 $\frac{\mathrm{d}}{\mathrm{d}t}]]></description>
+</item>
+<item>
     <title>激光的一种简单的量子描述</title>
     <link>http://example.com/zh-cn/laser_quantum/</link>
     <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
@@ -67,22 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/hbt_spectral_correlation/</guid>
     <description><![CDATA[上篇我们说了在 HBT 实验中，用非光子数分辨的单光子探测器测量量子二阶关联函数的原理。 https://zhuanlan.zhihu.com/p/679453473 这篇我们来看看量子二阶关联函数有什么用。除了老生常谈的用来]]></description>
-</item>
-<item>
-    <title>【量光实验杂谈·一】非光子数分辨探测器测二阶关联函数（g2）的原理</title>
-    <link>http://example.com/zh-cn/hbt_g2/</link>
-    <pubDate>Mon, 05 Feb 2024 00:11:33 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/hbt_g2/</guid>
-    <description><![CDATA[HBT 实验 做量光实验的小伙伴一定知道 HBT 实验可以用来测二阶关联函数 g2，即将一束光用 50:50 的分束器分成两束，再分别用两个探测器探测，并统计两边光强的关]]></description>
-</item>
-<item>
-    <title>广义量子测量：POVM 简介</title>
-    <link>http://example.com/zh-cn/povm/</link>
-    <pubDate>Fri, 26 Jan 2024 23:36:13 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/povm/</guid>
-    <description><![CDATA[投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过]]></description>
 </item>
 </channel>
 </rss>

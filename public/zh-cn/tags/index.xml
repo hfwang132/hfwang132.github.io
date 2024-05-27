@@ -4,20 +4,28 @@
         <link>http://example.com/zh-cn/tags/</link>
         <description>Tags - 标签 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:42:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>量子测量理论</title>
+    <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</link>
+    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>数学物理方法</title>
+    <link>http://example.com/zh-cn/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
+    <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>量子光学</title>
     <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
     <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>量子测量理论</title>
-    <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</link>
-    <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -74,14 +82,6 @@
     <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/tags/spi/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>FPGA</title>
-    <link>http://example.com/zh-cn/tags/fpga/</link>
-    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/tags/fpga/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

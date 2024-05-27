@@ -4,37 +4,37 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>激光的一种简单的量子描述 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="激光的一种简单的量子描述" />
-<meta property="og:description" content="本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发" />
+        <title>产生湮灭算符是怎么得到的？ - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="产生湮灭算符是怎么得到的？" />
+<meta property="og:description" content="产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。 想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的： $\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$ 即 $\frac{\mathrm{d}}{\mathrm{d}t}" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.com/zh-cn/laser_quantum/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-05-27T17:42:31+08:00" />
-<meta property="article:modified_time" content="2024-05-27T17:42:31+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
+<meta property="og:url" content="http://example.com/zh-cn/annilation_op/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-27T17:47:25+08:00" />
+<meta property="article:modified_time" content="2024-05-27T17:47:25+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="激光的一种简单的量子描述"/>
-<meta name="twitter:description" content="本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发"/>
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="产生湮灭算符是怎么得到的？"/>
+<meta name="twitter:description" content="产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。 想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的： $\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$ 即 $\frac{\mathrm{d}}{\mathrm{d}t}"/>
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/zh-cn/laser_quantum/" /><link rel="prev" href="http://example.com/zh-cn/oam/" /><link rel="next" href="http://example.com/zh-cn/annilation_op/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/zh-cn/annilation_op/" /><link rel="prev" href="http://example.com/zh-cn/laser_quantum/" /><link rel="next" href="http://example.com/zh-cn/position_measurement/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "激光的一种简单的量子描述",
+        "headline": "产生湮灭算符是怎么得到的？",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.com\/zh-cn\/laser_quantum\/"
+            "@id": "http:\/\/example.com\/zh-cn\/annilation_op\/"
         },"image": [{
                             "@type": "ImageObject",
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "量子光学","wordcount":  918 ,
-        "url": "http:\/\/example.com\/zh-cn\/laser_quantum\/","datePublished": "2024-05-27T17:42:31+08:00","dateModified": "2024-05-27T17:42:31+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "数学物理方法","wordcount":  325 ,
+        "url": "http:\/\/example.com\/zh-cn\/annilation_op\/","datePublished": "2024-05-27T17:47:25+08:00","dateModified": "2024-05-27T17:47:25+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
                     "@type": "ImageObject",
@@ -70,7 +70,7 @@
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/laser_quantum/" selected>简体中文</option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-cn/annilation_op/" selected>简体中文</option></select>
                 </a></div>
         </div>
     </div>
@@ -104,7 +104,7 @@
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/zh-cn/laser_quantum/" selected>简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/zh-cn/annilation_op/" selected>简体中文</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -120,10 +120,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">激光的一种简单的量子描述</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">产生湮灭算符是怎么得到的？</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-category">收录于 <a href="/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-05-27">2024-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 918 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/zh-cn/laser_quantum/" class="leancloud_visitors" data-flag-title="激光的一种简单的量子描述">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-05-27">2024-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 325 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/zh-cn/annilation_op/" class="leancloud_visitors" data-flag-title="产生湮灭算符是怎么得到的？">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -131,39 +131,21 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#参考">参考</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p>本文旨在从基本量子动力学出发，推导出激光的相干态。</p>
-<p>考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。</p>
-<p>二能级系统一开始处于激发态 $|e\rangle$ ，光场处于真空态 $|0\rangle$ 。</p>
-<p>根据 Jaynes-Cummings model，即使光场处于真空态，也会产生自发辐射。经过一小段时间，量子态从 $|e,0\rangle$ 演化为：</p>
-<p>$|\psi\rangle = a |e,0\rangle + b |g,1\rangle$</p>
-<p>其中 $|g,1\rangle$ 表示二能级处于基态，且与其耦合的光场模式中有一个光子，也就是自发辐射所发射的光子。</p>
-<p>现在考虑 $N$ 个处于激发态的二能级系统，它们之间没有耦合，而是只和光场耦合。一开始的自发辐射光子诱导其他二能级系统的受激辐射，那么总体量子态可以写成：</p>
-<p>$|\Psi\rangle = C|\psi\rangle^{\otimes N} =  C\sum_k   \sum_m\mathcal{P}_m[|e,0\rangle^{\otimes (N-k)} \otimes |g,1\rangle^{\otimes k}]$</p>
-<p>其中 $C$ 是待定的归一化常数， $\mathcal{P}_m$ 表示 $|e,0\rangle^{\otimes (N-k)} \otimes |g,1\rangle^{\otimes k}$ 所有可能的置换方式，共有 $\frac{N!}{(N-k)!,k!}$ 种置换方式。注意这里我们尚未使用 Fock space（还没有对全同玻色子做对称化）。</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。</p>
+<p>想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的：</p>
+<p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
+<p>即</p>
+<p>$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$</p>
+<p>那么我们只要将它们解耦就可以了。对角化得到特征向量 $a^{\pm} =  x\pm\mathrm{i}p$ ，于是 $a^{\pm}$ 的导数就只和自己有关：</p>
+<p>$\frac{\mathrm{d}a^{\pm}}{\mathrm{d}t}=\mp\mathrm{i}\omega a^{\pm},\quad a^{\pm}=a_0^{\pm} \exp (\mp\mathrm{i}\omega t)$</p>
+<p>这一套流程里的 $a^{+}$ 和 $a^{-}$ 量子化之后就是湮灭和产生算符。</p>
 <blockquote>
-<p>这一步非常不严谨，甚至可能是错误的，因为它没有说明为什么受激辐射意味着总体量子态是自发辐射态 $|\psi\rangle = a |e,0\rangle + b |g,1\rangle$ 的张量积。但是后面会看到它给出了正确的结果。因此这种推导一定包含了某种 insight，只是我现在还没有看出来。</p>
+<p>记 $a^{+}\rightarrow\hat{a},\quad a^{-}\rightarrow \hat{a}^\dag$ ，则 $[\hat{a},\hat{a}^\dag]=[\hat{x}+\mathrm{i}\hat{p},\hat{x}-\mathrm{i}\hat{p}]=-\mathrm{i}[\hat{x},\hat{p}] = 1$ 。</p>
+<p>后面的故事大家都很熟悉了。</p>
 </blockquote>
-<p>光场的量子态就是总体量子态 trace 掉二能级系统的量子态：</p>
-<p>$\rho = \operatorname{Tr}_{\text{a}}[|\Psi\rangle\langle\Psi|] = C^2 \sum_k  |a^{N-k}b^k |^2  \sum_m\mathcal{P}_m[(|0\rangle\langle 0|)^{\otimes (N-k)} \otimes (|1\rangle\langle 1|)^{\otimes k}]$</p>
-<p>现在我们将全同粒子的张量积对称化并映射到Fock space，也就是众所周知的 $|1\rangle ^{\otimes k} \rightarrow  \sqrt{k!} |k\rangle$ ，于是上式变成</p>
-<p>$\rho = C^2 \sum_k  |a^{N-k}b^k |^2 \left(\frac{N!}{(N-k)!,k!}\right)^2 k! |k\rangle\langle k |$</p>
-<p>当 $k \ll N$ 时， $\frac{N!}{(N-k)!}  \sim \left(\frac{N}{e}\right)^k$ 。令 $\alpha = \frac{b}{a}\cdot\frac{N}{e}$ ，则上式可以写成：</p>
-<p>$\rho = C^2 a^N\sum_k \frac{|\alpha|^{2k}}{k!} |k\rangle\langle k |$</p>
-<p>对其进行归一化得到：</p>
-<p>$\rho = e^{-|\alpha|^2}\sum_k \frac{|\alpha|^{2k}}{k!} |k\rangle\langle k |$</p>
-<p>这是一个平均粒子数为 $|\alpha|^2$ 的泊松分布。它在相干态表象下可以写成：</p>
-<p>$\rho = \int_0^{2\pi} \frac{\mathrm{d}\theta}{2\pi} |\alpha e^{\mathrm{i}\theta}\rangle\langle\alpha e^{\mathrm{i}\theta}|$</p>
-<p>可见它其实是一个相位随机的相干态。相干态 $|\alpha\rangle$ 对应一个振幅和相位都非常确定的经典电磁波，但是这里将它的相位从 $0$ 到 $2\pi$ 积分了。这表现了我们对相位信息的无知，这种无知从根本上来源于我们对二能级系统（增益介质）的微观状态的无知。因此可以说这个 $\rho = \rho_{\text{epistemic}}$ 是认识论的量子态。</p>
-<p>而从本体论量子态的角度而言，系统的量子态应当坍缩为一个有确定相位的 $\rho_{\text{ontic}} = |\alpha\rangle$ ，只是我们没办法知道是哪个相位而已。这是因为在光学频率 $\sim 10^{15} \text{Hz}$ 下，人类是无法观测绝对相位的。不过相对相位可以观测，因此我们仍能观察到干涉现象。如果读者对此好奇，可以进一步阅读这篇文章 <a href="#ref_1" rel="">[1]</a>。</p>
-<h2 id="参考">参考</h2>
-<ol>
-<li>Bartlett, S. D., Rudolph, T. &amp; Spekkens, R. W. Dialogue Concerning Two Views on Quantum Coherence: Factist and Fictionist. Int. J. Quantum Inform. 04, 17–43 (2006).</li>
-</ol>
+<p>多模情况也很简单。每当我们解耦出来一个特征向量，我们都会把它叫做一个模式，对应的就是该模式上的产生湮灭算符。这就是准粒子（例如声子）的由来。</p>
+<p>在经典力学里，$a^{+}$ 和 $a^{-}$ 只是为了方便求解而扩展到复数域的技巧，而在量子力学里，它们有实实在在的物理含义。所以量子力学离不开复数。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -173,20 +155,20 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/zh-cn/laser_quantum/" data-title="激光的一种简单的量子描述" data-hashtags="量子光学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/zh-cn/laser_quantum/" data-hashtag="量子光学"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/zh-cn/laser_quantum/" data-title="激光的一种简单的量子描述"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/zh-cn/laser_quantum/" data-title="激光的一种简单的量子描述"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/zh-cn/laser_quantum/" data-title="激光的一种简单的量子描述"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/zh-cn/annilation_op/" data-title="产生湮灭算符是怎么得到的？" data-hashtags="数学物理方法"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/zh-cn/annilation_op/" data-hashtag="数学物理方法"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/zh-cn/annilation_op/" data-title="产生湮灭算符是怎么得到的？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/zh-cn/annilation_op/" data-title="产生湮灭算符是怎么得到的？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/zh-cn/annilation_op/" data-title="产生湮灭算符是怎么得到的？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/">量子光学</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/zh-cn/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/">数学物理方法</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-cn/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/zh-cn/oam/" class="prev" rel="prev" title="光子的轨道角动量"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>光子的轨道角动量</a>
-            <a href="/zh-cn/annilation_op/" class="next" rel="next" title="产生湮灭算符是怎么得到的？">产生湮灭算符是怎么得到的？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/zh-cn/laser_quantum/" class="prev" rel="prev" title="激光的一种简单的量子描述"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>激光的一种简单的量子描述</a>
+            <a href="/zh-cn/position_measurement/" class="next" rel="next" title="位置测量的塌缩态">位置测量的塌缩态<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

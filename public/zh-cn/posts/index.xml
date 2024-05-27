@@ -4,7 +4,23 @@
         <link>http://example.com/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:42:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>位置测量的塌缩态</title>
+    <link>http://example.com/zh-cn/position_measurement/</link>
+    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/position_measurement/</guid>
+    <description><![CDATA[一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？ 太长不看版： 设待测系统的波]]></description>
+</item>
+<item>
+    <title>产生湮灭算符是怎么得到的？</title>
+    <link>http://example.com/zh-cn/annilation_op/</link>
+    <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/annilation_op/</guid>
+    <description><![CDATA[产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。 想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的： $\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$ 即 $\frac{\mathrm{d}}{\mathrm{d}t}]]></description>
+</item>
+<item>
     <title>激光的一种简单的量子描述</title>
     <link>http://example.com/zh-cn/laser_quantum/</link>
     <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
@@ -67,22 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/photon_wave_func/</guid>
     <description><![CDATA[光子有时空表象下的波函数： $\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$ 其中 $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$ 。 直观来看，就是让场算符 $E^{-}(\mathbf{r},t)$ 在时空点 $(\mathbf{r},t)$ 处创造一个态 $|\mathbf{r},t\rangle$ ，再求这个态和 $|\psi\rangle$ 之]]></description>
-</item>
-<item>
-    <title>BCH 公式 - 量子力学爆算的大杀器</title>
-    <link>http://example.com/zh-cn/bch/</link>
-    <pubDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/bch/</guid>
-    <description><![CDATA[Baker-Campbell-Hausdorff 公式 可以用来计算海森堡表象下的算符演化： $e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$ 这个公式其实只是 BCH 公式的小弟 因为海森堡表象下的算符演化规则是 $A\rightarrow UAU^{\dag}$ ，其中 $U$ 是酉演化算符。 如果 $U$]]></description>
-</item>
-<item>
-    <title>复数对于描述电磁波有什么重要性？</title>
-    <link>http://example.com/zh-cn/complex_numbers_in_em/</link>
-    <pubDate>Fri, 16 Feb 2024 00:32:34 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/complex_numbers_in_em/</guid>
-    <description><![CDATA[在经典力学中，复数只是一个用来简化计算的数学技巧。 在量子力学中，复数不再只是一个数学技巧，而是有一定的物理意义。考虑经典矢势： $\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$]]></description>
 </item>
 </channel>
 </rss>

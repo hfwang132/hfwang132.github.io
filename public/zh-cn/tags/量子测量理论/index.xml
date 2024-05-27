@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</link>
         <description>量子测量理论 - 标签 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:33:11 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>位置测量的塌缩态</title>
+    <link>http://example.com/zh-cn/position_measurement/</link>
+    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/position_measurement/</guid>
+    <description><![CDATA[一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？ 太长不看版： 设待测系统的波]]></description>
+</item>
+<item>
     <title>量子纠缠与经典关联的区别，以及量子测量问题</title>
     <link>http://example.com/zh-cn/classical_correlation/</link>
     <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
