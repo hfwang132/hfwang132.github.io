@@ -1,12 +1,12 @@
 ---
-title: "Does the idle light passing through the optical fiber amplifier still entangle with the signal light?"
+title: "Does the idler light passing through the optical fiber amplifier still entangle with the signal light?"
 date: 2024-05-27T18:36:47+08:00
 draft: false
 tags: ["Quantum Optics"]
 categories: ["Quantum Information"]
 ---
 
-Does the idle light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?
+Does the idler light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?
 
 Let's consider two extremes:
 

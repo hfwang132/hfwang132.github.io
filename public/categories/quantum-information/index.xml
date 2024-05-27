@@ -5,12 +5,12 @@
         <description>Quantum Information - Category - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
             <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/quantum-information/" rel="self" type="application/rss+xml" /><item>
-    <title>Does the idle light passing through the optical fiber amplifier still entangle with the signal light?</title>
+    <title>Does the idler light passing through the optical fiber amplifier still entangle with the signal light?</title>
     <link>http://example.com/spdc_optical_amp/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/spdc_optical_amp/</guid>
-    <description><![CDATA[Does the idle light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?
+    <description><![CDATA[Does the idler light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?
 Let&rsquo;s consider two extremes:
 Extreme 1: The gain of the amplifier is equal to 1, that is, there is no gain at all.
 In this case, the amplifier acts as if it has done nothing and is an identity channel. So, of course, the entanglement will still be maintained. (Actually, it&rsquo;s not necessarily the case.]]></description>
