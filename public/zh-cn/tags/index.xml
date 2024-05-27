@@ -13,6 +13,14 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
+    <title>量子信息</title>
+    <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
+    <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>量子测量理论</title>
     <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
@@ -74,14 +82,6 @@
     <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/tags/python/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>SPI</title>
-    <link>http://example.com/zh-cn/tags/spi/</link>
-    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/tags/spi/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

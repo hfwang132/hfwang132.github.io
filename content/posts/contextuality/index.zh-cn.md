@@ -1,7 +1,9 @@
 ---
 title: "量子纠缠的速度是否超过光速？"
 date: 2024-05-27T18:34:24+08:00
-draft: true
+draft: false
+tags: ["量子信息"]
+categories: ["量子信息"]
 ---
 
 

@@ -13,6 +13,14 @@
     <description><![CDATA[SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？ 我们先用极限思维，考虑两个极限： 极限1：放大器的增益等于1，也就是没]]></description>
 </item>
 <item>
+    <title>量子纠缠的速度是否超过光速？</title>
+    <link>http://example.com/zh-cn/contextuality/</link>
+    <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/contextuality/</guid>
+    <description><![CDATA[太长不看版： “超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子]]></description>
+</item>
+<item>
     <title>位置测量的塌缩态</title>
     <link>http://example.com/zh-cn/position_measurement/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/photon_wave_packets/</guid>
     <description><![CDATA[一个波包可以对应一个光子 例：一个光子可以处于不同频率的相干叠加态中： $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$ ，此时该光子可以表现为一个波包。 你可以想象一个原子退激发产生一个光子]]></description>
-</item>
-<item>
-    <title>微分的四层理解</title>
-    <link>http://example.com/zh-cn/understanding_differentials/</link>
-    <pubDate>Wed, 13 Mar 2024 18:34:09 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/understanding_differentials/</guid>
-    <description><![CDATA[一 微分是无穷小？ 物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。 实际上，它确实不严谨，第二次数学危机就]]></description>
 </item>
 </channel>
 </rss>

@@ -69,7 +69,7 @@ $\begin{aligned} E_{l,p}(r,\varphi,z) = & \,E_0 \color{blue}{ \frac{w_0}{w(z)}\e
 正如旋转可以分解为振动的线性叠加，LG 模式也可以表示为 HG 模式的相干叠加。这和圆偏振可以分解为两个线偏振的叠加类似。
 
 ## 三、用 Q-Plate 操控自旋角动量和轨道角动量  
-2006 年提出的 q-plate [#ref\_4](#ref\_4)本质上就是一个光轴与位置有关的半波片，且光轴的角度 $\alpha$ 满足 $\alpha(r,\varphi) = q \varphi + \alpha_0$ 。其琼斯矩阵为 $\begin{bmatrix} \cos 2\alpha & \sin 2\alpha \\\\ \sin 2\alpha & -\cos 2\alpha \end{bmatrix}$ 。
+2006 年提出的 q-plate [[4]](#ref\_4)本质上就是一个光轴与位置有关的半波片，且光轴的角度 $\alpha$ 满足 $\alpha(r,\varphi) = q \varphi + \alpha_0$ 。其琼斯矩阵为 $\begin{bmatrix} \cos 2\alpha & \sin 2\alpha \\\\ \sin 2\alpha & -\cos 2\alpha \end{bmatrix}$ 。
 
 {{< figure src="image/qplate.jpg" title="q-plate 的光轴图案，图源 [4] " >}}
  

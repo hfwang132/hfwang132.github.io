@@ -4,7 +4,29 @@
         <link>http://example.com/tags/quantum-measurement-theory/</link>
         <description>Quantum Measurement Theory - Tag - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-measurement-theory/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-measurement-theory/" rel="self" type="application/rss+xml" /><item>
+    <title>The Collapsed State of Position Measurement</title>
+    <link>http://example.com/position_measurement/</link>
+    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/position_measurement/</guid>
+    <description><![CDATA[Common sense tells us that an actual position measurement will not produce a delta function, as the delta function itself is pathological. So what should the collapsed state of an actual position measurement look like?
+TL;DR:
+Let the wave function of the system to be measured be $\varphi(x)$, then the collapsed wave function is:
+$\varphi^{(q)}(x) = \mathcal{A}\psi(q-gx) \varphi(x)$
+where $\psi(x)$ is the initial wave function of the instrument&rsquo;s pointer. $q$ is the reading of the instrument&rsquo;s pointer.]]></description>
+</item>
+<item>
+    <title>The Difference Between Quantum Entanglement and Classical Correlation, and the Quantum Measurement Problem</title>
+    <link>http://example.com/classical_correlation/</link>
+    <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/classical_correlation/</guid>
+    <description><![CDATA[Many physicists use an example to explain quantum entanglement to the public:
+Imagine you have two boxes, one containing pizza and the other a burger. Before opening the boxes, you cannot know what is inside. Alice and Bob each take a box and move to distant locations. When Alice opens her box, she instantly knows what is in Bob&rsquo;s box far away.
+This example must be wrong&hellip; because it doesn&rsquo;t involve quantum mechanics at all.]]></description>
+</item>
+<item>
     <title>POVM: a brief introduction</title>
     <link>http://example.com/povm/</link>
     <pubDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</pubDate>

@@ -13,6 +13,14 @@
     <description><![CDATA[SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？ 我们先用极限思维，考虑两个极限： 极限1：放大器的增益等于1，也就是没]]></description>
 </item>
 <item>
+    <title>量子纠缠的速度是否超过光速？</title>
+    <link>http://example.com/zh-cn/contextuality/</link>
+    <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/contextuality/</guid>
+    <description><![CDATA[太长不看版： “超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子]]></description>
+</item>
+<item>
     <title>位置测量的塌缩态</title>
     <link>http://example.com/zh-cn/position_measurement/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/photon_wave_func/</guid>
     <description><![CDATA[光子有时空表象下的波函数： $\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$ 其中 $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$ 。 直观来看，就是让场算符 $E^{-}(\mathbf{r},t)$ 在时空点 $(\mathbf{r},t)$ 处创造一个态 $|\mathbf{r},t\rangle$ ，再求这个态和 $|\psi\rangle$ 之]]></description>
-</item>
-<item>
-    <title>复数对于描述电磁波有什么重要性？</title>
-    <link>http://example.com/zh-cn/complex_numbers_in_em/</link>
-    <pubDate>Fri, 16 Feb 2024 00:32:34 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/complex_numbers_in_em/</guid>
-    <description><![CDATA[在经典力学中，复数只是一个用来简化计算的数学技巧。 在量子力学中，复数不再只是一个数学技巧，而是有一定的物理意义。考虑经典矢势： $\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$]]></description>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Quantum Information - Tag - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/quantum-information/</link>
+        <description>Quantum Information - Tag - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:34:24 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-information/" rel="self" type="application/rss+xml" /><item>
+    <title>Does the Speed of Quantum Entanglement Exceed the Speed of Light?</title>
+    <link>http://example.com/contextuality/</link>
+    <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/contextuality/</guid>
+    <description><![CDATA[Too long; didn&rsquo;t read version:
+&ldquo;Spooky action at a distance (superluminal)&rdquo; is an outdated view. According to special relativity, there is no interaction between events at spacelike separation. The mainstream view in academia is to consider quantum states and measurement bases together as reality, known as contextuality. Nonlocality is a corollary of contextuality.
+Body:
+Discussing the &ldquo;speed&rdquo; of quantum entanglement is meaningless.
+If the distance between two measurement events a and b is spacelike, then a is neither in the past nor in the future of b.]]></description>
+</item>
+</channel>
+</rss>

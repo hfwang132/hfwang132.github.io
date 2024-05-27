@@ -4,7 +4,38 @@
         <link>http://example.com/tags/quantum-optics/</link>
         <description>Quantum Optics - Tag - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-optics/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-optics/" rel="self" type="application/rss+xml" /><item>
+    <title>Does the idle light passing through the optical fiber amplifier still entangle with the signal light?</title>
+    <link>http://example.com/spdc_optical_amp/</link>
+    <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/spdc_optical_amp/</guid>
+    <description><![CDATA[Does the idle light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?
+Let&rsquo;s consider two extremes:
+Extreme 1: The gain of the amplifier is equal to 1, that is, there is no gain at all.
+In this case, the amplifier acts as if it has done nothing and is an identity channel. So, of course, the entanglement will still be maintained. (Actually, it&rsquo;s not necessarily the case.]]></description>
+</item>
+<item>
+    <title>A Simple Quantum Description of Lasers</title>
+    <link>http://example.com/laser_quantum/</link>
+    <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/laser_quantum/</guid>
+    <description><![CDATA[This article aims to derive the coherent state of a laser from basic quantum dynamics.
+Consider the interaction between a two-level system and a single-mode light field, where the frequency of the light field equals the energy level difference.
+The two-level system initially starts in the excited state $|e\rangle$, and the light field is in the vacuum state $|0\rangle$.
+According to the Jaynes-Cummings model, even if the light field is in the vacuum state, spontaneous emission will occur.]]></description>
+</item>
+<item>
+    <title>Orbital Angular Momentum of Photons</title>
+    <link>http://example.com/oam/</link>
+    <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/oam/</guid>
+    <description><![CDATA[Preface A paper published in PRA in 1992 [1] pointed out that photons also have orbital angular momentum (OAM). Compared to spin angular momentum (i.e., polarization, SAM) which can only take $\pm \hbar$, orbital angular momentum can take any integer multiple of $\hbar$. Such orbital angular momentum can be carried by helical wavefronts.
+You might be surprised: did people only discover this in 1992? In fact, helical wavefronts had been studied before 1992; photons carrying angular momentum greater than $\hbar$ had already been predicted by atomic physics (though they originate from higher-order transition processes, which do not satisfy the selection rules and thus have very low probabilities, making them practically unobservable in experiments).]]></description>
+</item>
+<item>
     <title>Quantum state tomography - a beginner&#39;s guide</title>
     <link>http://example.com/state_tomography/</link>
     <pubDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</pubDate>
