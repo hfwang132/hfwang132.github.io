@@ -1,5 +1,5 @@
 ---
-title: "A Simple Quantum Description of Lasers"
+title: "A simple quantum description of lasers"
 date: 2024-05-27T17:42:31+08:00
 draft: false
 tags: ["Quantum Optics"]

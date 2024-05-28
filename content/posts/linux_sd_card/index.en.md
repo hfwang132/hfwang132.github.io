@@ -1,5 +1,5 @@
 ---
-title: "Partitioning and Formatting SD Cards with Linux"
+title: "Partitioning and formatting SD cards on Linux"
 date: 2023-06-12T22:43:36+08:00
 draft: false
 categories: ["EECS"]

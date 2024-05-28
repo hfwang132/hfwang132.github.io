@@ -26,7 +26,7 @@ After increase the swapfile, the system performance has improved a lot:
 1 2 3 4 sudo swapoff /swapfile sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 sudo mkswap /swapfile sudo swapon /swapfile ]]></description>
 </item>
 <item>
-    <title>Partitioning and Formatting SD Cards with Linux</title>
+    <title>Partitioning and formatting SD cards on Linux</title>
     <link>http://example.com/linux_sd_card/</link>
     <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
     <author>hfwang132</author>

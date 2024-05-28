@@ -1,5 +1,5 @@
 ---
-title: "Wave Function of Photons"
+title: "Wave function of photons"
 date: 2024-03-10T02:21:37+08:00
 draft: false
 tags: ["Quantum Optics"]

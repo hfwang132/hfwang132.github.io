@@ -16,7 +16,7 @@ Extreme 1: The gain of the amplifier is equal to 1, that is, there is no gain at
 In this case, the amplifier acts as if it has done nothing and is an identity channel. So, of course, the entanglement will still be maintained. (Actually, it&rsquo;s not necessarily the case.]]></description>
 </item>
 <item>
-    <title>A Simple Quantum Description of Lasers</title>
+    <title>A simple quantum description of lasers</title>
     <link>http://example.com/laser_quantum/</link>
     <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
     <author>hfwang132</author>
@@ -27,7 +27,7 @@ The two-level system initially starts in the excited state $|e\rangle$, and the 
 According to the Jaynes-Cummings model, even if the light field is in the vacuum state, spontaneous emission will occur.]]></description>
 </item>
 <item>
-    <title>Orbital Angular Momentum of Photons</title>
+    <title>Orbital angular momentum of photons</title>
     <link>http://example.com/oam/</link>
     <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
     <author>hfwang132</author>
@@ -64,7 +64,7 @@ In this section, let&rsquo;s see what the quantum second-order correlation funct
     <description><![CDATA[HBT Experiment Those who have conducted quantum optics experiments must be familiar with the Hanbury Brown and Twiss (HBT) experiment, which can be used to measure the second-order correlation function g2. In this experiment, a beam of light is split into two using a 50:50 beamsplitter, and then each beam is detected separately by two detectors. The correlation of the intensities on both sides is measured as a function of delay, as shown in the figure below:]]></description>
 </item>
 <item>
-    <title>Wave Function of Photons</title>
+    <title>Wave function of photons</title>
     <link>http://example.com/photon_wave_func/</link>
     <pubDate>Sun, 10 Mar 2024 02:21:37 &#43;0800</pubDate>
     <author>hfwang132</author>

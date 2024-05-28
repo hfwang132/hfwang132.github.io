@@ -1,5 +1,5 @@
 ---
-title: "How Are Creation and Annihilation Operators Derived?"
+title: "How are creation and annihilation operators derived?"
 date: 2024-05-27T17:47:25+08:00
 draft: false
 tags: ["Mathematical Methods in Physics"]

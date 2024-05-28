@@ -1,5 +1,5 @@
 ---
-title: "The Collapsed State of Position Measurement"
+title: "The collapsed state of position measurement"
 date: 2024-05-27T17:49:27+08:00
 draft: false
 tags: ["Quantum Measurement Theory"]

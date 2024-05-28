@@ -5,7 +5,7 @@
         <description>Python - Tag - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
             <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/python/" rel="self" type="application/rss+xml" /><item>
-    <title>Polling Jupyter Widget UI Events in Runtime</title>
+    <title>Polling Jupyter widget UI events in runtime</title>
     <link>http://example.com/ui_poll/</link>
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
     <author>hfwang132</author>

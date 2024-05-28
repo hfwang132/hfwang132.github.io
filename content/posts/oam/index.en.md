@@ -1,5 +1,5 @@
 ---
-title: "Orbital Angular Momentum of Photons"
+title: "Orbital angular momentum of photons"
 date: 2024-05-27T17:35:05+08:00
 draft: false
 tags: ["Quantum Optics"]

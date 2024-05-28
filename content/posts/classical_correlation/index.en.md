@@ -1,5 +1,5 @@
 ---
-title: "The Difference Between Quantum Entanglement and Classical Correlation, and the Quantum Measurement Problem"
+title: "The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem"
 date: 2024-05-27T17:33:11+08:00
 draft: false
 tags: ["Quantum Measurement Theory"]

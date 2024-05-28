@@ -1,5 +1,5 @@
 ---
-title: "Polling Jupyter Widget UI Events in Runtime"
+title: "Polling Jupyter widget UI events in runtime"
 date: 2023-07-01T17:48:54+08:00
 draft: false
 categories: ["CS"]

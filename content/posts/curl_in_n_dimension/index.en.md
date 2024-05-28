@@ -1,5 +1,5 @@
 ---
-title: "Curl in high dimension"
+title: "Curl in high dimensions"
 date: 2023-06-10T10:55:34+08:00
 draft: false
 categories: ["Mathematical Physics"]

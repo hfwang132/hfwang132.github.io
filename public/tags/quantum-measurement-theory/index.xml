@@ -5,7 +5,7 @@
         <description>Quantum Measurement Theory - Tag - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
             <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-measurement-theory/" rel="self" type="application/rss+xml" /><item>
-    <title>The Collapsed State of Position Measurement</title>
+    <title>The collapsed state of position measurement</title>
     <link>http://example.com/position_measurement/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
     <author>hfwang132</author>
@@ -17,7 +17,7 @@ $\varphi^{(q)}(x) = \mathcal{A}\psi(q-gx) \varphi(x)$
 where $\psi(x)$ is the initial wave function of the instrument&rsquo;s pointer. $q$ is the reading of the instrument&rsquo;s pointer.]]></description>
 </item>
 <item>
-    <title>The Difference Between Quantum Entanglement and Classical Correlation, and the Quantum Measurement Problem</title>
+    <title>The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem</title>
     <link>http://example.com/classical_correlation/</link>
     <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
     <author>hfwang132</author>

@@ -1,5 +1,5 @@
 ---
-title: "Does the Speed of Quantum Entanglement Exceed the Speed of Light?"
+title: "Does the speed of quantum entanglement exceed the speed of light?"
 date: 2024-05-27T18:34:24+08:00
 draft: false
 tags: ["Quantum Information"]
