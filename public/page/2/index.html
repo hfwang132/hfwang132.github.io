@@ -138,6 +138,42 @@
                 </div>
                 &nbsp; 切换语言~
             </div><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/spi/">HW & SW design of the AXI Quad SPI IP core</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-07-01">2023-07-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/eecs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>EECS</a></span></div><div class="content">1 Basics SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - SS (Slave Select), SCK (SPI Clock), and MOSI (Master-In-Slave-Out). The four wire mode has an extra line called MISO (Master-In-Slave-Out).
+Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Master-In-Slave-Out SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle.</div><div class="post-footer">
+        <a href="/spi/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/spi/">SPI</a>,&nbsp;<a href="/tags/embedded-systems/">Embedded Systems</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/ui_poll/">Polling Jupyter widget UI events in runtime</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-07-01">2023-07-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>CS</a></span></div><div class="content">Let&rsquo;s look at a code snippet in the Jupyter Notebook:
+1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) IntSlider is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.
+However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.</div><div class="post-footer">
+        <a href="/ui_poll/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/jupyter-notebook/">Jupyter Notebook</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/python_asyncio/">Python coroutines and asyncio</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-06-13">2023-06-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>CS</a></span></div><div class="content">Recently, I have been using Python coroutines/asynchronous programming in a project. Now, I will summarize my experience.
+Import 1 import asyncio If asyncio is to be used in an IPython environment, we have to add two more lines：
+1 2 3 import nest_asyncio nest_asyncio.apply() import asyncio Coroutines Coroutines are the core of asynchronous programming in Python. To define a coroutine, you need to use async def.
+1 2 3 async def main(): # do something print(&#34;Hello world!</div><div class="post-footer">
+        <a href="/python_asyncio/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/python/">Python</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/boards_networking/">Access the Internet from evaluation boards via PC</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-06-12">2023-06-12</time></span>&nbsp;<span class="post-category">included in <a href="/categories/eecs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>EECS</a></span></div><div class="content">Windows Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to 192.168.137.1 (this is the default behavior in Windows).
+Then, set the gateway as 192.168.137.1 in the terminal of the development board:
+sudo route add default gw 192.168.137.1
+Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):</div><div class="post-footer">
+        <a href="/boards_networking/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/networking/">Networking</a>,&nbsp;<a href="/tags/linux/">Linux</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/increase_swapfile/">Increasing the swapfile for Linux</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-06-12">2023-06-12</time></span>&nbsp;<span class="post-category">included in <a href="/categories/cs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>CS</a></span></div><div class="content">Xilinx&rsquo;s toolchain consumes soooo much memory! Sometimes it causes the system to freeze&hellip; After all, my laptop only has 8GB of RAM. So there&rsquo;s no other choice but to add virtual memories.
+After increase the swapfile, the system performance has improved a lot:
+1 2 3 4 sudo swapoff /swapfile sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 sudo mkswap /swapfile sudo swapon /swapfile </div><div class="post-footer">
+        <a href="/increase_swapfile/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/storage/partition/">Storage/Partition</a>,&nbsp;<a href="/tags/linux/">Linux</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/linux_sd_card/">Partitioning and formatting SD cards on Linux</a>
     </h1><div class="post-meta"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-06-12">2023-06-12</time></span>&nbsp;<span class="post-category">included in <a href="/categories/eecs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>EECS</a></span></div><div class="content">To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.
 The main commands are as follows:

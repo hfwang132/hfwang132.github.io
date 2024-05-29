@@ -83,6 +83,16 @@ Imagine you have two boxes, one containing pizza and the other a burger. Before 
 This example must be wrong&hellip; because it doesn&rsquo;t involve quantum mechanics at all.]]></description>
 </item>
 <item>
+    <title>A beginner&#39;s guide to quantum metrology</title>
+    <link>http://example.com/quantum_metrology/</link>
+    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/quantum_metrology/</guid>
+    <description><![CDATA[I. Introduction to Quantum Metrology Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.
+The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.
+Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.]]></description>
+</item>
+<item>
     <title>Quantum state tomography - a beginner&#39;s guide</title>
     <link>http://example.com/state_tomography/</link>
     <pubDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</pubDate>
@@ -93,25 +103,14 @@ Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corre
 In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, given $p_k$ and $\Pi_k$, find $\rho$.]]></description>
 </item>
 <item>
-    <title>Understanding differentials in four levels</title>
-    <link>http://example.com/understanding_differentials/</link>
-    <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
+    <title>What is the relationship between photons and electromagnetic field wave packets?</title>
+    <link>http://example.com/photon_wave_packets/</link>
+    <pubDate>Sat, 13 Apr 2024 16:10:38 &#43;0800</pubDate>
     <author>hfwang132</author>
-    <guid>http://example.com/understanding_differentials/</guid>
-    <description><![CDATA[One Differential is an Infinitesimal? Physicists like to think of differentials as very small quantities, which is convenient for calculations but gives a feeling of lack of rigor.
-In fact, it is indeed lacking rigor, and the second mathematical crisis arose from this.
-Rigor and clarity are always complementary. Treating differentials as infinitesimal satisfies intuition but cannot withstand rational scrutiny.
-Two Differential as Linear Function I like to think of differentials as a machine, for example,]]></description>
-</item>
-<item>
-    <title>Probing the spectral purity with unheralded g2 measurements in HBT experiment</title>
-    <link>http://example.com/hbt_spectral_correlation/</link>
-    <pubDate>Sun, 10 Mar 2024 02:22:34 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/hbt_spectral_correlation/</guid>
-    <description><![CDATA[In the previous section, we discussed the principle of measuring the quantum second-order correlation function with a non-photon-number-resolving single-photon detector in the HBT experiment.
-https://zhuanlan.zhihu.com/p/679453473
-In this section, let&rsquo;s see what the quantum second-order correlation function is used for. In addition to the common uses such as distinguishing between super-Poissonian statistics/Poissonian statistics/sub-Poissonian statistics and distinguishing between photon bunching/anti-bunching, the HBT experiment can also be used to measure the spectral purity of multimode squeezed states.]]></description>
+    <guid>http://example.com/photon_wave_packets/</guid>
+    <description><![CDATA[A wave packet can correspond to a photon Example: A photon can be in a coherent superposition state of different frequencies: $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$, at which point the photon can behave as a wave packet.
+You can imagine an atom de-exciting and emitting a photon, and this photon will indeed behave as a wave packet.
+Some may argue: excluding various non-ideal factors, the linewidth of this photon only depends on natural broadening (lifetime), making it look like a single frequency, thus poorly localized, and not considered a wave packet.]]></description>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,27 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Symmetry - Tag - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/symmetry/</link>
+        <description>Symmetry - Tag - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jan 2024 23:49:29 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/symmetry/" rel="self" type="application/rss+xml" /><item>
+    <title>Since Parseval&#39;s Theorem for the Fourier Transform Represents a Conservation Law, What Symmetry Corresponds to It?</title>
+    <link>http://example.com/parseval/</link>
+    <pubDate>Fri, 26 Jan 2024 23:49:29 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/parseval/</guid>
+    <description><![CDATA[Link: [https://www.zhihu.com/question/640869828/answer/3373753127]
+Here is a preliminary exploration.
+Fourier-Plancherel Operator Define the Fourier-Plancherel operator $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ as:
+$(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$
+It is actually a unitary operator:
+$\mathcal{F}^\dag\mathcal{F}=\mathbb{I}_{L^2(\mathbb{R})}$
+And Parseval&rsquo;s theorem is merely a restatement of this fact:
+$\langle\varphi \mathcal{F}^\dag|\mathcal{F\varphi}\rangle=\langle\varphi|\mathcal{F}^\dag\mathcal{F}|\varphi\rangle=\langle\varphi|\varphi\rangle=1$
+Does this theorem involve any conservation of physical quantities?
+Of course, I can also say the conservation associated with the &ldquo;identity operator&rdquo; (that is, conservation of probability).
+$\langle\varphi|\mathcal{F}^\dag\mathbb{I}_{L^2(\mathbb{R})}\mathcal{F}|\varphi\rangle=\langle\varphi|\mathbb{I}_{L^2(\mathbb{R})}|\varphi\rangle=1$
+This is because $[\mathcal{F},\mathbb{I}_{L^2(\mathbb{R})}]=0$ .]]></description>
+</item>
+</channel>
+</rss>

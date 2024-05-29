@@ -2,7 +2,7 @@
 title: "量子计量学（Quantum Metrology）简明入门"
 date: 2024-04-23T19:05:46+08:00
 draft: false
-tags: ["量子计量"]
+tags: ["量子计量学"]
 categories: ["量子信息"]
 ---
 

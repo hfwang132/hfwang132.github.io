@@ -16,6 +16,16 @@ Rigor and clarity are always complementary. Treating differentials as infinitesi
 Two Differential as Linear Function I like to think of differentials as a machine, for example,]]></description>
 </item>
 <item>
+    <title>What is the relationship between Lie derivative and covariant derivative?</title>
+    <link>http://example.com/lie_derivative/</link>
+    <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/lie_derivative/</guid>
+    <description><![CDATA[I. Differences and Similarities in Properties Lie derivative $\mathcal{L}_V$ and covariant derivative $\nabla_V$ share many common points:
+Both $\mathcal{L}_V$ and $\nabla_V$ preserve the type of tensors, mapping $\mathcal{T}^p_q(M)$ to $\mathcal{T}^p_q(M)$. $\mathcal{T}^p_q(M)$ represents the set of all smooth tensor fields of type (p, q) on $M$. Particularly, for (0,0) type tensor fields, i.e., scalar fields $f\in \mathcal{F}(M)$, we have $\mathcal{L}_V f=\nabla_V f=Vf$.
+Both satisfy linearity and the Leibniz rule: $ \begin{aligned} \mathcal{L}_V(\mu A + \lambda B) &amp;= \mu \mathcal{L}_V A + \lambda \mathcal{L}_V B, \\ \mathcal{L}_V (A \otimes B) &amp;= (\mathcal{L}_V A)\otimes B + A \otimes (\mathcal{L}_V B) \end{aligned} $]]></description>
+</item>
+<item>
     <title>A beginner&#39;s guide to differential geometry and Lie algebras</title>
     <link>http://example.com/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>

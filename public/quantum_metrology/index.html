@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>A beginner&#39;s guide to quantum metrology - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="A beginner&#39;s guide to quantum metrology" />
+<meta property="og:description" content="I. Introduction to Quantum Metrology Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.
+The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.
+Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.com/quantum_metrology/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-23T19:05:46+08:00" />
+<meta property="article:modified_time" content="2024-04-23T19:05:46+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="A beginner&#39;s guide to quantum metrology"/>
+<meta name="twitter:description" content="I. Introduction to Quantum Metrology Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.
+The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.
+Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e."/>
+<meta name="application-name" content="Haifei&#39;s Home">
+<meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/quantum_metrology/" /><link rel="prev" href="http://example.com/state_tomography/" /><link rel="next" href="http://example.com/classical_correlation/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A beginner's guide to quantum metrology",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.com\/quantum_metrology\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "Quantum Metrology","wordcount":  3449 ,
+        "url": "http:\/\/example.com\/quantum_metrology\/","datePublished": "2024-04-23T19:05:46+08:00","dateModified": "2024-04-23T19:05:46+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/example.com\/images\/avatar.png",
+                    "width":  1400 ,
+                    "height":  1400 
+                }},"author": {
+                "@type": "Person",
+                "name": "hfwang132"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/cv/"> CV </a><a class="menu-item" href="/publication/"> Publication </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="Select Language">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/quantum_metrology/" selected>English</option><option value="/zh-cn/quantum_metrology/">简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/cv/" title="">CV</a><a class="menu-item" href="/publication/" title="">Publication</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/quantum_metrology/" selected>English</option><option value="/zh-cn/quantum_metrology/">简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">A beginner's guide to quantum metrology</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="../../about" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>hfwang132</a></span>&nbsp;<span class="post-category">included in <a href="/categories/quantum-information/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Quantum Information</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-04-23">2024-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3449 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;17 minutes&nbsp;<span id="/quantum_metrology/" class="leancloud_visitors" data-flag-title="A beginner&#39;s guide to quantum metrology">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-introduction-to-quantum-metrology">I. Introduction to Quantum Metrology</a></li>
+    <li><a href="#ii-maximum-likelihood-estimation">II. Maximum Likelihood Estimation</a></li>
+    <li><a href="#iii-fisher-information-and-cr-lower-bound">III. Fisher Information and CR Lower Bound</a></li>
+    <li><a href="#iv-quantum-fisher-information-and-quantum-cr-bound">IV. Quantum Fisher Information and Quantum CR Bound</a></li>
+    <li><a href="#v-quantum-phase-estimation">V. Quantum Phase Estimation</a>
+      <ul>
+        <li><a href="#51-two-level-systems">5.1 Two-Level Systems</a></li>
+        <li><a href="#52-harmonic-oscillator-systems">5.2 Harmonic Oscillator Systems</a></li>
+        <li><a href="#521-number-state">5.2.1 Number State</a></li>
+        <li><a href="#522-coherent-state">5.2.2 Coherent State</a></li>
+      </ul>
+    </li>
+    <li><a href="#vi-quantum-imaging-and-quantum-illumination">VI. Quantum Imaging and Quantum Illumination</a></li>
+    <li><a href="#vii-other-quantum-parameter-estimation-problems">VII. Other Quantum Parameter Estimation Problems</a>
+      <ul>
+        <li><a href="#71-gain-sensing">7.1 Gain Sensing</a></li>
+        <li><a href="#72-noise-sensing">7.2 Noise Sensing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="i-introduction-to-quantum-metrology">I. Introduction to Quantum Metrology</h2>
+<p>Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.</p>
+<p>The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.</p>
+<p>Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.g., weighing oneself). However, in high-precision imaging and various high-precision scientific experiments, people have indeed approached the Heisenberg Limit.</p>
+<blockquote>
+<p><strong>Gravitational Waves</strong>: <strong>LIGO</strong> (Light Interferometer Gravitational-wave Observatory) is an optical interferometer used to detect gravitational waves. It can detect changes in the length of the interference arms down to $10^{-19}$ m, which is one ten-thousandth the size of a proton and one billionth the wavelength of light. At this insane level of precision, LIGO uses the <strong>squeezed state</strong> of the light field to reduce quantum noise.</p>
+</blockquote>
+<p>Of course, quantum noise does not only appear in extreme cases like LIGO. Below are two examples related to imaging.</p>
+<blockquote>
+<p><strong>Shot Noise</strong>: You have certainly used a CMOS camera. Have you noticed that when the environment is dark, the photos you take have a lot of noise? This is caused by <strong>shot noise</strong>.</p>
+<p>What is shot noise? The electrons excited by photons come one by one, and their generation follows a Poisson distribution (completely random generation time), with the relative variance inversely proportional to the average number of electrons. This variance is the shot noise.</p>
+<p>Therefore, when the number of electrons is small, their relative variance is large, resulting in a low signal-to-noise ratio (SNR) and causing noise to appear.</p>
+<p>Shot noise is given by the particle-number-phase uncertainty principle. However, due to historical reasons, it is not called the Heisenberg Limit but the shot noise limit or the standard quantum limit, distinguishing it from the Heisenberg Limit.</p>
+</blockquote>
+<blockquote>
+<p><strong>Diffraction Limit</strong>: Imaging precision is measured not only in time (i.e., signal-to-noise ratio) but also in space (i.e., the number of pixels). If we infinitely increase the number of pixels, can we achieve infinite precision?</p>
+<p>If you have studied optics, you know this is impossible due to the <strong>diffraction limit</strong>.</p>
+<p>In fact, the diffraction limit is a type of Heisenberg Limit because it corresponds to a momentum-position uncertainty. If we need more accurate positioning, the diffraction limit tells us that without changing the wavelength, we need to increase the aperture size. From the perspective of the Heisenberg principle, this is because photons entering the aperture at different angles have different momenta, and this momentum information is lost at the moment of imaging. The more momentum information lost, the more accurate the photon&rsquo;s position measurement. Conversely, to reduce the wavelength without changing the aperture size, we need to decrease the wavelength, as smaller wavelengths correspond to larger momenta, and a larger momentum range received by the same aperture.</p>
+</blockquote>
+<p>These examples are quite interesting. I hope you enjoy them. Of course, even more interesting is to come: what mathematical tools do people use to characterize quantum noise? How do people design quantum states to achieve the Heisenberg Limit? After reading this article, you will have a deeper understanding of these issues and complete your introduction to quantum metrology.</p>
+<h2 id="ii-maximum-likelihood-estimation">II. Maximum Likelihood Estimation</h2>
+<p>What is measurement? First, we need to define measurement. Note that measuring the same physical quantity always gives a series of different results with certain probabilities (whether in classical or quantum physics). We usually take the average of these results as the final result.</p>
+<p>Thus, the measurement process actually gives a series of <strong>random variables</strong> (i.e., individual measurement results), and we construct <strong>statistics</strong> (i.e., functions of random variables) like the average to estimate the physical quantity itself. We call this statistic an estimator.</p>
+<p>This estimator is also a random variable with its own mean and variance. We refer to the estimator&rsquo;s value as the measurement result, and its variance as the measurement error. The relative error is the error divided by the mean; the measurement precision is the reciprocal of the relative error.</p>
+<p>At this point, we have defined the measurement process, which is essentially a <strong>parameter estimation</strong> problem:</p>
+<blockquote>
+<p><strong>Parameter Estimation</strong>: Given a probability density function $p(\mathbf{x};\theta)$, where $\mathbf{x}$ is the measurement result and $\theta$ is the physical quantity to be measured (a parameter of the probability density function rather than its variable), construct an estimator $\hat{\theta} = \hat{\theta}(\mathbf{x})$ such that its mean is equal to or close to the parameter (unbiasedness) and its variance is as small as possible (efficiency). Additionally, there is an implicit condition: we require that as the sample size increases, the estimator approaches the true parameter value (consistency).</p>
+</blockquote>
+<blockquote>
+<p><strong>Unbiasedness</strong>: Unbiasedness means that $\mathbb{E}(\hat{\theta}(X)) = \theta$, i.e., the mean of the estimator equals the true value of the parameter.</p>
+</blockquote>
+<blockquote>
+<p><strong>Efficiency</strong>: How do we measure efficiency? We will introduce it later, but the variance of the estimator has a CR lower bound: $(\Delta \hat{\theta})^2 \ge \frac{1}{F(\theta)}$, where $F(\theta)$ is called Fisher information. Efficiency can be measured by $F(\theta)/(\Delta \hat{\theta})^2 \le 1$. When $F(\theta)/(\Delta \hat{\theta})^2 = 1$, meaning the lower bound is reached, we call the statistic efficient.</p>
+</blockquote>
+<blockquote>
+<p><strong>Consistency</strong>: Consistency requires $\lim_{n\rightarrow \infty} P(|\hat{\theta} - \theta|&gt;\epsilon) = 0$ for any positive number $\epsilon &gt; 0$. Here, $n$ is the number of samples. This is also called convergence in probability: $\operatorname{plim}_{n\rightarrow \infty} \hat{\theta} = \theta$.</p>
+</blockquote>
+<p>The most commonly used method in statistics for dealing with parameter estimation problems is Maximum Likelihood Estimation (MLE). The idea is simple: find a parameter such that, under this parameter, the probability of obtaining the observed results is the highest.</p>
+<p>The specific steps are also simple:</p>
+<blockquote>
+<p><strong>Maximum Likelihood Estimation</strong>: Let the likelihood function $f(\theta; \mathbf{x}) = p(\mathbf{x}; \theta)$, and find its maximum point $\hat{\theta}(\mathbf{x}) = \operatorname{arg,max} f(\theta; \mathbf{x})$.</p>
+<p>$\hat{\theta}(\mathbf{X})$ is the estimator given by maximum likelihood estimation.</p>
+<p>In practice, people often take the logarithm of the likelihood function to simplify calculations, i.e., $\log f(\theta; \mathbf{x})$, called the log-likelihood function.</p>
+</blockquote>
+<p>In fact, maximum likelihood estimation usually does not satisfy unbiasedness, but people still favor it. This is because maximum likelihood estimation is always asymptotically efficient (variance reaches the CR lower bound as the sample size tends to infinity) and asymptotically unbiased (the mean of the estimator tends to the true parameter value as the sample size increases).</p>
+<p>In quantum measurements, maximum likelihood estimation is also used in most cases. Therefore, this article will focus on maximum likelihood estimation.</p>
+<blockquote>
+<p>Other parameter estimation methods include Bayesian estimation and method of moments. These, along with maximum likelihood estimation, form the three most important parameter estimation methods.</p>
+</blockquote>
+<h2 id="iii-fisher-information-and-cr-lower-bound">III. Fisher Information and CR Lower Bound</h2>
+<p>The likelihood function is the core of maximum likelihood estimation. Let&rsquo;s see what quantities can be derived from the likelihood function.</p>
+<p>First, we get a quantity called the Score Function, which is the derivative of the log-likelihood function with respect to the true parameter value:</p>
+<blockquote>
+<p><strong>Score Function</strong>: The Score Function $s(\theta; \mathbf{x})$ is defined as:</p>
+<p>$s(\theta; \mathbf{x}) = \frac{\partial}{\partial \theta} \log f(\theta; \mathbf{x})$,</p>
+<p>where $f(\theta; \mathbf{x})$ is the likelihood function.</p>
+</blockquote>
+<p>Its meaning is also clear: it indicates the impact of changes in the parameter value on the likelihood function. If the derivative is positive, the parameter value needs to increase because increasing the parameter value increases the likelihood function (i.e., the probability is higher). Conversely, if the derivative is negative, the parameter value needs to decrease. When is the parameter value ideal? Of course, it is when the derivative is zero. This is easy to understand: the derivative of the likelihood function at its maximum point is zero.</p>
+<p>Of course, the derivative being zero is only a necessary condition, not a sufficient condition. To ensure that the zero point of the likelihood function&rsquo;s derivative corresponds to a maximum, the second derivative needs to be negative. Hence, we define Fisher Information:</p>
+<blockquote>
+<p><strong>Fisher Information</strong>: Fisher Information is the expectation (with respect to the random variable $X$) of the negative second derivative of the log-likelihood function (with respect to the parameter $\theta$):</p>
+<p>$F(\theta) = \mathbb{E}\left(-\frac{\partial^2}{\partial \theta^2} f(\theta, X)\right)$</p>
+<p>It can actually be proven that Fisher Information is always non-negative. Therefore, setting the derivative of the likelihood function to zero always yields a maximum value. In fact, Fisher Information can also be expressed using the square of the first derivative, so it is certainly non-negative:</p>
+<p>$F(\theta) = \mathbb{E}\left[\left(\frac{\partial}{\partial \theta} f(\theta, X)\right)^2\right]$ (proof omitted).</p>
+</blockquote>
+<blockquote>
+<p><strong>Significance of Fisher Information</strong>: The significance of Fisher Information is the sensitivity of the likelihood function to the parameter near its maximum.</p>
+<p>Intuitively, the more sensitive the likelihood function is, the more efficient our estimate is. Because when the likelihood function is sensitive to the parameter, a small change in the parameter causes a sharp decrease in the likelihood function, allowing us to determine the parameter with high confidence. Conversely, if the likelihood function is not sensitive to the parameter, we cannot narrow down the parameter to a small range because the parameter can vary over a wide range without significantly decreasing the likelihood function.</p>
+</blockquote>
+<p>Understanding the significance of Fisher Information, we can quickly understand the Cramér-Rao Bound:</p>
+<blockquote>
+<p><strong>Cramér-Rao Bound</strong>: The variance of an unbiased estimator has the following lower bound:</p>
+<p>$(\Delta \theta)^2 \ge \frac{1}{F(\theta)}$</p>
+<p>where $F(\theta)$ is Fisher Information. This is called the Cramér-Rao Bound.</p>
+</blockquote>
+<p>This essentially quantifies the significance of Fisher Information into an inequality. The larger the Fisher Information, the more sensitive the likelihood function is to the parameter, and the smaller the variance of the parameter estimator can be. Conversely, the smaller the Fisher Information, the less sensitive the likelihood function is to the parameter, and the larger the variance of the parameter estimator will be.</p>
+<p>So far, the maximum likelihood estimation, Fisher Information, and CR lower bound we have introduced have nothing to do with quantum mechanics, but they are necessary foundations. In the next section, we will introduce quantum Fisher Information and quantum CR lower bound, and apply them to quantum measurements.</p>
+<h2 id="iv-quantum-fisher-information-and-quantum-cr-bound">IV. Quantum Fisher Information and Quantum CR Bound</h2>
+<p>In this section, we will apply all the statistical concepts mentioned in the previous section to quantum mechanics. This is possible because quantum measurements can also be described using probability theory.</p>
+<p>First, we need a probability density function. In quantum mechanics, given a state and a POVM, we can obtain a probability density function:</p>
+<blockquote>
+<p><strong>Probability Density Function</strong>: $p_{\rho}^{E}(x)=\operatorname{tr}[\rho E(x)]$, where $\rho$ is the quantum state being measured, $E(x)$ is the POVM, satisfying $\sum_{x\in X} E(x) = \mathbb{I}$, where $X$ is the set of all possible measurement results, and $\mathbb{I}$ is the identity operator.</p>
+</blockquote>
+<p>In quantum mechanics, the physical quantity we want to measure is encoded in the quantum state, i.e., $\rho(\theta)$, so the likelihood function is:</p>
+<blockquote>
+<p><strong>Likelihood Function</strong>: $f^{E}(\theta; x) = p_{\rho(\theta)}^{E}(x) = \operatorname{tr}[\rho(\theta) E(x)]$</p>
+</blockquote>
+<p>Note that this likelihood function depends on the POVM $E$. For each POVM, we have a likelihood function.</p>
+<p>Taking the negative second derivative of the likelihood function and taking the expectation value, we get the Fisher information as follows:</p>
+<blockquote>
+<p><strong>Fisher Information</strong>: $F^{E}(\theta) = \mathbb{E}\left[(\frac{\partial}{\partial \theta} f^{E}(\theta; X))^2\right]$</p>
+</blockquote>
+<p>Note that <strong>Fisher Information</strong> depends not only on the parameter $\theta$ but also on the selected POVM, i.e., the chosen measurement method.</p>
+<p>Now we can define quantum Fisher information, which is the largest among the Fisher information corresponding to different POVMs.</p>
+<blockquote>
+<p><strong>Quantum Fisher Information</strong>: $F(\theta) = \sup_{E\in \mathsf{E}} F^{E}(\theta)$, where $\mathsf{E}$ is the set of all POVMs. In other words, quantum Fisher information is the supremum of classical Fisher information.</p>
+</blockquote>
+<p>So far, we have only given a series of definitions and have not obtained any new results. Next, we will further restrict the problem to hope to get some useful results.</p>
+<p>We restrict the form of $\rho(\theta)$. The parameter $\theta$ is usually encoded in a unitary process: $U = e^{-iH\theta}$. Applying this unitary process to a state $\rho_0$, we get $\rho(\theta) = e^{-iH\theta}\rho_0 e^{iH\theta}$. Here $\rho_0$ can also be called a probe state.</p>
+<blockquote>
+<p><strong>Why Unitary Encoding</strong> Here we give an example. If we want to know the phase difference introduced by a birefringent crystal between H and V polarized light, we need to consider the transformation $e^{i\frac{Z}{2}\theta} = \begin{bmatrix} e^{i\theta/2} &amp; 0 \\ 0 &amp; e^{-i\theta/2} \end{bmatrix}$, where $Z$ is the Pauli Z matrix.</p>
+<p>If the Hilbert space is not just a two-level system (a qubit) but can be larger (qudit or multiple qubits), the unitary transformation acting on the state vector is a larger unitary transformation that can always be diagonalized as $\sum_{k} e^{i\theta_k} |k\rangle\langle k|$.</p>
+<p>In other words, its eigenvalues are always complex numbers with a modulus of one. Therefore, the important information is the phase of these complex numbers. How to design measurement circuits to detect these phases is the problem of Quantum Phase Estimation. Quantum Phase Estimation is a fundamental and important algorithm primitive in quantum computing.</p>
+</blockquote>
+<p>Next, let&rsquo;s look at the derivative of $\rho(\theta)$. Those familiar with quantum mechanics should be familiar with it, and the result will have a commutator:</p>
+<blockquote>
+<p>$\frac{\partial}{\partial \theta} \rho(\theta) = i[\rho, H]$</p>
+</blockquote>
+<p>But there is actually another derivative representation called the Symmetric Logarithmic Derivative (SLD):</p>
+<blockquote>
+<p><strong>Symmetric Logarithmic Derivative (SLD)</strong>: $\frac{\partial}{\partial \theta} \rho(\theta) = \frac{1}{2}\{\rho, L_{\rho}(H)\} = \frac{1}{2}[\rho L_{\rho}(H) + L_{\rho}(H) \rho]$</p>
+</blockquote>
+<p>where $L_{\rho}(H)$ is defined as the operator satisfying $\frac{1}{2}\{\rho, L_{\rho}(H)\} = i[\rho, H]$. Its explicit form is</p>
+<blockquote>
+<p><strong>Explicit Form of SLD</strong>: $L_{\rho}(H) = 2i\sum_{k,l} \frac{\lambda_k - \lambda_l}{\lambda_k + \lambda_l} \langle k | H | l \rangle | k \rangle\langle l |$, where $\lambda_k$ and $|k\rangle$ are the eigenvalues and eigenvectors of $\rho$, respectively. The reader can verify this easily using the definition.</p>
+</blockquote>
+<p>Why define SLD? Because SLD is very useful in calculating quantum Fisher information. Next, let&rsquo;s derive the quantum Fisher information and quantum CR bound.</p>
+<p>Earlier, we mentioned that for a POVM $E$, Fisher information is: $F^{E}(\theta) = \mathbb{E}\left[(\frac{\partial}{\partial \theta} f^{E}(\theta; X))^2\right]$. Now we substitute all the formulas:</p>
+<blockquote>
+<p>$\begin{aligned}
+F^{E}(\theta) &amp;= \mathbb{E}\left[\left(\frac{\partial}{\partial \theta} f^{E}(\theta; X)\right)^2\right] \\
+&amp;= \mathbb{E}\left[\frac{1}{p^{E}(X; \theta)^2}\left(\frac{\partial}{\partial \theta} p^{E}(X; \theta)\right)^2\right] \\
+&amp;= \sum_{x\in X}\frac{p^{E}(x; \theta)}{p^{E}(x; \theta)^2}\left(\frac{\partial}{\partial \theta} p^{E}(x; \theta)\right)^2 \\
+&amp;= \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]}\left(\frac{\partial}{\partial \theta} \operatorname{tr}[\rho E(x)] \right)^2 \\
+&amp;= \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]}\left( \operatorname{tr}\left[\frac{\partial \rho}{\partial \theta} E(x)\right] \right)^2 \\
+&amp;= \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]}\left( \operatorname{tr}\left[\frac{L \rho + \rho L}{2} E(x)\right] \right)^2 \\
+&amp;= \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]}\left( \operatorname{tr}\frac{ L \rho E(x) + E(x) \rho L}{2} \right)^2 \\
+&amp;= \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]}\left[ \operatorname{Re}\left(\operatorname{tr}[L \rho E(x)] \right)\right]^2 \\
+&amp;\le \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]}\left| \operatorname{tr}[L \rho E(x)] \right|^2 \\
+&amp;= \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]}\left| \operatorname{tr}[L \rho^{\frac{1}{2}}\rho^{\frac{1}{2}} E(x)^{\frac{1}{2}} E(x)^{\frac{1}{2}}] \right|^2 \\
+&amp;\le \sum_{x\in X}\frac{1}{\operatorname{tr}[\rho E(x)]} \operatorname{tr}[\rho E(x) L^2] \operatorname{tr}[\rho E(x)] \\
+&amp;=  \operatorname{tr}\left[\rho \left(\sum_{x\in X}E(x) \right) L^2\right] \\
+&amp;= \operatorname{tr}[\rho L^2]
+\end{aligned}$</p>
+</blockquote>
+<p>It can be seen that the Fisher information has an upper bound $F^{E}(\theta) \le \operatorname{tr}[\rho L^2]$. Now the question is whether this upper bound can be achieved? The answer is yes; each inequality sign above can reach equality.</p>
+<blockquote>
+<p>The condition for the first inequality to hold as equality is that $L$ is a Hermitian operator, in which case $L \rho E(x) = E(x) \rho L = (L \rho E(x))^\dag$. This is always satisfied because SLD has a property: if $H$ is Hermitian, then $L_\rho(H)$ is also Hermitian.</p>
+<p>The condition for the second inequality to hold as equality is the Cauchy-Schwarz inequality condition: $\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}$ and $\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$ are linearly dependent, i.e., $\exists k\in \mathbb{C}, \, \rho^{\frac{1}{2}}E(x)^{\frac{1}{2}} = k\rho^{\frac{1}{2}}E(x)^{\frac{1}{2}}L$. This can be done. We let $E(x)$ be the projection operator (which is the most commonly used POVM, also called von Neumann measurement), then $E(x)^{\frac{1}{2}} = E(x) = E(x)^2$, and $\forall \sigma, \,\sigma E(x) = k E(x)$. At this point, as long as $L = \sum_x c_x E(x)$, i.e., the projection operators in the POVM are eigenvectors of $L$, the inequality can hold as equality.</p>
+</blockquote>
+<p>Since the upper bound can be reached, we have derived the supremum of the Fisher information, which is the quantum Fisher information:</p>
+<blockquote>
+<p><strong>Quantum Fisher Information</strong>: $F(\theta) = \operatorname{tr}[\rho L^2]$, where $\rho = \rho(\theta) = e^{-iH\theta} \rho_0 e^{iH\theta}$, $L=L_{\rho}(H)$.</p>
+<p>The sufficient condition for achieving quantum Fisher information is: use projection measurement, and the projection basis vectors are the eigenvectors of SLD.</p>
+</blockquote>
+<p>Since we have quantum Fisher information, there is also a quantum CR bound:</p>
+<blockquote>
+<p><strong>Quantum Cramér-Rao Bound</strong>: $(\Delta \theta)^2 \ge \frac{1}{F(\theta)} = \frac{1}{\operatorname{tr}[\rho L^2]}$</p>
+</blockquote>
+<p>The $\rho$ considered above are all general mixed states. If we consider a pure state $\rho = |\psi\rangle\langle \psi|$, then the quantum Fisher information has a simpler expression:</p>
+<blockquote>
+<p><strong>Quantum Fisher Information for Pure State</strong>:</p>
+<p>$\begin{aligned}
+F(\theta) &amp;= 4 (\Delta H)^2 \\
+&amp;= 4 \left(\langle \psi | H^2 | \psi \rangle - \langle \psi | H | \psi \rangle^2\right) \\
+&amp;= 4 \left(\langle \psi_0 | H^2 | \psi_0 \rangle - \langle \psi_0 | H | \psi_0 \rangle^2\right)
+\end{aligned}$</p>
+<p>Proving this formula is an interesting but not difficult exercise, which we leave to the reader.</p>
+</blockquote>
+<p>The quantum CR bound for pure states is almost the Heisenberg Uncertainty Principle: $\Delta \theta \Delta H \ge \frac{1}{2}$. However, there are still some differences: the Heisenberg Uncertainty Principle refers to the product of the variances of two operators, while the quantum CR bound for pure states is the product of the variance of an operator and a parameter. Also, for mixed states, we do not have such a direct expression.</p>
+<p>Now that we have such powerful tools, let&rsquo;s apply these tools to some practical problems.</p>
+<h2 id="v-quantum-phase-estimation">V. Quantum Phase Estimation</h2>
+<p>Previously, we mentioned quantum phase estimation, which is:</p>
+<blockquote>
+<p><strong>Quantum Phase Estimation</strong>: Given a unitary transformation, find the phase of its eigenvalues.</p>
+<p>If the considered Hilbert space is n-dimensional, then there are (n-1) phases to be estimated (global phase can be ignored).</p>
+</blockquote>
+<p>We have not yet touched upon quantum estimation with multiple parameters (we will discuss this in the appendix). Now, we consider the case of only one parameter. There are two scenarios: two-level systems and harmonic oscillator systems.</p>
+<h3 id="51-two-level-systems">5.1 Two-Level Systems</h3>
+<p>Let&rsquo;s consider a two-level system with Hamiltonian $H = \frac{\hat{Z}}{2}$, and the initial state of the system is a pure state, i.e., $|\psi(\theta)\rangle = e^{-i \frac{\hat{Z}}{2} \theta} |\psi_0\rangle $.</p>
+<p>In this case, the quantum Fisher information is:</p>
+<p>$ \begin{aligned}
+F(\theta) &amp;= 4 \left(\Delta \frac{\hat{Z}}{2}\right)^2 = (\Delta \hat{Z})^2 \\
+&amp;= \left\langle \psi_0 \left| \hat{Z}^2 \right| \psi_0 \right\rangle - \left\langle \psi_0 \left| Z \right| \psi_0 \right\rangle^2 \\
+&amp;= 1 - \left\langle \psi_0 \left| \hat{Z} \right| \psi_0 \right\rangle^2
+\end{aligned}$</p>
+<p>To maximize the quantum Fisher information, we require $\left\langle \psi_0 \left| \hat{Z} \right| \psi_0 \right\rangle = 0$, in other words, $|\psi_0\rangle$ should lie on the equator of the Bloch sphere. This also aligns with our intuition: the closer the initial state is to the equator, the more evident the rotation of the Bloch sphere will be on the initial state. If the initial state is at the north or south pole, then the Fisher information will be zero, meaning the initial state cannot sense any rotation.</p>
+<p>Choosing the observable $X$ or $Y$ both can achieve the CR lower bound. Let&rsquo;s directly choose the observable as $X + i Y$ (although this is not an observable, we can separately observe $X$ and $Y$, and then combine the results into a complex number), with an expected value of $e^{i\theta}$ and a variance of 1. Then we have $1 =|\Delta e^{i\theta}| = |ie^{i\theta}\Delta\theta| = \Delta \theta$. In other words, $\Delta \theta = \frac{1}{F(\theta)}$, achieving the CR lower bound.</p>
+<h3 id="52-harmonic-oscillator-systems">5.2 Harmonic Oscillator Systems</h3>
+<p>Now let&rsquo;s consider a harmonic oscillator system with Hamiltonian $H = \hat{N} = \hat{a}^\dag \hat{a}$ corresponding to the unitary transformation $e^{i\hat{N}\theta} = \sum_{k=0}^{\infty} e^{i N \theta} |N\rangle\langle N|$.</p>
+<p>In this case, the quantum Fisher information is:</p>
+<p>$ \begin{aligned}
+F(\theta) &amp;= 4 \left(\Delta \hat{N}\right)^2 \\
+&amp;= 4 [\langle \psi | \hat{N}^2 | \psi \rangle - \langle \psi | \hat{N} | \psi \rangle^2]
+\end{aligned}$</p>
+<p>Next, we classify and discuss different initial states (probe states).</p>
+<h3 id="521-number-state">5.2.1 Number State</h3>
+<p>$| \psi_0 \rangle = | N \rangle$</p>
+<p>In this case, the quantum Fisher information is:</p>
+<p>$F(\theta) = 0$.</p>
+<p>This is easy to understand because the phase of the number state is completely random (according to the particle number-phase uncertainty principle). It can be seen that number states cannot be used to detect phase.</p>
+<h3 id="522-coherent-state">5.2.2 Coherent State</h3>
+<p>$|\psi_0 \rangle = | \alpha \rangle$</p>
+<p>In this case, the quantum Fisher information is:</p>
+<p>$F(\theta) = 4 |\alpha|^2 = 4 \bar{n}$.</p>
+<p>It gives the CR lower bound of measurement error: $\Delta \theta \ge \frac{1}{2 \sqrt{\bar{n}}}$. This is the limit allowed by shot noise. It is given by the particle number-phase uncertainty relation. However, we generally do not call this the Heisenberg limit; instead, we call it the shot noise limit or the standard quantum limit. In the literature, this limit is often distinguished from the Heisenberg limit. This is because we can further increase $\Delta N$ to reduce $\Delta \theta$. When $\Delta$ is proportional to $\bar{n}$, i.e., $\Delta \theta \sim \frac{1}{\bar{n}}$, we call this the Heisenberg limit.</p>
+<p>[&hellip;]</p>
+<h2 id="vi-quantum-imaging-and-quantum-illumination">VI. Quantum Imaging and Quantum Illumination</h2>
+<h2 id="vii-other-quantum-parameter-estimation-problems">VII. Other Quantum Parameter Estimation Problems</h2>
+<h3 id="71-gain-sensing">7.1 Gain Sensing</h3>
+<h3 id="72-noise-sensing">7.2 Noise Sensing</h3>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-04-23</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.com/quantum_metrology/" data-title="A beginner&#39;s guide to quantum metrology" data-hashtags="Quantum Metrology"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.com/quantum_metrology/" data-hashtag="Quantum Metrology"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.com/quantum_metrology/" data-title="A beginner&#39;s guide to quantum metrology"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.com/quantum_metrology/" data-title="A beginner&#39;s guide to quantum metrology"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.com/quantum_metrology/" data-title="A beginner&#39;s guide to quantum metrology"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/quantum-metrology/">Quantum Metrology</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/state_tomography/" class="prev" rel="prev" title="Quantum state tomography - a beginner&#39;s guide"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Quantum state tomography - a beginner's guide</a>
+            <a href="/classical_correlation/" class="next" rel="next" title="The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem">The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <span id="busuanzi_container_site_pv">
+                Visited: <span id="busuanzi_value_site_pv"></span> times
+            </span>
+            &nbsp;|&nbsp;
+            <span id="busuanzi_container_site_uv">
+                You are the <span id="busuanzi_value_site_uv"></span> th visiter
+            </span><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="../../about" target="_blank">hfwang132</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"valine":{"appId":"VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI","appKey":"dv86fnCL7DsYQl47DmJm7mHg","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"serverURLs":"https://mukjinfv.api.lncldglobal.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

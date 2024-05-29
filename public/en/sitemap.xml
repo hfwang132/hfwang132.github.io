@@ -106,6 +106,16 @@
                     hreflang="en"
                     href="http://example.com/classical_correlation/"
                     /></url><url>
+            <loc>http://example.com/quantum_metrology/</loc><lastmod>2024-04-23T19:05:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/zh-cn/quantum_metrology/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/quantum_metrology/"
+                    /></url><url>
+            <loc>http://example.com/tags/quantum-metrology/</loc><lastmod>2024-04-23T19:05:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/state_tomography/</loc><lastmod>2024-04-22T15:06:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -114,6 +124,15 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://example.com/state_tomography/"
+                    /></url><url>
+            <loc>http://example.com/photon_wave_packets/</loc><lastmod>2024-04-13T16:10:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/zh-cn/photon_wave_packets/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/photon_wave_packets/"
                     /></url><url>
             <loc>http://example.com/tags/differential-geometry/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/categories/mathematical-physics/</loc><lastmod>2024-03-13T18:41:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -171,6 +190,35 @@
                     hreflang="en"
                     href="http://example.com/bch/"
                     /></url><url>
+            <loc>http://example.com/complex_numbers_in_em/</loc><lastmod>2024-02-16T00:32:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/zh-cn/complex_numbers_in_em/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/complex_numbers_in_em/"
+                    /></url><url>
+            <loc>http://example.com/lie_derivative/</loc><lastmod>2024-01-26T23:50:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/zh-cn/lie_derivative/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/lie_derivative/"
+                    /></url><url>
+            <loc>http://example.com/categories/mathematical-methods-in-physics/</loc><lastmod>2024-01-26T23:49:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/parseval/</loc><lastmod>2024-01-26T23:49:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/zh-cn/parseval/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/parseval/"
+                    /></url><url>
+            <loc>http://example.com/tags/symmetry/</loc><lastmod>2024-01-26T23:49:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/categories/diary/</loc><lastmod>2023-07-06T22:55:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/tags/embedded-systems/</loc><lastmod>2023-07-06T22:55:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/side_proj/</loc><lastmod>2023-07-06T22:55:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
