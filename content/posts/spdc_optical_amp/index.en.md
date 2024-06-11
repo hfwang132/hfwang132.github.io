@@ -22,7 +22,7 @@ So, between these two extremes, we can say that when the gain is relatively smal
 
 Next, let's discuss two cases separately, based on the $\chi^{(2)}$ nonlinear parametric amplifier and the stimulated emission amplifier.
 
-## One, Optical Amplifier Based on $\chi^{(2)}$ Nonlinearity
+## 1. Optical Amplifier Based on $\chi^{(2)}$ Nonlinearity
 If the optical fiber amplifier here is based on $\chi^{(2)}$ nonlinearity, that is, PDC, parametric down-conversion. If PDC is used for optical amplification, it can also be called OPA, optical parametric amplification. Note that PDC here should be distinguished from SPDC, spontaneous parametric down-conversion.
 
 Assuming that the pump for both SPDC and OPA is strong enough, then their Hamiltonians can be written as:
@@ -51,7 +51,7 @@ So after some "calculation", we conclude: the larger the gain of OPA, the smalle
 
 ---
 
-## Two, Optical Amplifier Based on Stimulated Emission
+## 2. Optical Amplifier Based on Stimulated Emission
 The above is about amplifiers based on parametric down-conversion. But the most commonly used EDFA is not based on $\chi^{(2)}$ nonlinearity, but on stimulated emission amplification, similar to the principle of lasers.
 
 At this point, the Hamiltonian is much more complicated than OPA because it involves atoms. Let's first consider a single-mode optical field:
