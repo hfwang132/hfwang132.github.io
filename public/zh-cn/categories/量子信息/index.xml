@@ -4,7 +4,15 @@
         <link>http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
         <description>量子信息 - 分类 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>激光的全量子理论</title>
+    <link>http://example.com/zh-cn/laser_quantum2/</link>
+    <pubDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/laser_quantum2/</guid>
+    <description><![CDATA[大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？ 本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子]]></description>
+</item>
+<item>
     <title>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</title>
     <link>http://example.com/zh-cn/spdc_optical_amp/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
@@ -75,14 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/state_tomography/</guid>
     <description><![CDATA[Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非]]></description>
-</item>
-<item>
-    <title>光子和电磁场波包有什么关系</title>
-    <link>http://example.com/zh-cn/photon_wave_packets/</link>
-    <pubDate>Sat, 13 Apr 2024 16:10:38 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/photon_wave_packets/</guid>
-    <description><![CDATA[一个波包可以对应一个光子 例：一个光子可以处于不同频率的相干叠加态中： $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$ ，此时该光子可以表现为一个波包。 你可以想象一个原子退激发产生一个光子]]></description>
 </item>
 </channel>
 </rss>
