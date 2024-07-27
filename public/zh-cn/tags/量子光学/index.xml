@@ -4,7 +4,39 @@
         <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
         <description>量子光学 - 标签 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>相空间为什么有时看起来像一个复平面？</title>
+    <link>http://example.com/zh-cn/phase_space_complex/</link>
+    <pubDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/phase_space_complex/</guid>
+    <description><![CDATA[学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。 例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。 例 2]]></description>
+</item>
+<item>
+    <title>黑体辐射的推导（无废话版）</title>
+    <link>http://example.com/zh-cn/black_body/</link>
+    <pubDate>Sat, 27 Jul 2024 15:50:09 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/black_body/</guid>
+    <description><![CDATA[闲来无事，复习一下黑体辐射吧~ 很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。 本文单刀直入，直接闭嘴计算。 1. 黑体辐射公式是什]]></description>
+</item>
+<item>
+    <title>为什么热光场的光强服从指数分布？</title>
+    <link>http://example.com/zh-cn/thermal_exponential_dist/</link>
+    <pubDate>Sat, 27 Jul 2024 15:45:26 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/thermal_exponential_dist/</guid>
+    <description><![CDATA[1. 精彩的推理 诺奖得主 Ketterle 在8.422公开课中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证： 根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分]]></description>
+</item>
+<item>
+    <title>再见了旋转波近似：量子拉比模型的解析解</title>
+    <link>http://example.com/zh-cn/rabi/</link>
+    <pubDate>Sat, 27 Jul 2024 15:42:49 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/rabi/</guid>
+    <description><![CDATA[再见了旋转波近似：量子拉比模型的解析解 1. 前言 在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了]]></description>
+</item>
+<item>
     <title>激光的全量子理论</title>
     <link>http://example.com/zh-cn/laser_quantum2/</link>
     <pubDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</pubDate>
@@ -51,38 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/photon_wave_packets/</guid>
     <description><![CDATA[一个波包可以对应一个光子 例：一个光子可以处于不同频率的相干叠加态中： $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$ ，此时该光子可以表现为一个波包。 你可以想象一个原子退激发产生一个光子]]></description>
-</item>
-<item>
-    <title>光子有波函数吗？</title>
-    <link>http://example.com/zh-cn/photon_wave_func/</link>
-    <pubDate>Sat, 09 Mar 2024 17:37:15 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/photon_wave_func/</guid>
-    <description><![CDATA[光子有时空表象下的波函数： $\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$ 其中 $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$ 。 直观来看，就是让场算符 $E^{-}(\mathbf{r},t)$ 在时空点 $(\mathbf{r},t)$ 处创造一个态 $|\mathbf{r},t\rangle$ ，再求这个态和 $|\psi\rangle$ 之]]></description>
-</item>
-<item>
-    <title>BCH 公式 - 量子力学爆算的大杀器</title>
-    <link>http://example.com/zh-cn/bch/</link>
-    <pubDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/bch/</guid>
-    <description><![CDATA[Baker-Campbell-Hausdorff 公式 可以用来计算海森堡表象下的算符演化： $e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$ 这个公式其实只是 BCH 公式的小弟 因为海森堡表象下的算符演化规则是 $A\rightarrow UAU^{\dag}$ ，其中 $U$ 是酉演化算符。 如果 $U$]]></description>
-</item>
-<item>
-    <title>复数对于描述电磁波有什么重要性？</title>
-    <link>http://example.com/zh-cn/complex_numbers_in_em/</link>
-    <pubDate>Fri, 16 Feb 2024 00:32:34 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/complex_numbers_in_em/</guid>
-    <description><![CDATA[在经典力学中，复数只是一个用来简化计算的数学技巧。 在量子力学中，复数不再只是一个数学技巧，而是有一定的物理意义。考虑经典矢势： $\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$]]></description>
-</item>
-<item>
-    <title>【量光实验杂谈·二】HBT实验测量SPDC多模压缩态的频谱关联与纯度</title>
-    <link>http://example.com/zh-cn/hbt_spectral_correlation/</link>
-    <pubDate>Mon, 05 Feb 2024 00:12:16 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/hbt_spectral_correlation/</guid>
-    <description><![CDATA[上篇我们说了在 HBT 实验中，用非光子数分辨的单光子探测器测量量子二阶关联函数的原理。 https://zhuanlan.zhihu.com/p/679453473 这篇我们来看看量子二阶关联函数有什么用。除了老生常谈的用来]]></description>
 </item>
 </channel>
 </rss>

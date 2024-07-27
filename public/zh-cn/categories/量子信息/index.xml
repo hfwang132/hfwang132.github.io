@@ -4,7 +4,39 @@
         <link>http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
         <description>量子信息 - 分类 - Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>相空间为什么有时看起来像一个复平面？</title>
+    <link>http://example.com/zh-cn/phase_space_complex/</link>
+    <pubDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/phase_space_complex/</guid>
+    <description><![CDATA[学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。 例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。 例 2]]></description>
+</item>
+<item>
+    <title>黑体辐射的推导（无废话版）</title>
+    <link>http://example.com/zh-cn/black_body/</link>
+    <pubDate>Sat, 27 Jul 2024 15:50:09 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/black_body/</guid>
+    <description><![CDATA[闲来无事，复习一下黑体辐射吧~ 很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。 本文单刀直入，直接闭嘴计算。 1. 黑体辐射公式是什]]></description>
+</item>
+<item>
+    <title>为什么热光场的光强服从指数分布？</title>
+    <link>http://example.com/zh-cn/thermal_exponential_dist/</link>
+    <pubDate>Sat, 27 Jul 2024 15:45:26 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/thermal_exponential_dist/</guid>
+    <description><![CDATA[1. 精彩的推理 诺奖得主 Ketterle 在8.422公开课中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证： 根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分]]></description>
+</item>
+<item>
+    <title>再见了旋转波近似：量子拉比模型的解析解</title>
+    <link>http://example.com/zh-cn/rabi/</link>
+    <pubDate>Sat, 27 Jul 2024 15:42:49 &#43;0800</pubDate>
+    <author>hfwang132</author>
+    <guid>http://example.com/zh-cn/rabi/</guid>
+    <description><![CDATA[再见了旋转波近似：量子拉比模型的解析解 1. 前言 在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了]]></description>
+</item>
+<item>
     <title>激光的全量子理论</title>
     <link>http://example.com/zh-cn/laser_quantum2/</link>
     <pubDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</pubDate>
@@ -51,38 +83,6 @@
     <author>hfwang132</author>
     <guid>http://example.com/zh-cn/laser_quantum/</guid>
     <description><![CDATA[本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发]]></description>
-</item>
-<item>
-    <title>光子的轨道角动量</title>
-    <link>http://example.com/zh-cn/oam/</link>
-    <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/oam/</guid>
-    <description><![CDATA[前言 1992 年发表在 PRA 上的一篇文章 [1] 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular]]></description>
-</item>
-<item>
-    <title>量子纠缠与经典关联的区别，以及量子测量问题</title>
-    <link>http://example.com/zh-cn/classical_correlation/</link>
-    <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/classical_correlation/</guid>
-    <description><![CDATA[很多物理工作者向大众科普量子纠缠的时候都会举一个例子： 想象你有两个盒子，其中一个放了披萨，另一个放了汉堡，在打开盒子之前无法知道其中是什么。]]></description>
-</item>
-<item>
-    <title>量子计量学（Quantum Metrology）简明入门</title>
-    <link>http://example.com/zh-cn/quantum_metrology/</link>
-    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/quantum_metrology/</guid>
-    <description><![CDATA[量子计量学（Quantum Metrology）简明入门 一、量子计量学介绍 所谓量子计量学（Quantum Metrology），就是利用量子物态]]></description>
-</item>
-<item>
-    <title>【量光实验杂谈·三】量子态层析</title>
-    <link>http://example.com/zh-cn/state_tomography/</link>
-    <pubDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/state_tomography/</guid>
-    <description><![CDATA[Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非]]></description>
 </item>
 </channel>
 </rss>
