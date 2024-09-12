@@ -4,4 +4,4 @@ date: 2023-06-22T11:22:28+08:00
 draft: false
 ---
 
-### 革命尚未成功，同志仍需努力～
+- Hansenne, K., Qu, R., Weinbrenner, L. T., de Gois, C., Wang, H., Ming, Y., ... & Gühne, O. (2024). Optimal overlapping tomography. arXiv preprint arXiv:2408.05730.
