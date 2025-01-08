@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>CS - Category - Haifei&#39;s Home</title>
+        <title>CS - 分类 - Haifei&#39;s Home</title>
         <link>http://example.com/categories/cs/</link>
-        <description>CS - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/cs/" rel="self" type="application/rss+xml" /><item>
-    <title>Polling Jupyter widget UI events in runtime</title>
+        <description>CS - 分类 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/cs/" rel="self" type="application/rss+xml" /><item>
+    <title>运行时拉取 Jupyter Widgets UI 组件的状态</title>
     <link>http://example.com/ui_poll/</link>
-    <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
-    <author>Author</author>
+    <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
+    <author>作者</author>
     <guid>http://example.com/ui_poll/</guid>
-    <description><![CDATA[<p>Let&rsquo;s look at a code snippet in the Jupyter Notebook:</p>
+    <description><![CDATA[<p>先看一段 Jupyter Notebook 中的代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -36,17 +36,16 @@
 </span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><code>IntSlider</code> is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.</p>
-<p>However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.</p>]]></description>
+</div><p>运行上面的代码，<code>IntSlider()</code> 会显示一个可交互的滑块小组件。当用户滑动滑块时，它的值应当改变，变化的值应当可以在 <code>while</code> 循环内打印出来。</p>]]></description>
 </item>
 <item>
-    <title>Python coroutines and asyncio</title>
+    <title>Python 协程/异步IO</title>
     <link>http://example.com/python_asyncio/</link>
-    <pubDate>Tue, 13 Jun 2023 22:05:41 &#43;0800</pubDate>
-    <author>Author</author>
+    <pubDate>Tue, 13 Jun 2023 22:05:45 &#43;0800</pubDate>
+    <author>作者</author>
     <guid>http://example.com/python_asyncio/</guid>
-    <description><![CDATA[<p>Recently, I have been using Python coroutines/asynchronous programming in a project. Now, I will summarize my experience.</p>
-<h2 id="import">Import</h2>
+    <description><![CDATA[<p>最近做项目用到 Python 协程/异步，现在总结一下：</p>
+<h2 id="导入">导入</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -55,7 +54,7 @@
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">asyncio</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>If <code>asyncio</code> is to be used in an IPython environment, we have to add two more lines：</p>
+</div><p>如果在 IPython 环境里使用，需要加两行：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -68,30 +67,17 @@
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">asyncio</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="coroutines">Coroutines</h2>
-<p>Coroutines are the core of asynchronous programming in Python. To define a coroutine, you need to use <code>async def</code>.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># do something</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello world!&#34;</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>To execute the coroutine, you cannot directly call <code>main()</code>. Instead, you need to use <code>run()</code>:</p>]]></description>
+</div><h2 id="协程">协程</h2>
+<p>协程（coroutines）是 Python 异步编程的核心。一个 coroutine 要用 <code>async def</code> 来定义。</p>]]></description>
 </item>
 <item>
-    <title>Increasing the swapfile for Linux</title>
+    <title>给 Linux 增加 swapfile</title>
     <link>http://example.com/increase_swapfile/</link>
-    <pubDate>Mon, 12 Jun 2023 22:59:26 &#43;0800</pubDate>
-    <author>Author</author>
+    <pubDate>Mon, 12 Jun 2023 22:59:29 &#43;0800</pubDate>
+    <author>作者</author>
     <guid>http://example.com/increase_swapfile/</guid>
-    <description><![CDATA[<p>Xilinx&rsquo;s toolchain consumes soooo much memory! Sometimes it causes the system to freeze&hellip; After all, my laptop only has 8GB of RAM. So there&rsquo;s no other choice but to add virtual memories.</p>
-<p>After increase the swapfile, the system performance has improved a lot:</p>
+    <description><![CDATA[<p>Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。</p>
+<p>增加了 swapfile 之后就好很多了：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -109,12 +95,12 @@
 </div>]]></description>
 </item>
 <item>
-    <title>Mounting the EFI partition in Windows OS</title>
+    <title>在 Windows 中挂载 EFI 分区的方法</title>
     <link>http://example.com/efi_partition/</link>
-    <pubDate>Mon, 12 Jun 2023 22:26:16 &#43;0800</pubDate>
-    <author>Author</author>
+    <pubDate>Mon, 12 Jun 2023 22:17:46 &#43;0800</pubDate>
+    <author>作者</author>
     <guid>http://example.com/efi_partition/</guid>
-    <description><![CDATA[<p>To mount the EFI partitions, run the following commands in PowerShell:</p>
+    <description><![CDATA[<p>为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -133,8 +119,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">assign</span> <span class="n">letter</span><span class="p">=</span><span class="n">z</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Then we will mount the EFI partition as drive Z.</p>
-<p>This operation may be useful when using a dual-boot system with Windows and Ubuntu: Sometimes, after removing the Ubuntu system, only the Windows system remains, but the GRUB interface still appears every time the computer boots. In this case, you need to delete the old Ubuntu EFI partition.</p>]]></description>
+</div><p>然后我们就将 EFI 挂载为盘符为 Z 的盘了。</p>]]></description>
 </item>
 </channel>
 </rss>

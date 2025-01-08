@@ -1,0 +1,54 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>嵌入式系统 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</link>
+        <description>嵌入式系统 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>做过的一些好玩（但无聊）的小项目</title>
+    <link>http://example.com/side_proj/</link>
+    <pubDate>Sat, 01 Jul 2023 17:48:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/side_proj/</guid>
+    <description><![CDATA[<table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>日期</th>
+          <th>评论</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1kg4y1c7Wt/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">PYNQ-Z2 + RTL-SDR 收音机</a></td>
+          <td>2023.06</td>
+          <td>是 Jupyter Notebook 里的 App，不是独立的 Web App</td>
+      </tr>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1J14y1u7gi/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">WIFI 天气时钟</a></td>
+          <td>2023.01</td>
+          <td>不会 LvGL。。界面有亿点简陋</td>
+      </tr>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1pG4y1y7zg/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">光立方</a></td>
+          <td>2023.01</td>
+          <td>只是采购了 BOM 来焊接。。固件不是我写的</td>
+      </tr>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1jd4y1x75i/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">康威生命游戏</a></td>
+          <td>2022.12</td>
+          <td>有触摸功能～</td>
+      </tr>
+  </tbody>
+</table>]]></description>
+</item>
+<item>
+    <title>AXI SPI IP 核的软硬件设计</title>
+    <link>http://example.com/spi/</link>
+    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/spi/</guid>
+    <description><![CDATA[<h3 id="1-基础">1 基础</h3>
+<p>SPI 有三线模式和四线模式。三线模式有 <code>SS</code>（Slave Select）, <code>SCK</code>（SPI Clock）, <code>MOSI</code>（Master-Out-Slave-In）三条线。四线模式多了一条 <code>MISO</code>（Master-In-Slave-Out）。</p>]]></description>
+</item>
+</channel>
+</rss>

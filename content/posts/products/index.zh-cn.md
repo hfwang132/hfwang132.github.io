@@ -121,7 +121,7 @@ $\times_{i=1}^{\infty} Z_2$
 
 直积与直和的定义只涉及到群，而张量积的定义通常涉及到向量空间（或者环上的模）。
 
-{{< figure src="image/tensor.jpg" title="张量积的泛性质，图源：还是本人灵魂作画" >}}
+{{< figure src="image/tensor.jpg">}}
 
 张量积的**泛性质**如下：
 

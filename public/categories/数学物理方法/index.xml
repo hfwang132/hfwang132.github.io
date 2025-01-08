@@ -1,0 +1,90 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数学物理方法 - 分类 - Haifei&#39;s Home</title>
+        <link>http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
+        <description>数学物理方法 - 分类 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
+    <title>直积、直和、笛卡尔积、张量积的区别是什么</title>
+    <link>http://example.com/products/</link>
+    <pubDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/products/</guid>
+    <description><![CDATA[<p>小朋友们好，今天我们来学习什么是<strong>笛卡尔积</strong>。我们把世界上所有上衣的集合叫做 $a$ ，世界上所有下着的集合叫做 $b$ ，那么 $a$ 和 $b$ 的笛卡尔积 $a \times b$ 是什么呢？就是所有可能的上下衣装搭配的集合啦（当然，不包括帽子、鞋子、首饰等等）。</p>]]></description>
+</item>
+<item>
+    <title>量子态/算符的 Weyl 和 Wigner 表示</title>
+    <link>http://example.com/weyl_wigner/</link>
+    <pubDate>Wed, 08 Jan 2025 20:25:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/weyl_wigner/</guid>
+    <description><![CDATA[<h2 id="前言">前言</h2>
+<p>在经典力学中，物理量是相空间上的一个函数，系统状态是相空间上的一个点（对于系综而言则是相空间上的一个概率分布）。这一套语言量子化之后，就得到了量子态/算符的相空间表示，也就是 Wigner 表示。Weyl 表示则是它的傅里叶变换。</p>]]></description>
+</item>
+<item>
+    <title>微分的四层理解</title>
+    <link>http://example.com/understanding_differentials/</link>
+    <pubDate>Wed, 13 Mar 2024 18:34:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/understanding_differentials/</guid>
+    <description><![CDATA[<h2 id="一-微分是无穷小">一 微分是无穷小？</h2>
+<p>物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。</p>
+<p>实际上，它确实不严谨，第二次数学危机就是因此产生的。</p>]]></description>
+</item>
+<item>
+    <title>BCH 公式 - 量子力学爆算的大杀器</title>
+    <link>http://example.com/bch/</link>
+    <pubDate>Thu, 07 Mar 2024 20:59:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/bch/</guid>
+    <description><![CDATA[<p><strong>Baker-Campbell-Hausdorff 公式</strong> 可以用来计算海森堡表象下的算符演化：</p>
+<p>$e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$</p>
+<blockquote>
+<p>这个公式其实只是 BCH 公式的小弟</p>
+</blockquote>
+<p>因为海森堡表象下的算符演化规则是 $A\rightarrow UAU^{\dag}$ ，其中 $U$ 是酉演化算符。</p>
+<p>如果 $U$ 由 $H$ 生成，那么就是 $A\rightarrow e^{\frac{t}{i\hbar}H}Ae^{-\frac{t}{i\hbar}H}$ 了。</p>]]></description>
+</item>
+<item>
+    <title>李导数与协变导数有什么联系？</title>
+    <link>http://example.com/lie_derivative/</link>
+    <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/lie_derivative/</guid>
+    <description><![CDATA[<h2 id="一-性质上的异同点">一 性质上的异同点</h2>
+<p>李导数 $\mathcal{L}_V$ 和协变导数 $\nabla_V$ 有很多共同点：</p>
+<ol>
+<li>$\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}^p_q(M)$ 到 $\mathcal{T}^p_q(M)$ 的映射。 $\mathcal{T}^p_q(M)$ 表示 $M$ 上全体 (p, q) 型光滑张量场的集合</li>
+</ol>
+<p>特别地，对于 (0,0) 型张量场，也就是标量场 $f\in \mathcal{F}(M)$ ，有 $\mathcal{L}_V f=\nabla_V f=Vf$ 。</p>]]></description>
+</item>
+<item>
+    <title>高维空间中的旋度</title>
+    <link>http://example.com/curl_in_n_dimension/</link>
+    <pubDate>Sat, 10 Jun 2023 10:55:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/curl_in_n_dimension/</guid>
+    <description><![CDATA[<h3 id="1-微分形式">1 微分形式</h3>
+<p>在介绍旋度之前，我们得先介绍一下微分形式和外微分算子。</p>
+<p>一个 $n$ 阶形式可以定义为一个交替多重线性映射 $\omega:(T_pM)^n\rightarrow \mathbb{R}$ 。它把多个向量映射成一个实数。另外，它还满足交替性，即交换两个输入向量，输出多一个负号。</p>]]></description>
+</item>
+<item>
+    <title>赝矢量到底是什么？</title>
+    <link>http://example.com/pseudovectors/</link>
+    <pubDate>Sat, 10 Jun 2023 02:21:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/pseudovectors/</guid>
+    <description><![CDATA[<h2 id="1-引子">1 引子</h2>
+<p>我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。</p>
+<p>其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$ ，“赝标量”是三个切矢量的外积 $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$ 。</p>]]></description>
+</item>
+<item>
+    <title>一文入门微分几何（物理人版）</title>
+    <link>http://example.com/differential_geometry/</link>
+    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/differential_geometry/</guid>
+    <description><![CDATA[<h2 id="前言">前言</h2>
+<p>作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因此，本文旨在帮助物理人，为这些彼此紧密联系的诸概念进行一个梳理。</p>]]></description>
+</item>
+</channel>
+</rss>

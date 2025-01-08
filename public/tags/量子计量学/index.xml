@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>量子计量学 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6/</link>
+        <description>量子计量学 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>量子计量学（Quantum Metrology）简明入门</title>
+    <link>http://example.com/quantum_metrology/</link>
+    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/quantum_metrology/</guid>
+    <description><![CDATA[<h1 id="量子计量学quantum-metrology简明入门">量子计量学（Quantum Metrology）简明入门</h1>
+<h2 id="一量子计量学介绍">一、量子计量学介绍</h2>
+<p>所谓量子计量学（Quantum Metrology），就是利用量子物态的量子性质进行精密测量的学问。</p>
+<p>之所以要研究量子计量学，是因为任何物理量的测量精度都由量子力学中的海森堡不确定性原理所限制，这叫做海森堡极限（Heisenberg Limit）。如何逼近以及提升这个极限，就是量子计量学的目标。</p>]]></description>
+</item>
+</channel>
+</rss>

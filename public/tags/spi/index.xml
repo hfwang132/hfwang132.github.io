@@ -1,43 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>SPI - Tag - Haifei&#39;s Home</title>
+        <title>SPI - 标签 - Haifei&#39;s Home</title>
         <link>http://example.com/tags/spi/</link>
-        <description>SPI - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/spi/" rel="self" type="application/rss+xml" /><item>
-    <title>HW &amp; SW design of the AXI Quad SPI IP core</title>
+        <description>SPI - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/spi/" rel="self" type="application/rss+xml" /><item>
+    <title>AXI SPI IP 核的软硬件设计</title>
     <link>http://example.com/spi/</link>
-    <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
-    <author>Author</author>
+    <pubDate>Thu, 29 Jun 2023 11:33:45 &#43;0800</pubDate>
+    <author>作者</author>
     <guid>http://example.com/spi/</guid>
-    <description><![CDATA[<h3 id="1-basics">1 Basics</h3>
-<p>SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - <code>SS</code> (Slave Select), <code>SCK</code> (SPI Clock), and <code>MOSI</code> (Master-In-Slave-Out). The four wire mode has an extra line called <code>MISO</code> (Master-In-Slave-Out).</p>
-<table>
-  <thead>
-      <tr>
-          <th>Signals</th>
-          <th>Full Name</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SS</td>
-          <td>Slave Select</td>
-      </tr>
-      <tr>
-          <td>SCK</td>
-          <td>SPI Clock</td>
-      </tr>
-      <tr>
-          <td>MOSI</td>
-          <td>Master-Out-Slave-In</td>
-      </tr>
-      <tr>
-          <td>MISO</td>
-          <td>Master-In-Slave-Out</td>
-      </tr>
-  </tbody>
-</table>
-<p>SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle. CPHA stands for clock phase &ndash; data valid at 0 degree or 180 degrees.</p>]]></description>
+    <description><![CDATA[<h3 id="1-基础">1 基础</h3>
+<p>SPI 有三线模式和四线模式。三线模式有 <code>SS</code>（Slave Select）, <code>SCK</code>（SPI Clock）, <code>MOSI</code>（Master-Out-Slave-In）三条线。四线模式多了一条 <code>MISO</code>（Master-In-Slave-Out）。</p>]]></description>
 </item>
 </channel>
 </rss>
