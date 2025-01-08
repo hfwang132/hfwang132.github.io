@@ -1,88 +1,109 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>量子光学 - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
+        <link>http://localhost:1313/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
         <description>量子光学 - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
     <title>相空间为什么有时看起来像一个复平面？</title>
-    <link>http://example.com/zh-cn/phase_space_complex/</link>
+    <link>http://localhost:1313/zh-cn/phase_space_complex/</link>
     <pubDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/phase_space_complex/</guid>
-    <description><![CDATA[学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。 例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。 例 2]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/phase_space_complex/</guid>
+    <description><![CDATA[<p>学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。</p>
+<blockquote>
+<p>例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。</p>
+<p>例 2：给定经典电磁场的哈密顿量和边界条件，某个模式上的电场强度构成一个构型空间，该模式上电场强度的余弦分量和正弦分量构成一个相空间。</p>]]></description>
 </item>
 <item>
     <title>黑体辐射的推导（无废话版）</title>
-    <link>http://example.com/zh-cn/black_body/</link>
+    <link>http://localhost:1313/zh-cn/black_body/</link>
     <pubDate>Sat, 27 Jul 2024 15:50:09 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/black_body/</guid>
-    <description><![CDATA[闲来无事，复习一下黑体辐射吧~ 很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。 本文单刀直入，直接闭嘴计算。 1. 黑体辐射公式是什]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/black_body/</guid>
+    <description><![CDATA[<p>闲来无事，复习一下黑体辐射吧~</p>
+<p>很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。</p>
+<p>本文单刀直入，直接闭嘴计算。</p>
+<h2 id="1-黑体辐射公式是什么">1. 黑体辐射公式是什么</h2>
+<p>黑体辐射公式指的是一个黑体在单位频率中所辐射的能量密度。</p>]]></description>
 </item>
 <item>
     <title>为什么热光场的光强服从指数分布？</title>
-    <link>http://example.com/zh-cn/thermal_exponential_dist/</link>
+    <link>http://localhost:1313/zh-cn/thermal_exponential_dist/</link>
     <pubDate>Sat, 27 Jul 2024 15:45:26 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/thermal_exponential_dist/</guid>
-    <description><![CDATA[1. 精彩的推理 诺奖得主 Ketterle 在8.422公开课中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证： 根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/thermal_exponential_dist/</guid>
+    <description><![CDATA[<h2 id="1-精彩的推理">1. 精彩的推理</h2>
+<p>诺奖得主 Ketterle 在<a href="https://av.tib.eu/media/42704" target="_blank" rel="noopener noreffer ">8.422公开课</a>中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证：</p>
+<p>根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分布。</p>]]></description>
 </item>
 <item>
     <title>再见了旋转波近似：量子拉比模型的解析解</title>
-    <link>http://example.com/zh-cn/rabi/</link>
+    <link>http://localhost:1313/zh-cn/rabi/</link>
     <pubDate>Sat, 27 Jul 2024 15:42:49 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/rabi/</guid>
-    <description><![CDATA[再见了旋转波近似：量子拉比模型的解析解 1. 前言 在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/rabi/</guid>
+    <description><![CDATA[<h1 id="再见了旋转波近似量子拉比模型的解析解">再见了旋转波近似：量子拉比模型的解析解</h1>
+<h2 id="1-前言">1. 前言</h2>
+<p>在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。</p>]]></description>
 </item>
 <item>
     <title>激光的全量子理论</title>
-    <link>http://example.com/zh-cn/laser_quantum2/</link>
+    <link>http://localhost:1313/zh-cn/laser_quantum2/</link>
     <pubDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/laser_quantum2/</guid>
-    <description><![CDATA[大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？ 本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/laser_quantum2/</guid>
+    <description><![CDATA[<blockquote>
+<p>大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？</p>
+</blockquote>
+<p>本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。</p>]]></description>
 </item>
 <item>
     <title>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</title>
-    <link>http://example.com/zh-cn/spdc_optical_amp/</link>
+    <link>http://localhost:1313/zh-cn/spdc_optical_amp/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/spdc_optical_amp/</guid>
-    <description><![CDATA[SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？ 我们先用极限思维，考虑两个极限： 极限1：放大器的增益等于1，也就是没]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/spdc_optical_amp/</guid>
+    <description><![CDATA[<p>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</p>
+<p>我们先用极限思维，考虑两个极限：</p>
+<p>极限1：放大器的增益等于1，也就是没有任何增益</p>]]></description>
 </item>
 <item>
     <title>激光的一种简单的量子描述</title>
-    <link>http://example.com/zh-cn/laser_quantum/</link>
+    <link>http://localhost:1313/zh-cn/laser_quantum/</link>
     <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/laser_quantum/</guid>
-    <description><![CDATA[本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/laser_quantum/</guid>
+    <description><![CDATA[<p>本文旨在从基本量子动力学出发，推导出激光的相干态。</p>
+<p>考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。</p>
+<p>二能级系统一开始处于激发态 $|e\rangle$ ，光场处于真空态 $|0\rangle$ 。</p>]]></description>
 </item>
 <item>
     <title>光子的轨道角动量</title>
-    <link>http://example.com/zh-cn/oam/</link>
+    <link>http://localhost:1313/zh-cn/oam/</link>
     <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/oam/</guid>
-    <description><![CDATA[前言 1992 年发表在 PRA 上的一篇文章 [1] 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/oam/</guid>
+    <description><![CDATA[<h2 id="前言">前言</h2>
+<p>1992 年发表在 PRA 上的一篇文章 <a href="#ref_1" rel="">[1]</a> 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular Momentum）只能取 $\pm \hbar$ 相比，轨道角动量可以取 $\hbar$ 的任意整数倍。这样的轨道角动量可以由螺旋形状的波前所携带。</p>]]></description>
 </item>
 <item>
     <title>【量光实验杂谈·三】量子态层析</title>
-    <link>http://example.com/zh-cn/state_tomography/</link>
+    <link>http://localhost:1313/zh-cn/state_tomography/</link>
     <pubDate>Mon, 22 Apr 2024 14:43:42 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/state_tomography/</guid>
-    <description><![CDATA[Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/state_tomography/</guid>
+    <description><![CDATA[<h2 id="quantum-state-tomography量子态层析">Quantum State Tomography（量子态层析）</h2>
+<p>Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非常简单，具体如下：</p>]]></description>
 </item>
 <item>
     <title>光子和电磁场波包有什么关系</title>
-    <link>http://example.com/zh-cn/photon_wave_packets/</link>
+    <link>http://localhost:1313/zh-cn/photon_wave_packets/</link>
     <pubDate>Sat, 13 Apr 2024 16:10:38 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/photon_wave_packets/</guid>
-    <description><![CDATA[一个波包可以对应一个光子 例：一个光子可以处于不同频率的相干叠加态中： $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$ ，此时该光子可以表现为一个波包。 你可以想象一个原子退激发产生一个光子]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/photon_wave_packets/</guid>
+    <description><![CDATA[<h3 id="一个波包可以对应一个光子">一个波包可以对应一个光子</h3>
+<p><strong>例</strong>：一个光子可以处于不同频率的<strong>相干叠加</strong>态中： $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$ ，此时该光子可以表现为一个波包。</p>
+<p>你可以想象<strong>一个原子退激发产生一个光子</strong>，这个光子当然会表现为一个波包。</p>]]></description>
 </item>
 </channel>
 </rss>

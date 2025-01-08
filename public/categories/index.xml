@@ -1,55 +1,46 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Category - Haifei&#39;s Home</title>
-        <link>http://example.com/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Categories - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Quantum Information</title>
-    <link>http://example.com/categories/quantum-information/</link>
+    <link>http://localhost:1313/categories/quantum-information/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/categories/quantum-information/</guid>
+    <author>Author</author>
+    <guid>http://localhost:1313/categories/quantum-information/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Mathematical Physics</title>
-    <link>http://example.com/categories/mathematical-physics/</link>
+    <link>http://localhost:1313/categories/mathematical-physics/</link>
     <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/categories/mathematical-physics/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Mathematical Methods in Physics</title>
-    <link>http://example.com/categories/mathematical-methods-in-physics/</link>
-    <pubDate>Fri, 26 Jan 2024 23:49:29 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/categories/mathematical-methods-in-physics/</guid>
+    <author>Author</author>
+    <guid>http://localhost:1313/categories/mathematical-physics/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Diary</title>
-    <link>http://example.com/categories/diary/</link>
+    <link>http://localhost:1313/categories/diary/</link>
     <pubDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/categories/diary/</guid>
+    <author>Author</author>
+    <guid>http://localhost:1313/categories/diary/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>EECS</title>
-    <link>http://example.com/categories/eecs/</link>
+    <link>http://localhost:1313/categories/eecs/</link>
     <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/categories/eecs/</guid>
+    <author>Author</author>
+    <guid>http://localhost:1313/categories/eecs/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>CS</title>
-    <link>http://example.com/categories/cs/</link>
+    <link>http://localhost:1313/categories/cs/</link>
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/categories/cs/</guid>
+    <author>Author</author>
+    <guid>http://localhost:1313/categories/cs/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

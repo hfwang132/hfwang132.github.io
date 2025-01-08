@@ -26,7 +26,7 @@ hasCJKLanguage = true
 
 # default amount of posts in each pages
 # 默认每页列表显示的文章数目
-paginate = 20
+pagination.pagerSize = 20
 # google analytics code [UA-XXXXXXXX-X]
 # 谷歌分析代号 [UA-XXXXXXXX-X]
 # googleAnalytics = ""
@@ -47,13 +47,6 @@ enableEmoji = true
 # ignore some build errors
 # 忽略一些构建错误
 ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
-
-# Author config
-# 作者配置
-[author]
-  name = "hfwang132"
-  email = "hfwang132@gmail.com"
-  link = "../../about"
 
 # Menu config
 # 菜单配置
@@ -115,6 +108,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   images = ["/logo.png"]
   # busuanzi
   busuanzi = true
+  # Author config
+  # 作者配置
+  [params.author]
+    name = "hfwang132"
+    email = "hfwang132@gmail.com"
+    link = "../../about"
 
   # Header config
   # 页面头部导航栏配置
@@ -175,7 +174,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [params.section]
     # special amount of posts in each section page
     # section 页面每页显示文章数量
-    paginate = 20
+    pagination.pagerSize = 20
     # date format (month and day)
     # 日期格式 (月和日)
     dateFormat = "01-02"
@@ -188,7 +187,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [params.list]
     # special amount of posts in each list page
     # list 页面每页显示文章数量
-    paginate = 20
+    pagination.pagerSize = 20
     # date format (month and day)
     # 日期格式 (月和日)
     dateFormat = "01-02"
@@ -785,7 +784,6 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]
 
 # Multilingual
 # 多语言

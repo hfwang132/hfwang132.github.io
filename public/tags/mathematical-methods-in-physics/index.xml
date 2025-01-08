@@ -1,21 +1,20 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Mathematical Methods in Physics - Tag - Haifei&#39;s Home</title>
-        <link>http://example.com/tags/mathematical-methods-in-physics/</link>
+        <link>http://localhost:1313/tags/mathematical-methods-in-physics/</link>
         <description>Mathematical Methods in Physics - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:47:25 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/mathematical-methods-in-physics/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:47:25 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/mathematical-methods-in-physics/" rel="self" type="application/rss+xml" /><item>
     <title>How are creation and annihilation operators derived?</title>
-    <link>http://example.com/annilation_op/</link>
+    <link>http://localhost:1313/annilation_op/</link>
     <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/annilation_op/</guid>
-    <description><![CDATA[The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.
-Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:
-$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$
-That is,
-$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$
-So, we just need to decouple them.]]></description>
+    <author>Author</author>
+    <guid>http://localhost:1313/annilation_op/</guid>
+    <description><![CDATA[<p>The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.</p>
+<p>Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:</p>
+<p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
+<p>That is,</p>
+<p>$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$</p>
+<p>So, we just need to decouple them. By diagonalizing, we obtain the eigenvectors $a^{\pm} = x \pm \mathrm{i} p$, and the derivatives of $a^{\pm}$ only depend on themselves:</p>]]></description>
 </item>
 </channel>
 </rss>

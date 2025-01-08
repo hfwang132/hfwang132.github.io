@@ -1,88 +1,105 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - Haifei&#39;s Home</title>
-        <link>http://example.com/zh-cn/posts/</link>
+        <link>http://localhost:1313/zh-cn/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>直积、直和、笛卡尔积、张量积的区别是什么</title>
+    <link>http://localhost:1313/zh-cn/products/</link>
+    <pubDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/products/</guid>
+    <description><![CDATA[<p>小朋友们好，今天我们来学习什么是<strong>笛卡尔积</strong>。我们把世界上所有上衣的集合叫做 $a$ ，世界上所有下着的集合叫做 $b$ ，那么 $a$ 和 $b$ 的笛卡尔积 $a \times b$ 是什么呢？就是所有可能的上下衣装搭配的集合啦（当然，不包括帽子、鞋子、首饰等等）。</p>]]></description>
+</item>
+<item>
+    <title>量子达尔文主义</title>
+    <link>http://localhost:1313/zh-cn/quantum_darwinism/</link>
+    <pubDate>Wed, 08 Jan 2025 21:03:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/quantum_darwinism/</guid>
+    <description><![CDATA[<p>个人认为在量子力学的诠释中，目前最有趣的是 Zurek 的 <strong>Existential Interpretation（存在主义诠释）</strong>，也被称为<strong>量子达尔文主义（Quantum Darwinism）</strong> [1]。Zurek 本人是退相干理论的奠基人之一。</p>]]></description>
+</item>
+<item>
+    <title>量子态/算符的 Weyl 和 Wigner 表示</title>
+    <link>http://localhost:1313/zh-cn/weyl_wigner/</link>
+    <pubDate>Wed, 08 Jan 2025 20:25:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/weyl_wigner/</guid>
+    <description><![CDATA[<h2 id="前言">前言</h2>
+<p>在经典力学中，物理量是相空间上的一个函数，系统状态是相空间上的一个点（对于系综而言则是相空间上的一个概率分布）。这一套语言量子化之后，就得到了量子态/算符的相空间表示，也就是 Wigner 表示。Weyl 表示则是它的傅里叶变换。</p>]]></description>
+</item>
+<item>
     <title>相空间为什么有时看起来像一个复平面？</title>
-    <link>http://example.com/zh-cn/phase_space_complex/</link>
+    <link>http://localhost:1313/zh-cn/phase_space_complex/</link>
     <pubDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/phase_space_complex/</guid>
-    <description><![CDATA[学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。 例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。 例 2]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/phase_space_complex/</guid>
+    <description><![CDATA[<p>学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。</p>
+<blockquote>
+<p>例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。</p>
+<p>例 2：给定经典电磁场的哈密顿量和边界条件，某个模式上的电场强度构成一个构型空间，该模式上电场强度的余弦分量和正弦分量构成一个相空间。</p>]]></description>
 </item>
 <item>
     <title>黑体辐射的推导（无废话版）</title>
-    <link>http://example.com/zh-cn/black_body/</link>
+    <link>http://localhost:1313/zh-cn/black_body/</link>
     <pubDate>Sat, 27 Jul 2024 15:50:09 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/black_body/</guid>
-    <description><![CDATA[闲来无事，复习一下黑体辐射吧~ 很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。 本文单刀直入，直接闭嘴计算。 1. 黑体辐射公式是什]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/black_body/</guid>
+    <description><![CDATA[<p>闲来无事，复习一下黑体辐射吧~</p>
+<p>很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。</p>
+<p>本文单刀直入，直接闭嘴计算。</p>
+<h2 id="1-黑体辐射公式是什么">1. 黑体辐射公式是什么</h2>
+<p>黑体辐射公式指的是一个黑体在单位频率中所辐射的能量密度。</p>]]></description>
 </item>
 <item>
     <title>为什么热光场的光强服从指数分布？</title>
-    <link>http://example.com/zh-cn/thermal_exponential_dist/</link>
+    <link>http://localhost:1313/zh-cn/thermal_exponential_dist/</link>
     <pubDate>Sat, 27 Jul 2024 15:45:26 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/thermal_exponential_dist/</guid>
-    <description><![CDATA[1. 精彩的推理 诺奖得主 Ketterle 在8.422公开课中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证： 根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/thermal_exponential_dist/</guid>
+    <description><![CDATA[<h2 id="1-精彩的推理">1. 精彩的推理</h2>
+<p>诺奖得主 Ketterle 在<a href="https://av.tib.eu/media/42704" target="_blank" rel="noopener noreffer ">8.422公开课</a>中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证：</p>
+<p>根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分布。</p>]]></description>
 </item>
 <item>
     <title>再见了旋转波近似：量子拉比模型的解析解</title>
-    <link>http://example.com/zh-cn/rabi/</link>
+    <link>http://localhost:1313/zh-cn/rabi/</link>
     <pubDate>Sat, 27 Jul 2024 15:42:49 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/rabi/</guid>
-    <description><![CDATA[再见了旋转波近似：量子拉比模型的解析解 1. 前言 在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/rabi/</guid>
+    <description><![CDATA[<h1 id="再见了旋转波近似量子拉比模型的解析解">再见了旋转波近似：量子拉比模型的解析解</h1>
+<h2 id="1-前言">1. 前言</h2>
+<p>在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。</p>]]></description>
 </item>
 <item>
     <title>激光的全量子理论</title>
-    <link>http://example.com/zh-cn/laser_quantum2/</link>
+    <link>http://localhost:1313/zh-cn/laser_quantum2/</link>
     <pubDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/laser_quantum2/</guid>
-    <description><![CDATA[大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？ 本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/laser_quantum2/</guid>
+    <description><![CDATA[<blockquote>
+<p>大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？</p>
+</blockquote>
+<p>本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。</p>]]></description>
 </item>
 <item>
     <title>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</title>
-    <link>http://example.com/zh-cn/spdc_optical_amp/</link>
+    <link>http://localhost:1313/zh-cn/spdc_optical_amp/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/spdc_optical_amp/</guid>
-    <description><![CDATA[SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？ 我们先用极限思维，考虑两个极限： 极限1：放大器的增益等于1，也就是没]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/spdc_optical_amp/</guid>
+    <description><![CDATA[<p>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</p>
+<p>我们先用极限思维，考虑两个极限：</p>
+<p>极限1：放大器的增益等于1，也就是没有任何增益</p>]]></description>
 </item>
 <item>
     <title>量子纠缠的速度是否超过光速？</title>
-    <link>http://example.com/zh-cn/contextuality/</link>
+    <link>http://localhost:1313/zh-cn/contextuality/</link>
     <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/contextuality/</guid>
-    <description><![CDATA[太长不看版： “超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子]]></description>
-</item>
-<item>
-    <title>位置测量的塌缩态</title>
-    <link>http://example.com/zh-cn/position_measurement/</link>
-    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/position_measurement/</guid>
-    <description><![CDATA[一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？ 太长不看版： 设待测系统的波]]></description>
-</item>
-<item>
-    <title>产生湮灭算符是怎么得到的？</title>
-    <link>http://example.com/zh-cn/annilation_op/</link>
-    <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/annilation_op/</guid>
-    <description><![CDATA[产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。 想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的： $\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$ 即 $\frac{\mathrm{d}}{\mathrm{d}t}]]></description>
-</item>
-<item>
-    <title>激光的一种简单的量子描述</title>
-    <link>http://example.com/zh-cn/laser_quantum/</link>
-    <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/laser_quantum/</guid>
-    <description><![CDATA[本文旨在从基本量子动力学出发，推导出激光的相干态。 考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。 二能级系统一开始处于激发]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/contextuality/</guid>
+    <description><![CDATA[<p>太长不看版：</p>
+<p>“超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子态和测量基矢共同作为 reality，这叫做互文性。非局域性是互文性的一个推论。</p>]]></description>
 </item>
 </channel>
 </rss>

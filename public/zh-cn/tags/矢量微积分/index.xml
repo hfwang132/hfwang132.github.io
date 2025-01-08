@@ -1,16 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>矢量微积分 - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/zh-cn/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/</link>
+        <link>http://localhost:1313/zh-cn/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/</link>
         <description>矢量微积分 - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 10:55:38 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 10:55:38 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="self" type="application/rss+xml" /><item>
     <title>高维空间中的旋度</title>
-    <link>http://example.com/zh-cn/curl_in_n_dimension/</link>
+    <link>http://localhost:1313/zh-cn/curl_in_n_dimension/</link>
     <pubDate>Sat, 10 Jun 2023 10:55:38 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/curl_in_n_dimension/</guid>
-    <description><![CDATA[1 微分形式 在介绍旋度之前，我们得先介绍一下微分形式和外微分算子。 一个 $n$ 阶形式可以定义为一个交替多重线性映射 $\omega:(T_pM)^n\rightarrow \mathbb{R}$ 。它把多个向量映射成一个实数。]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/curl_in_n_dimension/</guid>
+    <description><![CDATA[<h3 id="1-微分形式">1 微分形式</h3>
+<p>在介绍旋度之前，我们得先介绍一下微分形式和外微分算子。</p>
+<p>一个 $n$ 阶形式可以定义为一个交替多重线性映射 $\omega:(T_pM)^n\rightarrow \mathbb{R}$ 。它把多个向量映射成一个实数。另外，它还满足交替性，即交换两个输入向量，输出多一个负号。</p>]]></description>
 </item>
 </channel>
 </rss>

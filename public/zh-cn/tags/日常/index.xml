@@ -1,16 +1,50 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>日常 - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/zh-cn/tags/%E6%97%A5%E5%B8%B8/</link>
+        <link>http://localhost:1313/zh-cn/tags/%E6%97%A5%E5%B8%B8/</link>
         <description>日常 - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 01:48:51 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E6%97%A5%E5%B8%B8/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 25 Jun 2023 22:51:45 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/%E6%97%A5%E5%B8%B8/" rel="self" type="application/rss+xml" /><item>
+    <title>随想-03</title>
+    <link>http://localhost:1313/zh-cn/essay_03/</link>
+    <pubDate>Sun, 25 Jun 2023 22:51:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/essay_03/</guid>
+    <description><![CDATA[<blockquote>
+<p>本文写于 2020 年 1 月 18 日。</p>
+</blockquote>
+<p>今天了解到一本书叫 <em>Good to Great</em>，作者说：</p>
+<blockquote>
+<p>Good is the enemy of great. Few people attain great lives, in large part because it&rsquo;s just so easy to settle for a good life.</p>
+</blockquote>
+<p>看到这段话突然感触良深。想要达到“Great”的境界是要付出巨大的努力与牺牲的，但若只是想达到“Good”的境界，可能只需要在大部分时间里做好分内之事即可。</p>]]></description>
+</item>
+<item>
+    <title>随想-02</title>
+    <link>http://localhost:1313/zh-cn/essay_02/</link>
+    <pubDate>Sun, 25 Jun 2023 10:32:22 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/essay_02/</guid>
+    <description><![CDATA[<blockquote>
+<p>今天是我在武大待的最后一天。想回忆一下这四年的时光，然而校园里几乎每个角落都走过了，所以不如还是看看自己以前的朋友圈吧。</p>
+<p>找出了一些自己觉得比较好玩的。</p>]]></description>
+</item>
+<item>
+    <title>随想-01</title>
+    <link>http://localhost:1313/zh-cn/essay_01/</link>
+    <pubDate>Fri, 23 Jun 2023 23:02:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/essay_01/</guid>
+    <description><![CDATA[<blockquote>
+<p>此文写于 2020 年 1 月 5 日。今日再看，感觉大一的自己动辄思考一些“终极”问题，实在是很沉迷宏大叙事。但咱又不得不羡慕这种朝气，因为现在的自己每天面对的最大难题就是中午吃什么。</p>]]></description>
+</item>
+<item>
     <title>博客迁移</title>
-    <link>http://example.com/zh-cn/blog_migration/</link>
+    <link>http://localhost:1313/zh-cn/blog_migration/</link>
     <pubDate>Sat, 10 Jun 2023 01:48:51 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/zh-cn/blog_migration/</guid>
-    <description><![CDATA[博客迁移 发现了这个制作个人网站的神器 - Hugo。感觉酷炫且好用。以后把知乎的博客都慢慢迁移过来！]]></description>
+    <author>作者</author>
+    <guid>http://localhost:1313/zh-cn/blog_migration/</guid>
+    <description><![CDATA[<h1 id="博客迁移">博客迁移</h1>
+<p>发现了这个制作个人网站的神器 - Hugo。感觉酷炫且好用。以后把知乎的博客都慢慢迁移过来！</p>]]></description>
 </item>
 </channel>
 </rss>

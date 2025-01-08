@@ -1,24 +1,53 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Diary - Category - Haifei&#39;s Home</title>
-        <link>http://example.com/categories/diary/</link>
+        <link>http://localhost:1313/categories/diary/</link>
         <description>Diary - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/diary/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/diary/" rel="self" type="application/rss+xml" /><item>
     <title>Some fun side-projects</title>
-    <link>http://example.com/side_proj/</link>
+    <link>http://localhost:1313/side_proj/</link>
     <pubDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/side_proj/</guid>
-    <description><![CDATA[ Projects Date Remark An FM Radio Receiver based on PYNQ-Z2 and RTL-SDR Jun 2023 Jupyter Notebook App rather than web app WIFI Weather Clock Jan 2023 Haven&rsquo;t learned LvGL yet &hellip; The GUI is rather simple Light Cube Jan 2023 Ordered the BOM and soldered them together, but the firmware is not mine &hellip; Conway&rsquo;s Game of Life Dec 2022 Touch screen used~ ]]></description>
+    <author>Author</author>
+    <guid>http://localhost:1313/side_proj/</guid>
+    <description><![CDATA[<table>
+  <thead>
+      <tr>
+          <th>Projects</th>
+          <th>Date</th>
+          <th>Remark</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1kg4y1c7Wt/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">An FM Radio Receiver based on PYNQ-Z2 and RTL-SDR</a></td>
+          <td>Jun 2023</td>
+          <td>Jupyter Notebook App rather than web app</td>
+      </tr>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1J14y1u7gi/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">WIFI Weather Clock</a></td>
+          <td>Jan 2023</td>
+          <td>Haven&rsquo;t learned LvGL yet &hellip; The GUI is rather simple</td>
+      </tr>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1pG4y1y7zg/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">Light Cube</a></td>
+          <td>Jan 2023</td>
+          <td>Ordered the BOM and soldered them together, but the firmware is not mine &hellip;</td>
+      </tr>
+      <tr>
+          <td><a href="https://www.bilibili.com/video/BV1jd4y1x75i/?spm_id_from=333.999.0.0&amp;vd_source=279536fd910ddf00a689c3e3167d07bb" target="_blank" rel="noopener noreffer ">Conway&rsquo;s Game of Life</a></td>
+          <td>Dec 2022</td>
+          <td>Touch screen used~</td>
+      </tr>
+  </tbody>
+</table>]]></description>
 </item>
 <item>
     <title>Blog Migration</title>
-    <link>http://example.com/blog_migration/</link>
+    <link>http://localhost:1313/blog_migration/</link>
     <pubDate>Sat, 10 Jun 2023 01:51:11 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/blog_migration/</guid>
-    <description><![CDATA[I recently discovered this fantastic tool for creating personal websites - Hugo. Feels really cool and user-friendly! Plan to gradually migrate my blogs from Zhihu to here in the future.]]></description>
+    <author>Author</author>
+    <guid>http://localhost:1313/blog_migration/</guid>
+    <description><![CDATA[<p>I recently discovered this fantastic tool for creating personal websites - Hugo. Feels really cool and user-friendly! Plan to gradually migrate my blogs from Zhihu to here in the future.</p>]]></description>
 </item>
 </channel>
 </rss>

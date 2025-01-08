@@ -1,29 +1,88 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Python - Tag - Haifei&#39;s Home</title>
-        <link>http://example.com/tags/python/</link>
+        <link>http://localhost:1313/tags/python/</link>
         <description>Python - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
-            <webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/python/" rel="self" type="application/rss+xml" /><item>
     <title>Polling Jupyter widget UI events in runtime</title>
-    <link>http://example.com/ui_poll/</link>
+    <link>http://localhost:1313/ui_poll/</link>
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/ui_poll/</guid>
-    <description><![CDATA[Let&rsquo;s look at a code snippet in the Jupyter Notebook:
-1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) IntSlider is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.
-However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.]]></description>
+    <author>Author</author>
+    <guid>http://localhost:1313/ui_poll/</guid>
+    <description><![CDATA[<p>Let&rsquo;s look at a code snippet in the Jupyter Notebook:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">(</span><span class="n">slider</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">slider</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>IntSlider</code> is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.</p>
+<p>However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.</p>]]></description>
 </item>
 <item>
     <title>Python coroutines and asyncio</title>
-    <link>http://example.com/python_asyncio/</link>
+    <link>http://localhost:1313/python_asyncio/</link>
     <pubDate>Tue, 13 Jun 2023 22:05:41 &#43;0800</pubDate>
-    <author>hfwang132</author>
-    <guid>http://example.com/python_asyncio/</guid>
-    <description><![CDATA[Recently, I have been using Python coroutines/asynchronous programming in a project. Now, I will summarize my experience.
-Import 1 import asyncio If asyncio is to be used in an IPython environment, we have to add two more lines：
-1 2 3 import nest_asyncio nest_asyncio.apply() import asyncio Coroutines Coroutines are the core of asynchronous programming in Python. To define a coroutine, you need to use async def.
-1 2 3 async def main(): # do something print(&#34;Hello world!]]></description>
+    <author>Author</author>
+    <guid>http://localhost:1313/python_asyncio/</guid>
+    <description><![CDATA[<p>Recently, I have been using Python coroutines/asynchronous programming in a project. Now, I will summarize my experience.</p>
+<h2 id="import">Import</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">asyncio</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If <code>asyncio</code> is to be used in an IPython environment, we have to add two more lines：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+</span></span><span class="line"><span class="cl"><span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">asyncio</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="coroutines">Coroutines</h2>
+<p>Coroutines are the core of asynchronous programming in Python. To define a coroutine, you need to use <code>async def</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># do something</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello world!&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>To execute the coroutine, you cannot directly call <code>main()</code>. Instead, you need to use <code>run()</code>:</p>]]></description>
 </item>
 </channel>
 </rss>
