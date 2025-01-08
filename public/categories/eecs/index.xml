@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>EECS - Category - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/categories/eecs/</link>
+        <link>http://example.com/categories/eecs/</link>
         <description>EECS - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/eecs/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/eecs/" rel="self" type="application/rss+xml" /><item>
     <title>HW &amp; SW design of the AXI Quad SPI IP core</title>
-    <link>http://localhost:1313/spi/</link>
+    <link>http://example.com/spi/</link>
     <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/spi/</guid>
+    <guid>http://example.com/spi/</guid>
     <description><![CDATA[<h3 id="1-basics">1 Basics</h3>
 <p>SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - <code>SS</code> (Slave Select), <code>SCK</code> (SPI Clock), and <code>MOSI</code> (Master-In-Slave-Out). The four wire mode has an extra line called <code>MISO</code> (Master-In-Slave-Out).</p>
 <table>
@@ -41,10 +41,10 @@
 </item>
 <item>
     <title>Access the Internet from evaluation boards via PC</title>
-    <link>http://localhost:1313/boards_networking/</link>
+    <link>http://example.com/boards_networking/</link>
     <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/boards_networking/</guid>
+    <guid>http://example.com/boards_networking/</guid>
     <description><![CDATA[<h3 id="windows">Windows</h3>
 <p>Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to <code>192.168.137.1</code> (this is the default behavior in Windows).</p>
 <p>Then, set the gateway as <code>192.168.137.1</code> in the terminal of the development board:</p>
@@ -53,10 +53,10 @@
 </item>
 <item>
     <title>Partitioning and formatting SD cards on Linux</title>
-    <link>http://localhost:1313/linux_sd_card/</link>
+    <link>http://example.com/linux_sd_card/</link>
     <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/linux_sd_card/</guid>
+    <guid>http://example.com/linux_sd_card/</guid>
     <description><![CDATA[<p>To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.</p>
 <p>The main commands are as follows:</p>
 <p>First, use <code>sudo fdisk -l</code> to confirm which device in <code>/dev</code> corresponds to the SD card.</p>]]></description>

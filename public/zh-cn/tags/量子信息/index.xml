@@ -1,31 +1,31 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>量子信息 - 标签 - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/zh-cn/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
+        <link>http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
         <description>量子信息 - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
     <title>直积、直和、笛卡尔积、张量积的区别是什么</title>
-    <link>http://localhost:1313/zh-cn/products/</link>
+    <link>http://example.com/zh-cn/products/</link>
     <pubDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/products/</guid>
+    <guid>http://example.com/zh-cn/products/</guid>
     <description><![CDATA[<p>小朋友们好，今天我们来学习什么是<strong>笛卡尔积</strong>。我们把世界上所有上衣的集合叫做 $a$ ，世界上所有下着的集合叫做 $b$ ，那么 $a$ 和 $b$ 的笛卡尔积 $a \times b$ 是什么呢？就是所有可能的上下衣装搭配的集合啦（当然，不包括帽子、鞋子、首饰等等）。</p>]]></description>
 </item>
 <item>
     <title>量子态/算符的 Weyl 和 Wigner 表示</title>
-    <link>http://localhost:1313/zh-cn/weyl_wigner/</link>
+    <link>http://example.com/zh-cn/weyl_wigner/</link>
     <pubDate>Wed, 08 Jan 2025 20:25:50 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/weyl_wigner/</guid>
+    <guid>http://example.com/zh-cn/weyl_wigner/</guid>
     <description><![CDATA[<h2 id="前言">前言</h2>
 <p>在经典力学中，物理量是相空间上的一个函数，系统状态是相空间上的一个点（对于系综而言则是相空间上的一个概率分布）。这一套语言量子化之后，就得到了量子态/算符的相空间表示，也就是 Wigner 表示。Weyl 表示则是它的傅里叶变换。</p>]]></description>
 </item>
 <item>
     <title>量子纠缠的速度是否超过光速？</title>
-    <link>http://localhost:1313/zh-cn/contextuality/</link>
+    <link>http://example.com/zh-cn/contextuality/</link>
     <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/contextuality/</guid>
+    <guid>http://example.com/zh-cn/contextuality/</guid>
     <description><![CDATA[<p>太长不看版：</p>
 <p>“超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子态和测量基矢共同作为 reality，这叫做互文性。非局域性是互文性的一个推论。</p>]]></description>
 </item>

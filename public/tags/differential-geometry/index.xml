@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Differential Geometry - Tag - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/tags/differential-geometry/</link>
+        <link>http://example.com/tags/differential-geometry/</link>
         <description>Differential Geometry - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/differential-geometry/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/differential-geometry/" rel="self" type="application/rss+xml" /><item>
     <title>Understanding differentials in four levels</title>
-    <link>http://localhost:1313/understanding_differentials/</link>
+    <link>http://example.com/understanding_differentials/</link>
     <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/understanding_differentials/</guid>
+    <guid>http://example.com/understanding_differentials/</guid>
     <description><![CDATA[<h2 id="one-differential-is-an-infinitesimal">One Differential is an Infinitesimal?</h2>
 <p>Physicists like to think of differentials as very small quantities, which is convenient for calculations but gives a feeling of lack of rigor.</p>
 <p>In fact, it is indeed lacking rigor, and the second mathematical crisis arose from this.</p>
@@ -19,10 +19,10 @@
 </item>
 <item>
     <title>What is the relationship between Lie derivative and covariant derivative?</title>
-    <link>http://localhost:1313/lie_derivative/</link>
+    <link>http://example.com/lie_derivative/</link>
     <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/lie_derivative/</guid>
+    <guid>http://example.com/lie_derivative/</guid>
     <description><![CDATA[<h2 id="i-differences-and-similarities-in-properties">I. Differences and Similarities in Properties</h2>
 <p>Lie derivative $\mathcal{L}_V$ and covariant derivative $\nabla_V$ share many common points:</p>
 <ol>
@@ -36,10 +36,10 @@
 </item>
 <item>
     <title>A beginner&#39;s guide to differential geometry and Lie algebras</title>
-    <link>http://localhost:1313/differential_geometry/</link>
+    <link>http://example.com/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/differential_geometry/</guid>
+    <guid>http://example.com/differential_geometry/</guid>
     <description><![CDATA[<h1 id="tbd">TBD</h1>
 <p>Chinese version <a href="../zh-cn/differential_geometry/" rel="">here</a></p>]]></description>
 </item>

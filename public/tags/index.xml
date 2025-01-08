@@ -1,86 +1,86 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - Tag - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/tags/</link>
+        <link>http://example.com/tags/</link>
         <description>Tags - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Quantum Optics</title>
-    <link>http://localhost:1313/tags/quantum-optics/</link>
+    <link>http://example.com/tags/quantum-optics/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/quantum-optics/</guid>
+    <guid>http://example.com/tags/quantum-optics/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Quantum Information</title>
-    <link>http://localhost:1313/tags/quantum-information/</link>
+    <link>http://example.com/tags/quantum-information/</link>
     <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/quantum-information/</guid>
+    <guid>http://example.com/tags/quantum-information/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Quantum Measurement Theory</title>
-    <link>http://localhost:1313/tags/quantum-measurement-theory/</link>
+    <link>http://example.com/tags/quantum-measurement-theory/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/quantum-measurement-theory/</guid>
+    <guid>http://example.com/tags/quantum-measurement-theory/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Mathematical Methods in Physics</title>
-    <link>http://localhost:1313/tags/mathematical-methods-in-physics/</link>
+    <link>http://example.com/tags/mathematical-methods-in-physics/</link>
     <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/mathematical-methods-in-physics/</guid>
+    <guid>http://example.com/tags/mathematical-methods-in-physics/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Quantum Metrology</title>
-    <link>http://localhost:1313/tags/quantum-metrology/</link>
+    <link>http://example.com/tags/quantum-metrology/</link>
     <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/quantum-metrology/</guid>
+    <guid>http://example.com/tags/quantum-metrology/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Differential Geometry</title>
-    <link>http://localhost:1313/tags/differential-geometry/</link>
+    <link>http://example.com/tags/differential-geometry/</link>
     <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/differential-geometry/</guid>
+    <guid>http://example.com/tags/differential-geometry/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Embedded Systems</title>
-    <link>http://localhost:1313/tags/embedded-systems/</link>
+    <link>http://example.com/tags/embedded-systems/</link>
     <pubDate>Thu, 06 Jul 2023 22:55:37 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/embedded-systems/</guid>
+    <guid>http://example.com/tags/embedded-systems/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>SPI</title>
-    <link>http://localhost:1313/tags/spi/</link>
+    <link>http://example.com/tags/spi/</link>
     <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/spi/</guid>
+    <guid>http://example.com/tags/spi/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Jupyter Notebook</title>
-    <link>http://localhost:1313/tags/jupyter-notebook/</link>
+    <link>http://example.com/tags/jupyter-notebook/</link>
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/jupyter-notebook/</guid>
+    <guid>http://example.com/tags/jupyter-notebook/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Python</title>
-    <link>http://localhost:1313/tags/python/</link>
+    <link>http://example.com/tags/python/</link>
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/tags/python/</guid>
+    <guid>http://example.com/tags/python/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

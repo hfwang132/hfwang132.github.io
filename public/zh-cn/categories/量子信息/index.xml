@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>量子信息 - 分类 - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
+        <link>http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
         <description>量子信息 - 分类 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:03:37 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:03:37 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
     <title>量子达尔文主义</title>
-    <link>http://localhost:1313/zh-cn/quantum_darwinism/</link>
+    <link>http://example.com/zh-cn/quantum_darwinism/</link>
     <pubDate>Wed, 08 Jan 2025 21:03:37 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/quantum_darwinism/</guid>
+    <guid>http://example.com/zh-cn/quantum_darwinism/</guid>
     <description><![CDATA[<p>个人认为在量子力学的诠释中，目前最有趣的是 Zurek 的 <strong>Existential Interpretation（存在主义诠释）</strong>，也被称为<strong>量子达尔文主义（Quantum Darwinism）</strong> [1]。Zurek 本人是退相干理论的奠基人之一。</p>]]></description>
 </item>
 <item>
     <title>相空间为什么有时看起来像一个复平面？</title>
-    <link>http://localhost:1313/zh-cn/phase_space_complex/</link>
+    <link>http://example.com/zh-cn/phase_space_complex/</link>
     <pubDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/phase_space_complex/</guid>
+    <guid>http://example.com/zh-cn/phase_space_complex/</guid>
     <description><![CDATA[<p>学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。</p>
 <blockquote>
 <p>例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。</p>
@@ -24,10 +24,10 @@
 </item>
 <item>
     <title>黑体辐射的推导（无废话版）</title>
-    <link>http://localhost:1313/zh-cn/black_body/</link>
+    <link>http://example.com/zh-cn/black_body/</link>
     <pubDate>Sat, 27 Jul 2024 15:50:09 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/black_body/</guid>
+    <guid>http://example.com/zh-cn/black_body/</guid>
     <description><![CDATA[<p>闲来无事，复习一下黑体辐射吧~</p>
 <p>很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。</p>
 <p>本文单刀直入，直接闭嘴计算。</p>
@@ -36,30 +36,30 @@
 </item>
 <item>
     <title>为什么热光场的光强服从指数分布？</title>
-    <link>http://localhost:1313/zh-cn/thermal_exponential_dist/</link>
+    <link>http://example.com/zh-cn/thermal_exponential_dist/</link>
     <pubDate>Sat, 27 Jul 2024 15:45:26 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/thermal_exponential_dist/</guid>
+    <guid>http://example.com/zh-cn/thermal_exponential_dist/</guid>
     <description><![CDATA[<h2 id="1-精彩的推理">1. 精彩的推理</h2>
 <p>诺奖得主 Ketterle 在<a href="https://av.tib.eu/media/42704" target="_blank" rel="noopener noreffer ">8.422公开课</a>中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证：</p>
 <p>根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分布。</p>]]></description>
 </item>
 <item>
     <title>再见了旋转波近似：量子拉比模型的解析解</title>
-    <link>http://localhost:1313/zh-cn/rabi/</link>
+    <link>http://example.com/zh-cn/rabi/</link>
     <pubDate>Sat, 27 Jul 2024 15:42:49 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/rabi/</guid>
+    <guid>http://example.com/zh-cn/rabi/</guid>
     <description><![CDATA[<h1 id="再见了旋转波近似量子拉比模型的解析解">再见了旋转波近似：量子拉比模型的解析解</h1>
 <h2 id="1-前言">1. 前言</h2>
 <p>在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。</p>]]></description>
 </item>
 <item>
     <title>激光的全量子理论</title>
-    <link>http://localhost:1313/zh-cn/laser_quantum2/</link>
+    <link>http://example.com/zh-cn/laser_quantum2/</link>
     <pubDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/laser_quantum2/</guid>
+    <guid>http://example.com/zh-cn/laser_quantum2/</guid>
     <description><![CDATA[<blockquote>
 <p>大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？</p>
 </blockquote>
@@ -67,29 +67,29 @@
 </item>
 <item>
     <title>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</title>
-    <link>http://localhost:1313/zh-cn/spdc_optical_amp/</link>
+    <link>http://example.com/zh-cn/spdc_optical_amp/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/spdc_optical_amp/</guid>
+    <guid>http://example.com/zh-cn/spdc_optical_amp/</guid>
     <description><![CDATA[<p>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</p>
 <p>我们先用极限思维，考虑两个极限：</p>
 <p>极限1：放大器的增益等于1，也就是没有任何增益</p>]]></description>
 </item>
 <item>
     <title>量子纠缠的速度是否超过光速？</title>
-    <link>http://localhost:1313/zh-cn/contextuality/</link>
+    <link>http://example.com/zh-cn/contextuality/</link>
     <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/contextuality/</guid>
+    <guid>http://example.com/zh-cn/contextuality/</guid>
     <description><![CDATA[<p>太长不看版：</p>
 <p>“超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子态和测量基矢共同作为 reality，这叫做互文性。非局域性是互文性的一个推论。</p>]]></description>
 </item>
 <item>
     <title>位置测量的塌缩态</title>
-    <link>http://localhost:1313/zh-cn/position_measurement/</link>
+    <link>http://example.com/zh-cn/position_measurement/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/position_measurement/</guid>
+    <guid>http://example.com/zh-cn/position_measurement/</guid>
     <description><![CDATA[<p>一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？</p>
 <hr>
 <p>太长不看版：</p>
@@ -97,10 +97,10 @@
 </item>
 <item>
     <title>产生湮灭算符是怎么得到的？</title>
-    <link>http://localhost:1313/zh-cn/annilation_op/</link>
+    <link>http://example.com/zh-cn/annilation_op/</link>
     <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/annilation_op/</guid>
+    <guid>http://example.com/zh-cn/annilation_op/</guid>
     <description><![CDATA[<p>产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。</p>
 <p>想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的：</p>
 <p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>

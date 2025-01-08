@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Quantum Measurement Theory - Tag - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/tags/quantum-measurement-theory/</link>
+        <link>http://example.com/tags/quantum-measurement-theory/</link>
         <description>Quantum Measurement Theory - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/quantum-measurement-theory/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:49:27 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-measurement-theory/" rel="self" type="application/rss+xml" /><item>
     <title>The collapsed state of position measurement</title>
-    <link>http://localhost:1313/position_measurement/</link>
+    <link>http://example.com/position_measurement/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/position_measurement/</guid>
+    <guid>http://example.com/position_measurement/</guid>
     <description><![CDATA[<p>Common sense tells us that an actual position measurement will not produce a delta function, as the delta function itself is pathological. So what should the collapsed state of an actual position measurement look like?</p>
 <hr>
 <p>TL;DR:</p>
@@ -18,10 +18,10 @@
 </item>
 <item>
     <title>The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem</title>
-    <link>http://localhost:1313/classical_correlation/</link>
+    <link>http://example.com/classical_correlation/</link>
     <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/classical_correlation/</guid>
+    <guid>http://example.com/classical_correlation/</guid>
     <description><![CDATA[<p>Many physicists use an example to explain quantum entanglement to the public:</p>
 <blockquote>
 <p>Imagine you have two boxes, one containing pizza and the other a burger. Before opening the boxes, you cannot know what is inside. Alice and Bob each take a box and move to distant locations. When Alice opens her box, she instantly knows what is in Bob&rsquo;s box far away.</p>
@@ -30,10 +30,10 @@
 </item>
 <item>
     <title>POVM: a brief introduction</title>
-    <link>http://localhost:1313/povm/</link>
+    <link>http://example.com/povm/</link>
     <pubDate>Sun, 10 Mar 2024 02:22:12 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/povm/</guid>
+    <guid>http://example.com/povm/</guid>
     <description><![CDATA[<h1 id="projection-measurement">Projection Measurement</h1>
 <p>Traditionally, a measurement, in the sense of Von Neumann, is a series of projection operators. By performing spectral decomposition on the self-adjoint operator corresponding to the observable, denoted as $ O = \sum_i \lambda_i |\varphi_i\rangle\langle\varphi_i| $, we obtain these projection operators $ |\varphi_i\rangle\langle\varphi_i| $. This part is well-known to students who have studied elementary quantum mechanics.</p>
 <p>Besides the Von Neumann measurement, there is a more general type of measurement called Generalized Measurements or Positive Operator Valued Measures (POVMs).</p>]]></description>

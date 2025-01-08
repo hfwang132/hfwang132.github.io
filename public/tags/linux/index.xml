@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Linux - Tag - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/tags/linux/</link>
+        <link>http://example.com/tags/linux/</link>
         <description>Linux - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Access the Internet from evaluation boards via PC</title>
-    <link>http://localhost:1313/boards_networking/</link>
+    <link>http://example.com/boards_networking/</link>
     <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/boards_networking/</guid>
+    <guid>http://example.com/boards_networking/</guid>
     <description><![CDATA[<h3 id="windows">Windows</h3>
 <p>Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to <code>192.168.137.1</code> (this is the default behavior in Windows).</p>
 <p>Then, set the gateway as <code>192.168.137.1</code> in the terminal of the development board:</p>
@@ -17,10 +17,10 @@
 </item>
 <item>
     <title>Increasing the swapfile for Linux</title>
-    <link>http://localhost:1313/increase_swapfile/</link>
+    <link>http://example.com/increase_swapfile/</link>
     <pubDate>Mon, 12 Jun 2023 22:59:26 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/increase_swapfile/</guid>
+    <guid>http://example.com/increase_swapfile/</guid>
     <description><![CDATA[<p>Xilinx&rsquo;s toolchain consumes soooo much memory! Sometimes it causes the system to freeze&hellip; After all, my laptop only has 8GB of RAM. So there&rsquo;s no other choice but to add virtual memories.</p>
 <p>After increase the swapfile, the system performance has improved a lot:</p>
 <div class="highlight"><div class="chroma">
@@ -41,20 +41,20 @@
 </item>
 <item>
     <title>Partitioning and formatting SD cards on Linux</title>
-    <link>http://localhost:1313/linux_sd_card/</link>
+    <link>http://example.com/linux_sd_card/</link>
     <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/linux_sd_card/</guid>
+    <guid>http://example.com/linux_sd_card/</guid>
     <description><![CDATA[<p>To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.</p>
 <p>The main commands are as follows:</p>
 <p>First, use <code>sudo fdisk -l</code> to confirm which device in <code>/dev</code> corresponds to the SD card.</p>]]></description>
 </item>
 <item>
     <title>Mounting the EFI partition in Windows OS</title>
-    <link>http://localhost:1313/efi_partition/</link>
+    <link>http://example.com/efi_partition/</link>
     <pubDate>Mon, 12 Jun 2023 22:26:16 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/efi_partition/</guid>
+    <guid>http://example.com/efi_partition/</guid>
     <description><![CDATA[<p>To mount the EFI partitions, run the following commands in PowerShell:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

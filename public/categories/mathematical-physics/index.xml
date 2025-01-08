@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Mathematical Physics - Category - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/categories/mathematical-physics/</link>
+        <link>http://example.com/categories/mathematical-physics/</link>
         <description>Mathematical Physics - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/mathematical-physics/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/mathematical-physics/" rel="self" type="application/rss+xml" /><item>
     <title>Understanding differentials in four levels</title>
-    <link>http://localhost:1313/understanding_differentials/</link>
+    <link>http://example.com/understanding_differentials/</link>
     <pubDate>Wed, 13 Mar 2024 18:41:18 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/understanding_differentials/</guid>
+    <guid>http://example.com/understanding_differentials/</guid>
     <description><![CDATA[<h2 id="one-differential-is-an-infinitesimal">One Differential is an Infinitesimal?</h2>
 <p>Physicists like to think of differentials as very small quantities, which is convenient for calculations but gives a feeling of lack of rigor.</p>
 <p>In fact, it is indeed lacking rigor, and the second mathematical crisis arose from this.</p>
@@ -19,10 +19,10 @@
 </item>
 <item>
     <title>Baker-Campbell-Hausdorff Formula</title>
-    <link>http://localhost:1313/bch/</link>
+    <link>http://example.com/bch/</link>
     <pubDate>Sun, 10 Mar 2024 02:12:14 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/bch/</guid>
+    <guid>http://example.com/bch/</guid>
     <description><![CDATA[<p>Chinese version <a href="../zh-cn/bch/" rel="">here</a></p>
 <p><strong>Baker-Campbell-Hausdorff Formula</strong> can be used to compute operator evolution in the Heisenberg picture:</p>
 <p>$e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$</p>
@@ -38,10 +38,10 @@ $\begin{aligned} e^{-i\varphi n} a e^{i\varphi n}&amp;= a + i\varphi [n, a] - \f
 </item>
 <item>
     <title>What is the relationship between Lie derivative and covariant derivative?</title>
-    <link>http://localhost:1313/lie_derivative/</link>
+    <link>http://example.com/lie_derivative/</link>
     <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/lie_derivative/</guid>
+    <guid>http://example.com/lie_derivative/</guid>
     <description><![CDATA[<h2 id="i-differences-and-similarities-in-properties">I. Differences and Similarities in Properties</h2>
 <p>Lie derivative $\mathcal{L}_V$ and covariant derivative $\nabla_V$ share many common points:</p>
 <ol>
@@ -55,10 +55,10 @@ $\begin{aligned} e^{-i\varphi n} a e^{i\varphi n}&amp;= a + i\varphi [n, a] - \f
 </item>
 <item>
     <title>Curl in high dimensions</title>
-    <link>http://localhost:1313/curl_in_n_dimension/</link>
+    <link>http://example.com/curl_in_n_dimension/</link>
     <pubDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/curl_in_n_dimension/</guid>
+    <guid>http://example.com/curl_in_n_dimension/</guid>
     <description><![CDATA[<h3 id="1-differential-forms">1 Differential Forms</h3>
 <p>Before introducing the concept of curl, we need to first introduce differential forms and the exterior derivative.</p>
 <p>An n-form can be defined as an alternating multilinear mapping $\omega:(T_p^*M)^n\rightarrow \mathbb{R}$. It maps multiple vectors to a real number. Additionally, it satisfies the alternating property, meaning that exchanging two input vectors results in an output multiplied by a negative sign.</p>
@@ -66,10 +66,10 @@ $\begin{aligned} e^{-i\varphi n} a e^{i\varphi n}&amp;= a + i\varphi [n, a] - \f
 </item>
 <item>
     <title>What on earth are the pseudovectors?</title>
-    <link>http://localhost:1313/pseudovectors/</link>
+    <link>http://example.com/pseudovectors/</link>
     <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/pseudovectors/</guid>
+    <guid>http://example.com/pseudovectors/</guid>
     <description><![CDATA[<h2 id="1-introduction">1 Introduction</h2>
 <p>In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;</p>
 <p>In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.</p>
@@ -77,10 +77,10 @@ $\begin{aligned} e^{-i\varphi n} a e^{i\varphi n}&amp;= a + i\varphi [n, a] - \f
 </item>
 <item>
     <title>A beginner&#39;s guide to differential geometry and Lie algebras</title>
-    <link>http://localhost:1313/differential_geometry/</link>
+    <link>http://example.com/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/differential_geometry/</guid>
+    <guid>http://example.com/differential_geometry/</guid>
     <description><![CDATA[<h1 id="tbd">TBD</h1>
 <p>Chinese version <a href="../zh-cn/differential_geometry/" rel="">here</a></p>]]></description>
 </item>

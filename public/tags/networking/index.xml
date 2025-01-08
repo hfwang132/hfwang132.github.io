@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Networking - Tag - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/tags/networking/</link>
+        <link>http://example.com/tags/networking/</link>
         <description>Networking - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/networking/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/networking/" rel="self" type="application/rss+xml" /><item>
     <title>Access the Internet from evaluation boards via PC</title>
-    <link>http://localhost:1313/boards_networking/</link>
+    <link>http://example.com/boards_networking/</link>
     <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/boards_networking/</guid>
+    <guid>http://example.com/boards_networking/</guid>
     <description><![CDATA[<h3 id="windows">Windows</h3>
 <p>Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to <code>192.168.137.1</code> (this is the default behavior in Windows).</p>
 <p>Then, set the gateway as <code>192.168.137.1</code> in the terminal of the development board:</p>

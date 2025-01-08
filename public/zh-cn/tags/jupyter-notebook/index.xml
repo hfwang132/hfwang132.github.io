@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Jupyter Notebook - 标签 - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/zh-cn/tags/jupyter-notebook/</link>
+        <link>http://example.com/zh-cn/tags/jupyter-notebook/</link>
         <description>Jupyter Notebook - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/tags/jupyter-notebook/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/tags/jupyter-notebook/" rel="self" type="application/rss+xml" /><item>
     <title>运行时拉取 Jupyter Widgets UI 组件的状态</title>
-    <link>http://localhost:1313/zh-cn/ui_poll/</link>
+    <link>http://example.com/zh-cn/ui_poll/</link>
     <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/ui_poll/</guid>
+    <guid>http://example.com/zh-cn/ui_poll/</guid>
     <description><![CDATA[<p>先看一段 Jupyter Notebook 中的代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

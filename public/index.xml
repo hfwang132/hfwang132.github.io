@@ -1,16 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Haifei&#39;s Home</title>
-        <link>http://localhost:1313/</link>
+        <link>http://example.com/</link>
         <description>Haifei&#39;s Home</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate>
-            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Does the idler light passing through the optical fiber amplifier still entangle with the signal light?</title>
-    <link>http://localhost:1313/spdc_optical_amp/</link>
+    <link>http://example.com/spdc_optical_amp/</link>
     <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/spdc_optical_amp/</guid>
+    <guid>http://example.com/spdc_optical_amp/</guid>
     <description><![CDATA[<p>Does the idler light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?</p>
 <p>Let&rsquo;s consider two extremes:</p>
 <p>Extreme 1: The gain of the amplifier is equal to 1, that is, there is no gain at all.</p>
@@ -18,10 +18,10 @@
 </item>
 <item>
     <title>Does the speed of quantum entanglement exceed the speed of light?</title>
-    <link>http://localhost:1313/contextuality/</link>
+    <link>http://example.com/contextuality/</link>
     <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/contextuality/</guid>
+    <guid>http://example.com/contextuality/</guid>
     <description><![CDATA[<p>Too long; didn&rsquo;t read version:</p>
 <p>&ldquo;Spooky action at a distance (superluminal)&rdquo; is an outdated view. According to special relativity, there is no interaction between events at spacelike separation. The mainstream view in academia is to consider quantum states and measurement bases together as reality, known as contextuality. Nonlocality is a corollary of contextuality.</p>
 <hr>
@@ -31,10 +31,10 @@
 </item>
 <item>
     <title>The collapsed state of position measurement</title>
-    <link>http://localhost:1313/position_measurement/</link>
+    <link>http://example.com/position_measurement/</link>
     <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/position_measurement/</guid>
+    <guid>http://example.com/position_measurement/</guid>
     <description><![CDATA[<p>Common sense tells us that an actual position measurement will not produce a delta function, as the delta function itself is pathological. So what should the collapsed state of an actual position measurement look like?</p>
 <hr>
 <p>TL;DR:</p>
@@ -44,10 +44,10 @@
 </item>
 <item>
     <title>How are creation and annihilation operators derived?</title>
-    <link>http://localhost:1313/annilation_op/</link>
+    <link>http://example.com/annilation_op/</link>
     <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/annilation_op/</guid>
+    <guid>http://example.com/annilation_op/</guid>
     <description><![CDATA[<p>The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.</p>
 <p>Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:</p>
 <p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
@@ -57,10 +57,10 @@
 </item>
 <item>
     <title>A simple quantum description of lasers</title>
-    <link>http://localhost:1313/laser_quantum/</link>
+    <link>http://example.com/laser_quantum/</link>
     <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/laser_quantum/</guid>
+    <guid>http://example.com/laser_quantum/</guid>
     <description><![CDATA[<p>This article aims to derive the coherent state of a laser from basic quantum dynamics.</p>
 <p>Consider the interaction between a two-level system and a single-mode light field, where the frequency of the light field equals the energy level difference.</p>
 <p>The two-level system initially starts in the excited state $|e\rangle$, and the light field is in the vacuum state $|0\rangle$.</p>
@@ -68,20 +68,20 @@
 </item>
 <item>
     <title>Orbital angular momentum of photons</title>
-    <link>http://localhost:1313/oam/</link>
+    <link>http://example.com/oam/</link>
     <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/oam/</guid>
+    <guid>http://example.com/oam/</guid>
     <description><![CDATA[<h2 id="preface">Preface</h2>
 <p>A paper published in PRA in 1992 <a href="#ref_1" rel="">[1]</a> pointed out that photons also have orbital angular momentum (OAM). Compared to spin angular momentum (i.e., polarization, SAM) which can only take $\pm \hbar$, orbital angular momentum can take any integer multiple of $\hbar$. Such orbital angular momentum can be carried by helical wavefronts.</p>
 <p>You might be surprised: did people only discover this in 1992? In fact, helical wavefronts had been studied before 1992; photons carrying angular momentum greater than $\hbar$ had already been predicted by atomic physics (though they originate from higher-order transition processes, which do not satisfy the selection rules and thus have very low probabilities, making them practically unobservable in experiments). It wasn&rsquo;t until 1992 that Allen et al. pointed out that light beams with helical wavefronts carry quantized orbital angular momentum.</p>]]></description>
 </item>
 <item>
     <title>The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem</title>
-    <link>http://localhost:1313/classical_correlation/</link>
+    <link>http://example.com/classical_correlation/</link>
     <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/classical_correlation/</guid>
+    <guid>http://example.com/classical_correlation/</guid>
     <description><![CDATA[<p>Many physicists use an example to explain quantum entanglement to the public:</p>
 <blockquote>
 <p>Imagine you have two boxes, one containing pizza and the other a burger. Before opening the boxes, you cannot know what is inside. Alice and Bob each take a box and move to distant locations. When Alice opens her box, she instantly knows what is in Bob&rsquo;s box far away.</p>
@@ -90,10 +90,10 @@
 </item>
 <item>
     <title>A beginner&#39;s guide to quantum metrology</title>
-    <link>http://localhost:1313/quantum_metrology/</link>
+    <link>http://example.com/quantum_metrology/</link>
     <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/quantum_metrology/</guid>
+    <guid>http://example.com/quantum_metrology/</guid>
     <description><![CDATA[<h2 id="i-introduction-to-quantum-metrology">I. Introduction to Quantum Metrology</h2>
 <p>Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.</p>
 <p>The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.</p>
@@ -101,10 +101,10 @@
 </item>
 <item>
     <title>Quantum state tomography - a beginner&#39;s guide</title>
-    <link>http://localhost:1313/state_tomography/</link>
+    <link>http://example.com/state_tomography/</link>
     <pubDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/state_tomography/</guid>
+    <guid>http://example.com/state_tomography/</guid>
     <description><![CDATA[<h2 id="quantum-state-tomography">Quantum State Tomography</h2>
 <p>Quantum state tomography is the process of deducing the [quantum state] based on the [results of measurements on a quantum state ensemble]. Its formulation is straightforward, as follows:</p>
 <p>Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corresponding measurement probabilities $p_k = \operatorname{Tr}[\rho \Pi_k]$, find the quantum state $\rho$.</p>
@@ -112,10 +112,10 @@
 </item>
 <item>
     <title>What is the relationship between photons and electromagnetic field wave packets?</title>
-    <link>http://localhost:1313/photon_wave_packets/</link>
+    <link>http://example.com/photon_wave_packets/</link>
     <pubDate>Sat, 13 Apr 2024 16:10:38 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/photon_wave_packets/</guid>
+    <guid>http://example.com/photon_wave_packets/</guid>
     <description><![CDATA[<h3 id="a-wave-packet-can-correspond-to-a-photon">A wave packet can correspond to a photon</h3>
 <p><strong>Example</strong>: A photon can be in a <strong>coherent superposition</strong> state of different frequencies: $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$, at which point the photon can behave as a wave packet.</p>
 <p>You can imagine <strong>an atom de-exciting and emitting a photon</strong>, and this photon will indeed behave as a wave packet.</p>

@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>CS - 分类 - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/zh-cn/categories/cs/</link>
+        <link>http://example.com/zh-cn/categories/cs/</link>
         <description>CS - 分类 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/zh-cn/categories/cs/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://example.com/zh-cn/categories/cs/" rel="self" type="application/rss+xml" /><item>
     <title>运行时拉取 Jupyter Widgets UI 组件的状态</title>
-    <link>http://localhost:1313/zh-cn/ui_poll/</link>
+    <link>http://example.com/zh-cn/ui_poll/</link>
     <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/ui_poll/</guid>
+    <guid>http://example.com/zh-cn/ui_poll/</guid>
     <description><![CDATA[<p>先看一段 Jupyter Notebook 中的代码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -40,10 +40,10 @@
 </item>
 <item>
     <title>Python 协程/异步IO</title>
-    <link>http://localhost:1313/zh-cn/python_asyncio/</link>
+    <link>http://example.com/zh-cn/python_asyncio/</link>
     <pubDate>Tue, 13 Jun 2023 22:05:45 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/python_asyncio/</guid>
+    <guid>http://example.com/zh-cn/python_asyncio/</guid>
     <description><![CDATA[<p>最近做项目用到 Python 协程/异步，现在总结一下：</p>
 <h2 id="导入">导入</h2>
 <div class="highlight"><div class="chroma">
@@ -72,10 +72,10 @@
 </item>
 <item>
     <title>给 Linux 增加 swapfile</title>
-    <link>http://localhost:1313/zh-cn/increase_swapfile/</link>
+    <link>http://example.com/zh-cn/increase_swapfile/</link>
     <pubDate>Mon, 12 Jun 2023 22:59:29 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/increase_swapfile/</guid>
+    <guid>http://example.com/zh-cn/increase_swapfile/</guid>
     <description><![CDATA[<p>Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。</p>
 <p>增加了 swapfile 之后就好很多了：</p>
 <div class="highlight"><div class="chroma">
@@ -96,10 +96,10 @@
 </item>
 <item>
     <title>在 Windows 中挂载 EFI 分区的方法</title>
-    <link>http://localhost:1313/zh-cn/efi_partition/</link>
+    <link>http://example.com/zh-cn/efi_partition/</link>
     <pubDate>Mon, 12 Jun 2023 22:17:46 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://localhost:1313/zh-cn/efi_partition/</guid>
+    <guid>http://example.com/zh-cn/efi_partition/</guid>
     <description><![CDATA[<p>为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

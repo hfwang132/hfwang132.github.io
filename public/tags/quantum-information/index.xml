@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Quantum Information - Tag - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/tags/quantum-information/</link>
+        <link>http://example.com/tags/quantum-information/</link>
         <description>Quantum Information - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:34:24 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/quantum-information/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:34:24 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/quantum-information/" rel="self" type="application/rss+xml" /><item>
     <title>Does the speed of quantum entanglement exceed the speed of light?</title>
-    <link>http://localhost:1313/contextuality/</link>
+    <link>http://example.com/contextuality/</link>
     <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/contextuality/</guid>
+    <guid>http://example.com/contextuality/</guid>
     <description><![CDATA[<p>Too long; didn&rsquo;t read version:</p>
 <p>&ldquo;Spooky action at a distance (superluminal)&rdquo; is an outdated view. According to special relativity, there is no interaction between events at spacelike separation. The mainstream view in academia is to consider quantum states and measurement bases together as reality, known as contextuality. Nonlocality is a corollary of contextuality.</p>
 <hr>

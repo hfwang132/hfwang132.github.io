@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Lie Algebra - Tag - Haifei&#39;s Home</title>
-        <link>http://localhost:1313/tags/lie-algebra/</link>
+        <link>http://example.com/tags/lie-algebra/</link>
         <description>Lie Algebra - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/lie-algebra/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/lie-algebra/" rel="self" type="application/rss+xml" /><item>
     <title>A beginner&#39;s guide to differential geometry and Lie algebras</title>
-    <link>http://localhost:1313/differential_geometry/</link>
+    <link>http://example.com/differential_geometry/</link>
     <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/differential_geometry/</guid>
+    <guid>http://example.com/differential_geometry/</guid>
     <description><![CDATA[<h1 id="tbd">TBD</h1>
 <p>Chinese version <a href="../zh-cn/differential_geometry/" rel="">here</a></p>]]></description>
 </item>
