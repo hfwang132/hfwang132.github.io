@@ -1,6 +1,6 @@
 [submodule "themes/LoveIt"]
 	path = themes/LoveIt
-	url = https://github.com/dillonzq/LoveIt
+	url = https://github.com/hfwang132/LoveIt
 
 [submodule "zhihu-download"]
 	path = zhihu-download
