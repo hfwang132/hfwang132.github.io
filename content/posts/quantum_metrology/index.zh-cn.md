@@ -6,8 +6,6 @@ tags: ["量子计量学"]
 categories: ["量子信息"]
 ---
 
-# 量子计量学（Quantum Metrology）简明入门
-
 ## 一、量子计量学介绍  
 所谓量子计量学（Quantum Metrology），就是利用量子物态的量子性质进行精密测量的学问。
 
