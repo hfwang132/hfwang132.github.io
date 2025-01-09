@@ -16,12 +16,12 @@ comment: false
     float: left;
     padding: 0px;
     border: 0px;
-    font-size: 150%;
+    font-size: 125%;
     line-height: 1.5;
 }  
 
 .float-child1 p {
-    margin-bottom: 30px !important;/* Space between paragraphs */
+    margin-top: 30px !important;
 }
 
 .float-child2 {
@@ -29,7 +29,7 @@ comment: false
     float: right;
     padding: 0px;
     border: 0px;
-    font-size: 150%;
+    font-size: 125%;
     line-height: 1.5;
 }  
 
@@ -43,19 +43,19 @@ comment: false
 
   <div class="float-child1">
     <p>
-    Hi! This is my personal page. 
+    Hi! I'm Haifei Wang (王海飞). This is my personal page.
     </p>
     <p>
-    I love physics, mathematics, and EECS. In terms of EECS, I am particularly interested in the embedded systems, especially, HW-SW codesign with scientic instruments (e.g., FPGA design with quantum processors, single photon detectors).
+    I love physics, mathematics, and EECS. In terms of EECS, I am particularly interested in the embedded systems, especially, HW-SW codesign with scientic instruments (e.g., FPGA design with quantum processors, single photon detectors, etc).
     </p>
     <p>
-    I graduated from Wuhan University with a bachelor's degree and am currently pursuing a Ph.D. at the <a href="https://quantumlah.org">National University of Singapore - Centre for Quantum Technologies</a>.
+    I graduated from Wuhan University with a bachelor's degree and am currently pursuing a Ph.D. at the <a href="https://quantumlah.org">National University of Singapore - Centre for Quantum Technologies</a> under the supervision of Prof. Weibo Gao.
     </p>
   </div>
   
   <div class="float-child2">
     <!-- <img src="photograph.jpg" alt="picture" width="160"/> -->
-    Haifei Wang (王海飞)
+    <!-- Haifei Wang (王海飞) -->
   </div>
   
 </div>

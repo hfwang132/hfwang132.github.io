@@ -3,7 +3,17 @@
         <title>所有文章 - Haifei&#39;s Home</title>
         <link>http://example.com/posts/</link>
         <description>所有文章 | Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 10 Jan 2025 01:39:32 &#43;0800</lastBuildDate><atom:link href="http://example.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Essay 05</title>
+    <link>http://example.com/essay-05/</link>
+    <pubDate>Fri, 10 Jan 2025 01:39:32 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/essay-05/</guid>
+    <description><![CDATA[<p>来新加坡不知不觉已经快一年半了。没想到上次写日记还是一年半之前。</p>
+<p>这还叫日记吗？这是“年记”还差不多吧！</p>
+<p>其实我也是有写日记的，只不过完全是流水账，只记了当天干过什么事情，做过什么工作，方便开组会的时候汇报。</p>]]></description>
+</item>
+<item>
     <title>直积、直和、笛卡尔积、张量积的区别是什么</title>
     <link>http://example.com/products/</link>
     <pubDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</pubDate>
@@ -67,8 +77,7 @@
     <pubDate>Sat, 27 Jul 2024 15:42:49 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.com/rabi/</guid>
-    <description><![CDATA[<h1 id="再见了旋转波近似量子拉比模型的解析解">再见了旋转波近似：量子拉比模型的解析解</h1>
-<h2 id="1-前言">1. 前言</h2>
+    <description><![CDATA[<h2 id="1-前言">1. 前言</h2>
 <p>在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。</p>]]></description>
 </item>
 <item>
@@ -91,15 +100,6 @@
     <description><![CDATA[<p>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</p>
 <p>我们先用极限思维，考虑两个极限：</p>
 <p>极限1：放大器的增益等于1，也就是没有任何增益</p>]]></description>
-</item>
-<item>
-    <title>量子纠缠的速度是否超过光速？</title>
-    <link>http://example.com/contextuality/</link>
-    <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/contextuality/</guid>
-    <description><![CDATA[<p>太长不看版：</p>
-<p>“超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子态和测量基矢共同作为 reality，这叫做互文性。非局域性是互文性的一个推论。</p>]]></description>
 </item>
 </channel>
 </rss>

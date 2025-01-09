@@ -1,7 +1,7 @@
 ---
 title: "随想-01"
 date: 2023-06-23T23:02:25+08:00
-draft: true
+draft: false
 categories: ["日常"]
 tags: ["日常"]
 ---

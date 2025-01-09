@@ -4,43 +4,45 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>广义量子测量：POVM 简介 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/povm/">
+        <title>随想-04 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/essay_04/">
   <meta property="og:site_name" content="Haifei&#39;s Home">
-  <meta property="og:title" content="广义量子测量：POVM 简介">
-  <meta property="og:description" content="投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过初等量子力学的同学都很熟悉。">
+  <meta property="og:title" content="随想-04">
+  <meta property="og:description" content="7月31号来的新加坡。今天就是出国来坡的第二周了。
+第一周很兴奋，在新加坡到处玩~尝试踏出舒适圈，和各种各样的人交流。但是这样很快就让我抑郁了——因为遇到了各种各样根本不是一路人的人。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-01-26T23:36:13+08:00">
-    <meta property="article:modified_time" content="2024-01-26T23:36:13+08:00">
-    <meta property="article:tag" content="量子测量理论">
+    <meta property="article:published_time" content="2023-08-14T23:04:50+08:00">
+    <meta property="article:modified_time" content="2023-08-14T23:04:50+08:00">
+    <meta property="article:tag" content="日常">
     <meta property="og:image" content="http://example.com/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://example.com/logo.png">
-  <meta name="twitter:title" content="广义量子测量：POVM 简介">
-  <meta name="twitter:description" content="投影测量 传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过初等量子力学的同学都很熟悉。">
+  <meta name="twitter:title" content="随想-04">
+  <meta name="twitter:description" content="7月31号来的新加坡。今天就是出国来坡的第二周了。
+第一周很兴奋，在新加坡到处玩~尝试踏出舒适圈，和各种各样的人交流。但是这样很快就让我抑郁了——因为遇到了各种各样根本不是一路人的人。">
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/povm/" /><link rel="prev" href="http://example.com/essay_04/" /><link rel="next" href="http://example.com/pointer0/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/essay_04/" /><link rel="prev" href="http://example.com/side_proj/" /><link rel="next" href="http://example.com/povm/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "广义量子测量：POVM 简介",
+        "headline": "随想-04",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/example.com\/povm\/"
+            "@id": "http:\/\/example.com\/essay_04\/"
         },"image": [{
                             "@type": "ImageObject",
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "量子测量理论","wordcount":  1210 ,
-        "url": "http:\/\/example.com\/povm\/","datePublished": "2024-01-26T23:36:13+08:00","dateModified": "2024-01-26T23:36:13+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "日常","wordcount":  1072 ,
+        "url": "http:\/\/example.com\/essay_04\/","datePublished": "2023-08-14T23:04:50+08:00","dateModified": "2023-08-14T23:04:50+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
                     "@type": "ImageObject",
@@ -76,7 +78,7 @@
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
                     <i class="fa fa-globe" aria-hidden="true"></i>                      
-                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/povm/">English</option><option value="/povm/" selected>简体中文</option></select>
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/essay_04/" selected>简体中文</option></select>
                 </a></div>
         </div>
     </div>
@@ -110,7 +112,7 @@
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
                     <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/en/povm/">English</option><option value="/povm/" selected>简体中文</option></select>
+                    <select class="language-select" onchange="location = this.value;"><option value="/essay_04/" selected>简体中文</option></select>
                 </a></div>
     </div>
 </header><div class="search-dropdown desktop">
@@ -126,10 +128,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">广义量子测量：POVM 简介</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-01-26">2024-01-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1210 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/povm/" class="leancloud_visitors" data-flag-title="广义量子测量：POVM 简介">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">随想-04</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%B8%B8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>日常</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-08-14">2023-08-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1072 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/essay_04/" class="leancloud_visitors" data-flag-title="随想-04">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -137,84 +139,38 @@
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#投影测量">投影测量</a></li>
-    <li><a href="#广义测量generalized-measurements-povm">广义测量（Generalized Measurements, POVM）</a></li>
-    <li><a href="#如何实现-povm">如何实现 POVM</a></li>
-    <li><a href="#测量模型measurement-model">测量模型（Measurement Model）</a></li>
-    <li><a href="#测量后的状态">测量后的状态</a></li>
-    <li><a href="#量子仪器quantum-instruments">量子仪器（Quantum Instruments）</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="投影测量">投影测量</h2>
-<p>传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过初等量子力学的同学都很熟悉。</p>
-<p>除了 Von Neumann 测量外，还有一种更加一般的测量，叫做广义测量（Generalized Measurements），或称 POVM（Positive Operator Valued Measure）。</p>
-<h2 id="广义测量generalized-measurements-povm">广义测量（Generalized Measurements, POVM）</h2>
-<blockquote>
-<p><strong>定义：POVM</strong></p>
-<p>POVM 是一个映射 $\mathsf{E}: X \rightarrow \mathcal{L}(\mathcal{H})$ ，满足</p>
-<ol>
-<li>$\mathsf{E}(x) \ge 0,\quad \forall x\in X$</li>
-<li>$\sum_{x\in X}\mathsf{E}(x) = \mathbb{I}_{\mathcal{H}}$<br>
-其中 $X$ 代表有限个可能的测量结果的集合， $\mathcal{L}(\mathcal{H})$ 代表 $\mathcal{H}$ 上所有的有界算子的集合。</li>
-</ol>
-<p><strong>玻恩规则</strong></p>
-<p>对于一个量子态 $\rho$ 进行 POVM $\mathsf{E}$ 所给出的测量，结果为 $x$ 的概率为 $p_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)]$</p>
-</blockquote>
-<p>当我第一次看到 POVM 的时候，我并不清楚它是如何实现的。因为传统意义上的测量是一个投影算符，满足 $\mathsf{E}(x)^2=\mathsf{E}(x),\quad \forall x\in X$ 。而一般的 POVM 不满足这一条件。</p>
-<p>实际上，传统意义上的投影测量也叫做 PVM（Projection Valued Measure），是一类特殊的 POVM。</p>
-<p>PVM 之于 POVM，就像纯态之于混合态。也就是说，POVM 是 PVM 的统计混合（statistical mixture），正如混合态是纯态的统计混合。</p>
-<h2 id="如何实现-povm">如何实现 POVM</h2>
-<p>那么如何实现 POVM 呢？其实我们可以利用 PVM 和复合系统来实现 POVM。</p>
-<p>考虑一个系统，其希尔伯特空间为 $\mathcal{H}$ ，状态为 $\rho$ 。</p>
-<p>接着我们将系统 $\mathcal{H}$ 和另一个系统 $\mathcal{K}$ 耦合到一起。假设系统 $\mathcal{K}$ 的初态为 $\sigma$ ，于是复合系统的初态为 $\rho \otimes \sigma \in \mathcal{H} \otimes \mathcal{K}$ 。</p>
-<p>然后，我们让复合系统演化一段时间，于是系统状态变为 $U(\rho\otimes \sigma) U^\dag$ 。</p>
-<p>最后，我们对子系统 $\mathcal{K}$ 进行 PVM $\mathsf{Z}$ 所给出的测量，根据玻恩规则，得到结果 $x$ 的概率为 $\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。</p>
-<p>这样，我们就实现了一个 POVM $\mathsf{E}$ ，满足 $\operatorname{tr}[\rho \mathsf{E(x)}]=\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。</p>
-<h2 id="测量模型measurement-model">测量模型（Measurement Model）</h2>
-<p>我们整理一下上面实现 POVM 所涉及到的物理对象：辅助（ancilla）系统 $\mathcal{K}$ ，系统 $\mathcal{K}$ 的初态 $\sigma$ ，复合系统的演化 $U$ ，以及对辅助系统的投影测量 $\mathsf{Z}$ 。这些物理对象实现了一个 POVM 测量。</p>
-<p>于是我们可以定义 $\mathfrak{M}=(\mathcal{K},\sigma,U,\mathsf{Z})$ ，并称之为一个测量模型（Measurement Model）。</p>
-<p>在实际实验中，辅助（ancilla）系统 $\mathcal{K}$ 可以看作是仪器的探针，而 $\mathsf{Z}$ 就是对探针进行读数。</p>
-<h2 id="测量后的状态">测量后的状态</h2>
-<p>POVM 本身不能决定测量后的状态。真正决定测量后的状态的是测量的具体实现，即测量模型。</p>
-<p>对于测量模型 $\mathfrak{M}=(\mathcal{K},\sigma,U,\mathsf{Z})$ ，测量后系统 $\mathcal{H}$ 的状态为 $\rho_x=\operatorname{tr}_{\mathcal{K}}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ ，其中 $\operatorname{tr}_{\mathcal{K}}[\cdot]$ 表示取偏迹。</p>
-<h2 id="量子仪器quantum-instruments">量子仪器（Quantum Instruments）</h2>
-<p>POVM 给出了各个测量结果的概率，却没有给出测量后的状态。于是我们希望找到一个数学对象，能将测量概率和测量后的状态都包括进来。这个数学对象叫做 Quantum Instrument。</p>
-<blockquote>
-<p><strong>定义 Quantum Instrument</strong></p>
-<p>称 $\mathcal{I}_{x}: \mathcal{I}_{x}(\rho) = \rho_x$ 为一个 Quantum Instrument，如果 $\operatorname{tr}\left[\sum_{x\in X} \rho_x \right]=\operatorname{tr}[\rho]=1$ 。</p>
-</blockquote>
-<p>可以看出， $\mathcal{I}_x$ 不仅给出了测量的概率 $p_x=\operatorname{tr}[\rho_x]$ ，还给出了测量后的状态 $\frac{\rho_x}{\operatorname{tr}[\rho_x]}$ 。</p>
-<p>显然，同一个 POVM 对应无数个 Quantum Instrument。</p>
-<p>那么对于任意一个 Quantum Instrument，我们是否总是可以实现它？答案是肯定的。</p>
-<blockquote>
-<p><strong>定理</strong></p>
-<p>给定任意一个 Quantum Instrument，我们总是能找到一个 Measurement Model 来实现它（实际上有无数个）。证略。</p>
-</blockquote>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>7月31号来的新加坡。今天就是出国来坡的第二周了。</p>
+<p>第一周很兴奋，在新加坡到处玩~尝试踏出舒适圈，和各种各样的人交流。但是这样很快就让我抑郁了——因为遇到了各种各样根本不是一路人的人。</p>
+<p>很多人家里很有钱，出国就是边学边玩。我认识了台湾、西班牙、墨西哥、马来西亚、印度尼西亚的人，他们玩的太花了（喝酒、滥交），我受不了。酒到酣畅处，他们开始玩一种类似于真心话大冒险的游戏——如果你没有做过某某事情，就要自罚两口。问题的画风如下：“炮友有没有在做爱的时候睡着过”、“有没有把xx塞进过xx里”。我本来还想和外国友人练英语，结果只能找了个理由匆忙退场。</p>
+<p>即使是从中国来的，也没有让我感觉好多少。有个音乐系的四川女生，房租是我的三倍（更不用说学费了），一掷千金，父母的钱挥之如土。我这种靠全奖勉强独立度日的人，完全跟他们聊不到一起去。</p>
+<p>在各个国家中，北欧、西欧、美国来的人给我的印象最好，他们都比较有风度，举止得体，说话流畅（主要是他们的英语好听懂，其他带口音的东南亚英语、
+南欧英语、东欧英语、南美英语，真是听不懂一点）。而且北欧、西欧、美国这些地方来的人，你能感觉到他们真的是来学习和工作的，而不是来瞎玩的。我和瑞士小哥的聊天画风是：“你为什么选择数学而不是物理”、“你对数学的哪一部分感兴趣”，聊的甚欢。</p>
+<p>经过第一周的洗礼，我开始怀疑人生：我的前半生是不是白费了？我们东亚人从小就开始卷，但是很多其他地方的人，他们不需要付出同样的努力，却可以得到更好的结果。马来西亚小哥读的是清华大学，我问他为什么选择清华而不是 NUS，他答曰：“想体验更远方的生活”。。可见，别人的人生是非常自由的，读研只是为了去世界各地体验，而不是为了拿到一个学历，好找工作。我以前在网上听说过很多这样的人，但是直到在线下面对面见到和交流过后，我才受到了真正的精神冲击。</p>
+<p>第二周进课题组，又让我的焦虑加深了很多。我开始怀疑我读博的目的究竟是为了什么：是为了兴趣？可是家里并不宽裕，仅仅为了兴趣实在奢侈，甚至可以说是对家里不负责任。那么，读博是为了高学历，以后可以挣钱吗？但是这和科研的精神完全是背道而驰的。经过一周的考虑，我觉得我现在可能有了一个初步的答案：一个人只有喜欢自己的工作/科研，他才能真正有所成就，此时，钱或许就自然而然不是问题了。不过话说回来，科研最好还是要家里很宽裕才能做。要是家里没钱——身边的人都开始赚钱养家，自己还在苦苦科研，心里确实不是个滋味！最羡慕嫉妒恨的是，人家家里有钱，且做科研，完全不用担心任何经济压力——科研纯粹只是一个兴趣而已。可恶，我也想成为这种人啊！</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-01-26</span>
+                <span>更新于 2023-08-14</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/povm/" data-title="广义量子测量：POVM 简介" data-hashtags="量子测量理论"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/povm/" data-hashtag="量子测量理论"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/povm/" data-title="广义量子测量：POVM 简介"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/povm/" data-title="广义量子测量：POVM 简介"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/povm/" data-title="广义量子测量：POVM 简介"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/essay_04/" data-title="随想-04" data-hashtags="日常"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/essay_04/" data-hashtag="日常"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/essay_04/" data-title="随想-04"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/essay_04/" data-title="随想-04"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/essay_04/" data-title="随想-04"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/">量子测量理论</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/essay_04/" class="prev" rel="prev" title="随想-04"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>随想-04</a>
-            <a href="/pointer0/" class="next" rel="next" title="0指针不能访问，那那个位置的字节会不会很孤独?">0指针不能访问，那那个位置的字节会不会很孤独?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/side_proj/" class="prev" rel="prev" title="做过的一些好玩（但无聊）的小项目"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>做过的一些好玩（但无聊）的小项目</a>
+            <a href="/povm/" class="next" rel="next" title="广义量子测量：POVM 简介">广义量子测量：POVM 简介<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
