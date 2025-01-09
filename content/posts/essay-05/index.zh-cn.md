@@ -1,5 +1,5 @@
 ---
-title: "Essay 05"
+title: "随记-05"
 date: 2025-01-10T01:39:32+08:00
 draft: false
 categories: ["日常"]
