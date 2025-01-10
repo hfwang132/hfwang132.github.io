@@ -39,7 +39,7 @@
                             "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "量子信息","wordcount":  1060 ,
+                        }],"genre": "posts","keywords": "量子信息","wordcount":  1036 ,
         "url": "http:\/\/example.com\/weyl_wigner\/","datePublished": "2025-01-08T20:25:50+08:00","dateModified": "2025-01-08T20:25:50+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -128,7 +128,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">量子态/算符的 Weyl 和 Wigner 表示</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-08">2025-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1060 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-08">2025-01-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1036 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/weyl_wigner/" class="leancloud_visitors" data-flag-title="量子态/算符的 Weyl 和 Wigner 表示">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -185,10 +185,10 @@ $F = \frac{1}{2}\sum_{k=0}^3 \text{tr}[F\sigma_k] \sigma_k$<br>
 <p>我们之所以引入 $\frac{1}{2}$ 因子，是因为 $\text{tr}[W]=1$ 。</p>
 <p>$\frac{1}{2}W$ 的作用就是将 $(x,p)$ 平面绕着原点旋转 180 度。显然，它是一个厄米算符。</p>
 <p>可以证明，它能写成</p>
-<p>$\frac{1}{2}W=e^{-\mathrm{i}2X;P} = \sum_{k=0}^\infty \frac{1}{k}(-2\mathrm{i})^k X^kP^k$ 。</p>
+<p>$\frac{1}{2}W=e^{-\mathrm{i}2X;P} = \sum_{k=0}^\infty \frac{1}{k}(-2\mathrm{i})^k X^kP^k$ =  e^{\mathrm{i}2P;X}。</p>
 <p>其中 $X;P$ 表示在多项式中，所有 $X$ 排到 $P$ 的前面。</p>
 <p>我们再定义绕着点 $(x,p)$ 旋转 180 度的算符：</p>
-<p>$\frac{1}{2}W(x,p):=e^{\mathrm{i}2(X-x);(P-p)}$。</p>
+<p>$\frac{1}{2}W(x,p):=e^{-\mathrm{i}2(X-x);(P-p)} = e^{-\mathrm{i}2(P-p);(X-x)} $。</p>
 <p>可以证明， $W(x,p)$ 也能作为算符的基，叫做 Wigner 基：</p>
 <p>$F=\int \frac{\mathrm{d}x\mathrm{d}p}{2\pi} F_W(x,p)W(x,p)$</p>
 <p>$F_W(x,p) = \text{tr}[FW(x,p)]$</p>

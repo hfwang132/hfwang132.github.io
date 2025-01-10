@@ -76,13 +76,13 @@ $\frac{1}{2}W$ 的作用就是将 $(x,p)$ 平面绕着原点旋转 180 度。显
 
 可以证明，它能写成
 
-$\frac{1}{2}W=e^{-\mathrm{i}2X;P} = \sum_{k=0}^\infty \frac{1}{k}(-2\mathrm{i})^k X^kP^k$ 。
+$\frac{1}{2}W=e^{-\mathrm{i}2X;P} = \sum_{k=0}^\infty \frac{1}{k}(-2\mathrm{i})^k X^kP^k$ =  e^{\mathrm{i}2P;X}。
 
 其中 $X;P$ 表示在多项式中，所有 $X$ 排到 $P$ 的前面。
 
 我们再定义绕着点 $(x,p)$ 旋转 180 度的算符：
 
-$\frac{1}{2}W(x,p):=e^{\mathrm{i}2(X-x);(P-p)}$。
+$\frac{1}{2}W(x,p):=e^{-\mathrm{i}2(X-x);(P-p)} = e^{-\mathrm{i}2(P-p);(X-x)} $。
 
 可以证明， $W(x,p)$ 也能作为算符的基，叫做 Wigner 基：
 
