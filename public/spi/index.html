@@ -4,23 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>AXI SPI IP 核的软硬件设计 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/spi/">
-  <meta property="og:site_name" content="Haifei&#39;s Home">
-  <meta property="og:title" content="AXI SPI IP 核的软硬件设计">
-  <meta property="og:description" content="1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slave-In）三条线。四线模式多了一条 MISO（Master-In-Slave-Out）。">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-06-29T11:33:45+08:00">
-    <meta property="article:modified_time" content="2023-06-29T11:33:45+08:00">
-    <meta property="article:tag" content="SPI">
-    <meta property="article:tag" content="嵌入式系统">
-    <meta property="og:image" content="http://example.com/logo.png">
+        <title>AXI SPI IP 核的软硬件设计 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="AXI SPI IP 核的软硬件设计" />
+<meta property="og:description" content="1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slav" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.com/spi/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-29T11:33:45+08:00" />
+<meta property="article:modified_time" content="2023-06-29T11:33:45+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://example.com/logo.png">
-  <meta name="twitter:title" content="AXI SPI IP 核的软硬件设计">
-  <meta name="twitter:description" content="1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slave-In）三条线。四线模式多了一条 MISO（Master-In-Slave-Out）。">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="AXI SPI IP 核的软硬件设计"/>
+<meta name="twitter:description" content="1 基础 SPI 有三线模式和四线模式。三线模式有 SS（Slave Select）, SCK（SPI Clock）, MOSI（Master-Out-Slav"/>
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -153,35 +146,35 @@
             </div><div class="content" id="content"><h3 id="1-基础">1 基础</h3>
 <p>SPI 有三线模式和四线模式。三线模式有 <code>SS</code>（Slave Select）, <code>SCK</code>（SPI Clock）, <code>MOSI</code>（Master-Out-Slave-In）三条线。四线模式多了一条 <code>MISO</code>（Master-In-Slave-Out）。</p>
 <table>
-  <thead>
-      <tr>
-          <th>信号</th>
-          <th>全称</th>
-          <th>功能</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SS</td>
-          <td>Slave Select</td>
-          <td>片选</td>
-      </tr>
-      <tr>
-          <td>SCK</td>
-          <td>SPI Clock</td>
-          <td>时钟信号</td>
-      </tr>
-      <tr>
-          <td>MOSI</td>
-          <td>Master-Out-Slave-In</td>
-          <td>主器件向从器件发送指令和数据</td>
-      </tr>
-      <tr>
-          <td>MISO</td>
-          <td>Master-In-Slave-Out</td>
-          <td>从器件向主器件返回数据</td>
-      </tr>
-  </tbody>
+<thead>
+<tr>
+<th>信号</th>
+<th>全称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SS</td>
+<td>Slave Select</td>
+<td>片选</td>
+</tr>
+<tr>
+<td>SCK</td>
+<td>SPI Clock</td>
+<td>时钟信号</td>
+</tr>
+<tr>
+<td>MOSI</td>
+<td>Master-Out-Slave-In</td>
+<td>主器件向从器件发送指令和数据</td>
+</tr>
+<tr>
+<td>MISO</td>
+<td>Master-In-Slave-Out</td>
+<td>从器件向主器件返回数据</td>
+</tr>
+</tbody>
 </table>
 <p>SPI 的时钟有四种模式，分别对应 CPOL=0/1 和 CPHA=0/1。CPOL（Clock Polarity）代表时钟信号在空闲的时候是高还是低；CPHA（Clock Phase）代表在时钟信号相位为 0 度还是 180 度的时候读取数据。</p>
 <h3 id="2-axi-quad-spi-ip-核">2 AXI Quad SPI IP 核</h3>
@@ -189,9 +182,9 @@
 <blockquote>
 <p>本文只涉及 Standard Mode + Master Mode，不涉及 Dual/Quad Mode 以及 Slave Mode / Multi-master Mode。</p>
 </blockquote>
-<figure><img src="/spi/files/axi-quad-spi.png"><figcaption>
-      <h4>AXI Quad SPI IP 核</h4>
-    </figcaption>
+<figure><img src="files/axi-quad-spi.png"/><figcaption>
+            <h4>AXI Quad SPI IP 核</h4>
+        </figcaption>
 </figure>
 
 <p>在上图中， <code>io1_i</code> 连接 MISO 信号；<code>ext_spi_clk</code> 和 <code>s_axi_clk</code> 都连接同一个系统时钟即可。<code>ip2intc_irpt</code> 可以连接 Zynq 的中断 <code>pl_ps_irq</code>。</p>

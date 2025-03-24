@@ -4,22 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>【量光实验杂谈·三】量子态层析 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/state_tomography/">
-  <meta property="og:site_name" content="Haifei&#39;s Home">
-  <meta property="og:title" content="【量光实验杂谈·三】量子态层析">
-  <meta property="og:description" content="Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非常简单，具体如下：">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-04-22T14:43:42+08:00">
-    <meta property="article:modified_time" content="2024-04-22T14:43:42+08:00">
-    <meta property="article:tag" content="量子光学">
-    <meta property="og:image" content="http://example.com/logo.png">
+        <title>【量光实验杂谈·三】量子态层析 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="【量光实验杂谈·三】量子态层析" />
+<meta property="og:description" content="Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.com/state_tomography/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-22T14:43:42+08:00" />
+<meta property="article:modified_time" content="2024-04-22T14:43:42+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://example.com/logo.png">
-  <meta name="twitter:title" content="【量光实验杂谈·三】量子态层析">
-  <meta name="twitter:description" content="Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非常简单，具体如下：">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="【量光实验杂谈·三】量子态层析"/>
+<meta name="twitter:description" content="Quantum State Tomography（量子态层析） Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非"/>
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -233,25 +227,25 @@ State tomography 之所以叫“tomography”，是因为连续变量光子态�
 <p>这个所谓的相图表示可以立刻推广到量子力学中。对于量子化的单模经典电磁场，它的相图表示不再是一个无限小的点，而是一个有一定大小的圆。实际上，它是一个复平面上的高斯函数，且该高斯函数的标准差由不确定性原理确定。这个高斯函数就是经典电磁波的 Wigner 函数，其边缘分布对应该 quadrature 的电场强度的概率分布（电场也是可观测量，是有不确定性的）。经典电磁波被量子化之后得到的量子态叫做 Coherent state。</p>
 <p>对于一个更一般的量子光场，其 Wigner 函数可以长得奇形怪状，甚至可以取负值。当然，这不意味着我们得到了负的概率——在求边缘分布之后，我们得到的总是非负概率。这是因为这些负值所占据的面积足够小，以至于它们小于不确定性原理所允许的面积，也就是说不确定性原理保证了我们观测不到负概率。</p>
 </blockquote>
-<figure><img src="/state_tomography/image/wigner.jpg"><figcaption>
-      <h4>一些有趣的光子态的 Wigner 函数。左图为压缩态，右图为薛定谔猫态。  </h4>
-    </figcaption>
+<figure><img src="image/wigner.jpg"/><figcaption>
+            <h4>一些有趣的光子态的 Wigner 函数。左图为压缩态，右图为薛定谔猫态。  </h4>
+        </figcaption>
 </figure>
 
 <p>连续变量光子态的 state tomography 是通过测量 quadrature 来完成的。此时所有的测量算符拥有如下形式：</p>
 <p>$\begin{aligned} \Pi_\theta = \frac{ae^{-i\theta}+a^\dag e^{i\theta}}{2} \end{aligned}$</p>
 <p>这就是所谓的“quadrature”（不知道中文译名是什么）。形象地来看，它是将整个 Wigner 函数投影到一条直线上，这条直线与 x 轴的夹角为 $\theta$ 。</p>
-<figure><img src="/state_tomography/image/irt.jpg"><figcaption>
-      <h4>Quantum state tomography of continuous-variable optical states  </h4>
-    </figcaption>
+<figure><img src="image/irt.jpg"/><figcaption>
+            <h4>Quantum state tomography of continuous-variable optical states  </h4>
+        </figcaption>
 </figure>
 
 <p>量子信息理论告诉我们，如果我们想要（以无限精度）重建 Wigner 函数，我们就需要无限多个 $\theta$ ，即无数个测量算符。当然，我们不需要无限的精度，所以我们只要把 $\theta$ 取得密一些就可以了。例如以 0.01 弧度为步长，从 0 取到 2pi。</p>
 <p>得到 quadrature 的概率密度分布函数之后，我们就可以使用逆 Radon 变换重建 Wigner 函数了。这和医院里的 CT 原理完全相同。</p>
 <p>至于实验上如何测量 quadratures，很简单，和无线电里一样，将信号与本振进行混频就可以了。这叫做 homodyne measurement。具体来说就是将待测信号和一个激光用一个 beam splitter 混合，然后记录两路输出信号的差值。改变激光的相位就是改变 $\theta$ 。</p>
-<figure><img src="/state_tomography/image/homodyne.jpg"><figcaption>
-      <h4>Homodyne Measurement </h4>
-    </figcaption>
+<figure><img src="image/homodyne.jpg"/><figcaption>
+            <h4>Homodyne Measurement </h4>
+        </figcaption>
 </figure>
 
 <h2 id="附录-泊松分布的极大似然估计">附录 泊松分布的极大似然估计</h2>

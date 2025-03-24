@@ -2,24 +2,6 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.com/en/</loc><lastmod>2025-01-08T22:03:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://example.com/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://example.com/en/"
-                    /></url><url>
-            <loc>http://example.com/en/posts/</loc><lastmod>2025-01-08T22:03:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-cn"
-                        href="http://example.com/posts/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://example.com/en/posts/"
-                    /></url><url>
             <loc>http://example.com/en/categories/</loc><lastmod>2024-05-27T18:36:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -37,6 +19,24 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://example.com/en/spdc_optical_amp/"
+                    /></url><url>
+            <loc>http://example.com/en/</loc><lastmod>2024-05-27T18:36:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/en/"
+                    /></url><url>
+            <loc>http://example.com/en/posts/</loc><lastmod>2024-05-27T18:36:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="zh-cn"
+                        href="http://example.com/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://example.com/en/posts/"
                     /></url><url>
             <loc>http://example.com/en/categories/quantum-information/</loc><lastmod>2024-05-27T18:36:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/en/tags/quantum-optics/</loc><lastmod>2024-05-27T18:36:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -328,7 +328,6 @@
                     hreflang="en"
                     href="http://example.com/en/increase_swapfile/"
                     /></url><url>
-            <loc>http://example.com/en/tags/storage/partition/</loc><lastmod>2023-06-12T22:59:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://example.com/en/linux_sd_card/</loc><lastmod>2023-06-12T22:43:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
@@ -395,4 +394,5 @@
                     hreflang="en"
                     href="http://example.com/en/differential_geometry/"
                     /></url><url>
-            <loc>http://example.com/en/tags/lie-algebra/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>http://example.com/en/tags/lie-algebra/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://example.com/en/tags/storage/partition/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

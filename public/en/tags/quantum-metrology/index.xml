@@ -9,10 +9,9 @@
     <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/quantum_metrology/</guid>
-    <description><![CDATA[<h2 id="i-introduction-to-quantum-metrology">I. Introduction to Quantum Metrology</h2>
-<p>Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.</p>
-<p>The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.</p>
-<p>Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.g., weighing oneself). However, in high-precision imaging and various high-precision scientific experiments, people have indeed approached the Heisenberg Limit.</p>]]></description>
+    <description><![CDATA[I. Introduction to Quantum Metrology Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.
+The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.
+Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.]]></description>
 </item>
 </channel>
 </rss>

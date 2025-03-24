@@ -9,35 +9,9 @@
     <pubDate>Sat, 01 Jul 2023 17:48:54 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/ui_poll/</guid>
-    <description><![CDATA[<p>Let&rsquo;s look at a code snippet in the Jupyter Notebook:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">(</span><span class="n">slider</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">slider</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>IntSlider</code> is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.</p>
-<p>However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.</p>]]></description>
+    <description><![CDATA[Let&rsquo;s look at a code snippet in the Jupyter Notebook:
+1 2 3 4 5 6 7 8 9 10 import time import ipywidgets as widgets from IPython.display import display slider = widgets.IntSlider() display(slider) while True: print(slider.value) time.sleep(1) IntSlider is an interactive Jupyter Notebook widget. When the user interacts with the slider, the slider value should change.
+However, if you run the above codes, you will find that the printed value of the slider won&rsquo;t change at all &ndash; it will be stuck at its initial value.]]></description>
 </item>
 </channel>
 </rss>

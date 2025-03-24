@@ -9,35 +9,8 @@
     <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/spi/</guid>
-    <description><![CDATA[<h3 id="1-basics">1 Basics</h3>
-<p>SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - <code>SS</code> (Slave Select), <code>SCK</code> (SPI Clock), and <code>MOSI</code> (Master-In-Slave-Out). The four wire mode has an extra line called <code>MISO</code> (Master-In-Slave-Out).</p>
-<table>
-  <thead>
-      <tr>
-          <th>Signals</th>
-          <th>Full Name</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SS</td>
-          <td>Slave Select</td>
-      </tr>
-      <tr>
-          <td>SCK</td>
-          <td>SPI Clock</td>
-      </tr>
-      <tr>
-          <td>MOSI</td>
-          <td>Master-Out-Slave-In</td>
-      </tr>
-      <tr>
-          <td>MISO</td>
-          <td>Master-In-Slave-Out</td>
-      </tr>
-  </tbody>
-</table>
-<p>SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle. CPHA stands for clock phase &ndash; data valid at 0 degree or 180 degrees.</p>]]></description>
+    <description><![CDATA[1 Basics SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - SS (Slave Select), SCK (SPI Clock), and MOSI (Master-In-Slave-Out). The four wire mode has an extra line called MISO (Master-In-Slave-Out).
+Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Master-In-Slave-Out SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle.]]></description>
 </item>
 <item>
     <title>Access the Internet from evaluation boards via PC</title>
@@ -45,11 +18,10 @@
     <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/boards_networking/</guid>
-    <description><![CDATA[<h3 id="windows">Windows</h3>
-<p>Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to <code>192.168.137.1</code> (this is the default behavior in Windows).</p>
-<p>Then, set the gateway as <code>192.168.137.1</code> in the terminal of the development board:</p>
-<p><code>sudo route add default gw 192.168.137.1</code></p>
-<p>Set the IP address as <code>192.168.137.x</code>, where x is any value except 1 and 255 (gateway address and broadcast address):</p>]]></description>
+    <description><![CDATA[Windows Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to 192.168.137.1 (this is the default behavior in Windows).
+Then, set the gateway as 192.168.137.1 in the terminal of the development board:
+sudo route add default gw 192.168.137.1
+Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):]]></description>
 </item>
 <item>
     <title>Partitioning and formatting SD cards on Linux</title>
@@ -57,9 +29,9 @@
     <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/linux_sd_card/</guid>
-    <description><![CDATA[<p>To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.</p>
-<p>The main commands are as follows:</p>
-<p>First, use <code>sudo fdisk -l</code> to confirm which device in <code>/dev</code> corresponds to the SD card.</p>]]></description>
+    <description><![CDATA[To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.
+The main commands are as follows:
+First, use sudo fdisk -l to confirm which device in /dev corresponds to the SD card.]]></description>
 </item>
 </channel>
 </rss>

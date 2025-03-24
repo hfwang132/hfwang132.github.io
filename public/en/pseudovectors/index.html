@@ -4,26 +4,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>What on earth are the pseudovectors? - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/en/pseudovectors/">
-  <meta property="og:site_name" content="Haifei&#39;s Home">
-  <meta property="og:title" content="What on earth are the pseudovectors?">
-  <meta property="og:description" content="1 Introduction In physics textbooks, we often come across the terms “pseudo-vector” and “pseudo-scalar.”
-In fact, on a 3-dimensional manifold, a “pseudo-vector” is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a “pseudo-scalar” is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
-When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector. Similarly, due to the Hodge duality between $\bigwedge^3(T_pM)$ and $\bigwedge^0(T_pM)$ (scalar fields), we mistakenly treat the pseudo-scalar as a scalar.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-06-10T02:21:13+08:00">
-    <meta property="article:modified_time" content="2023-06-10T02:21:13+08:00">
-    <meta property="article:tag" content="Exterior Algebra">
-    <meta property="og:image" content="http://example.com/logo.png">
+        <title>What on earth are the pseudovectors? - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="What on earth are the pseudovectors?" />
+<meta property="og:description" content="1 Introduction In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;
+In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
+When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.com/en/pseudovectors/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-10T02:21:13+08:00" />
+<meta property="article:modified_time" content="2023-06-10T02:21:13+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://example.com/logo.png">
-  <meta name="twitter:title" content="What on earth are the pseudovectors?">
-  <meta name="twitter:description" content="1 Introduction In physics textbooks, we often come across the terms “pseudo-vector” and “pseudo-scalar.”
-In fact, on a 3-dimensional manifold, a “pseudo-vector” is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a “pseudo-scalar” is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
-When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector. Similarly, due to the Hodge duality between $\bigwedge^3(T_pM)$ and $\bigwedge^0(T_pM)$ (scalar fields), we mistakenly treat the pseudo-scalar as a scalar.">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="What on earth are the pseudovectors?"/>
+<meta name="twitter:description" content="1 Introduction In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;
+In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.
+When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector."/>
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -156,17 +150,17 @@ When equipped with an inner product (or non-degenerate bilinear form), there exi
 <h2 id="2-space-inversion">2 Space Inversion</h2>
 <p>Recalling why we call &ldquo;pseudo-vectors&rdquo; pseudo-vectors in the first place. It is because they exhibit exotic behaviors under space inversion transformations. However, if we consider them as the exterior product of two vectors, all the peculiar behaviors can be explained.</p>
 <p>Specifically, as shown in the figure below, under a space inversion transformation, the magnetic field reverses its direction. It&rsquo;s similar to you moving in one direction, but the reflection of you in the mirror moves in the opposite direction, which is a spooky and paranormal event.</p>
-<figure><img src="/pseudovectors/pseudovector.svg"><figcaption>
-      <h4>The magnetic field is a bivector. If you consider it as a vector, you will encounter this spooky phenomenon in the picture: the magnetic field takes a look in the mirror and finds its head turned into feet.</h4>
-    </figcaption>
+<figure><img src="pseudovector.svg"/><figcaption>
+            <h4>The magnetic field is a bivector. If you consider it as a vector, you will encounter this spooky phenomenon in the picture: the magnetic field takes a look in the mirror and finds its head turned into feet.</h4>
+        </figcaption>
 </figure>
 
 <p>In fact, the magnetic field at point $p$ is not a vector but a bivector, denoted as $B|_p\in (T_pM)\wedge (T_pM)$. Its basis consists of $\frac{\partial}{\partial x}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial y}\wedge \frac{\partial}{\partial z},\,\frac{\partial}{\partial z}\wedge \frac{\partial}{\partial x}$.</p>
 <p>So, there is no paranormal event happening. Under a space inversion transformation, both vectors corresponding to the magnetic field actually point in the correct directions. It&rsquo;s just that humans insist on using the right-hand rule and treat a bivector as a vector, which leads to the appearance of this strange phenomenon.</p>
 <p>Although bivectors are well-defined in mathematics, we still want to ask the question: How do we visualize a bivector? The answer is: We can represent a bivector as an oriented surface element. Different-shaped surface elements that are parallel to each other and have the same area represent the same bivector. In other words, the same bivector can be depicted in infinitely many ways, as long as they are parallel, have the same area, and have the same orientation.</p>
-<figure><img src="/pseudovectors/bivectors.jpeg"><figcaption>
-      <h4>Parallel surface elements with the same area and orientation represent the same bivector.</h4>
-    </figcaption>
+<figure><img src="bivectors.jpeg"/><figcaption>
+            <h4>Parallel surface elements with the same area and orientation represent the same bivector.</h4>
+        </figcaption>
 </figure>
 
 <p>In practice, treating a bivector as a vector using the right-hand rule is only applicable in three-dimensional manifolds. This is because only in three-dimensional manifolds does three minus two exactly equal one. In four-dimensional manifolds, since four minus two equals two, we can only dualize a bivector into another bivector, not a vector.</p>

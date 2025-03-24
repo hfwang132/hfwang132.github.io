@@ -1,7 +1,7 @@
 ---
 title: "随想-04"
 date: 2023-08-14T23:04:50+08:00
-draft: false
+draft: true
 categories: ["日常"]
 tags: ["日常"]
 ---

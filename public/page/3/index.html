@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-	<meta name="generator" content="Hugo 0.140.2">
+	<meta name="generator" content="Hugo 0.121.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/">
-  <meta property="og:site_name" content="Haifei&#39;s Home">
-  <meta property="og:title" content="Haifei&#39;s Home">
-  <meta property="og:description" content="Haifei&#39;s Home">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:type" content="website">
-    <meta property="og:image" content="http://example.com/logo.png">
+        <title>Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="Haifei&#39;s Home" />
+<meta property="og:description" content="Haifei&#39;s Home" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://example.com/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="og:site_name" content="Haifei&#39;s Home" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://example.com/logo.png">
-  <meta name="twitter:title" content="Haifei&#39;s Home">
-  <meta name="twitter:description" content="Haifei&#39;s Home">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="Haifei&#39;s Home"/>
+<meta name="twitter:description" content="Haifei&#39;s Home"/>
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -130,61 +126,17 @@
             </style>
             
             <div class="language-dropdown-container-center">
-                Change Language 👉 &nbsp; 
+                点击 &nbsp; 
                 <div class="language-dropdown-container">
                     <a href="javascript:void(0);" class="menu-item language" title="选择语言">
                         <i class="fa fa-globe" aria-hidden="true"></i>                      
                         <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/">English</option><option value="/" selected>简体中文</option></select>
                     </a>
                 </div>
-                &nbsp; 
+                &nbsp; 切换语言~
             </div><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/efi_partition/">在 Windows 中挂载 EFI 分区的方法</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-12">2023-06-12</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/cs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>CS</a></span></div><div class="content"><p>为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">diskpart</span>
-</span></span><span class="line"><span class="cl"><span class="n">list</span> <span class="n">disk</span>  <span class="c"># make sure which is the disk that contains the EFI partition. usually 0</span>
-</span></span><span class="line"><span class="cl"><span class="nb">select </span><span class="n">disk</span> <span class="mf">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">list</span> <span class="n">partition</span> <span class="c"># make sure which is the EFI partition. normally 0</span>
-</span></span><span class="line"><span class="cl"><span class="nb">select </span><span class="n">disk</span> <span class="mf">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">assign</span> <span class="n">letter</span><span class="p">=</span><span class="n">z</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然后我们就将 EFI 挂载为盘符为 Z 的盘了。</p></div><div class="post-footer">
-        <a href="/efi_partition/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/">存储/分区</a>,&nbsp;<a href="/tags/linux/">Linux</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/curl_in_n_dimension/">高维空间中的旋度</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-10">2023-06-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div><div class="content"><h3 id="1-微分形式">1 微分形式</h3>
-<p>在介绍旋度之前，我们得先介绍一下微分形式和外微分算子。</p>
-<p>一个 $n$ 阶形式可以定义为一个交替多重线性映射 $\omega:(T_pM)^n\rightarrow \mathbb{R}$ 。它把多个向量映射成一个实数。另外，它还满足交替性，即交换两个输入向量，输出多一个负号。</p></div><div class="post-footer">
-        <a href="/curl_in_n_dimension/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/">矢量微积分</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/pseudovectors/">赝矢量到底是什么？</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-10">2023-06-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div><div class="content"><h2 id="1-引子">1 引子</h2>
-<p>我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。</p>
-<p>其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$ ，“赝标量”是三个切矢量的外积 $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$ 。</p></div><div class="post-footer">
-        <a href="/pseudovectors/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%A4%96%E4%BB%A3%E6%95%B0/">外代数</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/blog_migration/">博客迁移</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-10">2023-06-10</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%97%A5%E5%B8%B8/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>日常</a></span></div><div class="content"><p>发现了制作个人网站的神器 - Hugo。感觉酷炫且好用。以后把知乎的博客都慢慢迁移过来！</p></div><div class="post-footer">
-        <a href="/blog_migration/">阅读全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A5%E5%B8%B8/">日常</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/differential_geometry/">一文入门微分几何（物理人版）</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-09">2023-06-09</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div><div class="content"><h2 id="前言">前言</h2>
-<p>作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因此，本文旨在帮助物理人，为这些彼此紧密联系的诸概念进行一个梳理。</p></div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-publish">发布于 <time datetime="2023-06-09">2023-06-09</time></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div><div class="content">前言 作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因</div><div class="post-footer">
         <a href="/differential_geometry/">阅读全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">微分几何</a></div></div>
 </article><ul class="pagination"><li class="page-item ">

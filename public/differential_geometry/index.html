@@ -4,22 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>一文入门微分几何（物理人版） - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/differential_geometry/">
-  <meta property="og:site_name" content="Haifei&#39;s Home">
-  <meta property="og:title" content="一文入门微分几何（物理人版）">
-  <meta property="og:description" content="前言 作为物理人，你很可能听过张量，微分形式，李代数 … 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因此，本文旨在帮助物理人，为这些彼此紧密联系的诸概念进行一个梳理。">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-06-09T14:49:49+08:00">
-    <meta property="article:modified_time" content="2023-06-09T14:49:49+08:00">
-    <meta property="article:tag" content="微分几何">
-    <meta property="og:image" content="http://example.com/logo.png">
+        <title>一文入门微分几何（物理人版） - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:title" content="一文入门微分几何（物理人版）" />
+<meta property="og:description" content="前言 作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.com/differential_geometry/" /><meta property="og:image" content="http://example.com/logo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-09T14:49:49+08:00" />
+<meta property="article:modified_time" content="2023-06-09T14:49:49+08:00" /><meta property="og:site_name" content="Haifei&#39;s Home" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://example.com/logo.png">
-  <meta name="twitter:title" content="一文入门微分几何（物理人版）">
-  <meta name="twitter:description" content="前言 作为物理人，你很可能听过张量，微分形式，李代数 … 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因此，本文旨在帮助物理人，为这些彼此紧密联系的诸概念进行一个梳理。">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://example.com/logo.png" /><meta name="twitter:title" content="一文入门微分几何（物理人版）"/>
+<meta name="twitter:description" content="前言 作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因"/>
 <meta name="application-name" content="Haifei&#39;s Home">
 <meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -1003,9 +997,9 @@ $$</p>
 <p><strong>评论</strong></p>
 <p>回想一下，我们之所以把“赝矢量”叫做“赝矢量”，是因为它们在空间反演变换下会有奇怪的行为。但是如果你把它当作两个矢量的外积，那么一切奇怪的行为都有了解释。</p>
 <p>具体地，看下图，在空间反演变换下，磁场竟然调转了方向！这就类似于你往一个方向走，但是镜子里的你往另一个方向走。这实在是一个灵异现象。</p>
-<figure><img src="/differential_geometry/image/pseudovector.svg"><figcaption>
-      <h4>磁场是一个 bivector。如果你把磁场看成 vector，就会出现图中这种灵异的现象。</h4>
-    </figcaption>
+<figure><img src="image/pseudovector.svg"/><figcaption>
+            <h4>磁场是一个 bivector。如果你把磁场看成 vector，就会出现图中这种灵异的现象。</h4>
+        </figcaption>
 </figure>
 
 <p>实际上，某一点处的磁场并非一个 vector，而是一个 bivector。即 $B\in (T_pM)\wedge (T_pM)$ 。它的基为 $\frac{\partial}{\partial x}\wedge \frac{\partial}{\partial y}, \,\frac{\partial}{\partial y}\wedge \frac{\partial}{\partial z}, \,\frac{\partial}{\partial z}\wedge \frac{\partial}{\partial x}$ 。</p>
@@ -1062,9 +1056,9 @@ $\star(f \,\mathrm{d}x^i \wedge\mathrm{d}x^j\wedge \mathrm{d}x^k)=f$</p>
 <p>对于物理人来说，Hodge 对偶当然是非常自然的。我们每次使用右手螺旋定则的时候，我们实际上都在不知不觉中使用了 Hodge 对偶。</p>
 </blockquote>
 <p>接下来，我们给出 Hodge 对偶在欧几里得空间 $\mathbb{R}^3$ 中的示意图：</p>
-<figure><img src="/differential_geometry/image/Hodge_Duality.jpg"><figcaption>
-      <h4>Hodge Duality</h4>
-    </figcaption>
+<figure><img src="image/Hodge_Duality.jpg"/><figcaption>
+            <h4>Hodge Duality</h4>
+        </figcaption>
 </figure>
 
 <p>定义了 Hodge 对偶之后，我们就可以用外代数的语言来重写麦克斯韦方程了，见下例（<strong>例 3.7</strong>）</p>
@@ -1359,15 +1353,15 @@ $$</p>
 <p><strong>评论</strong></p>
 <p>一般来说，点 $p$ 处的矢量通过不同的路径平移到点 $q$ 处，结果是不同的，这个现象叫做 Holonomy，它引出了曲率的概念。见下图：</p>
 </blockquote>
-<figure><img src="/differential_geometry/image/holonomy.png"><figcaption>
-      <h4>北极处的一个矢量先沿经线平移至赤道，接着沿赤道平移，最后沿经线平移回到北极，和初始状态不重合。</h4>
-    </figcaption>
+<figure><img src="image/holonomy.png"/><figcaption>
+            <h4>北极处的一个矢量先沿经线平移至赤道，接着沿赤道平移，最后沿经线平移回到北极，和初始状态不重合。</h4>
+        </figcaption>
 </figure>
 
 <p>现在，让我们考虑一个沿坐标系的环路，如下所示：</p>
-<figure><img src="/differential_geometry/image/iloop.jpg"><figcaption>
-      <h4>点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处，结果不同</h4>
-    </figcaption>
+<figure><img src="image/iloop.jpg"/><figcaption>
+            <h4>点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处，结果不同</h4>
+        </figcaption>
 </figure>
 
 <p>如图所示，点 $p$ 处的矢量通过两条不同的路径平移到点 $q$ 处。这两条路径分别是：</p>
@@ -1759,9 +1753,9 @@ $$</p>
 \Phi^W_{-\epsilon} \Phi^V_{-\epsilon} \Phi^W_{\epsilon} \Phi^V_{\epsilon} = \Phi^{[V,W]}_{\epsilon^2} + o(\epsilon^2)
 $$</p>
 <p>为了流动一圈后能回到原来的位置，我们需要补上最后一小段距离，见下图：</p>
-<figure><img src="/differential_geometry/image/holonomy_lie.jpg"><figcaption>
-      <h4>Non-Holonomy</h4>
-    </figcaption>
+<figure><img src="image/holonomy_lie.jpg"/><figcaption>
+            <h4>Non-Holonomy</h4>
+        </figcaption>
 </figure>
 
 <p>可见 $[V,W]$ 的几何意义。</p>
@@ -1826,9 +1820,9 @@ $$</p>
 <p><strong>评论</strong></p>
 <p>从计算积分的角度来说，m-cells 更方便一些，但是在考虑拓扑与几何性质的时候，m-simplex 更方便一些。例如，我们可以对一个流形进行三角化（Triangulation），这往往比考虑矩形要方便得多，如下所示：</p>
 </blockquote>
-<figure><img src="/differential_geometry/image/triangulation.png"><figcaption>
-      <h4>Triangulation</h4>
-    </figcaption>
+<figure><img src="image/triangulation.png"/><figcaption>
+            <h4>Triangulation</h4>
+        </figcaption>
 </figure>
 
 <p>一个 m-链（m-chain）指的是一系列 m-cells（或 m-simplices）的线性组合：</p>
@@ -2031,9 +2025,9 @@ $$</p>
 <p><strong>评论</strong></p>
 <p>例如，$S_1$（一个首尾相接的曲线）的同调类为 $\mathbb{Z}$。这是因为你可以绕一圈、也可以绕两圈、三圈&hellip;也可以反向绕整数圈。当然，也可以不绕圈。这对应整数群。</p>
 <p>一个甜甜圈（数学上定义为 $T:=S^1\times S^1$）的 1 阶同调群为 $\mathbb{Z} \times \mathbb{Z}$。这从形式和图像上都是比较直观的，见下图：</p>
-<figure><img src="/differential_geometry/image/torus_homology.png"><figcaption>
-      <h4>甜甜圈的同调群是 $\mathbb{Z}\times\mathbb{Z}$，从图中可以直观地看出，有两种不同的环绕方法</h4>
-    </figcaption>
+<figure><img src="image/torus_homology.png"/><figcaption>
+            <h4>甜甜圈的同调群是 $\mathbb{Z}\times\mathbb{Z}$，从图中可以直观地看出，有两种不同的环绕方法</h4>
+        </figcaption>
 </figure>
 
 </blockquote>

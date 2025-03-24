@@ -9,11 +9,10 @@
     <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/boards_networking/</guid>
-    <description><![CDATA[<h3 id="windows">Windows</h3>
-<p>Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to <code>192.168.137.1</code> (this is the default behavior in Windows).</p>
-<p>Then, set the gateway as <code>192.168.137.1</code> in the terminal of the development board:</p>
-<p><code>sudo route add default gw 192.168.137.1</code></p>
-<p>Set the IP address as <code>192.168.137.x</code>, where x is any value except 1 and 255 (gateway address and broadcast address):</p>]]></description>
+    <description><![CDATA[Windows Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to 192.168.137.1 (this is the default behavior in Windows).
+Then, set the gateway as 192.168.137.1 in the terminal of the development board:
+sudo route add default gw 192.168.137.1
+Set the IP address as 192.168.137.x, where x is any value except 1 and 255 (gateway address and broadcast address):]]></description>
 </item>
 </channel>
 </rss>

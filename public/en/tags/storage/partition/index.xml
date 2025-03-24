@@ -3,29 +3,15 @@
         <title>Storage/Partition - Tag - Haifei&#39;s Home</title>
         <link>http://example.com/en/tags/storage/partition/</link>
         <description>Storage/Partition - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 22:59:26 &#43;0800</lastBuildDate><atom:link href="http://example.com/en/tags/storage/partition/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://example.com/en/tags/storage/partition/" rel="self" type="application/rss+xml" /><item>
     <title>Increasing the swapfile for Linux</title>
     <link>http://example.com/en/increase_swapfile/</link>
     <pubDate>Mon, 12 Jun 2023 22:59:26 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/increase_swapfile/</guid>
-    <description><![CDATA[<p>Xilinx&rsquo;s toolchain consumes soooo much memory! Sometimes it causes the system to freeze&hellip; After all, my laptop only has 8GB of RAM. So there&rsquo;s no other choice but to add virtual memories.</p>
-<p>After increase the swapfile, the system performance has improved a lot:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo swapoff /swapfile
-</span></span><span class="line"><span class="cl">sudo dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/swapfile <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span><span class="m">16384</span>
-</span></span><span class="line"><span class="cl">sudo mkswap /swapfile
-</span></span><span class="line"><span class="cl">sudo swapon /swapfile
-</span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
+    <description><![CDATA[Xilinx&rsquo;s toolchain consumes soooo much memory! Sometimes it causes the system to freeze&hellip; After all, my laptop only has 8GB of RAM. So there&rsquo;s no other choice but to add virtual memories.
+After increase the swapfile, the system performance has improved a lot:
+1 2 3 4 sudo swapoff /swapfile sudo dd if=/dev/zero of=/swapfile bs=1M count=16384 sudo mkswap /swapfile sudo swapon /swapfile ]]></description>
 </item>
 <item>
     <title>Partitioning and formatting SD cards on Linux</title>
@@ -33,9 +19,9 @@
     <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/linux_sd_card/</guid>
-    <description><![CDATA[<p>To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.</p>
-<p>The main commands are as follows:</p>
-<p>First, use <code>sudo fdisk -l</code> to confirm which device in <code>/dev</code> corresponds to the SD card.</p>]]></description>
+    <description><![CDATA[To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.
+The main commands are as follows:
+First, use sudo fdisk -l to confirm which device in /dev corresponds to the SD card.]]></description>
 </item>
 <item>
     <title>Mounting the EFI partition in Windows OS</title>
@@ -43,27 +29,9 @@
     <pubDate>Mon, 12 Jun 2023 22:26:16 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/efi_partition/</guid>
-    <description><![CDATA[<p>To mount the EFI partitions, run the following commands in PowerShell:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">diskpart</span>
-</span></span><span class="line"><span class="cl"><span class="n">list</span> <span class="n">disk</span>  <span class="c"># make sure which is the disk that contains the EFI partition. usually 0</span>
-</span></span><span class="line"><span class="cl"><span class="nb">select </span><span class="n">disk</span> <span class="mf">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">list</span> <span class="n">partition</span> <span class="c"># make sure which is the EFI partition. normally 0</span>
-</span></span><span class="line"><span class="cl"><span class="nb">select </span><span class="n">disk</span> <span class="mf">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">assign</span> <span class="n">letter</span><span class="p">=</span><span class="n">z</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Then we will mount the EFI partition as drive Z.</p>
-<p>This operation may be useful when using a dual-boot system with Windows and Ubuntu: Sometimes, after removing the Ubuntu system, only the Windows system remains, but the GRUB interface still appears every time the computer boots. In this case, you need to delete the old Ubuntu EFI partition.</p>]]></description>
+    <description><![CDATA[To mount the EFI partitions, run the following commands in PowerShell:
+1 2 3 4 5 6 diskpart list disk # make sure which is the disk that contains the EFI partition. usually 0 select disk 0 list partition # make sure which is the EFI partition. normally 0 select disk 0 assign letter=z Then we will mount the EFI partition as drive Z.
+This operation may be useful when using a dual-boot system with Windows and Ubuntu: Sometimes, after removing the Ubuntu system, only the Windows system remains, but the GRUB interface still appears every time the computer boots.]]></description>
 </item>
 </channel>
 </rss>

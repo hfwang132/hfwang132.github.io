@@ -9,7 +9,7 @@
     <pubDate>Wed, 08 Jan 2025 21:08:06 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.com/products/</guid>
-    <description><![CDATA[<p>小朋友们好，今天我们来学习什么是<strong>笛卡尔积</strong>。我们把世界上所有上衣的集合叫做 $a$ ，世界上所有下着的集合叫做 $b$ ，那么 $a$ 和 $b$ 的笛卡尔积 $a \times b$ 是什么呢？就是所有可能的上下衣装搭配的集合啦（当然，不包括帽子、鞋子、首饰等等）。</p>]]></description>
+    <description><![CDATA[小朋友们好，今天我们来学习什么是笛卡尔积。我们把世界上所有上衣的集合叫做 $a$ ，世界上所有下着的集合叫做 $b$ ，那么 $a$ 和 $b$ 的笛卡尔积 $a \times b$ 是什么呢？]]></description>
 </item>
 <item>
     <title>量子态/算符的 Weyl 和 Wigner 表示</title>
@@ -17,8 +17,7 @@
     <pubDate>Wed, 08 Jan 2025 20:25:50 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.com/weyl_wigner/</guid>
-    <description><![CDATA[<h2 id="前言">前言</h2>
-<p>在经典力学中，物理量是相空间上的一个函数，系统状态是相空间上的一个点（对于系综而言则是相空间上的一个概率分布）。这一套语言量子化之后，就得到了量子态/算符的相空间表示，也就是 Wigner 表示。Weyl 表示则是它的傅里叶变换。</p>]]></description>
+    <description><![CDATA[前言 在经典力学中，物理量是相空间上的一个函数，系统状态是相空间上的一个点（对于系综而言则是相空间上的一个概率分布）。这一套语言量子化之后，就]]></description>
 </item>
 <item>
     <title>量子纠缠的速度是否超过光速？</title>
@@ -26,8 +25,7 @@
     <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.com/contextuality/</guid>
-    <description><![CDATA[<p>太长不看版：</p>
-<p>“超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子态和测量基矢共同作为 reality，这叫做互文性。非局域性是互文性的一个推论。</p>]]></description>
+    <description><![CDATA[太长不看版： “超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子]]></description>
 </item>
 </channel>
 </rss>

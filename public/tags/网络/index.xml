@@ -9,11 +9,7 @@
     <pubDate>Mon, 12 Jun 2023 23:22:42 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.com/boards_networking/</guid>
-    <description><![CDATA[<h3 id="windows">Windows</h3>
-<p>在控制面板中设置能上网的网卡，共享给以太网。此时以太网的 IP 会变成 <code>192.168.137.1</code>。</p>
-<p>然后在开发板终端中设置网关为 <code>192.168.137.1</code> 即可：</p>
-<p><code>sudo route add default gw 192.168.137.1</code></p>
-<p>IP 设置为 <code>192.168.137.x</code>，x 不是 1 和 255（网关地址和广播地址）就行：</p>]]></description>
+    <description><![CDATA[Windows 在控制面板中设置能上网的网卡，共享给以太网。此时以太网的 IP 会变成 192.168.137.1。 然后在开发板终端中设置网关为 192.168.137.1 即可： sudo route add default gw]]></description>
 </item>
 </channel>
 </rss>

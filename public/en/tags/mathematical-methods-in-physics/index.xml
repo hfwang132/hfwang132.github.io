@@ -9,12 +9,12 @@
     <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
     <author>Author</author>
     <guid>http://example.com/en/annilation_op/</guid>
-    <description><![CDATA[<p>The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.</p>
-<p>Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:</p>
-<p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
-<p>That is,</p>
-<p>$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$</p>
-<p>So, we just need to decouple them. By diagonalizing, we obtain the eigenvectors $a^{\pm} = x \pm \mathrm{i} p$, and the derivatives of $a^{\pm}$ only depend on themselves:</p>]]></description>
+    <description><![CDATA[The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.
+Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:
+$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$
+That is,
+$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$
+So, we just need to decouple them.]]></description>
 </item>
 </channel>
 </rss>
