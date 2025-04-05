@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Berry联络 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/berry%E8%81%94%E7%BB%9C/</link>
+        <description>Berry联络 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Apr 2025 01:02:38 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/berry%E8%81%94%E7%BB%9C/" rel="self" type="application/rss+xml" /><item>
+    <title>电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】</title>
+    <link>http://example.com/gm_3/</link>
+    <pubDate>Sun, 06 Apr 2025 01:02:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_3/</guid>
+    <description><![CDATA[<p>电磁场并非电场和磁场。</p>
+<p>换句话说，电磁场并不只是电场和磁场。</p>
+<p>此话怎讲？</p>
+<h2 id="一电磁势的地位高于场强">一、电磁势的地位高于场强</h2>
+<p>在<a href="https://zhuanlan.zhihu.com/p/23958176393" target="_blank" rel="noopener noreffer ">前文</a>中，我们挖过一个坑：</p>
+<blockquote>
+<p>$\boxed{\begin{aligned} \phi &amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned}}$</p>
+<p>学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>赝矢量到底是什么？ - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/pseudovectors/">
+  <meta property="og:site_name" content="Haifei&#39;s Home">
+  <meta property="og:title" content="赝矢量到底是什么？">
+  <meta property="og:description" content="1 引子 我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。
+其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$ ，“赝标量”是三个切矢量的外积 $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$ 。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-06-10T02:21:18+08:00">
+    <meta property="article:modified_time" content="2023-06-10T02:21:18+08:00">
+    <meta property="article:tag" content="外代数">
+    <meta property="og:image" content="http://example.com/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://example.com/logo.png">
+  <meta name="twitter:title" content="赝矢量到底是什么？">
+  <meta name="twitter:description" content="1 引子 我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。
+其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$ ，“赝标量”是三个切矢量的外积 $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$ 。">
+<meta name="application-name" content="Haifei&#39;s Home">
+<meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/pseudovectors/" /><link rel="prev" href="http://example.com/blog_migration/" /><link rel="next" href="http://example.com/curl_in_n_dimension/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "赝矢量到底是什么？",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.com\/pseudovectors\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "外代数","wordcount":  1385 ,
+        "url": "http:\/\/example.com\/pseudovectors\/","datePublished": "2023-06-10T02:21:18+08:00","dateModified": "2023-06-10T02:21:18+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/example.com\/images\/avatar.png",
+                    "width":  1400 ,
+                    "height":  1400 
+                }},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 博客 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/cv/"> 简历 </a><a class="menu-item" href="/publication/"> 发表 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/pseudovectors/">English</option><option value="/pseudovectors/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">博客</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/cv/" title="">简历</a><a class="menu-item" href="/publication/" title="">发表</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/pseudovectors/">English</option><option value="/pseudovectors/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">赝矢量到底是什么？</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-06-10">2023-06-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1385 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/pseudovectors/" class="leancloud_visitors" data-flag-title="赝矢量到底是什么？">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-引子">1 引子</a></li>
+    <li><a href="#2-空间反演变换">2 空间反演变换</a></li>
+    <li><a href="#3-麦克斯韦方程的外代数形式">3 麦克斯韦方程的外代数形式</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-引子">1 引子</h2>
+<p>我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。</p>
+<p>其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$ ，“赝标量”是三个切矢量的外积 $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$ 。</p>
+<p>在配备了内积（或者非退化双线性形式）之后， $\bigwedge^2(T_pM)$ 和 $\bigwedge^1(T_pM)$ 之间有 Hodge 对偶关系，所以我们“误把”赝矢量当作矢量了。同理，由于 \bigwedge^3(T_pM) 和 $\bigwedge^0(T_pM)$ （标量场）之间有 Hodge 对偶关系，所以我们“误把”赝标量当作标量了。</p>
+<p>实际上，3 维流形上的赝矢量，在数学上就是 2-矢量（bivector，2-vector）。它和 2-form 的定义是类似的，只不过 2-vector 在切空间的外积中 $v\in\bigwedge^2(T_pM)$ ，而 2-form 在余切空间的外积中 $\omega\in\bigwedge^2(T_p^*M)$ 。</p>
+<hr>
+<h2 id="2-空间反演变换">2 空间反演变换</h2>
+<p>回想一下，我们之所以把“赝矢量”叫做“赝矢量”，是因为它们在空间反演变换下会有奇怪的行为。但是如果你把它当作两个矢量的外积，那么一切怪异的行为都有了解释。</p>
+<p>具体地，看下图，在空间反演变换下，磁场竟然调转了方向！这就类似于你往一个方向移动，但是镜子里的你往另一个方向移动。这不得不说是一个灵异事件。</p>
+<figure><img src="/pseudovectors/pseudovector.svg"><figcaption>
+      <h4>磁场是一个 bivector。如果你把磁场看成 vector，就会出现图中这种灵异的现象：磁场照了一下镜子，发现自己的头变成脚了。</h4>
+    </figcaption>
+</figure>
+
+<p>但实际上，点 $p$ 处的磁场并非一个 vector，而是一个 bivector。即 $B|_p\in (T_pM)\wedge (T_pM)$ 。它的基为 $\frac{\partial}{\partial x}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial y}\wedge \frac{\partial}{\partial z},\,\frac{\partial}{\partial z}\wedge \frac{\partial}{\partial x}$ 。</p>
+<p>所以说，并没有什么灵异事件（欢迎收看《走近科学》）。在空间反演变换下，磁场对应的两个 vector 分别都朝向了正确的方向，只不过人类非要用右手螺旋定则，将一个 bivector 看成是一个 vector，这才导致了诡异现象的出现。</p>
+<p>虽然数学上对 bivector 有完善的定义，但我们还是想问：怎样画出 bivector？答案是：可以把一个 bivector 画成有取向的面元。不同形状的面元，只要它们相互平行，且面积相同，就指的是同一个 bivector。换句话说，同一个 bivector 可以有许多不同的画法，只要保证它们平行，且面积和取向相同即可。</p>
+<figure><img src="/pseudovectors/bivectors.jpeg"><figcaption>
+      <h4>平行、面积相同、取向相同的面元，对应同一个 bivector。</h4>
+    </figcaption>
+</figure>
+
+<p>实际上，将 bivector 通过右手螺旋定则，看成一个 vector ，这只在三维流形中可行。因为只有在三维流形中，三减二才恰好等于一。在四维流形中，由于四减二等于二，我们只能把 bivector 对偶成另外一个 bivector ，而不是一个 vector。</p>
+<p>而在五维流形中，bivector 可以对偶成一个 trivector ，&hellip;，在 n 维流形中，bivector 可以对偶成一个 (n-2)-vector。</p>
+<hr>
+<h2 id="3-麦克斯韦方程的外代数形式">3 麦克斯韦方程的外代数形式</h2>
+<p>顺便一提，电场也是一个 bivector，它的基为 $\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial x},\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial z}$ ，有一个时间维度。之所以它看起来不是“赝矢量”，是因为我们只考虑了空间反演变换，没有考虑时间反演变换。</p>
+<p>如果考虑余切空间中的电磁 2-形式（采取自然单位制）:</p>
+<p>$$ \begin{aligned} F&amp;=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z \\ &amp;+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned} $$</p>
+<p>由于我们可以通过度规张量来任意升降一个张量的指标，所以对上式升指标，我们也可以写出一个 $(2,0)$ 型电磁张量，它以 $\frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}$ 的外积为基。</p>
+<p>不过我们暂时先采用 $(0,2)$ 型反对称张量（微分形式），因为这样做可以利用外微分（Exterior Derivative）的符号 $\mathrm{d}$ 。</p>
+<p>现在，再考虑电流 1-形式： $J=-\rho\mathrm{d}t+J_x\mathrm{d}x+J_y\mathrm{d}y+J_z\mathrm{d}z$</p>
+<p>于是，在闵可夫斯基度规 $\text{diag}(-1,1,1,1)$ 下，麦克斯韦方程就可以写成很简洁的形式：</p>
+<p>$$ \left\{\quad \begin{aligned} \mathrm{d}F&amp;=0 \\ \star \, \mathrm{d}\star F &amp;= J \end{aligned} \right. $$</p>
+<p>其中 $\star$ 是 Hodge 星算子（也就是 Hodge 对偶）。</p>
+<p>可以看出，在外代数的语言中，电磁场是一个 2-vector 或者 2-form，而不是一个 vector 或者 1-form。</p>
+<p>不过电流确实是一个 vector（或 1-form）。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-06-10</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/pseudovectors/" data-title="赝矢量到底是什么？" data-hashtags="外代数"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/pseudovectors/" data-hashtag="外代数"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/pseudovectors/" data-title="赝矢量到底是什么？"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/pseudovectors/" data-title="赝矢量到底是什么？"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/pseudovectors/" data-title="赝矢量到底是什么？"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%A4%96%E4%BB%A3%E6%95%B0/">外代数</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blog_migration/" class="prev" rel="prev" title="博客迁移"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>博客迁移</a>
+            <a href="/curl_in_n_dimension/" class="next" rel="next" title="高维空间中的旋度">高维空间中的旋度<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <span id="busuanzi_container_site_pv">
+                Visited: <span id="busuanzi_value_site_pv"></span> times
+            </span>
+            &nbsp;|&nbsp;
+            <span id="busuanzi_container_site_uv">
+                You are the <span id="busuanzi_value_site_uv"></span> th visiter
+            </span><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI","appKey":"dv86fnCL7DsYQl47DmJm7mHg","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://mukjinfv.api.lncldglobal.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,68 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>电动力学 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</link>
+        <description>电动力学 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Apr 2025 01:14:26 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/" rel="self" type="application/rss+xml" /><item>
+    <title>从量子场论到腔量子电动力学【更高更妙的电动力学·5】</title>
+    <link>http://example.com/gm_5/</link>
+    <pubDate>Sun, 06 Apr 2025 01:14:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_5/</guid>
+    <description><![CDATA[<p>在本篇文章中，我们将从非常复杂的 QED 拉氏量出发：</p>
+<p>$\begin{aligned} \mathcal{L}=  \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\psi - eA_\mu \bar{\psi} \gamma^\mu \psi -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} \end{aligned} $</p>
+<p>这个拉氏量非常复杂：它不仅考虑了电子的反粒子——正电子，并且耦合项 $- eA_\mu \bar{\psi} \gamma^\mu \psi$ 还是一个三次项，可以描述电子-正电子对产生/湮灭等多种过程。它没有解析解，只能用量子场论的微扰法求解。</p>]]></description>
+</item>
+<item>
+    <title>狄拉克磁单极子——陈类与陈数【更高更妙的电动力学·4】</title>
+    <link>http://example.com/gm_4/</link>
+    <pubDate>Sun, 06 Apr 2025 01:08:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_4/</guid>
+    <description><![CDATA[<p>在<a href="https://zhuanlan.zhihu.com/p/32173040413" target="_blank" rel="noopener noreffer ">前文</a>中，我们说到，如果流形是拓扑平凡的，那么对 Berry 曲率在闭合曲面 $\Sigma$ 上积分应该得到零。这是因为根据 Stokes 定理，有：</p>
+<p>$\int_\Sigma F = \int_{\partial \Sigma } A = 0$</p>
+<p>然而，在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为，此时无法定义全局单值的联络 $A$ ，导致 Stokes 定理不再适用。此话怎讲？</p>]]></description>
+</item>
+<item>
+    <title>电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】</title>
+    <link>http://example.com/gm_3/</link>
+    <pubDate>Sun, 06 Apr 2025 01:02:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_3/</guid>
+    <description><![CDATA[<p>电磁场并非电场和磁场。</p>
+<p>换句话说，电磁场并不只是电场和磁场。</p>
+<p>此话怎讲？</p>
+<h2 id="一电磁势的地位高于场强">一、电磁势的地位高于场强</h2>
+<p>在<a href="https://zhuanlan.zhihu.com/p/23958176393" target="_blank" rel="noopener noreffer ">前文</a>中，我们挖过一个坑：</p>
+<blockquote>
+<p>$\boxed{\begin{aligned} \phi &amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned}}$</p>
+<p>学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。</p>]]></description>
+</item>
+<item>
+    <title>规范场论视角下的电动力学【更高更妙的电动力学·2】</title>
+    <link>http://example.com/gm_2/</link>
+    <pubDate>Sun, 06 Apr 2025 00:48:30 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_2/</guid>
+    <description><![CDATA[<p>这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。</p>
+<p>本文依然采用 $(-,+,+,+)$ 的度规约定。</p>
+<hr>
+<p><strong>为什么说电动力学是规范场论？</strong></p>
+<p>为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。</p>]]></description>
+</item>
+<item>
+    <title>微分几何视角下的电动力学【更高更妙的电动力学·1】</title>
+    <link>http://example.com/gm_1/</link>
+    <pubDate>Sun, 06 Apr 2025 00:43:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_1/</guid>
+    <description><![CDATA[<h3 id="前言">前言</h3>
+<p>你可能听说过麦克斯韦方程有很简单的形式：</p>
+<p>$\begin{aligned} \mathrm{d} F&amp;=0 \\ \mathrm{d} \star F &amp;= \mu_0 \star J \end{aligned}$</p>
+<p>又或者是</p>
+<p>$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;= \mu_0 J^\nu  \end{aligned}$</p>
+<blockquote>
+<p>注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。</p>]]></description>
+</item>
+</channel>
+</rss>

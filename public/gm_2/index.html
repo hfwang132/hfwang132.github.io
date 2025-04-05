@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>规范场论视角下的电动力学【更高更妙的电动力学·2】 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/gm_2/">
+  <meta property="og:site_name" content="Haifei&#39;s Home">
+  <meta property="og:title" content="规范场论视角下的电动力学【更高更妙的电动力学·2】">
+  <meta property="og:description" content="这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。
+本文依然采用 $(-,&#43;,&#43;,&#43;)$ 的度规约定。
+为什么说电动力学是规范场论？
+为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-06T00:48:30+08:00">
+    <meta property="article:modified_time" content="2025-04-06T00:48:30+08:00">
+    <meta property="article:tag" content="微分几何">
+    <meta property="article:tag" content="规范场论">
+    <meta property="article:tag" content="电动力学">
+    <meta property="og:image" content="http://example.com/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://example.com/logo.png">
+  <meta name="twitter:title" content="规范场论视角下的电动力学【更高更妙的电动力学·2】">
+  <meta name="twitter:description" content="这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。
+本文依然采用 $(-,&#43;,&#43;,&#43;)$ 的度规约定。
+为什么说电动力学是规范场论？
+为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。">
+<meta name="application-name" content="Haifei&#39;s Home">
+<meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/gm_2/" /><link rel="prev" href="http://example.com/gm_1/" /><link rel="next" href="http://example.com/gm_3/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "规范场论视角下的电动力学【更高更妙的电动力学·2】",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.com\/gm_2\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "微分几何, 规范场论, 电动力学","wordcount":  3941 ,
+        "url": "http:\/\/example.com\/gm_2\/","datePublished": "2025-04-06T00:48:30+08:00","dateModified": "2025-04-06T00:48:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/example.com\/images\/avatar.png",
+                    "width":  1400 ,
+                    "height":  1400 
+                }},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 博客 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/cv/"> 简历 </a><a class="menu-item" href="/publication/"> 发表 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/gm_2/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">博客</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/cv/" title="">简历</a><a class="menu-item" href="/publication/" title="">发表</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/gm_2/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">规范场论视角下的电动力学【更高更妙的电动力学·2】</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-04-06">2025-04-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3941 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/gm_2/" class="leancloud_visitors" data-flag-title="规范场论视角下的电动力学【更高更妙的电动力学·2】">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一什么是规范变换经典电动力学">一、什么是规范变换（经典电动力学）</a></li>
+    <li><a href="#二什么是规范变换量子电动力学">二、什么是规范变换（量子电动力学）</a></li>
+    <li><a href="#三狄拉克场和电磁场的拉氏量">三、狄拉克场和电磁场的拉氏量</a></li>
+    <li><a href="#四主丛上的联络">四、主丛上的联络</a></li>
+    <li><a href="#五杨-米尔斯yang-mills理论">五、杨-米尔斯（Yang-Mills）理论</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。</p>
+<p>本文依然采用 $(-,+,+,+)$ 的度规约定。</p>
+<hr>
+<p><strong>为什么说电动力学是规范场论？</strong></p>
+<p>为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。</p>
+<p>前者我相信大部分读者都已经学过，而后者才是本篇文章要强调的内容。</p>
+<p>让我们开始吧！</p>
+<h2 id="一什么是规范变换经典电动力学">一、什么是规范变换（经典电动力学）</h2>
+<p>首先，什么叫规范场论？规范场论就是拉氏量（或者更广义地说，物理理论本身）在<strong>局域变换</strong>下不变的理论。</p>
+<p>那么，什么是局域变换？</p>
+<p>对于电磁场来说，局域变换就是 $\boxed{ A_\mu \mapsto A_\mu + \partial_\mu \lambda }$ ，这是协变形式。而逆变形式才是我们通常所说的向量： $A^\mu = g^{\mu\nu}A_\nu$ ，即 $A^\mu = (-A_0,A_1,A_2,A_3)$ 。因此 $A_\mu \mapsto A_\mu + \partial_\mu \lambda $ 等价于：</p>
+<p>$\boxed{ \begin{aligned} \phi &amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned} }$</p>
+<p>学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。规范变换是一个局域变换，这是因为 $\lambda$ 并非一个常数，而是时空点的函数。</p>
+<p>在经典电动力学中，我们总是把麦克斯韦方程当作第一性原理，而把规范变换看做是一种衍生品；我们把电场和磁场看做是根本性的实体，而将势能和矢势看做是一种方便的数学手段，认为它们没有实际的物理效应。而正是因为规范变换不影响电场和磁场，我们才导出了规范变换。</p>
+<p>但，难道场强真的就是事实的全部吗？</p>
+<p>不是的！从更高的视角来看，势能和矢势（4-势）才是根本的物理实体，而场强是衍生品。</p>
+<p>这是有物理证据的： Aharonov–Bohm 效应（简称 AB 效应）告诉我们，势能和矢势（4-势）有实实在在的物理影响。而规范变换也不只是一种数学技巧，而是具有一定的本体性地位。</p>
+<p>此般种种，其背后的原因要到量子电动力学中去寻找答案。</p>
+<h2 id="二什么是规范变换量子电动力学">二、什么是规范变换（量子电动力学）</h2>
+<p>相信很多同学都听说过，标准模型的规范群是 $U(1) \times SU(2) \times SU(3)$ 。其中 $U(1)$ 对应光子（电磁场）， $SU(2)$ 对应弱玻色子（W 和 Z 玻色子）， $SU(3)$ 对应胶子。</p>
+<p>实际上，在量子电动力学中，规范变换指的是局域的 $U(1)$ 变换，也就是形如 $\psi(x) \mapsto e^{\mathrm{i}\theta(x)} \psi(x)$ 的变换，这里 $\psi$ 指的是电子的波函数，它是一个狄拉克场。</p>
+<p>局域变换与全局变换的不同之处在于，局域变换中的 $\theta$ 本身也是一个场，而全局变换的 $\theta$ 是一个常数。</p>
+<blockquote>
+<p>顺便提一句，根据诺特定理，全局的 $U(1)$ 对称性可以导出电荷守恒。不过这不是本篇关心的内容。</p>
+</blockquote>
+<p><strong>如果我们要求理论满足局域对称性，即物理在局域变换</strong> $\psi \mapsto e^{\mathrm{i}\theta}\psi$ <strong>下保持不变，那么就会导致电磁场的出现。换句话说，每一个局域规范对称性都会对应一个规范场。</strong></p>
+<p>此话从何说起呢？</p>
+<p>我们先来看局域变换 $\psi \mapsto e^{\mathrm{i}\theta}\psi$ 会导致什么。由于我们还没有规定拉氏量，所以我们只能考察与 $\psi$ 自身有关的量。比如 $\partial_\mu \psi$ 。</p>
+<p>我们希望在局域变换 $\psi \mapsto e^{\mathrm{i}\theta}\psi$ 下， $\partial_\mu\psi$ 也按照同样的方式变换，即 $\partial_\mu\psi \mapsto e^{\mathrm{i}\theta}\partial_\mu\psi$ 。</p>
+<blockquote>
+<p>为什么我们要求 $\partial_\mu\psi$ 的变换方式与 $\psi$ 相同？</p>
+<p>这一点可以从狄拉克场的拉氏量得出。为了保持狄拉克场的拉氏量 $\mathcal{L}=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu \psi -mc^2)\psi $ 不变，我们要求 $\partial_\mu\psi$ 的变换方式应当与 $\psi$ 相同。</p>
+<p>这一点也可以从狄拉克方程 $\mathrm{i}\hbar \gamma^\mu (\partial_\mu \psi) -mc,\psi =0$ 中看出。实际上，狄拉克方程就是通过对狄拉克场的作用量变分得到的。</p>
+</blockquote>
+<p>如果我们把 $\psi \mapsto e^{\mathrm{i}\theta}\psi$ 代入 $\partial_\mu\psi$ ：</p>
+<p>$\begin{aligned} \partial_\mu \psi \mapsto \partial_\mu(e^{\mathrm{i}\theta} \psi) &amp;= e^{\mathrm{i}\theta}\left[\partial_\mu \psi \color{red}{+ \mathrm{i}(\partial_\mu\theta) \psi}\right] \\ &amp;= e^{\mathrm{i}\theta}\left[(\partial_\mu \color{red}{+ \mathrm{i}\partial_\mu\theta}) \psi\right]  \end{aligned}$</p>
+<p>就会发现，结果多了一项 $ \color{red}{\mathrm{i}(\partial_\mu\theta) \psi}$ ，因此我们需要想办法消去它。</p>
+<p>我们不妨引入 $D_\mu = \partial_\mu - \mathrm{i} (\partial_\mu\theta)$ ，于是：</p>
+<p>$\begin{aligned} D_\mu \psi \mapsto D_\mu(e^{\mathrm{i}\theta} \psi) &amp;= \left[\partial_\mu \color{red}{- \mathrm{i} (\partial_\mu\theta)}\right] (e^{\mathrm{i}\theta} \psi) \\ &amp;= e^{\mathrm{i}\theta}\partial_\mu \psi \end{aligned}$</p>
+<p>额&hellip;好吧，有点尴尬，我们并没有实现 $D_\mu\psi \mapsto e^{\mathrm{i}\theta} D_\mu \psi$ ，而是实现了 $D_\mu\psi \mapsto e^{\mathrm{i}\theta} \partial_\mu \psi$ 。</p>
+<p>怎么样才能实现 $D_\mu\psi \mapsto e^{\mathrm{i}\theta} D_\mu \psi$ 呢？</p>
+<p>我们不妨让 $\color{red}{-(\partial_\mu\theta)}$ 这一项本身成为一个场 $A_\mu$ 。这是什么意思呢？意思我们就是要创建一个新的场 $A_\mu$ ，这个新的场的变换规则是 $A_\mu \mapsto A_\mu \color{red}{- (\partial_\mu\theta)}$ 。</p>
+<p>接着，我们令 $\boxed{ D_\mu = \partial_\mu + \mathrm{i}A_\mu }$ 。</p>
+<p>现在我们再试一次：</p>
+<p>$\begin{aligned} D_\mu \psi \mapsto D_\mu^\prime(e^{\mathrm{i}\theta} \psi) &amp;= \left[\partial_\mu + \mathrm{i} (A_\mu \color{red}{- \partial_\mu\theta})\right] (e^{\mathrm{i}\theta} \psi) \\ &amp;= e^{\mathrm{i}\theta}\left(\partial_\mu + \color{red}{\cancel{\mathrm{i}\partial_\mu\theta}} + \mathrm{i}A_\mu - \color{red}{\cancel{\mathrm{i}\partial_\mu\theta}} \right) \psi \\ &amp;= e^{\mathrm{i}\theta}D_\mu \psi \end{aligned}$</p>
+<p>我们成功了！这样定义出来的 $D_\mu$ 叫做协变导数。</p>
+<blockquote>
+<p>注意，这里的协变导数是主丛上的协变导数，与矢量丛上的协变导数 $\nabla_\mu$ 不是一回事。后者刻画的是矢量丛纤维（切空间）之间的联络，描述了流形本身的弯曲。而协变导数 $D_\mu$ 刻画的是主丛纤维之间的联络，描述的是流形内部自由度的弯曲。我们在第四节会详细展开。</p>
+</blockquote>
+<p>诶，你有没有觉得 $\boxed{A_\mu \mapsto A_\mu \color{red}{- (\partial_\mu\theta)}}$ 这个玩意儿有点眼熟？它不就是第一节里说到的电磁规范变换吗？</p>
+<blockquote>
+<p>或写成 $A \mapsto A - \mathrm{d}\theta$</p>
+</blockquote>
+<p>其实这个新的场 $A_\mu$ 就是电磁场。正是它的存在保证了局域规范变换不会改变拉氏量。</p>
+<p>为了兼容 SI 单位制，我们给 $A_\mu$ 乘以一个量纲常数： $D_\mu = \partial_\mu + \mathrm{i}\frac{e}{\hbar} A_\mu$ ，从而保证 $A_\mu$ 拥有正确的量纲。其中 $e$ 是元电荷，为正数。根据度规约定以及 $e$ 的符号的不同，也可能写成 $D_\mu = \partial_\mu - \mathrm{i}\frac{e}{\hbar} A_\mu$ 。</p>
+<blockquote>
+<p>在经典电动力学中，之所以带电粒子的哈密顿量要把 $\mathbf{p}$ 换成 $(\mathbf{p} - e \mathbf{A})$ ，也和协变导数有关。下面给读者几个有趣但非常简单的练习：</p>
+<ol>
+<li>
+<p>将量子力学中的 $\hat{p}_\mu = -\mathrm{i}\hbar \partial_\mu$ 换成 $\hat{p}_\mu = -\mathrm{i}\hbar D_\mu$ ，得到正则动量 $\mathbf{p} = \mathbf{p}_{\text{kin}} + e\mathbf{A}$ ，其中 $\mathbf{p}_{\text{kin}} = m\dot{\mathbf{x}} = -\mathrm{i}\hbar \nabla$ 是运动动量（kinetic momentum）。</p>
+</li>
+<li>
+<p>于是带电粒子的能量（哈密顿量）为：<br>
+$\begin{aligned} H(\mathbf{x},\mathbf{p})&amp;=\frac{1}{2m}(\mathbf{p}_{\text{kin}})^2 + e\phi(\mathbf{x}) \\ &amp;=\frac{1}{2m}[\mathbf{p} - e\mathbf{A}(\mathbf{x})]^2 + e\phi(\mathbf{x}) \end{aligned} $</p>
+</li>
+<li>
+<p>利用正则方程 $\dot{x}^\mu = \frac{\partial H}{\partial p_\mu}, \quad \dot{p}_\mu = -\frac{\partial H}{\partial x^\mu}$ 得到洛伦兹力： $\dot{\mathbf{p}}=e(\mathbf{E}+\dot{\mathbf{x}} \times \mathbf{B})$ 。注意此处粒子带正电荷 $+e$ 。对于电子，需要将 $+e$ 换成 $-e$ 。</p>
+</li>
+<li>
+<p>给定带电粒子的拉氏量 $L(\mathbf{x}, \dot{\mathbf{x}}) = \frac{1}{2} m \dot{\mathbf{x}}^2 + e  \dot{\mathbf{x}} \cdot \mathbf{A} - \phi(\mathbf{x})$ ，通过 $p_\mu := \frac{\partial L}{\partial \dot{x}_\mu}$ 得到正则动量 $\mathbf{p} = m\dot{\mathbf{x}} + e \mathbf{A}$ 。</p>
+</li>
+<li>
+<p>利用欧拉-拉格朗日方程 $\frac{\partial L}{\partial x^\mu} - \frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial L}{\partial \dot{x}^\mu} = 0$ ，得到洛伦兹力： $\dot{\mathbf{p}}=e(\mathbf{E}+\dot{\mathbf{x}} \times \mathbf{B})$</p>
+</li>
+<li>
+<p>通过勒让德变换 $H = \mathbf{p} \cdot \dot{\mathbf{x}} - L$ 得到哈密顿量，并与 2 中的哈密顿量比较。它们应当相同。</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="三狄拉克场和电磁场的拉氏量">三、狄拉克场和电磁场的拉氏量</h2>
+<blockquote>
+<p>不太了解狄拉克方程的同学可以跳过本节。</p>
+</blockquote>
+<p>现在，我们将 $D_\mu = \partial_\mu + \mathrm{i}\frac{e}{\hbar} A_\mu$ 代入狄拉克场的拉氏量 $\mathcal{L}=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu  -mc^2)\psi $ 得：</p>
+<p>$\begin{aligned} \mathcal{L}_{\text{Dirac}}&amp;=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu D_\mu-mc^2)\psi \\&amp;=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu -mc^2)\psi  \color{red}{- eA_\mu c\bar{\psi} \gamma^\mu \psi} \end{aligned}$</p>
+<p>令 $J^\mu = -ec\bar{\psi} \gamma^\mu \psi$ （注意，电流的方向与电子运动方向相反）得：</p>
+<p>$\begin{aligned} \mathcal{L}_{\text{Dirac}}&amp;=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu-mc^2)\psi  \color{red}{+ A_\mu J^\mu} \end{aligned}$</p>
+<p>上式第二项正是上篇文章中的有源项：</p>
+<p>$\begin{aligned} \mathcal{L}_{\text{EM}} =  -\frac{1}{4\mu_0} F_{\mu\nu} F^{\mu\nu} \color{red}{+ A_{\mu} J^{\mu} } \end{aligned}$</p>
+<p>因此，总的拉氏量为：</p>
+<p>$\boxed{ \begin{aligned} &amp;\mathcal{L}[A_\mu, \partial_\nu A_\mu;\psi,\partial_\mu \psi;\bar\psi,\partial_\mu\bar\psi] \\&amp;=  \bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu -mc^2)\psi - eA_\mu c\bar{\psi} \gamma^\mu \psi -\frac{1}{4\mu_0} F_{\mu\nu} F^{\mu\nu} \end{aligned} }$</p>
+<p><strong>对作用量</strong> $S=\int\mathcal{L} \mathrm{d}^4x$ <strong>变分，就可以同时得到狄拉克方程和麦克斯韦方程。这就是量子电动力学的拉格朗日表述的基础。</strong></p>
+<h2 id="四主丛上的联络">四、主丛上的联络</h2>
+<p>实际上， $A_\mu$ 是主丛上的联络。这里的主丛指的是一个 $U(1)$ -纤维丛。</p>
+<p>什么是主丛？可以把主丛想象成一个流形，这个流形上的每一个点都附带了一个“纤维”，且这个纤维拥有李群的结构。</p>
+<blockquote>
+<p>李群的定义：如果一个流形本身也是一个群，那么这个流形就叫做李群。</p>
+<p>主丛与向量丛的区别在于：向量丛的纤维是向量空间例如切空间/余切空间；而主丛的纤维是李群（严格来说，是李群的 torsor）。</p>
+</blockquote>
+<p>对于电动力学而言，我们所考虑的主丛，其纤维是 $U(1)$ ：你可以想象时空流形上的每一点都长出了一个圆圈。这些圆圈就是我们所说的纤维，它们代表着相位。</p>
+<figure><img src="/gm_2/image/u%281%29.jpg"><figcaption>
+      <h4>U(1) 纤维丛，图源：ChatGPT 作图</h4>
+    </figcaption>
+</figure>
+
+<p>在上图中，这些圆圈被画在了分立的点上，这只是为了方便展示。实际上，每一个点上都有一个这样的圆圈。</p>
+<p>纤维丛上的联络描述的就是纤维之间连接的方式。具体到我们的 $U(1)$ 主丛，就是上图中的圆圈之间连接的方式。</p>
+<p>主丛上的联络 $A$ 定义为一个李代数取值的 1-形式。由于 $U(1)$ 的李代数很简单，就是 $\mathbb{R}$ ，所以看起来与普通的 1-形式没什么不同。</p>
+<blockquote>
+<p><strong>选读</strong></p>
+<p>李代数的定义：李代数是李群在单位元处的切空间，且该切空间额外附带了一个二元运算，即李括号 $[\cdot, \cdot]$ 。</p>
+<p>以李群 $U(1)$ 为例，李群本身是 ${\mathrm{e}^{\mathrm{i}\theta} \mid \theta\in[0,2\pi)}$ ，而李代数是 $\mathrm{i}\mathbb{R} = {\mathrm{i} \theta\mid \theta \in \mathbb{R}}$ 。在物理中，我们通常把 $\mathrm{i}$ 去掉，而把 $\mathbb{R}$ 说成是李代数。</p>
+<p>从 $A_\mu \mapsto A_\mu - (\partial_\mu\theta)$ 这个式子我们可以看出，作为 1-形式的 $\partial_\mu \theta$ 的取值应当是李代数中的元素。</p>
+<p>李代数上的李括号是由李群上的左不变矢量场的李导数 $\mathcal{L}_V W=[V,W]$ 所诱导的。具体来说，单位元的切空间中的每一个元素都唯一对应李群上的一个左不变矢量场。通过左不变矢量场之间的李括号，我们就能反过来得到切空间上的李括号，从而使其成为一个李代数。</p>
+<p>余切空间自然地拥有外代数结构，而切空间自然地拥有李代数结构。</p>
+</blockquote>
+<p>曲率定义为联络的外微分： $F=\mathrm{d}A$ 。可以想象，上图中的圆圈并不是普通地粘在一起，而是以一种特定的，扭曲的方式粘在一起。联络的曲率所描述的，正是纤维之间这种弯曲的连接方式。从 $A$ 的变换规则可以看出这一点： $A_\mu \mapsto A_\mu \color{red}{- (\partial_\mu\theta)}$ ，它描述的就是相位在移动中的变化 $(\partial_\mu \theta)$ 。</p>
+<blockquote>
+<p>令协变导数 $D_\mu \psi = \partial_\mu \psi +\mathrm{i}A_\mu \psi =0$ ，我们就能得到主丛上的平行移动：</p>
+<p>$\begin{aligned} &amp;D\psi=0\\ &amp;\Rightarrow\left(\partial_\mu + \mathrm{i}\frac{e}{h}A\right) \psi =0 \\ &amp;\Rightarrow  \partial_\mu \psi = -\mathrm{i}\frac{e}{\hbar} A_\mu \psi \\ &amp;\Rightarrow \psi(x) = \psi(x_0) \exp\left( -\mathrm{i}\frac{e}{\hbar}\int A_\mu \mathrm{d}x^\mu\right) \end{aligned}$</p>
+<p>可见，除了动力学相位 $\int\frac{e}{\hbar}A_0 \mathrm{d}x^0 = \int\frac{1}{\hbar} E \mathrm{d}t$ 以外，平行移动还会增加一个额外的相位 ${\int \frac{e}{\hbar} \mathbf{A} \cdot \mathrm{d}\mathbf{l}}$。这就是几何相位。详情我们会在本系列以后的文章中介绍。</p>
+</blockquote>
+<p>换句话说，<strong>电磁场的场强张量</strong> $F$ <strong>正是主丛纤维之间连接的曲率。这就是电磁场作为主丛上的联络的几何意义。</strong></p>
+<p>我们常说引力是几何效应。但从以上分析可见，电磁力（以及下文要介绍的弱力和强力）也未尝不是几何效应！只是前者对应向量丛上的联络，后者对应主丛上的联络。</p>
+<h2 id="五杨-米尔斯yang-mills理论">五、杨-米尔斯（Yang-Mills）理论</h2>
+<p>有了以上这么多数学铺垫，我们完全可以介绍一下杨-米尔斯理论了。</p>
+<p>我们在上一篇文章介绍的拉氏量：</p>
+<p>$\boxed{ \begin{aligned} \mathcal{L} = -\frac{1}{2} F \wedge (\star F) + A\wedge (\star J)  \end{aligned} }$</p>
+<p>在杨-米尔斯理论中完全适用。只不过此时的 $A$ 不仅可以是 $U(1)$ -纤维丛上的联络，还可以是 $SU(2)$ 、 $SU(3)$ -纤维丛上的联络。它们的李代数分别写作 $\mathfrak{u}(1), \mathfrak{su}(2), \mathfrak{su}(3)$ 。</p>
+<p>与 $\mathfrak{u}(1)$ 只有 1 个生成元不同， $\mathfrak{su}(2)$ 的生成元有 3 个， $\mathfrak{su}(3)$ 的生成元有 8 个，也就是说它们的维数分别是 3 和 8。此时有 $A_\mu = A_\mu^a T^a$ ，其中 $T^a$ 是李代数的生成元，可以作为李代数的一组基。</p>
+<p>与 $U(1)$ 不同， $SU(2)$ 和 $SU(3)$ 是非交换群（非阿贝尔群），因此基于它们的规范场论也叫非阿贝尔规范场论。</p>
+<p>由于非交换性，曲率不再是简单的 $F=\mathrm{d}A$ ，而是 $F=\mathrm{d}A+ A\wedge A$ ，其中 $\wedge$ 是微分形式的 wedge product。之所以 $A \wedge A \ne 0$ ，也是因为非交换性： $A \wedge A = A_\mu^a A_\nu^b (T^a T^b - T^b T^a) = A_\mu^a A_\nu^b [T^a, T^b]\ne 0 $ 。</p>
+<p>每一个生成元都对应一个场，对应的粒子叫做规范玻色子。对于 $U(1)$ 而言，规范玻色子是光子，传递电磁力。对于 $SU(2)$ 而言，规范玻色子是 $W^\pm,Z^0$ ，它们传递弱力。对于 $SU(3)$ 而言，规范玻色子是 8 个胶子，它们传递强力。</p>
+<blockquote>
+<p>实际上电磁力和弱力没有这么简单， $U(1)$ 对应的粒子原本是 $B$ ， $SU(2)$ 对应 $W^1,W^2,W^3$ 。希格斯机制所导致的自发对称性破缺使得它们混合在了一起：</p>
+<p>$\begin{aligned} W^\pm &amp;= \frac{W^1 \pm \mathrm{i} W^2}{\sqrt{2}} \\ Z^0 &amp;= W^3 \cos(\theta_W) - B \sin(\theta_W) \\ A &amp;= W^3 \sin(\theta_W) + B\cos(\theta_W) \end{aligned}$</p>
+<p>这才有了光子 $A$ 和弱玻色子 $W^\pm,Z^0$。具体机制由于篇幅所限就不介绍了。</p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2025-04-06</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/gm_2/" data-title="规范场论视角下的电动力学【更高更妙的电动力学·2】" data-hashtags="微分几何,规范场论,电动力学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/gm_2/" data-hashtag="微分几何"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/gm_2/" data-title="规范场论视角下的电动力学【更高更妙的电动力学·2】"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/gm_2/" data-title="规范场论视角下的电动力学【更高更妙的电动力学·2】"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/gm_2/" data-title="规范场论视角下的电动力学【更高更妙的电动力学·2】"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">微分几何</a>,&nbsp;<a href="/tags/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA/">规范场论</a>,&nbsp;<a href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/">电动力学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/gm_1/" class="prev" rel="prev" title="微分几何视角下的电动力学【更高更妙的电动力学·1】"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>微分几何视角下的电动力学【更高更妙的电动力学·1】</a>
+            <a href="/gm_3/" class="next" rel="next" title="电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】">电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <span id="busuanzi_container_site_pv">
+                Visited: <span id="busuanzi_value_site_pv"></span> times
+            </span>
+            &nbsp;|&nbsp;
+            <span id="busuanzi_container_site_uv">
+                You are the <span id="busuanzi_value_site_uv"></span> th visiter
+            </span><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI","appKey":"dv86fnCL7DsYQl47DmJm7mHg","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://mukjinfv.api.lncldglobal.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

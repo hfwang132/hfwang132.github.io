@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>再见了旋转波近似：量子拉比模型的解析解 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/rabi/">
+  <meta property="og:site_name" content="Haifei&#39;s Home">
+  <meta property="og:title" content="再见了旋转波近似：量子拉比模型的解析解">
+  <meta property="og:description" content="1. 前言 在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-27T15:42:49+08:00">
+    <meta property="article:modified_time" content="2024-07-27T15:42:49+08:00">
+    <meta property="article:tag" content="量子光学">
+    <meta property="og:image" content="http://example.com/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://example.com/logo.png">
+  <meta name="twitter:title" content="再见了旋转波近似：量子拉比模型的解析解">
+  <meta name="twitter:description" content="1. 前言 在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。">
+<meta name="application-name" content="Haifei&#39;s Home">
+<meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/rabi/" /><link rel="prev" href="http://example.com/laser_quantum2/" /><link rel="next" href="http://example.com/thermal_exponential_dist/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "再见了旋转波近似：量子拉比模型的解析解",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.com\/rabi\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "量子光学","wordcount":  2836 ,
+        "url": "http:\/\/example.com\/rabi\/","datePublished": "2024-07-27T15:42:49+08:00","dateModified": "2024-07-27T15:42:49+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/example.com\/images\/avatar.png",
+                    "width":  1400 ,
+                    "height":  1400 
+                }},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 博客 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/cv/"> 简历 </a><a class="menu-item" href="/publication/"> 发表 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/rabi/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">博客</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/cv/" title="">简历</a><a class="menu-item" href="/publication/" title="">发表</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/rabi/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">再见了旋转波近似：量子拉比模型的解析解</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-27">2024-07-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2836 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/rabi/" class="leancloud_visitors" data-flag-title="再见了旋转波近似：量子拉比模型的解析解">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-前言">1. 前言</a></li>
+    <li><a href="#2-qrm-和-jcm-的哈密顿量">2. QRM 和 JCM 的哈密顿量</a></li>
+    <li><a href="#2-jcm-的解析解">2. JCM 的解析解</a></li>
+    <li><a href="#4-qrm-的解析解">4. QRM 的解析解</a></li>
+    <li><a href="#5-守恒量与对称性">5. 守恒量与对称性</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-前言">1. 前言</h2>
+<p>在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。</p>
+<p>为了解释自发辐射等涉及电磁场量子化的现象，Jaynes 和 Cummings 在 1962 年提出了量子拉比模型（Quantum Rabi Model，<strong>QRM</strong>），这个模型将电磁场也量子化了，使得电磁场的真空涨落不能被忽略，于是自发辐射无非就是电磁场的真空涨落所“激发”的“受激辐射”。</p>
+<p>然而，在 QRM 被提出后相当长一段时间内，人们都认为它没有解析解，只有做了旋转波近似（RWA）之后才有解析解。人们把做了旋转波近似后的模型叫做 Jaynes-Cummings 模型（<strong>JCM</strong>）。</p>
+<p>JCM 成功解释了自发辐射和真空拉比振荡等现象，但由于做了旋转波近似，它仍然不能解释兰姆位移等现象。另外，如今人们已经能在 Circuit QED 系统中实现强耦合，而当耦合非常强的时候，旋转波近似会失效，此时 JCM 与实验结果有较大的偏差。可见，在一些情况下，人们仍然需要 QRM。</p>
+<p>令人惊讶的是，QRM 的解析解直到 2011 年才被发现 [1]。自那以后，人们对各种推广量子拉比模型解析解也开始感兴趣，例如推广到多原子（Dicke 模型）和多光场模式的情形。</p>
+<p>本文将推导 QRM 的解析解，结构如下：</p>
+<p>第二节：介绍 QRM 和 JCM 的哈密顿量</p>
+<p>第三节：简要推导 JCM 的解析解</p>
+<p>第四节：推导 QRM 的解析解</p>
+<p>第五节：介绍 JCM 和 QRM 的守恒量与对称性</p>
+<h2 id="2-qrm-和-jcm-的哈密顿量">2. QRM 和 JCM 的哈密顿量</h2>
+<p>量子拉比模型（QRM）描述了一个单模光场和二能级系统的相互作用。</p>
+<p>记单模光场的希尔伯特空间为 $\mathcal{H} \cong L^{2}(\mathbb{R})$ ，二能级系统的希尔伯特空间为 $\mathcal{K} \cong \mathbb{C}^2$ ，则 QRM 的哈密顿量 $H\in \mathcal{L}(\mathcal{H}\otimes \mathcal{K})$ 如下：</p>
+<p>$\begin{aligned} H&amp;= \underbrace{\omega \left(a^\dag a+\frac{1}{2}\right)}_{\text{field}}+ \underbrace{ \frac{\Delta}{2} \sigma_z}_{\text{atom}} +  \underbrace{g\sigma_x(a+a^\dag)}_{\text{atom-field coupling}} \\&amp;= \underbrace{\omega \left(a^\dag a+\frac{1}{2}\right)}_{\text{field}}+ \underbrace{ \frac{\Delta}{2} \sigma_z}_{\text{atom}} +  \underbrace{g(\sigma_++\sigma_-)(a+a^\dag)}_{\text{atom-field coupling}} \end{aligned}$</p>
+<p>其中 $a^\dag , a$ 是 $\mathcal{H} $ 上的产生和湮灭算符， $\sigma_z, \sigma_{\pm}$ 是 $\mathcal{K}$ 上的泡利 Z 算符和升降算符。 $g$ 叫做拉比频率，它衡量了光场与二能级系统之间的耦合强度。</p>
+<p>如果将其中能量差较大的项 $\sigma_- a$ 和 $\sigma_+ a^\dag$ 去掉，我们就得到了 Jaynes-Cummings 模型（JCM）的哈密顿量：</p>
+<p>$\begin{aligned} H&amp;= \underbrace{\omega \left(a^\dag a+\frac{1}{2}\right)}_{\text{field}}+ \underbrace{ \frac{\Delta}{2} \sigma_z}_{\text{atom}} +  \underbrace{g(\sigma_+ a + \sigma_- a^{\dag})}_{\text{atom-field coupling}}\end{aligned}$</p>
+<p>这就是旋转波近似。被去掉的项叫做逆时针旋转项（Counter-Rotating Terms），留下来的项叫做顺时针旋转项（Co-rotating Terms）。</p>
+<blockquote>
+<p>旋转波近似之所以合理，是因为逆时针旋转项涉及的两个能级的能量差为 $\omega + \Delta$ ，远大于顺时针旋转项的能量差 $|\omega - \Delta|$ 。前者涉及的指数因子为 $e^{\pm\mathrm{i} (\omega + \Delta) t}$ ，后者为 $e^{\pm\mathrm{i}(\omega-\Delta)}t$ 。由于 $e^{\pm\mathrm{i} (\omega + \Delta) t}$ 变化太快，可以视作平均为零而消掉。</p>
+<p>另外，从微扰计算也可以看出这一点：做微扰计算后得到的项会正比于能量差的倒数，前者为 $\frac{1}{\omega +\Delta}$ ，后者为 $\frac{1}{|\omega - \Delta|}$ 。而 $\frac{1}{\omega + \Delta}$ 远小于 $\frac{1}{|\omega - \Delta|}$ ，因此可以将前者忽略掉。</p>
+</blockquote>
+<h2 id="2-jcm-的解析解">2. JCM 的解析解</h2>
+<p>我们可以将 $H$ 在光子数表象下展开：</p>
+<p>$\begin{aligned} H &amp;= \color{gray}{ \begin{matrix} |g,0\rangle \\ |e,0\rangle \\ |g,1\rangle \\ |e,1\rangle \\ |g,2\rangle \\ \vdots \end{matrix} } \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 3 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 3&amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 5&amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix} \frac{\omega}{2}+\begin{bmatrix} -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1 &amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix} \frac{\Delta}{2} +\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; \sqrt{2} &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; \sqrt{2} &amp; 0 &amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix} g \end{aligned} $</p>
+<p>其中 $g,e$ 分别代表二能级系统的基态和激发态， $0,1,2,\cdots$ 代表光场的激发数（即光子数）。</p>
+<p>它可以进一步写成：</p>
+<p>$\begin{aligned} H = \bigoplus_{n=1}^\infty  \begin{bmatrix} n\omega+\frac{\Delta}{2} &amp; g\sqrt{n} \\ g\sqrt{n} &amp; (n+1)\omega -\frac{\Delta}{2} \end{bmatrix} \end{aligned}$</p>
+<p>其中 $n$ 代表总激发数，即二能级系统激发数和光场激发数（即光子数）的总和。</p>
+<p>这个矩阵显然可以精确对角化，特征值为 $\left(n+ \frac{1}{2}\right)\omega \pm \sqrt{\left(\frac{\omega - \Delta}{2}\right)^2 + ng^2}$ 。记 $\Delta_n =  \sqrt{\left(\frac{\omega - \Delta}{2}\right)^2 + ng^2}$，则能级就是 $E_{\pm,n} =   \left(n + \frac{1}{2}\right)\omega \pm \frac{\Delta_n}{2}$ 。</p>
+<p>这些能级上的本征态叫做缀饰态（dressed state）：</p>
+<p>$\begin{aligned} |-,n\rangle &amp;= \cos \theta_n |e,n-1\rangle - \sin \theta_n |g,n\rangle \\ |+,n\rangle &amp;= \sin \theta_n |e,n-1\rangle + \cos \theta_n |g,n\rangle  \end{aligned}$</p>
+<p>其中</p>
+<p>$\begin{aligned} \cos \theta_n &amp;= \frac{2\sqrt{n}g}{\sqrt{(\Delta_n-\Delta_0)^2 + 4ng^2}} \\ \sin \theta_n &amp;= \frac{\Delta_n-\Delta_0}{\sqrt{(\Delta_n-\Delta_0)^2 + 4ng^2}} \end{aligned}$</p>
+<p>且 $\Delta _0 := \Delta - \omega$ 。</p>
+<h2 id="4-qrm-的解析解">4. QRM 的解析解</h2>
+<p>接下来我们按照 2012 年的一篇文献的方法[#ref\\_2](#ref\\_2)推导 QRM 的解析解。较于 2011 年文献[#ref\\_1](#ref\\_1)的最早方法，它更加适合物理学工作者而不是数学工作者。</p>
+<p>我们把 QRM 哈密顿量在基 ${|+\rangle, |-\rangle} =\left{\frac{|e\rangle + |g\rangle}{\sqrt{2}} ,\frac{|e\rangle - |g\rangle}{\sqrt{2}}\right}$ 下展开得：</p>
+<p>$H =  \begin{bmatrix} \omega a^\dag a + g(a+a^\dag) &amp; \Delta/2 \\ \Delta/2 &amp; \omega a^\dag a + g(a-a^\dag) \end{bmatrix}$</p>
+<blockquote>
+<p>可以验证 $H = [\omega a^\dag a + g(a+a^\dag)] |+\rangle\langle+| + [\omega a^\dag a - g(a+a^\dag)] |-\rangle\langle-|  + \frac{\Delta}{2}(|+\rangle\langle-| + |-\rangle\langle+|)$</p>
+</blockquote>
+<p>做 Bogoliubov 变换 $A = a +g/\omega,,B=a-g/\omega$ ，并且定义 Extended Fock states：</p>
+<p>$|0\rangle_A=e^{-\frac{g}{\omega}(a^\dag - a)} |0\rangle = |\frac{-\omega}{g}\rangle$</p>
+<p>$|n\rangle_A = \frac{A^{\dag n}}{\sqrt{n!}} |0\rangle_A$</p>
+<p>注意到 $|0\rangle_A$ 是一个参数为 $-\frac{\omega}{g}$ 的相干态。</p>
+<p>可以验证 $[A,A^\dag]=1$ ，因此对于普通 Fock states 成立的关系对于 Extended Fock states 也成立：</p>
+<p>$A|n\rangle_A = \sqrt{n} |n-1\rangle_A$</p>
+<p>$A^\dag |n\rangle_A = \sqrt{n+1} |n + 1\rangle_A$</p>
+<p>此时有</p>
+<p>$H =  \begin{bmatrix} \omega A^\dag A - g^2 /\omega&amp; \Delta/2 \\ \Delta/2 &amp; \omega A^\dag A - 2g(A+A^\dag) + 3g^2/\omega \end{bmatrix}$</p>
+<p>设本征态为：</p>
+<p>$|\psi\rangle=\begin{bmatrix} \sum \sqrt{n!} e_n |n\rangle_A \\ \sum \sqrt{n!} f_n |n\rangle_A \end{bmatrix}$</p>
+<p>代入 $H|\psi\rangle = E|\psi\rangle$ 得：</p>
+<p>$\begin{cases} e_n = -\frac{\Delta/2}{ n\omega -g^2/\omega - E} f_n \\ nf_n = \Omega(n-1) f_{n-1} - f_{n-2} \end{cases}$</p>
+<p>其中 $\Omega(n) = \frac{2g}{\omega}+\frac{1}{2g}\left[ n\omega - g^2/\omega -E - \frac{(\Delta/2)^2}{n\omega  - g^2/\omega - E}\right]$</p>
+<p>同理，哈密顿量也可以写成：</p>
+<p>$H =  \begin{bmatrix} \omega B^\dag B -2g(B + B^\dag) + 3g^2 &amp; \Delta/2 \\ \Delta/2 &amp; \omega  B^\dag B - g^2/\omega \end{bmatrix}$</p>
+<p>设本征态为</p>
+<p>$|\psi^\prime\rangle=\begin{bmatrix} \sum \sqrt{n!} (-1)^nf_n^\prime |n\rangle_B \\ \sum \sqrt{n!} (-1)^ne_n^\prime |n\rangle_B \end{bmatrix}$</p>
+<p>代入 $H|\psi\rangle = E|\psi\rangle$ 得：</p>
+<p>$\begin{cases} e_n^\prime = -\frac{\Delta/2}{n\omega - g^2/\omega -E} f^\prime_n \\ nf^\prime_n  = \Omega(n-1)f^\prime_{n-1} - f_{n-2} \end{cases}$</p>
+<p>可见 $f_n$ 和 $f_n^\prime$ 以及 $e_n$ 和 $e_n^\prime$ 都满足相同的递归关系。令 $f_0 = f_0^\prime = 1$ ，则 $f_n = f_n^\prime$ ， $e_n = e_n^\prime$ 。</p>
+<p>由于两个本征态 $|\psi \rangle, |\psi^\prime\rangle$ 之间必须成比例 $|\psi^\prime\rangle = \kappa |\psi\rangle$ ，其中 $\kappa \in \mathbb{C}$ ，于是有：</p>
+<p>$\begin{cases} \sum \sqrt{n!} (-1)^nf_n |n\rangle_B = \kappa \sum \sqrt{n!} e_n |n\rangle_A \\ \sum \sqrt{n!} (-1)^ne_n |n\rangle_B = \kappa\sum \sqrt{n!} f_n |n\rangle_A \end{cases}$</p>
+<p>两边同时左乘真空态 $\langle0|$ ，由于</p>
+<p>$\begin{aligned} \sqrt{n!}\langle 0 | n\rangle_A &amp;= \langle 0 |A^{\dag n}|0\rangle_A \\&amp;= \langle 0|(a+\lambda)^\dag | 0 \rangle_A \\&amp;= \lambda^n\langle 0|0\rangle_A \\&amp;= \lambda^n e^{-\lambda^2/2} \end{aligned}$</p>
+<p>$\sqrt{n!} \langle 0|n\rangle_B = (-\lambda)^n e^{-\lambda^2/2}$</p>
+<p>其中 $\lambda = g/\omega$ 。</p>
+<p>于是：</p>
+<p>$\begin{cases} \sum \lambda^n e^{-\lambda^2/2} f_n = \kappa \sum \lambda^n e^{-\lambda^2/2} e_n \\ \sum\lambda^n e^{-\lambda^2/2}e_n  = \kappa\sum \lambda^n e^{-\lambda^2/2} f_n  \end{cases}$</p>
+<p>$\Rightarrow \left(\sum \lambda^n e^{-\lambda^2/2} f_n\right)^2 = \left(\sum\lambda^n e^{-\lambda^2/2} e_n \right)^2 $</p>
+<p>$\Rightarrow \sum \lambda^n e^{-\lambda^2/2} (f_n \pm e_n )= 0$</p>
+<p>$\begin{aligned} \Rightarrow \sum \lambda^n e^{-\lambda^2/2} f_n \left(1\pm \frac{\Delta/2}{n\omega - g\lambda -E}\right) = 0 \end{aligned}$</p>
+<p>令 $G_{\pm}(x) = \sum f_n \lambda^n \left(1\mp \frac{\Delta}{2\omega(x+\lambda^2-n)}\right)$ ，它是一个超越函数。</p>
+<p>可见 $G_{\pm}(x) $ 的零点就是本征态能级（单位为 $ \omega$）。</p>
+<p>本征态为：</p>
+<p>$\begin{aligned} &amp;\phantom{=}\sum_n\left[ \sqrt{n!} f_n |n\rangle_B \otimes \frac{|e\rangle + |g\rangle}{\sqrt{2}} + \sqrt{n!} e_n |n\rangle_B \otimes \frac{|e\rangle - |g\rangle}{\sqrt{2}}\right]  \\&amp;=\sum_n \left[ \sqrt{n!/2} (f_n - e_n)\right] |n\rangle_B \otimes |g\rangle + \sum_n \left[ \sqrt{n!/2} (f_n + e_n)\right] |n\rangle_B \otimes |e\rangle \\&amp;=\sum_n \left[ \sqrt{\frac{n!}{2}} f_n \left(1 - \frac{\Delta/2}{n\omega - g\lambda -E}\right)\right] |n\rangle_B \otimes |g\rangle + \sum_n \left[ \sqrt{\frac{n!}{2}} f_n \left(1 + \frac{\Delta/2}{n\omega - g\lambda - E}\right) \right] |n\rangle_B \otimes |e\rangle \end{aligned}$</p>
+<p>到此为止，我们就得到了 QRM 哈密顿量的能级和本征态的解析解。</p>
+<p>从图中可以看到，当耦合系数增加时，基态与第一激发态的能级差会降低，这就是兰姆位移。不过我们一般说的兰姆位移是原子与多个模式的真空光场相互作用，而非此处所说的单模光场。</p>
+<p>另外，可以看到，随着耦合系数的增加，在 JCM 下本来会相交的能级，在 QRM 下则不会相交，而是先靠近再远离。这就是所谓的 avoided crossing。</p>
+<h2 id="5-守恒量与对称性">5. 守恒量与对称性</h2>
+<p>JCM 有守恒量 $N = a^\dag a+\sigma_+\sigma_- = a^\dag a + (\mathbb{I} + \sigma_z)/2$ ，其本征值为 $n=0,1,2,\cdots$ ， $N|\pm,n\rangle = \left(n + \frac{1\pm 1}{2}\right)|\pm,n\rangle$ 。这个守恒量的物理意义就是激发数的总和。</p>
+<p>守恒量 $N$ 可以生成连续的 $U(1)$ 对称性。这是因为 $[N,H] = 0 \Rightarrow [e^{-\mathrm{i\theta}N},H]=0$ 。也就是说当我们做如下变换之后，哈密顿量不变：</p>
+<p>$a \rightarrow e^{-\mathrm{i}\theta N} a e^{\mathrm{i}\theta N} = a e^{-\mathrm{i}\theta}$</p>
+<p>$a^\dag   \rightarrow e^{-\mathrm{i}\theta N} a^\dag e^{\mathrm{i}\theta N} = a^\dag e^{\mathrm{i}\theta}$</p>
+<p>$\sigma_{\pm} \rightarrow e^{-\mathrm{i}\theta N} \sigma_{\pm} e^{\mathrm{i}\theta N} = \sigma_\pm e^{\pm\mathrm{i}\theta}$</p>
+<p>而 QRM 的守恒量是 $\Pi = e^{-\mathrm{i}\pi N} = -\sigma_+\sigma_- \otimes e^{\mathrm{i}\pi a^\dag a}$ ，其本征值为 $\pm 1$ ， $\Pi |\pm,n\rangle = \mp (-1)^n |\pm,n\rangle$ 。</p>
+<p>QRM 虽然失去了 $U(1)$ 对称性，但是仍有离散的 $Z_2$ 对称性，这是因为 $[\Pi,H]=0$ 使得当我们做如下变换之后，哈密顿量不变：</p>
+<p>$a \rightarrow \Pi a \Pi^\dag = -a$</p>
+<p>$a^\dag \rightarrow \Pi a^\dag \Pi^\dag = -a^\dag$</p>
+<p>$\sigma_\pm \rightarrow \Pi \sigma_\pm \Pi^\dag = -\sigma_\pm$</p>
+<p>$Z_2$ 对称性可以看作是 $U(1)$ 对称性从 $\theta \in [0,2\pi)$ 破缺到 $\theta \in {0,\pi}$ 。这一点也可以形象地从哈密顿量中看出来：JCM 只有顺时针旋转项，因此有连续的 $U(1)$ 对称性，而 QRM 既有顺时针旋转项又有逆时针旋转项，这两个项只能在 $\theta \in {0,\pi}$ 处汇合，因此只有离散的 $Z_2$ 对称性。</p>
+<h2 id="参考">参考</h2>
+<ol>
+<li>Braak, D. Integrability of the Rabi Model. Phys. Rev. Lett. 2011, 107 (10), 100401. [https://doi.org/10.1103/PhysRevLett.107.100401](<a href="https://doi.org/10.1103/PhysRevLett.107.100401" target="_blank" rel="noopener noreffer ">https://doi.org/10.1103/PhysRevLett.107.100401</a>)</li>
+<li>Chen, Q.-H.; Wang, C.; He, S.; Liu, T.; Wang, K.-L. Exact Solvability of the Quantum Rabi Model Using Bogoliubov Operators. Phys. Rev. A 2012, 86 (2), 023822. <a href="https://doi.org/10.1103/PhysRevA.86.023822" target="_blank" rel="noopener noreffer ">https://doi.org/10.1103/PhysRevA.86.023822</a></li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-07-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/rabi/" data-title="再见了旋转波近似：量子拉比模型的解析解" data-hashtags="量子光学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/rabi/" data-hashtag="量子光学"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/rabi/" data-title="再见了旋转波近似：量子拉比模型的解析解"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/rabi/" data-title="再见了旋转波近似：量子拉比模型的解析解"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/rabi/" data-title="再见了旋转波近似：量子拉比模型的解析解"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/">量子光学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/laser_quantum2/" class="prev" rel="prev" title="激光的全量子理论"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>激光的全量子理论</a>
+            <a href="/thermal_exponential_dist/" class="next" rel="next" title="为什么热光场的光强服从指数分布？">为什么热光场的光强服从指数分布？<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <span id="busuanzi_container_site_pv">
+                Visited: <span id="busuanzi_value_site_pv"></span> times
+            </span>
+            &nbsp;|&nbsp;
+            <span id="busuanzi_container_site_uv">
+                You are the <span id="busuanzi_value_site_uv"></span> th visiter
+            </span><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI","appKey":"dv86fnCL7DsYQl47DmJm7mHg","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://mukjinfv.api.lncldglobal.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

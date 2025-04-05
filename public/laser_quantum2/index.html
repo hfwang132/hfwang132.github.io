@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>激光的全量子理论 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/laser_quantum2/">
+  <meta property="og:site_name" content="Haifei&#39;s Home">
+  <meta property="og:title" content="激光的全量子理论">
+  <meta property="og:description" content="大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？
+本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-19T01:07:36+08:00">
+    <meta property="article:modified_time" content="2024-07-19T01:07:36+08:00">
+    <meta property="article:tag" content="量子光学">
+    <meta property="og:image" content="http://example.com/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://example.com/logo.png">
+  <meta name="twitter:title" content="激光的全量子理论">
+  <meta name="twitter:description" content="大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？
+本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。">
+<meta name="application-name" content="Haifei&#39;s Home">
+<meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/laser_quantum2/" /><link rel="prev" href="http://example.com/spdc_optical_amp/" /><link rel="next" href="http://example.com/rabi/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "激光的全量子理论",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.com\/laser_quantum2\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "量子光学","wordcount":  4514 ,
+        "url": "http:\/\/example.com\/laser_quantum2\/","datePublished": "2024-07-19T01:07:36+08:00","dateModified": "2024-07-19T01:07:36+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/example.com\/images\/avatar.png",
+                    "width":  1400 ,
+                    "height":  1400 
+                }},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 博客 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/cv/"> 简历 </a><a class="menu-item" href="/publication/"> 发表 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/laser_quantum2/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">博客</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/cv/" title="">简历</a><a class="menu-item" href="/publication/" title="">发表</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/laser_quantum2/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">激光的全量子理论</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-19">2024-07-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 4514 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 10 分钟&nbsp;<span id="/laser_quantum2/" class="leancloud_visitors" data-flag-title="激光的全量子理论">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-jaynes-cummings-模型jcm">1. Jaynes-Cummings 模型（JCM）</a>
+      <ul>
+        <li><a href="#11-jcm-的对角化">1.1 JCM 的对角化</a></li>
+        <li><a href="#12-jcm-下的光场演化">1.2 JCM 下的光场演化</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-lindblad-主方程">2. Lindblad 主方程</a></li>
+    <li><a href="#3-scully-lamb-激光理论">3. Scully-Lamb 激光理论</a>
+      <ul>
+        <li><a href="#31-时间尺度分析">3.1 时间尺度分析</a></li>
+        <li><a href="#32-随机矩阵理论">3.2 随机矩阵理论</a></li>
+        <li><a href="#33-结果分析光子数分布">3.3 结果分析：光子数分布</a></li>
+        <li><a href="#34-结果分析自然线宽">3.4 结果分析：自然线宽</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？</p>
+</blockquote>
+<p>本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。</p>
+<p>Scully-Lamb 理论对泵浦强度低于或接近阈值时的光子数分布作出了更准确的预言，这是（半）经典理论所做不到的。</p>
+<p>本文结构如下：</p>
+<p>第一节介绍 Jaynes-Cummings 模型，它负责处理光场与二能级系统的相互作用。</p>
+<p>第二节介绍 Lindblad 主方程，它负责处理光场与热库的相互作用。</p>
+<p>第三节推导 Scully-Lamb 理论。它无非就是 Jaynes-Cummings 模型和 Lindblad 主方程共同作用的结果。</p>
+<p>为简明起见，本文设置 $\hbar = 1$ 。</p>
+<h2 id="1-jaynes-cummings-模型jcm">1. Jaynes-Cummings 模型（JCM）</h2>
+<p>（熟悉 JCM 的可以跳过这一节）</p>
+<blockquote>
+<p>JCM 描述的是一个单模光场与一个二能级系统的耦合，由于它将光场也量子化了，因此是一个全量子模型。</p>
+<p>除了光场量子化，JCM 还做了偶极矩近似（Dipole Approximation）和旋转波近似（Rotating-Wave Approximation，RWA），以便于求解。这个过程不在本文介绍的范围内，请有兴趣的读者自行参阅教材和互联网资料。</p>
+</blockquote>
+<p>记单模光场的希尔伯特空间为 $\mathcal{H} \cong L^{2}(\mathbb{R})$ ，二能级系统的希尔伯特空间为 $\mathcal{K} \cong \mathbb{C}^2$ ，则 Jaynes-Cumming 哈密顿量 $H \in \mathcal{L}(\mathcal{H}\otimes \mathcal{K})$ 如下：</p>
+<p>$\begin{aligned} H&amp;= \underbrace{\omega \left(a^\dag a+\frac{1}{2}\right)}_{\text{field}}+ \underbrace{\omega_a \frac{\sigma_z}{2}}_{\text{atom}} +  \underbrace{\Omega(\sigma_+ a + \sigma_- a^{\dag})}_{\text{atom-field coupling}} \\ &amp;= \underbrace{\omega \left(a^\dag a+\frac{1}{2}+\frac{\sigma_z}{2}\right)}_{H_0} + \underbrace{\frac{\Delta}{2} \sigma_z + \Omega(\sigma_+ a + \sigma_- a^{\dag})}_{H_\text{I}} \end{aligned}$</p>
+<p>其中 $a^\dag , a$ 是 $\mathcal{H}$ 上的产生和湮灭算符， $\sigma_z, \sigma_{\pm}$ 是 $\mathcal{K}$ 上的泡利 Z 算符和升降算符。 $\Omega$ 叫做拉比频率，它衡量了光场与二能级系统之间的耦合强度。</p>
+<h3 id="11-jcm-的对角化">1.1 JCM 的对角化</h3>
+<p>由于 $H_0$ 只有对角项，我们可以从解中将它分离出来：令 $|\psi\rangle = e^{-\mathrm{i}H_0t} |\psi_\text{I}\rangle$ ，则有 $\mathrm{i} \frac{\mathrm{d}}{\mathrm{d}t}|\psi_\text{I}\rangle = H_\text{I}|\psi_\text{I}\rangle$ 。因此我们只需要研究 $H_\text{I}$ 即可。这个方法叫做相互作用表象（Interaction Picture）。</p>
+<p>我们可以将 $H_\text{I}$ 在光子数表象下展开：</p>
+<p>$\begin{aligned} H_\text{I} &amp;= \color{gray}{  \begin{matrix} |g,0\rangle \\ |e,0\rangle \\ |g,1\rangle \\ |e,1\rangle \\ |g,2\rangle \\ \vdots \end{matrix} } \begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; \sqrt{2} &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; \sqrt{2} &amp; 0 &amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix}\Omega+ \begin{bmatrix} -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1 &amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix} \frac{\Delta}{2} \end{aligned} $</p>
+<p>其中 $g,e$ 分别代表二能级系统的基态和激发态， $0,1,2,\cdots$ 代表光场的激发数（即光子数）。</p>
+<p>它可以进一步写成：</p>
+<p>$\begin{aligned} H_\text{I} = \bigoplus_{n=1}^\infty  \begin{bmatrix} \frac{\Delta}{2} &amp; \Omega\sqrt{n} \\ \Omega\sqrt{n} &amp; -\frac{\Delta}{2} \end{bmatrix} \end{aligned}$</p>
+<p>其中 $n$ 代表总激发数，即二能级系统激发数和光场激发数（即光子数）的总和。</p>
+<p>这个矩阵显然可以精确对角化，特征值为 $\pm \sqrt{\left(\frac{\Delta}{2}\right)^2 + n\Omega^2}$ 。记 $\Delta_n =  \sqrt{\Delta^2 + 4n\Omega^2}$，则原表象（非相互作用表象）下的能级就是 $E_{\pm,n} =  \omega \left(n + \frac{1}{2}\right) \pm \frac{\Delta_n}{2}$ 。</p>
+<p>这些能级上的本征态叫做缀饰态（dressed state）：</p>
+<p>$\begin{aligned} |-,n\rangle &amp;= \cos \theta_n |e,n-1\rangle - \sin \theta_n |g,n\rangle \\ |+,n\rangle &amp;= \sin \theta_n |e,n-1\rangle + \cos \theta_n |g,n\rangle  \end{aligned}$</p>
+<p>其中</p>
+<p>$\begin{aligned} \cos \theta_n &amp;= \frac{2\sqrt{n}\Omega}{\sqrt{(\Delta_n-\Delta)^2 + 4n\Omega^2}} \\ \sin \theta_n &amp;= \frac{\Delta_n-\Delta}{\sqrt{(\Delta_n-\Delta)^2 + 4n\Omega^2} }\end{aligned}$</p>
+<h3 id="12-jcm-下的光场演化">1.2 JCM 下的光场演化</h3>
+<p>由于我们最终只关心光场的量子态，我们会对原子部分取偏迹。设原子初态为 $|e\rangle\langle e|$ ，则经过时间 $\tau$ ，光场演化为</p>
+<p>$\rho \rightarrow F(\tau) \rho := \text{tr}_\text{a}[e^{-\mathrm{i}H \tau} (|e\rangle\langle e|\otimes \rho) e^{\mathrm{i}H\tau}]$</p>
+<p>其中 $H$ 是 JCM 哈密顿量， $\text{tr}_\text{a}$ 表示对原子系统取偏迹。</p>
+<p>我们先来考察 $|n\rangle$ 经过 $F(\tau)$ 如何演化，即计算 $F(\tau)(|n\rangle\langle n|)$ ：</p>
+<p>$\begin{aligned} |e,n\rangle &amp;= \cos \theta_n | -,n+1\rangle + \sin \theta_n |+,n+1\rangle \\  e^{-\mathrm{i}H\tau} |e,n\rangle &amp;= \cos \theta_n e^{-\mathrm{i} \frac{\Delta_{n+1}}{2}\tau} |-,n+1\rangle +  \sin \theta_n e^{\mathrm{i} \frac{\Delta_{n+1}}{2}\tau}|+,n+1\rangle \\ &amp;= \cos \theta_n e^{-\mathrm{i} \frac{\Delta_{n+1}}{2}\tau}  (\cos \theta_n |e,n\rangle - \sin \theta_n |g,n + 1\rangle)\\&amp;\phantom{=}+  \sin \theta_n e^{\mathrm{i} \frac{\Delta_{n+1}}{2}\tau}(\sin \theta_n |e,n\rangle + \cos \theta_n |g,n+1\rangle)  \\ &amp;= C_{e,n} |e,n\rangle + C_{g, n+1} | g, n+1\rangle \\  \text{tr}_\text{atom}[e^{-\mathrm{i}H\tau}|e,n\rangle\langle e,n|e^{\mathrm{i}H\tau}] &amp;=|C_{e,n}|^2 |n\rangle\langle n| + |C_{g,n+1}|^2 |n+1\rangle\langle n+1| \end{aligned}$</p>
+<p>其中</p>
+<p>$\begin{aligned} C_{e,n} &amp;= \cos(\Delta_{n+1} \tau /2) + \mathrm{i} \cos(2\theta_n)\sin(\Delta_{n+1} \tau/2)\\ C_{g,n+1} &amp;= \mathrm{i} \sin (2\theta_n) \sin (\Delta_{n+1} \tau/2) \end{aligned}$</p>
+<p>假设光场的初态是一个光子数混态 $\rho = \sum_n p_n |n\rangle\langle n|$ ，则有</p>
+<p>$\begin{aligned} F(\tau) \rho &amp;= \sum_n p_n F(\tau)(|n\rangle\langle n|)\\ &amp;= \sum_n p_n [|C_{e,n}|^2 |n\rangle\langle n | + |C_{g,n+1}|^2 |n+1\rangle\langle n+1|] \\ &amp;= \sum_n p_n |C_{e,n}|^2 |n\rangle\langle n | + \sum_{n=1} p_{n-1} |C_{g,n}|^2 |n\rangle\langle n| \end{aligned}$</p>
+<p>于是新的 $p_n^\prime = \langle n|F(\tau) \rho |n\rangle$ 为</p>
+<p>$\begin{aligned} \langle n|F(\tau) \rho |n\rangle &amp;= |C_{e,n}|^2 p_n + |C_{g,n}|^2 p_{n-1} \\ &amp;=: (1-C_n) p_n + C_{n-1} p_{n-1} \end{aligned}$</p>
+<p>其中 $C_n := |C_{g,n+1}|^2 \Rightarrow 1-C_n = |C_{e,n}|^2$ 。</p>
+<p>$\langle n|F(\tau) \rho |n\rangle$ 的表达式我们之后会用到。</p>
+<p>另外还有 $C_{n-1} = |C_{g,n}|^2=\sin^2 (2\theta_n) \sin^2 \left(\frac{\Delta_{n}}{2} \tau\right) = \frac{4n\Omega^2}{4n\Omega^2+\Delta_n^2} \sin^2 \left(\frac{\Delta_{n}}{2}  \tau\right)$ ，这个结果之后也有用。</p>
+<blockquote>
+<p>总结：本节求出了 Jaynes-Cummings 模型的解析解。给定一个二能级原子与光场的耦合系统，其初态为 $\rho$ ，我们可以求出以后任意时刻的状态 $F(\tau) \rho$ 。特别地，我们写出了光场密度矩阵的对角项 $\langle n|F(\tau) \rho |n\rangle$ ，也就是演化后的光子数分布。</p>
+</blockquote>
+<h2 id="2-lindblad-主方程">2. Lindblad 主方程</h2>
+<p>对于封闭系统而言，量子态 $\rho$ 的演化遵循海森堡方程： $\frac{\mathrm{d}}{\mathrm{d}t} \rho = -\mathrm{i}[H,\rho]$ 。它其实就是薛定谔方程 $\frac{\mathrm{d}}{\mathrm{d}t}|\psi\rangle = -\mathrm{i}H|\psi\rangle$ 的统计叠加。这是一个酉（幺正，Unitary）的过程。</p>
+<p>对于开放系统而言，量子态 $\rho$ 的演化不再是一个酉过程。当环境足够大以至于没有记忆性时，即当环境满足马尔科夫（Markovian）近似时，量子态的演化是一个保迹（trace preserving）且保完全正（complete positive）的量子通道（quantum channel）。可以证明此时 $\frac{\mathrm{d}}{\mathrm{d}t} \rho$ 的一般形式为：</p>
+<p>$\begin{aligned} \frac{\mathrm{d}}{\mathrm{d}t} \rho = \mathcal{L}[\rho]= -\mathrm{i}[H,\rho] - \sum_k \gamma_k \left(\frac{1}{2} L_k^\dag L_k \rho - L_k \rho L_k^\dag + \frac{1}{2} \rho L_k^\dag L_k\right) \end{aligned}$</p>
+<blockquote>
+<p>显然 $\frac{\mathrm{d}}{\mathrm{d} t} \text{tr}[\rho]=0$ ，所以它是保迹的。</p>
+</blockquote>
+<p>这就是 Lindblad 主方程，其中 $\mathcal{L}$ 叫做 Lindbladian，可以看作 Hamiltonian 在开放系统下的推广。</p>
+<blockquote>
+<p>有时它也叫 Liouvillian，但是 Liouvillian 更加 general 一些，例如它没有 complete positivity 的要求。</p>
+<p>Liouvillian 是哦系上指的是超算符 $\mathcal{B}(\mathcal{B}(\mathcal{H}))$ ，其中 $\mathcal{B}(\cdot)$ 代表 $\cdot$ 上的所有线性算符。超算符就是“算符的算符”。</p>
+<p>在文献中，Liouvillian 和 Lindbladian 有时会混用。</p>
+</blockquote>
+<p>当光场与一个平均光子数为 $\lambda$ 的热库耦合时，它遵循的 Lindblad 主方程为：</p>
+<p>$\begin{aligned} \dot{\rho}=\mathcal{L}[\rho] = -\frac{\omega}{2Q}(\lambda +1)&amp;(a^\dag a \rho - 2 a \rho a^\dag + \rho a^\dag a) \\ - \frac{\omega}{2Q}\lambda &amp;(a a^\dag \rho - 2a^\dag \rho a+\rho a a^\dag) \end{aligned}$</p>
+<p>在光学波段，由黑体辐射可知 $\lambda \approx 0$ ，则上式简化为：</p>
+<p>$\begin{aligned} \dot{\rho}=\mathcal{L}[\rho] = -\frac{\omega}{2Q}&amp;(a^\dag a \rho - 2 a \rho a^\dag + \rho a^\dag a) \end{aligned}$</p>
+<p>它的对角项为</p>
+<p>$\dot{p}_n=\langle n | \mathcal{L}[\rho] | n \rangle = -\frac{\omega}{Q}(np_n - (n+1)p_{n+1}) $</p>
+<p>该式的物理意义十分明显：能级 $|n\rangle\langle n|$ 弛豫到 $|n - 1\rangle\langle n -1|$ 的概率正比于 $np_n$ 。</p>
+<h2 id="3-scully-lamb-激光理论">3. Scully-Lamb 激光理论</h2>
+<p>利用上述的 JCM 和 Lindbladian，我们就可以用全量子方式处理激光系统。</p>
+<blockquote>
+<p>激光中有很多个原子，为什么不用多原子的 TCM（Tavis-Cummings 模型），而是用单原子的 JCM？这是因为 TCM 是用来描述原子的集体行为的：当波长处于微波范围时，由于波长和共振腔的长度相近，所有原子会感受到同一个电磁场，这会导致超辐射（Superradiance）等现象。但是在光学波段（$10^{14} \sim 10^{15} \text{Hz}$）内，共振腔的长度远大于相干长度，使得各个原子独立地与光场进行相互作用。此时使用单原子的 JCM 就足够了，我们只要把 JCM 的解对于各个原子作平均即可。</p>
+</blockquote>
+<p>在激光中有两个主要的物理过程：一是 JCM Hamiltonian 所描述的受激辐射过程，二是 Lindbladian 所描述的弛豫过程。我们只要把这两个过程结合起来就可以得到光场 $\rho$ 的演化方程：</p>
+<p>$\dot{\rho} = -\mathrm{i},\text{tr}_\text{a}[H,\rho_\text{af}] + \mathcal{L}[\rho]$</p>
+<p>其中 $H$ 是 JCM 哈密顿量， $\rho_\text{af}$ 是原子和光场的整体量子态， $\text{tr}_\text{a}$ 表示对原子系统取偏迹。</p>
+<p>直接计算该方程[1]当然可以给出结果，但为了简化计算[2]，我们可以先考虑这两个过程的相对时间尺度。</p>
+<h3 id="31-时间尺度分析">3.1 时间尺度分析</h3>
+<ol>
+<li>**受激辐射**：上能级和下能级的原子都可以通过自发辐射的方式退激发，平均寿命为纳秒量级（甚至皮秒量级）。即 JCM 所描述的相干过程的持续时间是**纳秒到皮秒**量级。换言之，在光场的演化 $\rho \rightarrow F(\tau) \rho := \text{tr}_\text{a}[e^{-\mathrm{i}H \tau} (|e\rangle\langle e|\otimes \rho) e^{\mathrm{i}H\tau}]$ 中， $\tau$ 的平均值为纳秒到皮秒。</li>
+<li>**弛豫**：光子在腔内来回反射，每次反射有一定概率损失掉。设反射率为 $99.9%$ ，腔长为 30cm，则弛豫特征时间为 $1\text{ns}  \cdot \frac{\log 37 %}{\log 99.9 %} \approx 10^3 \text{ns}$ ，是**微秒**量级。换言之，在光场的演化 $\rho \rightarrow e^{t_p \mathcal{L}} \rho$ 中， $t_p$ 的平均值为微秒。</li>
+</ol>
+<p>可见，Lindbladian 的作用时间远大于 JCM Hamiltonian 的作用时间。因此，我们可以进行**粗粒度**的分析，将两个过程分开讨论。</p>
+<p>记 $\rho(t_{i+1}) = e^{t_p \mathcal{L}} F(\tau) \rho(t_i)$ ，其中 $\tau \ll t_p = t_{i+1} - (t_i + \tau) \approx t_{i+1} - t_i$ 。它表示在 $(t_i,t_i +\tau)$ 这段时间内，光场根据 JCM 演化；在 $(t_i+\tau,t_{i+1})$ 这段时间内，光场根据 Lindbladian 演化。</p>
+<h3 id="32-随机矩阵理论">3.2 随机矩阵理论</h3>
+<p>注意， $t_p$ 和 $\tau$ 都是随机变量，因此我们还要对 $\rho(t_{i+1}) = e^{t_p \mathcal{L}} F(\tau) \rho(t_i)$ 这个式子进行平均操作。</p>
+<blockquote>
+<p>严格处理需要随机矩阵理论，但我们这里可以不用那么关心严格性。</p>
+</blockquote>
+<p>我们先讨论 $t_p$ 和 $\tau$ 所服从的概率分布：</p>
+<ol>
+<li>因为各个原子独立地与泵浦光相互作用，所以原子被泵浦到激发态的时间是完全随机的。这使得单位时间内的激发数服从泊松分布，且相邻两次激发的时间间隔服从指数分布，即 $p(t_p) =R e^{-R t_p}$ ，其中 $R$ 是泵浦速率。</li>
+<li>又因为自发辐射发生的时间也是完全随机的，所以 $\tau$ 也服从指数分布，即 $p(\tau) = \gamma e^{-\gamma \tau}$ ，其中 $\gamma^{-1}$ 是激发态的平均寿命。</li>
+</ol>
+<p>我们先对 $t_p$ 求平均：</p>
+<p>$\begin{aligned} {\rho}(t_{i+1}) &amp;= \left[\int \mathrm{d}t_pe^{-t_pR}e^{t_p \mathcal{L}} \right]F(\tau) \bar{\rho}(t_i) \\ &amp;= \ \frac{R}{R-\mathcal{L}} F(\tau) {\rho}(t_i) \end{aligned}$</p>
+<p>于是稳态解应满足：</p>
+<p>$R[1-F(\tau)] {\rho} = \mathcal{L} \rho$</p>
+<p>我们考虑上式的对角项，并代入第一节和第二节所得到的 $\langle n|F(\tau) \bar\rho | n\rangle$ 和 $\langle n | \mathcal{L} \bar\rho | n \rangle$ ，有：</p>
+<p>$R[C_n p_n - C_{n-1} p_{n-1}] = -\frac{\omega}{Q}(np_n - (n+1)p_{n+1}) $</p>
+<p>记 $S_n = \frac{\omega}{Q}np_n - RC_{n-1} p_{n-1}$ ，则有 $S_n =S_{n+1}$ ，为了使 $p_n$ 收敛，我们需令 $S_n=0$ ，于是有：</p>
+<p>$p_n = \frac{RQ}{n\omega}C_{n-1} p_{n-1} =\frac{RQ}{\omega} \frac{4\Omega^2}{4n\Omega^2+\Delta_n^2} \sin^2 \left(\frac{\Delta_{n}}{2}  \tau\right)p_{n-1} $</p>
+<p>现在我们来对 $\tau$ 求平均</p>
+<p>$\begin{aligned} {p}_n &amp;=\frac{RQ}{\omega} \frac{4\Omega^2}{4n\Omega^2+\Delta_n^2}\left[ \gamma\int\mathrm{d}\tau e^{-\gamma \tau} \sin^2 \left(\frac{\Delta_{n}}{2}  \tau\right) \right] \bar{p}_{n-1} \\ &amp;= \frac{A}{B +k} {p}_{n-1} \end{aligned}$</p>
+<p>其中 $A = \frac{RQ}{2\omega}$ ， $B=\frac{\Delta^2 + \gamma^2}{4\Omega^2}$ 。</p>
+<p>于是 $\begin{aligned} {p}_n = {p}_0 \prod_{k=1}^n\frac{A}{B+k} \end{aligned}$ 。</p>
+<p>在实际激光器中， $\Delta$ 和 $\Omega$ 的数量级接近，都为 MHz。而前面提到过， $\gamma^{-1}$ 的数量级为纳秒到皮秒，即 $\gamma$ 的数量级为 GHz 到 THz，因此 $B$ 是一个数量级为 $10^6 \sim 10^{12}$ 的常数。常数 $A$ 则取决于泵浦强度和共振腔的品质。</p>
+<blockquote>
+<p>我们之所以只求 $\rho$ 的对角项的稳态解，是因为所有非对角项的稳态解都是零。因此当求出 $p_n$ 后，我们就能直接写出量子态为 $\rho = \sum_n p_n |n\rangle\langle n|$ 。</p>
+</blockquote>
+<h3 id="33-结果分析光子数分布">3.3 结果分析：光子数分布</h3>
+<p>当泵浦很弱时， $A\ll B$ ，此时 ${p}_n \approx {p}_0 \left(\frac{A}{B}\right)^n$ ，这是一个温度为 $T=\omega \left[\log\left(\frac{2\omega B}{RQ}\right)\right]^{-1}$ 的热分布。</p>
+<p>当泵浦很强时， $A \gg B$ ，此时 ${p}_n \approx {p}_0 \frac{A^n}{n!}$ ，这是一个泊松分布。此时量子态为：</p>
+<p>$\rho = e^{-A}\sum_k \frac{A^{k}}{k!} |k\rangle\langle k |$</p>
+<p>这是一个平均粒子数为 $A$ 的泊松分布。</p>
+<blockquote>
+<p>在相干态表象下， $\rho$ 可以写成：</p>
+<p>$\rho = \int_0^{2\pi} \frac{\mathrm{d}\theta}{2\pi} |\alpha e^{\mathrm{i}\theta}\rangle\langle\alpha e^{\mathrm{i}\theta}|,\quad A=|\alpha|^2$</p>
+<p>可见它其实是一个相位随机的相干态。相干态 $|\alpha\rangle$ 对应一个振幅和相位都非常确定的经典电磁波，而这里将它的相位从 $0$ 到 $2\pi$ 积分了，这表现了我们对相位信息的无知，这种无知从根本上来源于我们对二能级系统（增益介质）的微观状态的无知。可以说这个 $\rho = \rho_{\text{epistemic}}$ 是认识论的量子态。</p>
+<p>而从本体论的角度而言，系统的量子态应当坍缩为一个有确定相位的 $\rho_{\text{ontic}} = |\alpha\rangle$ ，只是我们没办法知道是哪个相位而已。这是因为在光学频率 $\sim 10^{15} \text{Hz}$ 下，人类无法观测绝对相位。不过，相对相位可以观测，因此我们仍能观察到干涉现象。简单的计算也可以看出这一点：无论是用混态 $\rho = \int_0^{2\pi} \frac{\mathrm{d}\theta}{2\pi} |\alpha e^{\mathrm{i}\theta}\rangle\langle\alpha e^{\mathrm{i}\theta}|$ 还是用纯态 $\rho = |\alpha\rangle\langle \alpha|$ 去计算关联函数 $\langle a^\dag(t)a(0)\rangle = \text{tr}[\rho a^\dag(t)a(0)]$ ，计算结果都不会有任何区别。这一度引起了关于相干现象的讨论：相干到底是一种幻觉，还是一种物理实在？ [3]前者的支持者认为上文的“相位坍缩”诠释存在“preferred basis”的问题，不过这个问题可以认为已经被解决了：相干态是在激光腔开放系统下寿命最长的态。</p>
+</blockquote>
+<p>当泵浦数量级与阈值相当时，有精确解 ${p}_n = p_0 \frac{B! A^n}{(n+B)!}$ 。此时我们来看看它是超泊松还是亚泊松分布。</p>
+<p>$\langle n \rangle = \sum_n np_n = A - B + Bp_0$</p>
+<p>$\langle n^2\rangle = \langle n \rangle^2 + A$</p>
+<p>此时 $g^{(2)}(0) = \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1 + \frac{B(1-p_0)}{[A-B(1-p_0)]^2} &gt; 1$</p>
+<p>可见当泵浦不强时，光子数分布实际上是超泊松分布。当泵浦越来越强时， $g^{(2)}(0) \rightarrow 1$ ，趋于泊松分布。如此精细的预言是半经典理论所做不到的。</p>
+<h3 id="34-结果分析自然线宽">3.4 结果分析：自然线宽</h3>
+<p>在薛定谔表象下，量子态 $\rho$ 的演化为 $\mathrm{d}\rho = -\mathrm{i},\text{tr}_\text{a}[H,\rho_\text{af}]\mathrm{d}\tau+ \mathcal{L}[\rho]\mathrm{d}t_p$ ，而在海森堡表象下，算符的演化就是它的对偶 channel：</p>
+<p>$ \mathrm{d}{R} = \mathrm{i},\text{tr}_\text{a}[H,R]\mathrm{d}\tau + \mathcal{L}^*[R] \mathrm{d}t_p$</p>
+<p>其中 $\begin{aligned} \mathcal{L}^*[R]= -\frac{\omega}{2Q}&amp;(a^\dag a R- 2 a^\dag R a + R a^\dag a) \end{aligned}$ 。</p>
+<p>令 $R = a$ 得：</p>
+<p>$\begin{aligned} \mathrm{d}{a} &amp;= -\mathrm{i} \omega a \mathrm{d}\tau - \frac{\omega}{2Q} a \mathrm{d}t_p \end{aligned}$</p>
+<p>由 $\gamma \mathrm{d}\tau = R\mathrm{d}t_p$ 得</p>
+<p>$\begin{aligned} \dot{a} &amp;= \frac{\mathrm{d}a}{\mathrm{d}\tau} = -\mathrm{i} \omega a - \frac{\omega}{2Q} \frac{\gamma}{R}a\end{aligned}$</p>
+<p>解得 $a(t ) =a(0) e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t}, \quad a&gt;0$ 。</p>
+<p>其一阶关联函数为：</p>
+<p>$\begin{aligned} g^{(1)}(t&gt;0)&amp;=\langle a^\dag(t) a(0)\rangle / \langle a^\dag(0) a(0)\rangle \\ &amp;= \text{tr}[a(0) \rho a^\dag(t)] / \text{tr}[a(0) \rho a^\dag(0)] \\ &amp;= e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t} \end{aligned}$</p>
+<p>时间平移不变性要求 $g^{(1)}(t) = g^{(1)}(-t)$ ，所以</p>
+<p>$\begin{aligned} g^{(1)}(t)= e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}|t|} \end{aligned}$</p>
+<p>对其进行傅里叶变换即可得到频谱：</p>
+<p>$\begin{aligned} F(\omega^\prime) = \frac{\frac{\omega\gamma}{2RQ}}{(\omega^\prime-\omega)^2 + \left(\frac{\omega\gamma}{2RQ}\right)^2} \end{aligned}$</p>
+<p>这是一个洛伦兹线形，其半高全宽（FWHM）为 $\Delta \omega = \frac{\omega\gamma}{RQ} = \frac{2\gamma}{A}$ 。</p>
+<blockquote>
+<p>可见自然线宽取决于上能级和下能级的平均寿命 $\gamma^{-1}$ 。这是很符合直觉的，因为上下能级的寿命决定受激辐射的相干作用时间。<br>
+另外，泵浦越强，自然线宽越窄。这也是符合直觉的，因为泵浦越强，两次受激辐射过程的时间间隔越短，于是弛豫的作用时间也越短。</p>
+</blockquote>
+<h2 id="参考">参考</h2>
+<ol>
+<li>Marlan O. Scully &amp; M. Suhail Zubairy, Quantum Optics</li>
+<li>Pierre Meystre &amp; Murray Sargent, Elements of Quantum Optics</li>
+<li>Bartlett, S. D., Rudolph, T. &amp; Spekkens, R. W. Dialogue Concerning Two Views on Quantum Coherence: Factist and Fictionist. Int. J. Quantum Inform. 04, 17–43 (2006).</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-07-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/laser_quantum2/" data-title="激光的全量子理论" data-hashtags="量子光学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/laser_quantum2/" data-hashtag="量子光学"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/laser_quantum2/" data-title="激光的全量子理论"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/laser_quantum2/" data-title="激光的全量子理论"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/laser_quantum2/" data-title="激光的全量子理论"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/">量子光学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/spdc_optical_amp/" class="prev" rel="prev" title="SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</a>
+            <a href="/rabi/" class="next" rel="next" title="再见了旋转波近似：量子拉比模型的解析解">再见了旋转波近似：量子拉比模型的解析解<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <span id="busuanzi_container_site_pv">
+                Visited: <span id="busuanzi_value_site_pv"></span> times
+            </span>
+            &nbsp;|&nbsp;
+            <span id="busuanzi_container_site_uv">
+                You are the <span id="busuanzi_value_site_uv"></span> th visiter
+            </span><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI","appKey":"dv86fnCL7DsYQl47DmJm7mHg","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://mukjinfv.api.lncldglobal.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

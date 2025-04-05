@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>光子的轨道角动量 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/oam/">
+  <meta property="og:site_name" content="Haifei&#39;s Home">
+  <meta property="og:title" content="光子的轨道角动量">
+  <meta property="og:description" content="前言 1992 年发表在 PRA 上的一篇文章 [1] 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular Momentum）只能取 $\pm \hbar$ 相比，轨道角动量可以取 $\hbar$ 的任意整数倍。这样的轨道角动量可以由螺旋形状的波前所携带。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-27T17:35:05+08:00">
+    <meta property="article:modified_time" content="2024-05-27T17:35:05+08:00">
+    <meta property="article:tag" content="量子光学">
+    <meta property="og:image" content="http://example.com/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://example.com/logo.png">
+  <meta name="twitter:title" content="光子的轨道角动量">
+  <meta name="twitter:description" content="前言 1992 年发表在 PRA 上的一篇文章 [1] 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular Momentum）只能取 $\pm \hbar$ 相比，轨道角动量可以取 $\hbar$ 的任意整数倍。这样的轨道角动量可以由螺旋形状的波前所携带。">
+<meta name="application-name" content="Haifei&#39;s Home">
+<meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/oam/" /><link rel="prev" href="http://example.com/classical_correlation/" /><link rel="next" href="http://example.com/laser_quantum/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "光子的轨道角动量",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.com\/oam\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "量子光学","wordcount":  2092 ,
+        "url": "http:\/\/example.com\/oam\/","datePublished": "2024-05-27T17:35:05+08:00","dateModified": "2024-05-27T17:35:05+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/example.com\/images\/avatar.png",
+                    "width":  1400 ,
+                    "height":  1400 
+                }},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 博客 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/cv/"> 简历 </a><a class="menu-item" href="/publication/"> 发表 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/oam/">English</option><option value="/oam/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">博客</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/cv/" title="">简历</a><a class="menu-item" href="/publication/" title="">发表</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/oam/">English</option><option value="/oam/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">光子的轨道角动量</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>量子信息</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-05-27">2024-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2092 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/oam/" class="leancloud_visitors" data-flag-title="光子的轨道角动量">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#一hermite-gaussian-hg-光束">一、Hermite-Gaussian (HG) 光束</a></li>
+    <li><a href="#二laguerre-gaussian-lg-光束">二、Laguerre-Gaussian (LG) 光束</a></li>
+    <li><a href="#三用-q-plate-操控自旋角动量和轨道角动量">三、用 Q-Plate 操控自旋角动量和轨道角动量</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>1992 年发表在 PRA 上的一篇文章 <a href="#ref_1" rel="">[1]</a> 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular Momentum）只能取 $\pm \hbar$ 相比，轨道角动量可以取 $\hbar$ 的任意整数倍。这样的轨道角动量可以由螺旋形状的波前所携带。</p>
+<p>你可能会惊奇：人们竟然到 1992 年才发现这件事情？实际上，早在 1992 年之前，螺旋形状的波前已经被人研究过；携带大于 $\hbar$ 的角动量的光子也早就已经被原子物理所预言（只不过它们来源于高阶跃迁过程，而高阶跃迁过程不满足选择定则，因此概率非常低，实验上基本没法观测）。直到 1992 年，Allen 等人才指出波前为螺旋形状的光束携带量子化的轨道角动量。</p>
+<p>1992 年到 2001 年之间对 OAM 的研究基本处于宏观电磁波（大量光子的相干态）的范畴。诺奖得主 Zeilinger 组在 2001 年的一篇文章 <a href="#ref_2" rel="">[2]</a> 中第一次研究了单个光子的轨道角动量及其纠缠。从此以后，OAM 也获得了量子信息和量子光学研究者们的兴趣。OAM 在量子信息中的一个可能的应用就是量子精密测量，这是因为它的 $e^{\mathrm{i}l\varphi}$ 因子有助于将角度测量的精度提升 $l$ 倍。另外，SAM 和 OAM 之间可以通过 q-plate 相互作用，有助于量子信息处理。OAM 还有许多其他经典应用 <a href="#ref_3" rel="">[3]</a>，这里就不赘述了。</p>
+<h2 id="一hermite-gaussian-hg-光束">一、Hermite-Gaussian (HG) 光束</h2>
+<p>在介绍携带轨道角动量的拉盖尔-高斯光束（Laguerre-Gaussian 光束）之前，我们最好先介绍埃尔米特-高斯光束（Hermite-Gaussian 光束）。</p>
+<p>为什么要介绍高斯光束？因为实验上能得到的电磁波并不是理想平面波，而是激光器所输出的高斯光束。</p>
+<figure><img src="/oam/image/gaussian.jpg"><figcaption>
+      <h4>高斯光束的束腰宽度 w0、瑞利长度 zR 和发散角 theta，图源 Wikipedia  </h4>
+    </figcaption>
+</figure>
+
+<p>普通的埃尔米特-高斯光束的电场强度大小如下：</p>
+<p>$\begin{aligned} E_{m,n}(x,y,z) = &amp; ,E_0 \color{blue}{ \frac{w_0}{w(z)}\exp\left[-\frac{x^2+y^2}{w(z)^2}\right] } \times \\ &amp; \color{green}{\exp\left[-\mathrm{i}\frac{k(x^2+y^2)}{2 R(z)}\right]} \color{orange}{\exp\left[\mathrm{i}\psi(z)\right]} \color{gray}{\exp[-\mathrm{i}kz]} \times \\ &amp; \color{red}{H_m\left[\sqrt{2}\frac{x}{w(z)}\right]H_n\left[\sqrt{2}\frac{y}{w(z)}\right]} \end{aligned} $</p>
+<p>其中：</p>
+<p>$\color{blue}{w(z) = w_0 \sqrt{1+\left(\frac{z}{z_R}\right)^2}}$ 代表 $z$ 处的波束宽度， $z_R = \pi\frac{w_0^2}{\lambda}$ 是瑞利长度（Rayleigh length），定义为波束宽度发散到束腰宽度的 $\sqrt{2}$ 倍时的 $z$ 值。</p>
+<p>$\color{green}{R(z) = \frac{z^2 + z_R^2}{z}}$ 代表 $z$ 处波前的曲率半径。</p>
+<p>$\color{orange}{\psi(z)=\arctan\left(\frac{z}{z_R}\right)}$ 代表古伊相移（Gouy phase shift）。从负无穷远到正无穷远一共有 $\pi$ 的额外相移。</p>
+<p>$\color{red}{H_m(t)}$ 是 $m$ 阶埃尔米特多项式。它们也是量子谐振子的能量本征解。当 $m,n$ 都等于零时，退化为基模高斯光束。大部分激光器输出的都是基模高斯光束。</p>
+<p>可见，记忆高斯光束并不难，只要记住三个特征： $\color{blue}{\text{束腰发散}}$ 、 $\color{green}{\text{曲率半径}}$ 、 $\color{orange}{\text{古伊相移}}$ ，即可。</p>
+<p>还有一个比较有用的量是发散角。从 $\color{blue}{w(z) = w_0 \sqrt{1+\left(\frac{z}{z_R}\right)^2}}$ 中可以看出发散角的正切值为 $\tan \theta=\frac{w_0}{z_R}$ ，于是有 $w_0 \tan \theta = \frac{\lambda}{\pi}$ 。</p>
+<p>高斯光束的形状完全由波长、束腰半径、发散角三个中的任意两个决定。这三者之间的关系已经由 $w_0 \tan \theta = \frac{\lambda}{\pi}$ 给出。</p>
+<blockquote>
+<p>$E_{m,n}(x,y,z)$ 只表示电场强度的大小，并未包含偏振信息。</p>
+<p>加上偏振信息是很容易的：如果是 $x$ 方向偏振，只需要将 $E_{m,n}(x,y,z)$ 乘以 $x$ 方向的单位向量 $\hat{x}$ 即可。如果是圆偏振，只要乘以 $\hat{x} \pm \mathrm{i}\hat{y}$ 即可。</p>
+<p>注意到 $E_{m,n}(x,y,z)$ 是一个复数。对于经典电磁波而言，真正的电场强度是它的实部。对于量子电磁波而言，我们可以指定该模式上的一个湮灭算符，这个湮灭算符是平面波湮灭算符的线性组合，系数可以由傅里叶分析得到。</p>
+</blockquote>
+<figure><img src="/oam/image/HG.jpg"><figcaption>
+      <h4>HG 模式，图源 Wikipedia  </h4>
+    </figcaption>
+</figure>
+
+<h2 id="二laguerre-gaussian-lg-光束">二、Laguerre-Gaussian (LG) 光束</h2>
+<p>在二维量子谐振子的解中，除了 Hermite 多项式所代表的线性振动以外，还有 Laguerre 多项式所代表的旋转运动。</p>
+<p>下面我们给出拉盖尔-高斯光束的形式：</p>
+<p>$\begin{aligned} E_{l,p}(r,\varphi,z) = &amp; ,E_0 \color{blue}{ \frac{w_0}{w(z)}\exp\left[-\frac{r^2}{w(z)^2}\right] } \times \\ &amp; \color{green}{\exp\left[-\mathrm{i}\frac{kr^2}{2 R(z)}\right]} \color{orange}{\exp\left[\mathrm{i}\psi(z)\right]} \color{gray}{\exp[-\mathrm{i}kz]} \times \\ &amp; \color{red}{\left(\sqrt{2}\frac{r}{w(z)}\right)^{|l|} L_p^{|l|} \left(2 \frac{r^2}{w(z)^2}\right) \exp(-\mathrm{i}l\varphi)} \end{aligned} $</p>
+<p>其中 $\color{blue}{\text{束腰发散}}$ 和 $\color{green}{\text{曲率半径}}$ 与埃尔米特-高斯光束相同，不同的有两点：</p>
+<p>第一，高阶项由埃尔米特多项式变为拉盖尔多项式 $\color{red}{L_p^{|l|} (t)}$ 。且额外的因子 $\color{red}{\left(\sqrt{2}\frac{r}{w(z)}\right)^{|l|}}$ 和 $\color{red}{\exp(-\mathrm{i}l\varphi)}$ 分别表示原点处的奇点以及螺旋形的波前（带轨道角动量 $\hbar l$ ）。</p>
+<p>第二，古伊相移 $\color{orange}{\psi(z) = (2p + |l|+ 1)\arctan \frac{z}{z_R}}$ 变为 HG 模式的 $2p + |l|+ 1$ 倍。</p>
+<figure><img src="/oam/image/LG.jpg"><figcaption>
+      <h4>LG 模式，图源 Wikipedia  </h4>
+    </figcaption>
+</figure>
+
+<p>正如旋转可以分解为振动的线性叠加，LG 模式也可以表示为 HG 模式的相干叠加。这和圆偏振可以分解为两个线偏振的叠加类似。</p>
+<h2 id="三用-q-plate-操控自旋角动量和轨道角动量">三、用 Q-Plate 操控自旋角动量和轨道角动量</h2>
+<p>2006 年提出的 q-plate <a href="#ref%5c_4" rel="">[4]</a>本质上就是一个光轴与位置有关的半波片，且光轴的角度 $\alpha$ 满足 $\alpha(r,\varphi) = q \varphi + \alpha_0$ 。其琼斯矩阵为 $\begin{bmatrix} \cos 2\alpha &amp; \sin 2\alpha \\ \sin 2\alpha &amp; -\cos 2\alpha \end{bmatrix}$ 。</p>
+<figure><img src="/oam/image/qplate.jpg"><figcaption>
+      <h4>q-plate 的光轴图案，图源 [4] </h4>
+    </figcaption>
+</figure>
+
+<p>考察一个 q-plate 作用到一个左旋偏振的基模高斯光束上，结果为：</p>
+<p>$\begin{bmatrix} \cos 2\alpha &amp; \sin 2\alpha \\ \sin 2\alpha &amp; -\cos 2\alpha \end{bmatrix} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{\mathrm{i}}{\sqrt{2}} \end{bmatrix} =  e^{\mathrm{i}2q\varphi} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ -\frac{\mathrm{i}}{\sqrt{2}} \end{bmatrix}$</p>
+<p>可见，经过 q-plate，左旋偏振光变为带 $2q\hbar$ 轨道角动量的右旋偏振光。</p>
+<p>q-plate 是目前实验上制备 OAM 态最常用的方法。当然，用 SLM 也可以。</p>
+<p>OAM 之所以吸引量子信息研究者的兴趣，其中一个原因是它的希尔伯特空间维数和谐振子一样是无穷大的，而不像偏振（SAM）那样只有两个。SAM 与 OAM 之间的相互作用引出了一个很直接的想法：利用 SAM 和 OAM 做一个 CNOT 门，其中 SAM 是控制比特，OAM 是目标比特。类似的实验很多，这里就不放文献了。</p>
+<h2 id="参考">参考</h2>
+<ol>
+<li>Allen, L.; Beijersbergen, M. W.; Spreeuw, R. J. C.; Woerdman, J. P. Orbital Angular Momentum of Light and the Transformation of Laguerre-Gaussian Laser Modes. Phys. Rev. A 1992, 45 (11), 8185–8189. <a href="https://doi.org/10.1103/PhysRevA.45.8185" target="_blank" rel="noopener noreffer ">https://doi.org/10.1103/PhysRevA.45.8185</a>.</li>
+<li>A. Mair, A. Vaziri, G. Weihs, and A. Zeilinger, “Entanglement of the orbital angular momentum states of photons,” Nature 412(6844), 313–316 (2001).</li>
+<li>Padgett, M. J. Orbital Angular Momentum 25 Years on [Invited]. Opt. Express 2017, 25 (10), 11265. <a href="https://doi.org/10.1364/OE.25.011265" target="_blank" rel="noopener noreffer ">https://doi.org/10.1364/OE.25.011265</a>.</li>
+<li>Marrucci, L.; Manzo, C.; Paparo, D. Optical Spin-to-Orbital Angular Momentum Conversion in Inhomogeneous Anisotropic Media. Phys. Rev. Lett. 2006, 96 (16), 163905. <a href="https://doi.org/10.1103/PhysRevLett.96.163905" target="_blank" rel="noopener noreffer ">https://doi.org/10.1103/PhysRevLett.96.163905</a>.</li>
+</ol>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-05-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/oam/" data-title="光子的轨道角动量" data-hashtags="量子光学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/oam/" data-hashtag="量子光学"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/oam/" data-title="光子的轨道角动量"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/oam/" data-title="光子的轨道角动量"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/oam/" data-title="光子的轨道角动量"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/">量子光学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/classical_correlation/" class="prev" rel="prev" title="量子纠缠与经典关联的区别，以及量子测量问题"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>量子纠缠与经典关联的区别，以及量子测量问题</a>
+            <a href="/laser_quantum/" class="next" rel="next" title="激光的一种简单的量子描述">激光的一种简单的量子描述<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <span id="busuanzi_container_site_pv">
+                Visited: <span id="busuanzi_value_site_pv"></span> times
+            </span>
+            &nbsp;|&nbsp;
+            <span id="busuanzi_container_site_uv">
+                You are the <span id="busuanzi_value_site_uv"></span> th visiter
+            </span><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI","appKey":"dv86fnCL7DsYQl47DmJm7mHg","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://mukjinfv.api.lncldglobal.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

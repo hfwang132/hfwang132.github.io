@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>微分几何视角下的电动力学【更高更妙的电动力学·1】 - Haifei&#39;s Home</title><meta name="Description" content="Haifei&#39;s Home"><meta property="og:url" content="http://example.com/gm_1/">
+  <meta property="og:site_name" content="Haifei&#39;s Home">
+  <meta property="og:title" content="微分几何视角下的电动力学【更高更妙的电动力学·1】">
+  <meta property="og:description" content="前言 你可能听说过麦克斯韦方程有很简单的形式：
+$\begin{aligned} \mathrm{d} F&amp;=0 \\ \mathrm{d} \star F &amp;= \mu_0 \star J \end{aligned}$
+又或者是
+$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;= \mu_0 J^\nu \end{aligned}$
+注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-06T00:43:40+08:00">
+    <meta property="article:modified_time" content="2025-04-06T00:43:40+08:00">
+    <meta property="article:tag" content="微分几何">
+    <meta property="article:tag" content="电动力学">
+    <meta property="og:image" content="http://example.com/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://example.com/logo.png">
+  <meta name="twitter:title" content="微分几何视角下的电动力学【更高更妙的电动力学·1】">
+  <meta name="twitter:description" content="前言 你可能听说过麦克斯韦方程有很简单的形式：
+$\begin{aligned} \mathrm{d} F&amp;=0 \\ \mathrm{d} \star F &amp;= \mu_0 \star J \end{aligned}$
+又或者是
+$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;= \mu_0 J^\nu \end{aligned}$
+注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。">
+<meta name="application-name" content="Haifei&#39;s Home">
+<meta name="apple-mobile-web-app-title" content="Haifei&#39;s Home"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.com/gm_1/" /><link rel="prev" href="http://example.com/products/" /><link rel="next" href="http://example.com/gm_2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "微分几何视角下的电动力学【更高更妙的电动力学·1】",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.com\/gm_1\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/example.com\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "微分几何, 电动力学","wordcount":  5114 ,
+        "url": "http:\/\/example.com\/gm_1\/","datePublished": "2025-04-06T00:43:40+08:00","dateModified": "2025-04-06T00:43:40+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/example.com\/images\/avatar.png",
+                    "width":  1400 ,
+                    "height":  1400 
+                }},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 博客 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/cv/"> 简历 </a><a class="menu-item" href="/publication/"> 发表 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/gm_1/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Haifei&#39;s Home"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>Haifei&#39;s Home</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">博客</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/cv/" title="">简历</a><a class="menu-item" href="/publication/" title="">发表</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/gm_1/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">微分几何视角下的电动力学【更高更妙的电动力学·1】</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>作者</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数学物理方法</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-04-06">2025-04-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 5114 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 11 分钟&nbsp;<span id="/gm_1/" class="leancloud_visitors" data-flag-title="微分几何视角下的电动力学【更高更妙的电动力学·1】">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前言">前言</a></li>
+      </ul>
+    </li>
+    <li><a href="#一准备工作">一、准备工作</a>
+      <ul>
+        <li><a href="#11-场论和变分法">1.1 场论和变分法</a></li>
+        <li><a href="#12-微分几何">1.2 微分几何</a></li>
+      </ul>
+    </li>
+    <li><a href="#二4-势4-流场强张量">二、4-势、4-流、场强张量</a></li>
+    <li><a href="#三电磁场的拉氏量">三、电磁场的拉氏量</a></li>
+    <li><a href="#四麦克斯韦方程">四、麦克斯韦方程</a></li>
+    <li><a href="#五微分几何表述">五、微分几何表述</a></li>
+    <li><a href="#六协变逆变形式的对比">六、协变/逆变形式的对比</a></li>
+    <li><a href="#七附录">七、附录</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="前言">前言</h3>
+<p>你可能听说过麦克斯韦方程有很简单的形式：</p>
+<p>$\begin{aligned} \mathrm{d} F&amp;=0 \\ \mathrm{d} \star F &amp;= \mu_0 \star J \end{aligned}$</p>
+<p>又或者是</p>
+<p>$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;= \mu_0 J^\nu  \end{aligned}$</p>
+<blockquote>
+<p>注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。</p>
+</blockquote>
+<p>这究竟是怎么一回事？这是否意味着其实存在更高更深奥的视角？</p>
+<p>没错，就是如此。本文将从最小作用量原理出发推导麦克斯韦方程，并且在过程中使用微分几何的语言。</p>
+<p>为什么要用微分几何的语言？第一，它帮助我们将电磁场的数学结构看得更加清楚，第二，它使得将麦克斯韦方程推广到弯曲时空中非常容易。</p>
+<p>在那之前，我们要先做一些数学上的准备工作。数学不错的读者可以跳过。</p>
+<h2 id="一准备工作">一、准备工作</h2>
+<h3 id="11-场论和变分法">1.1 场论和变分法</h3>
+<p>场论的背景是配备了闵氏度规的四维时空，记为 $M$ 。</p>
+<p>各种物理场（如电磁场）在数学上就是流形 $M$ 上的场（如矢量场）。</p>
+<p>给定 $M$ 上的场 $\phi$ 和拉氏量 $\mathcal{L}[\phi, \partial_\mu \phi]$ ，其中 $\partial_\mu \phi := \frac{\partial \phi}{\partial x^\mu}$ 。</p>
+<p>作用量定义为 $S[\phi] := \int \mathcal{L}[\phi, \partial_\mu \phi] \mathrm{d}^4x$ 。对 $\phi, \partial_\mu \phi$ 进行变分：</p>
+<p>$\begin{aligned} \delta S[\phi] &amp;= \int \delta\mathcal{L}[\phi, \partial_\mu \phi] \mathrm{d}^4x \\  &amp;= \int \left[\frac{\partial \mathcal{L}}{\partial \phi} \delta \phi+\frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)}\delta(\partial_\mu \phi)\right]\mathrm{d}^4x \\ &amp;= \int \left[\frac{\partial \mathcal{L}}{\partial \phi} \delta \phi+\frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)}\partial_\mu (\delta\phi)\right]\mathrm{d}^4x \\ &amp;= \int \left[\frac{\partial \mathcal{L}}{\partial \phi} \delta \phi-\left(\partial_\mu \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)}\right)\delta\phi\right]\mathrm{d}^4x \\ &amp;= \int \left[\frac{\partial \mathcal{L}}{\partial \phi} -\partial_\mu \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)}\right] (\delta\phi )\mathrm{d}^4x \end{aligned}$</p>
+<p>其中第三个等号用到了 $\delta \partial_\mu = \partial_\mu\delta$ ，第四个等号用到了分部积分。注意用到了爱因斯坦求和约定。</p>
+<p>根据最小作用量原理，令 $\delta S=0$ ，由 $\delta \phi$ 的任意性，则有</p>
+<p>$\begin{aligned} \frac{\partial \mathcal{L}}{\partial \phi} -\partial_\mu \frac{\partial \mathcal{L}}{\partial(\partial_\mu \phi)} = 0 \end{aligned}$</p>
+<p>这就是场变分的欧拉-拉格朗日方程。这和经典力学中的欧拉-拉格朗日方程略有不同，因为在经典力学中，变分的对象是粒子的一维的运动轨迹，而这里变分的对象是四维场的所有可能配置。</p>
+<h3 id="12-微分几何">1.2 微分几何</h3>
+<p>由于我们的时空是平直的，我们不需要太多的微分几何知识。只需要知道最基本的逆变（Contravariant）、协变（Covariant）、微分形式（Differential Forms）和外微分（Exterior Derivative）就差不多了。</p>
+<p><strong>1.2.1 逆变矢量</strong></p>
+<p>在接触微分几何前，我们绝大多数时间都在使用逆变矢量场，而非协变矢量场。这是因为当我们选定一组基之后，坐标变换是基变换的逆变换，这就是“逆变”的意思，即变换规则与基变换相反。</p>
+<p>例如，给定一个矢量场 $A^\mu = (A^x, A^y, A^z)$ ，即 $A = A^\mu e_\mu$ ，其中 $e_\mu$ 是我们选取的基。当做基变换 $e^\prime_\nu = M^{\mu}_\nu e_{\mu}$ 时，由于 $A^\mu e_\mu = A^{\prime \mu} e^\prime_\mu$ ，很显然，坐标变换就应当是逆变换： $A^{\prime \mu} = (M^{-1})^{\mu}_{\nu} A^\nu$ 。</p>
+<p>实际上，可以令 $e_\mu = \partial_\mu = \frac{\partial}{\partial x^\mu}$ 。这看起来可能很奇怪，不过在微分几何中，逆变矢量的定义就是偏导算子！这点暂时不理解也没关系，不影响后续的推导。</p>
+<p>注意，逆变矢量的坐标都应该写成上标，例如 $A^\mu$ ，以便于和基的下标 $e_\mu$ 缩并（根据爱因斯坦求和约定）。</p>
+<p><strong>1.2.2 协变矢量</strong></p>
+<p>反过来，“协变”的意思就是坐标变换和基变换的矩阵相同。但怎么会有这样的矢量呢？</p>
+<p>实际上，协变矢量生活在另一个空间，叫做原空间的对偶空间。</p>
+<p>对偶空间中的矢量 $\omega_\mu$ （写成下标）可以和原空间中的矢量 $v^{\mu}$ （上标）相互缩并成为一个标量： $\omega_\mu v^\mu = C$ 。</p>
+<p>与 $e_\mu = \partial_\mu$ 对偶的基是 $\mathrm{d}x^\mu$ ，满足 $\mathrm{d}x^\mu \partial_\nu = \delta^\mu_\nu = \begin{cases} 1 &amp; \mu=\nu \\ 0 &amp; \mu\ne \nu\end{cases}$ 。运用和之前相似的推理，我们能够得出，对偶基 $\mathrm{d}x^\mu$ 的变换矩阵是基 $\partial_\mu$ 变换的逆矩阵。从而，对偶矢量的坐标 $\omega_\mu$ 变换矩阵是基 $v^\mu$ 变换矩阵的逆的逆，也就是正好等于基变换矩阵本身。这就是“协变”的意思，即变换规则与基变换相同。</p>
+<p><strong>1.2.3 度规</strong></p>
+<p>协变矢量和逆变矢量之间不能直接转换，除非我们有一个度规。度规是一个二阶对称协变张量场 $g_{\mu\nu} = g_{\nu\mu}$ 。</p>
+<p>度规是流形上的额外结构。不是所有流形都天生拥有度规。配备了度规的流形叫做黎曼流形。如果度规不是正定的，那么该流形就叫做伪黎曼流形。物理中用到的流形是伪黎曼流形，因为闵氏度规不是正定的。</p>
+<p>借助度规 $g_{\mu\nu}$ ，我们可以将逆变矢量转化为协变矢量 $A_\mu = g_{\mu\nu} A^\nu$ ，也可以借助 $g^{\mu a}g_{a\mu}=\delta^\mu_\nu$ 定义逆变度规 $g^{\mu\nu}$ ，从而将协变矢量转化为逆变矢量 $A^\mu = g^{\mu\nu} A_\nu$ 。</p>
+<p>在狭义相对论中，我们使用闵氏度规：</p>
+<p>$\begin{aligned} &amp;g_{00} = \pm1\\ &amp;g_{11} = g_{22}=g_{33}=\mp1\\ &amp;g_{ij}=0, (i\ne j) \end{aligned}$</p>
+<p>一般有两种惯例： $(+,-,-,-)$ 和 $(-,+,+,+)$ ，前者对应 $g_{00}=1$ ，后者对应 $g_{00}=-1$ 。</p>
+<p><strong>1.2.4 微分形式</strong></p>
+<p>微分形式可以看做是协变反对称张量场。反对称的意思就是，交换下标会改变符号： $\omega_{\mu \nu} = -\omega_{\nu\mu}$ 。</p>
+<p>例如，二阶反对称协变张量场 $\omega_{\mu\nu}$ 是 2-形式。</p>
+<p>特别地，协变矢量场 $\omega_\mu$ 是 1-形式，标量场是 0-形式。</p>
+<p>两个 1-形式通过 wedge product 可以得到 2-形式：</p>
+<p>$\omega = \alpha \wedge \beta = \alpha_\mu \beta_\nu\mathrm{d}x^\mu \wedge  \mathrm{d}x^\nu $</p>
+<p>其中 $\mathrm{d}x^\mu \wedge  \mathrm{d}x^\nu  = -\mathrm{d}x^\nu \wedge  \mathrm{d}x^\mu$</p>
+<p>以此类推。</p>
+<p><strong>1.2.5 外微分</strong></p>
+<p>定义外微分运算 $\mathrm{d}$ ，它将 n-形式变为 (n+1)-形式：</p>
+<p>$\begin{aligned} \mathrm{d} \omega &amp;= \mathrm{d}(\omega_\mu \mathrm{d}x^\mu)\ \\  &amp;= \mathrm{d}(\omega_\mu) \wedge \mathrm{d}x^\mu\\ &amp;=  (\partial_\nu \omega_\mu\mathrm{d}x^\nu)\wedge\mathrm{d}x^\mu  \end{aligned}$</p>
+<p>一句话概括，外微分运算就是对每个基上的分量取全微分再 wedge 上对应的基。</p>
+<p>特别地，对 0-形式做外微分运算，其实就是标量场的全微分本身： $\mathrm{d}f = (\partial_\mu f) \mathrm{d}x^\mu$ 。</p>
+<p>外微分运算是典范的：它不需要借助流形上的额外结构，也不依赖于基的定义。</p>
+<p>引理： $\alpha \wedge \beta = (-1)^{\deg(\alpha)\deg(\beta)} \beta\wedge \alpha$ ，其中 $\deg$ 表示微分形式的阶数。</p>
+<blockquote>
+<p>证明：为了将 $\beta$ 移动到 $\alpha$ 前面，需要将 $\beta$ 中的 $\deg(\beta)$ 个 1-形式 向前移动 $\deg(\alpha)$ 次，共 $\deg(\alpha) \deg(\beta)$ 次，每次积累一个负号。</p>
+</blockquote>
+<p>定理：做两次外微分运算总是会得到零： $\mathrm{d}\mathrm{d}=0$ ，证明略。</p>
+<p><strong>1.2.6 Hodge 对偶</strong></p>
+<p>关于 Hodge 对偶，有兴趣的读者可以自行查阅，这里就不详细介绍了。简单来说，k-形式 的 Hodge 对偶是与其“互补”的 (n-k)-形式。例如，在欧式空间 $\mathbb{R}^3$ 中，给定标准正交基 $\mathrm{d}x,\mathrm{d}y,\mathrm{d}z$ ，有</p>
+<p>$\begin{aligned} \star (1) &amp;=\mathrm{d}x\wedge\mathrm{d}y \wedge\mathrm{d}z, \quad\star(\mathrm{d}x\wedge\mathrm{d}y \wedge\mathrm{d}z)= 1\\ \star \mathrm{d}x &amp;= \mathrm{d}y \wedge \mathrm{d}z , \quad\star(\mathrm{d}y \wedge \mathrm{d}z) = \mathrm{d}x\\ \star\mathrm{d}y&amp;=\mathrm{d}z\wedge \mathrm{d}x, \quad\star(\mathrm{d}z\wedge\mathrm{d}x) = \mathrm{d}y \\ \star \mathrm{d}z&amp;=\mathrm{d}x\wedge \mathrm{d}y, \quad\star(\mathrm{d}x\wedge\mathrm{d}y)=\mathrm{d}z \end{aligned}$</p>
+<p>在这个例子中，做两次 Hodge 对偶会返回自身： $\star\star = \operatorname{id}$ 。但一般来说，并非总是如此。例如在闵氏时空中：</p>
+<p>$\star(\mathrm{d}t \wedge\mathrm{d}x) = -(\mathrm{d}y \wedge \mathrm{d}z),\quad \star(\mathrm{d}y \wedge \mathrm{d}z) = \mathrm{d}t \wedge\mathrm{d}x$</p>
+<p>$\star\mathrm{d}t = -\mathrm{d}x\wedge\mathrm{d}y \wedge\mathrm{d}z, \quad \star(\mathrm{d}x\wedge\mathrm{d}y \wedge\mathrm{d}z) = -\mathrm{d}t$</p>
+<p>实际上，在闵氏时空中，对于偶数阶形式， $\star\star = -\operatorname{id}$ 。对于奇数阶形式， $\star\star = \operatorname{id}$ 。</p>
+<p>对于一般的情形，见附录引理 3。</p>
+<h2 id="二4-势4-流场强张量">二、4-势、4-流、场强张量</h2>
+<p>4-势（4-potential）定义为 $A^\mu = (A^0, A^1, A^2, A^3) = (\phi/c, A^x,A^y,A^z)$</p>
+<blockquote>
+<p>用更严谨的微分几何语言，就是 $A = A^0\partial_0 + A^1 \partial_1 + A^2 \partial_2 + A^3 \partial_3 = \frac{\phi}{c} \partial_{(ct)} + A^x\partial_x + A^y \partial_y + A^z\partial_z$<br>
+这是一个切矢量场，基为 $(\partial_0, \partial_1,\partial_2,\partial_3)$</p>
+</blockquote>
+<p>由于只有协变矢量有自然的外微分运算，我们用度规将 4-势变为协变形式：</p>
+<p>$A_{\mu}=g_{\mu\nu}A^{\nu}$</p>
+<p>以下采用 $(-,+,+,+)$ 的度规惯例，于是：</p>
+<p>$A_\mu = (A_0, A_1, A_2, A_3) = (-\phi/c, A_x, A_y, A_z)$</p>
+<p>也就是</p>
+<p>$\begin{aligned} A &amp;= A_0 \mathrm{d}x^0 + A_1\mathrm{d}x^1 + A_2\mathrm{d}x^2 + A_3\mathrm{d}x^3 \\&amp;= -\phi/c \mathrm{d}(ct) +A^x\mathrm{d}x + A^y\mathrm{d}y + A^z\mathrm{d}z \\&amp;=  -\phi \mathrm{d}t +A^x\mathrm{d}x +A^y\mathrm{d}y +A^z\mathrm{d}z  \end{aligned}$</p>
+<p>对协变 4-势 $A$ 做外微分运算得到场强张量 $F$ ：</p>
+<p>$\begin{aligned} F &amp;= \mathrm{d}A \\ &amp;= \mathrm{d} (-\phi \mathrm{d}t +A^x\mathrm{d}x +A^y\mathrm{d}y +A^z\mathrm{d}z) \\ &amp;=(\partial_x \phi + \partial_t \mathrm A^x) ,\mathrm{d}t \wedge \mathrm{d}x \\ &amp;+ (\partial_y \phi + \partial_t A^y) ,\mathrm{d}t\wedge \mathrm{d}y \\ &amp;+ (\partial_z\phi + \partial_t A^z),\mathrm{d}t \wedge \mathrm{d}z \\ &amp;+ (\partial_y A^z - \partial_z A^y) \mathrm{d}y \wedge \mathrm{d}z \\ &amp; +(\partial_z A^x - \partial_x A^z)\mathrm{d}z \wedge \mathrm{d}x \\ &amp; +(\partial_x A^y - \partial_y A^x)\mathrm{d}x \wedge \mathrm{d}y \\ &amp;= -E^x \mathrm{d}t \wedge \mathrm{d}x - E^y \mathrm{d}t \wedge \mathrm{d}y - E^z \mathrm{d}t \wedge \mathrm{d}z \\ &amp; + B^x \mathrm{d}y \wedge \mathrm{d}z + B^y \mathrm{d}z \wedge \mathrm{d}x + B^z \mathrm{d}x \wedge \mathrm{d}y \end{aligned}$</p>
+<p>也可以写成矩阵形式：</p>
+<p>$\begin{bmatrix} 0 &amp; E^x &amp; E^y &amp; E^z \\ -E^x &amp; 0 &amp; -B^z &amp; B^y \\ -E^y &amp; B^z &amp; 0 &amp; -B^x \\ -E^z &amp; -B^y &amp; B^x &amp; 0 \end{bmatrix}$</p>
+<p>为了保持量纲一致，我们将 $c$ 吸收进 $\mathrm{d}t$ ，于是</p>
+<p>$\color{red}{F_{\mu\nu}=\begin{bmatrix} 0 &amp; E^x/c &amp; E^y/c &amp; E^z /c\\ -E^x/c &amp; 0 &amp; -B_z &amp; B^y \\ -E^y/c &amp; B^z &amp; 0 &amp; -B^x \\ -E^z /c&amp; -B^y &amp; B^x &amp; 0 \end{bmatrix}}$</p>
+<p>注意这里的第一个指标 $\mu$ 不是代表行，而是代表列，第二个指标 $ \nu$ 代表行。</p>
+<p>实际上， $\color{red}{F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu}$ ，请读者自行根据定义 $F=\mathrm{d}A$ 推导。</p>
+<p>$F_{\mu\nu}$ 的逆变形式为 $F^{\mu\nu} = g^{\mu \rho} g^{\nu \sigma} F_{\rho \sigma}$ ：</p>
+<p>$F^{\mu\nu} = \begin{bmatrix} 0 &amp; -E^x/c &amp; -E^y/c &amp; -E^z /c\\ E^x/c &amp; 0 &amp; -B_z &amp; B^y \\ E^y/c &amp; B^z &amp; 0 &amp; -B^x \\ E^z /c&amp; -B^y &amp; B^x &amp; 0 \end{bmatrix}$</p>
+<p>最后，4-流（4-current）定义为 $J^{\mu}=(\rho c, J^x,J^y,J^z)$ ，协变形式为 $J_{\mu}=(-\rho c, J^x, J^y, J^z) = -\rho c^2 \mathrm{d}t +J^x \mathrm{d}x + J^y \mathrm{d}y + J^z \mathrm{d}z$ 。</p>
+<blockquote>
+<p>实际上，4-势是主丛上的一个联络。所谓主丛，就是一个纤维丛，其纤维有李群的结构，而向量丛（例如切丛/余切丛）的纤维是向量空间（例如切空间/余切空间）。可见主丛不同于向量丛。</p>
+<p>主丛上的联络的定义与向量丛上的联络的定义也是不同的。向量丛上的联络定义为协变导数，而主丛上的联络是一个取值为李代数的 1-形式。对于电磁场而言，主丛的纤维是 $U(1)$ ，其李代数为 $\mathbb{R}$ ，因此看起来与普通的 1-形式没有区别。详情我们在本系列下一篇文章中介绍。</p>
+</blockquote>
+<h2 id="三电磁场的拉氏量">三、电磁场的拉氏量</h2>
+<p>这里直接给出拉氏量：</p>
+<p>$\color{red}{ \begin{aligned} \mathcal{L}[A_\mu, \partial_\nu A_\mu] =  -\frac{1}{4\mu_0} F_{\mu\nu} F^{\mu\nu} + A_{\mu} J^{\mu} \end{aligned} }$</p>
+<p>注意，如果选择另一种度规 $(+,-,-,-)$ ，则上式第二项应为负。</p>
+<p>如果展开来计算，会发现它等于：</p>
+<p>$\color{red}{\mathcal{L} = \frac{1}{2}\left(\epsilon_0\mathbf{E^2} -\frac{1}{\mu_0} \mathbf{B^2}\right) -\rho\phi + \mathbf{A} \cdot \mathbf{J}}$</p>
+<p>至于为什么拉氏量是这个样子，这里就不深究了。</p>
+<h2 id="四麦克斯韦方程">四、麦克斯韦方程</h2>
+<p>使用第一节介绍的场变分法，有：</p>
+<p>$\begin{aligned} \frac{\partial \mathcal{L}}{\partial A_\nu} -\partial_\mu \frac{\partial \mathcal{L}}{\partial(\partial_\mu A_\nu)} = 0 \end{aligned}$</p>
+<p>其中</p>
+<p>$\begin{aligned} \frac{\partial \mathcal{L}}{\partial A_\mu} = -J_\mu \end{aligned}$</p>
+<p>$\begin{aligned} \frac{\partial \mathcal{L}}{\partial(\partial_\mu A_\nu)} &amp;= -\frac{\partial }{\partial(\partial_\mu A_\nu)} \left[\frac{1}{4\mu_0} F_{ab} F^{ab} \right]\\ &amp;= -\frac{1}{4\mu_0}\left[\frac{\partial F_{ab}}{\partial(\partial_\mu A_\nu)} F^{ab} + F_{ab}\frac{\partial F^{ab}}{\partial(\partial_\mu A_\nu)} \right] \\ &amp;= -\frac{1}{4\mu_0}\left[\frac{\partial F_{ab}}{\partial(\partial_\mu A_\nu)} F^{ab} + g_{ai}g_{bj}F^{ij}\frac{\partial (g^{ak}g^{bl}F_{kl})}{\partial(\partial_\mu A_\nu)} \right] \\ &amp;= -\frac{1}{4\mu_0}\left[\frac{\partial F_{ab}}{\partial(\partial_\mu A_\nu)} F^{ab} + \delta_{ki}\delta_{lj}F^{ij}\frac{\partial F_{kl}}{\partial(\partial_\mu A_\nu)} \right] \\ &amp;= -\frac{1}{4\mu_0}\left[\frac{\partial F_{ab}}{\partial(\partial_\mu A_\nu)} F^{ab} + F^{ij}\frac{\partial F_{ij}}{\partial(\partial_\mu A_\nu)} \right] \\ &amp;= -\frac{1}{2\mu_0}\left[\frac{\partial F_{ab}}{\partial(\partial_\mu A_\nu)} F^{ab}  \right] \\ &amp;= -\frac{1}{2\mu_0}\left[\frac{\partial(\partial_a A_b - \partial_b A_a)}{\partial(\partial_\mu A_\nu)} F^{ab}  \right] \\ &amp;= -\frac{1}{2\mu_0}\left[(\delta^\mu_a\delta^\nu_b - \delta^\mu_b\delta^\nu_a  ) F^{ab}  \right]  \\  &amp;= -\frac{1}{2\mu_0} \left( F^{\mu\nu}-F^{\nu\mu} \right) \\ &amp;=-\frac{1}{\mu_0}F^{\mu\nu} \end{aligned}$</p>
+<p>因此有</p>
+<p>$\begin{aligned} \color{red}{\partial_\mu F^{\mu\nu} = \mu_0 J^{\nu}} \end{aligned}$</p>
+<p>这就是麦克斯韦方程。</p>
+<p>接下来我们将它转写成我们熟悉的形式。把</p>
+<p>$F^{\mu\nu} = \begin{bmatrix} 0 &amp; -E^x/c &amp; -E^y/c &amp; -E^z /c\\ E^x/c &amp; 0 &amp; -B_z &amp; B^y \\ E^y/c &amp; B^z &amp; 0 &amp; -B^x \\ E^z /c&amp; -B^y &amp; B^x &amp; 0 \end{bmatrix}$</p>
+<p>和</p>
+<p>$J^{\mu} = (\rho c^2, J^x,J^y,J^z)$</p>
+<p>代入 $\begin{aligned} \partial_\mu F^{\mu\nu} = \mu_0 J^{\nu} \end{aligned}$ 得：</p>
+<p>$\begin{aligned} \frac{\partial_i E^i}{c} = \mu_0 \rho c \\ \Rightarrow \color{red}{ \nabla \cdot \mathbf{E} =\frac{\rho}{\epsilon_0} }\end{aligned}$</p>
+<p>以及</p>
+<p>$\begin{aligned} \varepsilon^{ij}_{k} \partial_{j}B^k - \frac{\partial}{\partial(ct)}E^i/c = \mu_0J^i\\  \color{red}{ \Rightarrow \nabla \times \mathbf{B} = \mu_0 (\mathbf{J}+ \epsilon_0 \partial_t \mathbf{E})} \end{aligned}$</p>
+<p>这就是有源麦克斯韦方程。</p>
+<p>但是另外两个无源方程（$\color{red}{ \nabla \cdot\mathbf{B}=0}$ 和 $\color{red}{ \nabla \times \mathbf{E} = -\partial_t \mathbf{B}}$ ）去哪了？</p>
+<p>实际上，这两个无源方程不是电磁场动力学的一部分，而是电磁场自身结构的一部分。这是因为无源方程是由 $\mathrm{d}F=0$ 得到的，而 $\mathrm{d} F=0$ 是由 $F = \mathrm{d} A$ 得到的（对任何微分形式做两次外微分都会得到零）。而 $F=\mathrm{d}A$ 本身就是场强张量的定义。可见，无源方程是根据电磁场的定义得来的，属于自身结构的一部分。</p>
+<p>无源方程可以写成：</p>
+<p>$\color{red}{\partial_\mu (\star F)^{\mu\nu} = 0}$</p>
+<p>其中 $(\star F)^{\mu\nu}$ 是 $F^{\mu\nu}$ 的 Hodge 对偶：</p>
+<p>$\color{red}{(\star F)^{\mu\nu} = \begin{bmatrix} 0 &amp; -B^x &amp; -B^y &amp; -B^z \\ B^x &amp; 0 &amp; E^z/c &amp; -E^y/c \\ B^y &amp; -E^z/c &amp; 0 &amp; E^x/c \\ B^z /c&amp; E^y/c &amp; -E^x/c &amp; 0 \end{bmatrix}}$</p>
+<p>请读者从 $\mathrm{d} F=0$ 推导无源方程。</p>
+<blockquote>
+<p>如果读者会微分几何，以下提供一个更优雅的推导：<br>
+$\begin{aligned} &amp;\mathrm{d}F=0 \\ &amp;\Rightarrow \mathrm{d} \star \star F = 0 \\ &amp;\Rightarrow \mathrm{d} \star \flat\sharp\star F = 0 \\ &amp;\Rightarrow (\sharp\star\mathrm{d} \star \flat)(\sharp\star F) = 0 \\ &amp;\Rightarrow (\nabla\cdot)(\sharp\star F) = 0 \\ &amp;\Rightarrow \partial_\mu (\star F)^{\mu\nu} = 0 \end{aligned}$<br>
+其中 $\sharp$ 是升指标， $\flat$ 是降指标， $(\nabla\cdot)$ 是广义散度，定义为 $(\nabla\cdot) = \sharp\star\mathrm{d} \star \flat$ 。</p>
+</blockquote>
+<h2 id="五微分几何表述">五、微分几何表述</h2>
+<p>有些读者不喜欢指标运算，而是喜欢更典范的抽象符号，因此本节用微分几何的语言再重写一遍。</p>
+<p>给定拉氏量：</p>
+<p>$\begin{aligned} \mathcal{L} &amp;= -\frac{1}{2\mu_0} F \wedge (\star F) + A\wedge (\star J) \\ &amp;= \left[-\frac{1}{2\mu_0} \langle F , F\rangle + \langle A , J \rangle\right] \omega  \end{aligned}$</p>
+<p>注意，如果采用 $(+,-,-,-)$ 度规，则上式第二项应为 $-\langle A, J\rangle \omega$ 。</p>
+<p>其中度规体积形式 $\omega$ 的定义是使得 $\langle \omega ,\omega \rangle_g = \pm 1 =: \operatorname{sgn}(g)$ 成立的 n-形式，n 为流形的维数。显式定义为 $\omega = \sqrt{|\det(g)|},\mathrm{d}x^0 \wedge \mathrm{d}x^1 \wedge \mathrm{d}x^2 \wedge \mathrm{d}x^3 = \mathrm{d}x^0 \wedge \mathrm{d}x^1 \wedge \mathrm{d}x^2 \wedge \mathrm{d}x^3$ 。</p>
+<blockquote>
+<p>微分形式 $\beta$ 的 Hodge 对偶 $\star \beta$ 的定义式为 $\alpha \wedge *\beta = \langle \alpha, \beta\rangle \omega$ 。其中 $\langle \cdot,\cdot\rangle$ 是微分形式的内积，对于 n-形式，内积的定义为：<br>
+$\langle \alpha_1,\cdots\wedge\alpha_n,,\beta_1\wedge\cdots\wedge\beta_n\rangle = \begin{vmatrix} \langle \alpha_1,\beta_1 \rangle &amp; \cdots &amp; \langle \alpha_1,\beta_n \rangle \\ \vdots &amp; \ddots &amp; \vdots \\ \langle \alpha_n ,\beta_1 \rangle  &amp; \cdots &amp; \langle\alpha_n ,\beta_n \rangle  \end{vmatrix}$</p>
+</blockquote>
+<p>注意此处系数是 $-1/(2\mu_0)$ 而非 $-1/(4\mu_0)$ 。这是因为之前的张量指标写法（ $F_{\mu\nu}F^{\mu\nu}$ ）导致交换 $\mu, \nu$ 会重复求和，所以之前要多除以一个 $1/2$ 。</p>
+<p>从 $\mathcal{L}$ 的形式可以看出，它其实是一个 4-形式，而不是一个标量场。这是因为它要被积分成为作用量 $\begin{aligned} S = \int \mathcal{L} \end{aligned}$ 。</p>
+<p>对作用量变分得到：</p>
+<p>$\begin{aligned} \delta S&amp;\stackrel{1}{=}\int \delta \mathcal{L} \\ &amp;\stackrel{2}=\int -\frac{1}{2\mu_0} [(\delta F) \wedge (\star F) +F\wedge(\delta\star F)] + (\delta A)\wedge (\star J) \\ &amp;\color{blue}{\stackrel{3}{=}}\int -\frac{1}{2\mu_0} [(\delta F) \wedge (\star F)+(\star \delta F)\wedge F] + (\delta A)\wedge (\star J) \\ &amp; \color{blue}{\stackrel{4}=} \int -\frac{1}{2\mu_0} [(\delta F) \wedge (\star F)+(\delta F)\wedge (\star F)] + (\delta A)\wedge (\star J) \\ &amp;\stackrel{5}=\int -\frac{1}{\mu_0} (\delta F) \wedge (\star F) + (\delta A)\wedge (\star J) \\ &amp;\stackrel{6}= \int -\frac{1}{\mu_0} (\delta \mathrm{d}A) \wedge (\star F) + (\delta A)\wedge (\star J) \\ &amp;\stackrel{7}= \int -\frac{1}{\mu_0} \mathrm{d}(\delta A) \wedge (\star F) + (\delta A)\wedge (\star J) \\ &amp;\color{blue}{\stackrel{8}=} \int -\frac{1}{\mu_0} (\delta A) \wedge (\mathrm{d}\star F) + (\delta A)\wedge (\star J) \\ &amp;\stackrel{9}= \int  (\delta A) \wedge \left(-\frac{1}{\mu_0}\mathrm{d}\star F + \star J\right) \end{aligned}$</p>
+<p>其中第 3 个等号用到了：</p>
+<p>$\begin{aligned} \alpha\wedge\beta &amp;= (-1)^{\deg(\alpha)\deg(\beta)}\end{aligned} \beta \wedge \alpha$</p>
+<p>其中 $\deg(\alpha)$ 代表 $\alpha$ 的阶数，例如此处 $\deg(F)=2$ ，因为 $F$ 是 2-form。</p>
+<p>第 4 个等号用到了：</p>
+<p>$\begin{aligned} \star \alpha\wedge\beta &amp;= (-1)^{\deg(\star\alpha)\deg(\beta)}\beta\wedge\star\alpha \\ &amp;= (-1)^{\deg(\star\alpha)\deg(\beta)}\langle\beta,\alpha\rangle \omega \\ &amp;= (-1)^{\deg(\star\alpha)\deg(\beta)}\langle\alpha,\beta\rangle \omega \\ &amp;= (-1)^{\deg(\star\alpha)\deg(\beta)}\alpha \wedge\star\beta \end{aligned}$</p>
+<p>第 8 个等号用到了分部积分：</p>
+<p>$\begin{aligned} \int (\mathrm{d}\alpha) \wedge \beta &amp;= \int \left[\cancel{\mathrm{d}(\alpha \wedge \beta)} - (-1)^{\text{deg}(\alpha)} \alpha \wedge \mathrm{d}\beta\right]\end{aligned}$</p>
+<p>之所以 $\int_M\mathrm{d}(\alpha \wedge \beta) = 0$ ，是因为根据斯托克斯定理（Stoke&rsquo;s theorem）， $\int_M\mathrm{d}(\alpha \wedge \beta)=\int_{\partial M} \alpha \wedge \beta$ ，其中 $\partial M$ 是 $M$ 的边界。而 $\int_{\partial M} \alpha \wedge \beta =0$ （变分法的边界条件为 $\delta A|_{\partial M}=0$ ）。</p>
+<p>由于 $\delta S =0$ 对任意 $\delta A$ 成立，于是有 $-\frac{1}{\mu_0}\mathrm{d}\star F + \star J = 0$ ，即麦克斯韦方程：</p>
+<p>$\color{red}{\mathrm{d}\star F =\mu_0 \star J}$</p>
+<p>写成这样有什么好处？答案是它很容易被推广到弯曲时空。从平直时空到弯曲时空，我们只需要替换度规即可，这在上式中反映为替换 Hodge 星算子，因为 Hodge 星算子是依赖度规定义的。</p>
+<h2 id="六协变逆变形式的对比">六、协变/逆变形式的对比</h2>
+<p>最后，我们对比一下指标写法和微分形式写法：</p>
+<p>（逆变）指标写法：</p>
+<p>$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;= \mu_0 J^\nu  \end{aligned}$</p>
+<p>（协变）微分形式写法：</p>
+<p>$\begin{aligned} \mathrm{d} F&amp;=0 \\ \mathrm{d} \star F &amp;= \mu_0 \star J \end{aligned}$</p>
+<p>指标写法中的 $F$ ，到了微分形式写法中却变成了对偶 $(\star F)$ ，反之亦然。这是因为指标写法中的 $F^{\mu\nu}$ 是逆变张量，而微分形式 $F$ 是协变张量。根据 $(\nabla\cdot) \sharp = \sharp\star\mathrm{d} \star $ ，有 $\partial_\mu F^{\mu\nu} = \sharp\star \mathrm{d} \star F$ 。见下图：</p>
+<p>$\begin{matrix} k\text{-vector fields} &amp; \stackrel{(\nabla\cdot)}{\longrightarrow}  &amp; (k-1)\text{-vector fields}\\ \uparrow\sharp &amp; &amp; \uparrow\sharp \\  k\text{-form}  &amp; &amp; (k-1)\text{-form}\\ \downarrow\star &amp;  &amp; \uparrow \star \\ (n-k)\text{-form} &amp;  \stackrel{\mathrm{d}}\longrightarrow  &amp; (n-k+1)\text{-form} \end{matrix}$</p>
+<blockquote>
+<p>或者也可以使用更常见的 co-differential $\mathrm{d}^\dagger$ ，它的定义式为 $\langle \alpha, \mathrm{d}\beta\rangle = \langle \mathrm{d}^\dagger\alpha, \beta\rangle$ 。</p>
+<p>可以证明（见附录）， $\mathrm{d}^\dagger \alpha = (-1)^{k}\star^{-1} \mathrm{d} \star \alpha = (-1)^{nk+n+1} s\star \mathrm{d} \star \alpha$ ，其中 $k=\deg(\alpha)$ ， $s=\operatorname{sgn}(g) := \operatorname{sgn}(\det (g))$ 是度规的符号。</p>
+<p>对于闵氏度规， $s = -1$ 。代入 $s=-1,,n=4,,k=2$ 得 $\mathrm{d}^\dagger F=\star \mathrm{d}\star F$ 。</p>
+<p>所以上图可以画成：<br>
+$\begin{matrix} 2\text{-vector fields} &amp; \stackrel{(\nabla\cdot)}{\longrightarrow}  &amp; 1\text{-vector fields}\\ \uparrow\sharp &amp; &amp; \uparrow\sharp \\  2\text{-form}  &amp; \xrightarrow{\mathrm{d}^\dagger} &amp; 1\text{-form}\\ \downarrow\star &amp;  &amp; \uparrow \star \\ 2\text{-form} &amp;  \stackrel{\mathrm{d}}\longrightarrow  &amp; 3\text{-form} \end{matrix}$</p>
+</blockquote>
+<p>于是有</p>
+<p>$\begin{matrix} F^{\mu\nu} &amp; \xrightarrow{(\nabla\cdot)} &amp; \partial_\mu F^{\mu\nu}=\mu_0J^\nu \\ \uparrow \sharp &amp; &amp; \uparrow \sharp \\ F &amp; \xrightarrow{\star \mathrm{d}\star} &amp; \star \mathrm{d} \star F \end{matrix}$</p>
+<p>可见 $\partial_\mu F^{\mu\nu}=\mu_0J^\nu$ 等价于 $\star \mathrm{d} \star F = \mu_0 J$ 。</p>
+<p>而对于 1-形式， 有$\star\star = (-1)^{k(n-k)+s} \operatorname{id} = (-1)^{1(4-1)+1} \operatorname{id} = \operatorname{id}$ 。所以 $\star \mathrm{d} \star F = \mu_0 J$ 等价于 $\mathrm{d} \star F = \mu_0 \star J$ 。</p>
+<p>对于 $\mathrm{d} F = 0  \Leftrightarrow \partial_\mu (\star F)^{\mu\nu} = 0$ 的推导也是类似的。</p>
+<h2 id="七附录">七、附录</h2>
+<p>引理 1： $\mathrm{d}(\alpha \wedge \beta) = \mathrm{d}\alpha \wedge \beta + (-1)^{\deg(\alpha)} \alpha \wedge \mathrm{d}\beta$</p>
+<blockquote>
+<p>证明：<br>
+记<br>
+$\begin{aligned} \alpha \wedge \beta &amp;= \sum_{I,J} a_I b_J\mathrm{d} x^I \wedge \mathrm{d}x^J \\ &amp;= \sum_{i_1,\cdots,i_{m},j_1,\cdots,j_n} a_{i_1,\cdots,i_{m}}b_{j_1,\cdots,j_n}\mathrm{d}x^{i_1} \wedge \cdots \wedge \mathrm{d}x^{i_m} \wedge \mathrm{d}x^j_1\wedge \cdots \wedge \mathrm{d}x^{j_n} \end{aligned}$<br>
+则<br>
+$\begin{aligned} \mathrm{d}(\alpha\wedge \beta) &amp;= \partial_i (a_I b_J) \mathrm{d}x^i\wedge \mathrm{d}x^I \wedge \mathrm{d}x^J \\ &amp;=[(\partial_i a_I)b_J \mathrm{d}x^i \wedge \mathrm{d}x^I] \wedge \mathrm{d}x^J + a_I\partial_i b_J \mathrm{d}x^i \wedge \mathrm{d}x^I \wedge \mathrm{d}x^J \\ &amp;=(\partial_i a_I\mathrm{d}x^i \wedge \mathrm{d}x^I) \wedge (b_J \mathrm{d}x^J) + (-1)^{\deg(\alpha)} (a_I\partial_i  \mathrm{d}x^I \wedge \mathrm{d}x^i) \wedge (b_J\mathrm{d}x^J) \\ &amp;=\mathrm{d}\alpha \wedge \beta + (-1)^{\deg(\alpha)} \alpha \wedge \mathrm{d}\beta \end{aligned}$</p>
+</blockquote>
+<p>引理 2：当 $\deg(\alpha)=\deg(\beta)$ 时，有 $\star\alpha \wedge \beta = (-1)^{k(n-k)}\alpha\wedge \star\beta$ ，其中 $k=\deg(\alpha)$</p>
+<blockquote>
+<p>证明：<br>
+$\begin{aligned} \star \alpha\wedge\beta &amp;= (-1)^{\deg(\star\alpha)\deg(\beta)} \beta\wedge\star\alpha \\  &amp;= (-1)^{k(n-k)}\langle\beta,\alpha\rangle \omega \\  &amp;= (-1)^{k(n-k)}\langle\alpha,\beta\rangle \omega \\  &amp;= (-1)^{k(n-k)}\alpha \wedge\star\beta \end{aligned}$</p>
+</blockquote>
+<p>引理 3： $\star\star \alpha = (-1)^{k(n-k)}s \alpha$ ，其中 $k=\deg(\alpha)$ ， $s=\operatorname{sgn}(g)$ 。</p>
+<blockquote>
+<p>证明：<br>
+$\begin{aligned} \star\alpha \wedge \star\star \alpha &amp;= \langle \star\alpha, \star\alpha \rangle\omega \\ &amp;= s\langle \alpha,\alpha \rangle\omega \\ &amp;= s\alpha \wedge \star \alpha\\ &amp;= (-1)^{k(n-k)}s \star\alpha\wedge \alpha \\ &amp;= \star\alpha\wedge \left[(-1)^{k(n-k)}s  \alpha\right] \end{aligned}$</p>
+</blockquote>
+<p>引理 4： $\mathrm{d}^\dagger \alpha = (-1)^{k}\star^{-1} \mathrm{d} \star \alpha$</p>
+<blockquote>
+<p>证明：<br>
+$\begin{aligned} \langle \beta,\mathrm{d}^\dagger \alpha\rangle&amp;= \langle \mathrm{d}\beta , \alpha\rangle \\ &amp;= \int\mathrm{d}\beta \wedge \star \alpha \\ &amp;= \int -(-1)^{\deg(\beta)} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\beta)+1} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\alpha)} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\alpha)} \beta \wedge \star (\star^{-1}\mathrm{d}\star \alpha) \\ &amp;= (-1)^{k} \langle\beta, \star^{-1}\mathrm{d} \star \alpha \rangle \end{aligned}$</p>
+</blockquote>
+<p>引理 5： $\mathrm{d}^\dagger \alpha  = (-1)^{nk+n+1} s\star \mathrm{d} \star \alpha$</p>
+<blockquote>
+<p>证明：<br>
+结合引理 3 和引理 4 即可证得。</p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2025-04-06</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.com/gm_1/" data-title="微分几何视角下的电动力学【更高更妙的电动力学·1】" data-hashtags="微分几何,电动力学"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.com/gm_1/" data-hashtag="微分几何"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://example.com/gm_1/" data-title="微分几何视角下的电动力学【更高更妙的电动力学·1】"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://example.com/gm_1/" data-title="微分几何视角下的电动力学【更高更妙的电动力学·1】"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://example.com/gm_1/" data-title="微分几何视角下的电动力学【更高更妙的电动力学·1】"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/">微分几何</a>,&nbsp;<a href="/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/">电动力学</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/products/" class="prev" rel="prev" title="直积、直和、笛卡尔积、张量积的区别是什么"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>直积、直和、笛卡尔积、张量积的区别是什么</a>
+            <a href="/gm_2/" class="next" rel="next" title="规范场论视角下的电动力学【更高更妙的电动力学·2】">规范场论视角下的电动力学【更高更妙的电动力学·2】<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <span id="busuanzi_container_site_pv">
+                Visited: <span id="busuanzi_value_site_pv"></span> times
+            </span>
+            &nbsp;|&nbsp;
+            <span id="busuanzi_container_site_uv">
+                You are the <span id="busuanzi_value_site_uv"></span> th visiter
+            </span><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"VuCJPKZn7I29ZO4cGCHLM9wQ-MdYXbMMI","appKey":"dv86fnCL7DsYQl47DmJm7mHg","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://mukjinfv.api.lncldglobal.com","visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

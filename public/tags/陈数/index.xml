@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>陈数 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/%E9%99%88%E6%95%B0/</link>
+        <description>陈数 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Apr 2025 01:08:16 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/%E9%99%88%E6%95%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>狄拉克磁单极子——陈类与陈数【更高更妙的电动力学·4】</title>
+    <link>http://example.com/gm_4/</link>
+    <pubDate>Sun, 06 Apr 2025 01:08:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_4/</guid>
+    <description><![CDATA[<p>在<a href="https://zhuanlan.zhihu.com/p/32173040413" target="_blank" rel="noopener noreffer ">前文</a>中，我们说到，如果流形是拓扑平凡的，那么对 Berry 曲率在闭合曲面 $\Sigma$ 上积分应该得到零。这是因为根据 Stokes 定理，有：</p>
+<p>$\int_\Sigma F = \int_{\partial \Sigma } A = 0$</p>
+<p>然而，在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为，此时无法定义全局单值的联络 $A$ ，导致 Stokes 定理不再适用。此话怎讲？</p>]]></description>
+</item>
+</channel>
+</rss>

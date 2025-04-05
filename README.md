@@ -1,4 +1,4 @@
-# Basic usage
+# Basic Usage
 
 ## Initialize
 
@@ -16,6 +16,15 @@
 
 `hugo`
 
-## update
+## Update
 
 `updates.bat`
+
+# Hugo theme usage
+
+## Add figure
+
+```
+{{< figure src="image/HBT_g2.png" title="Hanbury Brown and Twiss Experiment  " >}}
+```
+

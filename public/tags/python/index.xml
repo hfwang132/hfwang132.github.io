@@ -1,0 +1,74 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Python - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/python/</link>
+        <description>Python - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>运行时拉取 Jupyter Widgets UI 组件的状态</title>
+    <link>http://example.com/ui_poll/</link>
+    <pubDate>Fri, 30 Jun 2023 20:07:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/ui_poll/</guid>
+    <description><![CDATA[<p>先看一段 Jupyter Notebook 中的代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">display</span><span class="p">(</span><span class="n">slider</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">slider</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行上面的代码，<code>IntSlider()</code> 会显示一个可交互的滑块小组件。当用户滑动滑块时，它的值应当改变，变化的值应当可以在 <code>while</code> 循环内打印出来。</p>]]></description>
+</item>
+<item>
+    <title>Python 协程/异步IO</title>
+    <link>http://example.com/python_asyncio/</link>
+    <pubDate>Tue, 13 Jun 2023 22:05:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/python_asyncio/</guid>
+    <description><![CDATA[<p>最近做项目用到 Python 协程/异步，现在总结一下：</p>
+<h2 id="导入">导入</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">asyncio</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果在 IPython 环境里使用，需要加两行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+</span></span><span class="line"><span class="cl"><span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">asyncio</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="协程">协程</h2>
+<p>协程（coroutines）是 Python 异步编程的核心。一个 coroutine 要用 <code>async def</code> 来定义。</p>]]></description>
+</item>
+</channel>
+</rss>

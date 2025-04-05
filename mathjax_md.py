@@ -50,7 +50,8 @@ def main():
         r'\)': r')',
         r'\]': r']',
         r'*': r'\*',
-        r'\*\*': r'**'
+        r'\*\*': r'**',
+        r'\,': r'\ '
     }
 
     print(f"File path: {args.file_path}")

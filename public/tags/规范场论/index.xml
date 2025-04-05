@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>规范场论 - 标签 - Haifei&#39;s Home</title>
+        <link>http://example.com/tags/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA/</link>
+        <description>规范场论 - 标签 - Haifei&#39;s Home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Apr 2025 00:48:30 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>规范场论视角下的电动力学【更高更妙的电动力学·2】</title>
+    <link>http://example.com/gm_2/</link>
+    <pubDate>Sun, 06 Apr 2025 00:48:30 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://example.com/gm_2/</guid>
+    <description><![CDATA[<p>这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。</p>
+<p>本文依然采用 $(-,+,+,+)$ 的度规约定。</p>
+<hr>
+<p><strong>为什么说电动力学是规范场论？</strong></p>
+<p>为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。</p>]]></description>
+</item>
+</channel>
+</rss>
