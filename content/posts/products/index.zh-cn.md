@@ -128,7 +128,7 @@ $\times_{i=1}^{\infty} Z_2$
 对于任意一个多重线性映射 $f:V\times W \rightarrow U$ ，都存在（同构意义上）唯一的向量空间 $V\otimes W$ ，以及映射 $\otimes:V\times W \rightarrow V \otimes W$ 和线性映射 $\psi: V \otimes W \rightarrow U$ ，使得 $f = \otimes \circ \psi$ 。这个向量空间 $V\otimes W$ 定义为 $V$ 和 $W$ 的张量积。此处符号 $\times$ 指笛卡尔积。
 
 > 补充说明：多重线性映射是指有多个向量变量且对每个变量都是线性的映射。 具体来说， $n$ 重线性映射定义为 $f:V_1\times V_2\times \cdots\times V_n \rightarrow W$ ，且满足如下性质：  
-> $\begin{align} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{align}$
+> $$\begin{aligned} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n) \\\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}$$
 
 注意，在上述定义中，符号 $\otimes$ 有两个不同的意思，其一是向量空间之间的张量积 $V \otimes W$ ，其二是两个向量空间的元素做张量积运算，也就是从 $V\times W$ 到 $V \otimes W$ 的映射。
 
