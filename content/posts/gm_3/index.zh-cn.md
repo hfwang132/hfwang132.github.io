@@ -140,7 +140,7 @@ $\begin{aligned} \Delta \theta  = \int\_{\partial \Sigma} A = \int\_{\Sigma} \ma
 
 所以几何相也可以由曲率 2-形式 $F$ 在曲面 $\Sigma$ 上积分得到：
 
-$\boxed{ \gamma = \int\_\Sigma F}$
+$\boxed{ \Delta \theta = \int\_\Sigma F}$
 
 如果我们取 $\Sigma$ 为闭合曲面，则有 $\partial \Sigma=0$ ，此时有
 
