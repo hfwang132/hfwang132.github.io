@@ -1,110 +1,162 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>量子信息 - 分类 - Haifei&#39;s Home</title>
-        <link>http://example.com/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
-        <description>量子信息 - 分类 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jan 2025 21:03:37 &#43;0800</lastBuildDate><atom:link href="http://example.com/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="self" type="application/rss+xml" /><item>
-    <title>量子达尔文主义</title>
-    <link>http://example.com/quantum_darwinism/</link>
-    <pubDate>Wed, 08 Jan 2025 21:03:37 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/quantum_darwinism/</guid>
-    <description><![CDATA[<p>个人认为在量子力学的诠释中，目前最有趣的是 Zurek 的 <strong>Existential Interpretation（存在主义诠释）</strong>，也被称为<strong>量子达尔文主义（Quantum Darwinism）</strong> [1]。Zurek 本人是退相干理论的奠基人之一。</p>]]></description>
-</item>
-<item>
-    <title>相空间为什么有时看起来像一个复平面？</title>
-    <link>http://example.com/phase_space_complex/</link>
-    <pubDate>Sat, 27 Jul 2024 15:52:22 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/phase_space_complex/</guid>
-    <description><![CDATA[<p>学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。</p>
-<blockquote>
-<p>例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。</p>
-<p>例 2：给定经典电磁场的哈密顿量和边界条件，某个模式上的电场强度构成一个构型空间，该模式上电场强度的余弦分量和正弦分量构成一个相空间。</p>]]></description>
-</item>
-<item>
-    <title>黑体辐射的推导（无废话版）</title>
-    <link>http://example.com/black_body/</link>
-    <pubDate>Sat, 27 Jul 2024 15:50:09 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/black_body/</guid>
-    <description><![CDATA[<p>闲来无事，复习一下黑体辐射吧~</p>
-<p>很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。</p>
-<p>本文单刀直入，直接闭嘴计算。</p>
-<h2 id="1-黑体辐射公式是什么">1. 黑体辐射公式是什么</h2>
-<p>黑体辐射公式指的是一个黑体在单位频率中所辐射的能量密度。</p>]]></description>
-</item>
-<item>
-    <title>为什么热光场的光强服从指数分布？</title>
-    <link>http://example.com/thermal_exponential_dist/</link>
-    <pubDate>Sat, 27 Jul 2024 15:45:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/thermal_exponential_dist/</guid>
-    <description><![CDATA[<h2 id="1-精彩的推理">1. 精彩的推理</h2>
-<p>诺奖得主 Ketterle 在<a href="https://av.tib.eu/media/42704" target="_blank" rel="noopener noreffer ">8.422公开课</a>中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证：</p>
-<p>根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分布。</p>]]></description>
-</item>
-<item>
-    <title>再见了旋转波近似：量子拉比模型的解析解</title>
-    <link>http://example.com/rabi/</link>
-    <pubDate>Sat, 27 Jul 2024 15:42:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/rabi/</guid>
-    <description><![CDATA[<h2 id="1-前言">1. 前言</h2>
-<p>在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。</p>]]></description>
-</item>
-<item>
-    <title>激光的全量子理论</title>
-    <link>http://example.com/laser_quantum2/</link>
-    <pubDate>Fri, 19 Jul 2024 01:07:36 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/laser_quantum2/</guid>
-    <description><![CDATA[<blockquote>
-<p>大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？</p>
-</blockquote>
-<p>本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。</p>]]></description>
-</item>
-<item>
-    <title>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</title>
-    <link>http://example.com/spdc_optical_amp/</link>
-    <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/spdc_optical_amp/</guid>
-    <description><![CDATA[<p>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</p>
-<p>我们先用极限思维，考虑两个极限：</p>
-<p>极限1：放大器的增益等于1，也就是没有任何增益</p>]]></description>
-</item>
-<item>
-    <title>量子纠缠的速度是否超过光速？</title>
-    <link>http://example.com/contextuality/</link>
-    <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/contextuality/</guid>
-    <description><![CDATA[<p>太长不看版：</p>
-<p>“超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子态和测量基矢共同作为 reality，这叫做互文性。非局域性是互文性的一个推论。</p>]]></description>
-</item>
-<item>
-    <title>位置测量的塌缩态</title>
-    <link>http://example.com/position_measurement/</link>
-    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/position_measurement/</guid>
-    <description><![CDATA[<p>一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？</p>
-<hr>
-<p>太长不看版：</p>
-<p>设待测系统的波函数为 $\varphi(x)$ ，则坍缩后的波函数为：</p>]]></description>
-</item>
-<item>
-    <title>产生湮灭算符是怎么得到的？</title>
-    <link>http://example.com/annilation_op/</link>
-    <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/annilation_op/</guid>
-    <description><![CDATA[<p>产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。</p>
-<p>想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的：</p>
-<p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
-<p>即</p>
-<p>$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>量子信息 on Haifei&#39;s Home</title>
+    <link>http://example.com/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
+    <description>Recent content in 量子信息 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 08 Jan 2025 21:03:37 +0800</lastBuildDate>
+    <atom:link href="http://example.com/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>量子达尔文主义</title>
+      <link>http://example.com/quantum_darwinism/</link>
+      <pubDate>Wed, 08 Jan 2025 21:03:37 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/quantum_darwinism/</guid>
+      <description>&lt;p&gt;个人认为在量子力学的诠释中，目前最有趣的是 Zurek 的 &lt;strong&gt;Existential Interpretation（存在主义诠释）&lt;/strong&gt;，也被称为&lt;strong&gt;量子达尔文主义（Quantum Darwinism）&lt;/strong&gt; [1]。Zurek 本人是退相干理论的奠基人之一。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>相空间为什么有时看起来像一个复平面？</title>
+      <link>http://example.com/phase_space_complex/</link>
+      <pubDate>Sat, 27 Jul 2024 15:52:22 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/phase_space_complex/</guid>
+      <description>&lt;p&gt;学过物理的同学们都知道相空间，它是由广义坐标 $q$ 和广义动量 $p$ 构成的。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;例 1：单摆的角度构成一个构型空间 $S_1$ 。角度和角动量构成一个相空间 $S_1 \times \mathbb{R}$ 。&lt;/p&gt;&#xA;&lt;p&gt;例 2：给定经典电磁场的哈密顿量和边界条件，某个模式上的电场强度构成一个构型空间，该模式上电场强度的余弦分量和正弦分量构成一个相空间。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>黑体辐射的推导（无废话版）</title>
+      <link>http://example.com/black_body/</link>
+      <pubDate>Sat, 27 Jul 2024 15:50:09 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/black_body/</guid>
+      <description>&lt;p&gt;闲来无事，复习一下黑体辐射吧~&lt;/p&gt;&#xA;&lt;p&gt;很多讲黑体辐射的文章都要一上来就跟你讲一大段历史，很容易看迷糊。&lt;/p&gt;&#xA;&lt;p&gt;本文单刀直入，直接闭嘴计算。&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-黑体辐射公式是什么&#34;&gt;1. 黑体辐射公式是什么&lt;/h2&gt;&#xA;&lt;p&gt;黑体辐射公式指的是一个黑体在单位频率中所辐射的能量密度。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>为什么热光场的光强服从指数分布？</title>
+      <link>http://example.com/thermal_exponential_dist/</link>
+      <pubDate>Sat, 27 Jul 2024 15:45:26 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/thermal_exponential_dist/</guid>
+      <description>&lt;h2 id=&#34;1-精彩的推理&#34;&gt;1. 精彩的推理&lt;/h2&gt;&#xA;&lt;p&gt;诺奖得主 Ketterle 在&lt;a href=&#34;https://av.tib.eu/media/42704&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;8.422公开课&lt;/a&gt;中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证：&lt;/p&gt;&#xA;&lt;p&gt;根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分布。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>再见了旋转波近似：量子拉比模型的解析解</title>
+      <link>http://example.com/rabi/</link>
+      <pubDate>Sat, 27 Jul 2024 15:42:49 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/rabi/</guid>
+      <description>&lt;h2 id=&#34;1-前言&#34;&gt;1. 前言&lt;/h2&gt;&#xA;&lt;p&gt;在量子力学的早期阶段，拉比为了处理电磁场与原子的相互作用，提出了拉比模型。由于这个模型只量子化了原子，而没有量子化电磁波，因此它虽然能解释众多现象（例如拉比振荡），但不能解释自发辐射这种涉及电磁场量子化的现象。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>激光的全量子理论</title>
+      <link>http://example.com/laser_quantum2/</link>
+      <pubDate>Fri, 19 Jul 2024 01:07:36 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/laser_quantum2/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？</title>
+      <link>http://example.com/spdc_optical_amp/</link>
+      <pubDate>Mon, 27 May 2024 18:36:47 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/spdc_optical_amp/</guid>
+      <description>&lt;p&gt;SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？&lt;/p&gt;&#xA;&lt;p&gt;我们先用极限思维，考虑两个极限：&lt;/p&gt;&#xA;&lt;p&gt;极限1：放大器的增益等于1，也就是没有任何增益&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>量子纠缠的速度是否超过光速？</title>
+      <link>http://example.com/contextuality/</link>
+      <pubDate>Mon, 27 May 2024 18:34:24 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/contextuality/</guid>
+      <description>&lt;p&gt;太长不看版：&lt;/p&gt;&#xA;&lt;p&gt;“超距且瞬时（超光速）”的相互作用是一种过时的观点。根据狭义相对论，类空距离的事件之间不存在任何相互作用。学界的主流观点是将量子态和测量基矢共同作为 reality，这叫做互文性。非局域性是互文性的一个推论。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>位置测量的塌缩态</title>
+      <link>http://example.com/position_measurement/</link>
+      <pubDate>Mon, 27 May 2024 17:49:27 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/position_measurement/</guid>
+      <description>&lt;p&gt;一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;太长不看版：&lt;/p&gt;&#xA;&lt;p&gt;设待测系统的波函数为 $\varphi(x)$ ，则坍缩后的波函数为：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>产生湮灭算符是怎么得到的？</title>
+      <link>http://example.com/annilation_op/</link>
+      <pubDate>Mon, 27 May 2024 17:47:25 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/annilation_op/</guid>
+      <description>&lt;p&gt;产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。&lt;/p&gt;&#xA;&lt;p&gt;想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$&lt;/p&gt;&#xA;&lt;p&gt;即&lt;/p&gt;&#xA;&lt;p&gt;$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp;amp; \omega \\ -\omega &amp;amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>激光的一种简单的量子描述</title>
+      <link>http://example.com/laser_quantum/</link>
+      <pubDate>Mon, 27 May 2024 17:42:31 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/laser_quantum/</guid>
+      <description>&lt;p&gt;本文旨在从基本量子动力学出发，推导出激光的相干态。&lt;/p&gt;&#xA;&lt;p&gt;考虑一个二能级系统和一个单模光场的相互作用，且光场频率等于能级差。&lt;/p&gt;&#xA;&lt;p&gt;二能级系统一开始处于激发态 $|e\rangle$ ，光场处于真空态 $|0\rangle$ 。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>光子的轨道角动量</title>
+      <link>http://example.com/oam/</link>
+      <pubDate>Mon, 27 May 2024 17:35:05 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/oam/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;1992 年发表在 PRA 上的一篇文章 &lt;a href=&#34;#ref_1&#34; rel=&#34;&#34;&gt;[1]&lt;/a&gt; 指出，光子也有轨道角动量（OAM，Orbital Angular Momentum）。与自旋角动量（即偏振，SAM，Spin Angular Momentum）只能取 $\pm \hbar$ 相比，轨道角动量可以取 $\hbar$ 的任意整数倍。这样的轨道角动量可以由螺旋形状的波前所携带。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>量子纠缠与经典关联的区别，以及量子测量问题</title>
+      <link>http://example.com/classical_correlation/</link>
+      <pubDate>Mon, 27 May 2024 17:33:11 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/classical_correlation/</guid>
+      <description>&lt;p&gt;很多物理工作者向大众科普量子纠缠的时候都会举一个例子：&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;想象你有两个盒子，其中一个放了披萨，另一个放了汉堡，在打开盒子之前无法知道其中是什么。Alice 和 Bob 一人拿走一个盒子，并且走到相距很远的地方。此时 Alice 打开盒子就能知道遥远彼端的 Bob 的盒子里有什么。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>量子计量学（Quantum Metrology）简明入门</title>
+      <link>http://example.com/quantum_metrology/</link>
+      <pubDate>Tue, 23 Apr 2024 19:05:46 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/quantum_metrology/</guid>
+      <description>&lt;h2 id=&#34;一量子计量学介绍&#34;&gt;一、量子计量学介绍&lt;/h2&gt;&#xA;&lt;p&gt;所谓量子计量学（Quantum Metrology），就是利用量子物态的量子性质进行精密测量的学问。&lt;/p&gt;&#xA;&lt;p&gt;之所以要研究量子计量学，是因为任何物理量的测量精度都由量子力学中的海森堡不确定性原理所限制，这叫做海森堡极限（Heisenberg Limit）。如何逼近以及提升这个极限，就是量子计量学的目标。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【量光实验杂谈·三】量子态层析</title>
+      <link>http://example.com/state_tomography/</link>
+      <pubDate>Mon, 22 Apr 2024 14:43:42 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/state_tomography/</guid>
+      <description>&lt;h2 id=&#34;quantum-state-tomography量子态层析&#34;&gt;Quantum State Tomography（量子态层析）&lt;/h2&gt;&#xA;&lt;p&gt;Quantum state tomography（量子态层析）就是根据【对量子态系综的测量结果】反推【量子态】的过程。它的 formulation 非常简单，具体如下：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>光子和电磁场波包有什么关系</title>
+      <link>http://example.com/photon_wave_packets/</link>
+      <pubDate>Sat, 13 Apr 2024 16:10:38 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/photon_wave_packets/</guid>
+      <description>&lt;h3 id=&#34;一个波包可以对应一个光子&#34;&gt;一个波包可以对应一个光子&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;：一个光子可以处于不同频率的&lt;strong&gt;相干叠加&lt;/strong&gt;态中： $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$ ，此时该光子可以表现为一个波包。&lt;/p&gt;&#xA;&lt;p&gt;你可以想象&lt;strong&gt;一个原子退激发产生一个光子&lt;/strong&gt;，这个光子当然会表现为一个波包。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>光子有波函数吗？</title>
+      <link>http://example.com/photon_wave_func/</link>
+      <pubDate>Sat, 09 Mar 2024 17:37:15 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/photon_wave_func/</guid>
+      <description>&lt;p&gt;光子有时空表象下的波函数：&lt;/p&gt;&#xA;&lt;p&gt;$\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$&lt;/p&gt;&#xA;&lt;p&gt;其中 $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$ 。&lt;/p&gt;&#xA;&lt;p&gt;直观来看，就是让场算符 $E^{-}(\mathbf{r},t)$ 在时空点 $(\mathbf{r},t)$ 处创造一个态 $|\mathbf{r},t\rangle$ ，再求这个态和 $|\psi\rangle$ 之间的 overlap。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>复数对于描述电磁波有什么重要性？</title>
+      <link>http://example.com/complex_numbers_in_em/</link>
+      <pubDate>Fri, 16 Feb 2024 00:32:34 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/complex_numbers_in_em/</guid>
+      <description>&lt;p&gt;在经典力学中，复数只是一个用来简化计算的数学技巧。&lt;/p&gt;&#xA;&lt;p&gt;在量子力学中，复数不再只是一个数学技巧，而是有一定的物理意义。考虑经典矢势：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;其中 $\mathbf{k}$ 和 $\lambda$ 分别代表空间模式和偏振模式&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【量光实验杂谈·二】HBT实验测量SPDC多模压缩态的频谱关联与纯度</title>
+      <link>http://example.com/hbt_spectral_correlation/</link>
+      <pubDate>Mon, 05 Feb 2024 00:12:16 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/hbt_spectral_correlation/</guid>
+      <description>&lt;p&gt;上篇我们说了在 HBT 实验中，用非光子数分辨的单光子探测器测量量子二阶关联函数的原理。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/679453473&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/679453473&lt;/a&gt;&lt;br&gt;&#xA;这篇我们来看看量子二阶关联函数有什么用。除了老生常谈的用来区分【超泊松统计/泊松统计/亚泊松统计】以及区分【光子集聚/反集聚】以外，HBT 实验还可以用来测量多模压缩态的频谱纯度。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【量光实验杂谈·一】非光子数分辨探测器测二阶关联函数（g2）的原理</title>
+      <link>http://example.com/hbt_g2/</link>
+      <pubDate>Mon, 05 Feb 2024 00:11:33 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/hbt_g2/</guid>
+      <description>&lt;h2 id=&#34;hbt-实验&#34;&gt;HBT 实验&lt;/h2&gt;&#xA;&lt;p&gt;做量光实验的小伙伴一定知道 HBT 实验可以用来测二阶关联函数 g2，即将一束光用 50:50 的分束器分成两束，再分别用两个探测器探测，并统计两边光强的关联随延迟的变化，如下图所示：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>广义量子测量：POVM 简介</title>
+      <link>http://example.com/povm/</link>
+      <pubDate>Fri, 26 Jan 2024 23:36:13 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/povm/</guid>
+      <description>&lt;h2 id=&#34;投影测量&#34;&gt;投影测量&lt;/h2&gt;&#xA;&lt;p&gt;传统意义上的（Von Neumann 意义上的）测量是一系列投影算符。对可观测量所对应的自伴算子进行谱分解 $O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|$ ，即可得到这些投影算符 $|\varphi_i\rangle\langle\varphi_i|$ 。这一部分学过初等量子力学的同学都很熟悉。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

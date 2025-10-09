@@ -159,15 +159,13 @@ $\int_\Sigma F = \int_{\partial \Sigma } A = 0$
 <p>我们知道，恰当形式都是闭形式。因为 $\mathrm{d}\mathrm{d}=0$ 。</p>
 <blockquote>
 <p>恰当形式指的是这样一种形式，它是另外一个形式的（外）微分： $\exists \alpha, \  \omega = \mathrm{d}\alpha$ 。<br>
-闭形式指的是这样一种形式，它的（外）微分为零： $\mathrm{d}\omega =0$ 。</p>
-</blockquote>
+闭形式指的是这样一种形式，它的（外）微分为零： $\mathrm{d}\omega =0$ 。</p></blockquote>
 <p>但反过来，是不是所有闭形式都是恰当形式呢？对于拓扑平凡的流形，例如 $\mathbb{R}^n$ ，的确如此。但对于一般的流形而言，并非所有闭形式都是恰当形式。我们下面举一个例子：</p>
 <blockquote>
 <p><strong>例</strong></p>
 <p>想象一个无限长圆柱体的侧面（$\mathbb{R}^1 \times S^1$），上面有一个均匀环绕它一圈的电场 $E= c\ \mathrm{d}\theta$ ，其中 $c$ 是常数。这样的电场 $E$ 是无旋的 ( $\mathrm{d}E=0$ )，也就是说，该电场是一个闭形式。</p>
 <p>然而，此时 $E$ 不是一个保守场：一个电子朝电场的方向绕一圈回到原来的位置，能量会减少。</p>
-<p>可见，此时我们无法定义全局单值的电势，也就是说，我们无法找到一个 $\phi$ ，使得 $E = \mathrm{d} \phi$ 。换句话说， $E$ 不是恰当形式。</p>
-</blockquote>
+<p>可见，此时我们无法定义全局单值的电势，也就是说，我们无法找到一个 $\phi$ ，使得 $E = \mathrm{d} \phi$ 。换句话说， $E$ 不是恰当形式。</p></blockquote>
 <p>在物理中，我们通常默认：如果一个形式是闭形式，那么它也是恰当形式。这是因为在大部分情况下，我们研究的流形没有“孔洞”。这样的流形可以叫做拓扑平凡的。</p>
 <p>然而，在有“孔洞”的流形上，这是不成立的。此时闭形式未必是恰当形式。</p>
 <p>上同调（Cohomology）就是研究“不恰当的闭形式”的学问。具体来说，它研究可以把“不恰当的闭形式”分成多少类。这些等价类构成一个群，叫做上同调群。</p>
@@ -181,16 +179,14 @@ $\int_\Sigma F = \int_{\partial \Sigma } A = 0$
 <p>除了 de Rham 上同调以外，还有其他上同调理论。奇异上同调（Singular Cohomology）使用了奇异同调（Singular Homology）中的单形（Simplex）和链（Chain）等概念来定义同调群：</p>
 <p>$\boxed{ H^n(M;\mathbb{F}) = \frac{{c\mid\delta c = 0}}{{c\mid \exists a,\delta a = c}} } $</p>
 <p>其中 $c$ 是 n 阶 co-chain， $\delta$ 是 co-boundary 算子。它们是借助同调中的 chain 和 boundary 算子定义的（见<a href="https://zhuanlan.zhihu.com/p/629852598" target="_blank" rel="noopener noreffer ">这篇文章</a>）。另外， $\mathbb{F}$ 代表 co-chain 的系数环，可以是 $\mathbb{Z}$ 或者 $\mathbb{R}$ 。</p>
-<p>de Rham 上同调群 $H_{\text{dR}}^n(M) $ 同构于奇异上同调群 $H^n(M;\mathbb{R})$ 。而（第一）陈类本质上是 2 阶奇异上同调群 $H^2(M;\mathbb{Z})$ 中的元素。</p>
-</blockquote>
+<p>de Rham 上同调群 $H_{\text{dR}}^n(M) $ 同构于奇异上同调群 $H^n(M;\mathbb{R})$ 。而（第一）陈类本质上是 2 阶奇异上同调群 $H^2(M;\mathbb{Z})$ 中的元素。</p></blockquote>
 <h2 id="二局部联络缠绕数winding-number">二、局部联络、缠绕数（Winding Number）</h2>
 <p>回到一开始的问题。我们说在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为此时无法定义全局单值的联络 $A$ 。不过，联络 $A$ 虽然不可全局定义，但仍然可以局部定义——我们可以给它打补丁。</p>
 <p>具体来说，我们在上半曲面 $\Sigma_1$ 上定义联络 $A_1$ ，在下半曲面 $\Sigma_2$ 定义联络 $A_2$ ，这两个半曲面在中间赤道处相交。对于相交区域 $U=\Sigma_1 \cup \Sigma_2 \simeq S^1$ ，我们需要让 $A_1$ 与 $A_2$ 只相差一个规范变换： $A_2  = A_1 + \mathrm{d}\lambda$ 。</p>
 <p>相交区域 $U$ 是一个“圈”（ $\simeq S^1$ ），而 $e^{i\lambda} \in U(1)$ 也是一个“圈”，这引出了一个重要的概念：缠绕数。具体来说，在 $U$ 上转一圈回到原点之后， $\Delta \lambda = \oint_{U} \mathrm{d}\lambda $ 不需要为零，相差 $2\pi$ 的整数倍也是没有问题的，即：</p>
 <p>$\oint_{U} \mathrm{d}\lambda = \oint_{U} \nabla \lambda \cdot \mathrm{d}\mathbf{l} = 2k\pi \quad(k\in\mathbb{Z})$</p>
 <blockquote>
-<p>从波函数的规范变换 $\psi \mapsto e^{i\lambda} \psi$ 可以看出，出发一圈后回到原点时，只需要 $\Delta \lambda = 2k\pi$ 即可。</p>
-</blockquote>
+<p>从波函数的规范变换 $\psi \mapsto e^{i\lambda} \psi$ 可以看出，出发一圈后回到原点时，只需要 $\Delta \lambda = 2k\pi$ 即可。</p></blockquote>
 <p>这里的 $k$ 就是<strong>缠绕数</strong>。它代表两个局部联络之间连接处的规范变换“缠绕”了多少圈。</p>
 <p>为什么 $\Delta \lambda$ 不必为零？因为 $A_1$ 与 $A_2$ 不是全局联络 $A$ 的一部分，而是两个完全不同的局部联络，我们只是把它们 “粘” 在一起，而胶水就是规范变换。这个规范变换的 $\lambda$ 无需满足单值条件 $\oint_{U} \mathrm{d}\lambda  = 0$ 。</p>
 <h2 id="三陈数chern-number">三、陈数（Chern Number）</h2>
@@ -206,8 +202,7 @@ $\int_\Sigma F = \int_{\partial \Sigma } A = 0$
 <blockquote>
 <p>可见，在 $\Sigma \simeq S^2$ 上，陈数等于缠绕数。</p>
 <p>当然，这只是 $\Sigma \simeq S^2$ 的情形。在凝聚态物理中，更常见的是“甜甜圈” $\Sigma \simeq T^2$ 。此时我们可以在 x 和 y 两个方向上缠绕。可以证明，此时的陈数是两个方向上的缠绕数的差。</p>
-<p>这里定义的陈数是在 2 维闭合曲面上积分得到的。实际上，在 2n 维闭合曲面上积分即可得到第 n 陈数，而我们这里说的只是第一陈数。</p>
-</blockquote>
+<p>这里定义的陈数是在 2 维闭合曲面上积分得到的。实际上，在 2n 维闭合曲面上积分即可得到第 n 陈数，而我们这里说的只是第一陈数。</p></blockquote>
 <p>不同的曲率 2-形式在闭合曲面上积分，可能得到相同的陈数，所以我们可以依据陈数对曲率 2-形式进行分类，这些等价类就叫做陈类。</p>
 <h2 id="四狄拉克磁单极子">四、狄拉克磁单极子</h2>
 <p>接下来我们把以上所学应用到一个具体的例子：狄拉克磁单极子。</p>

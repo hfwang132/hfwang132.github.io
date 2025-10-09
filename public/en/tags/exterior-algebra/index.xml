@@ -1,18 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Exterior Algebra - Tag - Haifei&#39;s Home</title>
-        <link>http://example.com/en/tags/exterior-algebra/</link>
-        <description>Exterior Algebra - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</lastBuildDate><atom:link href="http://example.com/en/tags/exterior-algebra/" rel="self" type="application/rss+xml" /><item>
-    <title>What on earth are the pseudovectors?</title>
-    <link>http://example.com/en/pseudovectors/</link>
-    <pubDate>Sat, 10 Jun 2023 02:21:13 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/pseudovectors/</guid>
-    <description><![CDATA[<h2 id="1-introduction">1 Introduction</h2>
-<p>In physics textbooks, we often come across the terms &ldquo;pseudo-vector&rdquo; and &ldquo;pseudo-scalar.&rdquo;</p>
-<p>In fact, on a 3-dimensional manifold, a &ldquo;pseudo-vector&rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &ldquo;pseudo-scalar&rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.</p>
-<p>When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector. Similarly, due to the Hodge duality between $\bigwedge^3(T_pM)$ and $\bigwedge^0(T_pM)$ (scalar fields), we mistakenly treat the pseudo-scalar as a scalar.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exterior Algebra on Haifei&#39;s Home</title>
+    <link>http://example.com/en/tags/exterior-algebra/</link>
+    <description>Recent content in Exterior Algebra on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 10 Jun 2023 02:21:13 +0800</lastBuildDate>
+    <atom:link href="http://example.com/en/tags/exterior-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What on earth are the pseudovectors?</title>
+      <link>http://example.com/en/pseudovectors/</link>
+      <pubDate>Sat, 10 Jun 2023 02:21:13 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/pseudovectors/</guid>
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1 Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In physics textbooks, we often come across the terms &amp;ldquo;pseudo-vector&amp;rdquo; and &amp;ldquo;pseudo-scalar.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;In fact, on a 3-dimensional manifold, a &amp;ldquo;pseudo-vector&amp;rdquo; is the exterior product of two tangent vectors, denoted as $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$, while a &amp;ldquo;pseudo-scalar&amp;rdquo; is the exterior product of three tangent vectors, denoted as $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$.&lt;/p&gt;&#xA;&lt;p&gt;When equipped with an inner product (or non-degenerate bilinear form), there exists a Hodge duality between $\bigwedge^2(T_pM)$ and $\bigwedge^1(T_pM)$, which leads us to mistakenly consider the pseudo-vector as a vector. Similarly, due to the Hodge duality between $\bigwedge^3(T_pM)$ and $\bigwedge^0(T_pM)$ (scalar fields), we mistakenly treat the pseudo-scalar as a scalar.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

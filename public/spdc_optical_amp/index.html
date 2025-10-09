@@ -169,8 +169,7 @@
 <p>$\rho=\operatorname{tr}_c[|\Psi\rangle\langle\Psi|]$</p>
 <blockquote>
 <p>严格的具体计算可能不太好算，做量子信息理论的大佬看到有兴趣的话可以帮忙算一下。另外还要考虑用什么 entanglement measure。PPT 准则肯定用不了，因为这是两个 mode，而不是两个 qubit。</p>
-<p>不过也可以猜一下计算过程：盲猜经过 OPA 并且 trace 掉 OPA idler 的这个过程等价于一个 dephasing channel。然后我们再把 SPDC 态在低增益极限下近似为一个贝尔态。此时纠缠程度就直接取决于 dephasing 的强度了，这个强度与 OPA 的增益正相关，并且很可能正比于增益，也就是 $\exp(g_2)$ 。考虑一个 20 分贝的增益，那么纠缠程度会减小 $10^{20/10} = 100$ 倍。</p>
-</blockquote>
+<p>不过也可以猜一下计算过程：盲猜经过 OPA 并且 trace 掉 OPA idler 的这个过程等价于一个 dephasing channel。然后我们再把 SPDC 态在低增益极限下近似为一个贝尔态。此时纠缠程度就直接取决于 dephasing 的强度了，这个强度与 OPA 的增益正相关，并且很可能正比于增益，也就是 $\exp(g_2)$ 。考虑一个 20 分贝的增益，那么纠缠程度会减小 $10^{20/10} = 100$ 倍。</p></blockquote>
 <p>所以经过一通“如算”，我们得到结论：OPA 的增益越大，纠缠程度越小。</p>
 <hr>
 <h2 id="二基于受激辐射的光放大器">二、基于受激辐射的光放大器</h2>
@@ -183,11 +182,10 @@
 <p>$(\Delta X)^2 = G (\Delta X_{0})^2 + (2 n_{\text{sp}}-1)(G-1) \frac{1}{4}$</p>
 <p>其中 $X$ 是光场的任意一个 quadrature，可以理解为电场强度的实部或虚部。 $G$ 是增益。 $n_\text{sp} = \frac{N_2}{N_2-N_1}$ 表示布居数反转的程度， $n_\text{sp}$ 越大，反转程度越低， $n_\text{sp}$ 越小，反转程度越高，最小为 1。</p>
 <p>可以发现，EDFA 不仅将输入信号的噪声放大了 $G$ 倍，还额外引入了真空场的噪声，并且将真空场的噪声放大了 $ (2 n_{\text{sp}}-1)(G-1)$ 倍。这就是 ASE，Amplified Spontaneous Emission，即被放大的自发辐射噪声。见下图：</p>
-<figure><img src="/spdc_optical_amp/image/edfa.jpg"><figcaption>
+<figure><img src="/spdc_optical_amp/image/edfa.jpg"/><figcaption>
       <h4>经过 EDFA 的量子态的 Wigner 表示。图源 [1]</h4>
     </figcaption>
 </figure>
-
 <p>以上说的是动力学。这些动力学如何影响纠缠呢？</p>
 <p>众所周知，SPDC 得到的 signal 和 idler 是一个纠缠态： $|\Psi\rangle_\text{SPDC} \approx |\text{vac}\rangle + \lambda \int \mathrm{d}\omega_s \mathrm{d}\omega_i f(\omega_s,\omega_i)a^\dag_s(\omega_s) a^\dag_i(\omega_i) |\text{vac}\rangle$ ，其中 $f(\omega_s,\omega_i)$ 是联合频率分布，取决于相位匹配条件和 pump 的线宽（也就是动量守恒与能量守恒条件）。 $|\text{vac}\rangle$ 代表所有模式上的真空态， $\lambda \ll 1$ 表示低增益极限下的 SPDC 的平均光子数，这是实验上常用的情况。</p>
 <p>$f(\omega_s,\omega_i)$ 通常不是可分的，即不能被写成 $f(\omega_s,\omega_i) = f_s(\omega_s) f_i(\omega_i)$ 。因此 SPDC 的 signal 和 idler 模式之间呈现出频率纠缠。</p>
@@ -197,11 +195,10 @@
 <p>$|0\rangle \otimes |0\rangle \otimes |G,0\rangle \otimes |G,0\rangle   +\lambda(|1\rangle \otimes |0\rangle \otimes |G,0\rangle \otimes |G,1\rangle+ |0\rangle \otimes |1\rangle \otimes |G,1\rangle \otimes |G,0\rangle)$</p>
 <p>其中 $|G,0\rangle,|G,1\rangle$ 分别表示 $|0\rangle ,|1\rangle$ 经过 EDFA 得到的态。这个东西我实在是不会算。但是我们可以从它们的 Wigner 函数的形状上看出一些端倪。</p>
 <p>我们首先看一下 $|0\rangle$ 和 $|1\rangle$ 的 Wigner 函数：</p>
-<figure><img src="/spdc_optical_amp/image/fock_wigner.jpg"><figcaption>
+<figure><img src="/spdc_optical_amp/image/fock_wigner.jpg"/><figcaption>
       <h4>真空态和单光子数态的 Wigner 函数，图源 Wikipedia  </h4>
     </figcaption>
 </figure>
-
 <p>它们经过大增益的 EDFA 之后，就会像一张大饼一样，从原点向四面八方摊平，并且还要再加上被放大的自发辐射噪声（ASE），从而单光子数态的 Wigner negativity 应该也会消失。</p>
 <p>此时的态已经完全是一个粒子数和相位不确定性都非常大的混态，类似于 thermal state。为什么我 claim 它是一个混态？这是因为在 Tavis-Cummings model 中，最后一步的计算要 trace 掉原子态，这几乎一定会给出一个混态。</p>
 <p>在如此大的增益以及粒子数不确定性下， $|0\rangle$ 和 $|1\rangle$ 的区别已经不大，因此应当会有 $|G,0\rangle \approx |G,1\rangle$ 。于是量子态就可以写成：</p>

@@ -155,11 +155,10 @@ You might be surprised: did people only discover this in 1992? In fact, helical 
 <h2 id="1-hermite-gaussian-hg-beams">1. Hermite-Gaussian (HG) Beams</h2>
 <p>Before introducing Laguerre-Gaussian beams that carry orbital angular momentum, it is best to introduce Hermite-Gaussian beams.</p>
 <p>Why introduce Gaussian beams? Because the electromagnetic waves obtainable in experiments are not ideal plane waves but Gaussian beams output by lasers.</p>
-<figure><img src="/oam/image/gaussian.jpg"><figcaption>
+<figure><img src="/oam/image/gaussian.jpg"/><figcaption>
       <h4>Waist width w0, Rayleigh length zR, and divergence angle theta of a Gaussian beam, image source Wikipedia</h4>
     </figcaption>
 </figure>
-
 <p>The electric field amplitude of a common Hermite-Gaussian beam is as follows:</p>
 <p>$\begin{aligned} E_{m,n}(x,y,z) = &amp; ,E_0 \color{blue}{ \frac{w_0}{w(z)}\exp\left[-\frac{x^2+y^2}{w(z)^2}\right] } \times \\ &amp; \color{green}{\exp\left[-\mathrm{i}\frac{k(x^2+y^2)}{2 R(z)}\right]} \color{orange}{\exp\left[\mathrm{i}\psi(z)\right]} \color{gray}{\exp[-\mathrm{i}kz]} \times \\ &amp; \color{red}{H_m\left[\sqrt{2}\frac{x}{w(z)}\right]H_n\left[\sqrt{2}\frac{y}{w(z)}\right]} \end{aligned} $</p>
 <p>where:</p>
@@ -173,13 +172,11 @@ You might be surprised: did people only discover this in 1992? In fact, helical 
 <blockquote>
 <p>$E_{m,n}(x,y,z)$ only represents the amplitude of the electric field and does not include polarization information.</p>
 <p>Adding polarization information is easy: if it is $x$-direction polarized, simply multiply $E_{m,n}(x,y,z)$ by the unit vector in the $x$ direction $\hat{x}$. If it is circularly polarized, multiply by $\hat{x} \pm \mathrm{i}\hat{y}$.</p>
-<p>Note that $E_{m,n}(x,y,z)$ is a complex number. For classical electromagnetic waves, the real part of this is the actual electric field amplitude. For quantum electromagnetic waves, we can assign an annihilation operator to this mode, which is a linear combination of plane wave annihilation operators, with coefficients obtainable by Fourier analysis.</p>
-</blockquote>
-<figure><img src="/oam/image/HG.jpg"><figcaption>
+<p>Note that $E_{m,n}(x,y,z)$ is a complex number. For classical electromagnetic waves, the real part of this is the actual electric field amplitude. For quantum electromagnetic waves, we can assign an annihilation operator to this mode, which is a linear combination of plane wave annihilation operators, with coefficients obtainable by Fourier analysis.</p></blockquote>
+<figure><img src="/oam/image/HG.jpg"/><figcaption>
       <h4>HG modes, image source Wikipedia</h4>
     </figcaption>
 </figure>
-
 <h2 id="2-laguerre-gaussian-lg-beams">2. Laguerre-Gaussian (LG) Beams</h2>
 <p>In the solutions of the two-dimensional quantum harmonic oscillator, besides the linear vibrations represented by Hermite polynomials, there are rotational motions represented by Laguerre polynomials.</p>
 <p>Below we give the form of the Laguerre-Gaussian beam:</p>
@@ -187,19 +184,17 @@ You might be surprised: did people only discover this in 1992? In fact, helical 
 <p>where $\color{blue}{\text{waist divergence}}$ and $\color{green}{\text{curvature radius}}$ are the same as those of the Hermite-Gaussian beam. There are two differences:</p>
 <p>First, the higher-order terms change from Hermite polynomials to Laguerre polynomials $\color{red}{L_p^{|l|} (t)}$. The additional factors $\color{red}{\left(\sqrt{2}\frac{r}{w(z)}\right)^{|l|}}$ and $\color{red}{\exp(-\mathrm{i}l\varphi)}$ represent a singularity at the origin and a helical wavefront (carrying orbital angular momentum $\hbar l$), respectively.</p>
 <p>Second, the Gouy phase shift $\color{orange}{\psi(z) = (2p + |l|+ 1)\arctan \frac{z}{z_R}}$ becomes $(2p + |l|+ 1)$ times that of the HG mode.</p>
-<figure><img src="/oam/image/LG.jpg"><figcaption>
+<figure><img src="/oam/image/LG.jpg"/><figcaption>
       <h4>LG modes, image source Wikipedia</h4>
     </figcaption>
 </figure>
-
 <p>Just as rotation can be decomposed into a linear combination of vibrations, LG modes can also be represented as coherent combinations of HG modes. This is similar to circular polarization being decomposable into a combination of two linear polarizations.</p>
 <h2 id="3-manipulating-spin-angular-momentum-and-orbital-angular-momentum-with-a-q-plate">3. Manipulating Spin Angular Momentum and Orbital Angular Momentum with a Q-Plate</h2>
 <p>A q-plate, proposed in 2006 <a href="#ref%5c_4" rel="">[4]</a>, is essentially a half-wave plate with its optical axis varying with position, and the angle $\alpha$ of the optical axis satisfies $\alpha(r,\varphi) = q \varphi + \alpha_0$. Its Jones matrix is $\begin{bmatrix} \cos 2\alpha &amp; \sin 2\alpha \\ \sin 2\alpha &amp; -\cos 2\alpha \end{bmatrix}$.</p>
-<figure><img src="/oam/image/qplate.jpg"><figcaption>
+<figure><img src="/oam/image/qplate.jpg"/><figcaption>
       <h4>Optical axis pattern of a q-plate, image source [4]</h4>
     </figcaption>
 </figure>
-
 <p>Consider a q-plate acting on a left-handed polarized fundamental Gaussian beam, resulting in:</p>
 <p>$\begin{bmatrix} \cos 2\alpha &amp; \sin 2\alpha \\ \sin 2\alpha &amp; -\cos 2\alpha \end{bmatrix} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{\mathrm{i}}{\sqrt{2}} \end{bmatrix} =  e^{\mathrm{i}2q\varphi} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ -\frac{\mathrm{i}}{\sqrt{2}} \end{bmatrix}$</p>
 <p>As can be seen, after passing through the q-plate, the left-handed polarized light becomes right-handed polarized light carrying $2q\hbar$ orbital angular momentum.</p>

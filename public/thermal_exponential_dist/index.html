@@ -151,8 +151,7 @@
 <p>诺奖得主 Ketterle 在<a href="https://av.tib.eu/media/42704" target="_blank" rel="noopener noreffer ">8.422公开课</a>中讲经典热光场的 $g^{(2)}$ 时用了一个非常妙的论证：</p>
 <p>根据中心极限定理，电场 $E$ 服从高斯分布，于是光强 $I$ 服从指数分布。</p>
 <blockquote>
-<p>指数分布的概率密度函数（pdf）为： $f(x) = \gamma e^{-\gamma x}$ 。</p>
-</blockquote>
+<p>指数分布的概率密度函数（pdf）为： $f(x) = \gamma e^{-\gamma x}$ 。</p></blockquote>
 <p>而指数分布的矩有如下性质：</p>
 <p>$\langle I^n \rangle = n! \langle I\rangle^n$</p>
 <p>于是一个热光场的经典二阶关联函数 $g^{(2)}(0)$ 就等于</p>
@@ -167,8 +166,7 @@ $p(E&lt;x) = \Phi(x) = \int_{-\infty}^{x} \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{t
 则光强的 cdf 为<br>
 $p(I&lt;y) = p(E^2 &lt; y) = p(-\sqrt{y}&lt;E&lt;\sqrt{y}) = \Phi(\sqrt{y}) - \Phi(-\sqrt{y}) = 2\Phi(\sqrt{y}) - 1$<br>
 所以光强的 pdf 应该是<br>
-$f(y) = p^\prime(I &lt; y) = 2 \Phi^\prime(\sqrt{y}) = \frac{1}{\sigma\sqrt{2\pi y}} e^{-\frac{y}{2\sigma^2}}$</p>
-</blockquote>
+$f(y) = p^\prime(I &lt; y) = 2 \Phi^\prime(\sqrt{y}) = \frac{1}{\sigma\sqrt{2\pi y}} e^{-\frac{y}{2\sigma^2}}$</p></blockquote>
 <p>这不是指数分布！和真正的指数分布相比，它多了一个 $y^{-1/2}$ 因子。</p>
 <p>问题出在哪里？</p>
 <p>我们可以换个思路，反过来问：如果一个随机变量服从指数分布，那么它的平方根服从什么分布？</p>
@@ -178,8 +176,7 @@ $p(I&lt;y) = 1 - e^{-\gamma y}$<br>
 那么电场的 cdf 为：<br>
 $p(E &lt; x) = \frac{1 + p(-x&lt;E&lt;x)}{2} = \frac{1 + p(I&lt;x^2)}{2}  = \frac{2 - e^{-\gamma x^2}}{2}$<br>
 所以电场的 pdf 应该是：<br>
-$f(x) = p^\prime(E&lt;x) = \gamma x e^{-\gamma x^2}$</p>
-</blockquote>
+$f(x) = p^\prime(E&lt;x) = \gamma x e^{-\gamma x^2}$</p></blockquote>
 <p>这个分布叫做瑞利分布，它比高斯分布多了一个 $x$ 因子。</p>
 <p>直觉敏锐的同学可以想到，瑞利分布实际上对应一个服从高斯分布的二维随机向量的模长：</p>
 <p>$f(r) = \int_{0}^{2\pi} \frac{1}{2\pi} e^{-\frac{r^2}{2\sigma^2}} r\mathrm{d}\theta$</p>
@@ -196,8 +193,7 @@ $f(x) = p^\prime(E&lt;x) = \gamma x e^{-\gamma x^2}$</p>
 <p>于是量子 $g^{(2)}$ 为</p>
 <p>$$ \begin{align} g^{(2)} := \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} = \frac{\sum n(n-1) p_n }{(\sum n p_n)^2} = 2 \end{align} $$</p>
 <blockquote>
-<p>计算留给读者作为一个有趣的练习。关键在于计算几何分布的矩，它比指数分布的矩要复杂得多。</p>
-</blockquote>
+<p>计算留给读者作为一个有趣的练习。关键在于计算几何分布的矩，它比指数分布的矩要复杂得多。</p></blockquote>
 <p>可见，虽然量子 $g^{(2)}$ 的形式变了，但对应的概率分布，也从光强所服从的指数分布，变成了粒子数所服从的几何分布（也就是指数分布的离散版本）。这两个效应完美抵消，使得量子 $g^{(2)}$ 仍然等于 2。</p>
 <h2 id="4-量子性">4. 量子性</h2>
 <p>量子 $g^{(2)}$ 比经典 $g^{(2)}$ 特殊在哪呢？特殊之处在于：量子 $g^{(2)}$ 可以小于 1，而经典 $g^{(2)}$ 不能小于 1。</p>
@@ -205,8 +201,7 @@ $f(x) = p^\prime(E&lt;x) = \gamma x e^{-\gamma x^2}$</p>
 <p>而量子 $g^{(2)}$ 就不一样了。探测到一个光子就意味着光场少了一个光子，而单光子态只有一个光子，探测到一个就没了。可见对于单光子态而言，量子 $g^{(2)}$ 为 0。</p>
 <blockquote>
 <p>更一般而言，对于量子 $g^{(2)}$ 小于 1 的光场，我们称之为亚泊松光场；对于量子 $g^{(2)}$ 大于 1 的光场，我们称之为超泊松光场。</p>
-<p>当光场为（相位确定或不确定的）相干态时，量子 $g^{(2)}$ 等于 1，此时光子数服从泊松分布。它的经典对应是一个相位确定或不确定（但幅值确定）的正弦波。</p>
-</blockquote>
+<p>当光场为（相位确定或不确定的）相干态时，量子 $g^{(2)}$ 等于 1，此时光子数服从泊松分布。它的经典对应是一个相位确定或不确定（但幅值确定）的正弦波。</p></blockquote>
 <p>量子 $g^{(2)}$ 还有一个特殊之处：对于热光场而言，即使只有一个频率模式，该模式也能表现出量子 $g^{(2)}$ 为 2。而对于经典热光场而言，之前的论证可能涉及不同模式之间的叠加。这一点在<a href="https://av.tib.eu/media/42704" target="_blank" rel="noopener noreffer ">公开课</a>中一度引起了困惑。</p>
 <p>当然，如果对经典情形也使用 Boltzmann law，也可以立即得到指数分布。只不过利用中心极限定理的论证实在很妙。也许中心极限定理与 Boltzmann law 之间有普适的联系。</p>
 </div><div class="post-footer" id="post-footer">

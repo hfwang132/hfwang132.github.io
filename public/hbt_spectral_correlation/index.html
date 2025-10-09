@@ -172,15 +172,13 @@ https://zhuanlan.zhihu.com/p/679453473
 <p>$\begin{aligned} H=i\hbar \chi \sum_{k}\left( \lambda_k A^\dag_k B^\dag_k - \lambda_k A_k B_k\right) \end{aligned}$</p>
 <p>其中 $\sum_k\lambda^2_k=1$ 。</p>
 <blockquote>
-<p>注意：由于奇异值分解的谱总是非负实数，所以 $\lambda_k$ 是实数且大于零。</p>
-</blockquote>
+<p>注意：由于奇异值分解的谱总是非负实数，所以 $\lambda_k$ 是实数且大于零。</p></blockquote>
 <p>这其实就是多模压缩态的哈密顿量。</p>
 <blockquote>
 <p>复习一下各种压缩态：<br>
 单模压缩态： $\begin{aligned} H=i\hbar\left(g^*\frac{a^2}{2}-g\frac{a^{\dag2}}{2}\right) \end{aligned}$<br>
 双模压缩态： $\begin{aligned} H=i\hbar\left(g^*a b-g a^\dag b^\dag\right) \end{aligned}$<br>
-多模压缩态： $\begin{aligned} H=i\hbar\sum_{k}\left(g_k^*a_k b_k-g_k a_k^\dag b_k^\dag\right) \end{aligned}$</p>
-</blockquote>
+多模压缩态： $\begin{aligned} H=i\hbar\sum_{k}\left(g_k^*a_k b_k-g_k a_k^\dag b_k^\dag\right) \end{aligned}$</p></blockquote>
 <p>现在我们分别来看看薛定谔绘景与海森堡绘景下的系统演化。</p>
 <p>在薛定谔绘景下，</p>
 <p>$\begin{aligned} |\Psi_{\text{out}}\rangle &amp;=e^{\frac{H\tau}{i\hbar}}|\Psi_{\text{in}}\rangle \\ &amp;= \sum_{k} \frac{1}{\cosh(r_k)}\sum_{n=0}^{\infty}\tanh^n(r_k)|n_k,n_k\rangle \end{aligned}$</p>
@@ -189,8 +187,7 @@ https://zhuanlan.zhihu.com/p/679453473
 <p>$|\Psi_{\text{out}}\rangle\approx \sum_{k} \left(|0_k,0_k\rangle + r_k|1_k,1_k\rangle\right)$</p>
 <blockquote>
 <p>这也是大多数实验所符合的情况。<br>
-在探测到光子的前提下，条件量子态（Conditional State）为 $|\Psi_\text{conditional}\rangle=\sum_k\lambda_k|1_k,1_k\rangle$ 。这就是预报式单光子源的原理。</p>
-</blockquote>
+在探测到光子的前提下，条件量子态（Conditional State）为 $|\Psi_\text{conditional}\rangle=\sum_k\lambda_k|1_k,1_k\rangle$ 。这就是预报式单光子源的原理。</p></blockquote>
 <p>在海森堡绘景下，</p>
 <p>$\begin{aligned} A_k &amp;\rightarrow e^{\frac{H\tau}{i\hbar}} A_k e^{-\frac{H\tau}{i\hbar}} \\ &amp;= A_k + [e^{\frac{H\tau}{i\hbar}},A_k]+[e^{\frac{H\tau}{i\hbar}},[e^{\frac{H\tau}{i\hbar}},A_k]] + \cdots \\ &amp;=\cosh(r_k) A_k - \sinh(r_k)B_k^\dag \end{aligned}$</p>
 <p>$\begin{aligned} B_k &amp;\rightarrow e^{\frac{H\tau}{i\hbar}} B_k e^{-\frac{H\tau}{i\hbar}} \\ &amp;= B_k + [e^{\frac{H\tau}{i\hbar}},B_k]+[e^{\frac{H\tau}{i\hbar}},[e^{\frac{H\tau}{i\hbar}},B_k]] + \cdots \\ &amp;=\cosh(r_k) B_k - \sinh(r_k)A_k^\dag \end{aligned}$</p>
@@ -204,23 +201,20 @@ https://zhuanlan.zhihu.com/p/679453473
 对于无关联的联合频谱，有 ${\lambda_k}={1}$ ， $K=1$ 。<br>
 对于有两个模式，且系数相等的联合频谱，有 ${\lambda_k}={\frac{1}{2},\frac{1}{2}}$ ， $K=2$ 。<br>
 对于有 n 个模式，且系数相等的联合频谱，有 $K=n$ 。<br>
-对于有 n 个模式，且系数彼此不完全相等的联合频谱，有 $1&lt;K&lt;n$ 。</p>
-</blockquote>
+对于有 n 个模式，且系数彼此不完全相等的联合频谱，有 $1&lt;K&lt;n$ 。</p></blockquote>
 <p>为什么我们会关心频谱关联？这是因为它和光子的纯度有密切的关系：</p>
 <blockquote>
 <p><strong>性质</strong><br>
 在 $r_k$ 很小，且探测到光子的前提下，量子态为 $|\Psi_\text{conditional}\rangle=\sum_k\lambda_k|1_k,1_k\rangle$ 。<br>
 对于该量子态，将两个光子中的其中一个 trace 掉（做偏迹运算），剩下光子的量子态的纯度为 $P=\frac{1}{K}$ 。这是因为：<br>
-$\begin{aligned} P &amp;= \operatorname{tr}[\operatorname{tr}_2[|\psi\rangle\langle\psi|]^2] \\  &amp;=  \operatorname{tr}\left[\operatorname{tr}_B\left(\sum_{k}\lambda_k \left| 1_k, 1_k\right\rangle\sum_{l}\lambda_l \left\langle 1_l ,1_l\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\left(\sum_{k}\lambda_k^2 \left|1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\left(\lambda_k^2\left| 1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\lambda_k^4 |1_k\rangle\langle 1_k|\right] \\ &amp;=\sum_{k}\lambda_k^4=\frac{1}{K} \end{aligned}$</p>
-</blockquote>
+$\begin{aligned} P &amp;= \operatorname{tr}[\operatorname{tr}_2[|\psi\rangle\langle\psi|]^2] \\  &amp;=  \operatorname{tr}\left[\operatorname{tr}_B\left(\sum_{k}\lambda_k \left| 1_k, 1_k\right\rangle\sum_{l}\lambda_l \left\langle 1_l ,1_l\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\left(\sum_{k}\lambda_k^2 \left|1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\left(\lambda_k^2\left| 1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\lambda_k^4 |1_k\rangle\langle 1_k|\right] \\ &amp;=\sum_{k}\lambda_k^4=\frac{1}{K} \end{aligned}$</p></blockquote>
 <p>可见，纯度与施密特数呈反比关系。也就是说，频谱关联越强，光子在频域上的纯度越低。这对预报式单光子源以及各种多光子干涉实验是不利的。对于前者，频谱关联会降低单光子的频域全同性，对于后者，频谱关联会降低干涉对比度。</p>
 <h2 id="用-hbt-实验测量频谱关联">用 HBT 实验测量频谱关联</h2>
 <p>在上一篇中，我们说到 HBT 实验探测的是：</p>
 <p>$\begin{aligned} \frac{C_{12}R}{S_1S_2}=\frac{\langle n(n-1)\rangle}{\langle n\rangle^2} \end{aligned}$</p>
 <p>其中 $C_{12}$ 是两个探测器的符合计数率， $S_1$ 和 $S_2$ 分别是第一个和第二个探测器的计数率， $R$ 是光子通量。</p>
 <blockquote>
-<p>当各个模式的频率相同或相近时，有 $\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} \approx g^{(2)}(0) \end{aligned}$ 。</p>
-</blockquote>
+<p>当各个模式的频率相同或相近时，有 $\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} \approx g^{(2)}(0) \end{aligned}$ 。</p></blockquote>
 <p>我们之所以说用 HBT 实验可以测量频谱关联，是因为 $\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1+\frac{1}{K} \end{aligned}$ 。证明如下：</p>
 <p>$\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} &amp;=\frac{\langle n^2\rangle-\langle n\rangle}{\langle n\rangle^2} \\ &amp;=\frac{\sum_{k} \langle n_k^2 \rangle + 2\sum_{i&gt;j} \langle n_i n_j \rangle - \langle n\rangle}{\langle n\rangle^2} \\ &amp;= \frac{ \sum_{k} \left(\langle n_k \rangle + 2\langle n_k\rangle^2 \right) + 2\sum_{i&gt;j} \langle n_i \rangle \langle n_j \rangle  - \langle n\rangle}{\langle n\rangle^2} \\ &amp;= \frac{\langle n\rangle + \langle n\rangle^2 +\sum_{k} \langle n_k\rangle^2 - \langle n\rangle}{\langle n\rangle^2} \\ &amp;= 1+\frac{\sum_{k} \langle n_k\rangle^2}{ \left\langle \sum_{k} n_k\right\rangle^2} \\ &amp;= 1 + \frac{\sum_k \sinh^4(r_k)}{\left(\sum_k \sinh^2(r_k)\right)^2} \\ &amp;\approx 1+\frac{\sum_k r_k^4}{\left(\sum_k r_k^2\right)^2} \\ &amp;= 1 + \frac{\sum_k \lambda_k^4}{\left(\sum_k \lambda_k^2\right)^2} \\ &amp;= 1+\sum_k \lambda_k^4 \\ &amp;= 1+\frac{1}{K} \\ &amp;= 1+P \end{aligned}$</p>
 <p>其中第三个等号用到了结论：对于热光场有 $ \langle n_k^2 \rangle =\langle n_k \rangle + 2\langle n_k\rangle^2$ ，且各个模式之间没有关联 $\langle n_i n_j\rangle=\langle n_i\rangle\langle n_j\rangle$ 。</p>

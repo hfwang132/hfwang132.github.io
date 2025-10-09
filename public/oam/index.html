@@ -153,11 +153,10 @@
 <h2 id="一hermite-gaussian-hg-光束">一、Hermite-Gaussian (HG) 光束</h2>
 <p>在介绍携带轨道角动量的拉盖尔-高斯光束（Laguerre-Gaussian 光束）之前，我们最好先介绍埃尔米特-高斯光束（Hermite-Gaussian 光束）。</p>
 <p>为什么要介绍高斯光束？因为实验上能得到的电磁波并不是理想平面波，而是激光器所输出的高斯光束。</p>
-<figure><img src="/oam/image/gaussian.jpg"><figcaption>
+<figure><img src="/oam/image/gaussian.jpg"/><figcaption>
       <h4>高斯光束的束腰宽度 w0、瑞利长度 zR 和发散角 theta，图源 Wikipedia  </h4>
     </figcaption>
 </figure>
-
 <p>普通的埃尔米特-高斯光束的电场强度大小如下：</p>
 <p>$\begin{aligned} E_{m,n}(x,y,z) = &amp; ,E_0 \color{blue}{ \frac{w_0}{w(z)}\exp\left[-\frac{x^2+y^2}{w(z)^2}\right] } \times \\ &amp; \color{green}{\exp\left[-\mathrm{i}\frac{k(x^2+y^2)}{2 R(z)}\right]} \color{orange}{\exp\left[\mathrm{i}\psi(z)\right]} \color{gray}{\exp[-\mathrm{i}kz]} \times \\ &amp; \color{red}{H_m\left[\sqrt{2}\frac{x}{w(z)}\right]H_n\left[\sqrt{2}\frac{y}{w(z)}\right]} \end{aligned} $</p>
 <p>其中：</p>
@@ -171,13 +170,11 @@
 <blockquote>
 <p>$E_{m,n}(x,y,z)$ 只表示电场强度的大小，并未包含偏振信息。</p>
 <p>加上偏振信息是很容易的：如果是 $x$ 方向偏振，只需要将 $E_{m,n}(x,y,z)$ 乘以 $x$ 方向的单位向量 $\hat{x}$ 即可。如果是圆偏振，只要乘以 $\hat{x} \pm \mathrm{i}\hat{y}$ 即可。</p>
-<p>注意到 $E_{m,n}(x,y,z)$ 是一个复数。对于经典电磁波而言，真正的电场强度是它的实部。对于量子电磁波而言，我们可以指定该模式上的一个湮灭算符，这个湮灭算符是平面波湮灭算符的线性组合，系数可以由傅里叶分析得到。</p>
-</blockquote>
-<figure><img src="/oam/image/HG.jpg"><figcaption>
+<p>注意到 $E_{m,n}(x,y,z)$ 是一个复数。对于经典电磁波而言，真正的电场强度是它的实部。对于量子电磁波而言，我们可以指定该模式上的一个湮灭算符，这个湮灭算符是平面波湮灭算符的线性组合，系数可以由傅里叶分析得到。</p></blockquote>
+<figure><img src="/oam/image/HG.jpg"/><figcaption>
       <h4>HG 模式，图源 Wikipedia  </h4>
     </figcaption>
 </figure>
-
 <h2 id="二laguerre-gaussian-lg-光束">二、Laguerre-Gaussian (LG) 光束</h2>
 <p>在二维量子谐振子的解中，除了 Hermite 多项式所代表的线性振动以外，还有 Laguerre 多项式所代表的旋转运动。</p>
 <p>下面我们给出拉盖尔-高斯光束的形式：</p>
@@ -185,19 +182,17 @@
 <p>其中 $\color{blue}{\text{束腰发散}}$ 和 $\color{green}{\text{曲率半径}}$ 与埃尔米特-高斯光束相同，不同的有两点：</p>
 <p>第一，高阶项由埃尔米特多项式变为拉盖尔多项式 $\color{red}{L_p^{|l|} (t)}$ 。且额外的因子 $\color{red}{\left(\sqrt{2}\frac{r}{w(z)}\right)^{|l|}}$ 和 $\color{red}{\exp(-\mathrm{i}l\varphi)}$ 分别表示原点处的奇点以及螺旋形的波前（带轨道角动量 $\hbar l$ ）。</p>
 <p>第二，古伊相移 $\color{orange}{\psi(z) = (2p + |l|+ 1)\arctan \frac{z}{z_R}}$ 变为 HG 模式的 $2p + |l|+ 1$ 倍。</p>
-<figure><img src="/oam/image/LG.jpg"><figcaption>
+<figure><img src="/oam/image/LG.jpg"/><figcaption>
       <h4>LG 模式，图源 Wikipedia  </h4>
     </figcaption>
 </figure>
-
 <p>正如旋转可以分解为振动的线性叠加，LG 模式也可以表示为 HG 模式的相干叠加。这和圆偏振可以分解为两个线偏振的叠加类似。</p>
 <h2 id="三用-q-plate-操控自旋角动量和轨道角动量">三、用 Q-Plate 操控自旋角动量和轨道角动量</h2>
 <p>2006 年提出的 q-plate <a href="#ref%5c_4" rel="">[4]</a>本质上就是一个光轴与位置有关的半波片，且光轴的角度 $\alpha$ 满足 $\alpha(r,\varphi) = q \varphi + \alpha_0$ 。其琼斯矩阵为 $\begin{bmatrix} \cos 2\alpha &amp; \sin 2\alpha \\ \sin 2\alpha &amp; -\cos 2\alpha \end{bmatrix}$ 。</p>
-<figure><img src="/oam/image/qplate.jpg"><figcaption>
+<figure><img src="/oam/image/qplate.jpg"/><figcaption>
       <h4>q-plate 的光轴图案，图源 [4] </h4>
     </figcaption>
 </figure>
-
 <p>考察一个 q-plate 作用到一个左旋偏振的基模高斯光束上，结果为：</p>
 <p>$\begin{bmatrix} \cos 2\alpha &amp; \sin 2\alpha \\ \sin 2\alpha &amp; -\cos 2\alpha \end{bmatrix} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{\mathrm{i}}{\sqrt{2}} \end{bmatrix} =  e^{\mathrm{i}2q\varphi} \begin{bmatrix} \frac{1}{\sqrt{2}} \\ -\frac{\mathrm{i}}{\sqrt{2}} \end{bmatrix}$</p>
 <p>可见，经过 q-plate，左旋偏振光变为带 $2q\hbar$ 轨道角动量的右旋偏振光。</p>

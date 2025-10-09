@@ -162,9 +162,8 @@
 <p>$f:f(x,y)=x^2+2y^2$</p>
 <p>在 $(1,1)$ 处的微分</p>
 <p>它就是这样一个机器：</p>
-<figure><img src="/understanding_differentials/image/machine.jpg">
+<figure><img src="/understanding_differentials/image/machine.jpg"/>
 </figure>
-
 <p>它接受两个数，吐出一个数。</p>
 <p>写出来就是这样：</p>
 <p>$\mathrm{d}f|_{(1,1)}(a,b)=\frac{\partial f}{\partial x}\bigg|_{(1,1)}a+\frac{\partial f}{\partial y}\bigg|_{(1,1)}b=2a+4b$</p>
@@ -197,16 +196,14 @@
 <em>（5）数乘有乘法单位元</em><br>
 <em>（6）数乘的乘法结合律</em><br>
 <em>（7）数乘的乘法分配律（对标量分配）</em><br>
-<em>（8）数乘的乘法分配律（对矢量分配）</em></p>
-</blockquote>
+<em>（8）数乘的乘法分配律（对矢量分配）</em></p></blockquote>
 <p>向量空间不必是 $\mathbb{R}^n,,\mathbb{C}^n$，只要一个集合里定义了加法和数乘运算且满足以上性质，这个集合就是一个向量空间。</p>
 <p>我们可以定义这样一个向量空间，它其中的元素是光滑函数的集合到实数域的线性映射：</p>
 <blockquote>
 <p>$v:\mathcal{F}_M\rightarrow\mathbb{R}$ 满足<br>
 （1）$v(\lambda f+\mu g)=\lambda v(f)+\mu v(g)$ （线性律）<br>
 （2） $v|_p(f\cdot g)=f|_p\cdot v(g)+g|_p\cdot v(f)$ （莱布尼茨律）<br>
-其中 $\mathcal{F}_M$ 是微分流形 $M$ 上所有光滑函数构成的集合。</p>
-</blockquote>
+其中 $\mathcal{F}_M$ 是微分流形 $M$ 上所有光滑函数构成的集合。</p></blockquote>
 <p>可以证明， $v$ 的集合可以构成向量空间。</p>
 <p>别看这个定义这么复杂，实际上就是对一个函数在某一点求方向导数。</p>
 <p>以二元函数为例，我们显式地写出 $v$ 的一个实例： $\left(a\frac{\partial}{\partial x}+b\frac{\partial}{\partial y}\right)\bigg|_p$</p>
@@ -218,9 +215,8 @@
 <p>刚才介绍了切空间 $T_p M$ 。我们现在把切空间的对偶空间 $T_p^*M$ 叫做<em>余切空间</em>。</p>
 <p>某一点的微分正是余切空间中的元素。换言之，某一点的微分是一个余切矢量。</p>
 <p>对偶空间中的元素（余切矢量）是线性泛函，能把原空间中的元素映射成一个数。这正是我们之前所说的机器：</p>
-<figure><img src="/understanding_differentials/image/machine.jpg">
+<figure><img src="/understanding_differentials/image/machine.jpg"/>
 </figure>
-
 <p>只不过现在的输入应该是切空间中的元素 $\left(a\frac{\partial}{\partial x}+b\frac{\partial}{\partial y}\right)\bigg|_p$ 。</p>
 <p>我们说过，微分是机器的海洋。因此余切矢量的海洋（也就是微分）可以叫做余切矢量场。</p>
 <p>在数学中，微分（余切矢量场）有一个酷炫的名字，叫做余切丛的截影。详见</p>

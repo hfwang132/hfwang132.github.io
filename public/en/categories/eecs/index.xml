@@ -1,65 +1,36 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>EECS - Category - Haifei&#39;s Home</title>
-        <link>http://example.com/en/categories/eecs/</link>
-        <description>EECS - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</lastBuildDate><atom:link href="http://example.com/en/categories/eecs/" rel="self" type="application/rss+xml" /><item>
-    <title>HW &amp; SW design of the AXI Quad SPI IP core</title>
-    <link>http://example.com/en/spi/</link>
-    <pubDate>Sat, 01 Jul 2023 17:49:31 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/spi/</guid>
-    <description><![CDATA[<h3 id="1-basics">1 Basics</h3>
-<p>SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - <code>SS</code> (Slave Select), <code>SCK</code> (SPI Clock), and <code>MOSI</code> (Master-In-Slave-Out). The four wire mode has an extra line called <code>MISO</code> (Master-In-Slave-Out).</p>
-<table>
-  <thead>
-      <tr>
-          <th>Signals</th>
-          <th>Full Name</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>SS</td>
-          <td>Slave Select</td>
-      </tr>
-      <tr>
-          <td>SCK</td>
-          <td>SPI Clock</td>
-      </tr>
-      <tr>
-          <td>MOSI</td>
-          <td>Master-Out-Slave-In</td>
-      </tr>
-      <tr>
-          <td>MISO</td>
-          <td>Master-In-Slave-Out</td>
-      </tr>
-  </tbody>
-</table>
-<p>SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle. CPHA stands for clock phase &ndash; data valid at 0 degree or 180 degrees.</p>]]></description>
-</item>
-<item>
-    <title>Access the Internet from evaluation boards via PC</title>
-    <link>http://example.com/en/boards_networking/</link>
-    <pubDate>Mon, 12 Jun 2023 23:22:45 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/boards_networking/</guid>
-    <description><![CDATA[<h3 id="windows">Windows</h3>
-<p>Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to <code>192.168.137.1</code> (this is the default behavior in Windows).</p>
-<p>Then, set the gateway as <code>192.168.137.1</code> in the terminal of the development board:</p>
-<p><code>sudo route add default gw 192.168.137.1</code></p>
-<p>Set the IP address as <code>192.168.137.x</code>, where x is any value except 1 and 255 (gateway address and broadcast address):</p>]]></description>
-</item>
-<item>
-    <title>Partitioning and formatting SD cards on Linux</title>
-    <link>http://example.com/en/linux_sd_card/</link>
-    <pubDate>Mon, 12 Jun 2023 22:43:36 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/linux_sd_card/</guid>
-    <description><![CDATA[<p>To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.</p>
-<p>The main commands are as follows:</p>
-<p>First, use <code>sudo fdisk -l</code> to confirm which device in <code>/dev</code> corresponds to the SD card.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EECS on Haifei&#39;s Home</title>
+    <link>http://example.com/en/categories/eecs/</link>
+    <description>Recent content in EECS on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 01 Jul 2023 17:49:31 +0800</lastBuildDate>
+    <atom:link href="http://example.com/en/categories/eecs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HW &amp; SW design of the AXI Quad SPI IP core</title>
+      <link>http://example.com/en/spi/</link>
+      <pubDate>Sat, 01 Jul 2023 17:49:31 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/spi/</guid>
+      <description>&lt;h3 id=&#34;1-basics&#34;&gt;1 Basics&lt;/h3&gt;&#xA;&lt;p&gt;SPI has three-wire mode and four-wire mode. The three-wire mode consists of three wires - &lt;code&gt;SS&lt;/code&gt; (Slave Select), &lt;code&gt;SCK&lt;/code&gt; (SPI Clock), and &lt;code&gt;MOSI&lt;/code&gt; (Master-In-Slave-Out). The four wire mode has an extra line called &lt;code&gt;MISO&lt;/code&gt; (Master-In-Slave-Out).&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Signals&lt;/th&gt;&#xA;          &lt;th&gt;Full Name&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;SS&lt;/td&gt;&#xA;          &lt;td&gt;Slave Select&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;SCK&lt;/td&gt;&#xA;          &lt;td&gt;SPI Clock&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;MOSI&lt;/td&gt;&#xA;          &lt;td&gt;Master-Out-Slave-In&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;MISO&lt;/td&gt;&#xA;          &lt;td&gt;Master-In-Slave-Out&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &amp;ndash; clock low or high when in idle. CPHA stands for clock phase &amp;ndash; data valid at 0 degree or 180 degrees.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Access the Internet from evaluation boards via PC</title>
+      <link>http://example.com/en/boards_networking/</link>
+      <pubDate>Mon, 12 Jun 2023 23:22:45 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/boards_networking/</guid>
+      <description>&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;&#xA;&lt;p&gt;Set a network adapter that can access the internet in the Control Panel and share it with Ethernet. The IP address of Ethernet will change to &lt;code&gt;192.168.137.1&lt;/code&gt; (this is the default behavior in Windows).&lt;/p&gt;&#xA;&lt;p&gt;Then, set the gateway as &lt;code&gt;192.168.137.1&lt;/code&gt; in the terminal of the development board:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;sudo route add default gw 192.168.137.1&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Set the IP address as &lt;code&gt;192.168.137.x&lt;/code&gt;, where x is any value except 1 and 255 (gateway address and broadcast address):&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Partitioning and formatting SD cards on Linux</title>
+      <link>http://example.com/en/linux_sd_card/</link>
+      <pubDate>Mon, 12 Jun 2023 22:43:36 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/linux_sd_card/</guid>
+      <description>&lt;p&gt;To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.&lt;/p&gt;&#xA;&lt;p&gt;The main commands are as follows:&lt;/p&gt;&#xA;&lt;p&gt;First, use &lt;code&gt;sudo fdisk -l&lt;/code&gt; to confirm which device in &lt;code&gt;/dev&lt;/code&gt; corresponds to the SD card.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

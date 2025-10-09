@@ -166,8 +166,7 @@
 <p><strong>思考题 1</strong>：售卖两荤一素套餐的店的集合是什么？<br>
 答案：并非 $A \otimes B \otimes B$ 。这是因为我们不能区分两个荤菜分别来自哪两个荤菜店。正确的答案是 $A \otimes (B\odot B)$ ，其中 $\odot$ 叫做<strong>对称积（symmetric product）</strong>。</p>
 <p><strong>思考题 2</strong>：如果两种荤菜必须不一样，那么这样的店的集合是什么？<br>
-答案： $A \otimes (B\wedge B)$ ，其中 $\wedge$ 叫做<strong>外积（exterior product）<strong>或者</strong>楔积（wedge product）</strong>。</p>
-</blockquote>
+答案： $A \otimes (B\wedge B)$ ，其中 $\wedge$ 叫做<strong>外积（exterior product）<strong>或者</strong>楔积（wedge product）</strong>。</p></blockquote>
 <hr>
 <p>以下是正经科普：</p>
 <h2 id="笛卡尔积">笛卡尔积</h2>
@@ -182,11 +181,10 @@
 <p>直和与直积在大多数情况下完全相同。不同之处非常微妙，涉及范畴学。一言以蔽之，直积属于 product，直和属于 coproduct。对于无穷次直积与直和，前者允许无穷多个不为单位元的元素，后者只允许有穷多个不为单位元的元素。见下一节。</p>
 <h2 id="直积与直和的泛性质">直积与直和的泛性质</h2>
 <p>下图是直积与直和的<strong>泛性质</strong>的一个简单示意图。为了易懂，之后用群（group）代替范畴学中的对象（object），用同态（homomorphism）代替范畴学中的态射（morphism）。读者只要知道群和同态是什么，就能看懂。</p>
-<figure><img src="/products/image/direct.jpg"><figcaption>
+<figure><img src="/products/image/direct.jpg"/><figcaption>
       <h4>直积（左）与直和（右）的区别，图源：本人灵魂作画</h4>
     </figcaption>
 </figure>
-
 <p>这个图已经很清楚明白了，下面是具体的文字说明。</p>
 <p>直积的<strong>泛性质</strong>如下：</p>
 <p>对于任意两个群同态 $f_1:B \rightarrow A_1$ 和 $f_2: B\rightarrow A_2$ ，总是存在一个（在同构上意义唯一的）群 $A_1 \times A_2$ 以及同态 $\varphi:B\rightarrow A_1\times A_2$ ，使得 $f_i= \varphi \circ \pi_i (i=1,2)$ ，其中 $\pi_i$ 为<strong>投影映射</strong>（projection map），定义为 $\pi_1(a_1,a_2) := a_1,\pi_2(a_1,a_2):=a_2$ 。</p>
@@ -214,15 +212,13 @@
 <p>可见，前者可数而后者不可数，所以无穷个 $Z_2$ 的直和与无穷个 $Z_2$ 的直积是不同的。</p>
 <h2 id="张量积">张量积</h2>
 <p>直积与直和的定义只涉及到群，而张量积的定义通常涉及到向量空间（或者环上的模）。</p>
-<figure><img src="/products/image/tensor.jpg">
+<figure><img src="/products/image/tensor.jpg"/>
 </figure>
-
 <p>张量积的<strong>泛性质</strong>如下：</p>
 <p>对于任意一个多重线性映射 $f:V\times W \rightarrow U$ ，都存在（同构意义上）唯一的向量空间 $V\otimes W$ ，以及映射 $\otimes:V\times W \rightarrow V \otimes W$ 和线性映射 $\psi: V \otimes W \rightarrow U$ ，使得 $f = \otimes \circ \psi$ 。这个向量空间 $V\otimes W$ 定义为 $V$ 和 $W$ 的张量积。此处符号 $\times$ 指笛卡尔积。</p>
 <blockquote>
 <p>补充说明：多重线性映射是指有多个向量变量且对每个变量都是线性的映射。 具体来说， $n$ 重线性映射定义为 $f:V_1\times V_2\times \cdots\times V_n \rightarrow W$ ，且满足如下性质：<br>
-$$\begin{aligned} &amp;f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n) \\ &amp;=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}$$</p>
-</blockquote>
+$$\begin{aligned} &amp;f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n) \\ &amp;=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}$$</p></blockquote>
 <p>注意，在上述定义中，符号 $\otimes$ 有两个不同的意思，其一是向量空间之间的张量积 $V \otimes W$ ，其二是两个向量空间的元素做张量积运算，也就是从 $V\times W$ 到 $V \otimes W$ 的映射。</p>
 <p>张量积与直积有什么不同？下面举例说明。假设 3 维向量空间 $V$ 有三个基： ${v_1,v_2,v_3}$ ，2 维向量空间 $W$ 有两个基： ${w_1,w_2}$ ，那么它们的直积 $V\times W$ 有五个基： ${(v_1,0),(v_2,0),(v_3,0),(0,w_1),(0,w_2)}$。 而 $V$ 和 $W$ 的张量积 $V \otimes W$ 有六个基： ${v_1\otimes w_1, v_1 \otimes w_2, v_2 \otimes w_1, v_2 \otimes w_2, v_3 \otimes w_1, v_3 \otimes  w_2}$ 。</p>
 <p>可以看出，直积的维数是 m + n，而张量积的维数是 m × n。</p>

@@ -176,16 +176,14 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>给从今年三月到现在断断续续的工作做一个总结</p>
-</blockquote>
+<p>给从今年三月到现在断断续续的工作做一个总结</p></blockquote>
 <h2 id="1-rtl-sdr--pynq-z2">1 RTL-SDR &amp; PYNQ-Z2</h2>
 <h3 id="11-现有工作">1.1 现有工作</h3>
 <p>这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接来配合使用。RTL-SDR 将射频信号下变频为基带信号；PYNQ-Z2 通过 USB2.0 接口接收 RTL-SDR 返回的基带信号，并使用 FPGA 进行信号处理。最后，可以在 PYNQ Jupyter Notebook 中实现一个简单的 FM 收音机的网页应用。</p>
-<figure><img src="/work_2023_3-6/files/rtl-sdr.jpeg"><figcaption>
+<figure><img src="/work_2023_3-6/files/rtl-sdr.jpeg"/><figcaption>
       <h4>PYNQ-Z2 &#43; RTL-SDR</h4>
     </figcaption>
 </figure>
-
 <p>详情见</p>
 <ul>
 <li>
@@ -227,8 +225,7 @@
 </div><p>它直接将 <code>system-top.dts</code> 覆盖掉。而更合适的实践应该是向 <code>system-top.dts</code> 中<a href="https://github.com/Xilinx/PYNQ/blob/image_v3.0.1/sdbuild/boot/meta-pynq/recipes-bsp/device-tree/device-tree.bbappend#L22" target="_blank" rel="noopener noreffer ">增加代码</a>（PYNQ 就是这么做的）。</p>
 <p>由于这个原因，没有构建出 <a href="https://github.com/analogdevicesinc/meta-adi" target="_blank" rel="noopener noreffer ">ADI master branch</a> + PYNQ v3.0.1 的内核。也许可以对 <a href="https://github.com/analogdevicesinc/meta-adi/blob/master/meta-adi-xilinx/recipes-bsp/device-tree/device-tree.bbappend#L166" target="_blank" rel="noopener noreffer ">recipes-bsp</a> 做一些修改从而使其与 PYNQ 兼容，但是这个工作搁置了。并且我们有理由搁置这个工作，见下一节（第 2.2.2 节）。</p>
 <blockquote>
-<p>另外，Yocto 官方建议，当使用多个 Yocto Layer 的时候，应该要去 <a href="https://layers.openembedded.org/layerindex/branch/master/layers/" target="_blank" rel="noopener noreffer ">OpenEmbedded Layer Index</a> 和 <a href="https://www.yoctoproject.org/software-overview/layers/" target="_blank" rel="noopener noreffer ">Yocto Project Compatible Index</a> 查看不同的 Layer 之间是否兼容。不幸的是，这两个 Index 并未收录 meta-pynq 和 meta-adi。</p>
-</blockquote>
+<p>另外，Yocto 官方建议，当使用多个 Yocto Layer 的时候，应该要去 <a href="https://layers.openembedded.org/layerindex/branch/master/layers/" target="_blank" rel="noopener noreffer ">OpenEmbedded Layer Index</a> 和 <a href="https://www.yoctoproject.org/software-overview/layers/" target="_blank" rel="noopener noreffer ">Yocto Project Compatible Index</a> 查看不同的 Layer 之间是否兼容。不幸的是，这两个 Index 并未收录 meta-pynq 和 meta-adi。</p></blockquote>
 <h4 id="222-fpga-manager-的问题">2.2.2 FPGA MANAGER 的问题</h4>
 <p><a href="https://github.com/analogdevicesinc/meta-adi/tree/master/meta-adi-xilinx#fpga-manager" target="_blank" rel="noopener noreffer ">meta-adi-xilinx 的文档</a>明确提到了他们<strong>没有对 FPGA MANAGER 的官方支持</strong>。而如果禁用 FPGA MANAGER，那么就无法在板卡启动之后重载比特流。这让 PYNQ 失去了意义。</p>
 <p><strong>我猜 ADI 的想法是将 FPGA 作为一个功能固定的外设，即，设备树和比特流都在系统启动的时候加载好，并且不希望被修改。这与 PYNQ 的想法从根本上是矛盾的</strong>。</p>
@@ -237,8 +234,7 @@
 <h3 id="31-已有的工作">3.1 已有的工作</h3>
 <p>为了绕开上一节提到的困难，可以在用户空间中使用 AD9361 驱动，而不是将驱动集成到内核中。但是，为了与 AD9361 的 SPI 接口通信，需要在 Linux 设备树中添加一个 <code>spidev</code> 节点，从而允许通过读写 <code>/dev/spidevx.y</code> 文件来读写 SPI</p>
 <blockquote>
-<p>在 <code>/dev/spidevx.y</code> 中，<code>x</code> 代表第 <code>x</code> 个 SPI 控制器，<code>y</code> 代表第 <code>y</code> 个片选。如果使用 PS SPI，那么设备名可能为 <code>/dev/spidev0.0</code>；如果使用 PL SPI（AXI SPI），则设备名可能为 <code>/dev/spidev1.0</code>。</p>
-</blockquote>
+<p>在 <code>/dev/spidevx.y</code> 中，<code>x</code> 代表第 <code>x</code> 个 SPI 控制器，<code>y</code> 代表第 <code>y</code> 个片选。如果使用 PS SPI，那么设备名可能为 <code>/dev/spidev0.0</code>；如果使用 PL SPI（AXI SPI），则设备名可能为 <code>/dev/spidev1.0</code>。</p></blockquote>
 <p>设备树通常在启动时被 U-Boot 加载好，并且不可修改。但是 4.14 版本之后的 Linux 内核增加了对 device tree overlay（以下简称 DTO）的支持。DTO 允许在运行时动态加载新的设备树。PYNQ 库也提供了 <a href="https://pynq.readthedocs.io/en/latest/pynq_package/pynq.overlay.html#pynq.overlay.Overlay" target="_blank" rel="noopener noreffer ">API</a> 来实现这个操作：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -301,8 +297,7 @@
 <li>需要在 <code>/dts-v1/;</code> 后面增加一行 <code>/plugin/;</code> 来表示这是一个 Device Tree Overlay 而不是普通的 Device Tree。<a href="https://github.com/analogdevicesinc/meta-adi/blob/master/meta-adi-xilinx/recipes-bsp/device-tree/device-tree.bbappend#L151" target="_blank" rel="noopener noreffer ">ADI 的 recipes-bsp</a> 就是通过观察文件中是否包含 <code>/plugin/;</code> 来判断设备树是否是 Overlay。</li>
 <li><code>target</code> 表示修改哪一个节点。这里是 <code>&lt;&amp;amba&gt;</code>，它会被扩展为符号为 <code>amba</code> 的节点的 phandle。例如，如果 <code>amba</code> 节点的 phandle 为 <code>70</code>，那么 <code>&lt;&amp;amba&gt;</code> 实际上代表 <code>&lt;70&gt;</code>。一个 phandle 唯一标识了一个节点，往往是由编译器（dtc）分配的。</li>
 <li>往往需要增加编译选项 <code>-@</code>。该选项启用符号功能，从而允许通过符号对设备树节点进行引用。否则，只能通过 phandle 的绝对值来引用。</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>上述文件编译出的 DTO 配合 AXI SPI 是可以正常使用的。这就是启星他们之前的工作。但是，在将子卡从 V3 的 <a href="" rel="">FMC9361_1.0</a> 换成 <a href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank" rel="noopener noreffer ">FMCOMMS2</a>/<a href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank" rel="noopener noreffer ">FMCOMMS3</a> 之后，SPI 通信出现了一些问题，见下一节（第 3.2 节）。</p>
 <h3 id="32-遇到的问题">3.2 遇到的问题</h3>
 <h4 id="321-spi-通信问题">3.2.1 SPI 通信问题</h4>
@@ -348,15 +343,12 @@
 <li>
 <p>初始化 AD9361 时，驱动先通过 <code>GPIO_RESETB</code> 进行硬件复位（至少 1us），再读取 <code>0x037</code> 寄存器，判断 <code>PRODUCT_ID</code>。</p>
 </li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>在将 V3 的 FMC9361_1.0（以下简称 V3）换成 FMCOMMS2（以下简称 S2）和 FMCOMMS3（以下简称 S3），并修改了管脚约束之后，SPI 通信出现了问题。</p>
 <blockquote>
-<p>S2/S3 几乎可以看成同一张卡。它们的引脚定义是相同的。</p>
-</blockquote>
+<p>S2/S3 几乎可以看成同一张卡。它们的引脚定义是相同的。</p></blockquote>
 <blockquote>
-<p>V3 这张卡在网上没有公开的资料。因此希望转向 ADI 官方的 <a href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank" rel="noopener noreffer ">FMCOMMS2</a>/<a href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank" rel="noopener noreffer ">FMCOMMS3</a> 评估板。</p>
-</blockquote>
+<p>V3 这张卡在网上没有公开的资料。因此希望转向 ADI 官方的 <a href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms2-ebz" target="_blank" rel="noopener noreffer ">FMCOMMS2</a>/<a href="https://wiki.analog.com/resources/eval/user-guides/ad-fmcomms3-ebz" target="_blank" rel="noopener noreffer ">FMCOMMS3</a> 评估板。</p></blockquote>
 <p>具体来说，在 Master（AXI SPI 控制器）向 MOSI 上发送 <code>0x037</code>（读地址为 <code>0x037</code> 的寄存器）之后，Slave（AD9361）并未在 MISO 上发送 <code>0x0A</code>（<code>PRODUCT_ID</code>）。实际情况如下：</p>
 <style>
     /* CSS to style the image preview */
@@ -534,8 +526,7 @@ function openFullImage(imageUrl) {
 <h4 id="322-device-tree-overlay-问题">3.2.2 *Device Tree Overlay 问题</h4>
 <p>在 ZCU102/ZCU104 上加载 Device Tree Overlay (<code>*.dtbo</code>) 没有报错，但并未出现 <code>/dev/spidev1.0</code> 设备。</p>
 <blockquote>
-<p>ZCU102/104 的 Vivado 工程除了管脚约束和芯片型号以外都相同，因此通过 xsa 文件生成的 <code>pl.dtsi</code> 与 ZU 的没有区别。</p>
-</blockquote>
+<p>ZCU102/104 的 Vivado 工程除了管脚约束和芯片型号以外都相同，因此通过 xsa 文件生成的 <code>pl.dtsi</code> 与 ZU 的没有区别。</p></blockquote>
 <p>初步判断原因可能和 dtc 编译器有关（之前似乎遇到过类似的问题，并且是 dtc 版本导致的）。</p>
 <div class="details admonition info open">
         <div class="details-summary admonition-title">

@@ -165,9 +165,8 @@ Two Differential as Linear Function I like to think of differentials as a machin
 <p>I like to think of differentials as a machine, for example,</p>
 <p>$f: f(x,y)=x^2+2y^2$</p>
 <p>The differential at $(1,1)$ is a machine like this:</p>
-<figure><img src="/understanding_differentials/image/machine.jpg">
+<figure><img src="/understanding_differentials/image/machine.jpg"/>
 </figure>
-
 <p>It takes two numbers as input and produces one number as output.</p>
 <p>Written out, it looks like this:</p>
 <p>$\mathrm{d}f|_{(1,1)}(a,b)=\frac{\partial f}{\partial x}\bigg|_{(1,1)}a+\frac{\partial f}{\partial y}\bigg|_{(1,1)}b=2a+4b$</p>
@@ -200,16 +199,14 @@ Two Differential as Linear Function I like to think of differentials as a machin
 <em>(5) Existence of a multiplicative identity for scalar multiplication</em><br>
 <em>(6) Associativity of scalar multiplication</em><br>
 <em>(7) Distributivity of scalar multiplication with respect to vector addition</em><br>
-<em>(8) Distributivity of scalar multiplication with respect to scalar addition</em></p>
-</blockquote>
+<em>(8) Distributivity of scalar multiplication with respect to scalar addition</em></p></blockquote>
 <p>A vector space does not have to be $\mathbb{R}^n,,\mathbb{C}^n$, as long as a set is defined with addition and scalar multiplication operations satisfying the above properties, it is a vector space.</p>
 <p>We can define such a vector space, where the elements are linear maps from a set of smooth functions to the real number field:</p>
 <blockquote>
 <p>$v:\mathcal{F}_M\rightarrow\mathbb{R}$ such that<br>
 <em>(1) $v(\lambda f+\mu g)=\lambda v(f)+\mu v(g)$ (linearity)</em><br>
 <em>(2) $v|_p(f\cdot g)=f|_p\cdot v(g)+g|_p\cdot v(f)$ (Leibniz law)</em><br>
-where $\mathcal{F}_M$ is the set of all smooth functions on the differential manifold $M$.</p>
-</blockquote>
+where $\mathcal{F}_M$ is the set of all smooth functions on the differential manifold $M$.</p></blockquote>
 <p>It can be proven that the collection of $v$ forms a vector space.</p>
 <p>Although this definition seems complicated, it is actually just finding the directional derivative of a function at a certain point.</p>
 <p>Taking a bivariate function as an example, we can explicitly write out an instance of $v$: $\left(a\frac{\partial}{\partial x}+b\frac{\partial}{\partial y}\right)\bigg|_p$</p>
@@ -221,9 +218,8 @@ where $\mathcal{F}_M$ is the set of all smooth functions on the differential man
 <p>We just introduced the tangent space $T_p M$ . Now let&rsquo;s call the dual space of the tangent space $T_p^*M$ the <em>cotangent space</em>.</p>
 <p>The differential at a point is precisely an element in the cotangent space. In other words, the differential at a certain point is a cotangent vector.</p>
 <p>Elements in the dual space (cotangent vectors) are linear functionals that map elements in the original space to a number. This is exactly what we said before about machines:</p>
-<figure><img src="/understanding_differentials/image/machine.jpg">
+<figure><img src="/understanding_differentials/image/machine.jpg"/>
 </figure>
-
 <p>But now the input should be elements in the tangent space: $\left(a\frac{\partial}{\partial x}+b\frac{\partial}{\partial y}\right)\bigg|_p$ .</p>
 <p>We said that differentials form an ocean of machines. Therefore, the ocean of cotangent vectors (i.e., differentials) can be called the cotangent vector field.</p>
 <p>In mathematics, the differential (cotangent vector field) has a cool name called the cotangent bundle projection. For more details, see:</p>

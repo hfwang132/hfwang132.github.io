@@ -187,13 +187,11 @@
 <h3 id="2-axi-quad-spi-ip-核">2 AXI Quad SPI IP 核</h3>
 <p>当 Zynq PS 的 SPI 控制器不够用，或者因为其他原因（例如 MIO 被占用）而无法使用的时候，可以在 PL 端使用 SPI 控制器的 IP 核，叫做 AXI Quad SPI。</p>
 <blockquote>
-<p>本文只涉及 Standard Mode + Master Mode，不涉及 Dual/Quad Mode 以及 Slave Mode / Multi-master Mode。</p>
-</blockquote>
-<figure><img src="/spi/files/axi-quad-spi.png"><figcaption>
+<p>本文只涉及 Standard Mode + Master Mode，不涉及 Dual/Quad Mode 以及 Slave Mode / Multi-master Mode。</p></blockquote>
+<figure><img src="/spi/files/axi-quad-spi.png"/><figcaption>
       <h4>AXI Quad SPI IP 核</h4>
     </figcaption>
 </figure>
-
 <p>在上图中， <code>io1_i</code> 连接 MISO 信号；<code>ext_spi_clk</code> 和 <code>s_axi_clk</code> 都连接同一个系统时钟即可。<code>ip2intc_irpt</code> 可以连接 Zynq 的中断 <code>pl_ps_irq</code>。</p>
 <p>可以双击 IP 核配置时钟分频、片选信号个数等等。</p>
 <h3 id="3-裸机编程">3 裸机编程</h3>
@@ -407,8 +405,7 @@
 </div><h3 id="4-linux-编程">4 Linux 编程</h3>
 <p>为了在 Linux 中使用 AXI Quad SPI IP 核，需要在 Linux 设备树中添加一个 <code>spidev</code> 节点，从而允许通过读写 <code>/dev/spidevx.y</code> 文件来读写 SPI。</p>
 <blockquote>
-<p>在 <code>/dev/spidevx.y</code> 中，<code>x</code> 代表第 <code>x</code> 个 SPI 控制器，<code>y</code> 代表第 <code>y</code> 个片选。如果使用 PS SPI，那么设备名可能为 <code>/dev/spidev0.0</code>；如果使用 PL SPI（AXI SPI），则设备名可能为 <code>/dev/spidev1.0</code>。</p>
-</blockquote>
+<p>在 <code>/dev/spidevx.y</code> 中，<code>x</code> 代表第 <code>x</code> 个 SPI 控制器，<code>y</code> 代表第 <code>y</code> 个片选。如果使用 PS SPI，那么设备名可能为 <code>/dev/spidev0.0</code>；如果使用 PL SPI（AXI SPI），则设备名可能为 <code>/dev/spidev1.0</code>。</p></blockquote>
 <p>设备树通常在启动时被 U-Boot 加载好，并且不可修改。但是 4.14 版本之后的 Linux 内核增加了对 device tree overlay（以下简称 DTO）的支持。DTO 允许在运行时动态加载新的设备树。下面是一段 DTO 的源码：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -462,8 +459,7 @@
 <li>需要在 <code>/dts-v1/;</code> 后面增加一行 <code>/plugin/;</code> 来表示这是一个 Device Tree Overlay 而不是普通的 Device Tree。<a href="https://github.com/analogdevicesinc/meta-adi/blob/master/meta-adi-xilinx/recipes-bsp/device-tree/device-tree.bbappend#L151" target="_blank" rel="noopener noreffer ">ADI 的 recipes-bsp</a> 就是通过观察文件中是否包含 <code>/plugin/;</code> 来判断设备树是否是 Overlay。</li>
 <li><code>target</code> 表示修改哪一个节点。这里是 <code>&lt;&amp;amba&gt;</code>，它会被扩展为符号为 <code>amba</code> 的节点的 phandle。例如，如果 <code>amba</code> 节点的 phandle 为 <code>70</code>，那么 <code>&lt;&amp;amba&gt;</code> 实际上代表 <code>&lt;70&gt;</code>。一个 phandle 唯一标识了一个节点，往往是由编译器（dtc）分配的。</li>
 <li>往往需要增加编译选项 <code>-@</code>。该选项启用符号功能，从而允许通过符号对设备树节点进行引用。否则，只能通过 phandle 的绝对值来引用。为了查看 phandle 的绝对值，需要对设备树二进制进行反编译。</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>通过 DTO 增加 <code>spidev</code> 节点后，在 <code>/dev</code> 文件夹下就会多出一个 <code>/dev/spidev1.0</code> 文件。可以通过读写该文件来进行 SPI 通信。可以用 <code>ioctl</code> 来实现。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

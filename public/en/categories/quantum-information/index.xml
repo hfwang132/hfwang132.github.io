@@ -1,125 +1,120 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Quantum Information - Category - Haifei&#39;s Home</title>
-        <link>http://example.com/en/categories/quantum-information/</link>
-        <description>Quantum Information - Category - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 18:36:47 &#43;0800</lastBuildDate><atom:link href="http://example.com/en/categories/quantum-information/" rel="self" type="application/rss+xml" /><item>
-    <title>Does the idler light passing through the optical fiber amplifier still entangle with the signal light?</title>
-    <link>http://example.com/en/spdc_optical_amp/</link>
-    <pubDate>Mon, 27 May 2024 18:36:47 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/spdc_optical_amp/</guid>
-    <description><![CDATA[<p>Does the idler light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?</p>
-<p>Let&rsquo;s consider two extremes:</p>
-<p>Extreme 1: The gain of the amplifier is equal to 1, that is, there is no gain at all.</p>
-<p>In this case, the amplifier acts as if it has done nothing and is an identity channel. So, of course, the entanglement will still be maintained. (Actually, it&rsquo;s not necessarily the case. Even if the gain is zero, additional noise may be introduced, but we ignore it here for now).</p>]]></description>
-</item>
-<item>
-    <title>Does the speed of quantum entanglement exceed the speed of light?</title>
-    <link>http://example.com/en/contextuality/</link>
-    <pubDate>Mon, 27 May 2024 18:34:24 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/contextuality/</guid>
-    <description><![CDATA[<p>Too long; didn&rsquo;t read version:</p>
-<p>&ldquo;Spooky action at a distance (superluminal)&rdquo; is an outdated view. According to special relativity, there is no interaction between events at spacelike separation. The mainstream view in academia is to consider quantum states and measurement bases together as reality, known as contextuality. Nonlocality is a corollary of contextuality.</p>
-<hr>
-<p>Body:</p>
-<p>Discussing the &ldquo;speed&rdquo; of quantum entanglement is meaningless.</p>
-<p>If the distance between two measurement events a and b is spacelike, then a is neither in the past nor in the future of b.</p>]]></description>
-</item>
-<item>
-    <title>The collapsed state of position measurement</title>
-    <link>http://example.com/en/position_measurement/</link>
-    <pubDate>Mon, 27 May 2024 17:49:27 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/position_measurement/</guid>
-    <description><![CDATA[<p>Common sense tells us that an actual position measurement will not produce a delta function, as the delta function itself is pathological. So what should the collapsed state of an actual position measurement look like?</p>
-<hr>
-<p>TL;DR:</p>
-<p>Let the wave function of the system to be measured be $\varphi(x)$, then the collapsed wave function is:</p>
-<p>$\varphi^{(q)}(x) = \mathcal{A}\psi(q-gx) \varphi(x)$</p>
-<p>where $\psi(x)$ is the initial wave function of the instrument&rsquo;s pointer. $q$ is the reading of the instrument&rsquo;s pointer. $g$ is the coupling strength between the instrument and the system to be measured. $\begin{aligned} \mathcal{A} = \left[\int_\mathbb{R}\psi(q-gx) \varphi(x)\right]^{-1} \end{aligned}$ is the appropriate normalization constant.</p>]]></description>
-</item>
-<item>
-    <title>How are creation and annihilation operators derived?</title>
-    <link>http://example.com/en/annilation_op/</link>
-    <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/annilation_op/</guid>
-    <description><![CDATA[<p>The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.</p>
-<p>Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:</p>
-<p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
-<p>That is,</p>
-<p>$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$</p>
-<p>So, we just need to decouple them. By diagonalizing, we obtain the eigenvectors $a^{\pm} = x \pm \mathrm{i} p$, and the derivatives of $a^{\pm}$ only depend on themselves:</p>]]></description>
-</item>
-<item>
-    <title>A simple quantum description of lasers</title>
-    <link>http://example.com/en/laser_quantum/</link>
-    <pubDate>Mon, 27 May 2024 17:42:31 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/laser_quantum/</guid>
-    <description><![CDATA[<p>This article aims to derive the coherent state of a laser from basic quantum dynamics.</p>
-<p>Consider the interaction between a two-level system and a single-mode light field, where the frequency of the light field equals the energy level difference.</p>
-<p>The two-level system initially starts in the excited state $|e\rangle$, and the light field is in the vacuum state $|0\rangle$.</p>
-<p>According to the Jaynes-Cummings model, even if the light field is in the vacuum state, spontaneous emission will occur. After a short period, the quantum state evolves from $|e,0\rangle$ to:</p>]]></description>
-</item>
-<item>
-    <title>Orbital angular momentum of photons</title>
-    <link>http://example.com/en/oam/</link>
-    <pubDate>Mon, 27 May 2024 17:35:05 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/oam/</guid>
-    <description><![CDATA[<h2 id="preface">Preface</h2>
-<p>A paper published in PRA in 1992 <a href="#ref_1" rel="">[1]</a> pointed out that photons also have orbital angular momentum (OAM). Compared to spin angular momentum (i.e., polarization, SAM) which can only take $\pm \hbar$, orbital angular momentum can take any integer multiple of $\hbar$. Such orbital angular momentum can be carried by helical wavefronts.</p>
-<p>You might be surprised: did people only discover this in 1992? In fact, helical wavefronts had been studied before 1992; photons carrying angular momentum greater than $\hbar$ had already been predicted by atomic physics (though they originate from higher-order transition processes, which do not satisfy the selection rules and thus have very low probabilities, making them practically unobservable in experiments). It wasn&rsquo;t until 1992 that Allen et al. pointed out that light beams with helical wavefronts carry quantized orbital angular momentum.</p>]]></description>
-</item>
-<item>
-    <title>The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem</title>
-    <link>http://example.com/en/classical_correlation/</link>
-    <pubDate>Mon, 27 May 2024 17:33:11 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/classical_correlation/</guid>
-    <description><![CDATA[<p>Many physicists use an example to explain quantum entanglement to the public:</p>
-<blockquote>
-<p>Imagine you have two boxes, one containing pizza and the other a burger. Before opening the boxes, you cannot know what is inside. Alice and Bob each take a box and move to distant locations. When Alice opens her box, she instantly knows what is in Bob&rsquo;s box far away.</p>
-</blockquote>
-<p>This example must be wrong&hellip; because it doesn&rsquo;t involve quantum mechanics at all.</p>]]></description>
-</item>
-<item>
-    <title>A beginner&#39;s guide to quantum metrology</title>
-    <link>http://example.com/en/quantum_metrology/</link>
-    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/quantum_metrology/</guid>
-    <description><![CDATA[<h2 id="i-introduction-to-quantum-metrology">I. Introduction to Quantum Metrology</h2>
-<p>Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.</p>
-<p>The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.</p>
-<p>Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.g., weighing oneself). However, in high-precision imaging and various high-precision scientific experiments, people have indeed approached the Heisenberg Limit.</p>]]></description>
-</item>
-<item>
-    <title>Quantum state tomography - a beginner&#39;s guide</title>
-    <link>http://example.com/en/state_tomography/</link>
-    <pubDate>Mon, 22 Apr 2024 15:06:14 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/state_tomography/</guid>
-    <description><![CDATA[<h2 id="quantum-state-tomography">Quantum State Tomography</h2>
-<p>Quantum state tomography is the process of deducing the [quantum state] based on the [results of measurements on a quantum state ensemble]. Its formulation is straightforward, as follows:</p>
-<p>Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corresponding measurement probabilities $p_k = \operatorname{Tr}[\rho \Pi_k]$, find the quantum state $\rho$.</p>
-<p>In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, given $p_k$ and $\Pi_k$, find $\rho$.</p>]]></description>
-</item>
-<item>
-    <title>What is the relationship between photons and electromagnetic field wave packets?</title>
-    <link>http://example.com/en/photon_wave_packets/</link>
-    <pubDate>Sat, 13 Apr 2024 16:10:38 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/photon_wave_packets/</guid>
-    <description><![CDATA[<h3 id="a-wave-packet-can-correspond-to-a-photon">A wave packet can correspond to a photon</h3>
-<p><strong>Example</strong>: A photon can be in a <strong>coherent superposition</strong> state of different frequencies: $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$, at which point the photon can behave as a wave packet.</p>
-<p>You can imagine <strong>an atom de-exciting and emitting a photon</strong>, and this photon will indeed behave as a wave packet.</p>
-<blockquote>
-<p>Some may argue: excluding various non-ideal factors, the linewidth of this photon only depends on natural broadening (lifetime), making it look like a single frequency, thus poorly localized, and not considered a wave packet. Indeed so.<br>
-However, if we consider a single photon produced by a pulsed pump in a low-gain regime parametric process, its natural linewidth is very large. At this point, it is indeed in a coherent superposition state of different frequencies and behaves as a well-localized wave packet in the time domain.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Information on Haifei&#39;s Home</title>
+    <link>http://example.com/en/categories/quantum-information/</link>
+    <description>Recent content in Quantum Information on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 27 May 2024 18:36:47 +0800</lastBuildDate>
+    <atom:link href="http://example.com/en/categories/quantum-information/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Does the idler light passing through the optical fiber amplifier still entangle with the signal light?</title>
+      <link>http://example.com/en/spdc_optical_amp/</link>
+      <pubDate>Mon, 27 May 2024 18:36:47 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/spdc_optical_amp/</guid>
+      <description>&lt;p&gt;Does the idler light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s consider two extremes:&lt;/p&gt;&#xA;&lt;p&gt;Extreme 1: The gain of the amplifier is equal to 1, that is, there is no gain at all.&lt;/p&gt;&#xA;&lt;p&gt;In this case, the amplifier acts as if it has done nothing and is an identity channel. So, of course, the entanglement will still be maintained. (Actually, it&amp;rsquo;s not necessarily the case. Even if the gain is zero, additional noise may be introduced, but we ignore it here for now).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Does the speed of quantum entanglement exceed the speed of light?</title>
+      <link>http://example.com/en/contextuality/</link>
+      <pubDate>Mon, 27 May 2024 18:34:24 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/contextuality/</guid>
+      <description>&lt;p&gt;Too long; didn&amp;rsquo;t read version:&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Spooky action at a distance (superluminal)&amp;rdquo; is an outdated view. According to special relativity, there is no interaction between events at spacelike separation. The mainstream view in academia is to consider quantum states and measurement bases together as reality, known as contextuality. Nonlocality is a corollary of contextuality.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Body:&lt;/p&gt;&#xA;&lt;p&gt;Discussing the &amp;ldquo;speed&amp;rdquo; of quantum entanglement is meaningless.&lt;/p&gt;&#xA;&lt;p&gt;If the distance between two measurement events a and b is spacelike, then a is neither in the past nor in the future of b.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The collapsed state of position measurement</title>
+      <link>http://example.com/en/position_measurement/</link>
+      <pubDate>Mon, 27 May 2024 17:49:27 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/position_measurement/</guid>
+      <description>&lt;p&gt;Common sense tells us that an actual position measurement will not produce a delta function, as the delta function itself is pathological. So what should the collapsed state of an actual position measurement look like?&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;TL;DR:&lt;/p&gt;&#xA;&lt;p&gt;Let the wave function of the system to be measured be $\varphi(x)$, then the collapsed wave function is:&lt;/p&gt;&#xA;&lt;p&gt;$\varphi^{(q)}(x) = \mathcal{A}\psi(q-gx) \varphi(x)$&lt;/p&gt;&#xA;&lt;p&gt;where $\psi(x)$ is the initial wave function of the instrument&amp;rsquo;s pointer. $q$ is the reading of the instrument&amp;rsquo;s pointer. $g$ is the coupling strength between the instrument and the system to be measured. $\begin{aligned} \mathcal{A} = \left[\int_\mathbb{R}\psi(q-gx) \varphi(x)\right]^{-1} \end{aligned}$ is the appropriate normalization constant.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How are creation and annihilation operators derived?</title>
+      <link>http://example.com/en/annilation_op/</link>
+      <pubDate>Mon, 27 May 2024 17:47:25 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/annilation_op/</guid>
+      <description>&lt;p&gt;The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.&lt;/p&gt;&#xA;&lt;p&gt;Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:&lt;/p&gt;&#xA;&lt;p&gt;$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$&lt;/p&gt;&#xA;&lt;p&gt;That is,&lt;/p&gt;&#xA;&lt;p&gt;$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp;amp; \omega \\ -\omega &amp;amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$&lt;/p&gt;&#xA;&lt;p&gt;So, we just need to decouple them. By diagonalizing, we obtain the eigenvectors $a^{\pm} = x \pm \mathrm{i} p$, and the derivatives of $a^{\pm}$ only depend on themselves:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A simple quantum description of lasers</title>
+      <link>http://example.com/en/laser_quantum/</link>
+      <pubDate>Mon, 27 May 2024 17:42:31 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/laser_quantum/</guid>
+      <description>&lt;p&gt;This article aims to derive the coherent state of a laser from basic quantum dynamics.&lt;/p&gt;&#xA;&lt;p&gt;Consider the interaction between a two-level system and a single-mode light field, where the frequency of the light field equals the energy level difference.&lt;/p&gt;&#xA;&lt;p&gt;The two-level system initially starts in the excited state $|e\rangle$, and the light field is in the vacuum state $|0\rangle$.&lt;/p&gt;&#xA;&lt;p&gt;According to the Jaynes-Cummings model, even if the light field is in the vacuum state, spontaneous emission will occur. After a short period, the quantum state evolves from $|e,0\rangle$ to:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Orbital angular momentum of photons</title>
+      <link>http://example.com/en/oam/</link>
+      <pubDate>Mon, 27 May 2024 17:35:05 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/oam/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;&#xA;&lt;p&gt;A paper published in PRA in 1992 &lt;a href=&#34;#ref_1&#34; rel=&#34;&#34;&gt;[1]&lt;/a&gt; pointed out that photons also have orbital angular momentum (OAM). Compared to spin angular momentum (i.e., polarization, SAM) which can only take $\pm \hbar$, orbital angular momentum can take any integer multiple of $\hbar$. Such orbital angular momentum can be carried by helical wavefronts.&lt;/p&gt;&#xA;&lt;p&gt;You might be surprised: did people only discover this in 1992? In fact, helical wavefronts had been studied before 1992; photons carrying angular momentum greater than $\hbar$ had already been predicted by atomic physics (though they originate from higher-order transition processes, which do not satisfy the selection rules and thus have very low probabilities, making them practically unobservable in experiments). It wasn&amp;rsquo;t until 1992 that Allen et al. pointed out that light beams with helical wavefronts carry quantized orbital angular momentum.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem</title>
+      <link>http://example.com/en/classical_correlation/</link>
+      <pubDate>Mon, 27 May 2024 17:33:11 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/classical_correlation/</guid>
+      <description>&lt;p&gt;Many physicists use an example to explain quantum entanglement to the public:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Imagine you have two boxes, one containing pizza and the other a burger. Before opening the boxes, you cannot know what is inside. Alice and Bob each take a box and move to distant locations. When Alice opens her box, she instantly knows what is in Bob&amp;rsquo;s box far away.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;This example must be wrong&amp;hellip; because it doesn&amp;rsquo;t involve quantum mechanics at all.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A beginner&#39;s guide to quantum metrology</title>
+      <link>http://example.com/en/quantum_metrology/</link>
+      <pubDate>Tue, 23 Apr 2024 19:05:46 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/quantum_metrology/</guid>
+      <description>&lt;h2 id=&#34;i-introduction-to-quantum-metrology&#34;&gt;I. Introduction to Quantum Metrology&lt;/h2&gt;&#xA;&lt;p&gt;Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.&lt;/p&gt;&#xA;&lt;p&gt;The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.&lt;/p&gt;&#xA;&lt;p&gt;Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.g., weighing oneself). However, in high-precision imaging and various high-precision scientific experiments, people have indeed approached the Heisenberg Limit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quantum state tomography - a beginner&#39;s guide</title>
+      <link>http://example.com/en/state_tomography/</link>
+      <pubDate>Mon, 22 Apr 2024 15:06:14 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/state_tomography/</guid>
+      <description>&lt;h2 id=&#34;quantum-state-tomography&#34;&gt;Quantum State Tomography&lt;/h2&gt;&#xA;&lt;p&gt;Quantum state tomography is the process of deducing the [quantum state] based on the [results of measurements on a quantum state ensemble]. Its formulation is straightforward, as follows:&lt;/p&gt;&#xA;&lt;p&gt;Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corresponding measurement probabilities $p_k = \operatorname{Tr}[\rho \Pi_k]$, find the quantum state $\rho$.&lt;/p&gt;&#xA;&lt;p&gt;In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, given $p_k$ and $\Pi_k$, find $\rho$.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is the relationship between photons and electromagnetic field wave packets?</title>
+      <link>http://example.com/en/photon_wave_packets/</link>
+      <pubDate>Sat, 13 Apr 2024 16:10:38 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/photon_wave_packets/</guid>
+      <description>&lt;h3 id=&#34;a-wave-packet-can-correspond-to-a-photon&#34;&gt;A wave packet can correspond to a photon&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: A photon can be in a &lt;strong&gt;coherent superposition&lt;/strong&gt; state of different frequencies: $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$, at which point the photon can behave as a wave packet.&lt;/p&gt;&#xA;&lt;p&gt;You can imagine &lt;strong&gt;an atom de-exciting and emitting a photon&lt;/strong&gt;, and this photon will indeed behave as a wave packet.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Some may argue: excluding various non-ideal factors, the linewidth of this photon only depends on natural broadening (lifetime), making it look like a single frequency, thus poorly localized, and not considered a wave packet. Indeed so.&lt;br&gt;&#xA;However, if we consider a single photon produced by a pulsed pump in a low-gain regime parametric process, its natural linewidth is very large. At this point, it is indeed in a coherent superposition state of different frequencies and behaves as a well-localized wave packet in the time domain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Probing the spectral purity with unheralded g2 measurements in HBT experiment</title>
+      <link>http://example.com/en/hbt_spectral_correlation/</link>
+      <pubDate>Sun, 10 Mar 2024 02:22:34 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/hbt_spectral_correlation/</guid>
+      <description>&lt;p&gt;In the previous section, we discussed the principle of measuring the quantum second-order correlation function with a non-photon-number-resolving single-photon detector in the HBT experiment.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/679453473&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://zhuanlan.zhihu.com/p/679453473&lt;/a&gt;&lt;br&gt;&#xA;In this section, let&amp;rsquo;s see what the quantum second-order correlation function is used for. In addition to the common uses such as distinguishing between super-Poissonian statistics/Poissonian statistics/sub-Poissonian statistics and distinguishing between photon bunching/anti-bunching, the HBT experiment can also be used to measure the spectral purity of multimode squeezed states.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Probing g2 with non-photon-number-resolving detectors</title>
+      <link>http://example.com/en/hbt_g2/</link>
+      <pubDate>Sun, 10 Mar 2024 02:22:26 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/hbt_g2/</guid>
+      <description>&lt;h2 id=&#34;hbt-experiment&#34;&gt;HBT Experiment&lt;/h2&gt;&#xA;&lt;p&gt;Those who have conducted quantum optics experiments must be familiar with the Hanbury Brown and Twiss (HBT) experiment, which can be used to measure the second-order correlation function g2. In this experiment, a beam of light is split into two using a 50:50 beamsplitter, and then each beam is detected separately by two detectors. The correlation of the intensities on both sides is measured as a function of delay, as shown in the figure below:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>POVM: a brief introduction</title>
+      <link>http://example.com/en/povm/</link>
+      <pubDate>Sun, 10 Mar 2024 02:22:12 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/povm/</guid>
+      <description>&lt;h1 id=&#34;projection-measurement&#34;&gt;Projection Measurement&lt;/h1&gt;&#xA;&lt;p&gt;Traditionally, a measurement, in the sense of Von Neumann, is a series of projection operators. By performing spectral decomposition on the self-adjoint operator corresponding to the observable, denoted as $ O = \sum_i \lambda_i |\varphi_i\rangle\langle\varphi_i| $, we obtain these projection operators $ |\varphi_i\rangle\langle\varphi_i| $. This part is well-known to students who have studied elementary quantum mechanics.&lt;/p&gt;&#xA;&lt;p&gt;Besides the Von Neumann measurement, there is a more general type of measurement called Generalized Measurements or Positive Operator Valued Measures (POVMs).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wave function of photons</title>
+      <link>http://example.com/en/photon_wave_func/</link>
+      <pubDate>Sun, 10 Mar 2024 02:21:37 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/photon_wave_func/</guid>
+      <description>&lt;p&gt;The wave function of a photon in the spacetime representation is:&lt;/p&gt;&#xA;&lt;p&gt;$\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$&lt;/p&gt;&#xA;&lt;p&gt;Where $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$.&lt;/p&gt;&#xA;&lt;p&gt;Intuitively, this is to let the field operator $E^{-}(\mathbf{r},t)$ create a state $|\mathbf{r},t\rangle$ at the spacetime point $(\mathbf{r},t)$, and then calculate the overlap between this state and $|\psi\rangle$.&lt;/p&gt;&#xA;&lt;p&gt;When we talk about the spacetime modes of photons, such as Gaussian pulses, hyperbolic secant pulses, etc., we are actually referring to the wave function in the spacetime representation described above.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is the significance of complex numbers in describing EM waves?</title>
+      <link>http://example.com/en/complex_numbers_in_em/</link>
+      <pubDate>Fri, 16 Feb 2024 00:32:34 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/complex_numbers_in_em/</guid>
+      <description>&lt;p&gt;In classical mechanics, complex numbers are merely a mathematical tool used to simplify calculations.&lt;/p&gt;&#xA;&lt;p&gt;In quantum mechanics, complex numbers are not just a mathematical trick, but have a certain physical significance. Consider the classical vector potential:&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( A_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + \text{c.c.}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;where $\mathbf{k}$ and $\lambda$ represent the spatial and polarization modes respectively&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Quantizing it yields the vector potential operator in the Heisenberg picture:&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathbf{A}(\mathbf{r},t)=\sum_{\mathbf{k}\lambda} \left( C_{\mathbf{k}\lambda}\hat{a}_{\mathbf{k}\lambda}e^{i(\mathbf{k}\cdot\mathbf{r}-\omega_{\mathbf{k}}t)} + C_{\mathbf{k}\lambda}^{*}\hat{a}^{\dag}_{\mathbf{k}\lambda} e^{i(\mathbf{k}\cdot\mathbf{r}+\omega_{\mathbf{k}}t)}\right)\mathbf{e}_{\mathbf{k}\lambda} \end{aligned}$&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

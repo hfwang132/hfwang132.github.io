@@ -151,8 +151,7 @@ Besides the Von Neumann measurement, there is a more general type of measurement
 $ \sum_ {x \in X} \mathsf{E}(x) = \mathbb{I}_{\mathcal{H}} $
 where $ X $ represents the set of possible measurement outcomes, and $ \mathcal{L}(\mathcal{H}) $ represents the set of all bounded operators on $ \mathcal{H} $.
 Born&rsquo;s Rule</p>
-<p>The probability of obtaining result $ x $ when measuring a quantum state $ \rho $ with a POVM $ \mathsf{E} $ is given by $ p_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)] $.</p>
-</blockquote>
+<p>The probability of obtaining result $ x $ when measuring a quantum state $ \rho $ with a POVM $ \mathsf{E} $ is given by $ p_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)] $.</p></blockquote>
 <p>When I first encountered POVMs, I was not clear about how they are implemented. This is because traditional measurements involve projection operators satisfying $ \mathsf{E}(x)^2 = \mathsf{E}(x), \quad \forall x \in X $. However, general POVMs do not satisfy this condition.</p>
 <p>In fact, traditional projection measurements, also known as PVMs (Projection Valued Measures), are a special type of POVM.</p>
 <p>PVMs are to POVMs what pure states are to mixed states. In other words, a POVM is a statistical mixture of PVMs, just as a mixed state is a statistical mixture of pure states.</p>
@@ -174,15 +173,13 @@ POVMs themselves cannot determine the post-measurement state. The actual determi
 <p>POVMs provide probabilities for each measurement outcome but do not determine the post-measurement state. Therefore, we aim to find a mathematical object that includes both the measurement probabilities and the post-measurement states. This mathematical object is called a Quantum Instrument.</p>
 <blockquote>
 <p>Definition: Quantum Instrument</p>
-<p>An operator $ \mathcal{I}_x: \mathcal{I}_x(\rho) = \rho_x $ is called a Quantum Instrument if $ \operatorname{tr}\left[\sum_{x\in X} \rho_x \right] = \operatorname{tr}[\rho] = 1 $.</p>
-</blockquote>
+<p>An operator $ \mathcal{I}_x: \mathcal{I}_x(\rho) = \rho_x $ is called a Quantum Instrument if $ \operatorname{tr}\left[\sum_{x\in X} \rho_x \right] = \operatorname{tr}[\rho] = 1 $.</p></blockquote>
 <p>It can be seen that $ \mathcal{I}_x $ not only provides the measurement probability $ p_x = \operatorname{tr}[\rho_x] $, but also gives the post-measurement state $ \frac{\rho_x}{\operatorname{tr}[\rho_x]} $.</p>
 <p>Obviously, the same POVM corresponds to countless Quantum Instruments.</p>
 <p>So, for any Quantum Instrument, can we always implement it? The answer is yes.</p>
 <blockquote>
 <p>Theorem</p>
-<p>Given any Quantum Instrument, we can always find a Measurement Model to implement it (in fact, there are countless implementations). Proof omitted.</p>
-</blockquote>
+<p>Given any Quantum Instrument, we can always find a Measurement Model to implement it (in fact, there are countless implementations). Proof omitted.</p></blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

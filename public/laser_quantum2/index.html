@@ -160,8 +160,7 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？</p>
-</blockquote>
+<p>大部分介绍激光的资料都是以经典或半经典形式推导的。那么激光的全量子理论是什么样的呢？它又有什么用呢？</p></blockquote>
 <p>本文简要介绍激光的 Scully-Lamb 理论，它是一个全量子的理论，由于一般量子光学教材的最后几章才会介绍，加上（半）经典的理论在大部分情况下也很好用，所以熟悉 Scully-Lamb 理论的人并不多。</p>
 <p>Scully-Lamb 理论对泵浦强度低于或接近阈值时的光子数分布作出了更准确的预言，这是（半）经典理论所做不到的。</p>
 <p>本文结构如下：</p>
@@ -173,8 +172,7 @@
 <p>（熟悉 JCM 的可以跳过这一节）</p>
 <blockquote>
 <p>JCM 描述的是一个单模光场与一个二能级系统的耦合，由于它将光场也量子化了，因此是一个全量子模型。</p>
-<p>除了光场量子化，JCM 还做了偶极矩近似（Dipole Approximation）和旋转波近似（Rotating-Wave Approximation，RWA），以便于求解。这个过程不在本文介绍的范围内，请有兴趣的读者自行参阅教材和互联网资料。</p>
-</blockquote>
+<p>除了光场量子化，JCM 还做了偶极矩近似（Dipole Approximation）和旋转波近似（Rotating-Wave Approximation，RWA），以便于求解。这个过程不在本文介绍的范围内，请有兴趣的读者自行参阅教材和互联网资料。</p></blockquote>
 <p>记单模光场的希尔伯特空间为 $\mathcal{H} \cong L^{2}(\mathbb{R})$ ，二能级系统的希尔伯特空间为 $\mathcal{K} \cong \mathbb{C}^2$ ，则 Jaynes-Cumming 哈密顿量 $H \in \mathcal{L}(\mathcal{H}\otimes \mathcal{K})$ 如下：</p>
 <p>$\begin{aligned} H&amp;= \underbrace{\omega \left(a^\dag a+\frac{1}{2}\right)}_{\text{field}}+ \underbrace{\omega_a \frac{\sigma_z}{2}}_{\text{atom}} +  \underbrace{\Omega(\sigma_+ a + \sigma_- a^{\dag})}_{\text{atom-field coupling}} \\ &amp;= \underbrace{\omega \left(a^\dag a+\frac{1}{2}+\frac{\sigma_z}{2}\right)}_{H_0} + \underbrace{\frac{\Delta}{2} \sigma_z + \Omega(\sigma_+ a + \sigma_- a^{\dag})}_{H_\text{I}} \end{aligned}$</p>
 <p>其中 $a^\dag , a$ 是 $\mathcal{H}$ 上的产生和湮灭算符， $\sigma_z, \sigma_{\pm}$ 是 $\mathcal{K}$ 上的泡利 Z 算符和升降算符。 $\Omega$ 叫做拉比频率，它衡量了光场与二能级系统之间的耦合强度。</p>
@@ -207,21 +205,18 @@
 <p>$\langle n|F(\tau) \rho |n\rangle$ 的表达式我们之后会用到。</p>
 <p>另外还有 $C_{n-1} = |C_{g,n}|^2=\sin^2 (2\theta_n) \sin^2 \left(\frac{\Delta_{n}}{2} \tau\right) = \frac{4n\Omega^2}{4n\Omega^2+\Delta_n^2} \sin^2 \left(\frac{\Delta_{n}}{2}  \tau\right)$ ，这个结果之后也有用。</p>
 <blockquote>
-<p>总结：本节求出了 Jaynes-Cummings 模型的解析解。给定一个二能级原子与光场的耦合系统，其初态为 $\rho$ ，我们可以求出以后任意时刻的状态 $F(\tau) \rho$ 。特别地，我们写出了光场密度矩阵的对角项 $\langle n|F(\tau) \rho |n\rangle$ ，也就是演化后的光子数分布。</p>
-</blockquote>
+<p>总结：本节求出了 Jaynes-Cummings 模型的解析解。给定一个二能级原子与光场的耦合系统，其初态为 $\rho$ ，我们可以求出以后任意时刻的状态 $F(\tau) \rho$ 。特别地，我们写出了光场密度矩阵的对角项 $\langle n|F(\tau) \rho |n\rangle$ ，也就是演化后的光子数分布。</p></blockquote>
 <h2 id="2-lindblad-主方程">2. Lindblad 主方程</h2>
 <p>对于封闭系统而言，量子态 $\rho$ 的演化遵循海森堡方程： $\frac{\mathrm{d}}{\mathrm{d}t} \rho = -\mathrm{i}[H,\rho]$ 。它其实就是薛定谔方程 $\frac{\mathrm{d}}{\mathrm{d}t}|\psi\rangle = -\mathrm{i}H|\psi\rangle$ 的统计叠加。这是一个酉（幺正，Unitary）的过程。</p>
 <p>对于开放系统而言，量子态 $\rho$ 的演化不再是一个酉过程。当环境足够大以至于没有记忆性时，即当环境满足马尔科夫（Markovian）近似时，量子态的演化是一个保迹（trace preserving）且保完全正（complete positive）的量子通道（quantum channel）。可以证明此时 $\frac{\mathrm{d}}{\mathrm{d}t} \rho$ 的一般形式为：</p>
 <p>$\begin{aligned} \frac{\mathrm{d}}{\mathrm{d}t} \rho = \mathcal{L}[\rho]= -\mathrm{i}[H,\rho] - \sum_k \gamma_k \left(\frac{1}{2} L_k^\dag L_k \rho - L_k \rho L_k^\dag + \frac{1}{2} \rho L_k^\dag L_k\right) \end{aligned}$</p>
 <blockquote>
-<p>显然 $\frac{\mathrm{d}}{\mathrm{d} t} \text{tr}[\rho]=0$ ，所以它是保迹的。</p>
-</blockquote>
+<p>显然 $\frac{\mathrm{d}}{\mathrm{d} t} \text{tr}[\rho]=0$ ，所以它是保迹的。</p></blockquote>
 <p>这就是 Lindblad 主方程，其中 $\mathcal{L}$ 叫做 Lindbladian，可以看作 Hamiltonian 在开放系统下的推广。</p>
 <blockquote>
 <p>有时它也叫 Liouvillian，但是 Liouvillian 更加 general 一些，例如它没有 complete positivity 的要求。</p>
 <p>Liouvillian 是哦系上指的是超算符 $\mathcal{B}(\mathcal{B}(\mathcal{H}))$ ，其中 $\mathcal{B}(\cdot)$ 代表 $\cdot$ 上的所有线性算符。超算符就是“算符的算符”。</p>
-<p>在文献中，Liouvillian 和 Lindbladian 有时会混用。</p>
-</blockquote>
+<p>在文献中，Liouvillian 和 Lindbladian 有时会混用。</p></blockquote>
 <p>当光场与一个平均光子数为 $\lambda$ 的热库耦合时，它遵循的 Lindblad 主方程为：</p>
 <p>$\begin{aligned} \dot{\rho}=\mathcal{L}[\rho] = -\frac{\omega}{2Q}(\lambda +1)&amp;(a^\dag a \rho - 2 a \rho a^\dag + \rho a^\dag a) \\ - \frac{\omega}{2Q}\lambda &amp;(a a^\dag \rho - 2a^\dag \rho a+\rho a a^\dag) \end{aligned}$</p>
 <p>在光学波段，由黑体辐射可知 $\lambda \approx 0$ ，则上式简化为：</p>
@@ -232,8 +227,7 @@
 <h2 id="3-scully-lamb-激光理论">3. Scully-Lamb 激光理论</h2>
 <p>利用上述的 JCM 和 Lindbladian，我们就可以用全量子方式处理激光系统。</p>
 <blockquote>
-<p>激光中有很多个原子，为什么不用多原子的 TCM（Tavis-Cummings 模型），而是用单原子的 JCM？这是因为 TCM 是用来描述原子的集体行为的：当波长处于微波范围时，由于波长和共振腔的长度相近，所有原子会感受到同一个电磁场，这会导致超辐射（Superradiance）等现象。但是在光学波段（$10^{14} \sim 10^{15} \text{Hz}$）内，共振腔的长度远大于相干长度，使得各个原子独立地与光场进行相互作用。此时使用单原子的 JCM 就足够了，我们只要把 JCM 的解对于各个原子作平均即可。</p>
-</blockquote>
+<p>激光中有很多个原子，为什么不用多原子的 TCM（Tavis-Cummings 模型），而是用单原子的 JCM？这是因为 TCM 是用来描述原子的集体行为的：当波长处于微波范围时，由于波长和共振腔的长度相近，所有原子会感受到同一个电磁场，这会导致超辐射（Superradiance）等现象。但是在光学波段（$10^{14} \sim 10^{15} \text{Hz}$）内，共振腔的长度远大于相干长度，使得各个原子独立地与光场进行相互作用。此时使用单原子的 JCM 就足够了，我们只要把 JCM 的解对于各个原子作平均即可。</p></blockquote>
 <p>在激光中有两个主要的物理过程：一是 JCM Hamiltonian 所描述的受激辐射过程，二是 Lindbladian 所描述的弛豫过程。我们只要把这两个过程结合起来就可以得到光场 $\rho$ 的演化方程：</p>
 <p>$\dot{\rho} = -\mathrm{i},\text{tr}_\text{a}[H,\rho_\text{af}] + \mathcal{L}[\rho]$</p>
 <p>其中 $H$ 是 JCM 哈密顿量， $\rho_\text{af}$ 是原子和光场的整体量子态， $\text{tr}_\text{a}$ 表示对原子系统取偏迹。</p>
@@ -248,8 +242,7 @@
 <h3 id="32-随机矩阵理论">3.2 随机矩阵理论</h3>
 <p>注意， $t_p$ 和 $\tau$ 都是随机变量，因此我们还要对 $\rho(t_{i+1}) = e^{t_p \mathcal{L}} F(\tau) \rho(t_i)$ 这个式子进行平均操作。</p>
 <blockquote>
-<p>严格处理需要随机矩阵理论，但我们这里可以不用那么关心严格性。</p>
-</blockquote>
+<p>严格处理需要随机矩阵理论，但我们这里可以不用那么关心严格性。</p></blockquote>
 <p>我们先讨论 $t_p$ 和 $\tau$ 所服从的概率分布：</p>
 <ol>
 <li>因为各个原子独立地与泵浦光相互作用，所以原子被泵浦到激发态的时间是完全随机的。这使得单位时间内的激发数服从泊松分布，且相邻两次激发的时间间隔服从指数分布，即 $p(t_p) =R e^{-R t_p}$ ，其中 $R$ 是泵浦速率。</li>
@@ -269,8 +262,7 @@
 <p>于是 $\begin{aligned} {p}_n = {p}_0 \prod_{k=1}^n\frac{A}{B+k} \end{aligned}$ 。</p>
 <p>在实际激光器中， $\Delta$ 和 $\Omega$ 的数量级接近，都为 MHz。而前面提到过， $\gamma^{-1}$ 的数量级为纳秒到皮秒，即 $\gamma$ 的数量级为 GHz 到 THz，因此 $B$ 是一个数量级为 $10^6 \sim 10^{12}$ 的常数。常数 $A$ 则取决于泵浦强度和共振腔的品质。</p>
 <blockquote>
-<p>我们之所以只求 $\rho$ 的对角项的稳态解，是因为所有非对角项的稳态解都是零。因此当求出 $p_n$ 后，我们就能直接写出量子态为 $\rho = \sum_n p_n |n\rangle\langle n|$ 。</p>
-</blockquote>
+<p>我们之所以只求 $\rho$ 的对角项的稳态解，是因为所有非对角项的稳态解都是零。因此当求出 $p_n$ 后，我们就能直接写出量子态为 $\rho = \sum_n p_n |n\rangle\langle n|$ 。</p></blockquote>
 <h3 id="33-结果分析光子数分布">3.3 结果分析：光子数分布</h3>
 <p>当泵浦很弱时， $A\ll B$ ，此时 ${p}_n \approx {p}_0 \left(\frac{A}{B}\right)^n$ ，这是一个温度为 $T=\omega \left[\log\left(\frac{2\omega B}{RQ}\right)\right]^{-1}$ 的热分布。</p>
 <p>当泵浦很强时， $A \gg B$ ，此时 ${p}_n \approx {p}_0 \frac{A^n}{n!}$ ，这是一个泊松分布。此时量子态为：</p>
@@ -280,8 +272,7 @@
 <p>在相干态表象下， $\rho$ 可以写成：</p>
 <p>$\rho = \int_0^{2\pi} \frac{\mathrm{d}\theta}{2\pi} |\alpha e^{\mathrm{i}\theta}\rangle\langle\alpha e^{\mathrm{i}\theta}|,\quad A=|\alpha|^2$</p>
 <p>可见它其实是一个相位随机的相干态。相干态 $|\alpha\rangle$ 对应一个振幅和相位都非常确定的经典电磁波，而这里将它的相位从 $0$ 到 $2\pi$ 积分了，这表现了我们对相位信息的无知，这种无知从根本上来源于我们对二能级系统（增益介质）的微观状态的无知。可以说这个 $\rho = \rho_{\text{epistemic}}$ 是认识论的量子态。</p>
-<p>而从本体论的角度而言，系统的量子态应当坍缩为一个有确定相位的 $\rho_{\text{ontic}} = |\alpha\rangle$ ，只是我们没办法知道是哪个相位而已。这是因为在光学频率 $\sim 10^{15} \text{Hz}$ 下，人类无法观测绝对相位。不过，相对相位可以观测，因此我们仍能观察到干涉现象。简单的计算也可以看出这一点：无论是用混态 $\rho = \int_0^{2\pi} \frac{\mathrm{d}\theta}{2\pi} |\alpha e^{\mathrm{i}\theta}\rangle\langle\alpha e^{\mathrm{i}\theta}|$ 还是用纯态 $\rho = |\alpha\rangle\langle \alpha|$ 去计算关联函数 $\langle a^\dag(t)a(0)\rangle = \text{tr}[\rho a^\dag(t)a(0)]$ ，计算结果都不会有任何区别。这一度引起了关于相干现象的讨论：相干到底是一种幻觉，还是一种物理实在？ [3]前者的支持者认为上文的“相位坍缩”诠释存在“preferred basis”的问题，不过这个问题可以认为已经被解决了：相干态是在激光腔开放系统下寿命最长的态。</p>
-</blockquote>
+<p>而从本体论的角度而言，系统的量子态应当坍缩为一个有确定相位的 $\rho_{\text{ontic}} = |\alpha\rangle$ ，只是我们没办法知道是哪个相位而已。这是因为在光学频率 $\sim 10^{15} \text{Hz}$ 下，人类无法观测绝对相位。不过，相对相位可以观测，因此我们仍能观察到干涉现象。简单的计算也可以看出这一点：无论是用混态 $\rho = \int_0^{2\pi} \frac{\mathrm{d}\theta}{2\pi} |\alpha e^{\mathrm{i}\theta}\rangle\langle\alpha e^{\mathrm{i}\theta}|$ 还是用纯态 $\rho = |\alpha\rangle\langle \alpha|$ 去计算关联函数 $\langle a^\dag(t)a(0)\rangle = \text{tr}[\rho a^\dag(t)a(0)]$ ，计算结果都不会有任何区别。这一度引起了关于相干现象的讨论：相干到底是一种幻觉，还是一种物理实在？ [3]前者的支持者认为上文的“相位坍缩”诠释存在“preferred basis”的问题，不过这个问题可以认为已经被解决了：相干态是在激光腔开放系统下寿命最长的态。</p></blockquote>
 <p>当泵浦数量级与阈值相当时，有精确解 ${p}_n = p_0 \frac{B! A^n}{(n+B)!}$ 。此时我们来看看它是超泊松还是亚泊松分布。</p>
 <p>$\langle n \rangle = \sum_n np_n = A - B + Bp_0$</p>
 <p>$\langle n^2\rangle = \langle n \rangle^2 + A$</p>
@@ -305,8 +296,7 @@
 <p>这是一个洛伦兹线形，其半高全宽（FWHM）为 $\Delta \omega = \frac{\omega\gamma}{RQ} = \frac{2\gamma}{A}$ 。</p>
 <blockquote>
 <p>可见自然线宽取决于上能级和下能级的平均寿命 $\gamma^{-1}$ 。这是很符合直觉的，因为上下能级的寿命决定受激辐射的相干作用时间。<br>
-另外，泵浦越强，自然线宽越窄。这也是符合直觉的，因为泵浦越强，两次受激辐射过程的时间间隔越短，于是弛豫的作用时间也越短。</p>
-</blockquote>
+另外，泵浦越强，自然线宽越窄。这也是符合直觉的，因为泵浦越强，两次受激辐射过程的时间间隔越短，于是弛豫的作用时间也越短。</p></blockquote>
 <h2 id="参考">参考</h2>
 <ol>
 <li>Marlan O. Scully &amp; M. Suhail Zubairy, Quantum Optics</li>

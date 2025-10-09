@@ -156,19 +156,17 @@ When equipped with an inner product (or non-degenerate bilinear form), there exi
 <h2 id="2-space-inversion">2 Space Inversion</h2>
 <p>Recalling why we call &ldquo;pseudo-vectors&rdquo; pseudo-vectors in the first place. It is because they exhibit exotic behaviors under space inversion transformations. However, if we consider them as the exterior product of two vectors, all the peculiar behaviors can be explained.</p>
 <p>Specifically, as shown in the figure below, under a space inversion transformation, the magnetic field reverses its direction. It&rsquo;s similar to you moving in one direction, but the reflection of you in the mirror moves in the opposite direction, which is a spooky and paranormal event.</p>
-<figure><img src="/pseudovectors/pseudovector.svg"><figcaption>
+<figure><img src="/pseudovectors/pseudovector.svg"/><figcaption>
       <h4>The magnetic field is a bivector. If you consider it as a vector, you will encounter this spooky phenomenon in the picture: the magnetic field takes a look in the mirror and finds its head turned into feet.</h4>
     </figcaption>
 </figure>
-
 <p>In fact, the magnetic field at point $p$ is not a vector but a bivector, denoted as $B|_p\in (T_pM)\wedge (T_pM)$. Its basis consists of $\frac{\partial}{\partial x}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial y}\wedge \frac{\partial}{\partial z},\,\frac{\partial}{\partial z}\wedge \frac{\partial}{\partial x}$.</p>
 <p>So, there is no paranormal event happening. Under a space inversion transformation, both vectors corresponding to the magnetic field actually point in the correct directions. It&rsquo;s just that humans insist on using the right-hand rule and treat a bivector as a vector, which leads to the appearance of this strange phenomenon.</p>
 <p>Although bivectors are well-defined in mathematics, we still want to ask the question: How do we visualize a bivector? The answer is: We can represent a bivector as an oriented surface element. Different-shaped surface elements that are parallel to each other and have the same area represent the same bivector. In other words, the same bivector can be depicted in infinitely many ways, as long as they are parallel, have the same area, and have the same orientation.</p>
-<figure><img src="/pseudovectors/bivectors.jpeg"><figcaption>
+<figure><img src="/pseudovectors/bivectors.jpeg"/><figcaption>
       <h4>Parallel surface elements with the same area and orientation represent the same bivector.</h4>
     </figcaption>
 </figure>
-
 <p>In practice, treating a bivector as a vector using the right-hand rule is only applicable in three-dimensional manifolds. This is because only in three-dimensional manifolds does three minus two exactly equal one. In four-dimensional manifolds, since four minus two equals two, we can only dualize a bivector into another bivector, not a vector.</p>
 <p>In five-dimensional manifolds, a bivector can be dualized into a trivector, and so on. In an n-dimensional manifold, a bivector can be dualized into an (n-2)-vector.</p>
 <h2 id="3-maxwell-equations-in-exterior-algebra">3 Maxwell Equations in Exterior Algebra</h2>

@@ -1,80 +1,43 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Linux - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/tags/linux/</link>
-        <description>Linux - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 23:22:42 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
-    <title>开发板通过 PC 连接互联网</title>
-    <link>http://example.com/boards_networking/</link>
-    <pubDate>Mon, 12 Jun 2023 23:22:42 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/boards_networking/</guid>
-    <description><![CDATA[<h3 id="windows">Windows</h3>
-<p>在控制面板中设置能上网的网卡，共享给以太网。此时以太网的 IP 会变成 <code>192.168.137.1</code>。</p>
-<p>然后在开发板终端中设置网关为 <code>192.168.137.1</code> 即可：</p>
-<p><code>sudo route add default gw 192.168.137.1</code></p>
-<p>IP 设置为 <code>192.168.137.x</code>，x 不是 1 和 255（网关地址和广播地址）就行：</p>]]></description>
-</item>
-<item>
-    <title>给 Linux 增加 swapfile</title>
-    <link>http://example.com/increase_swapfile/</link>
-    <pubDate>Mon, 12 Jun 2023 22:59:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/increase_swapfile/</guid>
-    <description><![CDATA[<p>Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。</p>
-<p>增加了 swapfile 之后就好很多了：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo swapoff /swapfile
-</span></span><span class="line"><span class="cl">sudo dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/swapfile <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span><span class="m">16384</span>
-</span></span><span class="line"><span class="cl">sudo mkswap /swapfile
-</span></span><span class="line"><span class="cl">sudo swapon /swapfile
-</span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description>
-</item>
-<item>
-    <title>在 Linux 中给 SD 卡分区并创建文件系统</title>
-    <link>http://example.com/linux_sd_card/</link>
-    <pubDate>Mon, 12 Jun 2023 22:43:39 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/linux_sd_card/</guid>
-    <description><![CDATA[<p>为了在 Linux 中给 SD 卡分区和格式化，先将 SD 卡接入 PC，然后在 bash 命令行使用 <code>fdisk</code> 给 SD 卡分区，最后使用 <code>mkfs</code> 给 SD 卡创建文件系统（即格式化）。</p>
-<p>主要命令如下：</p>
-<p>首先，使用 <code>sudo fdisk -l</code> 确认 SD 卡对应 <code>/dev</code> 中的哪一个设备。</p>]]></description>
-</item>
-<item>
-    <title>在 Windows 中挂载 EFI 分区的方法</title>
-    <link>http://example.com/efi_partition/</link>
-    <pubDate>Mon, 12 Jun 2023 22:17:46 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/efi_partition/</guid>
-    <description><![CDATA[<p>为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">diskpart</span>
-</span></span><span class="line"><span class="cl"><span class="n">list</span> <span class="n">disk</span>  <span class="c"># make sure which is the disk that contains the EFI partition. usually 0</span>
-</span></span><span class="line"><span class="cl"><span class="nb">select </span><span class="n">disk</span> <span class="mf">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">list</span> <span class="n">partition</span> <span class="c"># make sure which is the EFI partition. normally 0</span>
-</span></span><span class="line"><span class="cl"><span class="nb">select </span><span class="n">disk</span> <span class="mf">0</span>
-</span></span><span class="line"><span class="cl"><span class="n">assign</span> <span class="n">letter</span><span class="p">=</span><span class="n">z</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然后我们就将 EFI 挂载为盘符为 Z 的盘了。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/linux/</link>
+    <description>Recent content in Linux on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 12 Jun 2023 23:22:42 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发板通过 PC 连接互联网</title>
+      <link>http://example.com/boards_networking/</link>
+      <pubDate>Mon, 12 Jun 2023 23:22:42 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/boards_networking/</guid>
+      <description>&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;&#xA;&lt;p&gt;在控制面板中设置能上网的网卡，共享给以太网。此时以太网的 IP 会变成 &lt;code&gt;192.168.137.1&lt;/code&gt;。&lt;/p&gt;&#xA;&lt;p&gt;然后在开发板终端中设置网关为 &lt;code&gt;192.168.137.1&lt;/code&gt; 即可：&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;sudo route add default gw 192.168.137.1&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;IP 设置为 &lt;code&gt;192.168.137.x&lt;/code&gt;，x 不是 1 和 255（网关地址和广播地址）就行：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>给 Linux 增加 swapfile</title>
+      <link>http://example.com/increase_swapfile/</link>
+      <pubDate>Mon, 12 Jun 2023 22:59:29 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/increase_swapfile/</guid>
+      <description>&lt;p&gt;Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。&lt;/p&gt;&#xA;&lt;p&gt;增加了 swapfile 之后就好很多了：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo swapoff /swapfile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/zero &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/swapfile &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1M &lt;span class=&#34;nv&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16384&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkswap /swapfile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo swapon /swapfile&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>在 Linux 中给 SD 卡分区并创建文件系统</title>
+      <link>http://example.com/linux_sd_card/</link>
+      <pubDate>Mon, 12 Jun 2023 22:43:39 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/linux_sd_card/</guid>
+      <description>&lt;p&gt;为了在 Linux 中给 SD 卡分区和格式化，先将 SD 卡接入 PC，然后在 bash 命令行使用 &lt;code&gt;fdisk&lt;/code&gt; 给 SD 卡分区，最后使用 &lt;code&gt;mkfs&lt;/code&gt; 给 SD 卡创建文件系统（即格式化）。&lt;/p&gt;&#xA;&lt;p&gt;主要命令如下：&lt;/p&gt;&#xA;&lt;p&gt;首先，使用 &lt;code&gt;sudo fdisk -l&lt;/code&gt; 确认 SD 卡对应 &lt;code&gt;/dev&lt;/code&gt; 中的哪一个设备。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 Windows 中挂载 EFI 分区的方法</title>
+      <link>http://example.com/efi_partition/</link>
+      <pubDate>Mon, 12 Jun 2023 22:17:46 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/efi_partition/</guid>
+      <description>&lt;p&gt;为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;diskpart&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disk&lt;/span&gt;  &lt;span class=&#34;c&#34;&gt;# make sure which is the disk that contains the EFI partition. usually 0&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;select &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;disk&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;partition&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;# make sure which is the EFI partition. normally 0&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;select &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;disk&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;assign&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;letter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;然后我们就将 EFI 挂载为盘符为 Z 的盘了。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

@@ -180,8 +180,7 @@ $\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}
 <h3 id="21-流动李导数">2.1 流动——李导数</h3>
 <blockquote>
 <p><strong>前置知识：拉回与推前（pull back / push forward）</strong><br>
-假定我们有一个微分同胚： $\phi:M\rightarrow N$ 。微分几何的知识告诉我们，可以将 $N$ 上的张量场拉回（pull back）到 $M$ 上。当然，反过来也可以将 $M$ 上的张量场推前（push forward）到 $N$ 上。</p>
-</blockquote>
+假定我们有一个微分同胚： $\phi:M\rightarrow N$ 。微分几何的知识告诉我们，可以将 $N$ 上的张量场拉回（pull back）到 $M$ 上。当然，反过来也可以将 $M$ 上的张量场推前（push forward）到 $N$ 上。</p></blockquote>
 <p>$M$ 上一个光滑向量场 $V$ 的积分曲线族（例如电场的电场线）可以给出一个微分同胚</p>
 <p>$\Phi_t:M\rightarrow M, \quad \gamma(t_0)\mapsto \gamma(t_0+t)$</p>
 <p>这个微分同胚可以由一个实数 $t$ 来参数化。形象一点理解，就是说流形上的每一点都顺着它所在的积分曲线往下游“流动”了一段距离。于是利用拉回映射（pull back）我们又可以诱导出如下映射：</p>
@@ -196,8 +195,7 @@ $\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}
 <p>$ \begin{aligned} \mathcal{L}_V A &amp;:= \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0} (\Phi^*_t A) \\ &amp;= \lim_{t\rightarrow 0}\frac{\Phi^*_\epsilon A - A}{\epsilon} \end{aligned} $</p>
 <p>它的想法是：先让一个点往下游方向流动一小段距离，再把该点处的张量拉回到原来的地方，与原来的点处的张量作比较。如果结果相同，则导数为零，否则导数不为零。</p>
 <blockquote>
-<p>注：其实把 $\Phi^*_t$ 写成 $(\Phi^{V}_t)^*$ 会明确一点，即明确了 $\Phi^*_t$ 是关于 $V$ 的，但是这样写太丑陋了。</p>
-</blockquote>
+<p>注：其实把 $\Phi^*_t$ 写成 $(\Phi^{V}_t)^*$ 会明确一点，即明确了 $\Phi^*_t$ 是关于 $V$ 的，但是这样写太丑陋了。</p></blockquote>
 <h3 id="22-平移协变导数">2.2 平移——协变导数</h3>
 <p>李导数的“将一点处的张量移动到另一点”的方法总还是让人感觉有些别扭。这是因为，为了将点 $Q$ 处的向量通过某一条路径移动到点 $P$ ，我们需要找到这样一个向量场，使得它有一条积分曲线与该路径重合。这并总不是很方便。</p>
 <p>更致命的是，即使两个不同的向量场有一条完全重合的积分曲线——即便如此，移动的结果也不一定是相同的。</p>
@@ -211,8 +209,7 @@ $\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}
 <blockquote>
 <p>然而，这样一组数据实在是太任意了：对于一个 $n$ 维流形，我们需要给定 $n^3$ 个数，才能将克氏符号确定下来。</p>
 <p>为了确定起见，我们可以借助流形上的额外结构——度规。我们希望协变导数是保度规的，即满足 $ \nabla_k g_{ij}=0 $ ，这可以给出 $n^2(n+1)/2$ 个约束，还剩下 $n^3-n^2(n+1)/2=n^2(n-1)/2$ 个自由度。</p>
-<p>我们还可以通过要求协变导数<strong>无挠</strong>，来给出剩下 $n^2(n-1)/2$ 个约束，从而消除了任意性，得到了一个唯一的联络。这就是 Riemann / Levi-Citiva 联络。</p>
-</blockquote>
+<p>我们还可以通过要求协变导数<strong>无挠</strong>，来给出剩下 $n^2(n-1)/2$ 个约束，从而消除了任意性，得到了一个唯一的联络。这就是 Riemann / Levi-Citiva 联络。</p></blockquote>
 <p>这样一来，我们可以利用协变导数为零，反过来定义“平移”。</p>
 <p>正因为平移的规则是人为指定，所以协变导数不依赖向量场的邻域，因而<strong>协变导数有对</strong> $V$ <strong>的</strong> $\mathcal{F}$<strong>-线性</strong>。</p>
 <h3 id="23-回到李导数">2.3 回到李导数</h3>
@@ -229,8 +226,7 @@ $\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}
 <p>$ \begin{aligned} (\mathcal{L}_V A)^{i&hellip;j}_{k&hellip;l} &amp;= V^m A^{i&hellip;j}_{k&hellip;l,m} + \\ &amp;+ V^m_{,k} A^{i&hellip;j}_{m&hellip;l} + \cdots + V^m_{,l} A^{i&hellip;j}_{k&hellip;m} \\ &amp;- V^i_{,m}A^{m&hellip;j}_{k&hellip;l} + \cdots - V^j_{,m} A^{i&hellip;m}_{k&hellip;l} \end{aligned} $</p>
 <p>协变导数：</p>
 <p>$ \begin{aligned} (\nabla_V A)^{i&hellip;j}_{k&hellip;l} &amp; = V^{m} A^{i&hellip;j}_{k&hellip;l,m} \\  &amp; - \Gamma^{n}_{km} V^{m} A^{i&hellip;j}_{n&hellip;l} - \cdots - \Gamma^{n}_{lm} V^m A^{i&hellip;j}_{k&hellip;n} \\ &amp; + \Gamma^{i}_{nm} V^{m} A^{n&hellip;j}_{k&hellip;l} + \cdots + \Gamma^{j}_{nm} V^m A^{i&hellip;n}_{k&hellip;l} \end{aligned} $</p>
-<p>式中逗号加下标表示求偏导，即 $A_{,k}:=\frac{\partial}{\partial k}A$ 。</p>
-</blockquote>
+<p>式中逗号加下标表示求偏导，即 $A_{,k}:=\frac{\partial}{\partial k}A$ 。</p></blockquote>
 <p>从公式中也可以看出来，某点处的李导数 $\mathcal{L}_V$ 是依赖于 $V$ 在该点的邻域的性质的，因为它涉及向量场的分量的偏导 $V^m_{,k}$ 。</p>
 <p>而在协变导数中，只出现了向量场分量本身 $V^m$ ，不涉及分量的偏导 $V^m_{,k}$ ，也就是说协变导数不依赖于邻域。这就是为什么协变导数拥有 $\mathcal{F}$-线性，而李导数没有。</p>
 </div><div class="post-footer" id="post-footer">

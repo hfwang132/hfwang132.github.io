@@ -147,11 +147,10 @@
 </nav></div>
             </div><div class="content" id="content"><h2 id="hbt-experiment">HBT Experiment</h2>
 <p>Those who have conducted quantum optics experiments must be familiar with the Hanbury Brown and Twiss (HBT) experiment, which can be used to measure the second-order correlation function g2. In this experiment, a beam of light is split into two using a 50:50 beamsplitter, and then each beam is detected separately by two detectors. The correlation of the intensities on both sides is measured as a function of delay, as shown in the figure below:</p>
-<figure><img src="/hbt_g2/image/HBT_g2.png"><figcaption>
+<figure><img src="/hbt_g2/image/HBT_g2.png"/><figcaption>
       <h4>Hanbury Brown and Twiss Experiment  </h4>
     </figcaption>
 </figure>
-
 <p>The classical normalized g2 is defined as:</p>
 <p>$\begin{aligned} g^{(2)}(r_1, r_2; \tau) &amp;= \frac{\langle E^*(r_1, t) E^*(r_2, t + \tau) E(r_2, t + \tau) E(r_1, t) \rangle}{\langle |E(r_1, t)|^2 \rangle \langle |E(r_2, t + \tau)|^2 \rangle} \\ &amp;= \frac{\langle I(r_1, t) I(r_2, t + \tau) \rangle}{\langle I(r_1, t) \rangle \langle I(r_2, t + \tau) \rangle} \end{aligned}$</p>
 <p>where $E$ represents the electric field and $I$ represents the intensity. As per the definition, the HBT experiment measures the classical g2 by normalizing the correlated intensities with the product of the individual intensities.</p>
@@ -166,25 +165,21 @@
 <h2 id="npnr-spd-for-measuring-g2">NPNR-SPD for Measuring g2</h2>
 <p>Fortunately, single-photon detectors that cannot distinguish photon numbers (NPNR-SPDs, Non-Photon-Number-Resolving Single-Photon-Detectors) can still measure g2, even though they cannot resolve photon numbers!</p>
 <blockquote>
-<p>Comment: &ldquo;Cannot distinguish photon numbers&rdquo; means they can only differentiate between &ldquo;no photons&rdquo; and &ldquo;one or more photons.&rdquo; Common APD detectors cannot distinguish photon numbers.</p>
-</blockquote>
+<p>Comment: &ldquo;Cannot distinguish photon numbers&rdquo; means they can only differentiate between &ldquo;no photons&rdquo; and &ldquo;one or more photons.&rdquo; Common APD detectors cannot distinguish photon numbers.</p></blockquote>
 <p>The method is simple: just make sure the quantum efficiency of the NPNR-SPD is low enough!</p>
 <blockquote>
-<p>Quantum efficiency $\eta$ refers to the probability that the detector can detect a photon given that a photon enters it. Conversely, the probability of the photon being &ldquo;lost&rdquo; is $1 - \eta$.</p>
-</blockquote>
+<p>Quantum efficiency $\eta$ refers to the probability that the detector can detect a photon given that a photon enters it. Conversely, the probability of the photon being &ldquo;lost&rdquo; is $1 - \eta$.</p></blockquote>
 <p>At first, it seemed strange to me why lower efficiency is better. But with a little thought, the principle becomes clear:</p>
 <p>When the efficiency is low enough, the probability that $k$ photons are not all lost is $1 - (1 - \eta)^k \approx k\eta$. In other words, the probability of the NPNR-SPD detecting a photon is proportional to $k$. Thus, we achieve &ldquo;photon number resolution&rdquo; indirectly through &ldquo;low efficiency&rdquo;.</p>
 <blockquote>
 <p>The following is a formal (boring) mathematical derivation, which can be skipped:
-[Derivation equations]</p>
-</blockquote>
+[Derivation equations]</p></blockquote>
 <p>Measuring g2 has several uses. Besides the common textbook distinctions of [super-Poissonian statistics/Poissonian statistics/sub-Poissonian statistics] and [photon bunching/antibunching], there is an unexpected application: measuring spectral correlations of photons, which we will discuss in the next part.</p>
 <h2 id="conclusion-multi-mode-scenario">Conclusion: Multi-Mode Scenario</h2>
 <p>Previously, we assumed that the detected light was single-mode. Hence $E^+$ could be proportional to $a$: $E^+ = i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a$.</p>
 <p>But what if the detected light is multi-mode? In this case, $E^+ = i\sum_k\sqrt{\frac{\hbar \omega_k}{2\epsilon_0 V}}a_k$, $E^+$ is no longer proportional to $a$, but has a frequency dependence: $E^+_k \propto \sqrt{\omega_k}a_k$.</p>
 <blockquote>
-<p>The additional term $\sqrt{\omega_k}$ in the equation is not surprising since the intensity, which is proportional to the frequency times the number of photons, contributes to it.</p>
-</blockquote>
+<p>The additional term $\sqrt{\omega_k}$ in the equation is not surprising since the intensity, which is proportional to the frequency times the number of photons, contributes to it.</p></blockquote>
 <p>However, as long as the frequencies of the various modes are the same, we can still eliminate $\sqrt{\omega_k}$, and obtain:</p>
 <p>$\begin{aligned} g^{(2)}(0) = \frac{\langle n(n-1) \rangle}{\langle n \rangle^2} \end{aligned}$</p>
 <p>Thus, even if multiple modes are present, if these modes have (approximately) the same frequency, the method of measuring quantum g2 using the HBT experiment remains effective.</p>

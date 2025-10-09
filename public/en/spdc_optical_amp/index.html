@@ -171,8 +171,7 @@ In this case, the amplifier acts as if it has done nothing and is an identity ch
 <p>$\rho=\operatorname{tr}_c[|\Psi\rangle\langle\Psi|]$</p>
 <blockquote>
 <p>The specific calculations might not be straightforward. If there are quantum information theorists interested in helping with the calculation, it would be great. Also, consider what entanglement measure to use. The PPT criterion definitely cannot be used because these are two modes, not two qubits.</p>
-<p>However, we can guess the calculation process: blindly guess that the process of passing through OPA and tracing out the OPA idler is equivalent to a dephasing channel. Then we approximate the SPDC state in the low-gain limit as a Bell state. At this point, the degree of entanglement depends directly on the strength of dephasing, which is positively correlated with the gain of OPA, and likely proportional to the gain, i.e., $\exp(g_2)$. Considering a 20 dB gain, the degree of entanglement will decrease by $10^{20/10} = 100$ times.</p>
-</blockquote>
+<p>However, we can guess the calculation process: blindly guess that the process of passing through OPA and tracing out the OPA idler is equivalent to a dephasing channel. Then we approximate the SPDC state in the low-gain limit as a Bell state. At this point, the degree of entanglement depends directly on the strength of dephasing, which is positively correlated with the gain of OPA, and likely proportional to the gain, i.e., $\exp(g_2)$. Considering a 20 dB gain, the degree of entanglement will decrease by $10^{20/10} = 100$ times.</p></blockquote>
 <p>So after some &ldquo;calculation&rdquo;, we conclude: the larger the gain of OPA, the smaller the degree of entanglement.</p>
 <hr>
 <h2 id="2-optical-amplifier-based-on-stimulated-emission">2. Optical Amplifier Based on Stimulated Emission</h2>
@@ -185,11 +184,10 @@ In this case, the amplifier acts as if it has done nothing and is an identity ch
 <p>$(\Delta X)^2 = G (\Delta X_{0})^2 + (2 n_{\text{sp}}-1)(G-1) \frac{1}{4}$</p>
 <p>where $X$ is any quadrature of the optical field, which can be understood as the real or imaginary part of the electric field intensity. $G$ is the gain. $n_\text{sp} = \frac{N_2}{N_2-N_1}$ represents the degree of population inversion. The larger $n_\text{sp}$, the lower the inversion degree, and the smaller $n_\text{sp}$, the higher the inversion degree, with a minimum of 1.</p>
 <p>It can be seen that EDFA not only amplifies the noise of the input signal by a factor of $G$, but also introduces additional noise from vacuum fields, and amplifies the noise from vacuum fields by $(2 n_{\text{sp}}-1)(G-1)$ times. This is the Amplified Spontaneous Emission (ASE), the noise amplified by spontaneous emission. See the figure below:</p>
-<figure><img src="/spdc_optical_amp/image/edfa.jpg"><figcaption>
+<figure><img src="/spdc_optical_amp/image/edfa.jpg"/><figcaption>
       <h4>Wigner representation of the quantum state after passing through EDFA. Image source [1]</h4>
     </figcaption>
 </figure>
-
 <p>The above is about dynamics. How do these dynamics affect entanglement?</p>
 <p>It is well known that the signal and idler obtained by SPDC form an entangled state: $|\Psi\rangle_\text{SPDC} \approx |\text{vac}\rangle + \lambda \int \mathrm{d}\omega_s \mathrm{d}\omega_i f(\omega_s,\omega_i)a^\dag_s(\omega_s) a^\dag_i(\omega_i) |\text{vac}\rangle$, where $f(\omega_s,\omega_i)$ is the joint frequency distribution, depending on phase matching conditions and pump linewidth (momentum conservation and energy conservation conditions). $|\text{vac}\rangle$ represents the vacuum state on all modes, and $\lambda \ll 1$ represents the average number of photons of SPDC in the low gain limit, which is commonly used in experiments.</p>
 <p>$f(\omega_s,\omega_i)$ is usually inseparable, that is, it cannot be written as $f(\omega_s,\omega_i) = f_s(\omega_s) f_i(\omega_i)$. Therefore, the signal and idler modes of SPDC show frequency entanglement.</p>
@@ -199,11 +197,10 @@ In this case, the amplifier acts as if it has done nothing and is an identity ch
 <p>$|0\rangle \otimes |0\rangle \otimes |G,0\rangle \otimes |G,0\rangle   +\lambda(|1\rangle \otimes |0\rangle \otimes |G,0\rangle \otimes |G,1\rangle+ |0\rangle \otimes |1\rangle \otimes |G,1\rangle \otimes |G,0\rangle)$</p>
 <p>where $|G,0\rangle,|G,1\rangle$ represent the states obtained by $|0\rangle ,|1\rangle$ after passing through EDFA. I really don&rsquo;t know how to calculate this thing. But we can see some clues from their Wigner function shapes.</p>
 <p>Let&rsquo;s first look at the Wigner functions of $|0\rangle$ and $|1\rangle$:</p>
-<figure><img src="/spdc_optical_amp/image/fock_wigner.jpg"><figcaption>
+<figure><img src="/spdc_optical_amp/image/fock_wigner.jpg"/><figcaption>
       <h4>Wigner functions of vacuum state and single photon state, image source Wikipedia</h4>
     </figcaption>
 </figure>
-
 <p>After passing through the high gain EDFA, they will spread out like a big pancake from the origin in all directions, and also have to add amplified spontaneous emission noise (ASE), so the Wigner negativity of the single photon state should also disappear.</p>
 <p>At this point, the state is already a mixed state with very large uncertainties in both particle number and phase, similar to a thermal state. Why do I claim it&rsquo;s a mixed state? This is because in the Tavis-Cummings model, the final step of the calculation involves tracing out the atomic state, which almost certainly gives a mixed state.</p>
 <p>With such a large gain and uncertainty in particle number, the difference between $|0\rangle$ and $|1\rangle$ is already small, so $|G,0\rangle \approx |G,1\rangle$. So the quantum state can be written as:</p>

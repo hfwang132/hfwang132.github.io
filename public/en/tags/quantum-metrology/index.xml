@@ -1,18 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Quantum Metrology - Tag - Haifei&#39;s Home</title>
-        <link>http://example.com/en/tags/quantum-metrology/</link>
-        <description>Quantum Metrology - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</lastBuildDate><atom:link href="http://example.com/en/tags/quantum-metrology/" rel="self" type="application/rss+xml" /><item>
-    <title>A beginner&#39;s guide to quantum metrology</title>
-    <link>http://example.com/en/quantum_metrology/</link>
-    <pubDate>Tue, 23 Apr 2024 19:05:46 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/quantum_metrology/</guid>
-    <description><![CDATA[<h2 id="i-introduction-to-quantum-metrology">I. Introduction to Quantum Metrology</h2>
-<p>Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.</p>
-<p>The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.</p>
-<p>Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.g., weighing oneself). However, in high-precision imaging and various high-precision scientific experiments, people have indeed approached the Heisenberg Limit.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quantum Metrology on Haifei&#39;s Home</title>
+    <link>http://example.com/en/tags/quantum-metrology/</link>
+    <description>Recent content in Quantum Metrology on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 23 Apr 2024 19:05:46 +0800</lastBuildDate>
+    <atom:link href="http://example.com/en/tags/quantum-metrology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A beginner&#39;s guide to quantum metrology</title>
+      <link>http://example.com/en/quantum_metrology/</link>
+      <pubDate>Tue, 23 Apr 2024 19:05:46 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/quantum_metrology/</guid>
+      <description>&lt;h2 id=&#34;i-introduction-to-quantum-metrology&#34;&gt;I. Introduction to Quantum Metrology&lt;/h2&gt;&#xA;&lt;p&gt;Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.&lt;/p&gt;&#xA;&lt;p&gt;The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.&lt;/p&gt;&#xA;&lt;p&gt;Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.g., weighing oneself). However, in high-precision imaging and various high-precision scientific experiments, people have indeed approached the Heisenberg Limit.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

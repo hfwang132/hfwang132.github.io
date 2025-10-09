@@ -177,8 +177,7 @@
 <p>实际上，在量子电动力学中，规范变换指的是局域的 $U(1)$ 变换，也就是形如 $\psi(x) \mapsto e^{\mathrm{i}\theta(x)} \psi(x)$ 的变换，这里 $\psi$ 指的是电子的波函数，它是一个狄拉克场。</p>
 <p>局域变换与全局变换的不同之处在于，局域变换中的 $\theta$ 本身也是一个场，而全局变换的 $\theta$ 是一个常数。</p>
 <blockquote>
-<p>顺便提一句，根据诺特定理，全局的 $U(1)$ 对称性可以导出电荷守恒。不过这不是本篇关心的内容。</p>
-</blockquote>
+<p>顺便提一句，根据诺特定理，全局的 $U(1)$ 对称性可以导出电荷守恒。不过这不是本篇关心的内容。</p></blockquote>
 <p><strong>如果我们要求理论满足局域对称性，即物理在局域变换</strong> $\psi \mapsto e^{\mathrm{i}\theta}\psi$ <strong>下保持不变，那么就会导致电磁场的出现。换句话说，每一个局域规范对称性都会对应一个规范场。</strong></p>
 <p>此话从何说起呢？</p>
 <p>我们先来看局域变换 $\psi \mapsto e^{\mathrm{i}\theta}\psi$ 会导致什么。由于我们还没有规定拉氏量，所以我们只能考察与 $\psi$ 自身有关的量。比如 $\partial_\mu \psi$ 。</p>
@@ -186,8 +185,7 @@
 <blockquote>
 <p>为什么我们要求 $\partial_\mu\psi$ 的变换方式与 $\psi$ 相同？</p>
 <p>这一点可以从狄拉克场的拉氏量得出。为了保持狄拉克场的拉氏量 $\mathcal{L}=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu \psi -mc^2)\psi $ 不变，我们要求 $\partial_\mu\psi$ 的变换方式应当与 $\psi$ 相同。</p>
-<p>这一点也可以从狄拉克方程 $\mathrm{i}\hbar \gamma^\mu (\partial_\mu \psi) -mc,\psi =0$ 中看出。实际上，狄拉克方程就是通过对狄拉克场的作用量变分得到的。</p>
-</blockquote>
+<p>这一点也可以从狄拉克方程 $\mathrm{i}\hbar \gamma^\mu (\partial_\mu \psi) -mc,\psi =0$ 中看出。实际上，狄拉克方程就是通过对狄拉克场的作用量变分得到的。</p></blockquote>
 <p>如果我们把 $\psi \mapsto e^{\mathrm{i}\theta}\psi$ 代入 $\partial_\mu\psi$ ：</p>
 <p>$\begin{aligned} \partial_\mu \psi \mapsto \partial_\mu(e^{\mathrm{i}\theta} \psi) &amp;= e^{\mathrm{i}\theta}\left[\partial_\mu \psi \color{red}{+ \mathrm{i}(\partial_\mu\theta) \psi}\right] \\ &amp;= e^{\mathrm{i}\theta}\left[(\partial_\mu \color{red}{+ \mathrm{i}\partial_\mu\theta}) \psi\right]  \end{aligned}$</p>
 <p>就会发现，结果多了一项 $ \color{red}{\mathrm{i}(\partial_\mu\theta) \psi}$ ，因此我们需要想办法消去它。</p>
@@ -201,12 +199,10 @@
 <p>$\begin{aligned} D_\mu \psi \mapsto D_\mu^\prime(e^{\mathrm{i}\theta} \psi) &amp;= \left[\partial_\mu + \mathrm{i} (A_\mu \color{red}{- \partial_\mu\theta})\right] (e^{\mathrm{i}\theta} \psi) \\ &amp;= e^{\mathrm{i}\theta}\left(\partial_\mu + \color{red}{\cancel{\mathrm{i}\partial_\mu\theta}} + \mathrm{i}A_\mu - \color{red}{\cancel{\mathrm{i}\partial_\mu\theta}} \right) \psi \\ &amp;= e^{\mathrm{i}\theta}D_\mu \psi \end{aligned}$</p>
 <p>我们成功了！这样定义出来的 $D_\mu$ 叫做协变导数。</p>
 <blockquote>
-<p>注意，这里的协变导数是主丛上的协变导数，与矢量丛上的协变导数 $\nabla_\mu$ 不是一回事。后者刻画的是矢量丛纤维（切空间）之间的联络，描述了流形本身的弯曲。而协变导数 $D_\mu$ 刻画的是主丛纤维之间的联络，描述的是流形内部自由度的弯曲。我们在第四节会详细展开。</p>
-</blockquote>
+<p>注意，这里的协变导数是主丛上的协变导数，与矢量丛上的协变导数 $\nabla_\mu$ 不是一回事。后者刻画的是矢量丛纤维（切空间）之间的联络，描述了流形本身的弯曲。而协变导数 $D_\mu$ 刻画的是主丛纤维之间的联络，描述的是流形内部自由度的弯曲。我们在第四节会详细展开。</p></blockquote>
 <p>诶，你有没有觉得 $\boxed{A_\mu \mapsto A_\mu \color{red}{- (\partial_\mu\theta)}}$ 这个玩意儿有点眼熟？它不就是第一节里说到的电磁规范变换吗？</p>
 <blockquote>
-<p>或写成 $A \mapsto A - \mathrm{d}\theta$</p>
-</blockquote>
+<p>或写成 $A \mapsto A - \mathrm{d}\theta$</p></blockquote>
 <p>其实这个新的场 $A_\mu$ 就是电磁场。正是它的存在保证了局域规范变换不会改变拉氏量。</p>
 <p>为了兼容 SI 单位制，我们给 $A_\mu$ 乘以一个量纲常数： $D_\mu = \partial_\mu + \mathrm{i}\frac{e}{\hbar} A_\mu$ ，从而保证 $A_\mu$ 拥有正确的量纲。其中 $e$ 是元电荷，为正数。根据度规约定以及 $e$ 的符号的不同，也可能写成 $D_\mu = \partial_\mu - \mathrm{i}\frac{e}{\hbar} A_\mu$ 。</p>
 <blockquote>
@@ -231,12 +227,10 @@ $\begin{aligned} H(\mathbf{x},\mathbf{p})&amp;=\frac{1}{2m}(\mathbf{p}_{\text{ki
 <li>
 <p>通过勒让德变换 $H = \mathbf{p} \cdot \dot{\mathbf{x}} - L$ 得到哈密顿量，并与 2 中的哈密顿量比较。它们应当相同。</p>
 </li>
-</ol>
-</blockquote>
+</ol></blockquote>
 <h2 id="三狄拉克场和电磁场的拉氏量">三、狄拉克场和电磁场的拉氏量</h2>
 <blockquote>
-<p>不太了解狄拉克方程的同学可以跳过本节。</p>
-</blockquote>
+<p>不太了解狄拉克方程的同学可以跳过本节。</p></blockquote>
 <p>现在，我们将 $D_\mu = \partial_\mu + \mathrm{i}\frac{e}{\hbar} A_\mu$ 代入狄拉克场的拉氏量 $\mathcal{L}=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu  -mc^2)\psi $ 得：</p>
 <p>$\begin{aligned} \mathcal{L}_{\text{Dirac}}&amp;=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu D_\mu-mc^2)\psi \\&amp;=\bar{\psi}(\mathrm{i}\hbar c \gamma^\mu \partial_\mu -mc^2)\psi  \color{red}{- eA_\mu c\bar{\psi} \gamma^\mu \psi} \end{aligned}$</p>
 <p>令 $J^\mu = -ec\bar{\psi} \gamma^\mu \psi$ （注意，电流的方向与电子运动方向相反）得：</p>
@@ -251,14 +245,12 @@ $\begin{aligned} H(\mathbf{x},\mathbf{p})&amp;=\frac{1}{2m}(\mathbf{p}_{\text{ki
 <p>什么是主丛？可以把主丛想象成一个流形，这个流形上的每一个点都附带了一个“纤维”，且这个纤维拥有李群的结构。</p>
 <blockquote>
 <p>李群的定义：如果一个流形本身也是一个群，那么这个流形就叫做李群。</p>
-<p>主丛与向量丛的区别在于：向量丛的纤维是向量空间例如切空间/余切空间；而主丛的纤维是李群（严格来说，是李群的 torsor）。</p>
-</blockquote>
+<p>主丛与向量丛的区别在于：向量丛的纤维是向量空间例如切空间/余切空间；而主丛的纤维是李群（严格来说，是李群的 torsor）。</p></blockquote>
 <p>对于电动力学而言，我们所考虑的主丛，其纤维是 $U(1)$ ：你可以想象时空流形上的每一点都长出了一个圆圈。这些圆圈就是我们所说的纤维，它们代表着相位。</p>
-<figure><img src="/gm_2/image/u%281%29.jpg"><figcaption>
+<figure><img src="/gm_2/image/u%281%29.jpg"/><figcaption>
       <h4>U(1) 纤维丛，图源：ChatGPT 作图</h4>
     </figcaption>
 </figure>
-
 <p>在上图中，这些圆圈被画在了分立的点上，这只是为了方便展示。实际上，每一个点上都有一个这样的圆圈。</p>
 <p>纤维丛上的联络描述的就是纤维之间连接的方式。具体到我们的 $U(1)$ 主丛，就是上图中的圆圈之间连接的方式。</p>
 <p>主丛上的联络 $A$ 定义为一个李代数取值的 1-形式。由于 $U(1)$ 的李代数很简单，就是 $\mathbb{R}$ ，所以看起来与普通的 1-形式没什么不同。</p>
@@ -268,14 +260,12 @@ $\begin{aligned} H(\mathbf{x},\mathbf{p})&amp;=\frac{1}{2m}(\mathbf{p}_{\text{ki
 <p>以李群 $U(1)$ 为例，李群本身是 ${\mathrm{e}^{\mathrm{i}\theta} \mid \theta\in[0,2\pi)}$ ，而李代数是 $\mathrm{i}\mathbb{R} = {\mathrm{i} \theta\mid \theta \in \mathbb{R}}$ 。在物理中，我们通常把 $\mathrm{i}$ 去掉，而把 $\mathbb{R}$ 说成是李代数。</p>
 <p>从 $A_\mu \mapsto A_\mu - (\partial_\mu\theta)$ 这个式子我们可以看出，作为 1-形式的 $\partial_\mu \theta$ 的取值应当是李代数中的元素。</p>
 <p>李代数上的李括号是由李群上的左不变矢量场的李导数 $\mathcal{L}_V W=[V,W]$ 所诱导的。具体来说，单位元的切空间中的每一个元素都唯一对应李群上的一个左不变矢量场。通过左不变矢量场之间的李括号，我们就能反过来得到切空间上的李括号，从而使其成为一个李代数。</p>
-<p>余切空间自然地拥有外代数结构，而切空间自然地拥有李代数结构。</p>
-</blockquote>
+<p>余切空间自然地拥有外代数结构，而切空间自然地拥有李代数结构。</p></blockquote>
 <p>曲率定义为联络的外微分： $F=\mathrm{d}A$ 。可以想象，上图中的圆圈并不是普通地粘在一起，而是以一种特定的，扭曲的方式粘在一起。联络的曲率所描述的，正是纤维之间这种弯曲的连接方式。从 $A$ 的变换规则可以看出这一点： $A_\mu \mapsto A_\mu \color{red}{- (\partial_\mu\theta)}$ ，它描述的就是相位在移动中的变化 $(\partial_\mu \theta)$ 。</p>
 <blockquote>
 <p>令协变导数 $D_\mu \psi = \partial_\mu \psi +\mathrm{i}A_\mu \psi =0$ ，我们就能得到主丛上的平行移动：</p>
 <p>$\begin{aligned} &amp;D\psi=0\\ &amp;\Rightarrow\left(\partial_\mu + \mathrm{i}\frac{e}{h}A\right) \psi =0 \\ &amp;\Rightarrow  \partial_\mu \psi = -\mathrm{i}\frac{e}{\hbar} A_\mu \psi \\ &amp;\Rightarrow \psi(x) = \psi(x_0) \exp\left( -\mathrm{i}\frac{e}{\hbar}\int A_\mu \mathrm{d}x^\mu\right) \end{aligned}$</p>
-<p>可见，除了动力学相位 $\int\frac{e}{\hbar}A_0 \mathrm{d}x^0 = \int\frac{1}{\hbar} E \mathrm{d}t$ 以外，平行移动还会增加一个额外的相位 ${\int \frac{e}{\hbar} \mathbf{A} \cdot \mathrm{d}\mathbf{l}}$。这就是几何相位。详情我们会在本系列以后的文章中介绍。</p>
-</blockquote>
+<p>可见，除了动力学相位 $\int\frac{e}{\hbar}A_0 \mathrm{d}x^0 = \int\frac{1}{\hbar} E \mathrm{d}t$ 以外，平行移动还会增加一个额外的相位 ${\int \frac{e}{\hbar} \mathbf{A} \cdot \mathrm{d}\mathbf{l}}$。这就是几何相位。详情我们会在本系列以后的文章中介绍。</p></blockquote>
 <p>换句话说，<strong>电磁场的场强张量</strong> $F$ <strong>正是主丛纤维之间连接的曲率。这就是电磁场作为主丛上的联络的几何意义。</strong></p>
 <p>我们常说引力是几何效应。但从以上分析可见，电磁力（以及下文要介绍的弱力和强力）也未尝不是几何效应！只是前者对应向量丛上的联络，后者对应主丛上的联络。</p>
 <h2 id="五杨-米尔斯yang-mills理论">五、杨-米尔斯（Yang-Mills）理论</h2>
@@ -290,8 +280,7 @@ $\begin{aligned} H(\mathbf{x},\mathbf{p})&amp;=\frac{1}{2m}(\mathbf{p}_{\text{ki
 <blockquote>
 <p>实际上电磁力和弱力没有这么简单， $U(1)$ 对应的粒子原本是 $B$ ， $SU(2)$ 对应 $W^1,W^2,W^3$ 。希格斯机制所导致的自发对称性破缺使得它们混合在了一起：</p>
 <p>$\begin{aligned} W^\pm &amp;= \frac{W^1 \pm \mathrm{i} W^2}{\sqrt{2}} \\ Z^0 &amp;= W^3 \cos(\theta_W) - B \sin(\theta_W) \\ A &amp;= W^3 \sin(\theta_W) + B\cos(\theta_W) \end{aligned}$</p>
-<p>这才有了光子 $A$ 和弱玻色子 $W^\pm,Z^0$。具体机制由于篇幅所限就不介绍了。</p>
-</blockquote>
+<p>这才有了光子 $A$ 和弱玻色子 $W^\pm,Z^0$。具体机制由于篇幅所限就不介绍了。</p></blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

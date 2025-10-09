@@ -1,90 +1,64 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>微分几何 - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</link>
-        <description>微分几何 - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Apr 2025 01:08:16 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/" rel="self" type="application/rss+xml" /><item>
-    <title>狄拉克磁单极子——陈类与陈数【更高更妙的电动力学·4】</title>
-    <link>http://example.com/gm_4/</link>
-    <pubDate>Sun, 06 Apr 2025 01:08:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/gm_4/</guid>
-    <description><![CDATA[<p>在<a href="https://zhuanlan.zhihu.com/p/32173040413" target="_blank" rel="noopener noreffer ">前文</a>中，我们说到，如果流形是拓扑平凡的，那么对 Berry 曲率在闭合曲面 $\Sigma$ 上积分应该得到零。这是因为根据 Stokes 定理，有：</p>
-<p>$\int_\Sigma F = \int_{\partial \Sigma } A = 0$</p>
-<p>然而，在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为，此时无法定义全局单值的联络 $A$ ，导致 Stokes 定理不再适用。此话怎讲？</p>]]></description>
-</item>
-<item>
-    <title>电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】</title>
-    <link>http://example.com/gm_3/</link>
-    <pubDate>Sun, 06 Apr 2025 01:02:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/gm_3/</guid>
-    <description><![CDATA[<p>电磁场并非电场和磁场。</p>
-<p>换句话说，电磁场并不只是电场和磁场。</p>
-<p>此话怎讲？</p>
-<h2 id="一电磁势的地位高于场强">一、电磁势的地位高于场强</h2>
-<p>在<a href="https://zhuanlan.zhihu.com/p/23958176393" target="_blank" rel="noopener noreffer ">前文</a>中，我们挖过一个坑：</p>
-<blockquote>
-<p>$\boxed{\begin{aligned} \phi &amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned}}$</p>
-<p>学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。</p>]]></description>
-</item>
-<item>
-    <title>规范场论视角下的电动力学【更高更妙的电动力学·2】</title>
-    <link>http://example.com/gm_2/</link>
-    <pubDate>Sun, 06 Apr 2025 00:48:30 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/gm_2/</guid>
-    <description><![CDATA[<p>这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。</p>
-<p>本文依然采用 $(-,+,+,+)$ 的度规约定。</p>
-<hr>
-<p><strong>为什么说电动力学是规范场论？</strong></p>
-<p>为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。</p>]]></description>
-</item>
-<item>
-    <title>微分几何视角下的电动力学【更高更妙的电动力学·1】</title>
-    <link>http://example.com/gm_1/</link>
-    <pubDate>Sun, 06 Apr 2025 00:43:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/gm_1/</guid>
-    <description><![CDATA[<h3 id="前言">前言</h3>
-<p>你可能听说过麦克斯韦方程有很简单的形式：</p>
-<p>$\begin{aligned} \mathrm{d} F&amp;=0 \\ \mathrm{d} \star F &amp;= \mu_0 \star J \end{aligned}$</p>
-<p>又或者是</p>
-<p>$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;= \mu_0 J^\nu  \end{aligned}$</p>
-<blockquote>
-<p>注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。</p>]]></description>
-</item>
-<item>
-    <title>微分的四层理解</title>
-    <link>http://example.com/understanding_differentials/</link>
-    <pubDate>Wed, 13 Mar 2024 18:34:09 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/understanding_differentials/</guid>
-    <description><![CDATA[<h2 id="一-微分是无穷小">一 微分是无穷小？</h2>
-<p>物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。</p>
-<p>实际上，它确实不严谨，第二次数学危机就是因此产生的。</p>]]></description>
-</item>
-<item>
-    <title>李导数与协变导数有什么联系？</title>
-    <link>http://example.com/lie_derivative/</link>
-    <pubDate>Fri, 26 Jan 2024 23:50:58 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/lie_derivative/</guid>
-    <description><![CDATA[<h2 id="一-性质上的异同点">一 性质上的异同点</h2>
-<p>李导数 $\mathcal{L}_V$ 和协变导数 $\nabla_V$ 有很多共同点：</p>
-<ol>
-<li>$\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}^p_q(M)$ 到 $\mathcal{T}^p_q(M)$ 的映射。 $\mathcal{T}^p_q(M)$ 表示 $M$ 上全体 (p, q) 型光滑张量场的集合</li>
-</ol>
-<p>特别地，对于 (0,0) 型张量场，也就是标量场 $f\in \mathcal{F}(M)$ ，有 $\mathcal{L}_V f=\nabla_V f=Vf$ 。</p>]]></description>
-</item>
-<item>
-    <title>一文入门微分几何（物理人版）</title>
-    <link>http://example.com/differential_geometry/</link>
-    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/differential_geometry/</guid>
-    <description><![CDATA[<h2 id="前言">前言</h2>
-<p>作为物理人，你很可能听过张量，微分形式，李代数 &hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因此，本文旨在帮助物理人，为这些彼此紧密联系的诸概念进行一个梳理。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微分几何 on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</link>
+    <description>Recent content in 微分几何 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 06 Apr 2025 01:08:16 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>狄拉克磁单极子——陈类与陈数【更高更妙的电动力学·4】</title>
+      <link>http://example.com/gm_4/</link>
+      <pubDate>Sun, 06 Apr 2025 01:08:16 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/gm_4/</guid>
+      <description>&lt;p&gt;在&lt;a href=&#34;https://zhuanlan.zhihu.com/p/32173040413&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;前文&lt;/a&gt;中，我们说到，如果流形是拓扑平凡的，那么对 Berry 曲率在闭合曲面 $\Sigma$ 上积分应该得到零。这是因为根据 Stokes 定理，有：&lt;/p&gt;&#xA;&lt;p&gt;$\int_\Sigma F = \int_{\partial \Sigma } A = 0$&lt;/p&gt;&#xA;&lt;p&gt;然而，在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为，此时无法定义全局单值的联络 $A$ ，导致 Stokes 定理不再适用。此话怎讲？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】</title>
+      <link>http://example.com/gm_3/</link>
+      <pubDate>Sun, 06 Apr 2025 01:02:38 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/gm_3/</guid>
+      <description>&lt;p&gt;电磁场并非电场和磁场。&lt;/p&gt;&#xA;&lt;p&gt;换句话说，电磁场并不只是电场和磁场。&lt;/p&gt;&#xA;&lt;p&gt;此话怎讲？&lt;/p&gt;&#xA;&lt;h2 id=&#34;一电磁势的地位高于场强&#34;&gt;一、电磁势的地位高于场强&lt;/h2&gt;&#xA;&lt;p&gt;在&lt;a href=&#34;https://zhuanlan.zhihu.com/p/23958176393&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;前文&lt;/a&gt;中，我们挖过一个坑：&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;$\boxed{\begin{aligned} \phi &amp;amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned}}$&lt;/p&gt;&#xA;&lt;p&gt;学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>规范场论视角下的电动力学【更高更妙的电动力学·2】</title>
+      <link>http://example.com/gm_2/</link>
+      <pubDate>Sun, 06 Apr 2025 00:48:30 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/gm_2/</guid>
+      <description>&lt;p&gt;这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。&lt;/p&gt;&#xA;&lt;p&gt;本文依然采用 $(-,+,+,+)$ 的度规约定。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;为什么说电动力学是规范场论？&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>微分几何视角下的电动力学【更高更妙的电动力学·1】</title>
+      <link>http://example.com/gm_1/</link>
+      <pubDate>Sun, 06 Apr 2025 00:43:40 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/gm_1/</guid>
+      <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;&#xA;&lt;p&gt;你可能听说过麦克斯韦方程有很简单的形式：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathrm{d} F&amp;amp;=0 \\ \mathrm{d} \star F &amp;amp;= \mu_0 \star J \end{aligned}$&lt;/p&gt;&#xA;&lt;p&gt;又或者是&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;amp;= \mu_0 J^\nu  \end{aligned}$&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>微分的四层理解</title>
+      <link>http://example.com/understanding_differentials/</link>
+      <pubDate>Wed, 13 Mar 2024 18:34:09 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/understanding_differentials/</guid>
+      <description>&lt;h2 id=&#34;一-微分是无穷小&#34;&gt;一 微分是无穷小？&lt;/h2&gt;&#xA;&lt;p&gt;物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。&lt;/p&gt;&#xA;&lt;p&gt;实际上，它确实不严谨，第二次数学危机就是因此产生的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>李导数与协变导数有什么联系？</title>
+      <link>http://example.com/lie_derivative/</link>
+      <pubDate>Fri, 26 Jan 2024 23:50:58 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/lie_derivative/</guid>
+      <description>&lt;h2 id=&#34;一-性质上的异同点&#34;&gt;一 性质上的异同点&lt;/h2&gt;&#xA;&lt;p&gt;李导数 $\mathcal{L}_V$ 和协变导数 $\nabla_V$ 有很多共同点：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;$\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}^p_q(M)$ 到 $\mathcal{T}^p_q(M)$ 的映射。 $\mathcal{T}^p_q(M)$ 表示 $M$ 上全体 (p, q) 型光滑张量场的集合&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;特别地，对于 (0,0) 型张量场，也就是标量场 $f\in \mathcal{F}(M)$ ，有 $\mathcal{L}_V f=\nabla_V f=Vf$ 。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一文入门微分几何（物理人版）</title>
+      <link>http://example.com/differential_geometry/</link>
+      <pubDate>Fri, 09 Jun 2023 14:49:49 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/differential_geometry/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;作为物理人，你很可能听过张量，微分形式，李代数 &amp;hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因此，本文旨在帮助物理人，为这些彼此紧密联系的诸概念进行一个梳理。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

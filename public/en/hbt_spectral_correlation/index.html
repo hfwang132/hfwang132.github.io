@@ -172,15 +172,13 @@ In this section, let&rsquo;s see what the quantum second-order correlation funct
 <p>$\begin{aligned} H=i\hbar \chi \sum_{k}\left( \lambda_k A^\dag_k B^\dag_k - \lambda_k A_k B_k\right) \end{aligned}$</p>
 <p>where $\sum_k\lambda^2_k=1$.</p>
 <blockquote>
-<p>Note: Since the spectrum of singular value decomposition is always non-negative real numbers, $\lambda_k$ is real and greater than zero.</p>
-</blockquote>
+<p>Note: Since the spectrum of singular value decomposition is always non-negative real numbers, $\lambda_k$ is real and greater than zero.</p></blockquote>
 <p>This is actually the Hamiltonian of multimode squeezed states.</p>
 <blockquote>
 <p>Review of various squeezed states:<br>
 Single-mode squeezed state: $\begin{aligned} H=i\hbar\left(g^*\frac{a^2}{2}-g\frac{a^{\dag2}}{2}\right) \end{aligned}$<br>
 Two-mode squeezed state: $\begin{aligned} H=i\hbar\left(g^*a b-g a^\dag b^\dag\right) \end{aligned}$<br>
-Multimode squeezed state: $\begin{aligned} H=i\hbar\sum_{k}\left(g_k^*a_k b_k-g_k a_k^\dag b_k^\dag\right) \end{aligned}$</p>
-</blockquote>
+Multimode squeezed state: $\begin{aligned} H=i\hbar\sum_{k}\left(g_k^*a_k b_k-g_k a_k^\dag b_k^\dag\right) \end{aligned}$</p></blockquote>
 <p>Now let&rsquo;s separately look at the system evolution in the Schrödinger picture and the Heisenberg picture.</p>
 <p>In the Schrödinger picture,</p>
 <p>$\begin{aligned} |\Psi_{\text{out}}\rangle &amp;=e^{\frac{H\tau}{i\hbar}}|\Psi_{\text{in}}\rangle \\ &amp;= \sum_{k} \frac{1}{\cosh(r_k)}\sum_{n=0}^{\infty}\tanh^n(r_k)|n_k,n_k\rangle \end{aligned}$</p>
@@ -189,8 +187,7 @@ Multimode squeezed state: $\begin{aligned} H=i\hbar\sum_{k}\left(g_k^*a_k b_k-g_
 <p>$|\Psi_{\text{out}}\rangle\approx \sum_{k} \left(|0_k,0_k\rangle + r_k|1_k,1_k\rangle\right)$</p>
 <blockquote>
 <p>This is also the case that most experiments conform to.<br>
-Conditioned on detecting photons, the conditional state is $|\Psi_{\text{conditional}}\rangle=\sum_k\lambda_k|1_k,1_k\rangle$ . This is the principle of heralded single-photon sources.</p>
-</blockquote>
+Conditioned on detecting photons, the conditional state is $|\Psi_{\text{conditional}}\rangle=\sum_k\lambda_k|1_k,1_k\rangle$ . This is the principle of heralded single-photon sources.</p></blockquote>
 <p>In the Heisenberg picture,</p>
 <p>$\begin{aligned} A_k &amp;\rightarrow e^{\frac{H\tau}{i\hbar}} A_k e^{-\frac{H\tau}{i\hbar}} \\ &amp;= A_k + [e^{\frac{H\tau}{i\hbar}},A_k]+[e^{\frac{H\tau}{i\hbar}},[e^{\frac{H\tau}{i\hbar}},A_k]] + \cdots \\ &amp;=\cosh(r_k) A_k - \sinh(r_k)B_k^\dag \end{aligned}$</p>
 <p>$\begin{aligned} B_k &amp;\rightarrow e^{\frac{H\tau}{i\hbar}} B_k e^{-\frac{H\tau}{i\hbar}} \\ &amp;= B_k + [e^{\frac{H\tau}{i\hbar}},B_k]+[e^{\frac{H\tau}{i\hbar}},[e^{\frac{H\tau}{i\hbar}},B_k]] + \cdots \\ &amp;=\cosh(r_k) B_k - \sinh(r_k)A_k^\dag \end{aligned}$</p>
@@ -204,23 +201,20 @@ Conditioned on detecting photons, the conditional state is $|\Psi_{\text{conditi
 For an uncorrelated joint spectrum, ${\lambda_k}={1}$ , $K=1$ .<br>
 For a joint spectrum with two modes and equal coefficients, ${\lambda_k}={\frac{1}{2},\frac{1}{2}}$ , $K=2$ .<br>
 For a joint spectrum with n modes and equal coefficients, $K=n$ .<br>
-For a joint spectrum with n modes and coefficients not completely equal to each other, $1&lt;K&lt;n$ .</p>
-</blockquote>
+For a joint spectrum with n modes and coefficients not completely equal to each other, $1&lt;K&lt;n$ .</p></blockquote>
 <p>Why do we care about spectral correlation? Because it is closely related to the purity of photons:</p>
 <blockquote>
 <p><strong>Property</strong><br>
 When $r_k$ is small and photons are detected, the quantum state is $|\Psi_{\text{conditional}}\rangle=\sum_k\lambda_k|1_k,1_k\rangle$ .<br>
 For this quantum state, tracing out one of the two photons (performing partial trace operation), the purity of the remaining photon state is $P=\frac{1}{K}$ . This is because:<br>
-$\begin{aligned} P &amp;= \operatorname{tr}[\operatorname{tr}_2[|\psi\rangle\langle\psi|]^2] \\  &amp;=  \operatorname{tr}\left[\operatorname{tr}_B\left(\sum_{k}\lambda_k \left| 1_k, 1_k\right\rangle\sum_{l}\lambda_l \left\langle 1_l ,1_l\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\left(\sum_{k}\lambda_k^2 \left|1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\left(\lambda_k^2\left| 1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\lambda_k^4 |1_k\rangle\langle 1_k|\right] \\ &amp;=\sum_{k}\lambda_k^4=\frac{1}{K} \end{aligned}$</p>
-</blockquote>
+$\begin{aligned} P &amp;= \operatorname{tr}[\operatorname{tr}_2[|\psi\rangle\langle\psi|]^2] \\  &amp;=  \operatorname{tr}\left[\operatorname{tr}_B\left(\sum_{k}\lambda_k \left| 1_k, 1_k\right\rangle\sum_{l}\lambda_l \left\langle 1_l ,1_l\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\left(\sum_{k}\lambda_k^2 \left|1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\left(\lambda_k^2\left| 1_k \right\rangle\left\langle 1_k\right|\right)^2\right] \\ &amp;= \operatorname{tr}\left[\sum_{k}\lambda_k^4 |1_k\rangle\langle 1_k|\right] \\ &amp;=\sum_{k}\lambda_k^4=\frac{1}{K} \end{aligned}$</p></blockquote>
 <p>It can be seen that the purity is inversely proportional to the Schmidt number. That is, the stronger the spectral correlation, the lower the purity of the photons in the frequency domain. This is unfavorable for heralded single-photon sources and various multi-photon interference experiments. For the former, spectral correlation will reduce the frequency-domain indistinguishability of single photons, and for the latter, spectral correlation will reduce the interference contrast.</p>
 <h2 id="measuring-spectral-correlation-with-hbt-experiment">Measuring Spectral Correlation with HBT Experiment</h2>
 <p>In the previous section, we mentioned that the HBT experiment detects:</p>
 <p>$\begin{aligned} \frac{C_{12}R}{S_1S_2}=\frac{\langle n(n-1)\rangle}{\langle n\rangle^2} \end{aligned}$</p>
 <p>where $C_{12}$ is the coincidence count rate of two detectors, $S_1$ and $S_2$ are the count rates of the first and second detectors, respectively, and $R$ is the photon flux.</p>
 <blockquote>
-<p>When the frequencies of various modes are the same or similar, $\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} \approx g^{(2)}(0) \end{aligned}$ .</p>
-</blockquote>
+<p>When the frequencies of various modes are the same or similar, $\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} \approx g^{(2)}(0) \end{aligned}$ .</p></blockquote>
 <p>The reason why we say that the HBT experiment can measure spectral correlation is because $\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1+\frac{1}{K} \end{aligned}$ . The proof is as follows:</p>
 <p>$\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} &amp;=\frac{\langle n^2\rangle-\langle n\rangle}{\langle n\rangle^2} \\ &amp;=\frac{\sum_{k} \langle n_k^2 \rangle + 2\sum_{i&gt;j} \langle n_i n_j \rangle - \langle n\rangle}{\langle n\rangle^2} \\ &amp;= \frac{ \sum_{k} \left(\langle n_k \rangle + 2\langle n_k\rangle^2 \right) + 2\sum_{i&gt;j} \langle n_i \rangle \langle n_j \rangle  - \langle n\rangle}{\langle n\rangle^2} \\ &amp;= \frac{\langle n\rangle + \langle n\rangle^2 +\sum_{k} \langle n_k\rangle^2 - \langle n\rangle}{\langle n\rangle^2} \\ &amp;= 1+\frac{\sum_{k} \langle n_k\rangle^2}{ \left\langle \sum_{k} n_k\right\rangle^2} \\ &amp;= 1 + \frac{\sum_k \sinh^4(r_k)}{\left(\sum_k \sinh^2(r_k)\right)^2} \\ &amp;\approx 1+\frac{\sum_k r_k^4}{\left(\sum_k r_k^2\right)^2} \\ &amp;= 1 + \frac{\sum_k \lambda_k^4}{\left(\sum_k \lambda_k^2\right)^2} \\ &amp;= 1+\sum_k \lambda_k^4 \\ &amp;= 1+\frac{1}{K} \\ &amp;= 1+P \end{aligned}$</p>
 <p>where the third equality uses the result: for thermal light fields, $\langle n_k^2 \rangle =\langle n_k \rangle + 2\langle n_k\rangle^2$ , and there is no correlation between different modes $\langle n_i n_j\rangle=\langle n_i\rangle\langle n_j\rangle$ .</p>

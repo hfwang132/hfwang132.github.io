@@ -182,8 +182,7 @@ Both satisfy linearity and the Leibniz rule: $ \begin{aligned} \mathcal{L}_V(\mu
 <h3 id="21-flowlie-derivative">2.1 Flow—Lie Derivative</h3>
 <blockquote>
 <p><strong>Prerequisite Knowledge: Pull Back and Push Forward</strong><br>
-Suppose we have a diffeomorphism: $\phi:M\rightarrow N$. Differential geometry tells us that we can pull back tensor fields on $N$ to $M$. Conversely, we can also push forward tensor fields on $M$ to $N$.</p>
-</blockquote>
+Suppose we have a diffeomorphism: $\phi:M\rightarrow N$. Differential geometry tells us that we can pull back tensor fields on $N$ to $M$. Conversely, we can also push forward tensor fields on $M$ to $N$.</p></blockquote>
 <p>An integral curve family (e.g., electric field lines) of a smooth vector field $V$ on $M$ can give a diffeomorphism</p>
 <p>$\Phi_t:M\rightarrow M, \quad \gamma(t_0)\mapsto \gamma(t_0+t)$</p>
 <p>This diffeomorphism can be parameterized by a real number $t$. Intuitively, every point on the manifold &ldquo;flows&rdquo; a certain distance downstream along the integral curve it is on. Using the pullback map, we can induce the following map:</p>
@@ -198,8 +197,7 @@ Suppose we have a diffeomorphism: $\phi:M\rightarrow N$. Differential geometry t
 <p>$ \begin{aligned} \mathcal{L}_V A &amp;:= \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0} (\Phi^*_t A) \\ &amp;= \lim_{t\rightarrow 0}\frac{\Phi^*_\epsilon A - A}{\epsilon} \end{aligned} $</p>
 <p>The idea is: first let a point flow a small distance downstream, then pull the tensor at that point back to the original place and compare it with the original tensor at the point. If the results are the same, the derivative is zero; otherwise, the derivative is non-zero.</p>
 <blockquote>
-<p>Note: Actually writing $\Phi^*_t$ as $(\Phi^{V}_t)^*$ would be more explicit, indicating that $\Phi^*_t$ is about $V$, but this looks too clunky.</p>
-</blockquote>
+<p>Note: Actually writing $\Phi^*_t$ as $(\Phi^{V}_t)^*$ would be more explicit, indicating that $\Phi^*_t$ is about $V$, but this looks too clunky.</p></blockquote>
 <h3 id="22-parallel-transportcovariant-derivative">2.2 Parallel Transport—Covariant Derivative</h3>
 <p>The method of &ldquo;moving a tensor at one point to another point&rdquo; by the Lie derivative always feels somewhat awkward. This is because, in order to move a vector at point $Q$ to point $P$ through a certain path, we need to find a vector field such that it has an integral curve coinciding with the path. This is not always convenient.</p>
 <p>More fatally, even if two different vector fields have a completely coinciding integral curve—even so, the results of the movement may not be the same.</p>
@@ -212,8 +210,7 @@ Suppose we have a diffeomorphism: $\phi:M\rightarrow N$. Differential geometry t
 <blockquote>
 <p>However, such a set of data is too arbitrary: for an n-dimensional manifold, we need $n^3$ numbers to determine the Christoffel symbols.</p>
 <p>To be specific, we can use an additional structure on the manifold—metric. We hope the covariant derivative is metric-preserving, i.e., satisfies $ \nabla_k g_{ij}=0 $, which can give $n^2(n+1)/2$ constraints, leaving $n^3-n^2(n+1)/2=n^2(n-1)/2$ degrees of freedom.</p>
-<p>We can also obtain the remaining $n^2(n-1)/2$ constraints by requiring the covariant derivative to be torsion-free, thus eliminating arbitrariness and obtaining a unique connection. This is the Riemann / Levi-Civita connection.</p>
-</blockquote>
+<p>We can also obtain the remaining $n^2(n-1)/2$ constraints by requiring the covariant derivative to be torsion-free, thus eliminating arbitrariness and obtaining a unique connection. This is the Riemann / Levi-Civita connection.</p></blockquote>
 <p>Thus, we can use the fact that the covariant derivative is zero to define &ldquo;parallel transport&rdquo;.</p>
 <p>Since the rules of parallel transport are artificially specified, the covariant derivative does not depend on the neighborhood of the vector field, so <strong>the covariant derivative has $\mathcal{F}$-linearity in $V$</strong>.</p>
 <h3 id="23-back-to-lie-derivative">2.3 Back to Lie Derivative</h3>
@@ -230,8 +227,7 @@ Suppose we have a diffeomorphism: $\phi:M\rightarrow N$. Differential geometry t
 <p>$ \begin{aligned} (\mathcal{L}_V A)^{i&hellip;j}_{k&hellip;l} &amp;= V^m A^{i&hellip;j}_{k&hellip;l,m} + \\ &amp;+ V^m_{,k} A^{i&hellip;j}_{m&hellip;l} + \cdots + V^m_{,l} A^{i&hellip;j}_{k&hellip;m} \\ &amp;- V^i_{,m}A^{m&hellip;j}_{k&hellip;l} + \cdots - V^j_{,m} A^{i&hellip;m}_{k&hellip;l} \end{aligned} $</p>
 <p>Covariant derivative:</p>
 <p>$ \begin{aligned} (\nabla_V A)^{i&hellip;j}_{k&hellip;l} &amp; = V^{m} A^{i&hellip;j}_{k&hellip;l,m} \\  &amp; - \Gamma^{n}_{km} V^{m} A^{i&hellip;j}_{n&hellip;l} - \cdots - \Gamma^{n}_{lm} V^m A^{i&hellip;j}_{k&hellip;n} \\ &amp; + \Gamma^{i}_{nm} V^{m} A^{n&hellip;j}_{k&hellip;l} + \cdots + \Gamma^{j}_{nm} V^m A^{i&hellip;n}_{k&hellip;l} \end{aligned} $</p>
-<p>In the formula, a comma with a subscript indicates partial differentiation, i.e., $A_{,k}:=\frac{\partial}{\partial k}A$.</p>
-</blockquote>
+<p>In the formula, a comma with a subscript indicates partial differentiation, i.e., $A_{,k}:=\frac{\partial}{\partial k}A$.</p></blockquote>
 <p>From the formulas, it can be seen that the Lie derivative $\mathcal{L}_V$ at a point depends on the properties of $V$ in the neighborhood of that point because it involves the partial derivatives of the components of the vector field $V^m_{,k}$.</p>
 <p>In the covariant derivative, only the components of the vector field $V^m$ appear, not the partial derivatives of the components $V^m_{,k}$. This means that the covariant derivative does not depend on the neighborhood. This is why the covariant derivative has $\mathcal{F}$-linearity, while the Lie derivative does not.</p>
 </div><div class="post-footer" id="post-footer">

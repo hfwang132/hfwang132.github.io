@@ -183,11 +183,10 @@ Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Ma
 <p>SPI clock has four modes: CPOL=0/1 and CPHA=0/1. CPOL stands for clock polarity &ndash; clock low or high when in idle. CPHA stands for clock phase &ndash; data valid at 0 degree or 180 degrees.</p>
 <h3 id="2-axi-quad-spi-ip-core">2 AXI Quad SPI IP Core</h3>
 <p>When we run out of Zynq PS SPI controllers for some reason, we can turn to PL SPI IP cores, which is called AXI Quad SPI.</p>
-<figure><img src="/spi/files/axi-quad-spi.png"><figcaption>
+<figure><img src="/spi/files/axi-quad-spi.png"/><figcaption>
       <h4>AXI Quad SPI IP core</h4>
     </figcaption>
 </figure>
-
 <p>In the picture, <code>io1_i</code> connects to MISO; <code>ext_spi_clk</code> and <code>s_axi_clk</code> can be connected to a same system clock. <code>ip2intc_irpt</code> can be connected to the Zynq interrupt <code>pl_ps_irq</code>.</p>
 <p>You can double-click on the IP core to configure clock divider, number of slave selects, and more.</p>
 <h3 id="3-bare-metal-programming">3 Bare-Metal Programming</h3>
@@ -401,8 +400,7 @@ Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Ma
 </div><h3 id="4-linux-programming">4 Linux Programming</h3>
 <p>In order to use the AXI Quad SPI IP core in Linux, we should add a <code>spidev</code> node to the device tree, so that we could achieve SPI communication by reading from or writing to the <code>/dev/spidevx.y</code> device.</p>
 <blockquote>
-<p>In <code>/dev/spidevx.y</code>, <code>x</code> stands for the x-th SPI controller, and <code>y</code> stands for the y-th chip.</p>
-</blockquote>
+<p>In <code>/dev/spidevx.y</code>, <code>x</code> stands for the x-th SPI controller, and <code>y</code> stands for the y-th chip.</p></blockquote>
 <p>The device tree is usually initialized during boot-up and is read-only. However, after the 4.14 version of the Linux kernel, we can use the &ldquo;device tree overlay&rdquo; (briefed as DTO from now on) to dynamically add incremental device trees. Below is a code snippet of DTO.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -456,8 +454,7 @@ Signals Full Name SS Slave Select SCK SPI Clock MOSI Master-Out-Slave-In MISO Ma
 <li>We should add one more line <code>/plugin/;</code> after <code>/dts-v1/;</code> to show that this is an DTO file rather than an ordinary device tree file.</li>
 <li><code>target</code> stands for which node is to be modified. Here it is <code>&lt;&amp;amba&gt;</code>, and it will be extended to the phandle of the node which has the symbol <code>amba</code>. For example, if the phandle of <code>amba</code> is <code>70</code>, then <code>&lt;&amp;amba&gt;</code> virtually stands for <code>&lt;70&gt;</code>. A phandle uniquely denotes a node and is usually allocated by the device tree compiler.</li>
 <li>In most cases, we should add the <code>-@</code> compiler option, which enables support for symbol. Otherwise we can only reference the nodes by their phandle, which requires de-compiling the device tree binaries.</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

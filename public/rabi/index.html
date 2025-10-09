@@ -168,8 +168,7 @@
 <p>这就是旋转波近似。被去掉的项叫做逆时针旋转项（Counter-Rotating Terms），留下来的项叫做顺时针旋转项（Co-rotating Terms）。</p>
 <blockquote>
 <p>旋转波近似之所以合理，是因为逆时针旋转项涉及的两个能级的能量差为 $\omega + \Delta$ ，远大于顺时针旋转项的能量差 $|\omega - \Delta|$ 。前者涉及的指数因子为 $e^{\pm\mathrm{i} (\omega + \Delta) t}$ ，后者为 $e^{\pm\mathrm{i}(\omega-\Delta)}t$ 。由于 $e^{\pm\mathrm{i} (\omega + \Delta) t}$ 变化太快，可以视作平均为零而消掉。</p>
-<p>另外，从微扰计算也可以看出这一点：做微扰计算后得到的项会正比于能量差的倒数，前者为 $\frac{1}{\omega +\Delta}$ ，后者为 $\frac{1}{|\omega - \Delta|}$ 。而 $\frac{1}{\omega + \Delta}$ 远小于 $\frac{1}{|\omega - \Delta|}$ ，因此可以将前者忽略掉。</p>
-</blockquote>
+<p>另外，从微扰计算也可以看出这一点：做微扰计算后得到的项会正比于能量差的倒数，前者为 $\frac{1}{\omega +\Delta}$ ，后者为 $\frac{1}{|\omega - \Delta|}$ 。而 $\frac{1}{\omega + \Delta}$ 远小于 $\frac{1}{|\omega - \Delta|}$ ，因此可以将前者忽略掉。</p></blockquote>
 <h2 id="2-jcm-的解析解">2. JCM 的解析解</h2>
 <p>我们可以将 $H$ 在光子数表象下展开：</p>
 <p>$\begin{aligned} H &amp;= \color{gray}{ \begin{matrix} |g,0\rangle \\ |e,0\rangle \\ |g,1\rangle \\ |e,1\rangle \\ |g,2\rangle \\ \vdots \end{matrix} } \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 3 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 3&amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 5&amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix} \frac{\omega}{2}+\begin{bmatrix} -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; -1 &amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix} \frac{\Delta}{2} +\begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; \sqrt{2} &amp; \cdots \\ 0 &amp; 0 &amp; 0 &amp; \sqrt{2} &amp; 0 &amp; \cdots \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \end{bmatrix} g \end{aligned} $</p>
@@ -188,8 +187,7 @@
 <p>我们把 QRM 哈密顿量在基 ${|+\rangle, |-\rangle} =\left{\frac{|e\rangle + |g\rangle}{\sqrt{2}} ,\frac{|e\rangle - |g\rangle}{\sqrt{2}}\right}$ 下展开得：</p>
 <p>$H =  \begin{bmatrix} \omega a^\dag a + g(a+a^\dag) &amp; \Delta/2 \\ \Delta/2 &amp; \omega a^\dag a + g(a-a^\dag) \end{bmatrix}$</p>
 <blockquote>
-<p>可以验证 $H = [\omega a^\dag a + g(a+a^\dag)] |+\rangle\langle+| + [\omega a^\dag a - g(a+a^\dag)] |-\rangle\langle-|  + \frac{\Delta}{2}(|+\rangle\langle-| + |-\rangle\langle+|)$</p>
-</blockquote>
+<p>可以验证 $H = [\omega a^\dag a + g(a+a^\dag)] |+\rangle\langle+| + [\omega a^\dag a - g(a+a^\dag)] |-\rangle\langle-|  + \frac{\Delta}{2}(|+\rangle\langle-| + |-\rangle\langle+|)$</p></blockquote>
 <p>做 Bogoliubov 变换 $A = a +g/\omega,,B=a-g/\omega$ ，并且定义 Extended Fock states：</p>
 <p>$|0\rangle_A=e^{-\frac{g}{\omega}(a^\dag - a)} |0\rangle = |\frac{-\omega}{g}\rangle$</p>
 <p>$|n\rangle_A = \frac{A^{\dag n}}{\sqrt{n!}} |0\rangle_A$</p>

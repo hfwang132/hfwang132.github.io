@@ -1,18 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Vector Calculus - Tag - Haifei&#39;s Home</title>
-        <link>http://example.com/en/tags/vector-calculus/</link>
-        <description>Vector Calculus - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</lastBuildDate><atom:link href="http://example.com/en/tags/vector-calculus/" rel="self" type="application/rss+xml" /><item>
-    <title>Curl in high dimensions</title>
-    <link>http://example.com/en/curl_in_n_dimension/</link>
-    <pubDate>Sat, 10 Jun 2023 10:55:34 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/curl_in_n_dimension/</guid>
-    <description><![CDATA[<h3 id="1-differential-forms">1 Differential Forms</h3>
-<p>Before introducing the concept of curl, we need to first introduce differential forms and the exterior derivative.</p>
-<p>An n-form can be defined as an alternating multilinear mapping $\omega:(T_p^*M)^n\rightarrow \mathbb{R}$. It maps multiple vectors to a real number. Additionally, it satisfies the alternating property, meaning that exchanging two input vectors results in an output multiplied by a negative sign.</p>
-<p>Therefore, an n-form can be explicitly defined as follows:</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vector Calculus on Haifei&#39;s Home</title>
+    <link>http://example.com/en/tags/vector-calculus/</link>
+    <description>Recent content in Vector Calculus on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 10 Jun 2023 10:55:34 +0800</lastBuildDate>
+    <atom:link href="http://example.com/en/tags/vector-calculus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Curl in high dimensions</title>
+      <link>http://example.com/en/curl_in_n_dimension/</link>
+      <pubDate>Sat, 10 Jun 2023 10:55:34 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/curl_in_n_dimension/</guid>
+      <description>&lt;h3 id=&#34;1-differential-forms&#34;&gt;1 Differential Forms&lt;/h3&gt;&#xA;&lt;p&gt;Before introducing the concept of curl, we need to first introduce differential forms and the exterior derivative.&lt;/p&gt;&#xA;&lt;p&gt;An n-form can be defined as an alternating multilinear mapping $\omega:(T_p^*M)^n\rightarrow \mathbb{R}$. It maps multiple vectors to a real number. Additionally, it satisfies the alternating property, meaning that exchanging two input vectors results in an output multiplied by a negative sign.&lt;/p&gt;&#xA;&lt;p&gt;Therefore, an n-form can be explicitly defined as follows:&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

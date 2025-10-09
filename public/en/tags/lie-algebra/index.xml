@@ -1,21 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Lie Algebra - Tag - Haifei&#39;s Home</title>
-        <link>http://example.com/en/tags/lie-algebra/</link>
-        <description>Lie Algebra - Tag - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</lastBuildDate><atom:link href="http://example.com/en/tags/lie-algebra/" rel="self" type="application/rss+xml" /><item>
-    <title>A beginner&#39;s guide to differential geometry</title>
-    <link>http://example.com/en/differential_geometry/</link>
-    <pubDate>Fri, 09 Jun 2023 14:49:49 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://example.com/en/differential_geometry/</guid>
-    <description><![CDATA[<head>
-<meta http-equiv="refresh" content="0; url=../../differential_geometry/">
-</head>
-<body>
-<h1 id="tbd">TBD</h1>
-<p>Chinese version <a href="../zh-cn/differential_geometry/" rel="">here</a></p>
-</body>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lie Algebra on Haifei&#39;s Home</title>
+    <link>http://example.com/en/tags/lie-algebra/</link>
+    <description>Recent content in Lie Algebra on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 09 Jun 2023 14:49:49 +0800</lastBuildDate>
+    <atom:link href="http://example.com/en/tags/lie-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A beginner&#39;s guide to differential geometry</title>
+      <link>http://example.com/en/differential_geometry/</link>
+      <pubDate>Fri, 09 Jun 2023 14:49:49 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/en/differential_geometry/</guid>
+      <description>&lt;head&gt;&#xD;&#xA;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=../../differential_geometry/&#34;&gt;&#xD;&#xA;&lt;/head&gt;&#xD;&#xA;&lt;body&gt;&#xD;&#xA;&lt;h1 id=&#34;tbd&#34;&gt;TBD&lt;/h1&gt;&#xA;&lt;p&gt;Chinese version &lt;a href=&#34;../zh-cn/differential_geometry/&#34; rel=&#34;&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/body&gt;</description>
+    </item>
+  </channel>
 </rss>

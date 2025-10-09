@@ -1,6 +1,6 @@
 # Basic Usage
 
-## Initialize
+## Initialize submodules
 
 `initialize.bat`
 

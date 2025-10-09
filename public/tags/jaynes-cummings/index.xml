@@ -1,17 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Jaynes-Cummings - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/tags/jaynes-cummings/</link>
-        <description>Jaynes-Cummings - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 06 Apr 2025 01:14:26 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/jaynes-cummings/" rel="self" type="application/rss+xml" /><item>
-    <title>从量子场论到腔量子电动力学【更高更妙的电动力学·5】</title>
-    <link>http://example.com/gm_5/</link>
-    <pubDate>Sun, 06 Apr 2025 01:14:26 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/gm_5/</guid>
-    <description><![CDATA[<p>在本篇文章中，我们将从非常复杂的 QED 拉氏量出发：</p>
-<p>$\begin{aligned} \mathcal{L}=  \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\psi - eA_\mu \bar{\psi} \gamma^\mu \psi -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} \end{aligned} $</p>
-<p>这个拉氏量非常复杂：它不仅考虑了电子的反粒子——正电子，并且耦合项 $- eA_\mu \bar{\psi} \gamma^\mu \psi$ 还是一个三次项，可以描述电子-正电子对产生/湮灭等多种过程。它没有解析解，只能用量子场论的微扰法求解。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jaynes-Cummings on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/jaynes-cummings/</link>
+    <description>Recent content in Jaynes-Cummings on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 06 Apr 2025 01:14:26 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/jaynes-cummings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从量子场论到腔量子电动力学【更高更妙的电动力学·5】</title>
+      <link>http://example.com/gm_5/</link>
+      <pubDate>Sun, 06 Apr 2025 01:14:26 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/gm_5/</guid>
+      <description>&lt;p&gt;在本篇文章中，我们将从非常复杂的 QED 拉氏量出发：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathcal{L}=  \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\psi - eA_\mu \bar{\psi} \gamma^\mu \psi -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} \end{aligned} $&lt;/p&gt;&#xA;&lt;p&gt;这个拉氏量非常复杂：它不仅考虑了电子的反粒子——正电子，并且耦合项 $- eA_\mu \bar{\psi} \gamma^\mu \psi$ 还是一个三次项，可以描述电子-正电子对产生/湮灭等多种过程。它没有解析解，只能用量子场论的微扰法求解。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

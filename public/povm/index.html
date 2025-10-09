@@ -160,8 +160,7 @@
 其中 $X$ 代表有限个可能的测量结果的集合， $\mathcal{L}(\mathcal{H})$ 代表 $\mathcal{H}$ 上所有的有界算子的集合。</li>
 </ol>
 <p><strong>玻恩规则</strong></p>
-<p>对于一个量子态 $\rho$ 进行 POVM $\mathsf{E}$ 所给出的测量，结果为 $x$ 的概率为 $p_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)]$</p>
-</blockquote>
+<p>对于一个量子态 $\rho$ 进行 POVM $\mathsf{E}$ 所给出的测量，结果为 $x$ 的概率为 $p_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)]$</p></blockquote>
 <p>当我第一次看到 POVM 的时候，我并不清楚它是如何实现的。因为传统意义上的测量是一个投影算符，满足 $\mathsf{E}(x)^2=\mathsf{E}(x),\quad \forall x\in X$ 。而一般的 POVM 不满足这一条件。</p>
 <p>实际上，传统意义上的投影测量也叫做 PVM（Projection Valued Measure），是一类特殊的 POVM。</p>
 <p>PVM 之于 POVM，就像纯态之于混合态。也就是说，POVM 是 PVM 的统计混合（statistical mixture），正如混合态是纯态的统计混合。</p>
@@ -183,15 +182,13 @@
 <p>POVM 给出了各个测量结果的概率，却没有给出测量后的状态。于是我们希望找到一个数学对象，能将测量概率和测量后的状态都包括进来。这个数学对象叫做 Quantum Instrument。</p>
 <blockquote>
 <p><strong>定义 Quantum Instrument</strong></p>
-<p>称 $\mathcal{I}_{x}: \mathcal{I}_{x}(\rho) = \rho_x$ 为一个 Quantum Instrument，如果 $\operatorname{tr}\left[\sum_{x\in X} \rho_x \right]=\operatorname{tr}[\rho]=1$ 。</p>
-</blockquote>
+<p>称 $\mathcal{I}_{x}: \mathcal{I}_{x}(\rho) = \rho_x$ 为一个 Quantum Instrument，如果 $\operatorname{tr}\left[\sum_{x\in X} \rho_x \right]=\operatorname{tr}[\rho]=1$ 。</p></blockquote>
 <p>可以看出， $\mathcal{I}_x$ 不仅给出了测量的概率 $p_x=\operatorname{tr}[\rho_x]$ ，还给出了测量后的状态 $\frac{\rho_x}{\operatorname{tr}[\rho_x]}$ 。</p>
 <p>显然，同一个 POVM 对应无数个 Quantum Instrument。</p>
 <p>那么对于任意一个 Quantum Instrument，我们是否总是可以实现它？答案是肯定的。</p>
 <blockquote>
 <p><strong>定理</strong></p>
-<p>给定任意一个 Quantum Instrument，我们总是能找到一个 Measurement Model 来实现它（实际上有无数个）。证略。</p>
-</blockquote>
+<p>给定任意一个 Quantum Instrument，我们总是能找到一个 Measurement Model 来实现它（实际上有无数个）。证略。</p></blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

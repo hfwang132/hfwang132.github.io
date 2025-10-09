@@ -205,8 +205,7 @@ $\begin{aligned} \mathcal{L}= \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\p
 <p>这正是高斯定律。在哈密顿表述中，它是作为约束出现的。而 $\phi$ 就是对应的拉格朗日乘子。</p>
 <p>这说明在哈密顿表述中， $\phi$ 不是一个独立的动力学变量。我们不妨取 $\phi =0$ ，这叫做 Weyl 规范。</p>
 <blockquote>
-<p>Weyl 规范是一个不完全的规范，因为剩下的 $A_1,A_2,A_3$ 仍有规范自由度。</p>
-</blockquote>
+<p>Weyl 规范是一个不完全的规范，因为剩下的 $A_1,A_2,A_3$ 仍有规范自由度。</p></blockquote>
 <p>当然，我们也可以取其他规范。例如库仑规范 $\nabla \cdot \mathbf{A} = 0$ ，那么此时 $\phi$ 就依赖于 $\mathbf{A}$ （根据规范变换）。</p>
 <p>把约束 $ \rho + \nabla \cdot \mathbf{\Pi} = 0$ 代入 $\mathcal{H}$ 得：</p>
 <p>$\boxed{ \begin{aligned} \mathcal{H} &amp;= \frac{1}{2}\mathbf{\Pi}^2  + \frac{1}{2} (\nabla \times \mathbf{A})^2 - \mathbf{A}\cdot \mathbf{J}\\ &amp;= \frac{1}{2}\mathbf{E}^2  + \frac{1}{2} \mathbf{B}^2  - \mathbf{A}\cdot \mathbf{J}   \end{aligned} }$</p>
@@ -215,8 +214,7 @@ $\begin{aligned} \mathcal{L}= \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\p
 <p>我们来看看为什么哈密顿量不具有规范不变性：</p>
 <p>在哈密顿表述中，场 $\varphi$ 的运动方程为 $\partial_t \varphi = \delta \mathcal{H}/\delta \pi_\varphi$ ，其中场 $\pi_\varphi$ 是场 $\varphi$ 对应的正则动量。</p>
 <p>注意到，运动方程左边的导数是 $\partial_t$ ，而不是规范不变的协变导数 $D_t = \partial_t + \mathrm{i}eA_t = \partial_t -\mathrm{i}e\phi$ 。所以相应地，方程的右边也不是规范不变的。</p>
-<p>这就是哈密顿表述在高能物理中不常用的原因之一。</p>
-</blockquote>
+<p>这就是哈密顿表述在高能物理中不常用的原因之一。</p></blockquote>
 <p>最后，我们考虑剩下的哈密顿方程：</p>
 <p>$\dot{\mathbf{A}} = \frac{\delta \mathcal{H}}{\delta \mathbf{\Pi}},\quad \dot{\mathbf{\Pi}} = \frac{\delta \mathcal{H}}{\delta \mathbf{A}}$</p>
 <p>其中前者 $\dot{\mathbf{A}} = \frac{\delta \mathcal{H}}{\delta \mathbf{\Pi}} = \mathbf{\Pi} - \nabla\phi \Rightarrow \mathbf{E} = -\frac{\partial A}{\partial t} - \nabla \phi$ 是电场的定义式，后者则是安培定律：</p>
@@ -262,13 +260,11 @@ $\begin{aligned} \mathcal{L}= \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\p
 <p>求对应的哈密顿方程 $\dot{\mathbf{\Pi}} = \delta \mathcal{H}/\delta\mathbf{A}, \ \dot\psi =  \delta\mathcal{H}/\delta \pi_\psi$ 就能得到耦合的麦克斯韦方程和狄拉克方程。</p>
 <blockquote>
 <p>注意到，由于缺失了与时间 $t=x^0$ 有关的 $\bar\psi(-\mathrm{i}\gamma^0\partial_0)\psi$ 项和 $e\bar\psi(\gamma^0A_0)\psi=-e\psi^\dagger\psi \phi = \rho\phi$ 项，<strong>哈密顿量不是规范不变的</strong>。</p>
-<p>原因我们已经说过：在哈密顿表述中，时间具有特殊地位；在哈密顿运动方程 $\partial_0\varphi = \delta\mathcal{H}/\delta \pi_\varphi$ 中，左边的时间导数 $\partial_0$ 并非规范不变的（ $D_0$ 才是规范不变的），所以右边哈密顿量显然也不是规范不变的。</p>
-</blockquote>
+<p>原因我们已经说过：在哈密顿表述中，时间具有特殊地位；在哈密顿运动方程 $\partial_0\varphi = \delta\mathcal{H}/\delta \pi_\varphi$ 中，左边的时间导数 $\partial_0$ 并非规范不变的（ $D_0$ 才是规范不变的），所以右边哈密顿量显然也不是规范不变的。</p></blockquote>
 <h2 id="三正则量子化">三、正则量子化</h2>
 <p>如果只有电磁场或只有狄拉克场，由于它们的拉氏量/哈密顿量都只有二次项，所以使用谐振子模型就可以直接得到解析解。例如，真空中电磁场的正则量子化就是在库仑规范 $ \nabla \cdot \mathbf{A} = 0$ 下利用谐振子模型得到平面波模式上的产生和湮灭算符及其演化。这些模式的演化是彼此独立（解耦）的。</p>
 <blockquote>
-<p>解析解为 $\mathbf{A}(\mathbf{x},t) = \sum_{\mathbf{k},\sigma} \frac{1}{\sqrt{2\omega_\mathbf{k}V}} \left[ a_{\mathbf{k},\sigma} \bm{\epsilon}_{\mathbf{k},\sigma} \mathrm{e}^{\mathrm{i}(\mathbf{k}\cdot \mathbf{x}-\omega_\mathbf{k}t)} + \text{h.c.} \right]$ ，其中 $\epsilon_{\mathbf{k},\sigma}$ 表示与 $\mathbf{k}$ 垂直且彼此垂直的两个向量，$\sigma$ 表示偏振， $\text{h.c.}$ 表示厄米共轭（hermitian conjugate）， $V$ 表示腔内体积。如果不是腔而是全空间，则把 $\sum\frac{1}{\sqrt{V}}$ 换成 $\int \mathrm{d}^3\mathbf{k} \frac{1}{(2\pi)^{3/2}}$ 。由于正则量子化是量子光学的标准教科书内容，此处不再赘述，具体可参考 <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527617197" target="_blank" rel="noopener noreffer ">Atom-Photon Interaction</a> 的附录章节。</p>
-</blockquote>
+<p>解析解为 $\mathbf{A}(\mathbf{x},t) = \sum_{\mathbf{k},\sigma} \frac{1}{\sqrt{2\omega_\mathbf{k}V}} \left[ a_{\mathbf{k},\sigma} \bm{\epsilon}_{\mathbf{k},\sigma} \mathrm{e}^{\mathrm{i}(\mathbf{k}\cdot \mathbf{x}-\omega_\mathbf{k}t)} + \text{h.c.} \right]$ ，其中 $\epsilon_{\mathbf{k},\sigma}$ 表示与 $\mathbf{k}$ 垂直且彼此垂直的两个向量，$\sigma$ 表示偏振， $\text{h.c.}$ 表示厄米共轭（hermitian conjugate）， $V$ 表示腔内体积。如果不是腔而是全空间，则把 $\sum\frac{1}{\sqrt{V}}$ 换成 $\int \mathrm{d}^3\mathbf{k} \frac{1}{(2\pi)^{3/2}}$ 。由于正则量子化是量子光学的标准教科书内容，此处不再赘述，具体可参考 <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527617197" target="_blank" rel="noopener noreffer ">Atom-Photon Interaction</a> 的附录章节。</p></blockquote>
 <p>在有源的情况下，我们无法在 $\nabla\cdot \mathbf{A}=0$ 的前提下取到 $\phi=0$ ，这导致此时不再只有横模 $\mathbf{E}_{\perp}(\mathbf{k},t) = -\partial_t \mathbf{A}(\mathbf{k},t)$ ，而是存在与源有关的纵模 $\mathbf{E}_{\parallel}(\mathbf{k},t) = -\mathrm{i}\mathbf{k} \phi(\mathbf{k},t) = -\mathrm{i}\frac{\mathbf{k}}{k^2} \rho(\mathbf{k},t)$ 。横模 $\mathbf{E}_{\perp}$ 能用平面波模式上的产生和湮灭算符表示，但纵模 $\mathbf{E}_{\parallel}$ 是与源有关的。</p>
 <p>如果我们把源看成经典对象，那么纵模就无法量子化。而如果我们对源进行全量子处理，也就是把源当作和 $\mathbf{A}$ 一样的量子场来处理（也就是 $\rho = -e\bar\psi\gamma^0\psi =  -e\psi^\dagger\psi$ ），那么纵模就是与狄拉克场 $\psi$ 耦合起来的。此时，能够解耦的模式不再是平面波模式，而是电磁场和狄拉克场的混合模式。</p>
 <p>如果我们能够解出这些模式，那也还好。但问题就出在这了：耦合项 $e\bar\psi A_\mu\gamma^\mu \psi$ 不像自由项 $\bar{\psi}(-\mathrm{i}\bm\gamma\cdot \nabla + m)\psi , \ \frac{1}{2}(\mathbf{E}^2+\mathbf{B}^2)$ 那样是二次项——它是三次项，是非简谐的！这导致我们无法解析地算出混合模式，也就是说，没有解析解。此时，我们最多只能写出 $\mathbf{A}(\mathbf{x})$ 而不是 $\mathbf{A}(\mathbf{x},t)$ ：</p>
@@ -297,8 +293,7 @@ $\begin{aligned} \mathcal{L}= \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\p
 <ol>
 <li>电子数是不变的。没有电子-正电子对的产生和湮灭。</li>
 <li>狄拉克场 $\psi = \begin{bmatrix}\psi_1\\ \psi_2\end{bmatrix}$ 的正电子项很小 $\psi _2\approx 0$ 。电子项 $\psi_1 = \begin{bmatrix}\psi_{1\uparrow} \\ \psi_{1\downarrow}\end{bmatrix}$ 才是我们关心的。这是因为我们的宇宙充斥着电子，而正电子很少。</li>
-</ol>
-</blockquote>
+</ol></blockquote>
 <p>低能情形的理论可以被大大地简化，见 4.3 节。不过在那之前，我们先把狄拉克方程展开熟悉一下。</p>
 <h3 id="42-狄拉克方程">4.2 狄拉克方程</h3>
 <p>狄拉克方程为 $\mathrm{i}\gamma^\mu D_\mu \psi - m\psi=0$ ，其中</p>
@@ -336,8 +331,7 @@ $\begin{aligned} \mathcal{L}= \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\p
 <blockquote>
 <p>我们知道，在氢原子中解无自旋的薛定谔方程，得到的结果需要精细结构修正。这些修正一共有三项：自旋-轨道耦合、相对论动能修正、以及 Darwin 项。其中动能修正项来自于质能关系 $E^2 = p^2 +m^2$ ，Darwin 项来自于电子项和正电子项之间的干涉（也可以理解成虚电子-正电子对的涨落），自旋-轨道耦合，顾名思义，来自于电子的自旋，而这已经被泡利方程考虑进来了。</p>
 <p>因此，在氢原子中解泡利方程，可以得到自旋-轨道耦合的更正项。但仍然得不到相对论动能修正项和 Darwin 项。如果想要同时得到这三个精细结构更正项，就还是需要量子场论和狄拉克方程。</p>
-<p>另外，还有一个修正项与精细结构修正的数量级相同，它叫做 Lamb shift（兰姆位移），来自于电磁场（虚光子）的涨落，而非电子-正电子对的涨落。</p>
-</blockquote>
+<p>另外，还有一个修正项与精细结构修正的数量级相同，它叫做 Lamb shift（兰姆位移），来自于电磁场（虚光子）的涨落，而非电子-正电子对的涨落。</p></blockquote>
 <hr>
 <h2 id="五长波近似偶极子表象">五、长波近似、偶极子表象</h2>
 <p>现在我们考虑光场与原子内电子的相互作用。我们首先要做的近似是<strong>玻恩-奥本海默近似</strong>，也就是把原子实和电子的哈密顿量解耦，从而可以只考虑电子的哈密顿量。这是因为电子运动比原子实快得多，导致我们可以把原子实受到的力看做一个平均作用力；反过来，我们可以把电子看成在一个不变的背景库仑势中运动。接下来，我们做一系列其他近似。</p>
@@ -359,8 +353,7 @@ $\begin{aligned} \mathcal{L}= \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\p
 <p>二能级之间的跃迁对光场的偏振态有要求（选择定则），此时我们只考察对应的偏振态 $\sigma$ ，使得 $\mathbf{d} \cdot \mathbf{E}_{\perp}(\mathbf0)$ 变为 $dE_\perp(0)$ 。</p>
 <p>另外，还需要将偶极子算符投影到二能级子空间里： $d\mapsto (|a\rangle\langle a| + |b\rangle\langle b| ) d = d_{ab}|a\rangle\langle b| + d_{ba} |b\rangle \langle a|$ 。其中 $d_{ba} = d_{ab}^*$ 。</p>
 <blockquote>
-<p>之所以没有 $d_{aa} |a\rangle \langle a|$ 项是因为 $d_{aa} =-e \int \langle \psi_a|\mathbf{x}|\psi_a\rangle =-e\int\psi^*(\mathbf{x})\ \mathbf{x}\ \psi(\mathbf{x})\mathrm{d}^3\mathbf{x}= 0$ 。类似也有 $d_{bb}=0$ 。</p>
-</blockquote>
+<p>之所以没有 $d_{aa} |a\rangle \langle a|$ 项是因为 $d_{aa} =-e \int \langle \psi_a|\mathbf{x}|\psi_a\rangle =-e\int\psi^*(\mathbf{x})\ \mathbf{x}\ \psi(\mathbf{x})\mathrm{d}^3\mathbf{x}= 0$ 。类似也有 $d_{bb}=0$ 。</p></blockquote>
 <p>我们总是可以选取相位 $d_{ab} \mapsto d_{ab}\mathrm{e}^{\mathrm{i}\theta}$ 使得 $d_{ab} = d_{ba}$ 是实数，因为总体相位不重要。于是偶极子算符可以写成：</p>
 <p>$\boxed{ d=d_{ab}(\sigma_+ +\sigma_-) }$</p>
 <p>其中 $\sigma_+ = |b\rangle\langle a|,\ \sigma_-=|a\rangle\langle b|$ 。</p>
@@ -409,8 +402,7 @@ $\begin{aligned} [D_i, D_j] &amp;= [\partial_i +\mathrm{i}eA_i, \partial_j +\mat
 <p>所以 $\mathbf{D}\times \mathbf{D} = \mathrm{i}e\mathbf{B}$ 。</p>
 <p>于是<br>
 $\begin{aligned} (\bm\sigma \cdot \mathbf{D})^2 &amp;= \mathbf{D}^2 +\mathrm{i} \bm\sigma\cdot (\mathbf{D} \times \mathbf{D}) \\ &amp;= \mathbf{D}^2 - e \bm\sigma\cdot \mathbf{B} \end{aligned}$</p>
-<p>证毕。</p>
-</blockquote>
+<p>证毕。</p></blockquote>
 <h2 id="参考">参考</h2>
 <ol>
 <li>Atom-Photon Interactions by Cohen-Tannoudji <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527617197" target="_blank" rel="noopener noreffer ">https://onlinelibrary.wiley.com/doi/book/10.1002/9783527617197</a></li>

@@ -158,16 +158,14 @@ In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, gi
 <p>Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corresponding measurement probabilities $p_k = \operatorname{Tr}[\rho \Pi_k]$, find the quantum state $\rho$.</p>
 <p>In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, given $p_k$ and $\Pi_k$, find $\rho$.</p>
 <blockquote>
-<p>Conversely, if $\rho$ and $p_k$ are known, and you want to find $\Pi_k$, that&rsquo;s called Detector tomography. However, that&rsquo;s not the topic of this article.</p>
-</blockquote>
+<p>Conversely, if $\rho$ and $p_k$ are known, and you want to find $\Pi_k$, that&rsquo;s called Detector tomography. However, that&rsquo;s not the topic of this article.</p></blockquote>
 <p>Why care about state tomography? Because we want to know what the quantum state prepared in the experiment looks like. The method is state tomography.</p>
 <p>From the equation $p_k = \operatorname{Tr}[\rho \Pi_k]$, you can see that if $\rho$ has $n$ degrees of freedom, we need at least $n$ measurement operators, and they must be &ldquo;independent of each other.&rdquo; This condition is known as tomographical completeness or informational completeness.</p>
 <blockquote>
 <p><strong>Why is it called &ldquo;Tomography&rdquo;?</strong><br>
 State tomography is called &ldquo;tomography&rdquo; because the tomography of continuous-variable photon states is really similar to the CT (Computed Tomography) in hospitals. CT reconstructs a 3D image from projection images from various angles, while the tomography of continuous-variable photon states reconstructs the Wigner function from projection images at various angles. The latter is a kind of &ldquo;two-dimensional image.&rdquo;<br>
 It&rsquo;s also understandable with discrete variables because (von Neumann) measurement is essentially projection, and tomography is reconstructing the original quantum state from the measured projections.<br>
-In short, tomography is named because it is the process of reconstructing the whole from projections.</p>
-</blockquote>
+In short, tomography is named because it is the process of reconstructing the whole from projections.</p></blockquote>
 <h2 id="state-tomography-of-a-single-qubit">State Tomography of a Single Qubit</h2>
 <p>A qubit&rsquo;s density operator has only three degrees of freedom (Bloch vector), so in theory, only three measurement operators are needed. For example, you can choose ${(\mathbb{I} + X)/2,\\,\\, (\mathbb{I} + Y)/2,\\,\\, (\mathbb{I} + Z)/2 }$ as the three measurement operators (where $X, Y, Z$ are Pauli matrices). They correspond to the X, Y, Z axes on the Bloch sphere, which are equivalent to measuring the x, y, and z components of the Bloch vector.</p>
 <p>However, the issue is that in experiments, we do not directly measure probabilities but rather counts. If we want to know the probability $p_Z = \operatorname{Tr}[\rho (\mathbb{I} + Z)/2] = \langle0|\rho|0\rangle$, we must use counts $p_Z = \frac{N_Z}{N_Z + N_{-Z}}$, while measuring $N_{-Z}$ requires another measurement operator $(\mathbb{I} - Z)/2$.</p>
@@ -197,8 +195,7 @@ In short, tomography is named because it is the process of reconstructing the wh
 <p>The basic idea behind MLE is to find a straight line (among many) that is most likely to generate the measured points. The specific implementation involves setting a likelihood function with straight-line parameters as independent variables, where the function value represents the probability of measuring these results with the given straight-line parameters. The whole problem then becomes an optimization problem: Find the maximum value of the likelihood function and its corresponding straight-line parameters.</p>
 <blockquote>
 <p>In many cases, experimental errors are assumed to follow a normal distribution, so the likelihood function is exponential in the form $L = e^{-\mathcal{L}}$. By taking the logarithm of the likelihood function and inverting it, we get a new likelihood function, $\mathcal{L}$, and the optimization problem becomes finding the minimum value of the new likelihood function.
-This new likelihood function can generally be interpreted as &ldquo;given this straight line, the total error between the theoretical and actual measurements.&rdquo;</p>
-</blockquote>
+This new likelihood function can generally be interpreted as &ldquo;given this straight line, the total error between the theoretical and actual measurements.&rdquo;</p></blockquote>
 <p>All of these ideas can be directly applied to our state tomography. We can set a likelihood function with the degrees of freedom for the positive-definite matrix $\rho(x,y,z)$, where the function value is the probability of measuring the observed results given quantum state $\rho$.</p>
 <p>Let&rsquo;s convert these ideas into an algorithm:</p>
 <p>Define a valid density operator $\rho(x,y,z) = \frac{\mathbb{I} + xX + yY + zZ}{2}$, with $|x|, |y|, |z| \leq 1$.</p>
@@ -212,14 +209,12 @@ This new likelihood function can generally be interpreted as &ldquo;given this s
 $</p>
 <blockquote>
 <p>In this case, we use the continuous normal distribution instead of the discrete Poisson distribution because when counts are large (typically a few hundred to a few thousand), the normal distribution can closely approximate the Poisson distribution. More importantly, the likelihood function of the normal distribution provides an unbiased estimate, just as effective as the Poisson distribution (see appendix)!</p>
-<p>Using the Poisson distribution for the likelihood function is also possible, but the result (see appendix) is less intuitive, and it poses a greater computational burden for computers.</p>
-</blockquote>
+<p>Using the Poisson distribution for the likelihood function is also possible, but the result (see appendix) is less intuitive, and it poses a greater computational burden for computers.</p></blockquote>
 <p>For easier calculations, the negative logarithm is taken and unnecessary constants $N$ are removed, resulting in:</p>
 <p>$\begin{aligned} \mathcal{L}(x,y,z)=\sum_k\frac{\left(p_k-\hat{p}_k\right)^2}{2\hat{p}_k}=\sum_k\frac{\left(p_k-\operatorname{Tr}[\rho(x,y,z)\Pi_k]\right)^2}{2\operatorname{Tr}[\rho(x,y,z)\Pi_k]} \end{aligned}$</p>
 <p>Thus, we only need to find $(x_0,y_0,z_0) = \underset{|x|,|y|,|z|\le1}{\operatorname{arg\\,min}} \mathcal{L}(x,y,z)$ to obtain the optimal solution.</p>
 <blockquote>
-<p>This is a constrained optimization problem. Can we transform it into an unconstrained optimization problem? See the following.</p>
-</blockquote>
+<p>This is a constrained optimization problem. Can we transform it into an unconstrained optimization problem? See the following.</p></blockquote>
 <h2 id="state-tomography-of-multiple-qubits">State tomography of multiple qubits</h2>
 <p>The density matrix of n qubits has $4^n -1$ degrees of freedom. In this case, the corresponding Bloch vector consists of Pauli Correlators:</p>
 <p>$\begin{aligned} \rho = \frac{1}{2^n}\sum_{i_1,\ldots,i_n=0}^{3} c_{i_1i_2\ldots i_n} \sigma_{i_1} \otimes \sigma_{i_2} \otimes \ldots \sigma_{i_n} \end{aligned}$</p>
@@ -244,29 +239,25 @@ $</p>
 <p><strong>What is the Wigner function?</strong></p>
 <p>How do we understand the Wigner function? Let&rsquo;s start from classical electromagnetic waves. We know that single-mode (monochromatic) electromagnetic waves can be described by a point on the complex plane (i.e., using a phasor diagram). Superposition of electromagnetic waves directly corresponds to complex number addition (or vector addition).</p>
 <p>This so-called phasor representation can be immediately extended to quantum mechanics. For a quantized single-mode classical electromagnetic field, its phasor representation is no longer an infinitesimal point but a circle with a certain size. In fact, it is a Gaussian function on the complex plane, with the standard deviation determined by the uncertainty principle. This Gaussian function is the Wigner function of the classical electromagnetic wave, and its marginal distribution corresponds to the probability distribution of the quadrature field strength (the electric field is also an observable and has uncertainty). The quantum state obtained by quantizing a classical electromagnetic wave is called the Coherent state.</p>
-<p>For a more general quantum optical field, its Wigner function can have strange shapes and can even take on negative values. However, this does not mean we get negative probabilities—after taking the marginal distribution, we always get a non-negative probability. This is because the area occupied by these negative values is small enough to be smaller than the area allowed by the uncertainty principle, meaning the uncertainty principle ensures that we cannot observe negative probability.</p>
-</blockquote>
-<figure><img src="/state_tomography/image/wigner.jpg"><figcaption>
+<p>For a more general quantum optical field, its Wigner function can have strange shapes and can even take on negative values. However, this does not mean we get negative probabilities—after taking the marginal distribution, we always get a non-negative probability. This is because the area occupied by these negative values is small enough to be smaller than the area allowed by the uncertainty principle, meaning the uncertainty principle ensures that we cannot observe negative probability.</p></blockquote>
+<figure><img src="/state_tomography/image/wigner.jpg"/><figcaption>
       <h4>Some interesting Wigner functions for photon states. The left image shows a squeezed state, and the right image shows a Schrödinger cat state.</h4>
     </figcaption>
 </figure>
-
 <p>State tomography of continuous-variable photon states is completed by measuring quadrature. In this case, all measurement operators have the following form:</p>
 <p>$\begin{aligned} \Pi_\theta = \frac{ae^{-i\theta}+a^\dag e^{i\theta}}{2} \end{aligned}$</p>
 <p>This is the so-called &ldquo;quadrature&rdquo; (I don&rsquo;t know the Chinese translation). Conceptually, it projects the entire Wigner function onto a straight line, with this line making an angle $\theta$ with the x-axis.</p>
-<figure><img src="/state_tomography/image/irt.jpg"><figcaption>
+<figure><img src="/state_tomography/image/irt.jpg"/><figcaption>
       <h4>Quantum state tomography of continuous-variable optical states</h4>
     </figcaption>
 </figure>
-
 <p>Quantum information theory tells us that if we want to reconstruct the Wigner function with infinite precision, we need infinitely many values of $\theta$, which means countless measurement operators. Of course, we don&rsquo;t need infinite precision, so we only need to take $\theta$ at some reasonable intervals. For example, taking steps of 0.01 radians from 0 to 2pi.</p>
 <p>After obtaining the probability density function of the quadrature, we can use the inverse Radon transform to reconstruct the Wigner function. This is similar to the principle used in hospital CT scans.</p>
 <p>As for how to measure quadratures experimentally, it&rsquo;s simple: like in radio technology, mix the signal with a local oscillator. This is called homodyne measurement. Specifically, this involves mixing the signal to be measured with a laser using a beam splitter, then recording the difference in the two output signals. Changing the phase of the laser changes $\theta$.</p>
-<figure><img src="/state_tomography/image/homodyne.jpg"><figcaption>
+<figure><img src="/state_tomography/image/homodyne.jpg"/><figcaption>
       <h4>Homodyne Measurement</h4>
     </figcaption>
 </figure>
-
 <h2 id="appendix-maximum-likelihood-estimation-for-poisson-distribution">Appendix: Maximum Likelihood Estimation for Poisson Distribution</h2>
 <p>The likelihood function corresponding to the Poisson distribution is as follows:</p>
 <p>$ \begin{aligned} \mathcal{L}(\mathbf{t}) &amp;= P(N_1=n_1,N_2=n_2,\cdots) \\ &amp;= \prod_k e^{-\lambda_k} \frac{\lambda_k^{n_k}}{n_k!} \\ &amp;\xrightarrow{-\log} \sum_k (\lambda_k - n_k \log \lambda_k + \cancel{\log n_k!}) \\  &amp;\xrightarrow{\frac{1}{N}} \sum_k(\hat{p}_k(\mathbf{t})-p_k \log \hat{p}_k(\mathbf{t})) \end{aligned}$</p>

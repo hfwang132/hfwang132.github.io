@@ -173,8 +173,7 @@ $\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\m
 <p>又或者是</p>
 <p>$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;= \mu_0 J^\nu  \end{aligned}$</p>
 <blockquote>
-<p>注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。</p>
-</blockquote>
+<p>注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。</p></blockquote>
 <p>这究竟是怎么一回事？这是否意味着其实存在更高更深奥的视角？</p>
 <p>没错，就是如此。本文将从最小作用量原理出发推导麦克斯韦方程，并且在过程中使用微分几何的语言。</p>
 <p>为什么要用微分几何的语言？第一，它帮助我们将电磁场的数学结构看得更加清楚，第二，它使得将麦克斯韦方程推广到弯曲时空中非常容易。</p>
@@ -225,8 +224,7 @@ $\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\m
 <p>外微分运算是典范的：它不需要借助流形上的额外结构，也不依赖于基的定义。</p>
 <p>引理： $\alpha \wedge \beta = (-1)^{\deg(\alpha)\deg(\beta)} \beta\wedge \alpha$ ，其中 $\deg$ 表示微分形式的阶数。</p>
 <blockquote>
-<p>证明：为了将 $\beta$ 移动到 $\alpha$ 前面，需要将 $\beta$ 中的 $\deg(\beta)$ 个 1-形式 向前移动 $\deg(\alpha)$ 次，共 $\deg(\alpha) \deg(\beta)$ 次，每次积累一个负号。</p>
-</blockquote>
+<p>证明：为了将 $\beta$ 移动到 $\alpha$ 前面，需要将 $\beta$ 中的 $\deg(\beta)$ 个 1-形式 向前移动 $\deg(\alpha)$ 次，共 $\deg(\alpha) \deg(\beta)$ 次，每次积累一个负号。</p></blockquote>
 <p>定理：做两次外微分运算总是会得到零： $\mathrm{d}\mathrm{d}=0$ ，证明略。</p>
 <p><strong>1.2.6 Hodge 对偶</strong></p>
 <p>关于 Hodge 对偶，有兴趣的读者可以自行查阅，这里就不详细介绍了。简单来说，k-形式 的 Hodge 对偶是与其“互补”的 (n-k)-形式。例如，在欧式空间 $\mathbb{R}^3$ 中，给定标准正交基 $\mathrm{d}x,\mathrm{d}y,\mathrm{d}z$ ，有</p>
@@ -240,8 +238,7 @@ $\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\m
 <p>4-势（4-potential）定义为 $A^\mu = (A^0, A^1, A^2, A^3) = (\phi/c, A^x,A^y,A^z)$</p>
 <blockquote>
 <p>用更严谨的微分几何语言，就是 $A = A^0\partial_0 + A^1 \partial_1 + A^2 \partial_2 + A^3 \partial_3 = \frac{\phi}{c} \partial_{(ct)} + A^x\partial_x + A^y \partial_y + A^z\partial_z$<br>
-这是一个切矢量场，基为 $(\partial_0, \partial_1,\partial_2,\partial_3)$</p>
-</blockquote>
+这是一个切矢量场，基为 $(\partial_0, \partial_1,\partial_2,\partial_3)$</p></blockquote>
 <p>由于只有协变矢量有自然的外微分运算，我们用度规将 4-势变为协变形式：</p>
 <p>$A_{\mu}=g_{\mu\nu}A^{\nu}$</p>
 <p>以下采用 $(-,+,+,+)$ 的度规惯例，于是：</p>
@@ -261,8 +258,7 @@ $\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\m
 <p>最后，4-流（4-current）定义为 $J^{\mu}=(\rho c, J^x,J^y,J^z)$ ，协变形式为 $J_{\mu}=(-\rho c, J^x, J^y, J^z) = -\rho c^2 \mathrm{d}t +J^x \mathrm{d}x + J^y \mathrm{d}y + J^z \mathrm{d}z$ 。</p>
 <blockquote>
 <p>实际上，4-势是主丛上的一个联络。所谓主丛，就是一个纤维丛，其纤维有李群的结构，而向量丛（例如切丛/余切丛）的纤维是向量空间（例如切空间/余切空间）。可见主丛不同于向量丛。</p>
-<p>主丛上的联络的定义与向量丛上的联络的定义也是不同的。向量丛上的联络定义为协变导数，而主丛上的联络是一个取值为李代数的 1-形式。对于电磁场而言，主丛的纤维是 $U(1)$ ，其李代数为 $\mathbb{R}$ ，因此看起来与普通的 1-形式没有区别。详情我们在本系列下一篇文章中介绍。</p>
-</blockquote>
+<p>主丛上的联络的定义与向量丛上的联络的定义也是不同的。向量丛上的联络定义为协变导数，而主丛上的联络是一个取值为李代数的 1-形式。对于电磁场而言，主丛的纤维是 $U(1)$ ，其李代数为 $\mathbb{R}$ ，因此看起来与普通的 1-形式没有区别。详情我们在本系列下一篇文章中介绍。</p></blockquote>
 <h2 id="三电磁场的拉氏量">三、电磁场的拉氏量</h2>
 <p>这里直接给出拉氏量：</p>
 <p>$\color{red}{ \begin{aligned} \mathcal{L}[A_\mu, \partial_\nu A_\mu] =  -\frac{1}{4\mu_0} F_{\mu\nu} F^{\mu\nu} + A_{\mu} J^{\mu} \end{aligned} }$</p>
@@ -298,8 +294,7 @@ $\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;= 0 \\ \partial_\mu F^{\m
 <blockquote>
 <p>如果读者会微分几何，以下提供一个更优雅的推导：<br>
 $\begin{aligned} &amp;\mathrm{d}F=0 \\ &amp;\Rightarrow \mathrm{d} \star \star F = 0 \\ &amp;\Rightarrow \mathrm{d} \star \flat\sharp\star F = 0 \\ &amp;\Rightarrow (\sharp\star\mathrm{d} \star \flat)(\sharp\star F) = 0 \\ &amp;\Rightarrow (\nabla\cdot)(\sharp\star F) = 0 \\ &amp;\Rightarrow \partial_\mu (\star F)^{\mu\nu} = 0 \end{aligned}$<br>
-其中 $\sharp$ 是升指标， $\flat$ 是降指标， $(\nabla\cdot)$ 是广义散度，定义为 $(\nabla\cdot) = \sharp\star\mathrm{d} \star \flat$ 。</p>
-</blockquote>
+其中 $\sharp$ 是升指标， $\flat$ 是降指标， $(\nabla\cdot)$ 是广义散度，定义为 $(\nabla\cdot) = \sharp\star\mathrm{d} \star \flat$ 。</p></blockquote>
 <h2 id="五微分几何表述">五、微分几何表述</h2>
 <p>有些读者不喜欢指标运算，而是喜欢更典范的抽象符号，因此本节用微分几何的语言再重写一遍。</p>
 <p>给定拉氏量：</p>
@@ -308,8 +303,7 @@ $\begin{aligned} &amp;\mathrm{d}F=0 \\ &amp;\Rightarrow \mathrm{d} \star \star F
 <p>其中度规体积形式 $\omega$ 的定义是使得 $\langle \omega ,\omega \rangle_g = \pm 1 =: \operatorname{sgn}(g)$ 成立的 n-形式，n 为流形的维数。显式定义为 $\omega = \sqrt{|\det(g)|},\mathrm{d}x^0 \wedge \mathrm{d}x^1 \wedge \mathrm{d}x^2 \wedge \mathrm{d}x^3 = \mathrm{d}x^0 \wedge \mathrm{d}x^1 \wedge \mathrm{d}x^2 \wedge \mathrm{d}x^3$ 。</p>
 <blockquote>
 <p>微分形式 $\beta$ 的 Hodge 对偶 $\star \beta$ 的定义式为 $\alpha \wedge *\beta = \langle \alpha, \beta\rangle \omega$ 。其中 $\langle \cdot,\cdot\rangle$ 是微分形式的内积，对于 n-形式，内积的定义为：<br>
-$\langle \alpha_1,\cdots\wedge\alpha_n,,\beta_1\wedge\cdots\wedge\beta_n\rangle = \begin{vmatrix} \langle \alpha_1,\beta_1 \rangle &amp; \cdots &amp; \langle \alpha_1,\beta_n \rangle \\ \vdots &amp; \ddots &amp; \vdots \\ \langle \alpha_n ,\beta_1 \rangle  &amp; \cdots &amp; \langle\alpha_n ,\beta_n \rangle  \end{vmatrix}$</p>
-</blockquote>
+$\langle \alpha_1,\cdots\wedge\alpha_n,,\beta_1\wedge\cdots\wedge\beta_n\rangle = \begin{vmatrix} \langle \alpha_1,\beta_1 \rangle &amp; \cdots &amp; \langle \alpha_1,\beta_n \rangle \\ \vdots &amp; \ddots &amp; \vdots \\ \langle \alpha_n ,\beta_1 \rangle  &amp; \cdots &amp; \langle\alpha_n ,\beta_n \rangle  \end{vmatrix}$</p></blockquote>
 <p>注意此处系数是 $-1/(2\mu_0)$ 而非 $-1/(4\mu_0)$ 。这是因为之前的张量指标写法（ $F_{\mu\nu}F^{\mu\nu}$ ）导致交换 $\mu, \nu$ 会重复求和，所以之前要多除以一个 $1/2$ 。</p>
 <p>从 $\mathcal{L}$ 的形式可以看出，它其实是一个 4-形式，而不是一个标量场。这是因为它要被积分成为作用量 $\begin{aligned} S = \int \mathcal{L} \end{aligned}$ 。</p>
 <p>对作用量变分得到：</p>
@@ -338,8 +332,7 @@ $\langle \alpha_1,\cdots\wedge\alpha_n,,\beta_1\wedge\cdots\wedge\beta_n\rangle 
 <p>可以证明（见附录）， $\mathrm{d}^\dagger \alpha = (-1)^{k}\star^{-1} \mathrm{d} \star \alpha = (-1)^{nk+n+1} s\star \mathrm{d} \star \alpha$ ，其中 $k=\deg(\alpha)$ ， $s=\operatorname{sgn}(g) := \operatorname{sgn}(\det (g))$ 是度规的符号。</p>
 <p>对于闵氏度规， $s = -1$ 。代入 $s=-1,,n=4,,k=2$ 得 $\mathrm{d}^\dagger F=\star \mathrm{d}\star F$ 。</p>
 <p>所以上图可以画成：<br>
-$\begin{matrix} 2\text{-vector fields} &amp; \stackrel{(\nabla\cdot)}{\longrightarrow}  &amp; 1\text{-vector fields}\\ \uparrow\sharp &amp; &amp; \uparrow\sharp \\  2\text{-form}  &amp; \xrightarrow{\mathrm{d}^\dagger} &amp; 1\text{-form}\\ \downarrow\star &amp;  &amp; \uparrow \star \\ 2\text{-form} &amp;  \stackrel{\mathrm{d}}\longrightarrow  &amp; 3\text{-form} \end{matrix}$</p>
-</blockquote>
+$\begin{matrix} 2\text{-vector fields} &amp; \stackrel{(\nabla\cdot)}{\longrightarrow}  &amp; 1\text{-vector fields}\\ \uparrow\sharp &amp; &amp; \uparrow\sharp \\  2\text{-form}  &amp; \xrightarrow{\mathrm{d}^\dagger} &amp; 1\text{-form}\\ \downarrow\star &amp;  &amp; \uparrow \star \\ 2\text{-form} &amp;  \stackrel{\mathrm{d}}\longrightarrow  &amp; 3\text{-form} \end{matrix}$</p></blockquote>
 <p>于是有</p>
 <p>$\begin{matrix} F^{\mu\nu} &amp; \xrightarrow{(\nabla\cdot)} &amp; \partial_\mu F^{\mu\nu}=\mu_0J^\nu \\ \uparrow \sharp &amp; &amp; \uparrow \sharp \\ F &amp; \xrightarrow{\star \mathrm{d}\star} &amp; \star \mathrm{d} \star F \end{matrix}$</p>
 <p>可见 $\partial_\mu F^{\mu\nu}=\mu_0J^\nu$ 等价于 $\star \mathrm{d} \star F = \mu_0 J$ 。</p>
@@ -352,28 +345,23 @@ $\begin{matrix} 2\text{-vector fields} &amp; \stackrel{(\nabla\cdot)}{\longright
 记<br>
 $\begin{aligned} \alpha \wedge \beta &amp;= \sum_{I,J} a_I b_J\mathrm{d} x^I \wedge \mathrm{d}x^J \\ &amp;= \sum_{i_1,\cdots,i_{m},j_1,\cdots,j_n} a_{i_1,\cdots,i_{m}}b_{j_1,\cdots,j_n}\mathrm{d}x^{i_1} \wedge \cdots \wedge \mathrm{d}x^{i_m} \wedge \mathrm{d}x^j_1\wedge \cdots \wedge \mathrm{d}x^{j_n} \end{aligned}$<br>
 则<br>
-$\begin{aligned} \mathrm{d}(\alpha\wedge \beta) &amp;= \partial_i (a_I b_J) \mathrm{d}x^i\wedge \mathrm{d}x^I \wedge \mathrm{d}x^J \\ &amp;=[(\partial_i a_I)b_J \mathrm{d}x^i \wedge \mathrm{d}x^I] \wedge \mathrm{d}x^J + a_I\partial_i b_J \mathrm{d}x^i \wedge \mathrm{d}x^I \wedge \mathrm{d}x^J \\ &amp;=(\partial_i a_I\mathrm{d}x^i \wedge \mathrm{d}x^I) \wedge (b_J \mathrm{d}x^J) + (-1)^{\deg(\alpha)} (a_I\partial_i  \mathrm{d}x^I \wedge \mathrm{d}x^i) \wedge (b_J\mathrm{d}x^J) \\ &amp;=\mathrm{d}\alpha \wedge \beta + (-1)^{\deg(\alpha)} \alpha \wedge \mathrm{d}\beta \end{aligned}$</p>
-</blockquote>
+$\begin{aligned} \mathrm{d}(\alpha\wedge \beta) &amp;= \partial_i (a_I b_J) \mathrm{d}x^i\wedge \mathrm{d}x^I \wedge \mathrm{d}x^J \\ &amp;=[(\partial_i a_I)b_J \mathrm{d}x^i \wedge \mathrm{d}x^I] \wedge \mathrm{d}x^J + a_I\partial_i b_J \mathrm{d}x^i \wedge \mathrm{d}x^I \wedge \mathrm{d}x^J \\ &amp;=(\partial_i a_I\mathrm{d}x^i \wedge \mathrm{d}x^I) \wedge (b_J \mathrm{d}x^J) + (-1)^{\deg(\alpha)} (a_I\partial_i  \mathrm{d}x^I \wedge \mathrm{d}x^i) \wedge (b_J\mathrm{d}x^J) \\ &amp;=\mathrm{d}\alpha \wedge \beta + (-1)^{\deg(\alpha)} \alpha \wedge \mathrm{d}\beta \end{aligned}$</p></blockquote>
 <p>引理 2：当 $\deg(\alpha)=\deg(\beta)$ 时，有 $\star\alpha \wedge \beta = (-1)^{k(n-k)}\alpha\wedge \star\beta$ ，其中 $k=\deg(\alpha)$</p>
 <blockquote>
 <p>证明：<br>
-$\begin{aligned} \star \alpha\wedge\beta &amp;= (-1)^{\deg(\star\alpha)\deg(\beta)} \beta\wedge\star\alpha \\  &amp;= (-1)^{k(n-k)}\langle\beta,\alpha\rangle \omega \\  &amp;= (-1)^{k(n-k)}\langle\alpha,\beta\rangle \omega \\  &amp;= (-1)^{k(n-k)}\alpha \wedge\star\beta \end{aligned}$</p>
-</blockquote>
+$\begin{aligned} \star \alpha\wedge\beta &amp;= (-1)^{\deg(\star\alpha)\deg(\beta)} \beta\wedge\star\alpha \\  &amp;= (-1)^{k(n-k)}\langle\beta,\alpha\rangle \omega \\  &amp;= (-1)^{k(n-k)}\langle\alpha,\beta\rangle \omega \\  &amp;= (-1)^{k(n-k)}\alpha \wedge\star\beta \end{aligned}$</p></blockquote>
 <p>引理 3： $\star\star \alpha = (-1)^{k(n-k)}s \alpha$ ，其中 $k=\deg(\alpha)$ ， $s=\operatorname{sgn}(g)$ 。</p>
 <blockquote>
 <p>证明：<br>
-$\begin{aligned} \star\alpha \wedge \star\star \alpha &amp;= \langle \star\alpha, \star\alpha \rangle\omega \\ &amp;= s\langle \alpha,\alpha \rangle\omega \\ &amp;= s\alpha \wedge \star \alpha\\ &amp;= (-1)^{k(n-k)}s \star\alpha\wedge \alpha \\ &amp;= \star\alpha\wedge \left[(-1)^{k(n-k)}s  \alpha\right] \end{aligned}$</p>
-</blockquote>
+$\begin{aligned} \star\alpha \wedge \star\star \alpha &amp;= \langle \star\alpha, \star\alpha \rangle\omega \\ &amp;= s\langle \alpha,\alpha \rangle\omega \\ &amp;= s\alpha \wedge \star \alpha\\ &amp;= (-1)^{k(n-k)}s \star\alpha\wedge \alpha \\ &amp;= \star\alpha\wedge \left[(-1)^{k(n-k)}s  \alpha\right] \end{aligned}$</p></blockquote>
 <p>引理 4： $\mathrm{d}^\dagger \alpha = (-1)^{k}\star^{-1} \mathrm{d} \star \alpha$</p>
 <blockquote>
 <p>证明：<br>
-$\begin{aligned} \langle \beta,\mathrm{d}^\dagger \alpha\rangle&amp;= \langle \mathrm{d}\beta , \alpha\rangle \\ &amp;= \int\mathrm{d}\beta \wedge \star \alpha \\ &amp;= \int -(-1)^{\deg(\beta)} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\beta)+1} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\alpha)} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\alpha)} \beta \wedge \star (\star^{-1}\mathrm{d}\star \alpha) \\ &amp;= (-1)^{k} \langle\beta, \star^{-1}\mathrm{d} \star \alpha \rangle \end{aligned}$</p>
-</blockquote>
+$\begin{aligned} \langle \beta,\mathrm{d}^\dagger \alpha\rangle&amp;= \langle \mathrm{d}\beta , \alpha\rangle \\ &amp;= \int\mathrm{d}\beta \wedge \star \alpha \\ &amp;= \int -(-1)^{\deg(\beta)} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\beta)+1} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\alpha)} \beta \wedge \mathrm{d}\star \alpha \\ &amp;= \int (-1)^{\deg(\alpha)} \beta \wedge \star (\star^{-1}\mathrm{d}\star \alpha) \\ &amp;= (-1)^{k} \langle\beta, \star^{-1}\mathrm{d} \star \alpha \rangle \end{aligned}$</p></blockquote>
 <p>引理 5： $\mathrm{d}^\dagger \alpha  = (-1)^{nk+n+1} s\star \mathrm{d} \star \alpha$</p>
 <blockquote>
 <p>证明：<br>
-结合引理 3 和引理 4 即可证得。</p>
-</blockquote>
+结合引理 3 和引理 4 即可证得。</p></blockquote>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

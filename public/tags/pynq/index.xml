@@ -1,20 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>PYNQ - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/tags/pynq/</link>
-        <description>PYNQ - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/pynq/" rel="self" type="application/rss+xml" /><item>
-    <title>2023 年 3-6 月工作总结</title>
-    <link>http://example.com/work_2023_3-6/</link>
-    <pubDate>Sun, 25 Jun 2023 14:14:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/work_2023_3-6/</guid>
-    <description><![CDATA[<blockquote>
-<p>给从今年三月到现在断断续续的工作做一个总结</p>
-</blockquote>
-<h2 id="1-rtl-sdr--pynq-z2">1 RTL-SDR &amp; PYNQ-Z2</h2>
-<h3 id="11-现有工作">1.1 现有工作</h3>
-<p>这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接来配合使用。RTL-SDR 将射频信号下变频为基带信号；PYNQ-Z2 通过 USB2.0 接口接收 RTL-SDR 返回的基带信号，并使用 FPGA 进行信号处理。最后，可以在 PYNQ Jupyter Notebook 中实现一个简单的 FM 收音机的网页应用。</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PYNQ on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/pynq/</link>
+    <description>Recent content in PYNQ on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 25 Jun 2023 14:14:15 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/pynq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 年 3-6 月工作总结</title>
+      <link>http://example.com/work_2023_3-6/</link>
+      <pubDate>Sun, 25 Jun 2023 14:14:15 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/work_2023_3-6/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;给从今年三月到现在断断续续的工作做一个总结&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;1-rtl-sdr--pynq-z2&#34;&gt;1 RTL-SDR &amp;amp; PYNQ-Z2&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-现有工作&#34;&gt;1.1 现有工作&lt;/h3&gt;&#xA;&lt;p&gt;这个工作是将 RTL-SDR 通过 USB2.0 与 PYNQ-Z2 连接来配合使用。RTL-SDR 将射频信号下变频为基带信号；PYNQ-Z2 通过 USB2.0 接口接收 RTL-SDR 返回的基带信号，并使用 FPGA 进行信号处理。最后，可以在 PYNQ Jupyter Notebook 中实现一个简单的 FM 收音机的网页应用。&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

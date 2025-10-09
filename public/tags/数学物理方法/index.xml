@@ -1,19 +1,22 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>数学物理方法 - 标签 - Haifei&#39;s Home</title>
-        <link>http://example.com/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
-        <description>数学物理方法 - 标签 - Haifei&#39;s Home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 27 May 2024 17:47:25 &#43;0800</lastBuildDate><atom:link href="http://example.com/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
-    <title>产生湮灭算符是怎么得到的？</title>
-    <link>http://example.com/annilation_op/</link>
-    <pubDate>Mon, 27 May 2024 17:47:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://example.com/annilation_op/</guid>
-    <description><![CDATA[<p>产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。</p>
-<p>想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的：</p>
-<p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
-<p>即</p>
-<p>$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学物理方法 on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
+    <description>Recent content in 数学物理方法 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 27 May 2024 17:47:25 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>产生湮灭算符是怎么得到的？</title>
+      <link>http://example.com/annilation_op/</link>
+      <pubDate>Mon, 27 May 2024 17:47:25 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/annilation_op/</guid>
+      <description>&lt;p&gt;产生湮灭算符的定义动机很简单，完全可以从经典力学中得到。&lt;/p&gt;&#xA;&lt;p&gt;想想我们是怎么解经典谐振子的。由于位置和动量是耦合起来的：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$&lt;/p&gt;&#xA;&lt;p&gt;即&lt;/p&gt;&#xA;&lt;p&gt;$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp;amp; \omega \\ -\omega &amp;amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>
