@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Harr 测度 on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/harr-%E6%B5%8B%E5%BA%A6/</link>
+    <description>Recent content in Harr 测度 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 12 Oct 2025 20:25:11 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/harr-%E6%B5%8B%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>量子态的经典阴影（Classical Shadows）</title>
+      <link>http://example.com/classical_shadows/</link>
+      <pubDate>Sun, 12 Oct 2025 20:25:11 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/classical_shadows/</guid>
+      <description>&lt;h2 id=&#34;一量子态层析quantum-state-tomography&#34;&gt;一、量子态层析（Quantum State Tomography）&lt;/h2&gt;&#xA;&lt;p&gt;目前，人们已经可以制备由成百上千个量子比特所构成的量子态（此处省略二十个参考文献）。&lt;/p&gt;&#xA;&lt;p&gt;但是我们如何知道制备的量子态 $\rho$ 的确是我们想要的 $\rho$ ？或者更宽泛地说：如何学习一个量子态 $\rho$ 的（部分或者所有）信息？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>量子光学 on Haifei&#39;s Home</title>
+    <link>http://example.com/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
+    <description>Recent content in 量子光学 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 12 Oct 2025 20:30:00 +0800</lastBuildDate>
+    <atom:link href="http://example.com/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>电磁波是光子的概率波吗？</title>
+      <link>http://example.com/photon_wave_func2/</link>
+      <pubDate>Sun, 12 Oct 2025 20:30:00 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/photon_wave_func2/</guid>
+      <description>&lt;h2 id=&#34;概率场-vs-量子场&#34;&gt;概率场 vs 量子场&lt;/h2&gt;&#xA;&lt;p&gt;电磁场不是光子的概率场，正如狄拉克场不是电子的概率场。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;概率场&lt;/strong&gt;只对非相对论情形下的单粒子态适用。而&lt;strong&gt;电磁场&lt;/strong&gt;和&lt;strong&gt;狄拉克场&lt;/strong&gt;属于&lt;strong&gt;量子场&lt;/strong&gt;，要放到量子场论的框架下去讨论。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

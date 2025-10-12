@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>二次量子化 on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/%E4%BA%8C%E6%AC%A1%E9%87%8F%E5%AD%90%E5%8C%96/</link>
+    <description>Recent content in 二次量子化 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 12 Oct 2025 20:33:12 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/%E4%BA%8C%E6%AC%A1%E9%87%8F%E5%AD%90%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>当我们做二次量子化的时候，我们究竟在做什么？</title>
+      <link>http://example.com/second_quantization/</link>
+      <pubDate>Sun, 12 Oct 2025 20:33:12 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/second_quantization/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;一次量子化无法描述粒子数的叠加态，更无法描述粒子数变化情况下的动力学&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;一次量子化和二次量子化的说法很容易让人以为它们是等价的，哪个方便就用哪个，就像薛定谔和海森堡表象一样。实则不然。二次量子化的描述能力是严格强于一次量子化的。一次量子化只是二次量子化在粒子数固定情形下的简化描述，本身是有缺陷的。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -9,8 +9,29 @@
     <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
     <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 06 Apr 2025 01:14:26 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Oct 2025 20:22:53 +0800</lastBuildDate>
     <atom:link href="http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>什么是联络【更高更妙的电动力学·番外篇 1】</title>
+      <link>http://example.com/what_is_a_connection/</link>
+      <pubDate>Sun, 12 Oct 2025 20:22:53 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/what_is_a_connection/</guid>
+      <description>&lt;p&gt;在前面的文章中，我们说电磁场是联络。这让很多同学想到广义相对论里的联络。这两种联络有什么区别和共同点？&lt;/p&gt;&#xA;&lt;p&gt;电磁场联络 $A$ 是主丛上的联络，而广义相对论联络 $\Gamma$ 是矢量丛上的联络，它们的定义方式看似很不同。有没有办法将它们联系起来呢？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>自旋为什么不是相对论效应</title>
+      <link>http://example.com/spin_and_relativity/</link>
+      <pubDate>Sun, 12 Oct 2025 20:20:18 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/spin_and_relativity/</guid>
+      <description>&lt;p&gt;结论：整数自旋是经典效应，而半整数自旋是量子效应，跟相对论关系不大。&lt;/p&gt;&#xA;&lt;p&gt;原因很简单：1-自旋是 SO(3) 的最小的忠实（faithful）表示，而 1/2-自旋是 SU(2) 的最小的忠实表示。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>克氏符到底是不是张量？</title>
+      <link>http://example.com/christoffel/</link>
+      <pubDate>Sun, 12 Oct 2025 20:15:24 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/christoffel/</guid>
+      <description>&lt;p&gt;个人最喜欢的理解是把 $\Gamma$ 看成标架丛上的联络，这样一来，克氏符的变换规则&lt;/p&gt;&#xA;&lt;p&gt;$\boxed{ \begin{aligned} \bar{\Gamma}^i_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$&lt;/p&gt;&#xA;&lt;p&gt;就只不过是一个规范变换：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>从量子场论到腔量子电动力学【更高更妙的电动力学·5】</title>
       <link>http://example.com/gm_5/</link>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>联络 on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/%E8%81%94%E7%BB%9C/</link>
+    <description>Recent content in 联络 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 12 Oct 2025 20:22:53 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/%E8%81%94%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>什么是联络【更高更妙的电动力学·番外篇 1】</title>
+      <link>http://example.com/what_is_a_connection/</link>
+      <pubDate>Sun, 12 Oct 2025 20:22:53 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/what_is_a_connection/</guid>
+      <description>&lt;p&gt;在前面的文章中，我们说电磁场是联络。这让很多同学想到广义相对论里的联络。这两种联络有什么区别和共同点？&lt;/p&gt;&#xA;&lt;p&gt;电磁场联络 $A$ 是主丛上的联络，而广义相对论联络 $\Gamma$ 是矢量丛上的联络，它们的定义方式看似很不同。有没有办法将它们联系起来呢？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

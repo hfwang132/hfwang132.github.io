@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>相对论 on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/</link>
+    <description>Recent content in 相对论 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 12 Oct 2025 20:20:18 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自旋为什么不是相对论效应</title>
+      <link>http://example.com/spin_and_relativity/</link>
+      <pubDate>Sun, 12 Oct 2025 20:20:18 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/spin_and_relativity/</guid>
+      <description>&lt;p&gt;结论：整数自旋是经典效应，而半整数自旋是量子效应，跟相对论关系不大。&lt;/p&gt;&#xA;&lt;p&gt;原因很简单：1-自旋是 SO(3) 的最小的忠实（faithful）表示，而 1/2-自旋是 SU(2) 的最小的忠实表示。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

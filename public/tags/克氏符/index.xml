@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>克氏符 on Haifei&#39;s Home</title>
+    <link>http://example.com/tags/%E5%85%8B%E6%B0%8F%E7%AC%A6/</link>
+    <description>Recent content in 克氏符 on Haifei&#39;s Home</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
+    <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sun, 12 Oct 2025 20:15:24 +0800</lastBuildDate>
+    <atom:link href="http://example.com/tags/%E5%85%8B%E6%B0%8F%E7%AC%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>克氏符到底是不是张量？</title>
+      <link>http://example.com/christoffel/</link>
+      <pubDate>Sun, 12 Oct 2025 20:15:24 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://example.com/christoffel/</guid>
+      <description>&lt;p&gt;个人最喜欢的理解是把 $\Gamma$ 看成标架丛上的联络，这样一来，克氏符的变换规则&lt;/p&gt;&#xA;&lt;p&gt;$\boxed{ \begin{aligned} \bar{\Gamma}^i_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$&lt;/p&gt;&#xA;&lt;p&gt;就只不过是一个规范变换：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
