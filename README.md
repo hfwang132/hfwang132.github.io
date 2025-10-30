@@ -34,4 +34,4 @@
 
 ### Undone convert md to mathjax md
 
-`python .\mathjax_md_undo.py .\content\posts\some_post\index.zh-cn.md -o C:\Users\hfwan\Downloads\undone.md --force`
+`python .\mathjax_md_undo.py .\content\posts\some_post\index.zh-cn.md -o undone.md --force`
