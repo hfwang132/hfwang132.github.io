@@ -166,7 +166,8 @@
 <p><strong>思考题 1</strong>：售卖两荤一素套餐的店的集合是什么？<br>
 答案：并非 $A \otimes B \otimes B$ 。这是因为我们不能区分两个荤菜分别来自哪两个荤菜店。正确的答案是 $A \otimes (B\odot B)$ ，其中 $\odot$ 叫做<strong>对称积（symmetric product）</strong>。</p>
 <p><strong>思考题 2</strong>：如果两种荤菜必须不一样，那么这样的店的集合是什么？<br>
-答案： $A \otimes (B\wedge B)$ ，其中 $\wedge$ 叫做<strong>外积（exterior product）<strong>或者</strong>楔积（wedge product）</strong>。</p></blockquote>
+答案： $A \otimes (B\wedge B)$ ，其中 $\wedge$ 叫做<strong>外积（exterior product）<strong>或者</strong>楔积（wedge product）</strong>。</p>
+</blockquote>
 <hr>
 <p>以下是正经科普：</p>
 <h2 id="笛卡尔积">笛卡尔积</h2>
@@ -218,7 +219,8 @@
 <p>对于任意一个多重线性映射 $f:V\times W \rightarrow U$ ，都存在（同构意义上）唯一的向量空间 $V\otimes W$ ，以及映射 $\otimes:V\times W \rightarrow V \otimes W$ 和线性映射 $\psi: V \otimes W \rightarrow U$ ，使得 $f = \otimes \circ \psi$ 。这个向量空间 $V\otimes W$ 定义为 $V$ 和 $W$ 的张量积。此处符号 $\times$ 指笛卡尔积。</p>
 <blockquote>
 <p>补充说明：多重线性映射是指有多个向量变量且对每个变量都是线性的映射。 具体来说， $n$ 重线性映射定义为 $f:V_1\times V_2\times \cdots\times V_n \rightarrow W$ ，且满足如下性质：<br>
-$$\begin{aligned} &amp;f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n) \\ &amp;=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}$$</p></blockquote>
+$$\begin{aligned} &amp;f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n) \\ &amp;=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}$$</p>
+</blockquote>
 <p>注意，在上述定义中，符号 $\otimes$ 有两个不同的意思，其一是向量空间之间的张量积 $V \otimes W$ ，其二是两个向量空间的元素做张量积运算，也就是从 $V\times W$ 到 $V \otimes W$ 的映射。</p>
 <p>张量积与直积有什么不同？下面举例说明。假设 3 维向量空间 $V$ 有三个基： ${v_1,v_2,v_3}$ ，2 维向量空间 $W$ 有两个基： ${w_1,w_2}$ ，那么它们的直积 $V\times W$ 有五个基： ${(v_1,0),(v_2,0),(v_3,0),(0,w_1),(0,w_2)}$。 而 $V$ 和 $W$ 的张量积 $V \otimes W$ 有六个基： ${v_1\otimes w_1, v_1 \otimes w_2, v_2 \otimes w_1, v_2 \otimes w_2, v_3 \otimes w_1, v_3 \otimes  w_2}$ 。</p>
 <p>可以看出，直积的维数是 m + n，而张量积的维数是 m × n。</p>

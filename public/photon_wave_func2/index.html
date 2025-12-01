@@ -159,7 +159,8 @@
 <p>虽然不能直接考虑低速极限，但还是可以考虑单光子情形。此时的确可以定义一个和电磁场有关的概率分布。但这个概率分布不像薛定谔波函数那样有良好的性质，例如守恒的概率流。详见下文。</p>
 <p>总之要记住：概率场不是基本实体。量子场才是基本实体，而概率场只是量子场在非相对论和单粒子情形下的近似而已。</p>
 <blockquote>
-<p>概率场就是非相对论量子力学中所说的波函数。有时候人们也把量子场叫做波函数，不推荐这么说，容易和概率场混淆。</p></blockquote>
+<p>概率场就是非相对论量子力学中所说的波函数。有时候人们也把量子场叫做波函数，不推荐这么说，容易和概率场混淆。</p>
+</blockquote>
 <p>下面我们回答两个问题：</p>
 <ol>
 <li>既然电磁场不是光子的概率场，那么探测到光子的概率如何计算？</li>
@@ -172,13 +173,15 @@
 <p>$\begin{aligned} w(\mathbf{r},t) \propto |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$</p>
 <p>其中 $E^{(+)}$ 是电场湮灭算符： $E^{(+)}(\mathbf{r},t)=\sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}a_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)}$ ，其中 $\sigma = 0,1$ 代表偏振， $a_{\mathbf{k},\sigma}$ 是模式 $(\mathbf{k},\sigma)$ 上的湮灭算符， $\mathcal{E}_\mathbf{k}=\sqrt{\frac{\hbar \omega_\mathbf{k}}{\epsilon_0 V}}$ 是单光子振幅，有电场量纲， $V$ 为光场模式体积。</p>
 <blockquote>
-<p>至于为什么概率正比于 $\begin{aligned} |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$ ，以及正比的比例常数是什么，就要将探测器（通常是一个原子）本身的动力学考虑进来，并且使用完整的量子场论方法了。此处不再赘述（hand-wavingly）。</p></blockquote>
+<p>至于为什么概率正比于 $\begin{aligned} |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$ ，以及正比的比例常数是什么，就要将探测器（通常是一个原子）本身的动力学考虑进来，并且使用完整的量子场论方法了。此处不再赘述（hand-wavingly）。</p>
+</blockquote>
 <p>然而，在探测光子时，我们通常不知道终态是什么，而是只知道探测到了一个光子。因此我们需要对终态 $|f\rangle$ 进行求和：</p>
 <p>$\begin{aligned} \sum_f|\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 &amp;= \sum_f\langle i | E^{(-)}|f\rangle \langle f| E^{(+)} |  i\rangle \\ &amp;= \langle i|E^{(-)}E^{(+)}|i\rangle  \end{aligned}$</p>
 <p>所以，光场的量子态的初态 $|i\rangle$ 从 $t$ 到 $t+\mathrm{d}t$ 这段时间在 $\mathbf{r}$ 处被探测（吸收）一个光子变成终态 $|f\rangle$ 的概率为 $w(\mathbf{r},t) \propto \langle i|E^{(-)}E^{(+)}|i\rangle $ 。</p>
 <p>可见， $\langle E^{(-)}E^{(+)}\rangle $ 是最接近概率分布的场。然而，它仍然不满足概率分布的性质。这是因为光子数不守恒，导致对其进行标准化存在困难。</p>
 <blockquote>
-<p>为什么是电场 $E^{(\pm)}$ 不是磁场 $B^{(\pm)}$ ？因为光子被吸收通常是借助与原子的电偶极相互作用来完成的。不过，由于这里说的是正比，所以用 $B^{(\pm)}$ 乃至矢势 $A^{(\pm)}$ 都可以，这是因为横场（transverse field）部分 $A^{(\pm)},E^{(\pm)},B^{(\pm)}$ 总是成正比的，而偶极相互作用只有横场部分有贡献。</p></blockquote>
+<p>为什么是电场 $E^{(\pm)}$ 不是磁场 $B^{(\pm)}$ ？因为光子被吸收通常是借助与原子的电偶极相互作用来完成的。不过，由于这里说的是正比，所以用 $B^{(\pm)}$ 乃至矢势 $A^{(\pm)}$ 都可以，这是因为横场（transverse field）部分 $A^{(\pm)},E^{(\pm)},B^{(\pm)}$ 总是成正比的，而偶极相互作用只有横场部分有贡献。</p>
+</blockquote>
 <p>既然光子数不守恒导致无法标准化，那我们能不能人为限制光子数呢？答案是可以。我们可以限制光子数量为一个，且单光子态为：</p>
 <p>$|1_\psi\rangle = \sum_{\mathbf{k},\sigma} \psi_\mathbf{k,\sigma}|1_\mathbf{k,\sigma}\rangle = \sum_\mathbf{k,\sigma} \psi_\mathbf{k,\sigma} a^\dagger_\mathbf{k,\sigma} |0\rangle$</p>
 <p>其中 $\sum_{\mathbf{k},\sigma} |\psi_\mathbf{k,\sigma}|^2 = 1$ 。</p>
@@ -187,7 +190,8 @@
 <p>此时在某个区域 $D$ 中探测到一个光子的概率就正比于 $\int_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r}$ 。因为：</p>
 <p>$\begin{aligned} \int_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r} &amp;= \langle 1_\psi | E^{(-)}(\mathbf{r}) | 0\rangle\langle 0 | E^{(+)}(\mathbf{r}) | 1_\psi\rangle \\ &amp;=  \langle 1_\psi | E^{(-)}(\mathbf{r}) E^{(+)}(\mathbf{r}) | 1_\psi\rangle \end{aligned}$</p>
 <blockquote>
-<p>第二个等号是因为 $E^{(-)}$ 湮灭一个光子，导致 $ E^{(+)}(\mathbf{r}) | 1_\psi\rangle$ 正比于 $|0\rangle$ 。</p></blockquote>
+<p>第二个等号是因为 $E^{(-)}$ 湮灭一个光子，导致 $ E^{(+)}(\mathbf{r}) | 1_\psi\rangle$ 正比于 $|0\rangle$ 。</p>
+</blockquote>
 <p>为了让 $\psi(\mathbf{r},t)$ 成为真正的概率分布，我们还要标准化消去量纲。我们不妨先展开 $\psi(\mathbf{r},t)$ ：</p>
 <p>$\begin{aligned} \psi(\mathbf{r},t) &amp;= \langle 0 | E^{(+)}(\mathbf{r},t) | 1_\psi\rangle \\ &amp;= \left\langle 0 \left| \sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}a_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)} \psi_\mathbf{k,\sigma} a^\dagger_\mathbf{k,\sigma} \right| 0 \right\rangle \\ &amp;=  \sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)} \psi_\mathbf{k,\sigma}  \end{aligned}$</p>
 <p>其中 $\mathcal{E}_\mathbf{k}$ 携带电场量纲。我们只要把它去掉就可以得到无量纲的单光子概率分布：</p>
@@ -202,7 +206,8 @@
 <blockquote>
 <p>有些人可能会说：电磁场明明就是一个经典的场！你凭什么说它是量子场？对此我只能说你 too young too simple。这就和你说电子是一个经典的小球一样——当你没学量子力学的时候，你会认为所有粒子都是经典粒子；当你没学量子场论的时候，你会认为所有场都是经典场。其实，一切都是量子的，只不过很多时候没有表现出量子性而已。</p>
 <p>电磁场什么时候表现出量子性？Lamb shift，Casimir effect，自发辐射&hellip;在很多现象里电磁场都表现出了量子性。猫态，GKP 态&hellip;这些振幅和相位的叠加态更是量子电磁场的直接体现。</p>
-<p>之所以宏观电磁波没有表现出量子性，是因为光子很容易损耗（吸收/散射），对应的 Lindblad 算符是湮灭算符。开放系统的指针态是 Lindblad 算符的本征态，而湮灭算符的本征态正是相干态（Coherent state），它有明确的振幅和相位，且量子不确定性远小于自身。这就是为什么生活中的电磁波都是经典的：因为经典电磁波可以从损耗中存活下来。</p></blockquote>
+<p>之所以宏观电磁波没有表现出量子性，是因为光子很容易损耗（吸收/散射），对应的 Lindblad 算符是湮灭算符。开放系统的指针态是 Lindblad 算符的本征态，而湮灭算符的本征态正是相干态（Coherent state），它有明确的振幅和相位，且量子不确定性远小于自身。这就是为什么生活中的电磁波都是经典的：因为经典电磁波可以从损耗中存活下来。</p>
+</blockquote>
 <h2 id="附录-1-狄拉克方程如何近似成薛定谔方程--量子场如何近似成概率场">附录 1 狄拉克方程如何近似成薛定谔方程 / 量子场如何近似成概率场</h2>
 <blockquote>
 <p>狄拉克方程<br>
@@ -232,7 +237,8 @@ $\mathrm{i} D_t \varphi =  \frac{1}{2m}[(\mathbf{p} + e\mathbf{A})^2 + e \bm\sig
 把 $D_t = \partial_t - \mathrm{i}e\phi$ 代入得<br>
 $\boxed{ \mathrm{i} \partial_t \varphi =  \left[\frac{1}{2m}(\mathbf{p} + e\mathbf{A})^2+ \frac{e}{2m} \bm\sigma\cdot \mathbf{B}  - e\phi  \right]\varphi }$<br>
 这就是（带自旋的）电子的薛定谔方程，也叫做泡利方程。注意此处 $e$ 是正数，而电子 $\varphi$ 带负电荷。<br>
-这里的 $\varphi$ 就是概率场，也就是非相对论量子力学中说的波函数。</p></blockquote>
+这里的 $\varphi$ 就是概率场，也就是非相对论量子力学中说的波函数。</p>
+</blockquote>
 <h2 id="附录-2">附录 2</h2>
 <p>证明 $(\bm\sigma \cdot \mathbf{D})^2 = \mathbf{D}^2 - e \bm\sigma\cdot \mathbf{B}$ ，其中 $\mathbf{D} = \nabla+ \mathrm{i}e\mathbf{A}$ 。</p>
 <blockquote>
@@ -253,7 +259,8 @@ $\boxed{ \mathrm{i} \partial_t \varphi =  \left[\frac{1}{2m}(\mathbf{p} + e\math
 <p>所以 $\mathbf{D}\times \mathbf{D} = \mathrm{i}e\mathbf{B}$ 。</p>
 <p>于是</p>
 <p>$\begin{aligned} (\bm\sigma \cdot \mathbf{D})^2 &amp;= \mathbf{D}^2 +\mathrm{i} \bm\sigma\cdot (\mathbf{D} \times \mathbf{D}) \\ &amp;= \mathbf{D}^2 - e \bm\sigma\cdot \mathbf{B} \end{aligned}$</p>
-<p>证毕。</p></blockquote>
+<p>证毕。</p>
+</blockquote>
 <h2 id="参考">参考</h2>
 <ol>
 <li>[1]Sharoglazova, V., Puplauskis, M., Mattschas, C. et al. Energy–speed relationship of quantum particles challenges Bohmian mechanics. Nature 643, 67–72 (2025). <a href="https://www.nature.com/articles/s41586-025-09099-4" target="_blank" rel="noopener noreffer ">https://www.nature.com/articles/s41586-025-09099-4</a></li>

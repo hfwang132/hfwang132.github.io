@@ -177,7 +177,8 @@
 <h2 id="二标架丛上的联络">二、标架丛上的联络</h2>
 <p>现在，我们把电磁规范变换照搬到克氏符的情况。唯一的区别就是把 $U(1)$ -主丛换成标架丛 $FM$ ，也就是 $GL(n)$ -主丛。</p>
 <blockquote>
-<p>标架（frame）定义为基向量的有序组 $f:=(e_1, e_2, &hellip;,e_n)$ 。标架之间的变换用 $GL(n)$ 来描述，并且 $GL(n)$ 的群作用是自由且传递的，因此标架丛是一个 $GL(n)$ -主丛。</p></blockquote>
+<p>标架（frame）定义为基向量的有序组 $f:=(e_1, e_2, &hellip;,e_n)$ 。标架之间的变换用 $GL(n)$ 来描述，并且 $GL(n)$ 的群作用是自由且传递的，因此标架丛是一个 $GL(n)$ -主丛。</p>
+</blockquote>
 <p>此时的联络 $\Gamma$ 是一个主丛上的李代数取值的 1-形式：</p>
 <p>$\Gamma_{\text{global}} \in \Omega^1(FM, \mathfrak{gl}(n))$</p>
 <p>选取一组局部标架 $s$ ，可以将其局部平凡化为 $\Gamma = s^*\Gamma_{\text{global}} \in \Omega^1(M, \mathfrak{gl}(n))$ 。</p>
@@ -201,7 +202,8 @@
 <p>$\bar{A}  = g^{-1}A g \color{red}{+ g^{-1} \mathrm{d}g}$</p>
 <p>导出克氏符的变换规则。</p>
 <blockquote>
-<p>注意这里的 $g$ 不是指度规张量，而是规范变换。</p></blockquote>
+<p>注意这里的 $g$ 不是指度规张量，而是规范变换。</p>
+</blockquote>
 <p>首先，让我们把 $A$ 换成 $\Gamma$ ：</p>
 <p>$\bar{\Gamma} = g^{-1} \Gamma g \color{red}{+ g^{-1} \mathrm{d}g}$</p>
 <p>然后，将 1-形式 $\bar{\Gamma}$ 和 $\mathrm{d}g$ 在局部标架下展开成 $\bar{\Gamma}_\mu \mathrm{d}\bar{x}^\mu$ 和 $(\bar{\partial}_\nu g)\mathrm{d}\bar{x}^\nu$ ：</p>
@@ -226,11 +228,13 @@
 <p>那么，规范变换式 $\boxed{ \bar{A}  = g^{-1}A g \color{red}{+ g^{-1} \mathrm{d}g} }$ 是怎么来的呢？它同样可以从更基本的关系中的得到。</p>
 <p>这里说的更基本的关系就是 $\boxed{ \mathrm{D} = \mathrm{d} + A \ \wedge }$ ，即协变外微分等于外微分加联络。</p>
 <blockquote>
-<p>在标架丛上， $\mathrm{D}$ 就是协变导数 $\nabla$ 。</p></blockquote>
+<p>在标架丛上， $\mathrm{D}$ 就是协变导数 $\nabla$ 。</p>
+</blockquote>
 <p>在规范变换 $g$ 下，场按照 $\bar{\psi} = g^{-1} \psi$ 变化。我们希望场的协变外微分 $\mathrm{D} \psi = \mathrm{d} \psi + A \wedge \psi$ 也按照同样的方式变化，即：</p>
 <p>$\mathrm{\bar{D}}\bar{\psi} = g^{-1}(\mathrm{D}\psi )$ 。</p>
 <blockquote>
-<p>这相当于要求 $\boxed{ \bar{\mathrm{D}} = g^{-1} \mathrm{D} g }$ 。</p></blockquote>
+<p>这相当于要求 $\boxed{ \bar{\mathrm{D}} = g^{-1} \mathrm{D} g }$ 。</p>
+</blockquote>
 <p>将上式左边展开：</p>
 <p>$\begin{aligned} \mathrm{\bar{D}}\bar{\psi} &amp;= (\mathrm{\mathrm{d}+\bar{A}}\ \wedge)(g^{-1}\psi) \\ &amp;= \mathrm{d}(g^{-1}\psi) + \bar{A} \wedge (g^{-1}\psi) \\ &amp;= (\mathrm{d} g^{-1})\psi + g^{-1} \mathrm{d}\psi + \bar{A}g^{-1} \wedge \psi \end{aligned}$</p>
 <p>右边展开：</p>
