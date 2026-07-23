@@ -20,9 +20,10 @@
     <pubDate>Sun, 12 Oct 2025 20:30:00 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://example.com/photon_wave_func2/</guid>
-    <description><![CDATA[<h2 id="概率场-vs-量子场">概率场 vs 量子场</h2>
-<p>电磁场不是光子的概率场，正如狄拉克场不是电子的概率场。</p>
-<p><strong>概率场</strong>只对非相对论情形下的单粒子态适用。而<strong>电磁场</strong>和<strong>狄拉克场</strong>属于<strong>量子场</strong>，要放到量子场论的框架下去讨论。</p>]]></description>
+    <description><![CDATA[<h2 id="概率波-vs-量子场">概率波 vs 量子场</h2>
+<p>电磁场不是光子的概率波，正如狄拉克场不是电子的概率波。</p>
+<p>概率波指的是非相对论量子力学中所说的（位置表象下的）单粒子波函数。</p>
+<p><strong>可见，概率波</strong>只对非相对论情形下的单粒子态适用。而<strong>电磁场</strong>和<strong>狄拉克场</strong>属于<strong>量子场</strong>，要放到量子场论的框架下去讨论。</p>]]></description>
 </item>
 <item>
     <title>量子态的经典阴影（Classical Shadows）</title>

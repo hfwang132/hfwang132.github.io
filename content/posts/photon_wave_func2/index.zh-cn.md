@@ -6,36 +6,36 @@ tags: ["电磁波", "光子"]
 categories: ["量子光学"]
 ---
 
-## 概率场 vs 量子场  
+## 概率波 vs 量子场  
 
-电磁场不是光子的概率场，正如狄拉克场不是电子的概率场。
+电磁场不是光子的概率波，正如狄拉克场不是电子的概率波。
 
-**概率场**只对非相对论情形下的单粒子态适用。而**电磁场**和**狄拉克场**属于**量子场**，要放到量子场论的框架下去讨论。
+概率波指的是非相对论量子力学中所说的（位置表象下的）单粒子波函数。
 
-虽然狄拉克场不是电子的概率场，但在低速和单电子近似下，狄拉克方程的确可以退化成薛定谔方程，此时狄拉克场的第一个旋量分量就是电子的概率场，也就是薛定谔波函数。见附录 1。
+**可见，概率波**只对非相对论情形下的单粒子态适用。而**电磁场**和**狄拉克场**属于**量子场**，要放到量子场论的框架下去讨论。
+
+虽然狄拉克场不是电子的概率波，但在低速和单电子近似下，狄拉克方程的确可以退化成薛定谔方程，此时狄拉克场的第一个旋量分量就是电子的概率波，也就是薛定谔波函数。见附录 1。
 
 光子能不能这样搞呢？很遗憾不能，因为光子本身就是个相对论粒子，无法直接考虑低速极限。
 
-不过，如果用腔赋予光子等效质量，再考虑低速极限，那么电磁场还真能看成薛定谔意义上的概率场 [1]。不过这只是一种等效而已。
+不过，如果用腔赋予光子等效质量，再考虑低速极限，那么电磁场还真能看成薛定谔意义上的概率波[1]。不过这只是一种等效而已。
 
 虽然不能直接考虑低速极限，但还是可以考虑单光子情形。此时的确可以定义一个和电磁场有关的概率分布。但这个概率分布不像薛定谔波函数那样有良好的性质，例如守恒的概率流。详见下文。
 
-总之要记住：概率场不是基本实体。量子场才是基本实体，而概率场只是量子场在非相对论和单粒子情形下的近似而已。
-
-> 概率场就是非相对论量子力学中所说的波函数。有时候人们也把量子场叫做波函数，不推荐这么说，容易和概率场混淆。
+总之要记住：概率波不是基本实体。量子场才是基本实体，而概率波只是量子场在非相对论和单粒子情形下的近似而已。
 
 下面我们回答两个问题：
 
-1. 既然电磁场不是光子的概率场，那么探测到光子的概率如何计算？
-2. 既然电磁场不是光子的概率场，那么电磁场究竟是什么？
+1. 既然电磁场不是光子的概率波，那么探测到光子的概率如何计算？
+2. 既然电磁场不是光子的概率波，那么电磁场究竟是什么？
 
 ---
 
 ## 如何计算探测到光子的概率  
 
-问题 1： 既然电磁场不是概率场，那么，探测到光子的概率如何计算？
+问题 1： 既然电磁场不是概率波，那么，探测到光子的概率如何计算？
 
-正确的问法应该是：光场的量子态的初态 $|i\rangle$ 从 $t$ 到 $t+\mathrm{d}t$ 这段时间在 $\mathbf{r}$ 处被探测（吸收）一个光子变成终态 $|f\rangle$ 的概率 $w(\mathbf{r},t) \mathrm{d}t$ 是多少？Glauber 的光探测理论 [2] 告诉我们答案是：
+正确的问法应该是：光场的量子态的初态 $|i\rangle$ 从 $t$ 到 $t+\mathrm{d}t$ 这段时间在 $\mathbf{r}$ 处被探测（吸收）一个光子变成终态 $|f\rangle$ 的概率 $w(\mathbf{r},t) \mathrm{d}t$ 是多少？Glauber 的光探测理论[2]告诉我们答案是：
 
 $\begin{aligned} w(\mathbf{r},t) \propto |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$
 
@@ -59,7 +59,7 @@ $|1\_\psi\rangle = \sum\_{\mathbf{k},\sigma} \psi\_\mathbf{k,\sigma}|1\_\mathbf{
 
 其中 $\sum\_{\mathbf{k},\sigma} |\psi\_\mathbf{k,\sigma}|^2 = 1$ 。
 
-于是可以定义一个类似于波函数的东西 [3]：
+于是可以定义一个类似于波函数的东西[3]：
 
 $\psi(\mathbf{r},t) = \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\psi\rangle$
 
@@ -73,19 +73,13 @@ $\begin{aligned} \int\_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r} &= \langle
 
 $\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\psi\rangle \\\\ &= \left\langle 0 \left| \sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}a\_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma} a^\dagger\_\mathbf{k,\sigma} \right| 0 \right\rangle \\\\ &=  \sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma}  \end{aligned}$
 
-其中 $\mathcal{E}\_\mathbf{k}$ 携带电场量纲。我们只要把它去掉就可以得到无量纲的单光子概率分布：
+其中 $\mathcal{E}\_\mathbf{k}$ 携带电场量纲。我们只要加上对应求和的分母掉就可以得到无量纲的单光子概率分布。
 
-$\psi^\prime(\mathbf{r},t) = \sum\_\mathbf{k,\sigma} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma} $
-
-在自由空间中，可将求和号 $\sum\_{\mathbf{k}}$ 换成积分号 $\int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3}$ 。
-
-$\psi^\prime(\mathbf{r},t) = \sum\_\sigma \int \frac{\mathrm{d}^3\mathbf{k}}{(2\pi)^3} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma} $
-
-然而，这个 $\psi^\prime(\mathbf{r},t)$ 只适用于单光子子空间。由于光子数通常不守恒，所以它的应用场景很有限。另外，它也无法像薛定谔波函数那样定义出一个守恒的概率流。
+然而，这只适用于单光子子空间。由于光子数通常不守恒，所以它的应用场景很有限。另外，它也无法像薛定谔波函数那样定义出一个守恒的概率流。
 
 ## 电磁场究竟是什么  
 
-问题 2：既然电磁场不是概率场，那么电磁场究竟是什么？
+问题 2：既然电磁场不是概率波，那么电磁场究竟是什么？
 
 电磁场本质上就是量子场论中的光子场 $A\_\mu$ ，而光子场和其他各种粒子的场 $\psi$ （狄拉克场、胶子场、夸克场...）一样，都是量子场。
 
@@ -97,7 +91,7 @@ $\psi^\prime(\mathbf{r},t) = \sum\_\sigma \int \frac{\mathrm{d}^3\mathbf{k}}{(2\
 >   
 > 之所以宏观电磁波没有表现出量子性，是因为光子很容易损耗（吸收/散射），对应的 Lindblad 算符是湮灭算符。开放系统的指针态是 Lindblad 算符的本征态，而湮灭算符的本征态正是相干态（Coherent state），它有明确的振幅和相位，且量子不确定性远小于自身。这就是为什么生活中的电磁波都是经典的：因为经典电磁波可以从损耗中存活下来。
 
-## 附录 1 狄拉克方程如何近似成薛定谔方程 / 量子场如何近似成概率场  
+## 附录 1 狄拉克方程如何近似成薛定谔方程 / 量子场如何近似成概率波  
 > 狄拉克方程  
 > $\mathrm{i}\gamma^\mu D\_\mu \psi - m\psi=0$ ，  
 > 其中  
@@ -125,7 +119,7 @@ $\psi^\prime(\mathbf{r},t) = \sum\_\sigma \int \frac{\mathrm{d}^3\mathbf{k}}{(2\
 > 把 $D\_t = \partial\_t - \mathrm{i}e\phi$ 代入得  
 > $\boxed{ \mathrm{i} \partial\_t \varphi =  \left[\frac{1}{2m}(\mathbf{p} + e\mathbf{A})^2+ \frac{e}{2m} \bm\sigma\cdot \mathbf{B}  - e\phi  \right]\varphi }$   
 > 这就是（带自旋的）电子的薛定谔方程，也叫做泡利方程。注意此处 $e$ 是正数，而电子 $\varphi$ 带负电荷。  
-> 这里的 $\varphi$ 就是概率场，也就是非相对论量子力学中说的波函数。
+> 这里的 $\varphi$ 就是概率波，也就是非相对论量子力学中说的波函数。
 
 ## 附录 2  
 
