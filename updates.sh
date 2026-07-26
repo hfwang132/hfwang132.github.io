@@ -1,14 +1,30 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-# set -x
-hugo --cleanDestinationDir
+if (($# == 0)); then
+  echo "Validating the production site..."
+  hugo --minify --renderToMemory
 
-cd themes/LoveIt
-git add .
-git commit -m "update theme"
-git push
+  echo "Staging the current repository changes..."
+  git add -A
+  diff_status=0
+  git diff --cached --quiet || diff_status=$?
+  if ((diff_status > 1)); then
+    exit "${diff_status}"
+  elif ((diff_status == 1)); then
+    git commit -m "daily updates"
+  else
+    echo "No new changes to commit."
+  fi
+  git push
+  exit 0
+fi
 
-cd ../../
-git add .
-git commit -m "daily updates"
-git push
+python_cmd="python"
+if [[ -x ".venv/bin/python" ]]; then
+  python_cmd=".venv/bin/python"
+elif [[ -x ".venv/Scripts/python.exe" ]]; then
+  python_cmd=".venv/Scripts/python.exe"
+fi
+
+"${python_cmd}" scripts/import_zhihu.py "$@"

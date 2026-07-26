@@ -1,0 +1,784 @@
+#!/usr/bin/env python3
+"""Import a Zhihu article or answer into this Hugo site.
+
+The third-party downloader remains an unmodified Git submodule. This script
+orchestrates it, turns its output into a Hugo page bundle, preserves LaTeX, and
+optionally validates and publishes the result.
+"""
+
+from __future__ import annotations
+
+import argparse
+import getpass
+import importlib.util
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import unicodedata
+from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
+from html.parser import HTMLParser
+from http.cookiejar import CookieJar
+from pathlib import Path
+from types import ModuleType
+from urllib.parse import urlparse
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DOWNLOADER_PATH = REPO_ROOT / "zhihu-download" / "main.py"
+POSTS_DIR = REPO_ROOT / "content" / "posts"
+DEFAULT_COOKIE_FILE = REPO_ROOT / ".secrets" / "zhihu-cookie.txt"
+YAML_HEADER = re.compile(r"\A---\r?\n.*?\r?\n---\r?\n", re.DOTALL)
+SITE_TIMEZONE = timezone(timedelta(hours=8))
+MARKDOWN_IMAGE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)")
+SHORTCODE_IMAGE = re.compile(
+    r'{{<\s*(?:figure|image)\s+[^>]*\bsrc="([^"]+)"[^>]*>}}'
+)
+MARKDOWN_IMAGE_LINE = re.compile(
+    r'^\s*!\[(?P<alt>[^\]]*)\]\((?P<src>[^)\s]+)'
+    r'(?:\s+"(?P<title>[^"]*)")?\)\s*$'
+)
+
+
+class ImportFailure(RuntimeError):
+    """A user-facing import error."""
+
+
+@dataclass(frozen=True)
+class ImportedPost:
+    bundle_dir: Path
+    content_file: Path
+    title: str
+    published_at: datetime
+    image_count: int
+
+
+@dataclass(frozen=True)
+class PageMetadata:
+    published_at: datetime | None
+    modified_at: datetime | None
+
+
+class ZhihuMetadataParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.values: dict[str, str] = {}
+
+    def handle_starttag(
+        self, tag: str, attrs: list[tuple[str, str | None]]
+    ) -> None:
+        if tag.lower() != "meta":
+            return
+        attributes = dict(attrs)
+        itemprop = attributes.get("itemprop", "")
+        content = attributes.get("content")
+        if itemprop and content:
+            self.values[itemprop] = content
+
+
+def load_downloader(path: Path = DOWNLOADER_PATH) -> ModuleType:
+    if not path.is_file():
+        raise ImportFailure(
+            "找不到 zhihu-download/main.py。请先运行 "
+            "`git submodule update --init --recursive`。"
+        )
+    spec = importlib.util.spec_from_file_location("zhihu_downloader", path)
+    if spec is None or spec.loader is None:
+        raise ImportFailure(f"无法加载知乎下载器：{path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def cookie_jar_to_header(cookie_jar: CookieJar) -> str:
+    cookies = [
+        f"{cookie.name}={cookie.value}"
+        for cookie in cookie_jar
+        if cookie.domain.endswith("zhihu.com")
+    ]
+    if not cookies:
+        raise ImportFailure("浏览器中没有找到 zhihu.com 的 Cookie。")
+    return "; ".join(cookies)
+
+
+def load_browser_cookie(browser_name: str) -> str:
+    try:
+        import browser_cookie3
+    except ImportError as exc:
+        raise ImportFailure(
+            "浏览器 Cookie 功能需要 browser-cookie3；请先安装 requirements.txt。"
+        ) from exc
+
+    browser_loaders = {
+        "chrome": browser_cookie3.chrome,
+        "edge": browser_cookie3.edge,
+        "firefox": browser_cookie3.firefox,
+    }
+    names = list(browser_loaders) if browser_name == "auto" else [browser_name]
+    errors: list[str] = []
+    for name in names:
+        try:
+            jar = browser_loaders[name](domain_name="zhihu.com")
+            return cookie_jar_to_header(jar)
+        except Exception as exc:  # Browser encryption/locking differs by platform.
+            errors.append(f"{name}: {exc}")
+    details = "; ".join(errors)
+    raise ImportFailure(
+        "无法从浏览器读取知乎 Cookie。浏览器加密或权限可能阻止了读取。"
+        f"请改用 --cookie-file 或隐藏输入。详情：{details}"
+    )
+
+
+def resolve_cookie(args: argparse.Namespace) -> str:
+    if args.cookie:
+        return args.cookie.strip()
+
+    env_cookie = os.environ.get("ZHIHU_COOKIE", "").strip()
+    if env_cookie:
+        return env_cookie
+
+    if args.cookie_from_browser:
+        return load_browser_cookie(args.cookie_from_browser)
+
+    cookie_file = Path(args.cookie_file).expanduser() if args.cookie_file else None
+    if cookie_file:
+        try:
+            cookie = cookie_file.read_text(encoding="utf-8").strip()
+        except OSError as exc:
+            raise ImportFailure(f"无法读取 Cookie 文件：{cookie_file}") from exc
+        if not cookie:
+            raise ImportFailure(f"Cookie 文件为空：{cookie_file}")
+        return cookie
+
+    if DEFAULT_COOKIE_FILE.is_file():
+        cookie = DEFAULT_COOKIE_FILE.read_text(encoding="utf-8").strip()
+        if cookie:
+            return cookie
+
+    if not sys.stdin.isatty():
+        raise ImportFailure(
+            "未提供 Cookie。请设置 ZHIHU_COOKIE、使用 --cookie-file，"
+            "或在终端中运行以进行隐藏输入。"
+        )
+    cookie = getpass.getpass("请输入知乎 Cookie（输入不会显示）: ").strip()
+    if not cookie:
+        raise ImportFailure("Cookie 不能为空。")
+    return cookie
+
+
+def validate_zhihu_url(url: str) -> None:
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or parsed.hostname not in {
+        "www.zhihu.com",
+        "zhuanlan.zhihu.com",
+    }:
+        raise ImportFailure("仅支持 https://www.zhihu.com 或 zhuanlan.zhihu.com 链接。")
+    if "/column/" in parsed.path:
+        raise ImportFailure("自动入库目前支持单篇文章或回答，不支持整列专栏链接。")
+
+
+def title_to_slug(title: str) -> str:
+    """Turn an article title into a readable, cross-platform path component."""
+
+    normalized = unicodedata.normalize("NFKC", title).strip()
+    result: list[str] = []
+    separator_pending = False
+    for character in normalized:
+        category = unicodedata.category(character)
+        if category[0] in {"L", "N", "M"}:
+            if separator_pending and result:
+                result.append("-")
+            result.append(character)
+            separator_pending = False
+        else:
+            separator_pending = True
+    slug = "".join(result).strip("-")
+    if not slug:
+        raise ImportFailure("文章标题无法生成目录名，请使用 --slug 指定文章名。")
+    return slug
+
+
+def build_post_slug(
+    published_at: datetime, title: str, requested_slug: str | None = None
+) -> str:
+    prefix = f"Post_{published_at.astimezone(SITE_TIMEZONE):%Y%m%d}_"
+    if requested_slug and requested_slug.startswith("Post_"):
+        if not requested_slug.startswith(prefix):
+            raise ImportFailure(
+                f"目录名必须以知乎发布日期对应的 {prefix} 开头。"
+            )
+        suffix = title_to_slug(requested_slug[len(prefix) :])
+        return prefix + suffix
+    suffix = title_to_slug(requested_slug or title)
+    return prefix + suffix
+
+
+def parse_zhihu_datetime(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    normalized = value.strip().replace("Z", "+00:00")
+    try:
+        return datetime.fromisoformat(normalized).astimezone(SITE_TIMEZONE)
+    except ValueError as exc:
+        raise ImportFailure(f"无法解析知乎时间：{value}") from exc
+
+
+def extract_page_metadata(html: str) -> PageMetadata:
+    parser = ZhihuMetadataParser()
+    parser.feed(html)
+    return PageMetadata(
+        published_at=parse_zhihu_datetime(
+            parser.values.get("datePublished") or parser.values.get("dateCreated")
+        ),
+        modified_at=parse_zhihu_datetime(parser.values.get("dateModified")),
+    )
+
+
+def parse_published_date_override(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.strptime(value, "%Y-%m-%d")
+    except ValueError as exc:
+        raise ImportFailure("--published-date 必须使用 YYYY-MM-DD 格式。") from exc
+    return parsed.replace(tzinfo=SITE_TIMEZONE)
+
+
+def convert_math_delimiters(markdown: str) -> str:
+    """Convert downloader-added dollar delimiters to Hugo passthrough delimiters.
+
+    Fenced and inline code are protected. Display math is converted first.
+    This lets Goldmark preserve LaTeX exactly, including ``\\`` line breaks.
+    """
+
+    result: list[str] = []
+    prose: list[str] = []
+    in_fence = False
+    fence_char = ""
+    display_pattern = re.compile(r"(?<!\\)\$\$(.+?)(?<!\\)\$\$", re.DOTALL)
+    standalone_pattern = re.compile(
+        r"^(\s*)(?<!\\)\$(?!\$)(.+?)(?<!\\)\$(?!\$)(\s*)$"
+    )
+    inline_pattern = re.compile(r"(?<!\\)\$(?!\$)([^\n$]+?)(?<!\\)\$(?!\$)")
+
+    def flush_prose() -> None:
+        if not prose:
+            return
+        block = "".join(prose)
+        segments = re.split(r"(`+[^`]*?`+)", block)
+        for index, segment in enumerate(segments):
+            if index % 2:
+                continue
+            segment = display_pattern.sub(
+                lambda match: rf"\[{match.group(1)}\]", segment
+            )
+            segment = "".join(
+                standalone_pattern.sub(
+                    lambda match: (
+                        f"{match.group(1)}\\[{match.group(2)}\\]{match.group(3)}"
+                    ),
+                    line,
+                )
+                for line in segment.splitlines(keepends=True)
+            )
+            segment = inline_pattern.sub(
+                lambda match: rf"\({match.group(1)}\)", segment
+            )
+            segments[index] = segment
+        result.append("".join(segments))
+        prose.clear()
+
+    for line in markdown.splitlines(keepends=True):
+        stripped = line.lstrip()
+        fence_match = re.match(r"(`{3,}|~{3,})", stripped)
+        if fence_match:
+            flush_prose()
+            marker = fence_match.group(1)
+            if not in_fence:
+                in_fence = True
+                fence_char = marker[0]
+            elif marker[0] == fence_char:
+                in_fence = False
+                fence_char = ""
+            result.append(line)
+            continue
+        if in_fence:
+            result.append(line)
+            continue
+
+        prose.append(line)
+    flush_prose()
+    return "".join(result)
+
+
+def escape_shortcode_parameter(value: str) -> str:
+    return value.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def convert_images_to_shortcodes(markdown: str) -> str:
+    """Convert standalone Markdown images to the site's compact figure shortcode."""
+
+    converted: list[str] = []
+    in_fence = False
+    fence_char = ""
+    for line in markdown.splitlines(keepends=True):
+        stripped = line.lstrip()
+        fence = re.match(r"(`{3,}|~{3,})", stripped)
+        if fence:
+            marker = fence.group(1)[0]
+            if not in_fence:
+                in_fence = True
+                fence_char = marker
+            elif marker == fence_char:
+                in_fence = False
+                fence_char = ""
+            converted.append(line)
+            continue
+        match = None if in_fence else MARKDOWN_IMAGE_LINE.match(line.rstrip("\r\n"))
+        if not match:
+            converted.append(line)
+            continue
+        src = escape_shortcode_parameter(match.group("src"))
+        attributes = [f'src="{src}"']
+        alt = match.group("alt")
+        title = match.group("title")
+        if alt:
+            attributes.append(f'alt="{escape_shortcode_parameter(alt)}"')
+        if title:
+            attributes.append(f'title="{escape_shortcode_parameter(title)}"')
+        newline = "\r\n" if line.endswith("\r\n") else "\n" if line.endswith("\n") else ""
+        converted.append("{{< figure " + " ".join(attributes) + " >}}" + newline)
+    return "".join(converted)
+
+
+def extract_downloaded_content(markdown: str, fallback_title: str) -> tuple[str, str, str]:
+    markdown = YAML_HEADER.sub("", markdown)
+    lines = markdown.splitlines()
+    title = fallback_title
+    author = ""
+    body_start = 0
+
+    for index, line in enumerate(lines):
+        if line.startswith("# "):
+            title = line[2:].strip()
+            body_start = index + 1
+            break
+
+    body_lines: list[str] = []
+    for line in lines[body_start:]:
+        stripped = line.strip()
+        author_match = re.match(r"\*\*Author:\*\*\s*\[?([^\]]*)", stripped)
+        if author_match:
+            author = author_match.group(1).strip()
+            continue
+        if re.match(r"\*\*Link:\*\*", stripped):
+            continue
+        body_lines.append(line)
+
+    body = "\n".join(body_lines).strip() + "\n"
+    return title, author, body
+
+
+def yaml_list(items: list[str]) -> str:
+    return "[" + ", ".join(json.dumps(item, ensure_ascii=False) for item in items) + "]"
+
+
+def build_front_matter(
+    *,
+    title: str,
+    author: str,
+    source_url: str,
+    date_value: datetime,
+    tags: list[str],
+    categories: list[str],
+) -> str:
+    fields = [
+        "---",
+        f"title: {json.dumps(title, ensure_ascii=False)}",
+        f"date: {date_value.isoformat()}",
+        "draft: false",
+        "math: true",
+        f"originalURL: {json.dumps(source_url, ensure_ascii=False)}",
+    ]
+    if author:
+        fields.append(f"author: {json.dumps(author, ensure_ascii=False)}")
+    if tags:
+        fields.append(f"tags: {yaml_list(tags)}")
+    if categories:
+        fields.append(f"categories: {yaml_list(categories)}")
+    fields.extend(["---", ""])
+    return "\n".join(fields)
+
+
+def copy_assets_and_rewrite(
+    body: str, source_root: Path, stem: str, target: Path
+) -> tuple[str, int]:
+    asset_dir = source_root / stem
+    if not asset_dir.is_dir():
+        return body, 0
+    destination = target / "images"
+    shutil.copytree(asset_dir, destination)
+    rewritten = body.replace(f"{stem}/", "images/")
+    image_files = [path for path in destination.rglob("*") if path.is_file()]
+    for image_file in image_files:
+        actual_suffix = detect_image_suffix(image_file)
+        if not actual_suffix or image_file.suffix.lower() == actual_suffix:
+            continue
+        renamed = image_file.with_suffix(actual_suffix)
+        if renamed.exists():
+            raise ImportFailure(f"图片重命名发生冲突：{renamed.name}")
+        old_relative = image_file.relative_to(target).as_posix()
+        image_file.rename(renamed)
+        new_relative = renamed.relative_to(target).as_posix()
+        rewritten = rewritten.replace(old_relative, new_relative)
+    return rewritten, len(image_files)
+
+
+def detect_image_suffix(path: Path) -> str | None:
+    with path.open("rb") as image_file:
+        header = image_file.read(16)
+    if header.startswith(b"\x89PNG\r\n\x1a\n"):
+        return ".png"
+    if header.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+    if header.startswith((b"GIF87a", b"GIF89a")):
+        return ".gif"
+    if header.startswith(b"RIFF") and header[8:12] == b"WEBP":
+        return ".webp"
+    return None
+
+
+def prepare_zhihu_content(content_element: object) -> None:
+    for link in content_element.find_all("a"):
+        href = link.get("href", "")
+        if urlparse(href).hostname == "zhida.zhihu.com":
+            link.unwrap()
+            continue
+        if "data-text" not in link.attrs:
+            link["data-text"] = link.get_text(" ", strip=True) or href
+
+    for image in content_element.find_all("img"):
+        preferred_source = (
+            image.get("data-original")
+            or image.get("data-actualsrc")
+            or image.get("src")
+        )
+        if preferred_source:
+            image["src"] = preferred_source
+
+
+def transform_zhihu_html(
+    downloader: ModuleType,
+    html: str,
+    url: str,
+    work_dir: Path,
+    metadata: PageMetadata,
+) -> tuple[Path, str]:
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError as exc:
+        raise ImportFailure("请先安装 requirements.txt 中的依赖。") from exc
+
+    soup = BeautifulSoup(html, "html.parser")
+    title_element = soup.select_one("h1.Post-Title, h1.QuestionHeader-title")
+    content_element = soup.select_one(
+        "div.Post-RichTextContainer, div.RichContent-inner"
+    )
+    author_info = soup.select_one("div.AuthorInfo")
+    author_meta = (
+        author_info.find("meta", {"itemprop": "name"}) if author_info else None
+    )
+    author = author_meta.get("content") if author_meta else "Unknown"
+    if not title_element or not content_element:
+        raise ImportFailure("知乎页面缺少标题或正文，页面结构可能已经变化。")
+
+    prepare_zhihu_content(content_element)
+    date_label = (
+        metadata.published_at.strftime("%Y%m%d")
+        if metadata.published_at
+        else "Unknown"
+    )
+    previous_cwd = Path.cwd()
+    try:
+        os.chdir(work_dir)
+        stem = downloader.save_and_transform(
+            title_element,
+            content_element,
+            author,
+            url,
+            False,
+            soup,
+            date_label,
+        )
+    finally:
+        os.chdir(previous_cwd)
+    return work_dir / f"{stem}.md", stem
+
+
+def run_downloader(
+    url: str,
+    cookie: str,
+    work_dir: Path,
+    *,
+    html_file: Path | None = None,
+) -> tuple[Path, str, PageMetadata]:
+    downloader = load_downloader()
+    if html_file:
+        try:
+            html = html_file.read_text(encoding="utf-8")
+        except OSError as exc:
+            raise ImportFailure(f"无法读取知乎页面文件：{html_file}") from exc
+        metadata = extract_page_metadata(html)
+        markdown_file, stem = transform_zhihu_html(
+            downloader, html, url, work_dir, metadata
+        )
+    else:
+        try:
+            import requests
+        except ImportError as exc:
+            raise ImportFailure("请先安装 requirements.txt 中的依赖。") from exc
+        session = requests.Session()
+        session.headers.update(
+            {
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/124.0.0.0 Safari/537.36"
+                ),
+                "Accept-Language": "en,zh-CN;q=0.9,zh;q=0.8",
+                "Cookie": cookie,
+            }
+        )
+        try:
+            response = session.get(url, timeout=30)
+            response.raise_for_status()
+        except requests.RequestException as exc:
+            raise ImportFailure(f"无法读取知乎文章页面：{exc}") from exc
+        metadata = extract_page_metadata(response.text)
+        markdown_file, stem = transform_zhihu_html(
+            downloader, response.text, url, work_dir, metadata
+        )
+
+    if not stem:
+        raise ImportFailure("知乎下载器没有生成文章；Cookie 可能已过期，或页面结构已变化。")
+    if not markdown_file.is_file():
+        candidates = list(work_dir.glob("*.md"))
+        if len(candidates) != 1:
+            raise ImportFailure("无法确定下载器生成的 Markdown 文件。")
+        markdown_file = candidates[0]
+        stem = markdown_file.stem
+    return markdown_file, stem, metadata
+
+
+def verify_bundle_images(content_file: Path, expected_count: int) -> None:
+    content = content_file.read_text(encoding="utf-8")
+    local_images = [
+        path
+        for path in MARKDOWN_IMAGE.findall(content) + SHORTCODE_IMAGE.findall(content)
+        if not urlparse(path).scheme and not path.startswith("/")
+    ]
+    missing = [
+        path
+        for path in local_images
+        if not (content_file.parent / path).is_file()
+    ]
+    if missing:
+        raise ImportFailure(f"文章中有图片未成功下载：{', '.join(missing[:3])}")
+    if len(local_images) != expected_count:
+        raise ImportFailure(
+            f"图片数量不一致：正文引用 {len(local_images)} 张，"
+            f"本地保存 {expected_count} 张。"
+        )
+
+
+def import_post(args: argparse.Namespace) -> ImportedPost:
+    validate_zhihu_url(args.url)
+    html_file = Path(args.html_file).expanduser() if args.html_file else None
+    cookie = "" if html_file else resolve_cookie(args)
+    with tempfile.TemporaryDirectory(prefix="zhihu-import-") as temporary:
+        work_dir = Path(temporary)
+        markdown_file, stem, metadata = run_downloader(
+            args.url, cookie, work_dir, html_file=html_file
+        )
+        published_at = (
+            parse_published_date_override(args.published_date)
+            or metadata.published_at
+        )
+        if not published_at:
+            raise ImportFailure(
+                "知乎页面缺少原始发布日期。为避免使用错误日期，"
+                "请用 --published-date YYYY-MM-DD 明确指定。"
+            )
+        downloaded = markdown_file.read_text(encoding="utf-8")
+        title, author, body = extract_downloaded_content(downloaded, stem)
+        slug = build_post_slug(published_at, title, args.slug)
+        target = POSTS_DIR / slug
+        if target.exists() and not args.force:
+            raise ImportFailure(f"目标目录已存在：{target}。如需更新，请加 --force。")
+        body = convert_math_delimiters(body)
+
+        staging = work_dir / "bundle"
+        staging.mkdir()
+        body, image_count = copy_assets_and_rewrite(body, work_dir, stem, staging)
+        body = convert_images_to_shortcodes(body)
+        front_matter = build_front_matter(
+            title=title,
+            author=author,
+            source_url=args.url,
+            date_value=published_at,
+            tags=args.tag,
+            categories=args.category,
+        )
+        content_file = staging / "index.zh-cn.md"
+        content_file.write_text(front_matter + "\n" + body, encoding="utf-8")
+
+        if target.exists():
+            backup = target.with_name(target.name + ".backup")
+            if backup.exists():
+                shutil.rmtree(backup)
+            target.rename(backup)
+            try:
+                shutil.copytree(staging, target)
+            except Exception:
+                backup.rename(target)
+                raise
+            shutil.rmtree(backup)
+        else:
+            shutil.copytree(staging, target)
+
+    post = ImportedPost(
+        target,
+        target / "index.zh-cn.md",
+        title,
+        published_at,
+        image_count,
+    )
+    verify_bundle_images(post.content_file, post.image_count)
+    return post
+
+
+def run_checked(
+    command: list[str],
+    *,
+    cwd: Path = REPO_ROOT,
+    env: dict[str, str] | None = None,
+) -> None:
+    process_env = os.environ.copy()
+    if env:
+        process_env.update(env)
+    try:
+        subprocess.run(command, cwd=cwd, check=True, env=process_env)
+    except FileNotFoundError as exc:
+        raise ImportFailure(f"找不到命令：{command[0]}") from exc
+    except subprocess.CalledProcessError as exc:
+        raise ImportFailure(f"命令执行失败：{' '.join(command)}") from exc
+
+
+def validate_site() -> None:
+    with (
+        tempfile.TemporaryDirectory(prefix="hugo-build-") as destination,
+        tempfile.TemporaryDirectory(prefix="hugo-cache-") as cache_dir,
+        tempfile.TemporaryDirectory(prefix="hugo-resources-") as resource_dir,
+    ):
+        run_checked(
+            [
+                "hugo",
+                "--minify",
+                "--cacheDir",
+                cache_dir,
+                "--destination",
+                destination,
+            ],
+            env={"HUGO_RESOURCEDIR": resource_dir},
+        )
+
+
+def publish_post(post: ImportedPost) -> None:
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"],
+        cwd=REPO_ROOT,
+        check=False,
+    )
+    if staged.returncode != 0:
+        raise ImportFailure(
+            "Git 暂存区已有其他改动。为避免混入发布提交，请先提交或取消暂存。"
+        )
+    relative_bundle = post.bundle_dir.relative_to(REPO_ROOT)
+    run_checked(["git", "add", "--", str(relative_bundle)])
+    run_checked(["git", "commit", "-m", f"post: import {post.title}"])
+    run_checked(["git", "push"])
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="把单篇知乎文章/回答导入 Hugo，并保留原生 LaTeX 公式。"
+    )
+    parser.add_argument("url", help="知乎文章或回答的 HTTPS 链接")
+    parser.add_argument(
+        "--slug",
+        help="文章名覆盖值；默认使用知乎标题，最终目录为 Post_知乎发布日期_文章名",
+    )
+    parser.add_argument("--tag", action="append", default=[], help="文章标签，可重复")
+    parser.add_argument(
+        "--category", action="append", default=[], help="文章分类，可重复"
+    )
+    parser.add_argument("--force", action="store_true", help="覆盖同 slug 的已有文章")
+    parser.add_argument(
+        "--publish",
+        action="store_true",
+        help=(
+            "commit and push the imported post after validation; "
+            "the post uses draft: false even without this option"
+        ),
+    )
+    parser.add_argument(
+        "--no-build", action="store_true", help="跳过 Hugo 构建验证（不推荐）"
+    )
+    parser.add_argument(
+        "--published-date",
+        help="知乎缺少发布日期元数据时的人工兜底，格式为 YYYY-MM-DD",
+    )
+    parser.add_argument(
+        "--html-file",
+        help=argparse.SUPPRESS,
+    )
+    cookie = parser.add_argument_group("Cookie 来源")
+    cookie.add_argument(
+        "--cookie",
+        help="直接传 Cookie（会进入终端历史，不推荐；优先使用文件或隐藏输入）",
+    )
+    cookie.add_argument("--cookie-file", help="包含 Cookie 的 UTF-8 文本文件")
+    cookie.add_argument(
+        "--cookie-from-browser",
+        choices=["auto", "chrome", "edge", "firefox"],
+        help="经你明确授权，从本机浏览器读取 zhihu.com Cookie",
+    )
+    return parser
+
+
+def main() -> int:
+    args = build_parser().parse_args()
+    try:
+        post = import_post(args)
+        if not args.no_build:
+            validate_site()
+        if args.publish:
+            publish_post(post)
+        state = "Published" if args.publish else "Imported"
+        print(
+            f"{state}: {post.content_file}\n"
+            f"Zhihu publication date: {post.published_at:%Y-%m-%d}; "
+            f"local images: {post.image_count}"
+        )
+        return 0
+    except ImportFailure as exc:
+        print(f"错误：{exc}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

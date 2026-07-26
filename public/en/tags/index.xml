@@ -2,132 +2,132 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Haifei&#39;s Home</title>
-    <link>http://example.com/en/tags/</link>
+    <link>http://localhost:1313/en/tags/</link>
     <description>Recent content in Tags on Haifei&#39;s Home</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
     <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 27 May 2024 18:36:47 +0800</lastBuildDate>
-    <atom:link href="http://example.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 May 2024 01:30:11 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Quantum Optics</title>
-      <link>http://example.com/en/tags/quantum-optics/</link>
-      <pubDate>Mon, 27 May 2024 18:36:47 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/quantum-optics/</guid>
+      <title>Quantum Measurement Theory</title>
+      <link>http://localhost:1313/en/tags/quantum-measurement-theory/</link>
+      <pubDate>Thu, 23 May 2024 01:30:11 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/quantum-measurement-theory/</guid>
       <description></description>
     </item>
     <item>
       <title>Quantum Information</title>
-      <link>http://example.com/en/tags/quantum-information/</link>
-      <pubDate>Mon, 27 May 2024 18:34:24 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/quantum-information/</guid>
+      <link>http://localhost:1313/en/tags/quantum-information/</link>
+      <pubDate>Wed, 22 May 2024 14:50:35 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/quantum-information/</guid>
       <description></description>
     </item>
     <item>
-      <title>Quantum Measurement Theory</title>
-      <link>http://example.com/en/tags/quantum-measurement-theory/</link>
-      <pubDate>Mon, 27 May 2024 17:49:27 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/quantum-measurement-theory/</guid>
+      <title>Quantum Optics</title>
+      <link>http://localhost:1313/en/tags/quantum-optics/</link>
+      <pubDate>Tue, 21 May 2024 00:41:11 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/quantum-optics/</guid>
       <description></description>
     </item>
     <item>
       <title>Mathematical Methods in Physics</title>
-      <link>http://example.com/en/tags/mathematical-methods-in-physics/</link>
-      <pubDate>Mon, 27 May 2024 17:47:25 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/mathematical-methods-in-physics/</guid>
+      <link>http://localhost:1313/en/tags/mathematical-methods-in-physics/</link>
+      <pubDate>Wed, 01 May 2024 03:04:30 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/mathematical-methods-in-physics/</guid>
       <description></description>
     </item>
     <item>
       <title>Quantum Metrology</title>
-      <link>http://example.com/en/tags/quantum-metrology/</link>
-      <pubDate>Tue, 23 Apr 2024 19:05:46 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/quantum-metrology/</guid>
+      <link>http://localhost:1313/en/tags/quantum-metrology/</link>
+      <pubDate>Tue, 23 Apr 2024 22:47:50 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/quantum-metrology/</guid>
       <description></description>
     </item>
     <item>
       <title>Differential Geometry</title>
-      <link>http://example.com/en/tags/differential-geometry/</link>
-      <pubDate>Wed, 13 Mar 2024 18:41:18 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/differential-geometry/</guid>
+      <link>http://localhost:1313/en/tags/differential-geometry/</link>
+      <pubDate>Sat, 15 Jul 2023 16:52:03 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/differential-geometry/</guid>
       <description></description>
     </item>
     <item>
       <title>Embedded Systems</title>
-      <link>http://example.com/en/tags/embedded-systems/</link>
+      <link>http://localhost:1313/en/tags/embedded-systems/</link>
       <pubDate>Thu, 06 Jul 2023 22:55:37 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/embedded-systems/</guid>
+      <guid>http://localhost:1313/en/tags/embedded-systems/</guid>
       <description></description>
     </item>
     <item>
       <title>SPI</title>
-      <link>http://example.com/en/tags/spi/</link>
+      <link>http://localhost:1313/en/tags/spi/</link>
       <pubDate>Sat, 01 Jul 2023 17:49:31 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/spi/</guid>
+      <guid>http://localhost:1313/en/tags/spi/</guid>
       <description></description>
     </item>
     <item>
       <title>Jupyter Notebook</title>
-      <link>http://example.com/en/tags/jupyter-notebook/</link>
+      <link>http://localhost:1313/en/tags/jupyter-notebook/</link>
       <pubDate>Sat, 01 Jul 2023 17:48:54 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/jupyter-notebook/</guid>
+      <guid>http://localhost:1313/en/tags/jupyter-notebook/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://example.com/en/tags/python/</link>
+      <link>http://localhost:1313/en/tags/python/</link>
       <pubDate>Sat, 01 Jul 2023 17:48:54 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/python/</guid>
+      <guid>http://localhost:1313/en/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://example.com/en/tags/linux/</link>
+      <link>http://localhost:1313/en/tags/linux/</link>
       <pubDate>Mon, 12 Jun 2023 23:22:45 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/linux/</guid>
+      <guid>http://localhost:1313/en/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>http://example.com/en/tags/networking/</link>
+      <link>http://localhost:1313/en/tags/networking/</link>
       <pubDate>Mon, 12 Jun 2023 23:22:45 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/networking/</guid>
+      <guid>http://localhost:1313/en/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Storage/Partition</title>
-      <link>http://example.com/en/tags/storage/partition/</link>
+      <link>http://localhost:1313/en/tags/storage/partition/</link>
       <pubDate>Mon, 12 Jun 2023 22:59:26 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/storage/partition/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Vector Calculus</title>
-      <link>http://example.com/en/tags/vector-calculus/</link>
-      <pubDate>Sat, 10 Jun 2023 10:55:34 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/vector-calculus/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Exterior Algebra</title>
-      <link>http://example.com/en/tags/exterior-algebra/</link>
-      <pubDate>Sat, 10 Jun 2023 02:21:13 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/exterior-algebra/</guid>
+      <guid>http://localhost:1313/en/tags/storage/partition/</guid>
       <description></description>
     </item>
     <item>
       <title>Diary</title>
-      <link>http://example.com/en/tags/diary/</link>
+      <link>http://localhost:1313/en/tags/diary/</link>
       <pubDate>Sat, 10 Jun 2023 01:51:11 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/diary/</guid>
+      <guid>http://localhost:1313/en/tags/diary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vector Calculus</title>
+      <link>http://localhost:1313/en/tags/vector-calculus/</link>
+      <pubDate>Fri, 26 May 2023 21:00:37 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/vector-calculus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exterior Algebra</title>
+      <link>http://localhost:1313/en/tags/exterior-algebra/</link>
+      <pubDate>Fri, 26 May 2023 18:11:03 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/exterior-algebra/</guid>
       <description></description>
     </item>
     <item>
       <title>Lie Algebra</title>
-      <link>http://example.com/en/tags/lie-algebra/</link>
-      <pubDate>Fri, 09 Jun 2023 14:49:49 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/en/tags/lie-algebra/</guid>
+      <link>http://localhost:1313/en/tags/lie-algebra/</link>
+      <pubDate>Tue, 16 May 2023 21:27:19 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/tags/lie-algebra/</guid>
       <description></description>
     </item>
   </channel>

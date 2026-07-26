@@ -2,55 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>电动力学 on Haifei&#39;s Home</title>
-    <link>http://example.com/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</link>
+    <link>http://localhost:1313/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</link>
     <description>Recent content in 电动力学 on Haifei&#39;s Home</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
     <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 12 Oct 2025 20:22:53 +0800</lastBuildDate>
-    <atom:link href="http://example.com/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jul 2025 15:08:10 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>什么是联络【更高更妙的电动力学·番外篇 1】</title>
-      <link>http://example.com/what_is_a_connection/</link>
-      <pubDate>Sun, 12 Oct 2025 20:22:53 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/what_is_a_connection/</guid>
+      <link>http://localhost:1313/post_20250729_%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E7%95%AA%E5%A4%96%E7%AF%87-1/</link>
+      <pubDate>Tue, 29 Jul 2025 15:08:10 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250729_%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E7%95%AA%E5%A4%96%E7%AF%87-1/</guid>
       <description>&lt;p&gt;在前面的文章中，我们说电磁场是联络。这让很多同学想到广义相对论里的联络。这两种联络有什么区别和共同点？&lt;/p&gt;&#xA;&lt;p&gt;电磁场联络 $A$ 是主丛上的联络，而广义相对论联络 $\Gamma$ 是矢量丛上的联络，它们的定义方式看似很不同。有没有办法将它们联系起来呢？&lt;/p&gt;</description>
     </item>
     <item>
       <title>从量子场论到腔量子电动力学【更高更妙的电动力学·5】</title>
-      <link>http://example.com/gm_5/</link>
-      <pubDate>Sun, 06 Apr 2025 01:14:26 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_5/</guid>
+      <link>http://localhost:1313/post_20250413_%E4%BB%8E%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA%E5%88%B0%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-5/</link>
+      <pubDate>Sun, 13 Apr 2025 01:52:37 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250413_%E4%BB%8E%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA%E5%88%B0%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-5/</guid>
       <description>&lt;p&gt;在本篇文章中，我们将从非常复杂的 QED 拉氏量出发：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathcal{L}=  \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\psi - eA_\mu \bar{\psi} \gamma^\mu \psi -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} \end{aligned} $&lt;/p&gt;&#xA;&lt;p&gt;这个拉氏量非常复杂：它不仅考虑了电子的反粒子——正电子，并且耦合项 $- eA_\mu \bar{\psi} \gamma^\mu \psi$ 还是一个三次项，可以描述电子-正电子对产生/湮灭等多种过程。它没有解析解，只能用量子场论的微扰法求解。&lt;/p&gt;</description>
     </item>
     <item>
       <title>狄拉克磁单极子——陈类与陈数【更高更妙的电动力学·4】</title>
-      <link>http://example.com/gm_4/</link>
-      <pubDate>Sun, 06 Apr 2025 01:08:16 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_4/</guid>
+      <link>http://localhost:1313/post_20250330_%E7%8B%84%E6%8B%89%E5%85%8B%E7%A3%81%E5%8D%95%E6%9E%81%E5%AD%90-%E9%99%88%E7%B1%BB%E4%B8%8E%E9%99%88%E6%95%B0-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-4/</link>
+      <pubDate>Sun, 30 Mar 2025 01:13:18 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250330_%E7%8B%84%E6%8B%89%E5%85%8B%E7%A3%81%E5%8D%95%E6%9E%81%E5%AD%90-%E9%99%88%E7%B1%BB%E4%B8%8E%E9%99%88%E6%95%B0-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-4/</guid>
       <description>&lt;p&gt;在&lt;a href=&#34;https://zhuanlan.zhihu.com/p/32173040413&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;前文&lt;/a&gt;中，我们说到，如果流形是拓扑平凡的，那么对 Berry 曲率在闭合曲面 $\Sigma$ 上积分应该得到零。这是因为根据 Stokes 定理，有：&lt;/p&gt;&#xA;&lt;p&gt;$\int_\Sigma F = \int_{\partial \Sigma } A = 0$&lt;/p&gt;&#xA;&lt;p&gt;然而，在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为，此时无法定义全局单值的联络 $A$ ，导致 Stokes 定理不再适用。此话怎讲？&lt;/p&gt;</description>
     </item>
     <item>
       <title>电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】</title>
-      <link>http://example.com/gm_3/</link>
-      <pubDate>Sun, 06 Apr 2025 01:02:38 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_3/</guid>
+      <link>http://localhost:1313/post_20250323_%E7%94%B5%E7%A3%81%E5%9C%BA%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%B5%E5%9C%BA%E5%92%8C%E7%A3%81%E5%9C%BA-ab%E6%95%88%E5%BA%94%E4%B8%8Eberry%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-3/</link>
+      <pubDate>Sun, 23 Mar 2025 20:20:44 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250323_%E7%94%B5%E7%A3%81%E5%9C%BA%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%B5%E5%9C%BA%E5%92%8C%E7%A3%81%E5%9C%BA-ab%E6%95%88%E5%BA%94%E4%B8%8Eberry%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-3/</guid>
       <description>&lt;p&gt;电磁场并非电场和磁场。&lt;/p&gt;&#xA;&lt;p&gt;换句话说，电磁场并不只是电场和磁场。&lt;/p&gt;&#xA;&lt;p&gt;此话怎讲？&lt;/p&gt;&#xA;&lt;h2 id=&#34;一电磁势的地位高于场强&#34;&gt;一、电磁势的地位高于场强&lt;/h2&gt;&#xA;&lt;p&gt;在&lt;a href=&#34;https://zhuanlan.zhihu.com/p/23958176393&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;前文&lt;/a&gt;中，我们挖过一个坑：&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;$\boxed{\begin{aligned} \phi &amp;amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned}}$&lt;/p&gt;&#xA;&lt;p&gt;学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。&lt;/p&gt;</description>
     </item>
     <item>
       <title>规范场论视角下的电动力学【更高更妙的电动力学·2】</title>
-      <link>http://example.com/gm_2/</link>
-      <pubDate>Sun, 06 Apr 2025 00:48:30 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_2/</guid>
+      <link>http://localhost:1313/post_20250217_%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-2/</link>
+      <pubDate>Mon, 17 Feb 2025 17:15:55 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250217_%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-2/</guid>
       <description>&lt;p&gt;这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。&lt;/p&gt;&#xA;&lt;p&gt;本文依然采用 $(-,+,+,+)$ 的度规约定。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;为什么说电动力学是规范场论？&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。&lt;/p&gt;</description>
     </item>
     <item>
       <title>微分几何视角下的电动力学【更高更妙的电动力学·1】</title>
-      <link>http://example.com/gm_1/</link>
-      <pubDate>Sun, 06 Apr 2025 00:43:40 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_1/</guid>
+      <link>http://localhost:1313/post_20250207_%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-1/</link>
+      <pubDate>Fri, 07 Feb 2025 22:55:58 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250207_%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-1/</guid>
       <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;&#xA;&lt;p&gt;你可能听说过麦克斯韦方程有很简单的形式：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathrm{d} F&amp;amp;=0 \\ \mathrm{d} \star F &amp;amp;= \mu_0 \star J \end{aligned}$&lt;/p&gt;&#xA;&lt;p&gt;又或者是&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;amp;= \mu_0 J^\nu  \end{aligned}$&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。&lt;/p&gt;</description>
     </item>
   </channel>

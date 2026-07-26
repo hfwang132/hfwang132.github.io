@@ -2,442 +2,473 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.com/categories/</loc><lastmod>2025-10-12T20:33:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/</loc><lastmod>2025-10-25T16:46:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/categories/"
+                        href="http://localhost:1313/en/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/categories/"
+                    href="http://localhost:1313/"
                     /></url><url>
-            <loc>http://example.com/</loc><lastmod>2025-10-12T20:33:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-10-25T16:46:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/"
+                        href="http://localhost:1313/en/posts/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/"
+                    href="http://localhost:1313/posts/"
                     /></url><url>
-            <loc>http://example.com/posts/</loc><lastmod>2025-10-12T20:33:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</loc><lastmod>2025-10-25T16:46:08&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/categories/</loc><lastmod>2025-08-09T14:16:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/posts/"
+                        href="http://localhost:1313/en/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/posts/"
+                    href="http://localhost:1313/categories/"
                     /></url><url>
-            <loc>http://example.com/tags/</loc><lastmod>2025-10-12T20:33:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/</loc><lastmod>2025-08-09T14:16:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/tags/"
+                        href="http://localhost:1313/en/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/tags/"
+                    href="http://localhost:1313/tags/"
                     /></url><url>
-            <loc>http://example.com/second_quantization/</loc><lastmod>2025-10-12T20:33:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E4%BA%8C%E6%AC%A1%E9%87%8F%E5%AD%90%E5%8C%96/</loc><lastmod>2025-10-12T20:33:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</loc><lastmod>2025-10-12T20:33:12&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E7%94%B5%E7%A3%81%E6%B3%A2/</loc><lastmod>2025-10-12T20:30:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/photon_wave_func2/</loc><lastmod>2025-10-12T20:30:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E5%85%89%E5%AD%90/</loc><lastmod>2025-10-12T20:30:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</loc><lastmod>2025-10-12T20:30:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/harr-%E6%B5%8B%E5%BA%A6/</loc><lastmod>2025-10-12T20:25:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E7%BB%8F%E5%85%B8%E9%98%B4%E5%BD%B1/</loc><lastmod>2025-10-12T20:25:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/classical_shadows/</loc><lastmod>2025-10-12T20:25:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</loc><lastmod>2025-10-12T20:25:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</loc><lastmod>2025-10-12T20:22:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/</loc><lastmod>2025-10-12T20:22:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E8%81%94%E7%BB%9C/</loc><lastmod>2025-10-12T20:22:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/what_is_a_connection/</loc><lastmod>2025-10-12T20:22:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2025-10-12T20:22:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/</loc><lastmod>2025-10-12T20:20:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E8%87%AA%E6%97%8B/</loc><lastmod>2025-10-12T20:20:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/spin_and_relativity/</loc><lastmod>2025-10-12T20:20:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E5%85%8B%E6%B0%8F%E7%AC%A6/</loc><lastmod>2025-10-12T20:15:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/christoffel/</loc><lastmod>2025-10-12T20:15:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/jaynes-cummings/</loc><lastmod>2025-04-06T01:14:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/gm_5/</loc><lastmod>2025-04-06T01:14:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/</loc><lastmod>2025-04-06T01:14:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</loc><lastmod>2025-04-06T01:14:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E9%99%88%E6%95%B0/</loc><lastmod>2025-04-06T01:08:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/gm_4/</loc><lastmod>2025-04-06T01:08:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E6%8B%93%E6%89%91/</loc><lastmod>2025-04-06T01:08:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</loc><lastmod>2025-04-06T01:08:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/berry%E8%81%94%E7%BB%9C/</loc><lastmod>2025-04-06T01:02:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/gm_3/</loc><lastmod>2025-04-06T01:02:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA/</loc><lastmod>2025-04-06T00:48:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/gm_2/</loc><lastmod>2025-04-06T00:48:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/gm_1/</loc><lastmod>2025-04-06T00:43:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</loc><lastmod>2025-01-08T21:08:06&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/products/</loc><lastmod>2025-01-08T21:08:06&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/quantum_darwinism/</loc><lastmod>2025-01-08T21:03:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E9%87%8F%E5%AD%90%E8%BE%BE%E5%B0%94%E6%96%87%E4%B8%BB%E4%B9%89/</loc><lastmod>2025-01-08T21:03:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/weyl_wigner/</loc><lastmod>2025-01-08T20:25:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</loc><lastmod>2024-07-27T15:52:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/phase_space_complex/</loc><lastmod>2024-07-27T15:52:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/black_body/</loc><lastmod>2024-07-27T15:50:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/thermal_exponential_dist/</loc><lastmod>2024-07-27T15:45:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/rabi/</loc><lastmod>2024-07-27T15:42:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/laser_quantum2/</loc><lastmod>2024-07-19T01:07:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/spdc_optical_amp/</loc><lastmod>2024-05-27T18:36:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20250809_%E5%BD%93%E6%88%91%E4%BB%AC%E5%81%9A%E4%BA%8C%E6%AC%A1%E9%87%8F%E5%AD%90%E5%8C%96%E7%9A%84%E6%97%B6%E5%80%99-%E6%88%91%E4%BB%AC%E7%A9%B6%E7%AB%9F%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/</loc><lastmod>2025-08-09T14:16:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E4%BA%8C%E6%AC%A1%E9%87%8F%E5%AD%90%E5%8C%96/</loc><lastmod>2025-08-09T14:16:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</loc><lastmod>2025-08-09T14:16:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</loc><lastmod>2025-07-29T15:08:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA/</loc><lastmod>2025-07-29T15:08:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E8%81%94%E7%BB%9C/</loc><lastmod>2025-07-29T15:08:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250729_%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E7%95%AA%E5%A4%96%E7%AF%87-1/</loc><lastmod>2025-07-29T15:08:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2025-07-29T15:08:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E7%94%B5%E7%A3%81%E6%B3%A2/</loc><lastmod>2025-07-29T14:22:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250729_%E7%94%B5%E7%A3%81%E6%B3%A2%E6%98%AF%E5%85%89%E5%AD%90%E7%9A%84%E6%A6%82%E7%8E%87%E6%B3%A2%E5%90%97/</loc><lastmod>2025-07-29T14:22:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E5%85%89%E5%AD%90/</loc><lastmod>2025-07-29T14:22:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</loc><lastmod>2025-07-29T14:22:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E7%9B%B8%E5%AF%B9%E8%AE%BA/</loc><lastmod>2025-07-09T19:23:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E8%87%AA%E6%97%8B/</loc><lastmod>2025-07-09T19:23:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250709_%E8%87%AA%E6%97%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%95%88%E5%BA%94/</loc><lastmod>2025-07-09T19:23:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/harr-%E6%B5%8B%E5%BA%A6/</loc><lastmod>2025-05-30T02:53:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E7%BB%8F%E5%85%B8%E9%98%B4%E5%BD%B1/</loc><lastmod>2025-05-30T02:53:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250530_%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E7%BB%8F%E5%85%B8%E9%98%B4%E5%BD%B1-classical-shadows/</loc><lastmod>2025-05-30T02:53:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</loc><lastmod>2025-05-30T02:53:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E5%85%8B%E6%B0%8F%E7%AC%A6/</loc><lastmod>2025-04-27T23:12:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250427_%E5%85%8B%E6%B0%8F%E7%AC%A6%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BC%A0%E9%87%8F/</loc><lastmod>2025-04-27T23:12:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/jaynes-cummings/</loc><lastmod>2025-04-13T01:52:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250413_%E4%BB%8E%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA%E5%88%B0%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-5/</loc><lastmod>2025-04-13T01:52:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/</loc><lastmod>2025-04-13T01:52:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/</loc><lastmod>2025-04-13T01:52:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E9%99%88%E6%95%B0/</loc><lastmod>2025-03-30T01:13:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250330_%E7%8B%84%E6%8B%89%E5%85%8B%E7%A3%81%E5%8D%95%E6%9E%81%E5%AD%90-%E9%99%88%E7%B1%BB%E4%B8%8E%E9%99%88%E6%95%B0-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-4/</loc><lastmod>2025-03-30T01:13:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E6%8B%93%E6%89%91/</loc><lastmod>2025-03-30T01:13:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95/</loc><lastmod>2025-03-30T01:13:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/berry%E8%81%94%E7%BB%9C/</loc><lastmod>2025-03-23T20:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250323_%E7%94%B5%E7%A3%81%E5%9C%BA%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%B5%E5%9C%BA%E5%92%8C%E7%A3%81%E5%9C%BA-ab%E6%95%88%E5%BA%94%E4%B8%8Eberry%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-3/</loc><lastmod>2025-03-23T20:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA/</loc><lastmod>2025-02-17T17:15:55&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250217_%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-2/</loc><lastmod>2025-02-17T17:15:55&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250207_%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-1/</loc><lastmod>2025-02-07T22:55:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/categories/%E6%97%A5%E5%B8%B8/</loc><lastmod>2025-01-10T01:39:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E6%97%A5%E5%B8%B8/</loc><lastmod>2025-01-10T01:39:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20250110_%E9%9A%8F%E8%AE%B0-05/</loc><lastmod>2025-01-10T01:39:32&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20241103_%E9%87%8F%E5%AD%90%E8%BE%BE%E5%B0%94%E6%96%87%E4%B8%BB%E4%B9%89/</loc><lastmod>2024-11-03T14:44:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E9%87%8F%E5%AD%90%E8%BE%BE%E5%B0%94%E6%96%87%E4%B8%BB%E4%B9%89/</loc><lastmod>2024-11-03T14:44:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20241008_%E9%87%8F%E5%AD%90%E6%80%81-%E7%AE%97%E7%AC%A6%E7%9A%84-weyl-%E5%92%8C-wigner-%E8%A1%A8%E7%A4%BA/</loc><lastmod>2024-10-08T11:36:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</loc><lastmod>2024-10-08T11:36:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240916_%E7%9B%B4%E7%A7%AF-%E7%9B%B4%E5%92%8C-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-%E5%BC%A0%E9%87%8F%E7%A7%AF%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</loc><lastmod>2024-09-16T21:03:02&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/spdc_optical_amp/"
+                        href="http://localhost:1313/en/post_20240916_%E7%9B%B4%E7%A7%AF-%E7%9B%B4%E5%92%8C-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-%E5%BC%A0%E9%87%8F%E7%A7%AF%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/spdc_optical_amp/"
+                    href="http://localhost:1313/post_20240916_%E7%9B%B4%E7%A7%AF-%E7%9B%B4%E5%92%8C-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-%E5%BC%A0%E9%87%8F%E7%A7%AF%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/"
                     /></url><url>
-            <loc>http://example.com/contextuality/</loc><lastmod>2024-05-27T18:34:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</loc><lastmod>2024-07-01T23:09:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240701_%E7%9B%B8%E7%A9%BA%E9%97%B4%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E6%97%B6%E7%9C%8B%E8%B5%B7%E6%9D%A5%E5%83%8F%E4%B8%80%E4%B8%AA%E5%A4%8D%E5%B9%B3%E9%9D%A2/</loc><lastmod>2024-07-01T23:09:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240622_%E9%BB%91%E4%BD%93%E8%BE%90%E5%B0%84%E7%9A%84%E6%8E%A8%E5%AF%BC-%E6%97%A0%E5%BA%9F%E8%AF%9D%E7%89%88/</loc><lastmod>2024-06-22T18:12:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240621_%E4%B8%BA%E4%BB%80%E4%B9%88%E7%83%AD%E5%85%89%E5%9C%BA%E7%9A%84%E5%85%89%E5%BC%BA%E6%9C%8D%E4%BB%8E%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83/</loc><lastmod>2024-06-21T00:36:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240605_%E5%86%8D%E8%A7%81%E4%BA%86%E6%97%8B%E8%BD%AC%E6%B3%A2%E8%BF%91%E4%BC%BC-%E9%87%8F%E5%AD%90%E6%8B%89%E6%AF%94%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A7%A3%E6%9E%90%E8%A7%A3/</loc><lastmod>2024-06-05T20:52:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240531_%E6%BF%80%E5%85%89%E7%9A%84%E5%85%A8%E9%87%8F%E5%AD%90%E7%90%86%E8%AE%BA/</loc><lastmod>2024-05-31T21:45:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</loc><lastmod>2024-05-23T01:30:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240523_%E4%BD%8D%E7%BD%AE%E6%B5%8B%E9%87%8F%E7%9A%84%E5%A1%8C%E7%BC%A9%E6%80%81/</loc><lastmod>2024-05-23T01:30:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/contextuality/"
+                        href="http://localhost:1313/en/post_20240523_%E4%BD%8D%E7%BD%AE%E6%B5%8B%E9%87%8F%E7%9A%84%E5%A1%8C%E7%BC%A9%E6%80%81/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/contextuality/"
+                    href="http://localhost:1313/post_20240523_%E4%BD%8D%E7%BD%AE%E6%B5%8B%E9%87%8F%E7%9A%84%E5%A1%8C%E7%BC%A9%E6%80%81/"
                     /></url><url>
-            <loc>http://example.com/tags/%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E7%90%86%E8%AE%BA/</loc><lastmod>2024-05-27T17:49:27&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/position_measurement/</loc><lastmod>2024-05-27T17:49:27&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240522_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%90%A6%E8%B6%85%E8%BF%87%E5%85%89%E9%80%9F/</loc><lastmod>2024-05-22T14:50:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/position_measurement/"
+                        href="http://localhost:1313/en/post_20240522_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%90%A6%E8%B6%85%E8%BF%87%E5%85%89%E9%80%9F/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/position_measurement/"
+                    href="http://localhost:1313/post_20240522_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%90%A6%E8%B6%85%E8%BF%87%E5%85%89%E9%80%9F/"
                     /></url><url>
-            <loc>http://example.com/annilation_op/</loc><lastmod>2024-05-27T17:47:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240521_%E6%BF%80%E5%85%89%E7%9A%84%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E9%87%8F%E5%AD%90%E6%8F%8F%E8%BF%B0/</loc><lastmod>2024-05-21T00:41:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/annilation_op/"
+                        href="http://localhost:1313/en/post_20240521_%E6%BF%80%E5%85%89%E7%9A%84%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E9%87%8F%E5%AD%90%E6%8F%8F%E8%BF%B0/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/annilation_op/"
+                    href="http://localhost:1313/post_20240521_%E6%BF%80%E5%85%89%E7%9A%84%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E9%87%8F%E5%AD%90%E6%8F%8F%E8%BF%B0/"
                     /></url><url>
-            <loc>http://example.com/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2024-05-27T17:47:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/laser_quantum/</loc><lastmod>2024-05-27T17:42:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240515_spdc%E4%BA%A7%E7%94%9F%E7%9A%84%E9%A2%91%E7%8E%87%E7%BA%A0%E7%BC%A0%E5%85%89-%E5%85%B6%E4%B8%AD%E7%9A%84%E9%97%B2%E7%BD%AE%E5%85%89%E7%BB%8F%E8%BF%87%E5%85%89%E7%BA%A4%E6%94%BE%E5%A4%A7%E5%99%A8-%E8%BF%98%E4%B8%8E%E4%BF%A1%E5%8F%B7%E5%85%89%E7%BA%A0%E7%BC%A0%E5%90%97/</loc><lastmod>2024-05-15T01:30:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/laser_quantum/"
+                        href="http://localhost:1313/en/post_20240515_spdc%E4%BA%A7%E7%94%9F%E7%9A%84%E9%A2%91%E7%8E%87%E7%BA%A0%E7%BC%A0%E5%85%89-%E5%85%B6%E4%B8%AD%E7%9A%84%E9%97%B2%E7%BD%AE%E5%85%89%E7%BB%8F%E8%BF%87%E5%85%89%E7%BA%A4%E6%94%BE%E5%A4%A7%E5%99%A8-%E8%BF%98%E4%B8%8E%E4%BF%A1%E5%8F%B7%E5%85%89%E7%BA%A0%E7%BC%A0%E5%90%97/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/laser_quantum/"
+                    href="http://localhost:1313/post_20240515_spdc%E4%BA%A7%E7%94%9F%E7%9A%84%E9%A2%91%E7%8E%87%E7%BA%A0%E7%BC%A0%E5%85%89-%E5%85%B6%E4%B8%AD%E7%9A%84%E9%97%B2%E7%BD%AE%E5%85%89%E7%BB%8F%E8%BF%87%E5%85%89%E7%BA%A4%E6%94%BE%E5%A4%A7%E5%99%A8-%E8%BF%98%E4%B8%8E%E4%BF%A1%E5%8F%B7%E5%85%89%E7%BA%A0%E7%BC%A0%E5%90%97/"
                     /></url><url>
-            <loc>http://example.com/oam/</loc><lastmod>2024-05-27T17:35:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240513_%E5%85%89%E5%AD%90%E7%9A%84%E8%BD%A8%E9%81%93%E8%A7%92%E5%8A%A8%E9%87%8F/</loc><lastmod>2024-05-13T20:24:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/oam/"
+                        href="http://localhost:1313/en/post_20240513_%E5%85%89%E5%AD%90%E7%9A%84%E8%BD%A8%E9%81%93%E8%A7%92%E5%8A%A8%E9%87%8F/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/oam/"
+                    href="http://localhost:1313/post_20240513_%E5%85%89%E5%AD%90%E7%9A%84%E8%BD%A8%E9%81%93%E8%A7%92%E5%8A%A8%E9%87%8F/"
                     /></url><url>
-            <loc>http://example.com/classical_correlation/</loc><lastmod>2024-05-27T17:33:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240501_%E4%BA%A7%E7%94%9F%E6%B9%AE%E7%81%AD%E7%AE%97%E7%AC%A6%E6%98%AF%E6%80%8E%E4%B9%88%E5%BE%97%E5%88%B0%E7%9A%84/</loc><lastmod>2024-05-01T03:04:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/classical_correlation/"
+                        href="http://localhost:1313/en/post_20240501_%E4%BA%A7%E7%94%9F%E6%B9%AE%E7%81%AD%E7%AE%97%E7%AC%A6%E6%98%AF%E6%80%8E%E4%B9%88%E5%BE%97%E5%88%B0%E7%9A%84/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/classical_correlation/"
+                    href="http://localhost:1313/post_20240501_%E4%BA%A7%E7%94%9F%E6%B9%AE%E7%81%AD%E7%AE%97%E7%AC%A6%E6%98%AF%E6%80%8E%E4%B9%88%E5%BE%97%E5%88%B0%E7%9A%84/"
                     /></url><url>
-            <loc>http://example.com/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6/</loc><lastmod>2024-04-23T19:05:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/quantum_metrology/</loc><lastmod>2024-04-23T19:05:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</loc><lastmod>2024-05-01T03:04:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240430_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%85%B3%E8%81%94%E7%9A%84%E5%8C%BA%E5%88%AB-%E4%BB%A5%E5%8F%8A%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E9%97%AE%E9%A2%98/</loc><lastmod>2024-04-30T15:24:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/quantum_metrology/"
+                        href="http://localhost:1313/en/post_20240430_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%85%B3%E8%81%94%E7%9A%84%E5%8C%BA%E5%88%AB-%E4%BB%A5%E5%8F%8A%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E9%97%AE%E9%A2%98/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/quantum_metrology/"
+                    href="http://localhost:1313/post_20240430_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%85%B3%E8%81%94%E7%9A%84%E5%8C%BA%E5%88%AB-%E4%BB%A5%E5%8F%8A%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E9%97%AE%E9%A2%98/"
                     /></url><url>
-            <loc>http://example.com/state_tomography/</loc><lastmod>2024-04-22T14:43:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6/</loc><lastmod>2024-04-23T22:47:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20240423_%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6-quantum-metrology-%E7%AE%80%E6%98%8E%E5%85%A5%E9%97%A8/</loc><lastmod>2024-04-23T22:47:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/state_tomography/"
+                        href="http://localhost:1313/en/post_20240423_%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6-quantum-metrology-%E7%AE%80%E6%98%8E%E5%85%A5%E9%97%A8/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/state_tomography/"
+                    href="http://localhost:1313/post_20240423_%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6-quantum-metrology-%E7%AE%80%E6%98%8E%E5%85%A5%E9%97%A8/"
                     /></url><url>
-            <loc>http://example.com/photon_wave_packets/</loc><lastmod>2024-04-13T16:10:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240420_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%89-%E9%87%8F%E5%AD%90%E6%80%81%E5%B1%82%E6%9E%90/</loc><lastmod>2024-04-20T02:40:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/photon_wave_packets/"
+                        href="http://localhost:1313/en/post_20240420_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%89-%E9%87%8F%E5%AD%90%E6%80%81%E5%B1%82%E6%9E%90/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/photon_wave_packets/"
+                    href="http://localhost:1313/post_20240420_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%89-%E9%87%8F%E5%AD%90%E6%80%81%E5%B1%82%E6%9E%90/"
                     /></url><url>
-            <loc>http://example.com/understanding_differentials/</loc><lastmod>2024-03-13T18:34:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240403_%E5%85%89%E5%AD%90%E5%92%8C%E7%94%B5%E7%A3%81%E5%9C%BA%E6%B3%A2%E5%8C%85%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB/</loc><lastmod>2024-04-03T10:47:06&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/understanding_differentials/"
+                        href="http://localhost:1313/en/post_20240403_%E5%85%89%E5%AD%90%E5%92%8C%E7%94%B5%E7%A3%81%E5%9C%BA%E6%B3%A2%E5%8C%85%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/understanding_differentials/"
+                    href="http://localhost:1313/post_20240403_%E5%85%89%E5%AD%90%E5%92%8C%E7%94%B5%E7%A3%81%E5%9C%BA%E6%B3%A2%E5%8C%85%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB/"
                     /></url><url>
-            <loc>http://example.com/photon_wave_func/</loc><lastmod>2024-03-09T17:37:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240309_%E5%85%89%E5%AD%90%E6%9C%89%E6%B3%A2%E5%87%BD%E6%95%B0%E5%90%97/</loc><lastmod>2024-03-09T17:33:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/photon_wave_func/"
+                        href="http://localhost:1313/en/post_20240309_%E5%85%89%E5%AD%90%E6%9C%89%E6%B3%A2%E5%87%BD%E6%95%B0%E5%90%97/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/photon_wave_func/"
+                    href="http://localhost:1313/post_20240309_%E5%85%89%E5%AD%90%E6%9C%89%E6%B3%A2%E5%87%BD%E6%95%B0%E5%90%97/"
                     /></url><url>
-            <loc>http://example.com/bch/</loc><lastmod>2024-03-07T20:59:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240307_bch-%E5%85%AC%E5%BC%8F-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%88%86%E7%AE%97%E7%9A%84%E5%A4%A7%E6%9D%80%E5%99%A8/</loc><lastmod>2024-03-07T16:13:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/bch/"
+                        href="http://localhost:1313/en/post_20240307_bch-%E5%85%AC%E5%BC%8F-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%88%86%E7%AE%97%E7%9A%84%E5%A4%A7%E6%9D%80%E5%99%A8/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/bch/"
+                    href="http://localhost:1313/post_20240307_bch-%E5%85%AC%E5%BC%8F-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%88%86%E7%AE%97%E7%9A%84%E5%A4%A7%E6%9D%80%E5%99%A8/"
                     /></url><url>
-            <loc>http://example.com/complex_numbers_in_em/</loc><lastmod>2024-02-16T00:32:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240215_%E5%A4%8D%E6%95%B0%E5%AF%B9%E4%BA%8E%E6%8F%8F%E8%BF%B0%E7%94%B5%E7%A3%81%E6%B3%A2%E6%9C%89%E4%BB%80%E4%B9%88%E9%87%8D%E8%A6%81%E6%80%A7/</loc><lastmod>2024-02-15T23:46:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/complex_numbers_in_em/"
+                        href="http://localhost:1313/en/post_20240215_%E5%A4%8D%E6%95%B0%E5%AF%B9%E4%BA%8E%E6%8F%8F%E8%BF%B0%E7%94%B5%E7%A3%81%E6%B3%A2%E6%9C%89%E4%BB%80%E4%B9%88%E9%87%8D%E8%A6%81%E6%80%A7/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/complex_numbers_in_em/"
+                    href="http://localhost:1313/post_20240215_%E5%A4%8D%E6%95%B0%E5%AF%B9%E4%BA%8E%E6%8F%8F%E8%BF%B0%E7%94%B5%E7%A3%81%E6%B3%A2%E6%9C%89%E4%BB%80%E4%B9%88%E9%87%8D%E8%A6%81%E6%80%A7/"
                     /></url><url>
-            <loc>http://example.com/hbt_spectral_correlation/</loc><lastmod>2024-02-05T00:12:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240205_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%BA%8C-hbt%E5%AE%9E%E9%AA%8C%E6%B5%8B%E9%87%8Fspdc%E5%A4%9A%E6%A8%A1%E5%8E%8B%E7%BC%A9%E6%80%81%E7%9A%84%E9%A2%91%E8%B0%B1%E5%85%B3%E8%81%94%E4%B8%8E%E7%BA%AF%E5%BA%A6/</loc><lastmod>2024-02-05T00:10:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/hbt_spectral_correlation/"
+                        href="http://localhost:1313/en/post_20240205_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%BA%8C-hbt%E5%AE%9E%E9%AA%8C%E6%B5%8B%E9%87%8Fspdc%E5%A4%9A%E6%A8%A1%E5%8E%8B%E7%BC%A9%E6%80%81%E7%9A%84%E9%A2%91%E8%B0%B1%E5%85%B3%E8%81%94%E4%B8%8E%E7%BA%AF%E5%BA%A6/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/hbt_spectral_correlation/"
+                    href="http://localhost:1313/post_20240205_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%BA%8C-hbt%E5%AE%9E%E9%AA%8C%E6%B5%8B%E9%87%8Fspdc%E5%A4%9A%E6%A8%A1%E5%8E%8B%E7%BC%A9%E6%80%81%E7%9A%84%E9%A2%91%E8%B0%B1%E5%85%B3%E8%81%94%E4%B8%8E%E7%BA%AF%E5%BA%A6/"
                     /></url><url>
-            <loc>http://example.com/hbt_g2/</loc><lastmod>2024-02-05T00:11:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240204_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%80-%E9%9D%9E%E5%85%89%E5%AD%90%E6%95%B0%E5%88%86%E8%BE%A8%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E4%BA%8C%E9%98%B6%E5%85%B3%E8%81%94%E5%87%BD%E6%95%B0-g2-%E7%9A%84%E5%8E%9F%E7%90%86/</loc><lastmod>2024-02-04T15:53:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/hbt_g2/"
+                        href="http://localhost:1313/en/post_20240204_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%80-%E9%9D%9E%E5%85%89%E5%AD%90%E6%95%B0%E5%88%86%E8%BE%A8%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E4%BA%8C%E9%98%B6%E5%85%B3%E8%81%94%E5%87%BD%E6%95%B0-g2-%E7%9A%84%E5%8E%9F%E7%90%86/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/hbt_g2/"
+                    href="http://localhost:1313/post_20240204_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%80-%E9%9D%9E%E5%85%89%E5%AD%90%E6%95%B0%E5%88%86%E8%BE%A8%E6%8E%A2%E6%B5%8B%E5%99%A8%E6%B5%8B%E4%BA%8C%E9%98%B6%E5%85%B3%E8%81%94%E5%87%BD%E6%95%B0-g2-%E7%9A%84%E5%8E%9F%E7%90%86/"
                     /></url><url>
-            <loc>http://example.com/lie_derivative/</loc><lastmod>2024-01-26T23:50:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20240121_%E5%B9%BF%E4%B9%89%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F-povm-%E7%AE%80%E4%BB%8B/</loc><lastmod>2024-01-21T22:13:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/lie_derivative/"
+                        href="http://localhost:1313/en/post_20240121_%E5%B9%BF%E4%B9%89%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F-povm-%E7%AE%80%E4%BB%8B/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/lie_derivative/"
+                    href="http://localhost:1313/post_20240121_%E5%B9%BF%E4%B9%89%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F-povm-%E7%AE%80%E4%BB%8B/"
                     /></url><url>
-            <loc>http://example.com/pointer0/</loc><lastmod>2024-01-26T23:49:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/povm/</loc><lastmod>2024-01-26T23:36:13&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230814_%E9%9A%8F%E6%83%B3-04/</loc><lastmod>2023-08-14T23:04:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20230715_%E6%9D%8E%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%8D%8F%E5%8F%98%E5%AF%BC%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%94%E7%B3%BB/</loc><lastmod>2023-07-15T16:52:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/povm/"
+                        href="http://localhost:1313/en/post_20230715_%E6%9D%8E%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%8D%8F%E5%8F%98%E5%AF%BC%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%94%E7%B3%BB/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/povm/"
+                    href="http://localhost:1313/post_20230715_%E6%9D%8E%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%8D%8F%E5%8F%98%E5%AF%BC%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%94%E7%B3%BB/"
                     /></url><url>
-            <loc>http://example.com/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/categories/%E6%97%A5%E5%B8%B8/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/side_proj/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20230701_%E5%81%9A%E8%BF%87%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%8E%A9-%E4%BD%86%E6%97%A0%E8%81%8A-%E7%9A%84%E5%B0%8F%E9%A1%B9%E7%9B%AE/</loc><lastmod>2023-07-01T17:48:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/side_proj/"
+                        href="http://localhost:1313/en/post_20230701_%E5%81%9A%E8%BF%87%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%8E%A9-%E4%BD%86%E6%97%A0%E8%81%8A-%E7%9A%84%E5%B0%8F%E9%A1%B9%E7%9B%AE/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/side_proj/"
+                    href="http://localhost:1313/post_20230701_%E5%81%9A%E8%BF%87%E7%9A%84%E4%B8%80%E4%BA%9B%E5%A5%BD%E7%8E%A9-%E4%BD%86%E6%97%A0%E8%81%8A-%E7%9A%84%E5%B0%8F%E9%A1%B9%E7%9B%AE/"
                     /></url><url>
-            <loc>http://example.com/categories/cs/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/categories/cs/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/categories/cs/"
+                        href="http://localhost:1313/en/categories/cs/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/categories/cs/"
+                    href="http://localhost:1313/categories/cs/"
                     /></url><url>
-            <loc>http://example.com/tags/jupyter-notebook/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/jupyter-notebook/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/tags/jupyter-notebook/"
+                        href="http://localhost:1313/en/tags/jupyter-notebook/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/tags/jupyter-notebook/"
+                    href="http://localhost:1313/tags/jupyter-notebook/"
                     /></url><url>
-            <loc>http://example.com/tags/python/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/python/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/tags/python/"
+                        href="http://localhost:1313/en/tags/python/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/tags/python/"
+                    href="http://localhost:1313/tags/python/"
                     /></url><url>
-            <loc>http://example.com/ui_poll/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230630_%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8B%89%E5%8F%96-jupyter-widgets-ui-%E7%BB%84%E4%BB%B6%E7%9A%84%E7%8A%B6%E6%80%81/</loc><lastmod>2023-06-30T20:07:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/ui_poll/"
+                        href="http://localhost:1313/en/post_20230630_%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8B%89%E5%8F%96-jupyter-widgets-ui-%E7%BB%84%E4%BB%B6%E7%9A%84%E7%8A%B6%E6%80%81/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/ui_poll/"
+                    href="http://localhost:1313/post_20230630_%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8B%89%E5%8F%96-jupyter-widgets-ui-%E7%BB%84%E4%BB%B6%E7%9A%84%E7%8A%B6%E6%80%81/"
                     /></url><url>
-            <loc>http://example.com/spi/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230629_axi-spi-ip-%E6%A0%B8%E7%9A%84%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/spi/"
+                        href="http://localhost:1313/en/post_20230629_axi-spi-ip-%E6%A0%B8%E7%9A%84%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/spi/"
+                    href="http://localhost:1313/post_20230629_axi-spi-ip-%E6%A0%B8%E7%9A%84%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/"
                     /></url><url>
-            <loc>http://example.com/categories/eecs/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/categories/eecs/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/categories/eecs/"
+                        href="http://localhost:1313/en/categories/eecs/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/categories/eecs/"
+                    href="http://localhost:1313/categories/eecs/"
                     /></url><url>
-            <loc>http://example.com/tags/spi/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/spi/</loc><lastmod>2023-06-29T11:33:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/tags/spi/"
+                        href="http://localhost:1313/en/tags/spi/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/tags/spi/"
+                    href="http://localhost:1313/tags/spi/"
                     /></url><url>
-            <loc>http://example.com/work_2023_3-6/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/fpga/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/pynq/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/sdr/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E8%AE%BE%E5%A4%87%E6%A0%91/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/publication/</loc><lastmod>2023-06-22T11:22:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230625_%E9%9A%8F%E6%83%B3-03/</loc><lastmod>2023-06-25T22:51:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20230625_2023-%E5%B9%B4-3-6-%E6%9C%88%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/publication/"
+                        href="http://localhost:1313/en/post_20230625_2023-%E5%B9%B4-3-6-%E6%9C%88%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/publication/"
+                    href="http://localhost:1313/post_20230625_2023-%E5%B9%B4-3-6-%E6%9C%88%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"
                     /></url><url>
-            <loc>http://example.com/python_asyncio/</loc><lastmod>2023-06-13T22:05:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/fpga/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/pynq/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/sdr/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E8%AE%BE%E5%A4%87%E6%A0%91/</loc><lastmod>2023-06-25T14:14:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20230625_%E9%9A%8F%E6%83%B3-02/</loc><lastmod>2023-06-25T10:32:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20230623_%E9%9A%8F%E6%83%B3-01/</loc><lastmod>2023-06-23T23:02:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/publication/</loc><lastmod>2023-06-22T11:22:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/python_asyncio/"
+                        href="http://localhost:1313/en/publication/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/python_asyncio/"
+                    href="http://localhost:1313/publication/"
                     /></url><url>
-            <loc>http://example.com/tags/linux/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230613_python-%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5io/</loc><lastmod>2023-06-13T22:05:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/tags/linux/"
+                        href="http://localhost:1313/en/post_20230613_python-%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5io/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/tags/linux/"
+                    href="http://localhost:1313/post_20230613_python-%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5io/"
                     /></url><url>
-            <loc>http://example.com/boards_networking/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/linux/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/boards_networking/"
+                        href="http://localhost:1313/en/tags/linux/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/boards_networking/"
+                    href="http://localhost:1313/tags/linux/"
                     /></url><url>
-            <loc>http://example.com/tags/%E7%BD%91%E7%BB%9C/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/</loc><lastmod>2023-06-12T22:59:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/increase_swapfile/</loc><lastmod>2023-06-12T22:59:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230612_%E5%BC%80%E5%8F%91%E6%9D%BF%E9%80%9A%E8%BF%87-pc-%E8%BF%9E%E6%8E%A5%E4%BA%92%E8%81%94%E7%BD%91/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/increase_swapfile/"
+                        href="http://localhost:1313/en/post_20230612_%E5%BC%80%E5%8F%91%E6%9D%BF%E9%80%9A%E8%BF%87-pc-%E8%BF%9E%E6%8E%A5%E4%BA%92%E8%81%94%E7%BD%91/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/increase_swapfile/"
+                    href="http://localhost:1313/post_20230612_%E5%BC%80%E5%8F%91%E6%9D%BF%E9%80%9A%E8%BF%87-pc-%E8%BF%9E%E6%8E%A5%E4%BA%92%E8%81%94%E7%BD%91/"
                     /></url><url>
-            <loc>http://example.com/linux_sd_card/</loc><lastmod>2023-06-12T22:43:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/%E7%BD%91%E7%BB%9C/</loc><lastmod>2023-06-12T23:22:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/</loc><lastmod>2023-06-12T22:59:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20230612_%E7%BB%99-linux-%E5%A2%9E%E5%8A%A0-swapfile/</loc><lastmod>2023-06-12T22:59:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/linux_sd_card/"
+                        href="http://localhost:1313/en/post_20230612_%E7%BB%99-linux-%E5%A2%9E%E5%8A%A0-swapfile/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/linux_sd_card/"
+                    href="http://localhost:1313/post_20230612_%E7%BB%99-linux-%E5%A2%9E%E5%8A%A0-swapfile/"
                     /></url><url>
-            <loc>http://example.com/efi_partition/</loc><lastmod>2023-06-12T22:17:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230612_%E5%9C%A8-linux-%E4%B8%AD%E7%BB%99-sd-%E5%8D%A1%E5%88%86%E5%8C%BA%E5%B9%B6%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</loc><lastmod>2023-06-12T22:43:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/efi_partition/"
+                        href="http://localhost:1313/en/post_20230612_%E5%9C%A8-linux-%E4%B8%AD%E7%BB%99-sd-%E5%8D%A1%E5%88%86%E5%8C%BA%E5%B9%B6%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/efi_partition/"
+                    href="http://localhost:1313/post_20230612_%E5%9C%A8-linux-%E4%B8%AD%E7%BB%99-sd-%E5%8D%A1%E5%88%86%E5%8C%BA%E5%B9%B6%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"
                     /></url><url>
-            <loc>http://example.com/curl_in_n_dimension/</loc><lastmod>2023-06-10T10:55:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230612_%E5%9C%A8-windows-%E4%B8%AD%E6%8C%82%E8%BD%BD-efi-%E5%88%86%E5%8C%BA%E7%9A%84%E6%96%B9%E6%B3%95/</loc><lastmod>2023-06-12T22:17:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/curl_in_n_dimension/"
+                        href="http://localhost:1313/en/post_20230612_%E5%9C%A8-windows-%E4%B8%AD%E6%8C%82%E8%BD%BD-efi-%E5%88%86%E5%8C%BA%E7%9A%84%E6%96%B9%E6%B3%95/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/curl_in_n_dimension/"
+                    href="http://localhost:1313/post_20230612_%E5%9C%A8-windows-%E4%B8%AD%E6%8C%82%E8%BD%BD-efi-%E5%88%86%E5%8C%BA%E7%9A%84%E6%96%B9%E6%B3%95/"
                     /></url><url>
-            <loc>http://example.com/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/</loc><lastmod>2023-06-10T10:55:38&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/tags/%E5%A4%96%E4%BB%A3%E6%95%B0/</loc><lastmod>2023-06-10T02:21:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/pseudovectors/</loc><lastmod>2023-06-10T02:21:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/cv/</loc><lastmod>2023-06-12T15:24:46&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/pseudovectors/"
+                        href="http://localhost:1313/en/cv/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/pseudovectors/"
+                    href="http://localhost:1313/cv/"
                     /></url><url>
-            <loc>http://example.com/blog_migration/</loc><lastmod>2023-06-10T01:48:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230610_%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</loc><lastmod>2023-06-10T01:48:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/blog_migration/"
+                        href="http://localhost:1313/en/post_20230610_%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/blog_migration/"
+                    href="http://localhost:1313/post_20230610_%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/"
                     /></url><url>
-            <loc>http://example.com/tags/%E6%97%A5%E5%B8%B8/</loc><lastmod>2023-06-10T01:48:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://example.com/differential_geometry/</loc><lastmod>2023-06-09T14:49:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/post_20230526_%E9%AB%98%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E6%97%8B%E5%BA%A6/</loc><lastmod>2023-05-26T21:00:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/differential_geometry/"
+                        href="http://localhost:1313/en/post_20230526_%E9%AB%98%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E6%97%8B%E5%BA%A6/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/differential_geometry/"
+                    href="http://localhost:1313/post_20230526_%E9%AB%98%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E6%97%8B%E5%BA%A6/"
                     /></url><url>
-            <loc>http://example.com/about/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>http://localhost:1313/tags/%E7%9F%A2%E9%87%8F%E5%BE%AE%E7%A7%AF%E5%88%86/</loc><lastmod>2023-05-26T21:00:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/%E5%A4%96%E4%BB%A3%E6%95%B0/</loc><lastmod>2023-05-26T18:11:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20230526_%E8%B5%9D%E7%9F%A2%E9%87%8F%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/</loc><lastmod>2023-05-26T18:11:03&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="http://example.com/en/about/"
+                        href="http://localhost:1313/en/post_20230526_%E8%B5%9D%E7%9F%A2%E9%87%8F%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="http://example.com/about/"
+                    href="http://localhost:1313/post_20230526_%E8%B5%9D%E7%9F%A2%E9%87%8F%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/"
+                    /></url><url>
+            <loc>http://localhost:1313/post_20230516_%E4%B8%80%E6%96%87%E5%85%A5%E9%97%A8%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%89%A9%E7%90%86%E4%BA%BA%E7%89%88/</loc><lastmod>2023-05-16T21:27:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/en/post_20230516_%E4%B8%80%E6%96%87%E5%85%A5%E9%97%A8%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%89%A9%E7%90%86%E4%BA%BA%E7%89%88/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://localhost:1313/post_20230516_%E4%B8%80%E6%96%87%E5%85%A5%E9%97%A8%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%89%A9%E7%90%86%E4%BA%BA%E7%89%88/"
+                    /></url><url>
+            <loc>http://localhost:1313/post_20230516_0%E6%8C%87%E9%92%88%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AE-%E9%82%A3%E9%82%A3%E4%B8%AA%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%AD%97%E8%8A%82%E4%BC%9A%E4%B8%8D%E4%BC%9A%E5%BE%88%E5%AD%A4%E7%8B%AC/</loc><lastmod>2023-05-16T16:27:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/post_20210413_%E5%BE%AE%E5%88%86%E7%9A%84%E5%9B%9B%E5%B1%82%E7%90%86%E8%A7%A3/</loc><lastmod>2021-04-13T23:23:34&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/en/post_20210413_%E5%BE%AE%E5%88%86%E7%9A%84%E5%9B%9B%E5%B1%82%E7%90%86%E8%A7%A3/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://localhost:1313/post_20210413_%E5%BE%AE%E5%88%86%E7%9A%84%E5%9B%9B%E5%B1%82%E7%90%86%E8%A7%A3/"
+                    /></url><url>
+            <loc>http://localhost:1313/about/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/en/about/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="zh-cn"
+                    href="http://localhost:1313/about/"
                     /></url></urlset>

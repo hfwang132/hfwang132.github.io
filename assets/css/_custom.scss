@@ -2,3 +2,19 @@
 // Custom style
 // 自定义样式
 // ==============================
+
+.single .content figure.post-figure {
+  img {
+    width: var(--post-figure-width, 80%);
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .single .content figure.post-figure img {
+    width: 100%;
+  }
+}

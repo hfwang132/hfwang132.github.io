@@ -1,0 +1,38 @@
+{{- $width := .Get "width" | default "80%" -}}
+<figure class="post-figure{{ with .Get "class" }} {{ . }}{{ end }}" style="--post-figure-width: {{ $width }};">
+  {{- if .Get "link" -}}
+    <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+  {{- end -}}
+
+  {{- $url := urls.Parse (.Get "src") -}}
+  {{- $src := $url.String -}}
+  {{- if not $url.IsAbs -}}
+    {{- with or (.Page.Resources.Get $url.Path) (resources.Get $url.Path) -}}
+      {{- $src = .RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+
+  <img
+    src="{{ $src }}"
+    loading="{{ .Get "loading" | default "lazy" }}"
+    {{- if or (.Get "alt") (.Get "caption") }}
+    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
+    {{- end -}}
+    {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+  />
+
+  {{- if .Get "link" }}</a>{{ end -}}
+  {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+    <figcaption>
+      {{- with .Get "title" }}<h4>{{ . }}</h4>{{ end -}}
+      {{- if or (.Get "caption") (.Get "attr") -}}
+        <p>
+          {{- .Get "caption" | markdownify -}}
+          {{- with .Get "attrlink" }}<a href="{{ . }}">{{ end -}}
+          {{- .Get "attr" | markdownify -}}
+          {{- if .Get "attrlink" }}</a>{{ end -}}
+        </p>
+      {{- end -}}
+    </figcaption>
+  {{- end -}}
+</figure>

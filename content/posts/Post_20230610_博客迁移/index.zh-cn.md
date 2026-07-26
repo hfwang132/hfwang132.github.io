@@ -1,0 +1,11 @@
+---
+title: "博客迁移"
+date: 2023-06-10T01:48:51+08:00
+aliases:
+  - "/blog_migration/"
+draft: false
+categories: ["日常"]
+tags: ["日常"]
+---
+
+发现了制作个人网站的神器 - Hugo。感觉酷炫且好用。以后把知乎的博客都慢慢迁移过来！

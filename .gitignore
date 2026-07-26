@@ -1,0 +1,13 @@
+# Local credentials (never commit Zhihu cookies).
+.secrets/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Hugo local output and caches. GitHub Actions builds the site from source.
+.hugo_build.lock
+.hugo-cache/
+public/
+resources/_gen/

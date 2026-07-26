@@ -2,126 +2,126 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数学物理方法 on Haifei&#39;s Home</title>
-    <link>http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
+    <link>http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
     <description>Recent content in 数学物理方法 on Haifei&#39;s Home</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
     <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 12 Oct 2025 20:22:53 +0800</lastBuildDate>
-    <atom:link href="http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jul 2025 15:08:10 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>什么是联络【更高更妙的电动力学·番外篇 1】</title>
-      <link>http://example.com/what_is_a_connection/</link>
-      <pubDate>Sun, 12 Oct 2025 20:22:53 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/what_is_a_connection/</guid>
+      <link>http://localhost:1313/post_20250729_%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E7%95%AA%E5%A4%96%E7%AF%87-1/</link>
+      <pubDate>Tue, 29 Jul 2025 15:08:10 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250729_%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E7%95%AA%E5%A4%96%E7%AF%87-1/</guid>
       <description>&lt;p&gt;在前面的文章中，我们说电磁场是联络。这让很多同学想到广义相对论里的联络。这两种联络有什么区别和共同点？&lt;/p&gt;&#xA;&lt;p&gt;电磁场联络 $A$ 是主丛上的联络，而广义相对论联络 $\Gamma$ 是矢量丛上的联络，它们的定义方式看似很不同。有没有办法将它们联系起来呢？&lt;/p&gt;</description>
     </item>
     <item>
       <title>自旋为什么不是相对论效应</title>
-      <link>http://example.com/spin_and_relativity/</link>
-      <pubDate>Sun, 12 Oct 2025 20:20:18 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/spin_and_relativity/</guid>
+      <link>http://localhost:1313/post_20250709_%E8%87%AA%E6%97%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%95%88%E5%BA%94/</link>
+      <pubDate>Wed, 09 Jul 2025 19:23:54 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250709_%E8%87%AA%E6%97%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%95%88%E5%BA%94/</guid>
       <description>&lt;p&gt;结论：整数自旋是经典效应，而半整数自旋是量子效应，跟相对论关系不大。&lt;/p&gt;&#xA;&lt;p&gt;原因很简单：1-自旋是 SO(3) 的最小的忠实（faithful）表示，而 1/2-自旋是 SU(2) 的最小的忠实表示。&lt;/p&gt;</description>
     </item>
     <item>
       <title>克氏符到底是不是张量？</title>
-      <link>http://example.com/christoffel/</link>
-      <pubDate>Sun, 12 Oct 2025 20:15:24 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/christoffel/</guid>
+      <link>http://localhost:1313/post_20250427_%E5%85%8B%E6%B0%8F%E7%AC%A6%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BC%A0%E9%87%8F/</link>
+      <pubDate>Sun, 27 Apr 2025 23:12:31 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250427_%E5%85%8B%E6%B0%8F%E7%AC%A6%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BC%A0%E9%87%8F/</guid>
       <description>&lt;p&gt;个人最喜欢的理解是把 $\Gamma$ 看成标架丛上的联络，这样一来，克氏符的变换规则&lt;/p&gt;&#xA;&lt;p&gt;$\boxed{ \begin{aligned} \bar{\Gamma}^i_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$&lt;/p&gt;&#xA;&lt;p&gt;就只不过是一个规范变换：&lt;/p&gt;</description>
     </item>
     <item>
       <title>从量子场论到腔量子电动力学【更高更妙的电动力学·5】</title>
-      <link>http://example.com/gm_5/</link>
-      <pubDate>Sun, 06 Apr 2025 01:14:26 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_5/</guid>
+      <link>http://localhost:1313/post_20250413_%E4%BB%8E%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA%E5%88%B0%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-5/</link>
+      <pubDate>Sun, 13 Apr 2025 01:52:37 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250413_%E4%BB%8E%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA%E5%88%B0%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-5/</guid>
       <description>&lt;p&gt;在本篇文章中，我们将从非常复杂的 QED 拉氏量出发：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathcal{L}=  \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\psi - eA_\mu \bar{\psi} \gamma^\mu \psi -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} \end{aligned} $&lt;/p&gt;&#xA;&lt;p&gt;这个拉氏量非常复杂：它不仅考虑了电子的反粒子——正电子，并且耦合项 $- eA_\mu \bar{\psi} \gamma^\mu \psi$ 还是一个三次项，可以描述电子-正电子对产生/湮灭等多种过程。它没有解析解，只能用量子场论的微扰法求解。&lt;/p&gt;</description>
     </item>
     <item>
       <title>狄拉克磁单极子——陈类与陈数【更高更妙的电动力学·4】</title>
-      <link>http://example.com/gm_4/</link>
-      <pubDate>Sun, 06 Apr 2025 01:08:16 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_4/</guid>
+      <link>http://localhost:1313/post_20250330_%E7%8B%84%E6%8B%89%E5%85%8B%E7%A3%81%E5%8D%95%E6%9E%81%E5%AD%90-%E9%99%88%E7%B1%BB%E4%B8%8E%E9%99%88%E6%95%B0-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-4/</link>
+      <pubDate>Sun, 30 Mar 2025 01:13:18 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250330_%E7%8B%84%E6%8B%89%E5%85%8B%E7%A3%81%E5%8D%95%E6%9E%81%E5%AD%90-%E9%99%88%E7%B1%BB%E4%B8%8E%E9%99%88%E6%95%B0-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-4/</guid>
       <description>&lt;p&gt;在&lt;a href=&#34;https://zhuanlan.zhihu.com/p/32173040413&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;前文&lt;/a&gt;中，我们说到，如果流形是拓扑平凡的，那么对 Berry 曲率在闭合曲面 $\Sigma$ 上积分应该得到零。这是因为根据 Stokes 定理，有：&lt;/p&gt;&#xA;&lt;p&gt;$\int_\Sigma F = \int_{\partial \Sigma } A = 0$&lt;/p&gt;&#xA;&lt;p&gt;然而，在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为，此时无法定义全局单值的联络 $A$ ，导致 Stokes 定理不再适用。此话怎讲？&lt;/p&gt;</description>
     </item>
     <item>
       <title>电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】</title>
-      <link>http://example.com/gm_3/</link>
-      <pubDate>Sun, 06 Apr 2025 01:02:38 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_3/</guid>
+      <link>http://localhost:1313/post_20250323_%E7%94%B5%E7%A3%81%E5%9C%BA%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%B5%E5%9C%BA%E5%92%8C%E7%A3%81%E5%9C%BA-ab%E6%95%88%E5%BA%94%E4%B8%8Eberry%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-3/</link>
+      <pubDate>Sun, 23 Mar 2025 20:20:44 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250323_%E7%94%B5%E7%A3%81%E5%9C%BA%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%B5%E5%9C%BA%E5%92%8C%E7%A3%81%E5%9C%BA-ab%E6%95%88%E5%BA%94%E4%B8%8Eberry%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-3/</guid>
       <description>&lt;p&gt;电磁场并非电场和磁场。&lt;/p&gt;&#xA;&lt;p&gt;换句话说，电磁场并不只是电场和磁场。&lt;/p&gt;&#xA;&lt;p&gt;此话怎讲？&lt;/p&gt;&#xA;&lt;h2 id=&#34;一电磁势的地位高于场强&#34;&gt;一、电磁势的地位高于场强&lt;/h2&gt;&#xA;&lt;p&gt;在&lt;a href=&#34;https://zhuanlan.zhihu.com/p/23958176393&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;前文&lt;/a&gt;中，我们挖过一个坑：&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;$\boxed{\begin{aligned} \phi &amp;amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned}}$&lt;/p&gt;&#xA;&lt;p&gt;学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。&lt;/p&gt;</description>
     </item>
     <item>
       <title>规范场论视角下的电动力学【更高更妙的电动力学·2】</title>
-      <link>http://example.com/gm_2/</link>
-      <pubDate>Sun, 06 Apr 2025 00:48:30 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_2/</guid>
+      <link>http://localhost:1313/post_20250217_%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-2/</link>
+      <pubDate>Mon, 17 Feb 2025 17:15:55 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250217_%E8%A7%84%E8%8C%83%E5%9C%BA%E8%AE%BA%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-2/</guid>
       <description>&lt;p&gt;这篇文章需要用到很多上一篇文章中的概念，因此请确保你阅读了上一篇文章。&lt;/p&gt;&#xA;&lt;p&gt;本文依然采用 $(-,+,+,+)$ 的度规约定。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;为什么说电动力学是规范场论？&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;为了搞清楚这句话是什么意思，我们需要先弄清楚什么是电动力学，以及什么是规范场论。&lt;/p&gt;</description>
     </item>
     <item>
       <title>微分几何视角下的电动力学【更高更妙的电动力学·1】</title>
-      <link>http://example.com/gm_1/</link>
-      <pubDate>Sun, 06 Apr 2025 00:43:40 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/gm_1/</guid>
+      <link>http://localhost:1313/post_20250207_%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-1/</link>
+      <pubDate>Fri, 07 Feb 2025 22:55:58 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20250207_%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-1/</guid>
       <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;&#xA;&lt;p&gt;你可能听说过麦克斯韦方程有很简单的形式：&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \mathrm{d} F&amp;amp;=0 \\ \mathrm{d} \star F &amp;amp;= \mu_0 \star J \end{aligned}$&lt;/p&gt;&#xA;&lt;p&gt;又或者是&lt;/p&gt;&#xA;&lt;p&gt;$\begin{aligned} \partial_\mu (\star{F})^{\mu \nu}&amp;amp;= 0 \\ \partial_\mu F^{\mu\nu}&amp;amp;= \mu_0 J^\nu  \end{aligned}$&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;注：严格来说，其中 $\mathrm{d}F=0$ （或者 $\partial_\mu (\star{F})^{\mu \nu}= 0$ ）并不属于电磁场的动力学方程，而是属于电磁场自身结构的一部分。这是因为根据场强的定义 $F=\mathrm{d}A$ 就能得到 $\mathrm{d}F=0$ 。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>直积、直和、笛卡尔积、张量积的区别是什么</title>
-      <link>http://example.com/products/</link>
-      <pubDate>Wed, 08 Jan 2025 21:08:06 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/products/</guid>
-      <description>&lt;p&gt;小朋友们好，今天我们来学习什么是&lt;strong&gt;笛卡尔积&lt;/strong&gt;。我们把世界上所有上衣的集合叫做 $a$ ，世界上所有下着的集合叫做 $b$ ，那么 $a$ 和 $b$ 的笛卡尔积 $a \times b$ 是什么呢？就是所有可能的上下衣装搭配的集合啦（当然，不包括帽子、鞋子、首饰等等）。&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>量子态/算符的 Weyl 和 Wigner 表示</title>
-      <link>http://example.com/weyl_wigner/</link>
-      <pubDate>Wed, 08 Jan 2025 20:25:50 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/weyl_wigner/</guid>
+      <link>http://localhost:1313/post_20241008_%E9%87%8F%E5%AD%90%E6%80%81-%E7%AE%97%E7%AC%A6%E7%9A%84-weyl-%E5%92%8C-wigner-%E8%A1%A8%E7%A4%BA/</link>
+      <pubDate>Tue, 08 Oct 2024 11:36:44 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20241008_%E9%87%8F%E5%AD%90%E6%80%81-%E7%AE%97%E7%AC%A6%E7%9A%84-weyl-%E5%92%8C-wigner-%E8%A1%A8%E7%A4%BA/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;在经典力学中，物理量是相空间上的一个函数，系统状态是相空间上的一个点（对于系综而言则是相空间上的一个概率分布）。这一套语言量子化之后，就得到了量子态/算符的相空间表示，也就是 Wigner 表示。Weyl 表示则是它的傅里叶变换。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>微分的四层理解</title>
-      <link>http://example.com/understanding_differentials/</link>
-      <pubDate>Wed, 13 Mar 2024 18:34:09 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/understanding_differentials/</guid>
-      <description>&lt;h2 id=&#34;一-微分是无穷小&#34;&gt;一 微分是无穷小？&lt;/h2&gt;&#xA;&lt;p&gt;物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。&lt;/p&gt;&#xA;&lt;p&gt;实际上，它确实不严谨，第二次数学危机就是因此产生的。&lt;/p&gt;</description>
+      <title>直积、直和、笛卡尔积、张量积的区别是什么</title>
+      <link>http://localhost:1313/post_20240916_%E7%9B%B4%E7%A7%AF-%E7%9B%B4%E5%92%8C-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-%E5%BC%A0%E9%87%8F%E7%A7%AF%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Mon, 16 Sep 2024 21:03:02 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20240916_%E7%9B%B4%E7%A7%AF-%E7%9B%B4%E5%92%8C-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-%E5%BC%A0%E9%87%8F%E7%A7%AF%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
+      <description>&lt;p&gt;小朋友们好，今天我们来学习什么是&lt;strong&gt;笛卡尔积&lt;/strong&gt;。我们把世界上所有上衣的集合叫做 $a$ ，世界上所有下着的集合叫做 $b$ ，那么 $a$ 和 $b$ 的笛卡尔积 $a \times b$ 是什么呢？就是所有可能的上下衣装搭配的集合啦（当然，不包括帽子、鞋子、首饰等等）。&lt;/p&gt;</description>
     </item>
     <item>
       <title>BCH 公式 - 量子力学爆算的大杀器</title>
-      <link>http://example.com/bch/</link>
-      <pubDate>Thu, 07 Mar 2024 20:59:38 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/bch/</guid>
+      <link>http://localhost:1313/post_20240307_bch-%E5%85%AC%E5%BC%8F-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%88%86%E7%AE%97%E7%9A%84%E5%A4%A7%E6%9D%80%E5%99%A8/</link>
+      <pubDate>Thu, 07 Mar 2024 16:13:09 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20240307_bch-%E5%85%AC%E5%BC%8F-%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%88%86%E7%AE%97%E7%9A%84%E5%A4%A7%E6%9D%80%E5%99%A8/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Baker-Campbell-Hausdorff 公式&lt;/strong&gt; 可以用来计算海森堡表象下的算符演化：&lt;/p&gt;&#xA;&lt;p&gt;$e^X Y e^{-X}=Y+[X,Y]+\frac{1}{2!}[X,[X,Y]]+\frac{1}{3!}[X,[X,[X,Y]]]+\cdots$&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;这个公式其实只是 BCH 公式的小弟&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;因为海森堡表象下的算符演化规则是 $A\rightarrow UAU^{\dag}$ ，其中 $U$ 是酉演化算符。&lt;/p&gt;&#xA;&lt;p&gt;如果 $U$ 由 $H$ 生成，那么就是 $A\rightarrow e^{\frac{t}{i\hbar}H}Ae^{-\frac{t}{i\hbar}H}$ 了。&lt;/p&gt;</description>
     </item>
     <item>
       <title>李导数与协变导数有什么联系？</title>
-      <link>http://example.com/lie_derivative/</link>
-      <pubDate>Fri, 26 Jan 2024 23:50:58 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/lie_derivative/</guid>
+      <link>http://localhost:1313/post_20230715_%E6%9D%8E%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%8D%8F%E5%8F%98%E5%AF%BC%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%94%E7%B3%BB/</link>
+      <pubDate>Sat, 15 Jul 2023 16:52:03 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20230715_%E6%9D%8E%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%8D%8F%E5%8F%98%E5%AF%BC%E6%95%B0%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%94%E7%B3%BB/</guid>
       <description>&lt;h2 id=&#34;一-性质上的异同点&#34;&gt;一 性质上的异同点&lt;/h2&gt;&#xA;&lt;p&gt;李导数 $\mathcal{L}_V$ 和协变导数 $\nabla_V$ 有很多共同点：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;$\mathcal{L}_V$ 和 $\nabla_V$ 都保持张量的型号，即都是 $\mathcal{T}^p_q(M)$ 到 $\mathcal{T}^p_q(M)$ 的映射。 $\mathcal{T}^p_q(M)$ 表示 $M$ 上全体 (p, q) 型光滑张量场的集合&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;特别地，对于 (0,0) 型张量场，也就是标量场 $f\in \mathcal{F}(M)$ ，有 $\mathcal{L}_V f=\nabla_V f=Vf$ 。&lt;/p&gt;</description>
     </item>
     <item>
       <title>高维空间中的旋度</title>
-      <link>http://example.com/curl_in_n_dimension/</link>
-      <pubDate>Sat, 10 Jun 2023 10:55:38 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/curl_in_n_dimension/</guid>
+      <link>http://localhost:1313/post_20230526_%E9%AB%98%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E6%97%8B%E5%BA%A6/</link>
+      <pubDate>Fri, 26 May 2023 21:00:37 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20230526_%E9%AB%98%E7%BB%B4%E7%A9%BA%E9%97%B4%E4%B8%AD%E7%9A%84%E6%97%8B%E5%BA%A6/</guid>
       <description>&lt;h3 id=&#34;1-微分形式&#34;&gt;1 微分形式&lt;/h3&gt;&#xA;&lt;p&gt;在介绍旋度之前，我们得先介绍一下微分形式和外微分算子。&lt;/p&gt;&#xA;&lt;p&gt;一个 $n$ 阶形式可以定义为一个交替多重线性映射 $\omega:(T_pM)^n\rightarrow \mathbb{R}$ 。它把多个向量映射成一个实数。另外，它还满足交替性，即交换两个输入向量，输出多一个负号。&lt;/p&gt;</description>
     </item>
     <item>
       <title>赝矢量到底是什么？</title>
-      <link>http://example.com/pseudovectors/</link>
-      <pubDate>Sat, 10 Jun 2023 02:21:18 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/pseudovectors/</guid>
+      <link>http://localhost:1313/post_20230526_%E8%B5%9D%E7%9F%A2%E9%87%8F%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Fri, 26 May 2023 18:11:03 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20230526_%E8%B5%9D%E7%9F%A2%E9%87%8F%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
       <description>&lt;h2 id=&#34;1-引子&#34;&gt;1 引子&lt;/h2&gt;&#xA;&lt;p&gt;我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。&lt;/p&gt;&#xA;&lt;p&gt;其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$ ，“赝标量”是三个切矢量的外积 $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$ 。&lt;/p&gt;</description>
     </item>
     <item>
       <title>一文入门微分几何（物理人版）</title>
-      <link>http://example.com/differential_geometry/</link>
-      <pubDate>Fri, 09 Jun 2023 14:49:49 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/differential_geometry/</guid>
+      <link>http://localhost:1313/post_20230516_%E4%B8%80%E6%96%87%E5%85%A5%E9%97%A8%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%89%A9%E7%90%86%E4%BA%BA%E7%89%88/</link>
+      <pubDate>Tue, 16 May 2023 21:27:19 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20230516_%E4%B8%80%E6%96%87%E5%85%A5%E9%97%A8%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%89%A9%E7%90%86%E4%BA%BA%E7%89%88/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;作为物理人，你很可能听过张量，微分形式，李代数 &amp;hellip; 等等概念的其中一个或者多个。但是你可能像我一样，每次听到这些概念的时候都感觉云里雾里。因此，本文旨在帮助物理人，为这些彼此紧密联系的诸概念进行一个梳理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>微分的四层理解</title>
+      <link>http://localhost:1313/post_20210413_%E5%BE%AE%E5%88%86%E7%9A%84%E5%9B%9B%E5%B1%82%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Tue, 13 Apr 2021 23:23:34 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/post_20210413_%E5%BE%AE%E5%88%86%E7%9A%84%E5%9B%9B%E5%B1%82%E7%90%86%E8%A7%A3/</guid>
+      <description>&lt;h2 id=&#34;一-微分是无穷小&#34;&gt;一 微分是无穷小？&lt;/h2&gt;&#xA;&lt;p&gt;物理人喜欢把微分看做是一个很小的量，这在计算时总是很方便的，但是给人一种不严谨的感觉。&lt;/p&gt;&#xA;&lt;p&gt;实际上，它确实不严谨，第二次数学危机就是因此产生的。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

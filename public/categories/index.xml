@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Haifei&#39;s Home</title>
-    <link>http://example.com/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Haifei&#39;s Home</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
     <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 12 Oct 2025 20:33:12 +0800</lastBuildDate>
-    <atom:link href="http://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Aug 2025 14:16:03 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>量子力学</title>
-      <link>http://example.com/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</link>
-      <pubDate>Sun, 12 Oct 2025 20:33:12 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>量子光学</title>
-      <link>http://example.com/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
-      <pubDate>Sun, 12 Oct 2025 20:30:00 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>量子信息</title>
-      <link>http://example.com/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
-      <pubDate>Sun, 12 Oct 2025 20:25:11 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</guid>
+      <link>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</link>
+      <pubDate>Sat, 09 Aug 2025 14:16:03 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/</guid>
       <description></description>
     </item>
     <item>
       <title>数学物理方法</title>
-      <link>http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Sun, 12 Oct 2025 20:22:53 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</guid>
+      <link>http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 29 Jul 2025 15:08:10 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>量子光学</title>
+      <link>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</link>
+      <pubDate>Tue, 29 Jul 2025 14:22:00 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>量子信息</title>
+      <link>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</link>
+      <pubDate>Fri, 30 May 2025 02:53:53 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/categories/%E9%87%8F%E5%AD%90%E4%BF%A1%E6%81%AF/</guid>
       <description></description>
     </item>
     <item>
       <title>日常</title>
-      <link>http://example.com/categories/%E6%97%A5%E5%B8%B8/</link>
-      <pubDate>Sat, 01 Jul 2023 17:48:35 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/categories/%E6%97%A5%E5%B8%B8/</guid>
+      <link>http://localhost:1313/categories/%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Fri, 10 Jan 2025 01:39:32 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/categories/%E6%97%A5%E5%B8%B8/</guid>
       <description></description>
     </item>
     <item>
       <title>CS</title>
-      <link>http://example.com/categories/cs/</link>
+      <link>http://localhost:1313/categories/cs/</link>
       <pubDate>Fri, 30 Jun 2023 20:07:39 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/categories/cs/</guid>
+      <guid>http://localhost:1313/categories/cs/</guid>
       <description></description>
     </item>
     <item>
       <title>EECS</title>
-      <link>http://example.com/categories/eecs/</link>
+      <link>http://localhost:1313/categories/eecs/</link>
       <pubDate>Thu, 29 Jun 2023 11:33:45 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://example.com/categories/eecs/</guid>
+      <guid>http://localhost:1313/categories/eecs/</guid>
       <description></description>
     </item>
   </channel>
