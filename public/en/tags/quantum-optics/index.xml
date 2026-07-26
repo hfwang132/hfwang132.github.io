@@ -9,8 +9,43 @@
     <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
     <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 21 May 2024 00:41:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2024 23:09:03 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/en/tags/quantum-optics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Does Phase Space Sometimes Look Like a Complex Plane?</title>
+      <link>http://localhost:1313/en/post_20240701_%E7%9B%B8%E7%A9%BA%E9%97%B4%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E6%97%B6%E7%9C%8B%E8%B5%B7%E6%9D%A5%E5%83%8F%E4%B8%80%E4%B8%AA%E5%A4%8D%E5%B9%B3%E9%9D%A2/</link>
+      <pubDate>Mon, 01 Jul 2024 23:09:03 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/post_20240701_%E7%9B%B8%E7%A9%BA%E9%97%B4%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E6%97%B6%E7%9C%8B%E8%B5%B7%E6%9D%A5%E5%83%8F%E4%B8%80%E4%B8%AA%E5%A4%8D%E5%B9%B3%E9%9D%A2/</guid>
+      <description>&lt;p&gt;Students who have studied physics all know about phase space, which consists of generalized coordinates $q$ and generalized momenta $p$.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Example 1: The angle of a simple pendulum constitutes a configuration space $S_1$ . The angle and angular momentum constitute a phase space $S_1 \times \mathbb{R}$ .&lt;/p&gt;&#xA;&lt;p&gt;Example 2: Given the Hamiltonian and boundary conditions of a classical electromagnetic field, the electric field strength in a certain mode constitutes a configuration space, while the cosine and sine components of the electric field strength in that mode constitute a phase space.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Derivation of Blackbody Radiation (No-Nonsense Version)</title>
+      <link>http://localhost:1313/en/post_20240622_%E9%BB%91%E4%BD%93%E8%BE%90%E5%B0%84%E7%9A%84%E6%8E%A8%E5%AF%BC-%E6%97%A0%E5%BA%9F%E8%AF%9D%E7%89%88/</link>
+      <pubDate>Sat, 22 Jun 2024 18:12:07 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/post_20240622_%E9%BB%91%E4%BD%93%E8%BE%90%E5%B0%84%E7%9A%84%E6%8E%A8%E5%AF%BC-%E6%97%A0%E5%BA%9F%E8%AF%9D%E7%89%88/</guid>
+      <description>&lt;p&gt;With nothing better to do, let’s review blackbody radiation~&lt;/p&gt;&#xA;&lt;p&gt;Many articles on blackbody radiation begin with a lengthy history lesson, which can easily become confusing.&lt;/p&gt;&#xA;&lt;p&gt;This article gets straight to the point: shut up and calculate.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-what-is-the-blackbody-radiation-formula&#34;&gt;1. What Is the Blackbody Radiation Formula?&lt;/h2&gt;&#xA;&lt;p&gt;The blackbody radiation formula refers to the energy density radiated by a blackbody per unit frequency.&lt;/p&gt;&#xA;&lt;p&gt;To calculate the blackbody radiation formula, we need to calculate how many states there are between $\nu$ and $\nu + \mathrm{d}\nu$, how many photons occupy each state, and then multiply them by the photon energy $h\nu$.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why Does the Intensity of a Thermal Light Field Follow an Exponential Distribution?</title>
+      <link>http://localhost:1313/en/post_20240621_%E4%B8%BA%E4%BB%80%E4%B9%88%E7%83%AD%E5%85%89%E5%9C%BA%E7%9A%84%E5%85%89%E5%BC%BA%E6%9C%8D%E4%BB%8E%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83/</link>
+      <pubDate>Fri, 21 Jun 2024 00:36:00 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/post_20240621_%E4%B8%BA%E4%BB%80%E4%B9%88%E7%83%AD%E5%85%89%E5%9C%BA%E7%9A%84%E5%85%89%E5%BC%BA%E6%9C%8D%E4%BB%8E%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83/</guid>
+      <description>&lt;h2 id=&#34;1-an-elegant-argument&#34;&gt;1. An Elegant Argument&lt;/h2&gt;&#xA;&lt;p&gt;Nobel laureate Ketterle used a very elegant argument when discussing the $g^{(2)}$ of a classical thermal light field in &lt;a href=&#34;https://av.tib.eu/media/42704&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;8.422公开课&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;p&gt;According to the central limit theorem, the electric field $E$ follows a Gaussian distribution, and therefore the light intensity $I$ follows an exponential distribution.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The probability density function (pdf) of the exponential distribution is: $f(x) = \gamma e^{-\gamma x}$ .&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;The moments of the exponential distribution have the following property:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Goodbye, Rotating-Wave Approximation: The Analytical Solution of the Quantum Rabi Model</title>
+      <link>http://localhost:1313/en/post_20240605_%E5%86%8D%E8%A7%81%E4%BA%86%E6%97%8B%E8%BD%AC%E6%B3%A2%E8%BF%91%E4%BC%BC-%E9%87%8F%E5%AD%90%E6%8B%89%E6%AF%94%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A7%A3%E6%9E%90%E8%A7%A3/</link>
+      <pubDate>Wed, 05 Jun 2024 20:52:29 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/post_20240605_%E5%86%8D%E8%A7%81%E4%BA%86%E6%97%8B%E8%BD%AC%E6%B3%A2%E8%BF%91%E4%BC%BC-%E9%87%8F%E5%AD%90%E6%8B%89%E6%AF%94%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A7%A3%E6%9E%90%E8%A7%A3/</guid>
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the early days of quantum mechanics, Rabi proposed the Rabi model to treat the interaction between an electromagnetic field and an atom. Since this model quantized only the atom, but not the electromagnetic wave, although it could explain many phenomena (such as Rabi oscillations), it could not explain phenomena involving the quantization of the electromagnetic field, such as spontaneous emission.&lt;/p&gt;&#xA;&lt;p&gt;To explain spontaneous emission and other phenomena involving the quantization of the electromagnetic field, Jaynes and Cummings proposed the Quantum Rabi Model (&lt;strong&gt;QRM&lt;/strong&gt;) in 1962. This model also quantizes the electromagnetic field, so that the vacuum fluctuations of the electromagnetic field cannot be neglected. Thus, spontaneous emission is simply “stimulated emission” “excited” by the vacuum fluctuations of the electromagnetic field.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Fully Quantum Theory of Lasers</title>
+      <link>http://localhost:1313/en/post_20240531_%E6%BF%80%E5%85%89%E7%9A%84%E5%85%A8%E9%87%8F%E5%AD%90%E7%90%86%E8%AE%BA/</link>
+      <pubDate>Fri, 31 May 2024 21:45:30 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/post_20240531_%E6%BF%80%E5%85%89%E7%9A%84%E5%85%A8%E9%87%8F%E5%AD%90%E7%90%86%E8%AE%BA/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Most materials introducing lasers derive them in a classical or semiclassical framework. What, then, does a fully quantum theory of lasers look like? And what is it useful for?&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This article briefly introduces the Scully-Lamb theory of lasers. It is a fully quantum theory. Since it is generally introduced only in the final chapters of quantum optics textbooks, and since the (semi-)classical theory also works well in most cases, not many people are familiar with the Scully-Lamb theory.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A simple quantum description of lasers</title>
       <link>http://localhost:1313/en/post_20240521_%E6%BF%80%E5%85%89%E7%9A%84%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E9%87%8F%E5%AD%90%E6%8F%8F%E8%BF%B0/</link>

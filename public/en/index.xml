@@ -3,120 +3,128 @@
         <title>Haifei&#39;s Home</title>
         <link>http://localhost:1313/en/</link>
         <description>Haifei Wang&#39;s notes on quantum physics, mathematics, and engineering.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 16 Sep 2024 21:03:02 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 02 Nov 2025 12:53:03 &#43;0800</lastBuildDate>
             <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Products</title>
-    <link>http://localhost:1313/en/post_20240916_%E7%9B%B4%E7%A7%AF-%E7%9B%B4%E5%92%8C-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-%E5%BC%A0%E9%87%8F%E7%A7%AF%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</link>
-    <pubDate>Mon, 16 Sep 2024 21:03:02 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240916_%E7%9B%B4%E7%A7%AF-%E7%9B%B4%E5%92%8C-%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF-%E5%BC%A0%E9%87%8F%E7%A7%AF%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88/</guid>
-    <description><![CDATA[]]></description>
+    <title>High-Precision Time Measurement—Principles and Structural Analysis of TDC / Time Tagger</title>
+    <link>http://localhost:1313/en/post_20251102_%E9%AB%98%E7%B2%BE%E5%BA%A6%E6%97%B6%E9%97%B4%E6%B5%8B%E9%87%8F-tdc-time-tagger-%E5%8E%9F%E7%90%86%E5%92%8C%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</link>
+    <pubDate>Sun, 02 Nov 2025 12:53:03 &#43;0800</pubDate>
+    <author>像牛一样的猫</author>
+    <guid>http://localhost:1313/en/post_20251102_%E9%AB%98%E7%B2%BE%E5%BA%A6%E6%97%B6%E9%97%B4%E6%B5%8B%E9%87%8F-tdc-time-tagger-%E5%8E%9F%E7%90%86%E5%92%8C%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</guid>
+    <description><![CDATA[<h2 id="1-what-is-a-tdc--time-tagger">1. What Is a TDC / Time Tagger?</h2>
+<p>A Time-to-Digital Converter (TDC) is essentially a highly precise timer (with picosecond-level resolution) that assigns a high-precision timestamp (Timestamp) to every input pulse signal.</p>
+<p>Therefore, a TDC is also called a Time Tagger, where “Tag” means assigning a timestamp.</p>
+<p>TDC / Time Tagger is at the core of experiments such as Hong-Ou-Mandel interference and fluorescence lifetime measurements; one could say that quantum optics experiments can hardly do without it.</p>]]></description>
 </item>
 <item>
-    <title>The collapsed state of position measurement</title>
-    <link>http://localhost:1313/en/post_20240523_%E4%BD%8D%E7%BD%AE%E6%B5%8B%E9%87%8F%E7%9A%84%E5%A1%8C%E7%BC%A9%E6%80%81/</link>
-    <pubDate>Thu, 23 May 2024 01:30:11 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240523_%E4%BD%8D%E7%BD%AE%E6%B5%8B%E9%87%8F%E7%9A%84%E5%A1%8C%E7%BC%A9%E6%80%81/</guid>
-    <description><![CDATA[<p>Common sense tells us that an actual position measurement will not produce a delta function, as the delta function itself is pathological. So what should the collapsed state of an actual position measurement look like?</p>
-<hr>
-<p>TL;DR:</p>
-<p>Let the wave function of the system to be measured be $\varphi(x)$, then the collapsed wave function is:</p>
-<p>$\varphi^{(q)}(x) = \mathcal{A}\psi(q-gx) \varphi(x)$</p>
-<p>where $\psi(x)$ is the initial wave function of the instrument&rsquo;s pointer. $q$ is the reading of the instrument&rsquo;s pointer. $g$ is the coupling strength between the instrument and the system to be measured. $\begin{aligned} \mathcal{A} = \left[\int_\mathbb{R}\psi(q-gx) \varphi(x)\right]^{-1} \end{aligned}$ is the appropriate normalization constant.</p>]]></description>
+    <title>Impedance Matching / Signal Integrity Crash Course (Lab Edition)</title>
+    <link>http://localhost:1313/en/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</link>
+    <pubDate>Sat, 25 Oct 2025 16:46:08 &#43;0800</pubDate>
+    <author>像牛一样的猫</author>
+    <guid>http://localhost:1313/en/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</guid>
+    <description><![CDATA[<h2 id="i-introduction">I. Introduction</h2>
+<p>Recently, I found that many colleagues are not very familiar with impedance matching. They only know that “the impedance of (commonly used SMA/BNC) transmission lines is 50 ohms,” but do not know what this really means. The following situations often occur:</p>
+<ul>
+<li>A 50-ohm signal source connected to a scope&rsquo;s 1M-ohm input:</li>
+</ul>
+<ul>
+<li>Huh, why has the signal doubled?</li>
+</ul>
+<ul>
+<li>A high-frequency square wave connected to a scope&rsquo;s 1M-ohm input:</li>
+</ul>
+<ul>
+<li>Huh, why is the overshoot so severe? Is there something wrong with the signal source?</li>
+</ul>
+<ul>
+<li>The output signal of an MCU / DAC / FPGA connected directly, without a driver, to a 50-ohm load / a scope&rsquo;s 50-ohm input:</li>
+</ul>
+<ul>
+<li>Huh, why has a signal that should be 3V become only 30 mV?</li>
+</ul>
+<p>All of these are the result of unfamiliarity with impedance matching and transmission-line theory.</p>]]></description>
 </item>
 <item>
-    <title>Does the speed of quantum entanglement exceed the speed of light?</title>
-    <link>http://localhost:1313/en/post_20240522_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%90%A6%E8%B6%85%E8%BF%87%E5%85%89%E9%80%9F/</link>
-    <pubDate>Wed, 22 May 2024 14:50:35 &#43;0800</pubDate>
+    <title>What Are We Actually Doing When We Perform Second Quantization?</title>
+    <link>http://localhost:1313/en/post_20250809_%E5%BD%93%E6%88%91%E4%BB%AC%E5%81%9A%E4%BA%8C%E6%AC%A1%E9%87%8F%E5%AD%90%E5%8C%96%E7%9A%84%E6%97%B6%E5%80%99-%E6%88%91%E4%BB%AC%E7%A9%B6%E7%AB%9F%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/</link>
+    <pubDate>Sat, 09 Aug 2025 14:16:03 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240522_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%90%A6%E8%B6%85%E8%BF%87%E5%85%89%E9%80%9F/</guid>
-    <description><![CDATA[<p>Too long; didn&rsquo;t read version:</p>
-<p>&ldquo;Spooky action at a distance (superluminal)&rdquo; is an outdated view. According to special relativity, there is no interaction between events at spacelike separation. The mainstream view in academia is to consider quantum states and measurement bases together as reality, known as contextuality. Nonlocality is a corollary of contextuality.</p>
-<hr>
-<p>Body:</p>
-<p>Discussing the &ldquo;speed&rdquo; of quantum entanglement is meaningless.</p>
-<p>If the distance between two measurement events a and b is spacelike, then a is neither in the past nor in the future of b.</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250809_%E5%BD%93%E6%88%91%E4%BB%AC%E5%81%9A%E4%BA%8C%E6%AC%A1%E9%87%8F%E5%AD%90%E5%8C%96%E7%9A%84%E6%97%B6%E5%80%99-%E6%88%91%E4%BB%AC%E7%A9%B6%E7%AB%9F%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88/</guid>
+    <description><![CDATA[<p><strong>First quantization cannot describe superpositions of particle number, let alone dynamics in which particle number changes.</strong></p>
+<p>The terms first quantization and second quantization can easily lead one to believe that they are equivalent, and that one can use whichever is more convenient, much like the Schrödinger and Heisenberg pictures. This is not the case. The descriptive power of second quantization is strictly greater than that of first quantization. First quantization is merely a simplified description of second quantization for situations with a fixed particle number, and is intrinsically deficient.</p>]]></description>
 </item>
 <item>
-    <title>A simple quantum description of lasers</title>
-    <link>http://localhost:1313/en/post_20240521_%E6%BF%80%E5%85%89%E7%9A%84%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E9%87%8F%E5%AD%90%E6%8F%8F%E8%BF%B0/</link>
-    <pubDate>Tue, 21 May 2024 00:41:11 &#43;0800</pubDate>
+    <title>What Is a Connection [Higher and More Wonderful Electrodynamics · Extra 1]</title>
+    <link>http://localhost:1313/en/post_20250729_%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E7%95%AA%E5%A4%96%E7%AF%87-1/</link>
+    <pubDate>Tue, 29 Jul 2025 15:08:10 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240521_%E6%BF%80%E5%85%89%E7%9A%84%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E9%87%8F%E5%AD%90%E6%8F%8F%E8%BF%B0/</guid>
-    <description><![CDATA[<p>This article aims to derive the coherent state of a laser from basic quantum dynamics.</p>
-<p>Consider the interaction between a two-level system and a single-mode light field, where the frequency of the light field equals the energy level difference.</p>
-<p>The two-level system initially starts in the excited state $|e\rangle$, and the light field is in the vacuum state $|0\rangle$.</p>
-<p>According to the Jaynes-Cummings model, even if the light field is in the vacuum state, spontaneous emission will occur. After a short period, the quantum state evolves from $|e,0\rangle$ to:</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250729_%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E7%95%AA%E5%A4%96%E7%AF%87-1/</guid>
+    <description><![CDATA[<p>In the previous articles, we said that the electromagnetic field is a connection. This brings to mind the connection in general relativity for many readers. What are the differences and commonalities between these two kinds of connections?</p>
+<p>The electromagnetic connection $A$ is a connection on a principal bundle, whereas the general-relativistic connection $\Gamma$ is a connection on a vector bundle. Their definitions seem quite different. Is there a way to relate them?</p>]]></description>
 </item>
 <item>
-    <title>Does the idler light passing through the optical fiber amplifier still entangle with the signal light?</title>
-    <link>http://localhost:1313/en/post_20240515_spdc%E4%BA%A7%E7%94%9F%E7%9A%84%E9%A2%91%E7%8E%87%E7%BA%A0%E7%BC%A0%E5%85%89-%E5%85%B6%E4%B8%AD%E7%9A%84%E9%97%B2%E7%BD%AE%E5%85%89%E7%BB%8F%E8%BF%87%E5%85%89%E7%BA%A4%E6%94%BE%E5%A4%A7%E5%99%A8-%E8%BF%98%E4%B8%8E%E4%BF%A1%E5%8F%B7%E5%85%89%E7%BA%A0%E7%BC%A0%E5%90%97/</link>
-    <pubDate>Wed, 15 May 2024 01:30:09 &#43;0800</pubDate>
+    <title>Is an Electromagnetic Wave a Photon Probability Wave?</title>
+    <link>http://localhost:1313/en/post_20250729_%E7%94%B5%E7%A3%81%E6%B3%A2%E6%98%AF%E5%85%89%E5%AD%90%E7%9A%84%E6%A6%82%E7%8E%87%E6%B3%A2%E5%90%97/</link>
+    <pubDate>Tue, 29 Jul 2025 14:22:00 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240515_spdc%E4%BA%A7%E7%94%9F%E7%9A%84%E9%A2%91%E7%8E%87%E7%BA%A0%E7%BC%A0%E5%85%89-%E5%85%B6%E4%B8%AD%E7%9A%84%E9%97%B2%E7%BD%AE%E5%85%89%E7%BB%8F%E8%BF%87%E5%85%89%E7%BA%A4%E6%94%BE%E5%A4%A7%E5%99%A8-%E8%BF%98%E4%B8%8E%E4%BF%A1%E5%8F%B7%E5%85%89%E7%BA%A0%E7%BC%A0%E5%90%97/</guid>
-    <description><![CDATA[<p>Does the idler light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?</p>
-<p>Let&rsquo;s consider two extremes:</p>
-<p>Extreme 1: The gain of the amplifier is equal to 1, that is, there is no gain at all.</p>
-<p>In this case, the amplifier acts as if it has done nothing and is an identity channel. So, of course, the entanglement will still be maintained. (Actually, it&rsquo;s not necessarily the case. Even if the gain is zero, additional noise may be introduced, but we ignore it here for now).</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250729_%E7%94%B5%E7%A3%81%E6%B3%A2%E6%98%AF%E5%85%89%E5%AD%90%E7%9A%84%E6%A6%82%E7%8E%87%E6%B3%A2%E5%90%97/</guid>
+    <description><![CDATA[<h2 id="probability-waves-vs-quantum-fields">Probability Waves vs. Quantum Fields</h2>
+<p>The electromagnetic field is not the probability wave of photons, just as the Dirac field is not the probability wave of electrons.</p>
+<p>A probability wave refers to the single-particle wavefunction (in the position representation) in nonrelativistic quantum mechanics.</p>
+<p><strong>Clearly, probability waves</strong> apply only to single-particle states in the nonrelativistic regime. The <strong>electromagnetic field</strong> and the <strong>Dirac field</strong>, on the other hand, are <strong>quantum fields</strong> and must be discussed within the framework of quantum field theory.</p>]]></description>
 </item>
 <item>
-    <title>Orbital angular momentum of photons</title>
-    <link>http://localhost:1313/en/post_20240513_%E5%85%89%E5%AD%90%E7%9A%84%E8%BD%A8%E9%81%93%E8%A7%92%E5%8A%A8%E9%87%8F/</link>
-    <pubDate>Mon, 13 May 2024 20:24:39 &#43;0800</pubDate>
+    <title>Why Spin Is Not a Relativistic Effect</title>
+    <link>http://localhost:1313/en/post_20250709_%E8%87%AA%E6%97%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%95%88%E5%BA%94/</link>
+    <pubDate>Wed, 09 Jul 2025 19:23:54 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240513_%E5%85%89%E5%AD%90%E7%9A%84%E8%BD%A8%E9%81%93%E8%A7%92%E5%8A%A8%E9%87%8F/</guid>
-    <description><![CDATA[<h2 id="preface">Preface</h2>
-<p>A paper published in PRA in 1992 <a href="#ref_1" rel="">[1]</a> pointed out that photons also have orbital angular momentum (OAM). Compared to spin angular momentum (i.e., polarization, SAM) which can only take $\pm \hbar$, orbital angular momentum can take any integer multiple of $\hbar$. Such orbital angular momentum can be carried by helical wavefronts.</p>
-<p>You might be surprised: did people only discover this in 1992? In fact, helical wavefronts had been studied before 1992; photons carrying angular momentum greater than $\hbar$ had already been predicted by atomic physics (though they originate from higher-order transition processes, which do not satisfy the selection rules and thus have very low probabilities, making them practically unobservable in experiments). It wasn&rsquo;t until 1992 that Allen et al. pointed out that light beams with helical wavefronts carry quantized orbital angular momentum.</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250709_%E8%87%AA%E6%97%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%95%88%E5%BA%94/</guid>
+    <description><![CDATA[<p>Conclusion: integer spin is a classical effect, whereas half-integer spin is a quantum effect and has little to do with relativity.</p>
+<p>The reason is simple: spin-1 is the smallest faithful representation of SO(3), while spin-1/2 is the smallest faithful representation of SU(2).</p>
+<p>So why can quantum mechanics lift SO(3) to SU(2)? Because quantum states are rays and are equivalent up to a global phase. In other words, quantum mechanics requires projective representations of SO(3). And projective representations of SO(3) are in one-to-one correspondence with representations of SU(2) (Bargmann&rsquo;s theorem). This is why quantum mechanics considers SU(2) rather than SO(3).</p>]]></description>
 </item>
 <item>
-    <title>How are creation and annihilation operators derived?</title>
-    <link>http://localhost:1313/en/post_20240501_%E4%BA%A7%E7%94%9F%E6%B9%AE%E7%81%AD%E7%AE%97%E7%AC%A6%E6%98%AF%E6%80%8E%E4%B9%88%E5%BE%97%E5%88%B0%E7%9A%84/</link>
-    <pubDate>Wed, 01 May 2024 03:04:30 &#43;0800</pubDate>
+    <title>Classical Shadows of Quantum States</title>
+    <link>http://localhost:1313/en/post_20250530_%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E7%BB%8F%E5%85%B8%E9%98%B4%E5%BD%B1-classical-shadows/</link>
+    <pubDate>Fri, 30 May 2025 02:53:53 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240501_%E4%BA%A7%E7%94%9F%E6%B9%AE%E7%81%AD%E7%AE%97%E7%AC%A6%E6%98%AF%E6%80%8E%E4%B9%88%E5%BE%97%E5%88%B0%E7%9A%84/</guid>
-    <description><![CDATA[<p>The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.</p>
-<p>Think about how we solve the classical harmonic oscillator. Since position and momentum are coupled:</p>
-<p>$\begin{cases} \frac{\mathrm{d}x}{\mathrm{d}t} = \omega p \\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega x \end{cases}$</p>
-<p>That is,</p>
-<p>$\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ p \end{bmatrix} = \begin{bmatrix} 0 &amp; \omega \\ -\omega &amp; 0 \end{bmatrix} \begin{bmatrix} x \\ p \end{bmatrix}$</p>
-<p>So, we just need to decouple them. By diagonalizing, we obtain the eigenvectors $a^{\pm} = x \pm \mathrm{i} p$, and the derivatives of $a^{\pm}$ only depend on themselves:</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250530_%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E7%BB%8F%E5%85%B8%E9%98%B4%E5%BD%B1-classical-shadows/</guid>
+    <description><![CDATA[<h2 id="i-quantum-state-tomography">I. Quantum State Tomography</h2>
+<p>At present, quantum states consisting of hundreds or thousands of qubits can already be prepared (twenty references omitted here).</p>
+<p>But how do we know that the prepared quantum state $\rho$ is indeed the one $\rho$ that we want? Or, more broadly: how can we learn (some or all) information about a quantum state $\rho$?</p>
+<p>To learn a quantum state $\rho$, we first need to prepare $\rho$, then measure it in different measurement bases to obtain probability distribution functions, and finally use these probability distribution functions to learn $\rho$. This process is called <strong>quantum state tomography</strong>.</p>]]></description>
 </item>
 <item>
-    <title>The difference between quantum entanglement and classical correlation, and the Quantum Measurement Problem</title>
-    <link>http://localhost:1313/en/post_20240430_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%85%B3%E8%81%94%E7%9A%84%E5%8C%BA%E5%88%AB-%E4%BB%A5%E5%8F%8A%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E9%97%AE%E9%A2%98/</link>
-    <pubDate>Tue, 30 Apr 2024 15:24:28 &#43;0800</pubDate>
+    <title>Are Christoffel Symbols Tensors After All?</title>
+    <link>http://localhost:1313/en/post_20250427_%E5%85%8B%E6%B0%8F%E7%AC%A6%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BC%A0%E9%87%8F/</link>
+    <pubDate>Sun, 27 Apr 2025 23:12:31 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240430_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%85%B3%E8%81%94%E7%9A%84%E5%8C%BA%E5%88%AB-%E4%BB%A5%E5%8F%8A%E9%87%8F%E5%AD%90%E6%B5%8B%E9%87%8F%E9%97%AE%E9%A2%98/</guid>
-    <description><![CDATA[<p>Many physicists use an example to explain quantum entanglement to the public:</p>
-<blockquote>
-<p>Imagine you have two boxes, one containing pizza and the other a burger. Before opening the boxes, you cannot know what is inside. Alice and Bob each take a box and move to distant locations. When Alice opens her box, she instantly knows what is in Bob&rsquo;s box far away.</p>
-</blockquote>
-<p>This example must be wrong&hellip; because it doesn&rsquo;t involve quantum mechanics at all.</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250427_%E5%85%8B%E6%B0%8F%E7%AC%A6%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BC%A0%E9%87%8F/</guid>
+    <description><![CDATA[<p>My favorite way to understand this is to regard $\Gamma$ as a connection on the frame bundle. Then, the transformation law of the Christoffel symbols</p>
+<p>$\boxed{ \begin{aligned} \bar{\Gamma}^i_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$</p>
+<p>is nothing more than a gauge transformation:</p>
+<p>$\boxed{ \bar{A} = g^{-1}A g \color{red}{+ g^{-1} \mathrm{d}g} }$</p>
+<p>The extra inhomogeneous term $ g^{-1} \mathrm{d}g$ is inherently part of a gauge transformation.</p>]]></description>
 </item>
 <item>
-    <title>A beginner&#39;s guide to quantum metrology</title>
-    <link>http://localhost:1313/en/post_20240423_%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6-quantum-metrology-%E7%AE%80%E6%98%8E%E5%85%A5%E9%97%A8/</link>
-    <pubDate>Tue, 23 Apr 2024 22:47:50 &#43;0800</pubDate>
+    <title>From Quantum Field Theory to Cavity Quantum Electrodynamics [Higher and More Elegant Electrodynamics · 5]</title>
+    <link>http://localhost:1313/en/post_20250413_%E4%BB%8E%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA%E5%88%B0%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-5/</link>
+    <pubDate>Sun, 13 Apr 2025 01:52:37 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240423_%E9%87%8F%E5%AD%90%E8%AE%A1%E9%87%8F%E5%AD%A6-quantum-metrology-%E7%AE%80%E6%98%8E%E5%85%A5%E9%97%A8/</guid>
-    <description><![CDATA[<h2 id="i-introduction-to-quantum-metrology">I. Introduction to Quantum Metrology</h2>
-<p>Quantum metrology is the science of using the quantum properties of quantum states for precise measurements.</p>
-<p>The reason for studying quantum metrology is that the precision of any physical measurement is limited by the Heisenberg Uncertainty Principle in quantum mechanics, known as the Heisenberg Limit. The goal of quantum metrology is to approach and surpass this limit.</p>
-<p>Of course, most measurements in daily life do not need to reach the Heisenberg Limit (e.g., weighing oneself). However, in high-precision imaging and various high-precision scientific experiments, people have indeed approached the Heisenberg Limit.</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250413_%E4%BB%8E%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA%E5%88%B0%E8%85%94%E9%87%8F%E5%AD%90%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-5/</guid>
+    <description><![CDATA[<p>In this article, we start from the highly complex QED Lagrangian:</p>
+<p>$\begin{aligned} \mathcal{L}=  \bar{\psi}(\mathrm{i}\gamma^\mu \partial_\mu -m)\psi - eA_\mu \bar{\psi} \gamma^\mu \psi -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} \end{aligned} $</p>
+<p>This Lagrangian is highly complex: it not only takes into account the electron&rsquo;s antiparticle—the positron—but the coupling term $- eA_\mu \bar{\psi} \gamma^\mu \psi$ is also a cubic term, capable of describing multiple processes such as electron-positron pair creation/annihilation. It has no analytical solution and can only be solved using perturbation theory in quantum field theory.</p>]]></description>
 </item>
 <item>
-    <title>Quantum state tomography - a beginner&#39;s guide</title>
-    <link>http://localhost:1313/en/post_20240420_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%89-%E9%87%8F%E5%AD%90%E6%80%81%E5%B1%82%E6%9E%90/</link>
-    <pubDate>Sat, 20 Apr 2024 02:40:49 &#43;0800</pubDate>
+    <title>Dirac Magnetic Monopoles—Chern Classes and Chern Numbers [Higher and More Elegant Electrodynamics · 4]</title>
+    <link>http://localhost:1313/en/post_20250330_%E7%8B%84%E6%8B%89%E5%85%8B%E7%A3%81%E5%8D%95%E6%9E%81%E5%AD%90-%E9%99%88%E7%B1%BB%E4%B8%8E%E9%99%88%E6%95%B0-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-4/</link>
+    <pubDate>Sun, 30 Mar 2025 01:13:18 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>http://localhost:1313/en/post_20240420_%E9%87%8F%E5%85%89%E5%AE%9E%E9%AA%8C%E6%9D%82%E8%B0%88-%E4%B8%89-%E9%87%8F%E5%AD%90%E6%80%81%E5%B1%82%E6%9E%90/</guid>
-    <description><![CDATA[<h2 id="quantum-state-tomography">Quantum State Tomography</h2>
-<p>Quantum state tomography is the process of deducing the [quantum state] based on the [results of measurements on a quantum state ensemble]. Its formulation is straightforward, as follows:</p>
-<p>Given a series of measurement operators ${\Pi_1, \ldots, \Pi_n}$ and their corresponding measurement probabilities $p_k = \operatorname{Tr}[\rho \Pi_k]$, find the quantum state $\rho$.</p>
-<p>In other words, in these $n$ equations $p_k = \operatorname{Tr}[\rho \Pi_k]$, given $p_k$ and $\Pi_k$, find $\rho$.</p>]]></description>
+    <guid>http://localhost:1313/en/post_20250330_%E7%8B%84%E6%8B%89%E5%85%8B%E7%A3%81%E5%8D%95%E6%9E%81%E5%AD%90-%E9%99%88%E7%B1%BB%E4%B8%8E%E9%99%88%E6%95%B0-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-4/</guid>
+    <description><![CDATA[<p>In <a href="https://zhuanlan.zhihu.com/p/32173040413" target="_blank" rel="noopener noreffer ">前文</a>, we mentioned that if a manifold is topologically trivial, then integrating the Berry curvature over a closed surface $\Sigma$ should yield zero. This is because, according to Stokes&rsquo; theorem:</p>
+<p>$\int_\Sigma F = \int_{\partial \Sigma } A = 0$</p>
+<p>However, on a topologically nontrivial manifold, the integral $\int_\Sigma F$ is not necessarily zero. This is because a globally single-valued connection $A$ cannot be defined in this case, so Stokes&rsquo; theorem no longer applies. What does this mean?</p>]]></description>
 </item>
 </channel>
 </rss>

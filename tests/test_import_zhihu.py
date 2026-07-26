@@ -186,6 +186,18 @@ class ImportPipelineTests(unittest.TestCase):
             disguised_png.write_bytes(b"\x89PNG\r\n\x1a\n" + b"payload")
             self.assertEqual(MODULE.detect_image_suffix(disguised_png), ".png")
 
+    def test_parser_accepts_one_click_english_translation(self):
+        args = MODULE.build_parser().parse_args(
+            [
+                "https://zhuanlan.zhihu.com/p/123",
+                "--translate",
+                "en",
+                "--publish",
+            ]
+        )
+        self.assertEqual(args.translate, "en")
+        self.assertTrue(args.publish)
+
     def test_creates_hugo_bundle_with_images_and_native_latex(self):
         args = self.import_args()
 

@@ -3,9 +3,18 @@
         <title>Haifei&#39;s Home</title>
         <link>http://localhost:1313/</link>
         <description>Haifei Wang&#39;s notes on quantum physics, mathematics, and engineering.</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 Oct 2025 16:46:08 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 02 Nov 2025 12:53:03 &#43;0800</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>高精度时间测量——TDC / Time Tagger 原理和结构分析</title>
+    <link>http://localhost:1313/post_20251102_%E9%AB%98%E7%B2%BE%E5%BA%A6%E6%97%B6%E9%97%B4%E6%B5%8B%E9%87%8F-tdc-time-tagger-%E5%8E%9F%E7%90%86%E5%92%8C%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</link>
+    <pubDate>Sun, 02 Nov 2025 12:53:03 &#43;0800</pubDate>
+    <author>像牛一样的猫</author>
+    <guid>http://localhost:1313/post_20251102_%E9%AB%98%E7%B2%BE%E5%BA%A6%E6%97%B6%E9%97%B4%E6%B5%8B%E9%87%8F-tdc-time-tagger-%E5%8E%9F%E7%90%86%E5%92%8C%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90/</guid>
+    <description><![CDATA[<h2 id="一什么是-tdc--time-tagger">一、什么是 TDC / Time Tagger</h2>
+<p>Time-to-Digital Converter（TDC）本质上就是一个非常精准的（皮秒量级）计时器，它给每个输入的脉冲信号都打上高精度的时间戳（Timestamp）。</p>]]></description>
+</item>
+<item>
     <title>阻抗匹配/信号完整性速成（实验室版）</title>
     <link>http://localhost:1313/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</link>
     <pubDate>Sat, 25 Oct 2025 16:46:08 &#43;0800</pubDate>
@@ -110,21 +119,6 @@
     <description><![CDATA[<p>在<a href="https://zhuanlan.zhihu.com/p/32173040413" target="_blank" rel="noopener noreffer ">前文</a>中，我们说到，如果流形是拓扑平凡的，那么对 Berry 曲率在闭合曲面 $\Sigma$ 上积分应该得到零。这是因为根据 Stokes 定理，有：</p>
 <p>$\int_\Sigma F = \int_{\partial \Sigma } A = 0$</p>
 <p>然而，在非拓扑平凡的流形上，积分 $\int_\Sigma F$ 不一定为零。这是因为，此时无法定义全局单值的联络 $A$ ，导致 Stokes 定理不再适用。此话怎讲？</p>]]></description>
-</item>
-<item>
-    <title>电磁场不只是电场和磁场——AB效应与Berry联络【更高更妙的电动力学·3】</title>
-    <link>http://localhost:1313/post_20250323_%E7%94%B5%E7%A3%81%E5%9C%BA%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%B5%E5%9C%BA%E5%92%8C%E7%A3%81%E5%9C%BA-ab%E6%95%88%E5%BA%94%E4%B8%8Eberry%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-3/</link>
-    <pubDate>Sun, 23 Mar 2025 20:20:44 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://localhost:1313/post_20250323_%E7%94%B5%E7%A3%81%E5%9C%BA%E4%B8%8D%E5%8F%AA%E6%98%AF%E7%94%B5%E5%9C%BA%E5%92%8C%E7%A3%81%E5%9C%BA-ab%E6%95%88%E5%BA%94%E4%B8%8Eberry%E8%81%94%E7%BB%9C-%E6%9B%B4%E9%AB%98%E6%9B%B4%E5%A6%99%E7%9A%84%E7%94%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6-3/</guid>
-    <description><![CDATA[<p>电磁场并非电场和磁场。</p>
-<p>换句话说，电磁场并不只是电场和磁场。</p>
-<p>此话怎讲？</p>
-<h2 id="一电磁势的地位高于场强">一、电磁势的地位高于场强</h2>
-<p>在<a href="https://zhuanlan.zhihu.com/p/23958176393" target="_blank" rel="noopener noreffer ">前文</a>中，我们挖过一个坑：</p>
-<blockquote>
-<p>$\boxed{\begin{aligned} \phi &amp;\mapsto \phi - \partial_t \lambda \\ \mathbf{A} &amp;\mapsto \mathbf{A} + \nabla \lambda \end{aligned}}$</p>
-<p>学过经典电动力学的同学都知道，这就是电磁规范变换，变换前后不影响实际的物理。</p>]]></description>
 </item>
 </channel>
 </rss>

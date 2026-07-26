@@ -773,6 +773,22 @@ def build_parser() -> argparse.ArgumentParser:
         help="知乎缺少发布日期元数据时的人工兜底，格式为 YYYY-MM-DD",
     )
     parser.add_argument(
+        "--translate",
+        choices=["en"],
+        help="导入后使用 OpenAI API 生成对应语言版本；目前支持 en",
+    )
+    parser.add_argument(
+        "--translation-model",
+        help="OpenAI 翻译模型；默认由 translate_posts.py 选择",
+    )
+    parser.add_argument(
+        "--openai-api-key-file",
+        help=(
+            "OpenAI API Key 文件；默认读取 .secrets/openai-api-key.txt，"
+            "也可设置 OPENAI_API_KEY"
+        ),
+    )
+    parser.add_argument(
         "--html-file",
         help=argparse.SUPPRESS,
     )
@@ -794,6 +810,26 @@ def main() -> int:
     args = build_parser().parse_args()
     try:
         post = import_post(args)
+        translated_file = None
+        if args.translate:
+            try:
+                from translate_posts import (
+                    DEFAULT_MODEL,
+                    TranslationFailure,
+                    translate_bundle,
+                )
+
+                translated_file = translate_bundle(
+                    post.bundle_dir,
+                    model=args.translation_model or DEFAULT_MODEL,
+                    api_key_file=args.openai_api_key_file,
+                    force=args.force,
+                )
+            except TranslationFailure as exc:
+                raise ImportFailure(
+                    "中文文章已导入，但英文翻译失败；没有执行发布。"
+                    f"修复后可单独重试翻译。原因：{exc}"
+                ) from exc
         if not args.no_build:
             validate_site()
         if args.publish:
@@ -803,6 +839,11 @@ def main() -> int:
             f"{state}: {post.content_file}\n"
             f"Zhihu publication date: {post.published_at:%Y-%m-%d}; "
             f"local images: {post.image_count}"
+            + (
+                f"\nTranslated: {translated_file}"
+                if translated_file is not None
+                else ""
+            )
         )
         return 0
     except ImportFailure as exc:

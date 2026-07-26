@@ -81,6 +81,86 @@ The shell wrapper has the same two modes:
 ./updates.sh "https://zhuanlan.zhihu.com/p/ARTICLE_ID" --publish
 ```
 
+## English translation with OpenAI
+
+The translation pipeline uses the OpenAI Responses API for a newly imported
+post and the Batch API for historical backfills. Before sending an article, it
+replaces LaTeX, fenced and inline code, links, image paths, and Hugo shortcodes
+with deterministic protected tokens. The result is rejected unless every token,
+formula, code block, URL, image reference, and heading level passes validation.
+
+The recommended local secret is `.secrets/openai-api-key.txt`. This entire
+directory is ignored by Git. Configure it through the hidden terminal prompt;
+the key is not displayed and is never passed as a command-line argument:
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py key set
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py key status
+```
+
+Alternatively, create the file manually, paste only the API key (without quotes
+or an `OPENAI_API_KEY=` prefix), and save it.
+
+The loader first checks the `OPENAI_API_KEY` environment variable and then the
+local secret file. To store the key in the current PowerShell process instead:
+
+```powershell
+$secureKey = Read-Host "OpenAI API Key" -AsSecureString
+$env:OPENAI_API_KEY = [System.Net.NetworkCredential]::new("", $secureKey).Password
+Remove-Variable secureKey
+```
+
+Do not put the key directly in a command-line argument, GitHub source file,
+issue, commit, or screenshot. The default model is `gpt-5.6-terra`; override it
+for one command with `--translation-model MODEL`, or for all commands with
+`OPENAI_TRANSLATION_MODEL`.
+
+Import, translate, validate, commit, and push one new post in a single command:
+
+```powershell
+.\updates.bat "https://zhuanlan.zhihu.com/p/ARTICLE_ID" `
+  --translate en `
+  --publish
+```
+
+Without `--publish`, both `index.zh-cn.md` and `index.en.md` remain as local
+changes. If translation fails, the Chinese bundle is kept locally for diagnosis
+but nothing is committed or pushed.
+
+List or synchronously translate historical content:
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py missing
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py translate `
+  ".\content\posts\Post_YYYYMMDD_TITLE"
+```
+
+Submit all currently missing English articles as one Batch API job:
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py batch submit
+```
+
+The command records the Batch ID under the ignored
+`.secrets/openai-batches/` directory. Batch jobs can finish out of order and
+may take up to 24 hours. Check and apply the latest recorded job with:
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py batch status
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py batch apply
+```
+
+For an unattended local run, `batch run` submits, polls, validates, and writes
+all translations. Applying a Batch refuses to use a result when the matching
+Chinese source changed after submission.
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py batch run
+```
+
+After reviewing historical translations, `.\updates.bat` validates the site,
+commits the current changes, and pushes them to GitHub.
+
 ## Post folder naming
 
 Existing post bundles use the same `Post_YYYYMMDD_TITLE` directory convention.
@@ -197,6 +277,8 @@ existing `$ ... $` syntax for backward compatibility.
 - `zhihu-download/`: the third-party Zhihu downloader Git submodule;
 - `scripts/import_zhihu.py`: import orchestration, math and image handling,
   validation, and optional publishing;
+- `scripts/translate_posts.py`: protected Markdown translation through the
+  OpenAI Responses and Batch APIs;
 - `scripts/migrate_post_names.py`: post bundle naming migration with old URL
   aliases;
 - `scripts/sync_zhihu_dates.py`: apply reviewed Zhihu publication metadata to

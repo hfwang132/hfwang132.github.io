@@ -9,8 +9,15 @@
     <managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor>
     <webMaster>hfwang132@gmail.com (hfwang132)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 22 May 2024 14:50:35 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2024 11:36:44 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/en/tags/quantum-information/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weyl and Wigner Representations of Quantum States/Operators</title>
+      <link>http://localhost:1313/en/post_20241008_%E9%87%8F%E5%AD%90%E6%80%81-%E7%AE%97%E7%AC%A6%E7%9A%84-weyl-%E5%92%8C-wigner-%E8%A1%A8%E7%A4%BA/</link>
+      <pubDate>Tue, 08 Oct 2024 11:36:44 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
+      <guid>http://localhost:1313/en/post_20241008_%E9%87%8F%E5%AD%90%E6%80%81-%E7%AE%97%E7%AC%A6%E7%9A%84-weyl-%E5%92%8C-wigner-%E8%A1%A8%E7%A4%BA/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;&#xA;&lt;p&gt;In classical mechanics, a physical quantity is a function on phase space, while the state of a system is a point in phase space (or, for an ensemble, a probability distribution on phase space). Upon quantizing this language, one obtains the phase-space representation of quantum states/operators, namely the Wigner representation. The Weyl representation is its Fourier transform.&lt;/p&gt;&#xA;&lt;p&gt;Most authors define the Wigner representation as:&lt;/p&gt;&#xA;&lt;p&gt;$F_W(x,p)=\int \mathrm{d}y \langle x+\frac{y}{2}\mid F \mid x - \frac{y}{2} \rangle e^{\mathrm{i} p y}$&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Does the speed of quantum entanglement exceed the speed of light?</title>
       <link>http://localhost:1313/en/post_20240522_%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%90%A6%E8%B6%85%E8%BF%87%E5%85%89%E9%80%9F/</link>

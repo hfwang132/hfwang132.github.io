@@ -46,12 +46,5 @@
       <guid>http://localhost:1313/en/post_20230516_%E4%B8%80%E6%96%87%E5%85%A5%E9%97%A8%E5%BE%AE%E5%88%86%E5%87%A0%E4%BD%95-%E7%89%A9%E7%90%86%E4%BA%BA%E7%89%88/</guid>
       <description>&lt;head&gt;&#xA;&lt;meta http-equiv=&#34;refresh&#34; content=&#34;0; url=../../differential_geometry/&#34;&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt;&#xA;&lt;h1 id=&#34;tbd&#34;&gt;TBD&lt;/h1&gt;&#xA;&lt;p&gt;Chinese version &lt;a href=&#34;../zh-cn/differential_geometry/&#34; rel=&#34;&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/body&gt;</description>
     </item>
-    <item>
-      <title>Understanding differentials in four levels</title>
-      <link>http://localhost:1313/en/post_20210413_%E5%BE%AE%E5%88%86%E7%9A%84%E5%9B%9B%E5%B1%82%E7%90%86%E8%A7%A3/</link>
-      <pubDate>Tue, 13 Apr 2021 23:23:34 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author>
-      <guid>http://localhost:1313/en/post_20210413_%E5%BE%AE%E5%88%86%E7%9A%84%E5%9B%9B%E5%B1%82%E7%90%86%E8%A7%A3/</guid>
-      <description>&lt;h2 id=&#34;one-differential-is-an-infinitesimal&#34;&gt;One Differential is an Infinitesimal?&lt;/h2&gt;&#xA;&lt;p&gt;Physicists like to think of differentials as very small quantities, which is convenient for calculations but gives a feeling of lack of rigor.&lt;/p&gt;&#xA;&lt;p&gt;In fact, it is indeed lacking rigor, and the second mathematical crisis arose from this.&lt;/p&gt;&#xA;&lt;p&gt;Rigor and clarity are always complementary. Treating differentials as infinitesimal satisfies intuition but cannot withstand rational scrutiny.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;two-differential-as-linear-function&#34;&gt;Two Differential as Linear Function&lt;/h2&gt;&#xA;&lt;p&gt;I like to think of differentials as a machine, for example,&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
