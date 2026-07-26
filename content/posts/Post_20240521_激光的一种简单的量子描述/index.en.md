@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240527_激光的一种简单的量子描述/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

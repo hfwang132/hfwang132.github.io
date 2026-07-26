@@ -198,7 +198,7 @@ categories: ["数学物理方法"]
 >   
 > 它作用到两个切矢量 \(u=\partial_1+2\partial_2+3\partial_3\) 和 \(v=3\partial_1-2\partial_2+\partial_3\) 上得到：   
 >   
-> \(\begin{align} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^1(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \end{vmatrix}\\ &-2\begin{vmatrix} \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^3(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^3(3\partial_1-2\partial_2+\partial_3) \end{vmatrix} \\&=5\cdot\begin{vmatrix}1&3\\2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2\\3 & 1\end{vmatrix} \\&=-48 \end{align}\)  
+> \[\begin{aligned} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^1(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \end{vmatrix}\\ &-2\begin{vmatrix} \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^3(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^3(3\partial_1-2\partial_2+\partial_3) \end{vmatrix} \\&=5\cdot\begin{vmatrix}1&3\\2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2\\3 & 1\end{vmatrix} \\&=-48 \end{aligned}\]  
 >   
 > 它的几何意义是：矢量 \(u\) 和 \(v\) 所形成的平行四边形在面元 \(\omega\) 上的投影面积。当然，这个面积是有向的，因此有可能出现负值。
 

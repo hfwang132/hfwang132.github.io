@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240727_为什么热光场的光强服从指数分布/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---
@@ -84,7 +84,7 @@ This is a geometric distribution. A geometric distribution is the discrete versi
 
 Thus, the quantum \(g^{(2)}\) is
 
-\[\begin{align} g^{(2)} := \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} = \frac{\sum n(n-1) p_n }{(\sum n p_n)^2} = 2 \end{align}\]
+\[\begin{aligned} g^{(2)} := \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} = \frac{\sum n(n-1) p_n }{(\sum n p_n)^2} = 2 \end{aligned}\]
 
 > The calculation is left to the reader as an interesting exercise. The key is to calculate the moments of the exponential distribution, which are much more complicated than the moments of the exponential distribution.
 

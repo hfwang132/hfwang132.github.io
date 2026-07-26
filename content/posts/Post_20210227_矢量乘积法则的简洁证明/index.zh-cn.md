@@ -59,7 +59,7 @@ DLC：二次微分
 
 **Kronecker Delta** \(\delta_{ij}\)
 
-Kronecker delta 的定义是 \(\begin{equation}  \delta_{ij}=  \begin{cases}  1&i=j\\  0&i\neq j  \end{cases}  \end{equation}\)
+Kronecker delta 的定义是 \[  \delta_{ij}=  \begin{cases}  1&i=j\\  0&i\neq j  \end{cases}  \]
 
 ---
 
@@ -139,7 +139,7 @@ Levi-Civita 符号的定义是 \(\epsilon_{ijk}= \begin{cases} 1&(i,j,k)是(1,2,
 
 证明：
 
-\[\begin{align} \left[\nabla\times(f\mathrm{A})\right]_i&=\epsilon_{ijk}\frac{\partial}{\partial x_j}(fA_k) \\&=\epsilon_{ijk}f\frac{\partial}{\partial x_j}A_k+\epsilon_{ijk}A_k\frac{\partial}{\partial x_j}f \\&=\left[f\nabla\times\mathrm{A}+\nabla f\times\mathrm{A} \right]_i\end{align}\]
+\[\begin{aligned} \left[\nabla\times(f\mathrm{A})\right]_i&=\epsilon_{ijk}\frac{\partial}{\partial x_j}(fA_k) \\&=\epsilon_{ijk}f\frac{\partial}{\partial x_j}A_k+\epsilon_{ijk}A_k\frac{\partial}{\partial x_j}f \\&=\left[f\nabla\times\mathrm{A}+\nabla f\times\mathrm{A} \right]_i\end{aligned}\]
 
 评论：注意使用标量乘法的交换律。
 
@@ -149,7 +149,7 @@ Levi-Civita 符号的定义是 \(\epsilon_{ijk}= \begin{cases} 1&(i,j,k)是(1,2,
 
 证明：
 
-\[\begin{align} \nabla\cdot(\mathrm{A}\times\mathrm{B})&=\frac{\partial}{\partial x_i}(\mathrm{A}\times\mathrm{B})_i \\&=\frac{\partial}{\partial x_i}(\epsilon_{ijk}A_jB_k) \\&=\epsilon_{ijk}\frac{\partial}{\partial x_i}(A_jB_k) \\&=B_k\epsilon_{ijk}\frac{\partial}{\partial x_i}A_j+\epsilon_{ijk}A_j\frac{\partial}{\partial x_i}B_k \\&=B_k\epsilon_{kij}\frac{\partial}{\partial x_i}A_j-\epsilon_{jik}A_j\frac{\partial}{\partial x_i}B_k \\&=\mathrm{B}\cdot(\nabla\times\mathrm{A})-\mathrm{A}\cdot(\nabla\times\mathrm{B})  \end{align}\]
+\[\begin{aligned} \nabla\cdot(\mathrm{A}\times\mathrm{B})&=\frac{\partial}{\partial x_i}(\mathrm{A}\times\mathrm{B})_i \\&=\frac{\partial}{\partial x_i}(\epsilon_{ijk}A_jB_k) \\&=\epsilon_{ijk}\frac{\partial}{\partial x_i}(A_jB_k) \\&=B_k\epsilon_{ijk}\frac{\partial}{\partial x_i}A_j+\epsilon_{ijk}A_j\frac{\partial}{\partial x_i}B_k \\&=B_k\epsilon_{kij}\frac{\partial}{\partial x_i}A_j-\epsilon_{jik}A_j\frac{\partial}{\partial x_i}B_k \\&=\mathrm{B}\cdot(\nabla\times\mathrm{A})-\mathrm{A}\cdot(\nabla\times\mathrm{B})  \end{aligned}\]
 
 评论：注意使用Levi-Civita符号的置换性质。 \(ijk\) 和 \(kij\) 的奇偶性相同，而 \(ijk\) 和 \(jik\) 的奇偶性相反。
 
@@ -159,7 +159,7 @@ Levi-Civita 符号的定义是 \(\epsilon_{ijk}= \begin{cases} 1&(i,j,k)是(1,2,
 
 证明：
 
-\[\begin{align} [\nabla(\mathrm{A}\cdot \mathrm{B})]_i&=\frac{\partial }{\partial x_i}(\mathrm{A}\cdot\mathrm{B}) \\&=\frac{\partial }{\partial x_i}(A_jB_j) \\&=B_j\frac{\partial }{\partial x_i}A_j+A_j\frac{\partial }{\partial x_i}B_j \end{align}\]
+\[\begin{aligned} [\nabla(\mathrm{A}\cdot \mathrm{B})]_i&=\frac{\partial }{\partial x_i}(\mathrm{A}\cdot\mathrm{B}) \\&=\frac{\partial }{\partial x_i}(A_jB_j) \\&=B_j\frac{\partial }{\partial x_i}A_j+A_j\frac{\partial }{\partial x_i}B_j \end{aligned}\]
 
 证明到这里好像陷入了停滞，但是注意到结果中有旋度，这意味着我们需要凑出Levi-Civita符号，而我们前面推导过Levi-Civita符号与Kronecker delta的关系：
 
@@ -167,7 +167,7 @@ Levi-Civita 符号的定义是 \(\epsilon_{ijk}= \begin{cases} 1&(i,j,k)是(1,2,
 
 因此，我们考虑插入两个Kronecker delta符号。先看上式第一项
 
-\[\begin{align}  \end{align}\( \)\begin{align} B_j\frac{\partial }{\partial x_i}A_j&=\delta_{im}\delta_{jl}B_j\frac{\partial }{\partial x_m}A_l \\&=(\delta_{il}\delta_{jm}-\epsilon_{ijk}\epsilon_{klm})B_j\frac{\partial }{\partial x_m}A_l \\&=\delta_{il}\delta_{jm}B_j\frac{\partial }{\partial x_m}A_l-\epsilon_{ijk}\epsilon_{klm}B_j\frac{\partial }{\partial x_m}A_l \\&=B_j\frac{\partial }{\partial x_j}A_i-\epsilon_{ijk}B_j(\epsilon_{klm}\frac{\partial }{\partial x_m}A_l) \\&=\left[(\mathrm{B}\cdot\nabla)\mathrm{A}+\mathrm{B}\times(\nabla\times\mathrm{A})\right]_i \end{align}\]
+\[\begin{aligned}  \end{aligned} \begin{aligned} B_j\frac{\partial }{\partial x_i}A_j&=\delta_{im}\delta_{jl}B_j\frac{\partial }{\partial x_m}A_l \\&=(\delta_{il}\delta_{jm}-\epsilon_{ijk}\epsilon_{klm})B_j\frac{\partial }{\partial x_m}A_l \\&=\delta_{il}\delta_{jm}B_j\frac{\partial }{\partial x_m}A_l-\epsilon_{ijk}\epsilon_{klm}B_j\frac{\partial }{\partial x_m}A_l \\&=B_j\frac{\partial }{\partial x_j}A_i-\epsilon_{ijk}B_j(\epsilon_{klm}\frac{\partial }{\partial x_m}A_l) \\&=\left[(\mathrm{B}\cdot\nabla)\mathrm{A}+\mathrm{B}\times(\nabla\times\mathrm{A})\right]_i \end{aligned}\]
 
 对第二项同理，因此原式得证。
 

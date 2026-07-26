@@ -431,7 +431,7 @@ b)（导子） \(v_p(fg)=f(p)v_p(g)+g(p)v_p(f)\)
 
 多重线性映射是指有多个输入向量，且对每个变量都是线性的映射。 具体来说， \(n\) 重线性映射定义为 \(f:V_1\times V_2\times \cdots\times V_n \rightarrow W\) ，且满足如下性质：
 
-\[\begin{align} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{align}\]
+\[\begin{aligned} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}\]
 
 > **评论**  
 >   
@@ -520,7 +520,7 @@ b)（导子） \(v_p(fg)=f(p)v_p(g)+g(p)v_p(f)\)
 >   
 > 可见， \(a\in V^*\otimes V^*\) 是一个 \((0,2)\) 型张量。它将两个 \((1,0)\) 型张量（也就是切向量）映射为一个实数。用我们物理人熟悉的指标写法，就是 \(a_{ij}v^iv^j\in \mathbb{R}\) 。如果把基也写出来，就是下面这个式子：   
 >   
-> \(\begin{align} a(v,w)&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) (v^{1}e_1+v^2e_2,w^{2}e_1+w^2e_2) \\&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2})(v^1w^1e_1\otimes e_1+v^1w^2e_1\otimes e_2+v^2w^1e_2\otimes e_1+v^2w^2e_2\otimes e_2) \\&=a_{ij}v^{i}w^{j} \end{align}\)   
+> \[\begin{aligned} a(v,w)&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) (v^{1}e_1+v^2e_2,w^{2}e_1+w^2e_2) \\&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2})(v^1w^1e_1\otimes e_1+v^1w^2e_1\otimes e_2+v^2w^1e_2\otimes e_1+v^2w^2e_2\otimes e_2) \\&=a_{ij}v^{i}w^{j} \end{aligned}\]   
 >   
 >  或者写成更紧凑的形式：   
 >   
@@ -704,7 +704,7 @@ b)（厄米性） \(\langle x|y\rangle=\langle y|x\rangle^\dagger\)
 >   
 > 例如，我们可以将一个切向量场“降”为余切向量场：  
 >   
->  \(\begin{align} \flat:TM&\rightarrow T^*M \\ X^i&\mapsto g_{ij} X^i=X_j \end{align}\)   
+>  \[\begin{aligned} \flat:TM&\rightarrow T^*M \\ X^i&\mapsto g_{ij} X^i=X_j \end{aligned}\]   
 >   
 > 当我们在做张量的指标升降时，我们其实是在绘制一张张动听的乐谱！  
 >   
@@ -740,9 +740,9 @@ b)（厄米性） \(\langle x|y\rangle=\langle y|x\rangle^\dagger\)
 
 交替多重线性映射是这样一个多重线性映射，当交换两个输入时，结果会多一个负号。 具体来说，交替 \(n\) 重线性映射定义为 \(f:V^n\rightarrow W\) ，且满足如下性质：
 
-a) \(\begin{align} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{align}\)
+a) \[\begin{aligned} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}\]
 
-b) \(\begin{align} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n)\\  &=-f(v_1,\cdots,v_j,\cdots,v_i,\cdots,v_n) \end{align}\)
+b) \[\begin{aligned} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n)\\  &=-f(v_1,\cdots,v_j,\cdots,v_i,\cdots,v_n) \end{aligned}\]
 
 ### 3.2 外积、外代数（Exterior Product, Exterior Algebra）  
 > **评论**  
@@ -867,7 +867,7 @@ b) \(\begin{align} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n)\\  &=-f(v_1,\cdots,v
 > 在 3 维流形上的点 \(p\) 处有一个 2-form 如下：  
 >  \(\omega = 5\mathrm{d}x^1 \wedge \mathrm{d}x^2 -2\mathrm{d}x^2\wedge \mathrm{d}x^3\)   
 > 它作用到两个切向量 \(u=\partial_1+2\partial_2+3\partial_3\) 和 \(v=3\partial_1-2\partial_2+\partial_3\) 上得到：  
->  \(\begin{align} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^1(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \end{vmatrix}\\ &-2\begin{vmatrix} \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^3(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^3(3\partial_1-2\partial_2+\partial_3) \end{vmatrix} \\&=5\cdot\begin{vmatrix}1&3\\2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2\\3 & 1\end{vmatrix} \\&=-48 \end{align}\)
+>  \[\begin{aligned} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^1(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \end{vmatrix}\\ &-2\begin{vmatrix} \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^3(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^3(3\partial_1-2\partial_2+\partial_3) \end{vmatrix} \\&=5\cdot\begin{vmatrix}1&3\\2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2\\3 & 1\end{vmatrix} \\&=-48 \end{aligned}\]
 
 具体地，一个一般的 m 阶微分形式可以写成下式：
 
@@ -904,7 +904,7 @@ b) \(\begin{align} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n)\\  &=-f(v_1,\cdots,v
 > **例 3.2**  
 >   
 > 对于一个 3 维流形上的二阶微分形式： \(\varphi=z^2\mathrm{d}x\wedge\mathrm{d}y+x\sin y\,\mathrm{d}y\wedge \mathrm{d}z\) ，其外微分为：  
->  \(\begin{align} \mathrm{d}\varphi   &= \mathrm{d}(z^2) \wedge \mathrm{d}x \wedge \mathrm{d}y + \mathrm{d}(x \sin y) \wedge \mathrm{d}y \wedge \mathrm{d}z \\&=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y  \\&  +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z  \\&=(2z+\sin y)\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z  \end{align}\)
+>  \[\begin{aligned} \mathrm{d}\varphi   &= \mathrm{d}(z^2) \wedge \mathrm{d}x \wedge \mathrm{d}y + \mathrm{d}(x \sin y) \wedge \mathrm{d}y \wedge \mathrm{d}z \\&=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y  \\&  +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z  \\&=(2z+\sin y)\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z  \end{aligned}\]
 
 上文是一种显式的定义。我们也可以用外微分算子的性质来定义它自身。具体来说，外微分满足如下三个性质：
 
@@ -938,7 +938,7 @@ c. 对于任意两个 \(n\) 阶微分形式 \(\alpha\) 和 \(\beta\) ，都有 \
 
 梯度定义为：
 
-\[\begin{align} \nabla:=\sharp\mathrm{d} \end{align}\]
+\[\begin{aligned} \nabla:=\sharp\mathrm{d} \end{aligned}\]
 
 > **评论**  
 >   
@@ -954,11 +954,11 @@ c. 对于任意两个 \(n\) 阶微分形式 \(\alpha\) 和 \(\beta\) ，都有 \
 >   
 > 外微分算子 \(\mathrm{d}\) 作用到一个一阶微分形式（余切向量场）后，会得到一个二阶微分形式：   
 >   
-> \(\begin{align} \mathrm{d}(f_i\mathrm{d}x^i)&=\cancel{\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1}+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\&+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\cancel{\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2}+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\&+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\cancel{\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3} \end{align}\)  
+> \[\begin{aligned} \mathrm{d}(f_i\mathrm{d}x^i)&=\cancel{\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1}+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\&+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\cancel{\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2}+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\&+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\cancel{\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3} \end{aligned}\]  
 >   
 > 对它使用一次 Hodge 星算子，会得到一个一阶微分形式：  
 >   
-> \(\begin{align} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\&\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{\,\,\,\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}  -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\&\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1  \\&=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3  \end{align}\)  
+> \[\begin{aligned} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\&\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{\,\,\,\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}  -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\&\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1  \\&=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3  \end{aligned}\]  
 >   
 > 它可以写成旋度和切向量的内积： \(\star\mathrm{d}f:\star\mathrm{d}f(v)=\langle \nabla \times \sharp f\mid v \rangle\)   
 >   
@@ -993,7 +993,7 @@ c. 对于任意两个 \(n\) 阶微分形式 \(\alpha\) 和 \(\beta\) ，都有 \
 
 旋度定义为
 
-\[\begin{align} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{align}\]
+\[\begin{aligned} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{aligned}\]
 
 在下面的例子（例 3.5）中，我们将会给出散度与外微分之间的关系。
 
@@ -1027,7 +1027,7 @@ c. 对于任意两个 \(n\) 阶微分形式 \(\alpha\) 和 \(\beta\) ，都有 \
 
 散度定义为
 
-\[\begin{align} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{align}\]
+\[\begin{aligned} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{aligned}\]
 
 > **评论**  
 >   
@@ -1035,11 +1035,11 @@ c. 对于任意两个 \(n\) 阶微分形式 \(\alpha\) 和 \(\beta\) ，都有 \
 
 总结：
 
-\[\begin{align} \nabla:=\sharp\mathrm{d} \end{align}\]
+\[\begin{aligned} \nabla:=\sharp\mathrm{d} \end{aligned}\]
 
-\[\begin{align} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{align}\]
+\[\begin{aligned} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{aligned}\]
 
-\[\begin{align} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{align}\]
+\[\begin{aligned} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{aligned}\]
 
 下面我们介绍一个重要的定理：
 
@@ -1171,7 +1171,7 @@ Hodge Duality
 >   
 > 定义电磁二阶微分形式为（采取自然单位制）:  
 >   
->  \(\begin{align} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{align}\)   
+>  \[\begin{aligned} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned}\]   
 >   
 > 它实际上是 4-势 的外微分：  
 >  \(F = \mathrm{d}A\)   
@@ -1204,7 +1204,7 @@ Hodge Duality
 >   
 > 在上述的内积（闵可夫斯基度规）下，麦克斯韦方程可以写成如下形式：  
 >   
->  \(\left\{\quad \begin{align} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{align} \right.\)   
+>  \[\left\{\quad \begin{aligned} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{aligned} \right.\]   
 >   
 > 感兴趣的读者可以自行推导上式。计算并不复杂。其中 \(\mathrm{d} F = 0\) 是很显然的，因为 \(F = \mathrm{d}A\) 而 \(\mathrm{d}\mathrm{d} = 0\) 。
 

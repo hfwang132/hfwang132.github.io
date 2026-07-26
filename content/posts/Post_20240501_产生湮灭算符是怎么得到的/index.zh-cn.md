@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240527_产生湮灭算符是怎么得到的/"
 draft: false
 tags: ["数学物理方法"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 author: "Haifei"
 ---
 

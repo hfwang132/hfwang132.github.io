@@ -36,6 +36,60 @@ class MathDelimiterTests(unittest.TestCase):
         source = "Use `$x$` here.\n```tex\n$x$\n```\n"
         self.assertEqual(MODULE.convert_math_delimiters(source), source)
 
+    def test_converts_align_nested_in_inline_math_to_display_aligned(self):
+        source = r"> $\begin{align}a&=b\\c&=d\end{align}$"
+        expected = r"> \[\begin{aligned}a&=b\\c&=d\end{aligned}\]"
+        self.assertEqual(MODULE.convert_math_delimiters(source), expected)
+
+    def test_normalizes_align_nested_in_existing_display_math(self):
+        source = (
+            r"\[\left\{\begin{align}a&=b\\c&=d"
+            r"\end{align}\right.\]"
+        )
+        expected = (
+            r"\[\left\{\begin{aligned}a&=b\\c&=d"
+            r"\end{aligned}\right.\]"
+        )
+        self.assertEqual(MODULE.normalize_katex_environments(source), expected)
+
+    def test_removes_equation_environment_nested_in_math_delimiters(self):
+        source = (
+            r"Result: \(\begin{equation}x=1\end{equation}\)."
+        )
+        expected = r"Result: \[x=1\]."
+        self.assertEqual(MODULE.normalize_katex_environments(source), expected)
+
+    def test_does_not_normalize_katex_examples_inside_code(self):
+        source = (
+            "Use `\\(\\begin{align}a&=b\\end{align}\\)`.\n"
+            "```tex\n"
+            "\\[\\begin{align}a&=b\\end{align}\\]\n"
+            "```\n"
+        )
+        self.assertEqual(MODULE.normalize_katex_environments(source), source)
+
+    def test_removes_nested_delimiters_between_display_environments(self):
+        source = (
+            r"\[\begin{align}a&=b\end{align}"
+            r"\( \)"
+            r"\begin{align}c&=d\end{align}\]"
+        )
+        expected = (
+            r"\[\begin{aligned}a&=b\end{aligned}"
+            r" "
+            r"\begin{aligned}c&=d\end{aligned}\]"
+        )
+        self.assertEqual(MODULE.normalize_katex_environments(source), expected)
+
+    def test_repository_posts_have_no_nested_katex_block_environments(self):
+        posts = Path(__file__).resolve().parents[1] / "content" / "posts"
+        invalid = []
+        for path in sorted(posts.glob("*/index*.md")):
+            content = path.read_text(encoding="utf-8")
+            if MODULE.normalize_katex_environments(content) != content:
+                invalid.append(str(path.relative_to(posts.parent.parent)))
+        self.assertEqual(invalid, [])
+
 
 class ImageShortcodeTests(unittest.TestCase):
     def test_converts_standalone_markdown_images(self):

@@ -56,7 +56,7 @@ author: "Haifei"
 
 如果考虑余切空间中的电磁 2-形式（采取自然单位制）:
 
-\[\begin{align} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{align}\]
+\[\begin{aligned} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned}\]
 
 由于我们可以通过度规张量来任意升降一个张量的指标，所以对上式升指标，我们也可以写出一个 \((2,0)\) 型电磁张量，它以 \(\frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\) 的外积为基。
 
@@ -66,7 +66,7 @@ author: "Haifei"
 
 于是，在闵可夫斯基度规 \(\text{diag}(-1,1,1,1)\) 下，麦克斯韦方程就可以写成很简洁的形式：
 
-\[\left\{\quad \begin{align} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{align} \right.\]
+\[\left\{\quad \begin{aligned} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{aligned} \right.\]
 
 其中 \(\star\) 是 Hodge 星算子（也就是 Hodge 对偶）。
 

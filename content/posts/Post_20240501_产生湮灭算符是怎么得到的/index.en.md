@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240527_产生湮灭算符是怎么得到的/"
 draft: false
 tags: ["Mathematical Methods in Physics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

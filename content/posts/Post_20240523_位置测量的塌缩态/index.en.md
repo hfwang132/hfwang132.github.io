@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240527_位置测量的塌缩态/"
 draft: false
 tags: ["Quantum Measurement Theory"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

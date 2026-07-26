@@ -7,7 +7,7 @@ aliases:
   - "/Post_20251012_电磁波是光子的概率波吗/"
 draft: false
 tags: ["电磁波", "光子"]
-categories: ["量子光学"]
+categories: ["量子信息/量子光学"]
 author: "Haifei"
 ---
 

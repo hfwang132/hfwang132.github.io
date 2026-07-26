@@ -7,7 +7,7 @@ aliases:
   - "/Post_20251012_当我们做二次量子化的时候-我们究竟在做什么/"
 draft: false
 tags: ["二次量子化"]
-categories: ["量子力学"]
+categories: ["量子信息/量子光学"]
 author: "Haifei"
 ---
 

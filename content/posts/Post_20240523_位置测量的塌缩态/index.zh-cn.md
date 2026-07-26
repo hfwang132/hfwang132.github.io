@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240527_位置测量的塌缩态/"
 draft: false
 tags: ["量子测量理论"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 author: "Haifei"
 ---
 

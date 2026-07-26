@@ -6,7 +6,7 @@ math: true
 originalURL: "https://zhuanlan.zhihu.com/p/646801699"
 author: "Haifei"
 tags: ["量子纠缠"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 ---
 
 ## 一、纯态与混合态  

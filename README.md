@@ -84,6 +84,41 @@ The shell wrapper has the same two modes:
 ./updates.sh "https://zhuanlan.zhihu.com/p/ARTICLE_ID" --publish
 ```
 
+## Synchronizing the CV from Overleaf
+
+The authoritative CV source is the private Overleaf project at
+`https://git@git.overleaf.com/6a60bd158a3c2cea9ab34b7e`. Its local checkout
+is stored in `.external/overleaf-cv`, which is ignored by this public
+repository. The current website CV is generated from `resume.tex`.
+
+Pull the newest Overleaf revision and regenerate the shared structured CV data.
+The `/cv/` and `/en/cv/` pages keep their own language navigation and render
+the same English CV body from `data/cv.json`:
+
+```powershell
+.\sync-cv.bat
+```
+
+To regenerate from the existing checkout while offline:
+
+```powershell
+.\sync-cv.bat --no-pull
+```
+
+To pull, regenerate, validate the whole Hugo site, commit all current website
+changes, and push:
+
+```powershell
+.\sync-cv.bat --publish
+```
+
+Overleaf authentication is handled by Git Credential Manager; never put an
+Overleaf token in this repository or in the clone URL. The public web CV omits
+the phone numbers present in the TeX source. If `latexmk` and XeLaTeX are
+available, the sync also compiles `resume.tex` and copies the PDF to
+`static/cv/Haifei-Wang-CV.pdf`. Use `--require-pdf` when a missing or failed PDF
+build should stop the sync.
+
 ## English translation with OpenAI
 
 The translation pipeline uses the OpenAI Responses API for a newly imported
@@ -295,6 +330,11 @@ c &= d
 \end{aligned}
 \]
 ```
+
+KaTeX block environments must not be nested directly inside `\(...\)` or
+`\[...\]`. The importer therefore rewrites `align`, `alignat`, and `equation`
+to embeddable display forms such as `aligned`. The test suite also scans every
+post for invalid legacy nesting before deployment.
 
 LaTeX line breaks therefore remain `\\`. The legacy whole-file MathJax
 replacement and undo scripts have been removed. Historical posts retain their

@@ -6,7 +6,7 @@ aliases:
   - "/en/photon_wave_func/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

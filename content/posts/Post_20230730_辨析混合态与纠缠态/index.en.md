@@ -6,7 +6,7 @@ math: true
 originalURL: "https://zhuanlan.zhihu.com/p/646801699"
 author: "Haifei"
 tags: ["Quantum Entanglement"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 ---
 
 ## I. Pure States and Mixed States  

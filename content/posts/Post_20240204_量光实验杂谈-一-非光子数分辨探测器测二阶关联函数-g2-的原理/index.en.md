@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240205_量光实验杂谈-一-非光子数分辨探测器测二阶关联函数-g2-的原理/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

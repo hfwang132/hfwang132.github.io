@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240413_光子和电磁场波包有什么关系/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

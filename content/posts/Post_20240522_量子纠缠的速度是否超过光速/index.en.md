@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240527_量子纠缠的速度是否超过光速/"
 draft: false
 tags: ["Quantum Information"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

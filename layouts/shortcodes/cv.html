@@ -1,0 +1,18 @@
+{{- $cv := site.Data.cv -}}
+{{- if not $cv -}}
+  {{- errorf "CV data is missing; run sync-cv.bat before building the site" -}}
+{{- end -}}
+
+<div class="cv-contact">
+  {{- range $index, $contact := $cv.contacts -}}
+    {{- if gt $index 0 -}}
+      <span aria-hidden="true">·</span>
+    {{- end -}}
+    <a href="{{ $contact.url | safeURL }}">{{ $contact.label }}</a>
+  {{- end -}}
+</div>
+
+{{- range $cv.sections }}
+  <h2>{{ .title | safeHTML }}</h2>
+  {{ .content | markdownify }}
+{{- end }}

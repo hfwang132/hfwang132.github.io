@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240422_量光实验杂谈-三-量子态层析/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

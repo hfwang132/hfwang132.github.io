@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20251012_量子态的经典阴影-Classical-Shadows/"
 draft: false
 tags: ["Classical Shadows", "Haar Measure"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

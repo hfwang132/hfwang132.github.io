@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20251012_当我们做二次量子化的时候-我们究竟在做什么/"
 draft: false
 tags: ["Second Quantization"]
-categories: ["Quantum Mechanics"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

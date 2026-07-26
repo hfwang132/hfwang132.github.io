@@ -1,6 +1,9 @@
 # Local credentials (never commit Zhihu cookies).
 .secrets/
 
+# Local copies of external source projects (for example, the Overleaf CV).
+.external/
+
 # Python
 .venv/
 __pycache__/

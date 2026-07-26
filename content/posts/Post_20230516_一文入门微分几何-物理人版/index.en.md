@@ -431,7 +431,7 @@ What kind of basis does the cotangent space containing the differential at the p
 
 A multilinear map is a map with multiple vector inputs that is linear in each argument. More specifically, an \(n\)-linear map is defined as \(f:V_1\times V_2\times \cdots\times V_n \rightarrow W\), and satisfies the following properties:
 
-\[\begin{align} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{align}\]
+\[\begin{aligned} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}\]
 
 > **Comment**  
 >   
@@ -520,7 +520,7 @@ These two definitions are equivalent. For every such multilinear map, there is a
 >   
 > Thus, \(a\in V^*\otimes V^*\) is a tensor of type \((0,2)\). It maps two tensors of type \((1,0)\) (that is, tangent vectors) to a real number. In the index notation familiar to physicists, this is \(a_{ij}v^iv^j\in \mathbb{R}\). If we also write out the basis, we obtain the following expression:   
 >   
-> \(\begin{align} a(v,w)&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) (v^{1}e_1+v^2e_2,w^{2}e_1+w^2e_2) \\&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2})(v^1w^1e_1\otimes e_1+v^1w^2e_1\otimes e_2+v^2w^1e_2\otimes e_1+v^2w^2e_2\otimes e_2) \\&=a_{ij}v^{i}w^{j} \end{align}\)   
+> \[\begin{aligned} a(v,w)&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2}) (v^{1}e_1+v^2e_2,w^{2}e_1+w^2e_2) \\&=(a_{11}e^{1}\otimes e^{1}+a_{12}e^{1}\otimes e^{2}+a_{21}e^{2}\otimes e^{1}+a_{22}e^{2}\otimes e^{2})(v^1w^1e_1\otimes e_1+v^1w^2e_1\otimes e_2+v^2w^1e_2\otimes e_1+v^2w^2e_2\otimes e_2) \\&=a_{ij}v^{i}w^{j} \end{aligned}\]   
 >   
 > Or, more compactly:   
 >   
@@ -704,7 +704,7 @@ In other words, an inner product (a metric tensor) can be defined at every point
 >   
 > For example, we can “lower” a tangent vector field to a cotangent vector field:  
 >   
->  \(\begin{align} \flat:TM&\rightarrow T^*M \\ X^i&\mapsto g_{ij} X^i=X_j \end{align}\)   
+>  \[\begin{aligned} \flat:TM&\rightarrow T^*M \\ X^i&\mapsto g_{ij} X^i=X_j \end{aligned}\]   
 >   
 > When we raise and lower tensor indices, we are in fact composing beautiful musical scores!  
 >   
@@ -740,9 +740,9 @@ In physics, exchanging two identical fermions introduces a minus sign into the w
 
 An alternating multilinear map is a multilinear map for which exchanging two inputs introduces a minus sign in the result. More specifically, an alternating \(n\)-linear map is defined as \(f:V^n\rightarrow W\), and satisfies the following properties:
 
-a) \(\begin{align} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{align}\)
+a) \[\begin{aligned} &f(v_1,\cdots,\lambda a+ \mu b,\cdots,v_n)\\ &=\lambda f(v_1,\cdots,a,\cdots,v_n)+\mu f(v_1,\cdots,b,\cdots,v_n) \end{aligned}\]
 
-b) \(\begin{align} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n)\\  &=-f(v_1,\cdots,v_j,\cdots,v_i,\cdots,v_n) \end{align}\)
+b) \[\begin{aligned} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n)\\  &=-f(v_1,\cdots,v_j,\cdots,v_i,\cdots,v_n) \end{aligned}\]
 
 ### 3.2 Exterior Product and Exterior Algebra  
 > **Comment**  
@@ -867,7 +867,7 @@ Let us use an example to see exactly how an n-form acts on n tangent vectors.
 > At a point \(p\) on a 3-dimensional manifold, consider the following 2-form:  
 >  \(\omega = 5\mathrm{d}x^1 \wedge \mathrm{d}x^2 -2\mathrm{d}x^2\wedge \mathrm{d}x^3\)   
 > Acting on two tangent vectors \(u=\partial_1+2\partial_2+3\partial_3\) and \(v=3\partial_1-2\partial_2+\partial_3\), it gives:  
->  \(\begin{align} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^1(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \end{vmatrix}\\ &-2\begin{vmatrix} \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^3(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^3(3\partial_1-2\partial_2+\partial_3) \end{vmatrix} \\&=5\cdot\begin{vmatrix}1&3\\2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2\\3 & 1\end{vmatrix} \\&=-48 \end{align}\)
+>  \[\begin{aligned} \omega(u,v)&= 5\begin{vmatrix} \mathrm{d}x^1(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^1(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \end{vmatrix}\\ &-2\begin{vmatrix} \mathrm{d}x^2(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^2(3\partial_1-2\partial_2+\partial_3) \\ \mathrm{d}x^3(\partial_1+2\partial_2+3\partial_3) & \mathrm{d}x^3(3\partial_1-2\partial_2+\partial_3) \end{vmatrix} \\&=5\cdot\begin{vmatrix}1&3\\2 &-2\end{vmatrix}-2\cdot\begin{vmatrix}2&-2\\3 & 1\end{vmatrix} \\&=-48 \end{aligned}\]
 
 More specifically, a general differential m-form can be written as:
 
@@ -904,7 +904,7 @@ The exterior derivative is a map \(\mathrm{d}: \bigwedge^n(T_p^*M)\rightarrow \b
 > **Example 3.2**  
 >   
 > For a 2-form on a 3-dimensional manifold, \(\varphi=z^2\mathrm{d}x\wedge\mathrm{d}y+x\sin y\,\mathrm{d}y\wedge \mathrm{d}z\), its exterior derivative is:  
->  \(\begin{align} \mathrm{d}\varphi   &= \mathrm{d}(z^2) \wedge \mathrm{d}x \wedge \mathrm{d}y + \mathrm{d}(x \sin y) \wedge \mathrm{d}y \wedge \mathrm{d}z \\&=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y  \\&  +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z  \\&=(2z+\sin y)\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z  \end{align}\)
+>  \[\begin{aligned} \mathrm{d}\varphi   &= \mathrm{d}(z^2) \wedge \mathrm{d}x \wedge \mathrm{d}y + \mathrm{d}(x \sin y) \wedge \mathrm{d}y \wedge \mathrm{d}z \\&=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y  \\&  +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z  \\&=(2z+\sin y)\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z  \end{aligned}\]
 
 The preceding is an explicit definition. We can also define the exterior derivative through its properties. Specifically, the exterior derivative satisfies the following three properties:
 
@@ -938,7 +938,7 @@ The preceding example provides some motivation for the definition of the gradien
 
 The gradient is defined as:
 
-\[\begin{align} \nabla:=\sharp\mathrm{d} \end{align}\]
+\[\begin{aligned} \nabla:=\sharp\mathrm{d} \end{aligned}\]
 
 > **Remark**  
 >   
@@ -954,11 +954,11 @@ In the following example (Example 3.4), we give the relationship between curl an
 >   
 > When the exterior derivative operator \(\mathrm{d}\) acts on a 1-form (cotangent vector field), it produces a 2-form:   
 >   
-> \(\begin{align} \mathrm{d}(f_i\mathrm{d}x^i)&=\cancel{\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1}+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\&+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\cancel{\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2}+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\&+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\cancel{\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3} \end{align}\)  
+> \[\begin{aligned} \mathrm{d}(f_i\mathrm{d}x^i)&=\cancel{\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1}+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\&+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\cancel{\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2}+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\&+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\cancel{\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3} \end{aligned}\]  
 >   
 > Applying the Hodge star operator once gives a 1-form:  
 >   
-> \(\begin{align} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\&\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{\,\,\,\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}  -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\&\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1  \\&=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3  \end{align}\)  
+> \[\begin{aligned} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\&\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{\,\,\,\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}  -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\&\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1  \\&=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3  \end{aligned}\]  
 >   
 > It can be written as the inner product of the curl and a tangent vector: \(\star\mathrm{d}f:\star\mathrm{d}f(v)=\langle \nabla \times \sharp f\mid v \rangle\)   
 >   
@@ -993,7 +993,7 @@ The preceding example provides some motivation for the definition of curl. We ca
 
 Curl is defined as
 
-\[\begin{align} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{align}\]
+\[\begin{aligned} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{aligned}\]
 
 In the following example (Example 3.5), we give the relationship between divergence and the exterior derivative.
 
@@ -1027,7 +1027,7 @@ The preceding example provides some motivation for the definition of divergence.
 
 Divergence is defined as
 
-\[\begin{align} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{align}\]
+\[\begin{aligned} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{aligned}\]
 
 > **Remark**  
 >   
@@ -1035,11 +1035,11 @@ Divergence is defined as
 
 Summary:
 
-\[\begin{align} \nabla:=\sharp\mathrm{d} \end{align}\]
+\[\begin{aligned} \nabla:=\sharp\mathrm{d} \end{aligned}\]
 
-\[\begin{align} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{align}\]
+\[\begin{aligned} (\nabla\times):=\sharp\star \mathrm{d} \flat \end{aligned}\]
 
-\[\begin{align} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{align}\]
+\[\begin{aligned} (\nabla\cdot): =\star \mathrm{d}\star\flat \end{aligned}\]
 
 We now introduce an important theorem:
 
@@ -1171,7 +1171,7 @@ Having defined the Hodge dual, we can rewrite Maxwell's equations in the languag
 >   
 > Define the electromagnetic 2-form as follows (using natural units):  
 >   
->  \(\begin{align} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{align}\)   
+>  \[\begin{aligned} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned}\]   
 >   
 > It is in fact the exterior derivative of the 4-potential:  
 >  \(F = \mathrm{d}A\)   
@@ -1204,7 +1204,7 @@ Having defined the Hodge dual, we can rewrite Maxwell's equations in the languag
 >   
 > Under the inner product above (the Minkowski metric), Maxwell's equations can be written as follows:  
 >   
->  \(\left\{\quad \begin{align} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{align} \right.\)   
+>  \[\left\{\quad \begin{aligned} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{aligned} \right.\]   
 >   
 > Interested readers may derive the equation above themselves. The calculation is not complicated. Here, \(\mathrm{d} F = 0\) is immediate, because \(F = \mathrm{d}A\) whereas \(\mathrm{d}\mathrm{d} = 0\) .
 

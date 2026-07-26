@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240719_激光的全量子理论/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

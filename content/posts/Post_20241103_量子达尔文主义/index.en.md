@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20250108_量子达尔文主义/"
 draft: false
 tags: ["Quantum Darwinism"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

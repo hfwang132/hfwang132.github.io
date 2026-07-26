@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240527_量子纠缠与经典关联的区别-以及量子测量问题/"
 draft: false
 tags: ["量子测量理论"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---

@@ -6,7 +6,7 @@ aliases:
   - "/en/HBT_spectral_correlation/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

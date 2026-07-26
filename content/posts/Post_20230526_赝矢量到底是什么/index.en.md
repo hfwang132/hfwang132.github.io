@@ -56,7 +56,7 @@ Incidentally, the electric field is also a bivector, with basis \(\frac{\partial
 
 If we consider the electromagnetic 2-form in the cotangent space (using natural units):
 
-\[\begin{align} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{align}\]
+\[\begin{aligned} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned}\]
 
 Since we can freely raise or lower the indices of a tensor using the metric tensor, by raising the indices in the above expression, we can also write an electromagnetic tensor of type \((2,0)\), whose basis is the exterior products of \(\frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\).
 
@@ -66,7 +66,7 @@ Now consider the current 1-form: \(J=-\rho\mathrm{d}t+J_x\mathrm{d}x+J_y\mathrm{
 
 Then, under the Minkowski metric \(\text{diag}(-1,1,1,1)\), Maxwell's equations can be written in a very concise form:
 
-\[\left\{\quad \begin{align} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{align} \right.\]
+\[\left\{\quad \begin{aligned} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{aligned} \right.\]
 
 Here \(\star\) is the Hodge star operator (that is, the Hodge dual).
 

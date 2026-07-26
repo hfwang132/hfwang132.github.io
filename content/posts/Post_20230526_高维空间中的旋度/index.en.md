@@ -35,7 +35,7 @@ The exterior derivative operator is a map \(\mathrm{d}: \bigwedge^n(T_p^*M)\righ
 
 > **Comment** This pile of indices is far too ugly; it is better to look at the example below.   
 >   
-> **Example**  For a 2-form on a 3-dimensional manifold: \(\varphi=z^2\mathrm{d}x\wedge\mathrm{d}y+x\sin y\,\mathrm{d}y\wedge \mathrm{d}z\), its exterior derivative is: \(\begin{align} \mathrm{d}\varphi   &=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y  \\&  +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z  \\&=(2z+\sin y)\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z  \end{align}\)
+> **Example**  For a 2-form on a 3-dimensional manifold: \(\varphi=z^2\mathrm{d}x\wedge\mathrm{d}y+x\sin y\,\mathrm{d}y\wedge \mathrm{d}z\), its exterior derivative is: \[\begin{aligned} \mathrm{d}\varphi   &=\left(\frac{\partial z^2}{\partial x}\mathrm{d}x+\frac{\partial z^2}{\partial y}\mathrm{d}y+\frac{\partial z^2}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}x\wedge\mathrm{d}y  \\&  +\left(\frac{\partial (x\sin y)}{\partial x}\mathrm{d}x+\frac{\partial (x\sin y)}{\partial y}\mathrm{d}y+\frac{\partial (x\sin y)}{\partial z}\mathrm{d}z\right)\wedge\mathrm{d}y\wedge\mathrm{d}z  \\&=(2z+\sin y)\,\mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z  \end{aligned}\]
 
 ### Curl  
 
@@ -43,11 +43,11 @@ In the following example, we will show the relationship between curl and the ext
 
 Example: On a three-dimensional manifold, after the exterior derivative operator \(\mathrm{d}\) acts on a 1-form, it yields a 2-form:   
   
- \[\begin{align} \mathrm{d}(f_i\mathrm{d}x^i)&=\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\&+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\&+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3 \end{align}\]   
+ \[\begin{aligned} \mathrm{d}(f_i\mathrm{d}x^i)&=\frac{\partial f_1}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^1+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^1 \\&+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^2+\frac{\partial f_2}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^2 \\&+\frac{\partial f_3}{\partial x^1}\mathrm{d}x^1\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^2\wedge\mathrm{d}x^3+\frac{\partial f_3}{\partial x^3}\mathrm{d}x^3\wedge\mathrm{d}x^3 \end{aligned}\]   
   
 Applying the Hodge star operator once to it yields a 1-form:   
   
-\[\begin{align} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\&\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{\,\,\,\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}  -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\&\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1  \\&=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3  \end{align}\]   
+\[\begin{aligned} \star \mathrm{d}(f_i\mathrm{d}x^i)&=\phantom{+\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3+\frac{\partial f_1}{\partial x^3}\mathrm{d}x^2 \\&\phantom{=}+\frac{\partial f_2}{\partial x^1}\mathrm{d}x^3 \phantom{\,\,\,\,-\frac{\partial f_1}{\partial x^2}\mathrm{d}x^3}  -\frac{\partial f_2}{\partial x^3}\mathrm{d}x^1 \\&\phantom{=}-\frac{\partial f_3}{\partial x^1}\mathrm{d}x^2+\frac{\partial f_3}{\partial x^2}\mathrm{d}x^1  \\&=\left(\frac{\partial f_3}{\partial x^2}-\frac{\partial f_2}{\partial x^3}\right)\mathrm{d}x^1 + \left(\frac{\partial f_1}{\partial x^3}-\frac{\partial f_3}{\partial x^1}\right)\mathrm{d}x^2 + \left(\frac{\partial f_2}{\partial x^1}-\frac{\partial f_1}{\partial x^2}\right)\mathrm{d}x^3  \end{aligned}\]   
   
 It can be written as the inner product of the curl and a tangent vector: \(\star\mathrm{d}f:\star\mathrm{d}f(v)=\langle \nabla \times f^{\sharp}\mid v \rangle\)   
   
@@ -78,7 +78,7 @@ where \(F=f^\sharp\) is a tangent vector field, and \(f\) is a cotangent vector 
 
 Inspired by the example above, we can define curl as
 
-\[\begin{align} (\nabla\times) :\quad & \Gamma(TM)\rightarrow \Gamma\left(\bigwedge^{n-2}TM\right)\\ &F\mapsto(\star \mathrm{d} (F^{\flat}))^{\sharp} \end{align}\]
+\[\begin{aligned} (\nabla\times) :\quad & \Gamma(TM)\rightarrow \Gamma\left(\bigwedge^{n-2}TM\right)\\ &F\mapsto(\star \mathrm{d} (F^{\flat}))^{\sharp} \end{aligned}\]
 
 where \(F\) is a tangent vector field; \(F^{\flat}\) is a cotangent vector field (a 1-form); \( \mathrm{d} (F^{\flat})\) is a 2-form, and \(\star \mathrm{d} (F^{\flat})\) is an \((n-2)\)-form.
 

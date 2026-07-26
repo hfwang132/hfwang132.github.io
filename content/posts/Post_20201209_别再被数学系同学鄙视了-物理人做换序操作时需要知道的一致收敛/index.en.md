@@ -94,7 +94,7 @@ In plain language, if the absolute value of the difference between the partial s
 This definition also applies to ordinary sequences of functions; one need only replace \(S_n(x)\) with the general term of the sequence of functions.
 
 > **Example 1.1**  
-> To show the reader that uniform convergence is stronger than ordinary pointwise convergence, let us give a simple example. Let the partial sum function (or the general term of a sequence of functions) be \(S_n(x)=x^n\). Clearly, on the interval \([0,1]\), it converges pointwise to the function \(\begin{equation}  S(x)=  \begin{cases}  0&0\le x<1\\  1&x=1  \end{cases}  \end{equation}\).  
+> To show the reader that uniform convergence is stronger than ordinary pointwise convergence, let us give a simple example. Let the partial sum function (or the general term of a sequence of functions) be \(S_n(x)=x^n\). Clearly, on the interval \([0,1]\), it converges pointwise to the function \[  S(x)=  \begin{cases}  0&0\le x<1\\  1&x=1  \end{cases}  \].  
 > However, no matter how large \(n\) is, the partial sum function \(S_n(x)\) can always attain the value \(0.5\) (by the continuity of the partial sum function and the intermediate value theorem). In other words, \(\forall n\exists x_0(S_n(x_0)=0.5)\). This makes it impossible to control the upper bound: there are always some \(x\) that you cannot control. In fact, in this example, no matter how large \(n\) is, the supremum of the error (that is, the \(\sup\) symbol) is always \(1\).  
 > Uniform convergence, on the other hand, allows one to control all \(f(x)\) simultaneously, making them all approach the target function arbitrarily closely according to the desired upper bound \(\epsilon\).
 

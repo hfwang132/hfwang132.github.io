@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240527_光子的轨道角动量/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

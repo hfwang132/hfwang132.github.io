@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240216_复数对于描述电磁波有什么重要性/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

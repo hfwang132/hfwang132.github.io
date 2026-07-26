@@ -55,7 +55,7 @@ categories: ["数学物理方法"]
 
 快捷方式的示意图如下：
 
-\[\begin{alignat}{6} & u(x) &  \quad & u^{(1)}(x) & \quad & u^{(2)}(x) & \quad & u^{(3)}(x) &  \quad & \cdots \\ & & \searrow^{+} & & \searrow^{-} & & \searrow^{+} & & \searrow^{-} \\ & v(x) & \quad & v^{(-1)}(x) & \quad & v^{(-2)}(x) & \quad & v^{(-3)}(x) & \quad & \cdots & & \end{alignat}\]
+\[\begin{alignedat}{6} & u(x) &  \quad & u^{(1)}(x) & \quad & u^{(2)}(x) & \quad & u^{(3)}(x) &  \quad & \cdots \\ & & \searrow^{+} & & \searrow^{-} & & \searrow^{+} & & \searrow^{-} \\ & v(x) & \quad & v^{(-1)}(x) & \quad & v^{(-2)}(x) & \quad & v^{(-3)}(x) & \quad & \cdots & & \end{alignedat}\]
 
 其中 \(u^{(n)}(x)\) 表示 \(u(x)\) 的 \(n\) 阶导函数， \(v^{(-n)}(x)\) 表示 \(v(x)\) 的 \(n\) 次不定积分。
 

@@ -7,7 +7,7 @@ aliases:
   - "/Post_20251012_量子态的经典阴影-Classical-Shadows/"
 draft: false
 tags: ["经典阴影", "Harr 测度"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---

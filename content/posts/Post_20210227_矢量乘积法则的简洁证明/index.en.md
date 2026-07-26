@@ -59,7 +59,7 @@ As another example, \(c_{ik}=\sum_{j}a_{ij}b_{jk}\) can be written as \(c_{ik}=a
 
 **Kronecker Delta** \(\delta_{ij}\)
 
-The definition of the Kronecker delta is \(\begin{equation}  \delta_{ij}=  \begin{cases}  1&i=j\\  0&i\neq j  \end{cases}  \end{equation}\)
+The definition of the Kronecker delta is \[  \delta_{ij}=  \begin{cases}  1&i=j\\  0&i\neq j  \end{cases}  \]
 
 ---
 
@@ -139,7 +139,7 @@ Comment: \(fA_i\) is a scalar, so one can directly apply the scalar product rule
 
 Proof:
 
-\[\begin{align} \left[\nabla\times(f\mathrm{A})\right]_i&=\epsilon_{ijk}\frac{\partial}{\partial x_j}(fA_k) \\&=\epsilon_{ijk}f\frac{\partial}{\partial x_j}A_k+\epsilon_{ijk}A_k\frac{\partial}{\partial x_j}f \\&=\left[f\nabla\times\mathrm{A}+\nabla f\times\mathrm{A} \right]_i\end{align}\]
+\[\begin{aligned} \left[\nabla\times(f\mathrm{A})\right]_i&=\epsilon_{ijk}\frac{\partial}{\partial x_j}(fA_k) \\&=\epsilon_{ijk}f\frac{\partial}{\partial x_j}A_k+\epsilon_{ijk}A_k\frac{\partial}{\partial x_j}f \\&=\left[f\nabla\times\mathrm{A}+\nabla f\times\mathrm{A} \right]_i\end{aligned}\]
 
 Comment: Note the use of the commutativity of scalar multiplication.
 
@@ -149,7 +149,7 @@ Comment: Note the use of the commutativity of scalar multiplication.
 
 Proof:
 
-\[\begin{align} \nabla\cdot(\mathrm{A}\times\mathrm{B})&=\frac{\partial}{\partial x_i}(\mathrm{A}\times\mathrm{B})_i \\&=\frac{\partial}{\partial x_i}(\epsilon_{ijk}A_jB_k) \\&=\epsilon_{ijk}\frac{\partial}{\partial x_i}(A_jB_k) \\&=B_k\epsilon_{ijk}\frac{\partial}{\partial x_i}A_j+\epsilon_{ijk}A_j\frac{\partial}{\partial x_i}B_k \\&=B_k\epsilon_{kij}\frac{\partial}{\partial x_i}A_j-\epsilon_{jik}A_j\frac{\partial}{\partial x_i}B_k \\&=\mathrm{B}\cdot(\nabla\times\mathrm{A})-\mathrm{A}\cdot(\nabla\times\mathrm{B})  \end{align}\]
+\[\begin{aligned} \nabla\cdot(\mathrm{A}\times\mathrm{B})&=\frac{\partial}{\partial x_i}(\mathrm{A}\times\mathrm{B})_i \\&=\frac{\partial}{\partial x_i}(\epsilon_{ijk}A_jB_k) \\&=\epsilon_{ijk}\frac{\partial}{\partial x_i}(A_jB_k) \\&=B_k\epsilon_{ijk}\frac{\partial}{\partial x_i}A_j+\epsilon_{ijk}A_j\frac{\partial}{\partial x_i}B_k \\&=B_k\epsilon_{kij}\frac{\partial}{\partial x_i}A_j-\epsilon_{jik}A_j\frac{\partial}{\partial x_i}B_k \\&=\mathrm{B}\cdot(\nabla\times\mathrm{A})-\mathrm{A}\cdot(\nabla\times\mathrm{B})  \end{aligned}\]
 
 Comment: Note the use of the permutation properties of the Levi-Civita symbol. \(ijk\) and \(kij\) have the same parity, whereas \(ijk\) and \(jik\) have opposite parities.
 
@@ -159,7 +159,7 @@ Comment: Note the use of the permutation properties of the Levi-Civita symbol. \
 
 Proof:
 
-\[\begin{align} [\nabla(\mathrm{A}\cdot \mathrm{B})]_i&=\frac{\partial }{\partial x_i}(\mathrm{A}\cdot\mathrm{B}) \\&=\frac{\partial }{\partial x_i}(A_jB_j) \\&=B_j\frac{\partial }{\partial x_i}A_j+A_j\frac{\partial }{\partial x_i}B_j \end{align}\]
+\[\begin{aligned} [\nabla(\mathrm{A}\cdot \mathrm{B})]_i&=\frac{\partial }{\partial x_i}(\mathrm{A}\cdot\mathrm{B}) \\&=\frac{\partial }{\partial x_i}(A_jB_j) \\&=B_j\frac{\partial }{\partial x_i}A_j+A_j\frac{\partial }{\partial x_i}B_j \end{aligned}\]
 
 At this point, the proof seems to have stalled. However, notice that the result contains a curl, which means that we need to produce a Levi-Civita symbol; earlier, we derived the relation between the Levi-Civita symbol and the Kronecker delta:
 
@@ -167,7 +167,7 @@ At this point, the proof seems to have stalled. However, notice that the result 
 
 Therefore, we consider inserting two Kronecker delta symbols. First, consider the first term of the expression above:
 
-\[\begin{align}  \end{align}\( \)\begin{align} B_j\frac{\partial }{\partial x_i}A_j&=\delta_{im}\delta_{jl}B_j\frac{\partial }{\partial x_m}A_l \\&=(\delta_{il}\delta_{jm}-\epsilon_{ijk}\epsilon_{klm})B_j\frac{\partial }{\partial x_m}A_l \\&=\delta_{il}\delta_{jm}B_j\frac{\partial }{\partial x_m}A_l-\epsilon_{ijk}\epsilon_{klm}B_j\frac{\partial }{\partial x_m}A_l \\&=B_j\frac{\partial }{\partial x_j}A_i-\epsilon_{ijk}B_j(\epsilon_{klm}\frac{\partial }{\partial x_m}A_l) \\&=\left[(\mathrm{B}\cdot\nabla)\mathrm{A}+\mathrm{B}\times(\nabla\times\mathrm{A})\right]_i \end{align}\]
+\[\begin{aligned}  \end{aligned} \begin{aligned} B_j\frac{\partial }{\partial x_i}A_j&=\delta_{im}\delta_{jl}B_j\frac{\partial }{\partial x_m}A_l \\&=(\delta_{il}\delta_{jm}-\epsilon_{ijk}\epsilon_{klm})B_j\frac{\partial }{\partial x_m}A_l \\&=\delta_{il}\delta_{jm}B_j\frac{\partial }{\partial x_m}A_l-\epsilon_{ijk}\epsilon_{klm}B_j\frac{\partial }{\partial x_m}A_l \\&=B_j\frac{\partial }{\partial x_j}A_i-\epsilon_{ijk}B_j(\epsilon_{klm}\frac{\partial }{\partial x_m}A_l) \\&=\left[(\mathrm{B}\cdot\nabla)\mathrm{A}+\mathrm{B}\times(\nabla\times\mathrm{A})\right]_i \end{aligned}\]
 
 The second term follows similarly, and thus the original expression is proved.
 

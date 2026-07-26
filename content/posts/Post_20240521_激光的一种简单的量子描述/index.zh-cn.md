@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240527_激光的一种简单的量子描述/"
 draft: false
 tags: ["量子光学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---

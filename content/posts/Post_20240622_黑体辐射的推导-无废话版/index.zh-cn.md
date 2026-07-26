@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240727_黑体辐射的推导-无废话版/"
 draft: false
 tags: ["量子光学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---

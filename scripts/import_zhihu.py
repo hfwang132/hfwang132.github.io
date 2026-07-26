@@ -256,6 +256,109 @@ def parse_published_date_override(value: str | None) -> datetime | None:
     return parsed.replace(tzinfo=SITE_TIMEZONE)
 
 
+KATEX_MATH_DELIMITERS = re.compile(
+    r"(?:"
+    r"(?P<inline_open>\\\()(?P<inline_body>.*?)(?P<inline_close>\\\))"
+    r"|"
+    r"(?P<display_open>\\\[)(?P<display_body>.*?)(?P<display_close>\\\])"
+    r")",
+    re.DOTALL,
+)
+KATEX_TOP_LEVEL_ENVIRONMENT = re.compile(
+    r"\\begin\{(?:align\*?|alignat\*?|equation\*?)\}"
+)
+
+
+def _normalize_katex_formula(match: re.Match[str]) -> str:
+    body = match.group("inline_body")
+    if body is None:
+        body = match.group("display_body")
+    if not KATEX_TOP_LEVEL_ENVIRONMENT.search(body):
+        return match.group(0)
+
+    normalized = re.sub(
+        r"\\begin\{align\*?\}",
+        r"\\begin{aligned}",
+        body,
+    )
+    normalized = re.sub(
+        r"\\end\{align\*?\}",
+        r"\\end{aligned}",
+        normalized,
+    )
+    normalized = re.sub(
+        r"\\begin\{alignat\*?\}",
+        r"\\begin{alignedat}",
+        normalized,
+    )
+    normalized = re.sub(
+        r"\\end\{alignat\*?\}",
+        r"\\end{alignedat}",
+        normalized,
+    )
+    normalized = re.sub(
+        r"\\(?:begin|end)\{equation\*?\}",
+        "",
+        normalized,
+    )
+    # A few legacy conversions inserted empty inline delimiters between two
+    # display environments. Delimiters cannot be nested inside display math.
+    normalized = re.sub(r"\\\((.*?)\\\)", r"\1", normalized, flags=re.DOTALL)
+    normalized = re.sub(r"\\\[(.*?)\\\]", r"\1", normalized, flags=re.DOTALL)
+    # Multi-line environments are display math even when the downloader
+    # originally wrapped them in single-dollar inline delimiters.
+    return rf"\[{normalized}\]"
+
+
+def normalize_katex_environments(markdown: str) -> str:
+    r"""Make top-level TeX environments valid inside KaTeX delimiters.
+
+    KaTeX rejects constructs such as ``\(\begin{align}...\end{align}\)``
+    because ``align`` and ``equation`` are top-level display environments.
+    Convert them to their embeddable equivalents while preserving code.
+    """
+
+    result: list[str] = []
+    prose: list[str] = []
+    in_fence = False
+    fence_char = ""
+
+    def flush_prose() -> None:
+        if not prose:
+            return
+        block = "".join(prose)
+        segments = re.split(r"(`+[^`]*?`+)", block)
+        for index, segment in enumerate(segments):
+            if not index % 2:
+                segments[index] = KATEX_MATH_DELIMITERS.sub(
+                    _normalize_katex_formula,
+                    segment,
+                )
+        result.append("".join(segments))
+        prose.clear()
+
+    for line in markdown.splitlines(keepends=True):
+        stripped = line.lstrip()
+        fence_match = re.match(r"(`{3,}|~{3,})", stripped)
+        if fence_match:
+            flush_prose()
+            marker = fence_match.group(1)
+            if not in_fence:
+                in_fence = True
+                fence_char = marker[0]
+            elif marker[0] == fence_char:
+                in_fence = False
+                fence_char = ""
+            result.append(line)
+            continue
+        if in_fence:
+            result.append(line)
+            continue
+        prose.append(line)
+    flush_prose()
+    return "".join(result)
+
+
 def convert_math_delimiters(markdown: str) -> str:
     """Convert downloader-added dollar delimiters to Hugo passthrough delimiters.
 
@@ -320,7 +423,7 @@ def convert_math_delimiters(markdown: str) -> str:
 
         prose.append(line)
     flush_prose()
-    return "".join(result)
+    return normalize_katex_environments("".join(result))
 
 
 def escape_shortcode_parameter(value: str) -> str:

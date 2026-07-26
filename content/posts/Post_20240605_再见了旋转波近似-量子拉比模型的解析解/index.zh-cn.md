@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240727_再见了旋转波近似-量子拉比模型的解析解/"
 draft: false
 tags: ["量子光学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---

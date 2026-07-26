@@ -55,7 +55,7 @@ This formula is useful when integrating \(r\) in spherical coordinates (if you a
 
 The diagram for the shortcut is as follows:
 
-\[\begin{alignat}{6} & u(x) &  \quad & u^{(1)}(x) & \quad & u^{(2)}(x) & \quad & u^{(3)}(x) &  \quad & \cdots \\ & & \searrow^{+} & & \searrow^{-} & & \searrow^{+} & & \searrow^{-} \\ & v(x) & \quad & v^{(-1)}(x) & \quad & v^{(-2)}(x) & \quad & v^{(-3)}(x) & \quad & \cdots & & \end{alignat}\]
+\[\begin{alignedat}{6} & u(x) &  \quad & u^{(1)}(x) & \quad & u^{(2)}(x) & \quad & u^{(3)}(x) &  \quad & \cdots \\ & & \searrow^{+} & & \searrow^{-} & & \searrow^{+} & & \searrow^{-} \\ & v(x) & \quad & v^{(-1)}(x) & \quad & v^{(-2)}(x) & \quad & v^{(-3)}(x) & \quad & \cdots & & \end{alignedat}\]
 
 Here, \(u^{(n)}(x)\) denotes the \(n\)th derivative of \(u(x)\), and \(v^{(-n)}(x)\) denotes the \(n\)th indefinite integral of \(v(x)\).
 

@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240727_为什么热光场的光强服从指数分布/"
 draft: false
 tags: ["量子光学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---
@@ -84,7 +84,7 @@ author: "Haifei"
 
 于是量子 \(g^{(2)}\) 为
 
-\[\begin{align} g^{(2)} := \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} = \frac{\sum n(n-1) p_n }{(\sum n p_n)^2} = 2 \end{align}\]
+\[\begin{aligned} g^{(2)} := \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} = \frac{\sum n(n-1) p_n }{(\sum n p_n)^2} = 2 \end{aligned}\]
 
 > 计算留给读者作为一个有趣的练习。关键在于计算指数分布的矩，它比指数分布的矩要复杂得多。
 

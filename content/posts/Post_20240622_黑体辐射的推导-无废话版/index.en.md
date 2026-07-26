@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240727_黑体辐射的推导-无废话版/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240216_复数对于描述电磁波有什么重要性/"
 draft: false
 tags: ["量子光学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 author: "Haifei"
 ---
 

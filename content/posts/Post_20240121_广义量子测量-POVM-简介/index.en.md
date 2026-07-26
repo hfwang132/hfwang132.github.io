@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240126_广义量子测量-POVM-简介/"
 draft: false
 tags: ["quantum measurement theory"]
-categories: ["quantum information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

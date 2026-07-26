@@ -6,7 +6,7 @@ aliases:
   - "/HBT_spectral_correlation/"
 draft: false
 tags: ["量子光学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---

@@ -6,7 +6,7 @@ aliases:
   - "/en/quantum_metrology/"
 draft: false
 tags: ["Quantum Metrology"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

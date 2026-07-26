@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240527_量子纠缠的速度是否超过光速/"
 draft: false
 tags: ["量子信息"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 author: "Haifei"
 ---
 

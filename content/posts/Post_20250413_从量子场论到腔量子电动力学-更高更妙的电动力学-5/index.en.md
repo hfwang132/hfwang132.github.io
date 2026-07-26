@@ -290,17 +290,17 @@ Prove \((\bm\sigma \cdot \mathbf{D})^2 = \mathbf{D}^2 - e \bm\sigma\cdot \mathbf
 >   
 > First, let us calculate \([D_i, D_j]\):   
 >   
-> \(\begin{align} [D_i, D_j] &= [\partial_i +\mathrm{i}eA_i, \partial_j +\mathrm{i}eA_j] \\ &= \cancel{[\partial_i,\partial_j]} + \cancel{e^2[A_i, A_j]} + \mathrm{i}e[\partial_i, A_j] - \mathrm{i}e[\partial_j,A_i] \end{align}\)   
+> \[\begin{aligned} [D_i, D_j] &= [\partial_i +\mathrm{i}eA_i, \partial_j +\mathrm{i}eA_j] \\ &= \cancel{[\partial_i,\partial_j]} + \cancel{e^2[A_i, A_j]} + \mathrm{i}e[\partial_i, A_j] - \mathrm{i}e[\partial_j,A_i] \end{aligned}\]   
 >   
 > Thus, we need to calculate \([\partial_i, A_j]\):  
 >   
-> \(\begin{align} [\partial_i, A_j] f &= \partial_i (A_j f) -A_j \partial_i f \\ &= (\partial_i A_j) f + A_j \partial_if - A_j \partial_i f \\ &= (\partial_iA_j)f \end{align}\)   
+> \[\begin{aligned} [\partial_i, A_j] f &= \partial_i (A_j f) -A_j \partial_i f \\ &= (\partial_i A_j) f + A_j \partial_if - A_j \partial_i f \\ &= (\partial_iA_j)f \end{aligned}\]   
 >   
 > Therefore, \([\partial_i, A_j] = (\partial_i A_j)\).   
 >   
 > Hence  
 >   
-> \(\begin{align} [D_i, D_j] &= \mathrm{i}e[\partial_i, A_j] -\mathrm{i}e[\partial_j,A_i] \\ &= \mathrm{i}e (\partial_i A_j - \partial_j A_i) \\ &= \mathrm{i}e \epsilon_{ijk}B^k \end{align}\)   
+> \[\begin{aligned} [D_i, D_j] &= \mathrm{i}e[\partial_i, A_j] -\mathrm{i}e[\partial_j,A_i] \\ &= \mathrm{i}e (\partial_i A_j - \partial_j A_i) \\ &= \mathrm{i}e \epsilon_{ijk}B^k \end{aligned}\]   
 >   
 > Hence  
 >   

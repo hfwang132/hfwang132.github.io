@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240527_SPDC产生的频率纠缠光-其中的闲置光经过光纤放大器-还与信号光纠缠吗/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 author: "Haifei"
 ---
 

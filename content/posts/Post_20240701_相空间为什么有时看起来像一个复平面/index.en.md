@@ -7,7 +7,7 @@ aliases:
   - "/en/Post_20240727_相空间为什么有时看起来像一个复平面/"
 draft: false
 tags: ["Quantum Optics"]
-categories: ["Quantum Information"]
+categories: ["Quantum Information/Quantum Optics"]
 math: true
 author: "Haifei"
 ---

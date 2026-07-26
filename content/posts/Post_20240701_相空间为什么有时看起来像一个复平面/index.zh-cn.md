@@ -7,7 +7,7 @@ aliases:
   - "/Post_20240727_相空间为什么有时看起来像一个复平面/"
 draft: false
 tags: ["量子光学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---

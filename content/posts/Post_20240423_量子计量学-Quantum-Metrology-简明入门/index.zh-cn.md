@@ -6,7 +6,7 @@ aliases:
   - "/quantum_metrology/"
 draft: false
 tags: ["量子计量学"]
-categories: ["量子信息"]
+categories: ["量子信息/量子光学"]
 math: true
 author: "Haifei"
 ---
