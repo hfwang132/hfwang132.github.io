@@ -581,18 +581,58 @@ def verify_bundle_images(content_file: Path, expected_count: int) -> None:
         for path in MARKDOWN_IMAGE.findall(content) + SHORTCODE_IMAGE.findall(content)
         if not urlparse(path).scheme and not path.startswith("/")
     ]
+    unique_local_images = list(dict.fromkeys(local_images))
     missing = [
         path
-        for path in local_images
+        for path in unique_local_images
         if not (content_file.parent / path).is_file()
     ]
     if missing:
         raise ImportFailure(f"文章中有图片未成功下载：{', '.join(missing[:3])}")
-    if len(local_images) != expected_count:
+    if len(unique_local_images) != expected_count:
         raise ImportFailure(
-            f"图片数量不一致：正文引用 {len(local_images)} 张，"
-            f"本地保存 {expected_count} 张。"
+            f"图片数量不一致：正文引用 {len(local_images)} 次"
+            f"（{len(unique_local_images)} 个唯一文件），"
+            f"本地保存 {expected_count} 个文件。"
         )
+
+
+def install_bundle(
+    staging: Path,
+    target: Path,
+    *,
+    expected_image_count: int,
+) -> None:
+    """Install a fully verified bundle and roll back failed replacements."""
+
+    staged_content = staging / "index.zh-cn.md"
+    verify_bundle_images(staged_content, expected_image_count)
+
+    backup = target.with_name(target.name + ".backup")
+    replacing = target.exists()
+    if replacing:
+        if backup.exists():
+            raise ImportFailure(
+                f"发现上次更新遗留的备份目录：{backup}。"
+                "请先确认并处理该目录，避免覆盖可恢复内容。"
+            )
+        target.rename(backup)
+
+    try:
+        shutil.copytree(staging, target)
+        verify_bundle_images(
+            target / "index.zh-cn.md",
+            expected_image_count,
+        )
+    except Exception:
+        if target.exists():
+            shutil.rmtree(target)
+        if replacing and backup.exists():
+            backup.rename(target)
+        raise
+    else:
+        if backup.exists():
+            shutil.rmtree(backup)
 
 
 def import_post(args: argparse.Namespace) -> ImportedPost:
@@ -635,20 +675,11 @@ def import_post(args: argparse.Namespace) -> ImportedPost:
         )
         content_file = staging / "index.zh-cn.md"
         content_file.write_text(front_matter + "\n" + body, encoding="utf-8")
-
-        if target.exists():
-            backup = target.with_name(target.name + ".backup")
-            if backup.exists():
-                shutil.rmtree(backup)
-            target.rename(backup)
-            try:
-                shutil.copytree(staging, target)
-            except Exception:
-                backup.rename(target)
-                raise
-            shutil.rmtree(backup)
-        else:
-            shutil.copytree(staging, target)
+        install_bundle(
+            staging,
+            target,
+            expected_image_count=image_count,
+        )
 
     post = ImportedPost(
         target,
@@ -657,7 +688,6 @@ def import_post(args: argparse.Namespace) -> ImportedPost:
         published_at,
         image_count,
     )
-    verify_bundle_images(post.content_file, post.image_count)
     return post
 
 

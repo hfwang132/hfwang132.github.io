@@ -56,6 +56,21 @@ class ImageShortcodeTests(unittest.TestCase):
         source = "```markdown\n![](images/figure.png)\n```\n"
         self.assertEqual(MODULE.convert_images_to_shortcodes(source), source)
 
+    def test_allows_the_same_local_image_to_be_reused(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            bundle = Path(temporary)
+            images = bundle / "images"
+            images.mkdir()
+            (images / "reused.png").write_bytes(b"image")
+            content = bundle / "index.zh-cn.md"
+            content.write_text(
+                '{{< figure src="images/reused.png" >}}\n'
+                '{{< figure src="images/reused.png" >}}\n',
+                encoding="utf-8",
+            )
+
+            MODULE.verify_bundle_images(content, expected_count=1)
+
 
 class MetadataTests(unittest.TestCase):
     def test_extracts_downloader_header(self):
@@ -127,19 +142,14 @@ class MetadataTests(unittest.TestCase):
 
 
 class ImportPipelineTests(unittest.TestCase):
-    def test_detects_image_type_from_content_not_url_suffix(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            disguised_png = Path(temporary) / "figure.jpg"
-            disguised_png.write_bytes(b"\x89PNG\r\n\x1a\n" + b"payload")
-            self.assertEqual(MODULE.detect_image_suffix(disguised_png), ".png")
-
-    def test_creates_hugo_bundle_with_images_and_native_latex(self):
-        args = argparse.Namespace(
+    @staticmethod
+    def import_args(*, force=False):
+        return argparse.Namespace(
             url="https://zhuanlan.zhihu.com/p/123",
             slug=None,
             tag=["physics"],
             category=["notes"],
-            force=False,
+            force=force,
             publish=False,
             no_build=True,
             published_date=None,
@@ -148,6 +158,36 @@ class ImportPipelineTests(unittest.TestCase):
             cookie_file=None,
             cookie_from_browser=None,
         )
+
+    @staticmethod
+    def incomplete_download(url, cookie, work_dir, *, html_file=None):
+        stem = "(20260726)Article_Author"
+        (work_dir / f"{stem}.md").write_text(
+            "# Article\n\n **Author:** [Author]\n\n"
+            f" **Link:** [{url}]\n\n"
+            f"![]({stem}/downloaded.png)\n\n"
+            f"![]({stem}/missing.png)\n",
+            encoding="utf-8",
+        )
+        asset_dir = work_dir / stem
+        asset_dir.mkdir()
+        (asset_dir / "downloaded.png").write_bytes(b"image")
+        metadata = MODULE.PageMetadata(
+            published_at=datetime(
+                2026, 7, 26, tzinfo=MODULE.SITE_TIMEZONE
+            ),
+            modified_at=None,
+        )
+        return work_dir / f"{stem}.md", stem, metadata
+
+    def test_detects_image_type_from_content_not_url_suffix(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            disguised_png = Path(temporary) / "figure.jpg"
+            disguised_png.write_bytes(b"\x89PNG\r\n\x1a\n" + b"payload")
+            self.assertEqual(MODULE.detect_image_suffix(disguised_png), ".png")
+
+    def test_creates_hugo_bundle_with_images_and_native_latex(self):
+        args = self.import_args()
 
         def fake_download(url, cookie, work_dir, *, html_file=None):
             stem = "(20260726)Article_Author"
@@ -187,6 +227,53 @@ class ImportPipelineTests(unittest.TestCase):
                 content,
             )
             self.assertTrue((post.bundle_dir / "images" / "figure.png").is_file())
+
+    def test_invalid_new_import_does_not_leave_a_partial_bundle(self):
+        args = self.import_args()
+        with tempfile.TemporaryDirectory() as temporary:
+            posts_dir = Path(temporary) / "posts"
+            posts_dir.mkdir()
+            with (
+                mock.patch.object(MODULE, "POSTS_DIR", posts_dir),
+                mock.patch.object(MODULE, "resolve_cookie", return_value="cookie"),
+                mock.patch.object(
+                    MODULE,
+                    "run_downloader",
+                    side_effect=self.incomplete_download,
+                ),
+            ):
+                with self.assertRaisesRegex(
+                    MODULE.ImportFailure,
+                    "图片未成功下载",
+                ):
+                    MODULE.import_post(args)
+
+            self.assertEqual(list(posts_dir.iterdir()), [])
+
+    def test_invalid_force_import_preserves_the_existing_bundle(self):
+        args = self.import_args(force=True)
+        with tempfile.TemporaryDirectory() as temporary:
+            posts_dir = Path(temporary) / "posts"
+            target = posts_dir / "Post_20260726_Article"
+            target.mkdir(parents=True)
+            marker = target / "existing.txt"
+            marker.write_text("keep me", encoding="utf-8")
+            with (
+                mock.patch.object(MODULE, "POSTS_DIR", posts_dir),
+                mock.patch.object(MODULE, "resolve_cookie", return_value="cookie"),
+                mock.patch.object(
+                    MODULE,
+                    "run_downloader",
+                    side_effect=self.incomplete_download,
+                ),
+            ):
+                with self.assertRaisesRegex(
+                    MODULE.ImportFailure,
+                    "图片未成功下载",
+                ):
+                    MODULE.import_post(args)
+
+            self.assertEqual(marker.read_text(encoding="utf-8"), "keep me")
 
 
 if __name__ == "__main__":
