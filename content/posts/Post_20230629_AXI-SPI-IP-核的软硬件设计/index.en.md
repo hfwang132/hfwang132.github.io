@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["EECS"]
 tags: ["SPI", "Embedded Systems"]
+author: "Haifei"
 ---
 
 ### 1 Basics

@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["量子达尔文主义"]
 categories: ["量子信息"]
+author: "Haifei"
 ---
 
 

@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["量子测量理论"]
 categories: ["量子信息"]
+author: "Haifei"
 ---
 
 一般理性告诉我们，实际的位置测量不会产生 delta 函数，因为 delta 函数本身是病态的。那么实际的位置测量的坍缩态应该长什么样呢？

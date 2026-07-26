@@ -6,6 +6,7 @@ aliases:
 draft: true
 categories: ["Daily Life"]
 tags: ["Daily Life"]
+author: "Haifei"
 ---
 
 I arrived in Singapore on July 31. Today marks my second week abroad in Singapore.

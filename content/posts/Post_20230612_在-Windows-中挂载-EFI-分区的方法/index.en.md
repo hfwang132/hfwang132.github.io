@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["CS"]
 tags: ["Storage/Partition", "Linux"]
+author: "Haifei"
 ---
 
 To mount the EFI partitions, run the following commands in PowerShell:

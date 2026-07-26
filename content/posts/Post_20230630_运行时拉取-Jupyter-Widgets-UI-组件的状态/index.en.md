@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["CS"]
 tags: ["Python", "Jupyter Notebook"]
+author: "Haifei"
 ---
 
 Let's look at a code snippet in the Jupyter Notebook:

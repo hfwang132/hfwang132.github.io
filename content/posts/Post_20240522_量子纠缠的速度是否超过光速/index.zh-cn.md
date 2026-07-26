@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["量子信息"]
 categories: ["量子信息"]
+author: "Haifei"
 ---
 
 

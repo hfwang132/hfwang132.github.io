@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["微分几何"]
 categories: ["数学物理方法"]
+author: "Haifei"
 ---
 
 

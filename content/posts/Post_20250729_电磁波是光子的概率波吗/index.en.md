@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["electromagnetic waves", "photons"]
 categories: ["quantum optics"]
+author: "Haifei"
 ---
 
 ## Probability Waves vs. Quantum Fields  

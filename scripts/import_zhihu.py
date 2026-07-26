@@ -32,7 +32,15 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DOWNLOADER_PATH = REPO_ROOT / "zhihu-download" / "main.py"
 POSTS_DIR = REPO_ROOT / "content" / "posts"
 DEFAULT_COOKIE_FILE = REPO_ROOT / ".secrets" / "zhihu-cookie.txt"
+POST_AUTHOR = "Haifei"
 YAML_HEADER = re.compile(r"\A---\r?\n.*?\r?\n---\r?\n", re.DOTALL)
+FRONT_MATTER = re.compile(
+    r"\A---(?P<newline>\r?\n)(?P<header>.*?)(?P=newline)---(?P=newline)",
+    re.DOTALL,
+)
+ORIGINAL_URL_FIELD = re.compile(
+    r'(?m)^originalURL:\s*["\']?(?P<url>https://[^\s"\']+)["\']?\s*$'
+)
 SITE_TIMEZONE = timezone(timedelta(hours=8))
 MARKDOWN_IMAGE = re.compile(r"!\[[^\]]*\]\(([^)\s]+)")
 SHORTCODE_IMAGE = re.compile(
@@ -414,6 +422,99 @@ def build_front_matter(
     return "\n".join(fields)
 
 
+def source_identity(url: str) -> tuple[str, ...]:
+    """Return a stable identity for a Zhihu article or answer URL."""
+
+    parsed = urlparse(url)
+    article = re.fullmatch(r"/p/(\d+)/?", parsed.path)
+    if parsed.hostname == "zhuanlan.zhihu.com" and article:
+        return ("article", article.group(1))
+    answer = re.fullmatch(r"/question/(\d+)/answer/(\d+)/?", parsed.path)
+    if parsed.hostname == "www.zhihu.com" and answer:
+        return ("answer", answer.group(1), answer.group(2))
+    return ("url", parsed.hostname or "", parsed.path.rstrip("/"))
+
+
+def find_existing_bundle(source_url: str) -> Path | None:
+    """Find an existing bundle by source ID, even when its title changed."""
+
+    identity = source_identity(source_url)
+    matches: list[Path] = []
+    for content_file in POSTS_DIR.glob("*/index.zh-cn.md"):
+        try:
+            content = content_file.read_text(encoding="utf-8")
+        except OSError as exc:
+            raise ImportFailure(f"无法读取已有文章：{content_file}") from exc
+        match = ORIGINAL_URL_FIELD.search(content)
+        if match and source_identity(match.group("url")) == identity:
+            matches.append(content_file.parent)
+    if len(matches) > 1:
+        paths = ", ".join(str(path) for path in matches)
+        raise ImportFailure(f"同一知乎来源对应多个本地目录：{paths}")
+    return matches[0] if matches else None
+
+
+def _replace_or_append_scalar(
+    lines: list[str], name: str, rendered_value: str
+) -> None:
+    prefix = f"{name}:"
+    for index, line in enumerate(lines):
+        if line.startswith(prefix):
+            lines[index] = f"{name}: {rendered_value}"
+            return
+    lines.append(f"{name}: {rendered_value}")
+
+
+def refresh_front_matter(
+    existing_content: str,
+    *,
+    title: str,
+    author: str,
+    source_url: str,
+    date_value: datetime,
+    tags: list[str],
+    categories: list[str],
+) -> str:
+    """Refresh Zhihu-controlled fields while preserving local metadata."""
+
+    match = FRONT_MATTER.match(existing_content)
+    if not match:
+        raise ImportFailure("已有文章缺少有效的 YAML front matter。")
+    lines = match.group("header").splitlines()
+    _replace_or_append_scalar(lines, "title", json.dumps(title, ensure_ascii=False))
+    _replace_or_append_scalar(lines, "date", date_value.isoformat())
+    _replace_or_append_scalar(lines, "draft", "false")
+    _replace_or_append_scalar(lines, "math", "true")
+    _replace_or_append_scalar(
+        lines, "originalURL", json.dumps(source_url, ensure_ascii=False)
+    )
+    if author:
+        _replace_or_append_scalar(
+            lines, "author", json.dumps(author, ensure_ascii=False)
+        )
+    if tags:
+        _replace_or_append_scalar(lines, "tags", yaml_list(tags))
+    if categories:
+        _replace_or_append_scalar(lines, "categories", yaml_list(categories))
+    newline = match.group("newline")
+    return "---" + newline + newline.join(lines) + newline + "---" + newline
+
+
+def copy_preserved_bundle_files(source: Path, staging: Path) -> None:
+    """Keep translations and local bundle files while replacing source/images."""
+
+    if not source.is_dir():
+        return
+    for child in source.iterdir():
+        if child.name in {"index.zh-cn.md", "images"}:
+            continue
+        destination = staging / child.name
+        if child.is_dir():
+            shutil.copytree(child, destination)
+        else:
+            shutil.copy2(child, destination)
+
+
 def copy_assets_and_rewrite(
     body: str, source_root: Path, stem: str, target: Path
 ) -> tuple[str, int]:
@@ -654,25 +755,57 @@ def import_post(args: argparse.Namespace) -> ImportedPost:
                 "请用 --published-date YYYY-MM-DD 明确指定。"
             )
         downloaded = markdown_file.read_text(encoding="utf-8")
-        title, author, body = extract_downloaded_content(downloaded, stem)
+        title, _source_author, body = extract_downloaded_content(downloaded, stem)
         slug = build_post_slug(published_at, title, args.slug)
-        target = POSTS_DIR / slug
+        generated_target = POSTS_DIR / slug
+        existing_bundle = find_existing_bundle(args.url)
+        target = existing_bundle or generated_target
+        if existing_bundle and not args.force:
+            raise ImportFailure(
+                f"该知乎内容已经导入：{existing_bundle}。如需更新，请加 --force。"
+            )
+        if (
+            existing_bundle
+            and generated_target.exists()
+            and generated_target != existing_bundle
+        ):
+            raise ImportFailure(
+                f"更新目标与新标题目录同时存在：{existing_bundle}、"
+                f"{generated_target}。请先确认是否有重复文章。"
+            )
         if target.exists() and not args.force:
             raise ImportFailure(f"目标目录已存在：{target}。如需更新，请加 --force。")
         body = convert_math_delimiters(body)
 
         staging = work_dir / "bundle"
         staging.mkdir()
+        if target.exists():
+            copy_preserved_bundle_files(target, staging)
         body, image_count = copy_assets_and_rewrite(body, work_dir, stem, staging)
         body = convert_images_to_shortcodes(body)
-        front_matter = build_front_matter(
-            title=title,
-            author=author,
-            source_url=args.url,
-            date_value=published_at,
-            tags=args.tag,
-            categories=args.category,
-        )
+        existing_content_file = target / "index.zh-cn.md"
+        if existing_content_file.is_file():
+            existing_content = existing_content_file.read_text(
+                encoding="utf-8"
+            )
+            front_matter = refresh_front_matter(
+                existing_content,
+                title=title,
+                author=POST_AUTHOR,
+                source_url=args.url,
+                date_value=published_at,
+                tags=args.tag,
+                categories=args.category,
+            )
+        else:
+            front_matter = build_front_matter(
+                title=title,
+                author=POST_AUTHOR,
+                source_url=args.url,
+                date_value=published_at,
+                tags=args.tag,
+                categories=args.category,
+            )
         content_file = staging / "index.zh-cn.md"
         content_file.write_text(front_matter + "\n" + body, encoding="utf-8")
         install_bundle(

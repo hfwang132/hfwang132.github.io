@@ -1,5 +1,5 @@
 ---
-title: "Probing g2 with non-photon-number-resolving detectors"
+title: "[Quantum Optics Experimental Notes I] Principles of Measuring the Second-Order Correlation Function (g2) with Single-Photon Detectors"
 date: 2024-02-04T15:53:47+08:00
 originalURL: "https://zhuanlan.zhihu.com/p/679453473"
 aliases:
@@ -8,61 +8,87 @@ aliases:
 draft: false
 tags: ["Quantum Optics"]
 categories: ["Quantum Information"]
+math: true
+author: "Haifei"
 ---
 
-## HBT Experiment
-Those who have conducted quantum optics experiments must be familiar with the Hanbury Brown and Twiss (HBT) experiment, which can be used to measure the second-order correlation function g2. In this experiment, a beam of light is split into two using a 50:50 beamsplitter, and then each beam is detected separately by two detectors. The correlation of the intensities on both sides is measured as a function of delay, as shown in the figure below:
+## HBT Experiment  
 
-{{< figure src="image/HBT_g2.png" title="Hanbury Brown and Twiss Experiment  " >}}
+Anyone doing quantum optics experiments certainly knows that the HBT experiment can be used to measure the second-order correlation function g2. That is, a beam of light is split into two beams using a 50:50 beam splitter, which are then detected by two separate detectors, and the variation of the correlation between the intensities on the two sides with delay is counted, as shown below:
 
-The classical normalized g2 is defined as:
+{{< figure src="images/v2-64f505f540af3c60c37f10177edd7d4d_r.jpg" >}}
 
-$\begin{aligned} g^{(2)}(r\_1, r\_2; \tau) &= \frac{\langle E^\*(r\_1, t) E^\*(r\_2, t + \tau) E(r\_2, t + \tau) E(r\_1, t) \rangle}{\langle |E(r\_1, t)|^2 \rangle \langle |E(r\_2, t + \tau)|^2 \rangle} \\\\ &= \frac{\langle I(r\_1, t) I(r\_2, t + \tau) \rangle}{\langle I(r\_1, t) \rangle \langle I(r\_2, t + \tau) \rangle} \end{aligned}$
+Hanbury Brown and Twiss Experiment
 
-where $E$ represents the electric field and $I$ represents the intensity. As per the definition, the HBT experiment measures the classical g2 by normalizing the correlated intensities with the product of the individual intensities.
+  
+  
 
-## Quantum Second-Order Correlation Function
-The definition of the quantum normalized g2 is:
+The classical normalized g2 is defined as
 
-$\begin{aligned} g^{(2)}(r\_1, r\_2; \tau) &= \frac{\langle E^-(r\_1, t) E^-(r\_2, t + \tau) E^+(r\_2, t + \tau) E^+(r\_1, t) \rangle}{\langle E^-(r\_1, t) E^+(r\_1, t) \rangle \langle E^-(r\_2, t + \tau) E^+(r\_2, t + \tau) \rangle} \end{aligned}$
+\[\begin{aligned} g^{(2)}(r_1,r_2;\tau)&=\frac{\langle E^*(r_1,t)E^*(r_2,t+\tau) E(r_2,t+\tau)E(r_1,t)\rangle}{\langle |E(r_1,t)|^2\rangle\langle |E(r_2,t+\tau)|^2\rangle}  \\ &= \frac{\langle I(r_1,t)I(r_2,t+\tau)\rangle}{\langle I(r_1,t)\rangle\langle I(r_2,t+\tau)\rangle} \end{aligned}\]
 
-In the quantum case, the operators in the numerator should be replaced with the counter-rotating term $E^-$ and the co-rotating term $E^+$, which involve creation and annihilation operators. Additionally, the creation operator must precede the annihilation operator since the detection of a photon is an annihilation process, unlike the classical case. In classical coherent states $|\alpha\rangle$, the annihilation operator $a$ is an eigenstate $a|\alpha\rangle = \alpha|\alpha\rangle$, hence the presence or absence of a photon makes no difference.
+where \(E\) denotes the electric field, and \(I\) denotes the light intensity. Clearly, according to the definition, what the HBT experiment measures is the classical g2 (simply divide the correlated light intensity by the product of the individual intensities on the two sides).
 
-In the case of **single-mode**, since $E^+ = i\sqrt{\frac{\hbar \omega}{2\epsilon\_0 V}}a$ and $E^- = i\sqrt{\frac{\hbar \omega}{2\epsilon\_0 V}}a^\dagger$, the quantum g2 can be simplified to:
+## Quantum Second-Order Optical Correlation Function  
 
-$\begin{aligned} g^{(2)}(r\_1, r\_2, \tau) &= \frac{\langle a^\dagger(r\_1, t) a^\dagger(r\_2, t + \tau) a(r\_2, t + \tau) a(r\_1, t) \rangle}{\langle n(r\_1, t) \rangle \langle n(r\_2, t + \tau) \rangle} \end{aligned}$
+The quantum normalized g2 is defined as:
 
-Therefore, to measure quantum g2, we need to replace intensity detectors with photon detectors, **and these photon detectors should be capable of distinguishing photon numbers**.
+\[\begin{aligned} g^{(2)}(r_1,r_2;\tau)&=\frac{\langle E^-(r_1,t)E^-(r_2,t+\tau) E^+(r_2,t+\tau)E^+(r_1,t)\rangle}{\langle E^-(r_1,t)E^+(r_1,t)\rangle\langle E^-(r_2,t+\tau)E^+(r_2,t+\tau)\rangle}  \end{aligned}\]
 
-However, the problem arises because currently available single-photon detectors that can distinguish photon numbers are not very practical: TES detectors have long recovery times; schemes for Demultiplexing in space and time only offer pseudo-photon number resolution; and SNSPDs are expensive, require low temperatures, and their multi-photon efficiency may not be very high.
+> Comment: In the quantum case, the operators in the numerator must be replaced by the negative-frequency component \(E^-\) and the positive-frequency component \(E^+\) of the electric field, which respectively contain creation and annihilation operators.  
+> Moreover, the creation operators must come before the annihilation operators, because detecting a photon is an annihilation process, unlike in the classical case. The coherent state \(|\alpha\rangle\) in the classical case is an eigenstate of the annihilation operator \(a|\alpha\rangle=\alpha|\alpha\rangle\) ; adding or removing one photon makes no difference.
 
-## NPNR-SPD for Measuring g2
-Fortunately, single-photon detectors that cannot distinguish photon numbers (NPNR-SPDs, Non-Photon-Number-Resolving Single-Photon-Detectors) can still measure g2, even though they cannot resolve photon numbers!
+In the **single-mode** case, since \(E^+=i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a\) and \(E^-=i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a^\dag\) , the quantum g2 can be simplified to
 
-> Comment: "Cannot distinguish photon numbers" means they can only differentiate between "no photons" and "one or more photons." Common APD detectors cannot distinguish photon numbers.
+\[\begin{aligned} g^{(2)}(r_1,r_2,\tau)&=\frac{\langle a^\dag(r_1,t)a^\dag(r_2,t+\tau)a(r_2,t+\tau)a(r_1,t)\rangle}{\langle n(r_1,t)\rangle\langle n(r_2,t+\tau) \rangle} \end{aligned}\]
 
-The method is simple: just make sure the quantum efficiency of the NPNR-SPD is low enough!
+Therefore, to measure quantum g2, we need to replace the intensity detector with a photon detector, **and this photon detector must be able to resolve photon number**.
 
-> Quantum efficiency $\eta$ refers to the probability that the detector can detect a photon given that a photon enters it. Conversely, the probability of the photon being "lost" is $1 - \eta$.
+However, here comes the problem: currently available photon-number-resolving single-photon detectors are all rather unsatisfactory. TES has an excessively long recovery time; spatial and temporal demultiplexing schemes provide only pseudo photon-number resolution; and SNSPDs are expensive, require cryogenic temperatures, and may not have particularly high multiphoton efficiency.
 
-At first, it seemed strange to me why lower efficiency is better. But with a little thought, the principle becomes clear:
+## Measuring g2 with NPNR-SPDs  
 
-When the efficiency is low enough, the probability that $k$ photons are not all lost is $1 - (1 - \eta)^k \approx k\eta$. In other words, the probability of the NPNR-SPD detecting a photon is proportional to $k$. Thus, we achieve "photon number resolution" indirectly through "low efficiency".
+Fortunately, single-photon detectors that cannot resolve photon number (NPNR-SPDs, Non-Photon-Number-Resolving Single-Photon Detectors) can also measure g2, even though they cannot resolve photon number!
 
-> The following is a formal (boring) mathematical derivation, which can be skipped:
-> [Derivation equations]
+> Comment: “Unable to resolve photon number” means that they can distinguish only between “no photon” and “one or more photons.” Common APD detectors cannot resolve photon number.
 
-Measuring g2 has several uses. Besides the common textbook distinctions of [super-Poissonian statistics/Poissonian statistics/sub-Poissonian statistics] and [photon bunching/antibunching], there is an unexpected application: measuring spectral correlations of photons, which we will discuss in the next part.
+The method is simple: just make the quantum efficiency of the NPNR-SPD sufficiently low!
 
-## Conclusion: Multi-Mode Scenario
-Previously, we assumed that the detected light was single-mode. Hence $E^+$ could be proportional to $a$: $E^+ = i\sqrt{\frac{\hbar \omega}{2\epsilon\_0 V}}a$.
+> The so-called quantum efficiency \(\eta\) is the probability that the detector can detect a photon, given that one photon enters the detector. Conversely, the probability that this photon is “lost” is \(1-\eta\) .
 
-But what if the detected light is multi-mode? In this case, $E^+ = i\sum\_k\sqrt{\frac{\hbar \omega\_k}{2\epsilon\_0 V}}a\_k$, $E^+$ is no longer proportional to $a$, but has a frequency dependence: $E^+\_k \propto \sqrt{\omega\_k}a\_k$.
+At first, I found this strange: how could lower efficiency be better? But with a little thought, the principle becomes clear:
 
-> The additional term $\sqrt{\omega\_k}$ in the equation is not surprising since the intensity, which is proportional to the frequency times the number of photons, contributes to it.
+When the efficiency is sufficiently low, the probability that \(k\) photons are not all lost is \(1-(1-\eta)^k\approx k\eta\) . In other words, the probability that an NPNR-SPD detects photons is proportional to \(k\) . In this way, we effectively achieve “photon-number resolution” through “low efficiency.”
 
-However, as long as the frequencies of the various modes are the same, we can still eliminate $\sqrt{\omega\_k}$, and obtain:
+> The formal (boring) mathematical derivation follows; you may skip it:  
+> Let the count rate of detector 1 be \(S_1\) , the count rate of detector 2 be \(S_2\) , the coincidence count rate (detecting photons simultaneously) of the two detectors be \(C_{12}\) , and the number of photons in the beam per unit time be \(R\) . Then:  
+>  \(\begin{aligned} S_i &=R\sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k[1-(1-\eta)^k] \\ &\approx R \sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k\cdot k\eta \\ &= R\frac{\eta}{2} \sum_{n=1}^{\infty} n P_n  \end{aligned}\)   
+>  \(\begin{aligned} C_{12}&=R\sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n-1} C_n^k[1-(1-\eta)^k][1-(1-\eta)^{(n-k)}] \\ &\approx R \sum_{n=1}^{\infty}\frac{P_n}{2^n}\sum_{k=1}^{n}C_n^k\cdot k\eta \cdot (n-k)\eta \\ &= R \frac{\eta^2}{4} \sum_{n=2}^{\infty} n(n-1)P_n \end{aligned}\)   
+> Thus  
+>  \(\begin{aligned} \frac{C_{12} R}{S_1 S_2} &= \frac{\sum_{n=2}^{\infty} n(n-1)P_n }{\left(\sum_{n=1}^{\infty} n P_n\right)^2} \\ &= \frac{\langle n(n-1) \rangle}{\langle n\rangle^2} \end{aligned}\)   
+> Those familiar with quantum optics should already recognize that this is g2. The derivation is as follows:  
+>  \(\begin{aligned} g^{(2)}(r_1,r_2,\tau)&=\frac{\langle a^\dag(r_1,0)a^\dag(r_2,\tau)a(r_2,\tau)a(r_1,0)\rangle}{\langle n(r_1)\rangle\langle n(r_2) \rangle} \end{aligned}\)   
+> Setting \(r_1=r_2,\quad \tau=0\) gives  
+>  \(\begin{aligned} g^{(2)}(\tau=0)&=\frac{\langle a^\dag a^\dag a a \rangle}{\langle n\rangle^2} \\ &= \frac{\langle a^\dag(aa^\dag -1) a\rangle}{\langle n\rangle^2} \\ &= \frac{\langle n^2-n\rangle}{\langle n\rangle^2}  \end{aligned}\)
 
-$\begin{aligned} g^{(2)}(0) = \frac{\langle n(n-1) \rangle}{\langle n \rangle^2} \end{aligned}$
+What is the use of measuring g2? Besides the textbook applications of distinguishing [super-Poissonian statistics/Poissonian statistics/sub-Poissonian statistics] and [photon bunching/antibunching], it has another unexpected application: measuring the spectral correlations of photons. We will discuss this in the next article.
 
-Thus, even if multiple modes are present, if these modes have (approximately) the same frequency, the method of measuring quantum g2 using the HBT experiment remains effective.
+## Epilogue: The Multimode Case  
+
+Earlier, we planted a small foreshadowing: we assumed that the detected light was single-mode. Thus \(E^+\) can be proportional to \(a\) : \(E^+=i\sqrt{\frac{\hbar \omega}{2\epsilon_0 V}}a\) .
+
+But what happens if the detected light is multimode? In this case, \(E^+=i\sum_{k}\sqrt{\frac{\hbar \omega_k}{2\epsilon_0 V}}a_k\) , and \(E^+\) is no longer proportional to \(a\) ; instead, it has a frequency dependence: \(E^+_k\propto \sqrt{\omega_k}a_k\) .
+
+> Since the original g2 detects light intensity, and light intensity equals frequency multiplied by photon number, it is not surprising that there is a term \(\sqrt{\omega_k}\) here.
+
+However, as long as the frequencies of the various modes are the same, we can still cancel \(\sqrt{\omega_k}\) and obtain:
+
+\[\begin{aligned} g^{(2)}(0)=\frac{\left\langle :\left(\sum_k a^\dag_k a_k\right)^2:\right\rangle}{\left\langle \sum_k a^\dag_k a_k\right\rangle^2} \end{aligned}\]
+
+where \(::\) denotes normal ordering, i.e., moving all creation operators before the annihilation operators.
+
+Setting \(n=\sum_ka^\dag_k a_k\) , we have
+
+\[\begin{aligned} g^{(2)}(0)=\frac{\langle n(n-1)\rangle}{\langle n\rangle^2} \end{aligned}\]
+
+It can be seen that although multiple modes are present, if the frequencies of these modes are the same (approximately), then the HBT method for measuring quantum g2 remains valid.

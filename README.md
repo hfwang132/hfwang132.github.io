@@ -62,9 +62,12 @@ pushes it:
 ```
 
 The importer refuses to overwrite an existing bundle unless `--force` is
-provided. Publish mode also stops when the Git staging area already contains
-other changes, preventing an unrelated staged change from entering the post
-commit.
+provided. Forced refreshes identify the existing bundle by its Zhihu article
+or answer ID, so a later title edit does not create a duplicate directory.
+They replace the Chinese source and localized images while preserving aliases,
+taxonomy metadata, the existing English translation, and other local bundle
+files. Publish mode also stops when the Git staging area already contains other
+changes, preventing an unrelated staged change from entering the post commit.
 
 Running the update wrapper without a Zhihu URL validates the production site,
 stages all current repository changes, creates a `daily updates` commit when
@@ -141,6 +144,17 @@ Submit all currently missing English articles as one Batch API job:
 .\.venv\Scripts\python.exe .\scripts\translate_posts.py batch submit
 ```
 
+To regenerate every English version sourced from a Zhihu column article while
+leaving original blog posts and Zhihu answers untouched:
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py batch submit `
+  --scope zhihu-articles
+
+# After the Batch completes:
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py batch apply --force
+```
+
 The command records the Batch ID under the ignored
 `.secrets/openai-batches/` directory. Batch jobs can finish out of order and
 may take up to 24 hours. Check and apply the latest recorded job with:
@@ -160,6 +174,22 @@ Chinese source changed after submission.
 
 After reviewing historical translations, `.\updates.bat` validates the site,
 commits the current changes, and pushes them to GitHub.
+
+Verify existing translations without calling the API:
+
+```powershell
+.\.venv\Scripts\python.exe .\scripts\translate_posts.py verify `
+  --scope zhihu-articles
+```
+
+The verifier compares source URLs, heading levels, local images, and the
+presence of every protected formula, code block, link, and URL. Very long
+articles are translated as cached, keyed paragraphs so the model retains enough
+context for natural English. Protected objects use translation placeholders and
+are restored by identity on the local machine, while Markdown heading, quote,
+and list markers are restored from the source. Suspicious model control markers
+or structurally invalid paragraphs are rejected and retried instead of being
+written into the post.
 
 ## Post folder naming
 

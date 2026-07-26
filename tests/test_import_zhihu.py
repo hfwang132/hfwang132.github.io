@@ -73,6 +73,9 @@ class ImageShortcodeTests(unittest.TestCase):
 
 
 class MetadataTests(unittest.TestCase):
+    def test_imported_posts_use_site_author(self):
+        self.assertEqual(MODULE.POST_AUTHOR, "Haifei")
+
     def test_extracts_downloader_header(self):
         source = (
             "# A title\n\n **Author:** [Haifei]\n\n"
@@ -96,6 +99,35 @@ class MetadataTests(unittest.TestCase):
         self.assertIn("draft: false", result)
         self.assertIn("math: true", result)
         self.assertIn('originalURL: "https://zhuanlan.zhihu.com/p/1"', result)
+
+    def test_refresh_front_matter_preserves_local_metadata(self):
+        existing = (
+            "---\n"
+            'title: "Old title"\n'
+            "date: 2020-01-01T00:00:00+08:00\n"
+            'originalURL: "https://zhuanlan.zhihu.com/p/123"\n'
+            "aliases:\n"
+            '  - "/old-route/"\n'
+            "draft: false\n"
+            'tags: ["local tag"]\n'
+            'categories: ["local category"]\n'
+            "---\n\n"
+            "Old body\n"
+        )
+        refreshed = MODULE.refresh_front_matter(
+            existing,
+            title="New title",
+            author="Author",
+            source_url="https://zhuanlan.zhihu.com/p/123",
+            date_value=datetime(2026, 7, 26, tzinfo=MODULE.SITE_TIMEZONE),
+            tags=[],
+            categories=[],
+        )
+        self.assertIn('title: "New title"', refreshed)
+        self.assertIn('author: "Author"', refreshed)
+        self.assertIn('  - "/old-route/"', refreshed)
+        self.assertIn('tags: ["local tag"]', refreshed)
+        self.assertIn('categories: ["local category"]', refreshed)
 
     def test_cookie_header_only_contains_zhihu_domains(self):
         cookies = [
@@ -286,6 +318,58 @@ class ImportPipelineTests(unittest.TestCase):
                     MODULE.import_post(args)
 
             self.assertEqual(marker.read_text(encoding="utf-8"), "keep me")
+
+    def test_force_import_finds_changed_title_by_source_and_keeps_translation(self):
+        args = self.import_args(force=True)
+
+        def fake_download(url, cookie, work_dir, *, html_file=None):
+            stem = "(20260726)New_Title_Author"
+            (work_dir / f"{stem}.md").write_text(
+                "# New Title\n\n **Author:** [Author]\n\n"
+                f" **Link:** [{url}]\n\nUpdated body.\n",
+                encoding="utf-8",
+            )
+            metadata = MODULE.PageMetadata(
+                published_at=datetime(
+                    2026, 7, 26, tzinfo=MODULE.SITE_TIMEZONE
+                ),
+                modified_at=None,
+            )
+            return work_dir / f"{stem}.md", stem, metadata
+
+        with tempfile.TemporaryDirectory() as temporary:
+            posts_dir = Path(temporary) / "posts"
+            existing = posts_dir / "Post_20260726_Old-Title"
+            existing.mkdir(parents=True)
+            (existing / "index.zh-cn.md").write_text(
+                "---\n"
+                'title: "Old Title"\n'
+                "date: 2026-07-26T00:00:00+08:00\n"
+                'originalURL: "https://zhuanlan.zhihu.com/p/123"\n'
+                "aliases:\n"
+                '  - "/old-title/"\n'
+                'tags: ["physics"]\n'
+                "---\n\nOld body.\n",
+                encoding="utf-8",
+            )
+            (existing / "index.en.md").write_text(
+                "---\ntitle: \"Old Title\"\n---\n\nOld translation.\n",
+                encoding="utf-8",
+            )
+            with (
+                mock.patch.object(MODULE, "POSTS_DIR", posts_dir),
+                mock.patch.object(MODULE, "resolve_cookie", return_value="cookie"),
+                mock.patch.object(MODULE, "run_downloader", side_effect=fake_download),
+            ):
+                post = MODULE.import_post(args)
+
+            self.assertEqual(post.bundle_dir, existing)
+            self.assertFalse((posts_dir / "Post_20260726_New-Title").exists())
+            content = post.content_file.read_text(encoding="utf-8")
+            self.assertIn('title: "New Title"', content)
+            self.assertIn('  - "/old-title/"', content)
+            self.assertIn('tags: ["physics"]', content)
+            self.assertTrue((existing / "index.en.md").is_file())
 
 
 if __name__ == "__main__":

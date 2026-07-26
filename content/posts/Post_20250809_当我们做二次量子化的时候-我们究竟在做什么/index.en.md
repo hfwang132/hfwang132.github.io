@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Second Quantization"]
 categories: ["Quantum Mechanics"]
+author: "Haifei"
 ---
 
 **First quantization cannot describe superpositions of particle number, let alone dynamics in which particle number changes.**

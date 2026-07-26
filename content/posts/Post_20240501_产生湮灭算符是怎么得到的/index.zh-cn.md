@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["数学物理方法"]
 categories: ["量子信息"]
+author: "Haifei"
 ---
 
 

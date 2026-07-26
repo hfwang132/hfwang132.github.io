@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Mathematical Methods in Physics"]
 categories: ["Quantum Information"]
+author: "Haifei"
 ---
 
 The motivation for defining creation and annihilation operators is simple and can be entirely derived from classical mechanics.

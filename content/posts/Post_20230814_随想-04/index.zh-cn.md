@@ -6,6 +6,7 @@ aliases:
 draft: true
 categories: ["日常"]
 tags: ["日常"]
+author: "Haifei"
 ---
 
 7月31号来的新加坡。今天就是出国来坡的第二周了。

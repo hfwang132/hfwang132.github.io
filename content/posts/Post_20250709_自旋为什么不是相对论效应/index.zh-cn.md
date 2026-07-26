@@ -8,6 +8,7 @@ aliases:
 draft: draft
 tags: ["自旋", "相对论"]
 categories: ["数学物理方法"]
+author: "Haifei"
 ---
 
 结论：整数自旋是经典效应，而半整数自旋是量子效应，跟相对论关系不大。

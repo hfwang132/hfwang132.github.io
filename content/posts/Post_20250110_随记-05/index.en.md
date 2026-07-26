@@ -6,6 +6,7 @@ aliases:
 draft: true
 categories: ["Daily Life"]
 tags: ["Daily Life"]
+author: "Haifei"
 ---
 
 Before I knew it, I had been in Singapore for almost a year and a half. I did not expect that the last time I wrote a diary entry was also a year and a half ago.

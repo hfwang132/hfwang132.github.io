@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["日常"]
 tags: ["嵌入式系统"]
+author: "Haifei"
 ---
 
 |项目|日期|评论|

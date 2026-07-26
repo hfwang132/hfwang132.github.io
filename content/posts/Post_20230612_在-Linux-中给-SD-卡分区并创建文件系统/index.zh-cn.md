@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["EECS"]
 tags: ["存储/分区", "Linux"]
+author: "Haifei"
 ---
 
 为了在 Linux 中给 SD 卡分区和格式化，先将 SD 卡接入 PC，然后在 bash 命令行使用 `fdisk` 给 SD 卡分区，最后使用 `mkfs` 给 SD 卡创建文件系统（即格式化）。

@@ -6,6 +6,7 @@ aliases:
 draft: true
 categories: ["Daily Life"]
 tags: ["Daily Life"]
+author: "Haifei"
 ---
 
 > Today is my last day at Wuhan University. I wanted to reminisce about these four years, but I have walked through almost every corner of the campus, so I might as well look at my old Moments posts instead.

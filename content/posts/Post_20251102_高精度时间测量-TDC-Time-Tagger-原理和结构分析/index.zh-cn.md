@@ -4,7 +4,7 @@ date: 2025-11-02T12:53:03+08:00
 draft: false
 math: true
 originalURL: "https://zhuanlan.zhihu.com/p/1967603349005248271"
-author: "像牛一样的猫"
+author: "Haifei"
 ---
 
 ## 一、什么是 TDC / Time Tagger  

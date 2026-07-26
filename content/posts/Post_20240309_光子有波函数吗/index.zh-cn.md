@@ -7,6 +7,7 @@ aliases:
 draft: false
 tags: ["量子光学"]
 categories: ["量子信息"]
+author: "Haifei"
 ---
 
 光子有时空表象下的波函数：

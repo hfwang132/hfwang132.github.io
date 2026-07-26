@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["CS"]
 tags: ["存储/分区", "Linux"]
+author: "Haifei"
 ---
 
 为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令

@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["EECS"]
 tags: ["SDR", "PYNQ", "FPGA", "设备树"]
+author: "Haifei"
 ---
 
 > 给从今年三月到现在断断续续的工作做一个总结

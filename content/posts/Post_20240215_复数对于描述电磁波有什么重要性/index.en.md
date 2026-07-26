@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Quantum Optics"]
 categories: ["Quantum Information"]
+author: "Haifei"
 ---
 
 In classical mechanics, complex numbers are merely a mathematical tool used to simplify calculations.

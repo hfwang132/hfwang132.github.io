@@ -1,81 +1,101 @@
 ---
-title: "POVM: a brief introduction"
+title: "Generalized Quantum Measurements: An Introduction to POVMs"
 date: 2024-01-21T22:13:57+08:00
 originalURL: "https://zhuanlan.zhihu.com/p/679038823"
 aliases:
   - "/en/povm/"
   - "/en/Post_20240126_广义量子测量-POVM-简介/"
 draft: false
-tags: ["Quantum Measurement Theory"]
-categories: ["Quantum Information"]
+tags: ["quantum measurement theory"]
+categories: ["quantum information"]
+math: true
+author: "Haifei"
 ---
 
-# Projection Measurement
+## Projective Measurements  
 
-Traditionally, a measurement, in the sense of Von Neumann, is a series of projection operators. By performing spectral decomposition on the self-adjoint operator corresponding to the observable, denoted as $ O = \sum\_i \lambda\_i |\varphi\_i\rangle\langle\varphi\_i| $, we obtain these projection operators $ |\varphi\_i\rangle\langle\varphi\_i| $. This part is well-known to students who have studied elementary quantum mechanics.
+A measurement in the traditional sense (in the Von Neumann sense) is a collection of projection operators. By performing a spectral decomposition of the self-adjoint operator corresponding to an observable \(O=\sum_i\lambda_i |\varphi_i\rangle\langle\varphi_i|\) , one obtains these projection operators \(|\varphi_i\rangle\langle\varphi_i|\) . Anyone who has studied elementary quantum mechanics should be familiar with this part.
 
-Besides the Von Neumann measurement, there is a more general type of measurement called Generalized Measurements or Positive Operator Valued Measures (POVMs).
+In addition to Von Neumann measurements, there is a more general type of measurement called a generalized measurement (Generalized Measurements), also known as a POVM (Positive Operator Valued Measure).
 
-# Generalized Measurements (POVMs)
+## Generalized Measurements (Generalized Measurements, POVM)  
+> **Definition: POVM**  
+>   
+> A POVM is a mapping \(\mathsf{E}: X \rightarrow \mathcal{L}(\mathcal{H})\) satisfying  
+> 1) \(\mathsf{E}(x) \ge 0,\quad \forall x\in X\)   
+> 2) \(\sum_{x\in X}\mathsf{E}(x) = \mathbb{I}_{\mathcal{H}}\)   
+> where \(X\) denotes the set of finitely many possible measurement outcomes, and \(\mathcal{L}(\mathcal{H})\) denotes the set of all bounded operators on \(\mathcal{H}\) .  
+>   
+> **Born Rule**  
+>   
+> For a quantum state \(\rho\) subjected to the measurement specified by the POVM \(\mathsf{E}\) , the probability of obtaining outcome \(x\) is \(p_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)]\)
 
-> Definition: POVM
-> 
-> A POVM is a mapping $ \mathsf{E}: X \rightarrow \mathcal{L}(\mathcal{H}) $, satisfying
-> 
-> $ \mathsf{E}(x) \ge 0, \quad \forall x \in X $
-> $ \sum\_ {x \in X} \mathsf{E}(x) = \mathbb{I}\_{\mathcal{H}} $
-> where $ X $ represents the set of possible measurement outcomes, and $ \mathcal{L}(\mathcal{H}) $ represents the set of all bounded operators on $ \mathcal{H} $.
-> Born's Rule
-> 
-> The probability of obtaining result $ x $ when measuring a quantum state $ \rho $ with a POVM $ \mathsf{E} $ is given by $ p\_{\rho}^{\mathsf{E}}(x) = \operatorname{tr}[\rho \mathsf{E}(x)] $.
+Note that a measurement in the traditional sense is a projection operator satisfying \(\mathsf{E}(x)^2=\mathsf{E}(x),\quad \forall x\in X\) . A general POVM need not satisfy this condition and may be a weighted sum of multiple different projection operators.
 
-When I first encountered POVMs, I was not clear about how they are implemented. This is because traditional measurements involve projection operators satisfying $ \mathsf{E}(x)^2 = \mathsf{E}(x), \quad \forall x \in X $. However, general POVMs do not satisfy this condition.
+In fact, traditional projective measurements are also called PVMs (Projection Valued Measures), which are a special class of POVMs.
 
-In fact, traditional projection measurements, also known as PVMs (Projection Valued Measures), are a special type of POVM.
+The relationship between PVMs and POVMs is analogous to that between pure states and mixed states. That is, the elements of a POVM are statistical mixtures of elements of a PVM, just as mixed states are statistical mixtures of pure states. A mixed state can be purified into a pure state on a larger Hilbert space, while a POVM can likewise be extended by naimark dilation into a PVM on a larger space.
 
-PVMs are to POVMs what pure states are to mixed states. In other words, a POVM is a statistical mixture of PVMs, just as a mixed state is a statistical mixture of pure states.
+## Measure  
 
-# Implementing POVMs
+The M in POVM stands for Measure, not Measurement. An ordinary measure maps measurable sets to real numbers. A POVM (a positive-operator-valued measure) maps measurable sets to a positive operator (Positive operator). Therefore, the formal definition of a POVM is in fact:
 
-So, how do we implement POVMs? We can actually use PVMs and composite systems to implement POVMs.
+\(\mathsf{E}: \mathcal{A} \rightarrow \mathcal{L}(\mathcal{H})\) satisfying
 
-Consider a system with a Hilbert space $ \mathcal{H} $ and a state $ \rho $.
+1) \(\mathsf{E}(A) \ge 0,\quad \forall A\in \mathcal{A}\)
 
-Next, we couple system $ \mathcal{H} $ with another system $ \mathcal{K} $. Suppose the initial state of system $ \mathcal{K} $ is $ \sigma $. Then, the initial state of the composite system is $ \rho \otimes \sigma $ in $ \mathcal{H} \otimes \mathcal{K} $.
+2) \(\mathsf{E}(X) = \mathbb{I}_{\mathcal{H}}\)
 
-After that, we let the composite system evolve for a period of time, resulting in the system's state becoming $ U(\rho \otimes \sigma) U^\dag $.
+where \(\mathcal{A}\) is a \(\sigma\)-algebra on \(X\) . \((X,\mathcal{A})\) forms a measurable space.
 
-Finally, we perform a PVM $ \mathsf{Z} $ measurement on subsystem $ \mathcal{K} $. According to Born's rule, the probability of obtaining result $ x $ is $ \operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}\_{\mathcal{H}}\otimes \mathsf{Z}(x))] $.
+There are two reasons for defining it this way:
 
-Thus, we have implemented a POVM $ \mathsf{E} $ such that $ \operatorname{tr}[\rho \mathsf{E}(x)] = \operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}\_{\mathcal{H}}\otimes \mathsf{Z}(x))] $.
+First, quantum mechanics is founded on probability theory, and probability theory is founded on measure theory.
 
-# Measurement Model
+Second, when measurement outcomes are continuous, we must use this definition. Examples include position and momentum measurements.
 
-Let's summarize the physical objects involved in implementing POVMs: the ancilla system $ \mathcal{K} $, the initial state $ \sigma $ of system $ \mathcal{K} $, the evolution $ U $ of the composite system, and the projection measurement $ \mathsf{Z} $ on the ancilla system. These physical objects together realize a POVM measurement.
+## How to Implement a POVM  
 
-So, we can define $ \mathfrak{M} = (\mathcal{K},\sigma,U,\mathsf{Z}) $ as a Measurement Model.
+So how can a POVM be implemented? In fact, we can use PVMs and composite systems to implement POVMs.
 
-In actual experiments, the ancilla system $ \mathcal{K} $ can be considered as a probe of the instrument, and $ \mathsf{Z} $ is the readout of the probe.
+Consider a system with Hilbert space \(\mathcal{H}\) and state \(\rho\) .
 
-Post-Measurement State
-POVMs themselves cannot determine the post-measurement state. The actual determination of the post-measurement state depends on the specific implementation of the measurement, that is, the measurement model.
+Next, we couple system \(\mathcal{H}\) with another system \(\mathcal{K}\) . Suppose the initial state of system \(\mathcal{K}\) is \(\sigma\) ; then the initial state of the composite system is \(\rho \otimes \sigma \in \mathcal{H} \otimes \mathcal{K}\) .
 
-For a measurement model $ \mathfrak{M} = (\mathcal{K},\sigma,U,\mathsf{Z}) $, the post-measurement state of system $ \mathcal{H} $ is $ \rho\_x = \operatorname{tr}\_{\mathcal{K}}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}\_{\mathcal{H}}\otimes \mathsf{Z}(x))] $, where $ \operatorname{tr}\_{\mathcal{K}}[\cdot] $ denotes the partial trace.
+We then let the composite system evolve for some time, so that its state becomes \(U(\rho\otimes \sigma) U^\dag\) .
 
-# Quantum Instruments
+Finally, we perform on subsystem \(\mathcal{K}\) the measurement specified by the PVM \(\mathsf{Z}\) . According to the Born rule, the probability of obtaining outcome \(x\) is \(\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]\) .
 
-POVMs provide probabilities for each measurement outcome but do not determine the post-measurement state. Therefore, we aim to find a mathematical object that includes both the measurement probabilities and the post-measurement states. This mathematical object is called a Quantum Instrument.
+In this way, we implement a POVM \(\mathsf{E}\) satisfying \(\operatorname{tr}[\rho \mathsf{E(x)}]=\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]\) .
 
-> Definition: Quantum Instrument
-> 
-> An operator $ \mathcal{I}\_x: \mathcal{I}\_x(\rho) = \rho\_x $ is called a Quantum Instrument if $ \operatorname{tr}\left[\sum\_{x\in X} \rho\_x \right] = \operatorname{tr}[\rho] = 1 $.
+## Measurement Model (Measurement Model)  
 
-It can be seen that $ \mathcal{I}\_x $ not only provides the measurement probability $ p\_x = \operatorname{tr}[\rho\_x] $, but also gives the post-measurement state $ \frac{\rho\_x}{\operatorname{tr}[\rho\_x]} $.
+Let us summarize the physical objects involved in the above implementation of a POVM: the ancillary (ancilla) system \(\mathcal{K}\) , the initial state \(\sigma\) of system \(\mathcal{K}\) , the evolution \(U\) of the composite system, and the projective measurement \(\mathsf{Z}\) on the ancillary system. These physical objects implement a POVM measurement.
 
-Obviously, the same POVM corresponds to countless Quantum Instruments.
+Thus, we can define \(\mathfrak{M}=(\mathcal{K},\sigma,U,\mathsf{Z})\) and call it a measurement model (Measurement Model).
 
-So, for any Quantum Instrument, can we always implement it? The answer is yes.
+In actual experiments, the ancillary (ancilla) system \(\mathcal{K}\) can be regarded as the probe of the instrument, while \(\mathsf{Z}\) is the readout of the probe.
 
-> Theorem
-> 
-> Given any Quantum Instrument, we can always find a Measurement Model to implement it (in fact, there are countless implementations). Proof omitted.
+## Post-Measurement State  
+
+A POVM itself cannot determine the post-measurement state. What actually determines the post-measurement state is the specific implementation of the measurement, namely the measurement model.
+
+For the measurement model \(\mathfrak{M}=(\mathcal{K},\sigma,U,\mathsf{Z})\) , the state of system \(\mathcal{H}\) after measurement is \(\rho_x=\operatorname{tr}_{\mathcal{K}}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]\) , where \(\operatorname{tr}_{\mathcal{K}}[\cdot]\) denotes taking the partial trace.
+
+## Quantum Instruments (Quantum Instruments)  
+
+A POVM gives the probabilities of the various measurement outcomes, but does not give the post-measurement state. We therefore seek a mathematical object that incorporates both measurement probabilities and post-measurement states. This mathematical object is called a Quantum Instrument.
+
+> **Definition: Quantum Instrument**  
+>   
+> We call \(\mathcal{I}_{x}: \mathcal{I}_{x}(\rho) = \rho_x\) a Quantum Instrument if \(\operatorname{tr}\left[\sum_{x\in X} \rho_x \right]=\operatorname{tr}[\rho]=1\) .
+
+It can be seen that \(\mathcal{I}_x\) not only gives the measurement probability \(p_x=\operatorname{tr}[\rho_x]\) , but also gives the post-measurement state \(\frac{\rho_x}{\operatorname{tr}[\rho_x]}\) .
+
+Clearly, the same POVM corresponds to infinitely many Quantum Instruments.
+
+So, can we always implement an arbitrary Quantum Instrument? The answer is yes.
+
+> **Theorem**  
+>   
+> Given any Quantum Instrument, we can always find a Measurement Model to implement it (in fact, there are infinitely many). Proof omitted.

@@ -6,6 +6,7 @@ aliases:
   - "/en/pointer0/"
   - "/en/Post_20240126_0指针不能访问-那那个位置的字节会不会很孤独/"
 draft: false
+author: "Haifei"
 ---
 
 There are two cases to consider: physical addresses and virtual addresses.

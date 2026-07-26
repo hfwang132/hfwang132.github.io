@@ -6,6 +6,7 @@ aliases:
 draft: true
 categories: ["Everyday Life"]
 tags: ["Everyday Life"]
+author: "Haifei"
 ---
 
 > This article was written on January 5, 2020. Looking back on it today, I feel that my freshman self was constantly pondering “ultimate” questions, really quite immersed in grand narratives. Yet I cannot help but envy that kind of youthful vigor, because the biggest problem I face every day now is what to eat for lunch.

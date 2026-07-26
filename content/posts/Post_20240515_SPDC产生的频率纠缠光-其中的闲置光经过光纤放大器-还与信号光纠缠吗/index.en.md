@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Quantum Optics"]
 categories: ["Quantum Information"]
+author: "Haifei"
 ---
 
 Does the idler light passing through the optical fiber amplifier still entangle with the signal light, which is produced by SPDC?

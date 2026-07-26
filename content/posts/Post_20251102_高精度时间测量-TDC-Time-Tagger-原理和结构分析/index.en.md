@@ -1,36 +1,38 @@
 ---
-title: "High-Precision Time Measurement—Principles and Structural Analysis of TDC / Time Tagger"
+title: "High-Precision Time Measurement—Analysis of TDC / Time Tagger Principles and Architecture"
 date: 2025-11-02T12:53:03+08:00
 draft: false
 math: true
 originalURL: "https://zhuanlan.zhihu.com/p/1967603349005248271"
-author: "像牛一样的猫"
+author: "Haifei"
+tags: ["Time Tagger", "TDC"]
+categories: ["EECS"]
 ---
 
 ## 1. What Is a TDC / Time Tagger?  
 
-A Time-to-Digital Converter (TDC) is essentially a highly precise timer (with picosecond-level resolution) that assigns a high-precision timestamp (Timestamp) to every input pulse signal.
+A Time-to-Digital Converter (TDC) is essentially an extremely precise timer (at the picosecond level) that assigns a high-precision timestamp (Timestamp) to every input pulse signal.
 
 Therefore, a TDC is also called a Time Tagger, where “Tag” means assigning a timestamp.
 
-TDC / Time Tagger is at the core of experiments such as Hong-Ou-Mandel interference and fluorescence lifetime measurements; one could say that quantum optics experiments can hardly do without it.
+TDCs / Time Taggers are central to experiments such as Hong-Ou-Mandel interference and fluorescence lifetime measurements; it can be said that quantum optics experiments can hardly do without them.
 
-## 2. Structure of a TDC  
+## 2. TDC Architecture  
 
-The overall structure of a TDC is very simple, as shown below:
+The overall architecture of a TDC is very simple, as shown below:
 
 {{< figure src="images/v2-c136336af8c23e0bf7d17c82f9d0cb1e_r.png" >}}
 
-Structure of a TDC / Time Tagger. Image source: author
+Architecture of a TDC / Time Tagger. Image source: created by the author
 
   
   
 
-Each channel of a TDC is connected to a comparator. The comparator is responsible for converting the input analog pulse signal into a digital pulse signal. The FPGA assigns high-precision timestamps to these digital pulses and transmits them to the host computer for post-processing via protocols such as USB / Ethernet.
+Each channel of a TDC is connected to a comparator. The comparator converts the input analog pulse signal into a digital pulse signal. The FPGA assigns high-precision timestamps to these digital pulses and transfers them to the host computer for post-processing via protocols such as USB / Ethernet.
 
-> Of course, if the chip design capabilities are strong enough, the FPGA can also be replaced with a custom ASIC (application-specific integrated circuit).
+> Of course, if the chip-design capability is strong enough, the FPGA can also be replaced with a custom ASIC (application-specific integrated circuit).
 
-Taking the Time Tagger from Swabian Instruments as an example, its internal design consists of a core board (equipped with an FPGA) + a baseboard (equipped with comparators). The advantage of this design is that it facilitates testing and offers strong scalability.
+Taking the Swabian Instruments Time Tagger as an example, its internal design consists of a core board (carrying the FPGA) + a baseboard (carrying the comparators). The advantage of this design is that it is easy to test and highly scalable.
 
 {{< figure src="images/v2-0c01ce9b28ce5eb64b763f060c59bd36_1440w.png" >}}
 
@@ -40,32 +42,32 @@ Swabian Instruments Time Tagger. Image source: https://www.swabianinstruments.co
   
 {{< figure src="images/v2-e2bb57f85a49edbe2cc7acdbb483405f_r.png" >}}
 
-Structural analysis of the Swabian Instruments Time Tagger. Image source: author.
+Structural analysis of the Swabian Instruments Time Tagger. Image source: created by the author.
 
   
   
 
-The FPGA used in this Swabian Instruments Time Tagger Ultra is from the Xilinx Kintex 7 series (xc7k160t), which is considered a low-to-mid-range series (28 nm process). It costs approximately USD 400–500.
+The FPGA used in this Swabian Instruments Time Tagger Ultra is from the Xilinx Kintex 7 series (xc7k160t), which is considered a mid-to-low-end series (28 nm process). It costs around USD 400–500.
 
-The comparator is Texas Instruments' LMH7322, compatible with the LVDS standard and featuring RMS random jitter of 500–600 fs. It costs approximately USD 10.
+The comparator is the Texas Instruments LMH7322, compatible with the LVDS standard and featuring RMS random jitter of 500–600 fs. It costs around USD 10.
 
-Adding clock management, DDR, USB, and various other chips, my personal estimate is that—even when fully accounted for—the BOM cost of the entire board would not exceed USD 2,000.
+Adding clock management, DDR, USB, and various other chips, my personal estimate is that—even at the absolute maximum—the BOM material cost of the entire board would not exceed USD 2,000.
 
-**Yet Swabian Instruments can sell this complete system for EUR 20,000**! How?
+**Yet Swabian Instruments can sell this complete unit for EUR 20,000**! How?
 
-The answer is intellectual property: primarily the **on-chip FPGA hardware design**, and secondarily the comprehensive host software and API.
+The answer is intellectual property: primarily the **on-chip FPGA hardware design**, and secondarily the comprehensive host-side software and API.
 
-The next section introduces the hardware design on the FPGA.
+In the next section, we will introduce the on-chip FPGA hardware design.
 
 ## 3. Principles of Implementing a TDC with an FPGA  
 
-Those familiar with FPGAs know that their clock frequencies generally only reach a few hundred MHz at most. Beyond that, timing violations usually occur. However, the timestamps generated by a TDC have ps-level precision, corresponding to frequencies of several hundred GHz! So how exactly does an FPGA implement a TDC? Surely the FPGA cannot run at several hundred GHz?
+Those familiar with FPGAs know that their clock frequency can only reach a few hundred MHz at most. Beyond that, timing violations usually occur. However, the timestamps assigned by a TDC have ps-level precision, corresponding to frequencies of several hundred GHz! So how exactly does an FPGA implement a TDC? It cannot possibly run at several hundred GHz, can it?
 
-In fact, the FPGA implementation of a TDC is quite ingenious. The key component used is the carry logic (CARRY) required during addition.
+In fact, the FPGA implementation of a TDC is highly ingenious. The core component used is the carry logic (CARRY) needed during addition.
 
-> The carry logic in the Xilinx 7 series is CARRY4, while that in the Xilinx Ultrascale series is CARRY8. As their names suggest, the former has 4 bits and the latter has 8 bits. Below, we use CARRY4 as an example.
+> The carry logic in the Xilinx 7 series is CARRY4, while that in the Xilinx Ultrascale series is CARRY8. As their names imply, the former has 4 bits and the latter has 8 bits. Below, we use CARRY4 as an example.
 
-The block diagram of the CARRY4 component is as follows:
+The block diagram of the CARRY4 primitive is as follows:
 
 {{< figure src="images/v2-4d776b3c61d3bdbacb5a4ebfbdc2830f_r.png" >}}
 
@@ -73,9 +75,9 @@ Image source: https://docs.amd.com/r/en-US/ug953-vivado-7series-libraries/CARRY4
 
   
   
-> Does it look complicated? Don't worry; it will be explained below.
+> Does it look complicated? Do not worry; it will be explained below.
 
-It can be instantiated in Verilog using the CARRY4 primitive (Primitive):
+In Verilog, it can be instantiated through the CARRY4 primitive:
 
 ```
 CARRY4 CARRY4_inst (
@@ -88,13 +90,13 @@ CARRY4 CARRY4_inst (
 );
 ```
 
-Before introducing the principle by which it implements a TDC, let us first discuss its primary function—calculating carries in addition.
+Before introducing the principles by which it implements a TDC, let us first discuss its primary function—calculating carries in addition.
 
-### 3.1 Full Adder  
+### 3.1 Full Adders  
 
 Let us first review how combinational logic circuits perform addition.
 
-The component responsible for addition is called a full adder. An n-bit full adder consists of 1-bit full adders connected in series.
+The circuit responsible for addition is called a full adder. An n-bit full adder consists of cascaded 1-bit full adders.
 
 A 1-bit full adder has three input signals: two addends (A, B) and a carry input (CI). It has two output signals: the sum (O) and the carry output (CO).
 
@@ -117,19 +119,19 @@ We can write the logical expressions as follows:
 
 > Here, the symbol \(\oplus\) represents exclusive OR (XOR), the symbol \(\cdot\) represents AND, and the symbol \(+\) represents OR. AND has higher precedence than OR.
 
-With an \(1\)-bit full adder, we only need to connect the \(\text{CO}\) of bit \((n-1)\) to the \(\text{CI}\) of bit \(n\) to implement an \(n\)-bit full adder.
+With \(1\)-bit full adders, we only need to connect the \(\text{CO}\) of the \((n-1)\)th bit to the \(\text{CI}\) of the \(n\)th bit to implement an \(n\)-bit full adder.
 
 In this way, we can use XOR gates, AND gates, and OR gates to perform addition.
 
-However, the logical expressions above can be further simplified to reduce the number of logic gates. Let \(\text{DI}=\text{A}\cdot \text{B}\) and \(\text{S}=\text{A} \oplus \text{B}\); then
+However, the above logical expressions can be further simplified, thereby reducing the number of logic gates. Let \(\text{DI}=\text{A}\cdot \text{B}\) and \(\text{S}=\text{A} \oplus \text{B}\). Then
 
 \[\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ &= \text{S}\oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI}\\ &= \text{A}\cdot \text{B} + (\text{A} \oplus \text{B})\cdot \text{CI} \\ &= (\text{A} \oplus \text{B}) \,? \,\text{CI} : (\text{A}\cdot \text{B})\\ &= \text{S} \, ? \, \text{CI}: \text{DI} \end{aligned}\]
 
-> Here, \(a \,?\, b:c\) is the ternary operator, meaning \(\text{if }a,\text{ then }b,\text{ else }c\). This operation is implemented by a MUX (multiplexer, Multiplexer).  
+> Here, \(a \,?\, b:c\) is a ternary operator, meaning \(\text{if }a,\text{ then }b,\text{ else }c\). This operation is implemented by a MUX (multiplexer).  
 >   
-> DI is called the generator, and S is called the propagator. As their names imply, DI generates carries, while S propagates carries.
+> DI is called the generator, while S is called the propagator. As the names imply, DI generates carries and S propagates carries.
 
-Now, let us vectorize the logical expressions above:
+Now, we vectorize the above logical expressions:
 
 \[\begin{aligned} \text{O}[n]&=\text{S}[n] \oplus \text{DI}[n] \\ \text{CO}[n]&= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \end{aligned}\]
 
@@ -137,7 +139,7 @@ We can then draw the circuit diagram (using a 4-bit full adder as an example):
 
 {{< figure src="images/v2-98317849fd889ba5274f505b6d4ad017_r.png" >}}
 
-Circuit diagram of a 4-bit full adder. Image source: author
+Circuit diagram of a 4-bit full adder. Image source: created by the author
 
   
   
@@ -146,16 +148,16 @@ This circuit implements the operation \(\{\text{CO}, \,\text{O[3:0]}\} = \text{A
 
 ### 3.2 Structure of CARRY4  
 
-Extracting the core part of the circuit diagram in the previous section gives us CARRY4:
+If we extract the core portion of the circuit diagram from the previous section, we obtain CARRY4:
 
 {{< figure src="images/v2-2bede568f768105af2612fca64e00259_r.png" >}}
 
-The portion enclosed by the red box in the figure is CARRY4. Image source: author
+The portion enclosed by the red box is CARRY4. Image source: created by the author
 
   
   
 
-Compare it with the circuit diagram in the official documentation:
+Let us compare it with the circuit diagram in the official documentation:
 
 {{< figure src="images/v2-4d776b3c61d3bdbacb5a4ebfbdc2830f_r.png" >}}
 
@@ -164,46 +166,46 @@ Image source: https://docs.amd.com/r/en-US/ug953-vivado-7series-libraries/CARRY4
   
   
 
-Aren't they exactly the same?
+Are they exactly the same?
 
-> The only difference is that CI can be overridden by CYINIT. When CYINIT is 1, the output is 1; when CYINIT is 0, the output is CI. This is merely for programming convenience.  
+> The only difference is that CI can be overridden by CYINIT. When CYINIT is 1, it outputs 1; when CYINIT is 0, it outputs CI. This is merely for programming convenience.  
 >   
-> For example, when performing subtraction, the logical expression is \(\text{O} = \text{A} + \sim\text{B} + 1\), where \(\sim\) denotes bit-wise NOT. Therefore, for subtraction, it is only necessary to set CYINIT of the lowest-order CARRY4 to 1.
+> For example, when calculating subtraction, the logical expression is \(\text{O} = \text{A} + \sim\text{B} + 1\), where \(\sim\) denotes bit-wise NOT. Therefore, when performing subtraction, it is only necessary to set CYINIT of the CARRY4 at the least significant bit to 1.
 
-### 3.3 Using CARRY4 as a High-Precision Delay Line  
+### 3.3 CARRY4 as a High-Precision Delay Line  
 
-The previous two sections introduced the primary function of CARRY4—performing addition. Now let us introduce its function in a TDC: a picosecond-level delay line.
+In the previous two sections, we introduced the primary function of CARRY4—performing addition. Now, let us introduce its role in a TDC—a picosecond-level delay line.
 
-CARRY4 contains a relatively long critical path:
+There is a relatively long critical path in CARRY4:
 
 \[\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \text{CO}[3] \]
 
-Every combinational logic gate requires picosecond-level time to compute. Specifically, along the path above, each arrow takes from several picoseconds to several tens of picoseconds.
+The computation of any combinational logic gate requires picosecond-level time. Specifically, in the path above, each arrow takes from a few picoseconds to several tens of picoseconds.
 
-If we connect multiple CARRY4 units end to end, we obtain a very long delay line, with picosecond-level delay resolution:
+If we connect multiple CARRY4 units end to end, we obtain a very long delay line with picosecond-level delay resolution:
 
 \[\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \cdots \rightarrow \text{CO}[N-1]\]
 
-As can be seen from the logical expression \(\text{CO}[n]= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \), as long as we set all \(\text{S}[n]\) to high level, the carry signal can propagate along this chain. The level of \(\text{DI}[n]\) does not matter and does not affect propagation of the carry signal.
+As can be seen from logical expression \(\text{CO}[n]= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \), as long as we set all \(\text{S}[n]\) to logic high, the carry signal can propagate along this chain. The logic level of \(\text{DI}[n]\) does not matter and does not affect propagation of the carry signal.
 
-This actually simulates the process of carry propagation when humans perform addition: imagine calculating \(1111_2 + 0001_2 = 10000_2\). We first calculate the least significant digit \(1+1=10\) and find that it generates a carry, so we carry it to the next digit. This causes the next digit to generate another carry, and so on. The computer takes several to several tens of picoseconds to calculate each such carry.
+This actually simulates how humans propagate carries when performing addition: imagine calculating \(1111_2 + 0001_2 = 10000_2\). We first calculate the least significant digit \(1+1=10\) and find that it generates a carry, so we record it in the next digit. This causes the next digit to generate a carry as well, and so on. The time required for a computer to calculate each of these carries is from a few to several tens of picoseconds.
 
-As shown below, if we connect the input pulse (trigger signal) to \(\text{CI}\) and record \(\text{CO}[N-1:0]\) at the next clock rising edge, we can determine the time interval \(\tau\) in the figure. Thus, the arrival time of the input pulse can be determined with picosecond precision.
+As shown below, we connect the input pulse (trigger signal) to \(\text{CI}\) and record \(\text{CO}[N-1:0]\) at the rising edge of the next clock cycle, allowing us to determine the time interval \(\tau\) shown in the figure. This makes it possible to determine the arrival time of the input pulse with picosecond precision.
 
 {{< figure src="images/v2-b7668dd3655a7d6c0414ebf92eb6a7ec_r.png" >}}
 
-TDC timing diagram. Image source: author
+TDC timing diagram. Image source: created by the author
 
   
   
 
-Some readers have probably spotted the issue: according to this operating principle, if two pulses arrive within one clock cycle, wouldn't only one of them (for example, the first) be recorded? That's right. This is why TDCs / Time Taggers also have dead time, typically several to more than ten nanoseconds, determined by the FPGA clock frequency.
+Some readers have probably spotted the issue: according to this operating principle, if two pulses arrive within one clock period, would it not be possible to record only one of them (for example, the first one)? That is correct. This is why TDCs / Time Taggers also have dead time, typically from several to more than ten nanoseconds, determined by the FPGA clock frequency.
 
-> Of course, if a dedicated ASIC can be designed with a custom delay line, the result will certainly be better than with an FPGA. After all, CARRY4 / CARRY8 in FPGAs were not originally designed for use as delay lines.
+> Of course, if a dedicated ASIC can be designed with a custom delay line, its performance will certainly be better than that of an FPGA. After all, CARRY4 / CARRY8 in FPGAs were not originally intended to serve as delay lines.
 
 ## 4. Summary  
 
-This article introduced the structure and operating principles of FPGA-based TDCs (Time-to-Digital Converters) / Time Taggers. Among these, the high-precision delay line constructed using CARRY4/CARRY8 forms a key part of the FPGA hardware design.
+This article introduced the architecture and operating principles of FPGA-based TDCs (Time-to-Digital Converters) / Time Taggers. Among these, the high-precision delay lines constructed using CARRY4/CARRY8 form a key part of the FPGA hardware design.
 
 ## References  
 

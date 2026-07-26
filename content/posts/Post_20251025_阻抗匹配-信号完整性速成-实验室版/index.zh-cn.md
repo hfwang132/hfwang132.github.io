@@ -6,7 +6,9 @@ aliases:
 draft: false
 math: true
 originalURL: "https://zhuanlan.zhihu.com/p/1948865368002139588"
-author: "像牛一样的猫"
+author: "Haifei"
+tags: ["阻抗匹配", "信号完整性"]
+categories: ["EECS"]
 ---
 
 ## 一、前言  
@@ -46,21 +48,18 @@ author: "像牛一样的猫"
 
   
   
-
 {{< figure src="images/v2-cc4298e2d6a354eb3206022134433b4f_r.png" >}}
 
 SMA 接口、线芯传输信号、外层是地
 
   
   
-
 {{< figure src="images/v2-027391a4708405e96070c2a7f05706e3_r.png" >}}
 
 BNC 接口、线芯传输信号、外层是地
 
   
   
-
 {{< figure src="images/v2-ac9f824c8cedca59f190a0ce9b422c5c_r.png" >}}
 
 微带线（Microstrip）、共面波导（Coplanar Waveguide）、带状线（Stripline）的横截面。这些结构经常出现在高速 PCB 上。光芯片、超导量子芯片上也有类似结构。

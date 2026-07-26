@@ -6,6 +6,7 @@ aliases:
 draft: true
 categories: ["日常"]
 tags: ["日常"]
+author: "Haifei"
 ---
 
 > 今天是我在武大待的最后一天。想回忆一下这四年的时光，然而校园里几乎每个角落都走过了，所以不如还是看看自己以前的朋友圈吧。

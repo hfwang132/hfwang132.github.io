@@ -84,6 +84,16 @@ class TranslationProtectionTests(unittest.TestCase):
         self.assertIn("[Reference](#ref_1)", rendered)
         self.assertNotIn(MODULE.PROTECTED_TOKEN_PREFIX, rendered)
 
+    def test_verifies_a_rendered_translation_pair(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            source = self.make_source(Path(temporary))
+            translated = self.translated_object(source)
+            rendered = MODULE.render_translation(source, translated)
+            source.source_file.with_name("index.en.md").write_text(
+                rendered, encoding="utf-8"
+            )
+            MODULE.verify_translation_pair(source.source_file)
+
     def test_rejects_a_changed_protection_token(self):
         with tempfile.TemporaryDirectory() as temporary:
             source = self.make_source(Path(temporary))
@@ -110,6 +120,17 @@ class TranslationProtectionTests(unittest.TestCase):
             request["text"]["format"]["schema"], MODULE.TRANSLATION_SCHEMA
         )
         self.assertEqual(json.loads(request["input"])["title"], "测试文章")
+
+    def test_translate_parser_accepts_explicit_full_strategy(self):
+        args = MODULE.build_parser().parse_args(
+            [
+                "translate",
+                "content/posts/example",
+                "--strategy",
+                "full",
+            ]
+        )
+        self.assertEqual(args.strategy, "full")
 
     def test_protection_does_not_create_nested_tokens(self):
         source = '<a href="https://example.test/path">链接</a>\n'
@@ -166,6 +187,177 @@ class TranslationProtectionTests(unittest.TestCase):
         self.assertFalse(
             any(MODULE.PROTECTED_TOKEN_PREFIX in entry.value for entry in entries)
         )
+
+    def test_force_refresh_preserves_english_taxonomy_missing_from_source(self):
+        rendered = (
+            "---\n"
+            'title: "Refreshed"\n'
+            "draft: false\n"
+            "---\n\n"
+            "New body.\n"
+        )
+        existing = (
+            "---\n"
+            'title: "Old"\n'
+            'tags: ["Time Tagger", "TDC"]\n'
+            'categories: ["EECS"]\n'
+            "---\n\n"
+            "Old body.\n"
+        )
+        result = MODULE.preserve_existing_translation_metadata(rendered, existing)
+        self.assertIn('tags: ["Time Tagger", "TDC"]', result)
+        self.assertIn('categories: ["EECS"]', result)
+        self.assertEqual(result.count("tags:"), 1)
+
+    def test_protected_markdown_chunks_do_not_split_or_duplicate_tokens(self):
+        source = (
+            "First paragraph @@HFPROTECT_00000@@.\n\n"
+            "Second paragraph @@HFPROTECT_00001@@.\n\n"
+            "Third paragraph @@HFPROTECT_00002@@.\n"
+        )
+        chunks = MODULE.split_protected_markdown(source, max_chars=55)
+        self.assertGreater(len(chunks), 1)
+        self.assertEqual("".join(chunks), source)
+        for token in (
+            "@@HFPROTECT_00000@@",
+            "@@HFPROTECT_00001@@",
+            "@@HFPROTECT_00002@@",
+        ):
+            self.assertEqual(sum(chunk.count(token) for chunk in chunks), 1)
+
+    def test_repairs_reused_tokens_for_byte_identical_math_only(self):
+        entries = (
+            MODULE.ProtectedEntry(
+                "@@HFPROTECT_00000@@", "math", r"\(\mathcal{F}\)"
+            ),
+            MODULE.ProtectedEntry(
+                "@@HFPROTECT_00001@@", "math", r"\(\mathcal{F}\)"
+            ),
+        )
+        source = MODULE.TranslationSource(
+            source_file=Path("index.zh-cn.md"),
+            source_text="",
+            header='title: "标题"',
+            body="",
+            title="标题",
+            tags=[],
+            categories=[],
+            protected_body=(
+                "@@HFPROTECT_00000@@ and @@HFPROTECT_00001@@"
+            ),
+            protected=entries,
+        )
+        translated = {
+            "title": "Title",
+            "tags": [],
+            "categories": [],
+            "body": "@@HFPROTECT_00001@@ and @@HFPROTECT_00001@@",
+            "captions": [],
+        }
+        restored = MODULE.restore_body(source, translated)
+        self.assertEqual(
+            restored,
+            r"\(\mathcal{F}\) and \(\mathcal{F}\)",
+        )
+
+    def test_segment_request_enforces_exact_fragment_count(self):
+        request = MODULE.segment_response_request(["one", "two"], "test-model")
+        schema = request["text"]["format"]["schema"]
+        translations = schema["properties"]["translations"]
+        self.assertEqual(translations["minItems"], 2)
+        self.assertEqual(translations["maxItems"], 2)
+
+    def test_paragraph_request_requires_exact_mapping_keys(self):
+        request = MODULE.paragraph_response_request(
+            {"p000": "第一段", "p001": "第二段"},
+            "test-model",
+        )
+        translations = request["text"]["format"]["schema"]["properties"][
+            "translations"
+        ]
+        self.assertEqual(translations["required"], ["p000", "p001"])
+        self.assertEqual(
+            set(translations["properties"]), {"p000", "p001"}
+        )
+
+    def test_paragraph_placeholders_are_restored_by_source_order(self):
+        source = (
+            "定义 @@HFPROTECT_00088@@，然后使用 "
+            "@@HFPROTECT_00102@@。"
+        )
+        encoded = MODULE.encode_paragraph_placeholders(source)
+        self.assertIn('<ph id="00088"/>', encoded)
+        translated = (
+            'Define <ph id="00088"/>, then use <ph id="00088"/>.'
+        )
+        self.assertEqual(
+            MODULE.restore_paragraph_placeholders(source, translated),
+            "Define @@HFPROTECT_00088@@, then use "
+            "@@HFPROTECT_00102@@.",
+        )
+
+    def test_valid_paragraph_placeholder_reordering_is_preserved(self):
+        source = (
+            "集合 @@HFPROTECT_00088@@ 的拓扑是 "
+            "@@HFPROTECT_00102@@。"
+        )
+        translated = (
+            'A topology <ph id="00102"/> on the set '
+            '<ph id="00088"/>.'
+        )
+        self.assertEqual(
+            MODULE.restore_paragraph_placeholders(source, translated),
+            "A topology @@HFPROTECT_00102@@ on the set "
+            "@@HFPROTECT_00088@@.",
+        )
+
+    def test_paragraph_placeholder_count_must_not_change(self):
+        source = "定义 @@HFPROTECT_00088@@。"
+        with self.assertRaises(MODULE.TranslationFailure):
+            MODULE.restore_paragraph_placeholders(source, "Define it.")
+
+    def test_markdown_structure_signature_tracks_quotes_and_headings(self):
+        source = "## 标题\n> 引用\n1. 项目\n"
+        translated = "## Title\n> Quote\n1. Item\n"
+        self.assertEqual(
+            MODULE.markdown_structure_signature(source),
+            MODULE.markdown_structure_signature(translated),
+        )
+
+    def test_restores_markdown_prefixes_from_source_fragment(self):
+        source = "## 中文标题\n> 引用\n1. 项目"
+        translated = "English title\nQuote\nItem"
+        self.assertEqual(
+            MODULE.restore_markdown_structure(source, translated),
+            "## English title\n> Quote\n1. Item",
+        )
+
+    def test_rejects_control_markers_and_extreme_segment_expansion(self):
+        self.assertTrue(
+            MODULE.suspicious_segment_translation(
+                "normal source", "text <|endoftext|> assistant to=system"
+            )
+        )
+        self.assertTrue(
+            MODULE.suspicious_segment_translation("short", "x" * 1600)
+        )
+        self.assertFalse(
+            MODULE.suspicious_segment_translation(
+                "一段正常的中文", "A normal English paragraph."
+            )
+        )
+
+    def test_edge_whitespace_is_split_without_losing_markdown_spacing(self):
+        self.assertEqual(
+            MODULE._edge_whitespace("\n  中文内容  \n"),
+            ("\n  ", "中文内容", "  \n"),
+        )
+
+    def test_segmented_translation_cache_is_ignored_by_git(self):
+        gitignore = (Path(__file__).resolve().parents[1] / ".gitignore").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(".secrets/", gitignore)
 
     def test_adds_caption_to_compact_figure_shortcode(self):
         shortcode = '{{< figure src="images/a.png">}}'
@@ -235,6 +427,38 @@ class ApiKeyTests(unittest.TestCase):
 
 
 class BatchPipelineTests(unittest.TestCase):
+    def test_selects_only_zhihu_column_articles_for_refresh(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            posts_dir = Path(temporary)
+            article = posts_dir / "article"
+            answer = posts_dir / "answer"
+            original = posts_dir / "original"
+            article.mkdir()
+            answer.mkdir()
+            original.mkdir()
+            (article / "index.zh-cn.md").write_text(
+                "---\n"
+                'title: "Article"\n'
+                'originalURL: "https://zhuanlan.zhihu.com/p/123"\n'
+                "---\n\nBody\n",
+                encoding="utf-8",
+            )
+            (answer / "index.zh-cn.md").write_text(
+                "---\n"
+                'title: "Answer"\n'
+                'originalURL: "https://www.zhihu.com/question/1/answer/2"\n'
+                "---\n\nBody\n",
+                encoding="utf-8",
+            )
+            (original / "index.zh-cn.md").write_text(
+                "---\ntitle: \"Original\"\n---\n\nBody\n",
+                encoding="utf-8",
+            )
+            with mock.patch.object(MODULE, "POSTS_DIR", posts_dir):
+                selected = MODULE.select_translation_sources("zhihu-articles")
+
+            self.assertEqual(selected, [article / "index.zh-cn.md"])
+
     def test_applies_completed_batch_with_source_hash_check(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

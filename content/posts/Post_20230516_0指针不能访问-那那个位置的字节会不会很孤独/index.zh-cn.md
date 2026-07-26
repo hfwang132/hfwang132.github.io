@@ -6,6 +6,7 @@ aliases:
   - "/pointer0/"
   - "/Post_20240126_0指针不能访问-那那个位置的字节会不会很孤独/"
 draft: false
+author: "Haifei"
 ---
 
 分两种情况讨论：物理地址和虚拟地址。

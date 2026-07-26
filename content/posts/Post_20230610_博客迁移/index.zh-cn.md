@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["日常"]
 tags: ["日常"]
+author: "Haifei"
 ---
 
 发现了制作个人网站的神器 - Hugo。感觉酷炫且好用。以后把知乎的博客都慢慢迁移过来！

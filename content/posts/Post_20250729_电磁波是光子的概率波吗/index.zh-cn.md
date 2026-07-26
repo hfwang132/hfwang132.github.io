@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["电磁波", "光子"]
 categories: ["量子光学"]
+author: "Haifei"
 ---
 
 ## 概率波 vs 量子场  

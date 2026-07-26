@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Differential Geometry"]
 categories: ["Mathematical Physics"]
+author: "Haifei"
 ---
 
 ## I. Differences and Similarities in Properties

@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["CS"]
 tags: ["存储/分区", "Linux"]
+author: "Haifei"
 ---
 
 Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。

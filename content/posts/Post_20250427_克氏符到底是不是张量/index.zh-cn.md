@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["克氏符", "广义相对论"]
 categories: ["数学物理方法"]
+author: "Haifei"
 ---
 
 个人最喜欢的理解是把 $\Gamma$ 看成标架丛上的联络，这样一来，克氏符的变换规则

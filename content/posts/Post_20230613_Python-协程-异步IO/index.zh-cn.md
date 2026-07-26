@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["CS"]
 tags: ["Python"]
+author: "Haifei"
 ---
 
 最近做项目用到 Python 协程/异步，现在总结一下：

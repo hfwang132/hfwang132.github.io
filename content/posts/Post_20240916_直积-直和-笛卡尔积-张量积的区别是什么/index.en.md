@@ -6,5 +6,6 @@ aliases:
   - "/en/products/"
   - "/en/Post_20250108_直积-直和-笛卡尔积-张量积的区别是什么/"
 draft: true
+author: "Haifei"
 ---
 

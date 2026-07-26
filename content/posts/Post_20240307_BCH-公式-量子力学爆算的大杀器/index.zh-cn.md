@@ -7,6 +7,7 @@ aliases:
 draft: false
 tags: ["量子光学"]
 categories: ["数学物理方法"]
+author: "Haifei"
 ---
 
 **Baker-Campbell-Hausdorff 公式** 可以用来计算海森堡表象下的算符演化：

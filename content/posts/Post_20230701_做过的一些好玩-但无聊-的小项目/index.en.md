@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["Diary"]
 tags: ["Embedded Systems"]
+author: "Haifei"
 ---
 
 |Projects|Date|Remark|

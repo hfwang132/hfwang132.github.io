@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Quantum Darwinism"]
 categories: ["Quantum Information"]
+author: "Haifei"
 ---
 
 Personally, among the interpretations of quantum mechanics, I find Zurek's **Existential Interpretation**—also known as **Quantum Darwinism** [1]—to be the most interesting at present. Zurek himself is one of the founders of decoherence theory.

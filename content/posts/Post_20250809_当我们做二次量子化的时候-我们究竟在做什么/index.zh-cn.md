@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["二次量子化"]
 categories: ["量子力学"]
+author: "Haifei"
 ---
 
 **一次量子化无法描述粒子数的叠加态，更无法描述粒子数变化情况下的动力学**

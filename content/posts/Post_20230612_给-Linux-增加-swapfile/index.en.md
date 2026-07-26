@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["CS"]
 tags: ["Storage/Partition", "Linux"]
+author: "Haifei"
 ---
 
 Xilinx's toolchain consumes soooo much memory! Sometimes it causes the system to freeze... After all, my laptop only has 8GB of RAM. So there's no other choice but to add virtual memories. 

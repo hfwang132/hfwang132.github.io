@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["量子光学"]
 categories: ["量子信息"]
+author: "Haifei"
 ---
 
 在经典力学中，复数只是一个用来简化计算的数学技巧。

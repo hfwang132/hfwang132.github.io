@@ -6,6 +6,7 @@ aliases:
 draft: true
 categories: ["日常"]
 tags: ["日常"]
+author: "Haifei"
 ---
 
 来新加坡不知不觉已经快一年半了。没想到上次写日记还是一年半之前。

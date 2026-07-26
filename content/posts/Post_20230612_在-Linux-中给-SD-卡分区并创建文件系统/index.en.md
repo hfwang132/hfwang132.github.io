@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["EECS"]
 tags: ["Storage/Partition", "Linux"]
+author: "Haifei"
 ---
 
 To partition and format an SD card in Linux, follow these steps: First, connect the SD card to your PC. Then, use the fdisk command in the bash command line to partition the SD card. Finally, use the mkfs command to create a file system (format) on the SD card.

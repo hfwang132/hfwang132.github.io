@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["量子光学"]
 categories: ["量子信息"]
+author: "Haifei"
 ---
 
 SPDC产生的频率纠缠光，其中的闲置光经过光纤放大器，还与信号光纠缠吗？

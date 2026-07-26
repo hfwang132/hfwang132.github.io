@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Christoffel symbols", "general relativity"]
 categories: ["mathematical physics methods"]
+author: "Haifei"
 ---
 
 My favorite way to understand this is to regard $\Gamma$ as a connection on the frame bundle. Then, the transformation law of the Christoffel symbols

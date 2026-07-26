@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["CS"]
 tags: ["Python", "Jupyter Notebook"]
+author: "Haifei"
 ---
 
 先看一段 Jupyter Notebook 中的代码：

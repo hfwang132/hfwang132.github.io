@@ -8,6 +8,7 @@ aliases:
 draft: draft
 tags: ["spin", "relativity"]
 categories: ["Mathematical Methods of Physics"]
+author: "Haifei"
 ---
 
 Conclusion: integer spin is a classical effect, whereas half-integer spin is a quantum effect and has little to do with relativity.

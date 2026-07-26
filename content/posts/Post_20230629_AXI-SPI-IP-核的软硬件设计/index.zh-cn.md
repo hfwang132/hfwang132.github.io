@@ -6,6 +6,7 @@ aliases:
 draft: false
 categories: ["EECS"]
 tags: ["SPI", "嵌入式系统"]
+author: "Haifei"
 ---
 
 ### 1 基础

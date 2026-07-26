@@ -8,6 +8,7 @@ aliases:
 draft: false
 tags: ["Quantum Measurement Theory"]
 categories: ["Quantum Information"]
+author: "Haifei"
 ---
 
 Common sense tells us that an actual position measurement will not produce a delta function, as the delta function itself is pathological. So what should the collapsed state of an actual position measurement look like?
