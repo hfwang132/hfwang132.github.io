@@ -34,6 +34,25 @@ class SyncCvTests(unittest.TestCase):
         self.assertIn("- Built a &gt;200× accelerator.", rendered)
         self.assertIn('<a href="https://example.com"><em>PRL</em></a>', rendered)
 
+    def test_dated_heading_collapses_source_line_wrapping(self):
+        source = r"""
+        \documentclass{resume}
+        \begin{document}
+        \section{Summary}
+        Test.
+        \section{Experience}
+        \datedsubsection{\textbf{Researcher},
+        \textit{Centre for Quantum Technologies}}{2023 -- Present}
+        \end{document}
+        """
+        rendered = sync_cv.latex_body_to_html_markdown(source)
+        self.assertIn(
+            '<span class="cv-entry-title"><strong>Researcher</strong>, '
+            "<em>Centre for Quantum Technologies</em></span>"
+            '<span class="cv-entry-date">2023 – Present</span>',
+            rendered,
+        )
+
     def test_strips_comments_but_preserves_escaped_percent(self):
         source = "value \\% retained % removed\nnext"
         self.assertEqual(

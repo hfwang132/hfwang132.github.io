@@ -239,8 +239,11 @@ def replace_structural_commands(source: str) -> tuple[str, dict[str, str]]:
         if name == "section":
             rendered = f"## {convert_inline(arguments[0])}"
         else:
-            title = convert_inline(arguments[0])
-            date = convert_inline(arguments[1])
+            # \datedsubsection titles are commonly wrapped across source lines.
+            # Raw newlines inside the generated inline HTML make Goldmark nest
+            # the date span inside the title span, defeating flex alignment.
+            title = re.sub(r"\s+", " ", convert_inline(arguments[0])).strip()
+            date = re.sub(r"\s+", " ", convert_inline(arguments[1])).strip()
             rendered = (
                 '<div class="cv-entry-heading">'
                 f'<span class="cv-entry-title">{title}</span>'
