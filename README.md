@@ -266,8 +266,8 @@ c &= d
 \]
 ```
 
-LaTeX line breaks therefore remain `\\`; the old whole-file
-`mathjax_md.py` replacement is no longer needed. Historical posts retain their
+LaTeX line breaks therefore remain `\\`. The legacy whole-file MathJax
+replacement and undo scripts have been removed. Historical posts retain their
 existing `$ ... $` syntax for backward compatibility.
 
 ## Repository layout
