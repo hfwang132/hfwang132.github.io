@@ -1,6 +1,10 @@
 # Local credentials (never commit Zhihu cookies).
 .secrets/
 
+# Local deployment tooling and Vercel project linkage/build output.
+.tools/
+.vercel/
+
 # Unpublished Hugo content. This directory is loaded only by the local
 # draft-preview configuration and must never be committed.
 private-content/
@@ -13,10 +17,11 @@ private-content/
 __pycache__/
 *.py[cod]
 
-# Hugo local output and caches. Local deployment publishes only the generated
-# site to the gh-pages branch.
+# Hugo local output and caches. Local deployment uploads only the generated
+# static site to Vercel.
 .hugo_build.lock
 .hugo-cache/
 public/
 cloudflare-public/
 resources/_gen/
+.env.local

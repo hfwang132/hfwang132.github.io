@@ -1025,7 +1025,7 @@ def validate_site() -> None:
         )
 
 
-def publish_post(post: ImportedPost) -> None:
+def publish_post(post: ImportedPost, *, push: bool = True) -> None:
     staged = subprocess.run(
         ["git", "diff", "--cached", "--quiet"],
         cwd=REPO_ROOT,
@@ -1038,7 +1038,8 @@ def publish_post(post: ImportedPost) -> None:
     relative_bundle = post.bundle_dir.relative_to(REPO_ROOT)
     run_checked(["git", "add", "--", str(relative_bundle)])
     run_checked(["git", "commit", "-m", f"post: import {post.title}"])
-    run_checked(["git", "push"])
+    if push:
+        run_checked(["git", "push"])
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -1062,6 +1063,11 @@ def build_parser() -> argparse.ArgumentParser:
             "commit and push the imported post after validation; "
             "the post uses draft: false even without this option"
         ),
+    )
+    parser.add_argument(
+        "--skip-git-push",
+        action="store_true",
+        help=argparse.SUPPRESS,
     )
     parser.add_argument(
         "--no-build", action="store_true", help="跳过 Hugo 构建验证（不推荐）"
@@ -1131,7 +1137,7 @@ def main() -> int:
         if not args.no_build:
             validate_site()
         if args.publish:
-            publish_post(post)
+            publish_post(post, push=not args.skip_git_push)
         state = "Published" if args.publish else "Imported"
         print(
             f"{state}: {post.content_file}\n"

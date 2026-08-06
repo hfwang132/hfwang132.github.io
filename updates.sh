@@ -32,13 +32,16 @@ if (($# == 0)); then
   else
     echo "No new changes to commit."
   fi
-  git push
-  echo "Building locally and publishing generated files to gh-pages..."
-  "${python_cmd}" scripts/deploy_pages.py
+  echo "Building locally and publishing static output to Vercel..."
+  "${python_cmd}" scripts/deploy_vercel.py
+
+  echo "Backing up the source branch to GitHub..."
+  if ! git push; then
+    echo "ERROR: The Vercel deployment succeeded, but the GitHub source backup failed." >&2
+    exit 1
+  fi
   exit 0
 fi
-
-"${python_cmd}" scripts/import_zhihu.py "$@"
 
 deploy_after_import=false
 for argument in "$@"; do
@@ -49,6 +52,14 @@ for argument in "$@"; do
 done
 
 if [[ "${deploy_after_import}" == true ]]; then
-  echo "Building locally and publishing generated files to gh-pages..."
-  "${python_cmd}" scripts/deploy_pages.py
+  "${python_cmd}" scripts/import_zhihu.py "$@" --skip-git-push
+  "${repo_dir}/deploy-vercel.sh"
+
+  echo "Backing up the source branch to GitHub..."
+  if ! git push; then
+    echo "ERROR: The Vercel deployment succeeded, but the GitHub source backup failed." >&2
+    exit 1
+  fi
+else
+  "${python_cmd}" scripts/import_zhihu.py "$@"
 fi

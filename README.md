@@ -2,8 +2,8 @@
 
 This repository contains the Hugo source for
 [haifei.pro](https://haifei.pro/). The site uses the LoveIt theme, is built
-locally, and publishes generated files to the `gh-pages` branch. GitHub Pages
-serves that branch without running a GitHub Actions workflow.
+locally, and uploads only the generated static files through the Vercel CLI.
+GitHub is a source backup; it is not part of the production deployment path.
 
 ## Local development
 
@@ -57,17 +57,27 @@ hugo --minify
 
 ### Local publication
 
-GitHub Pages is configured to serve the root of the `gh-pages` branch. Run the
-complete local validation, build, and deployment without changing source files:
+Install the Vercel CLI once (`npm install -g vercel`), sign in with
+`vercel login`, and link a new checkout once:
 
 ```powershell
-.\deploy-pages.bat
+.\deploy-vercel.bat --link
+```
+
+Run the complete local validation, build, and production deployment without
+changing source files:
+
+```powershell
+.\deploy-vercel.bat
 ```
 
 The deployment script builds with `https://haifei.pro/` as the production URL,
-adds `CNAME` and `.nojekyll`, rejects source-like files in the generated output,
-and pushes only the generated site to `gh-pages`. The temporary Git worktree is
-isolated from this source checkout.
+rejects source-like files in the generated output, checks Vercel Hobby upload
+limits, and uploads only `.vercel/output/static`. The `.vercel/` project link
+and local deployment tooling are ignored by Git.
+
+GitHub Pages remains available only as a manual fallback. To update its
+`gh-pages` branch explicitly, run `deploy-pages.bat` or `deploy-pages.sh`.
 
 ## Importing a post from Zhihu
 
@@ -99,8 +109,8 @@ the importer stops instead of guessing. After verifying the source date, use
 
 Imported posts always use `draft: false`, so a production build includes them.
 Importing without `--publish` changes only the local worktree. Adding
-`--publish` validates the site, commits and pushes the imported bundle, then
-builds locally and pushes the generated website to `gh-pages`:
+`--publish` validates and commits the imported bundle, deploys the generated
+website to Vercel, then pushes the source commit to GitHub as a backup:
 
 ```powershell
 .\updates.bat "https://zhuanlan.zhihu.com/p/ARTICLE_ID" --publish
@@ -116,8 +126,9 @@ changes, preventing an unrelated staged change from entering the post commit.
 
 Running the update wrapper without a Zhihu URL runs unit tests and the formula
 audit, stages all current repository changes, creates a `daily updates` commit
-when needed, pushes `master`, then builds locally and pushes the generated site
-to `gh-pages`:
+when needed, deploys the locally generated site to Vercel, then pushes the
+source branch to GitHub as a backup. A GitHub outage therefore cannot prevent
+the production deployment; a failed backup is reported after Vercel succeeds:
 
 ```powershell
 .\updates.bat
@@ -399,8 +410,8 @@ theme:
 .\.venv\Scripts\python.exe scripts\audit_math.py
 ```
 
-`updates.bat`, `updates.sh`, `deploy-pages.bat`, and `deploy-pages.sh` run this
-audit before publication.
+`updates.bat`, `updates.sh`, `deploy-vercel.bat`, `deploy-vercel.sh`,
+`deploy-pages.bat`, and `deploy-pages.sh` run this audit before publication.
 
 ## Repository layout
 
@@ -417,7 +428,11 @@ audit before publication.
   aliases;
 - `scripts/sync_zhihu_dates.py`: apply reviewed Zhihu publication metadata to
   historical posts;
+- `scripts/deploy_vercel.py`: local Hugo build validation and Vercel prebuilt
+  deployment that uploads only generated static files;
+- `deploy-vercel.bat` and `deploy-vercel.sh`: validate and deploy production
+  without committing source changes;
 - `scripts/deploy_pages.py`: isolated local Hugo build and `gh-pages`
-  publication;
+  publication fallback;
 - `deploy-pages.bat` and `deploy-pages.sh`: validate and publish without
-  committing source changes.
+  committing source changes, for manual GitHub Pages fallback only.

@@ -35,20 +35,31 @@ git commit -m "daily updates"
 if errorlevel 1 exit /b %errorlevel%
 
 :push_changes
-git push
+echo Building locally and publishing static output to Vercel...
+"%PYTHON_EXE%" scripts\deploy_vercel.py
 if errorlevel 1 exit /b %errorlevel%
 
-echo Building locally and publishing generated files to gh-pages...
-"%PYTHON_EXE%" scripts\deploy_pages.py
-exit /b %errorlevel%
+goto backup_source
 
 :import_zhihu
 set "DEPLOY_AFTER_IMPORT="
 for %%A in (%*) do if /I "%%~A"=="--publish" set "DEPLOY_AFTER_IMPORT=1"
-"%PYTHON_EXE%" scripts\import_zhihu.py %*
+if defined DEPLOY_AFTER_IMPORT (
+  "%PYTHON_EXE%" scripts\import_zhihu.py %* --skip-git-push
+) else (
+  "%PYTHON_EXE%" scripts\import_zhihu.py %*
+)
 if errorlevel 1 exit /b %errorlevel%
 if not defined DEPLOY_AFTER_IMPORT exit /b 0
 
-echo Building locally and publishing generated files to gh-pages...
-"%PYTHON_EXE%" scripts\deploy_pages.py
-exit /b %errorlevel%
+call "%~dp0deploy-vercel.bat"
+if errorlevel 1 exit /b %errorlevel%
+
+:backup_source
+echo Backing up the source branch to GitHub...
+git push
+if errorlevel 1 (
+  echo ERROR: The Vercel deployment succeeded, but the GitHub source backup failed.
+  exit /b 1
+)
+exit /b 0
