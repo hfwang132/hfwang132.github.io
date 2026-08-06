@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -19,6 +20,17 @@ STATIC_DIR = OUTPUT_DIR / "static"
 DEFAULT_BASE_URL = "https://haifei.pro/"
 MAX_UPLOAD_FILES = 15_000
 MAX_UPLOAD_SIZE = 100 * 1024 * 1024
+VERCEL_ROUTES = [
+    # Vercel's Build Output API serves static files literally. Hugo emits
+    # pretty URLs as <route>/index.html, so resolve real assets first and
+    # then map trailing-slash page requests to their generated HTML file.
+    {"handle": "filesystem"},
+    {"src": "/(.+)/", "dest": "/$1/index.html"},
+]
+VERCEL_OUTPUT_CONFIG = {
+    "version": 3,
+    "routes": VERCEL_ROUTES,
+}
 
 
 class DeployError(RuntimeError):
@@ -111,11 +123,48 @@ def build_site(*, base_url: str) -> None:
         ]
     )
 
+    config = prepare_static_files()
     (OUTPUT_DIR / "config.json").write_text(
-        json.dumps({"version": 3}, indent=2) + "\n",
+        json.dumps(config, indent=2) + "\n",
         encoding="utf-8",
     )
     verify_build(base_url=base_url)
+
+
+def prepare_static_files() -> dict[str, object]:
+    """Store non-ASCII paths safely while preserving their public URLs.
+
+    On Windows, Vercel CLI currently omits files whose local path contains
+    non-ASCII characters from a prebuilt upload.  Hugo intentionally uses
+    Chinese post slugs, so move those files to deterministic ASCII-only
+    storage names and expose their original URL through Build Output API
+    overrides.
+    """
+
+    overrides: dict[str, dict[str, str]] = {}
+    relocated = 0
+    files = sorted(path for path in STATIC_DIR.rglob("*") if path.is_file())
+    for source in files:
+        relative = source.relative_to(STATIC_DIR).as_posix()
+        if relative.isascii():
+            continue
+
+        digest = hashlib.sha256(relative.encode("utf-8")).hexdigest()
+        suffix = source.suffix.lower()
+        stored_relative = Path("_vercel_unicode") / f"{digest}{suffix}"
+        target = STATIC_DIR / stored_relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists():
+            raise DeployError(f"Vercel-safe path collision: {stored_relative}")
+        source.replace(target)
+        overrides[stored_relative.as_posix()] = {"path": relative}
+        relocated += 1
+
+    config = dict(VERCEL_OUTPUT_CONFIG)
+    if overrides:
+        config["overrides"] = overrides
+    print(f"Prepared {relocated} non-ASCII files for Vercel-safe upload.")
+    return config
 
 
 def verify_build(*, base_url: str) -> None:
@@ -140,6 +189,14 @@ def verify_build(*, base_url: str) -> None:
     files = [path for path in STATIC_DIR.rglob("*") if path.is_file()]
     if not files:
         raise DeployError("The Hugo build is empty.")
+    unsafe_paths = [
+        path.relative_to(STATIC_DIR)
+        for path in files
+        if not path.relative_to(STATIC_DIR).as_posix().isascii()
+    ]
+    if unsafe_paths:
+        preview = ", ".join(str(path) for path in unsafe_paths[:10])
+        raise DeployError(f"Non-ASCII upload paths remain: {preview}")
     if len(files) > MAX_UPLOAD_FILES:
         raise DeployError(
             f"The build contains {len(files)} files; Vercel Hobby accepts at "
@@ -186,7 +243,6 @@ def deploy(cli: Path) -> str:
             "--prebuilt",
             "--prod",
             "--yes",
-            "--archive=tgz",
         ],
         capture=True,
         env=vercel_environment(cli),
