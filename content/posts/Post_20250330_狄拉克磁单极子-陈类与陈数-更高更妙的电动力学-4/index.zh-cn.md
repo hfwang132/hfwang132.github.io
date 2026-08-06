@@ -113,7 +113,7 @@ author: "Haifei"
 >   
 >  \(\boxed{ C_n = \frac{1}{n!(2\pi)^n}  \int \operatorname{tr}[\underbrace{F\wedge \cdots \wedge F}_{\text{n } F}] = \frac{1}{n!(2\pi)^n}  \int \operatorname{tr}[F^{\wedge n}] }\)   
 >   
-> 在阿贝尔的情况下， \(C_{n>1} =0\) ，因为 \(F \wedge F=0\) 。
+> 在阿贝尔的情况下， \(C_{n\gt 1} =0\) ，因为 \(F \wedge F=0\) 。
 
 不同的曲率 2-形式在闭合曲面上积分，可能得到相同的陈数，所以我们可以依据陈数对曲率 2-形式进行分类，这些等价类就叫做陈类。
 

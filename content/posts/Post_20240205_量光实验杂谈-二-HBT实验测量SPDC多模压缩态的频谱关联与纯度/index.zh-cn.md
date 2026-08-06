@@ -95,7 +95,7 @@ SPDC（Spontaneous Parametric Down-Conversion，自发参量下转换）是一�
 > 对于无关联的联合频谱，有 \(\{\lambda_k\}=\{1\}\) ， \(K=1\) 。  
 > 对于有两个模式，且系数相等的联合频谱，有 \(\{\lambda_k\}=\{\frac{1}{2},\frac{1}{2}\}\) ， \(K=2\) 。  
 > 对于有 n 个模式，且系数相等的联合频谱，有 \(K=n\) 。  
-> 对于有 n 个模式，且系数彼此不完全相等的联合频谱，有 \(1<K<n\) 。
+> 对于有 n 个模式，且系数彼此不完全相等的联合频谱，有 \(1\lt K\lt n\) 。
 
 为什么我们会关心频谱关联？这是因为它和光子的纯度有密切的关系：
 
@@ -118,7 +118,7 @@ SPDC（Spontaneous Parametric Down-Conversion，自发参量下转换）是一�
 
 我们之所以说用 HBT 实验可以测量频谱关联，是因为 \(\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1+\frac{1}{K} \end{aligned}\) 。证明如下：
 
-\[\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} &=\frac{\langle n^2\rangle-\langle n\rangle}{\langle n\rangle^2} \\ &=\frac{\sum_{k} \langle n_k^2 \rangle + 2\sum_{i>j} \langle n_i n_j \rangle - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{ \sum_{k} \left(\langle n_k \rangle + 2\langle n_k\rangle^2 \right) + 2\sum_{i>j} \langle n_i \rangle \langle n_j \rangle  - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{\langle n\rangle + \langle n\rangle^2 +\sum_{k} \langle n_k\rangle^2 - \langle n\rangle}{\langle n\rangle^2} \\ &= 1+\frac{\sum_{k} \langle n_k\rangle^2}{ \left\langle \sum_{k} n_k\right\rangle^2} \\ &= 1 + \frac{\sum_k \sinh^4(r_k)}{\left(\sum_k \sinh^2(r_k)\right)^2} \\ &\approx 1+\frac{\sum_k r_k^4}{\left(\sum_k r_k^2\right)^2} \\ &= 1 + \frac{\sum_k \lambda_k^4}{\left(\sum_k \lambda_k^2\right)^2} \\ &= 1+\sum_k \lambda_k^4 \\ &= 1+\frac{1}{K} \\ &= 1+P \end{aligned}\]
+\[\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} &=\frac{\langle n^2\rangle-\langle n\rangle}{\langle n\rangle^2} \\ &=\frac{\sum_{k} \langle n_k^2 \rangle + 2\sum_{i\gt j} \langle n_i n_j \rangle - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{ \sum_{k} \left(\langle n_k \rangle + 2\langle n_k\rangle^2 \right) + 2\sum_{i\gt j} \langle n_i \rangle \langle n_j \rangle  - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{\langle n\rangle + \langle n\rangle^2 +\sum_{k} \langle n_k\rangle^2 - \langle n\rangle}{\langle n\rangle^2} \\ &= 1+\frac{\sum_{k} \langle n_k\rangle^2}{ \left\langle \sum_{k} n_k\right\rangle^2} \\ &= 1 + \frac{\sum_k \sinh^4(r_k)}{\left(\sum_k \sinh^2(r_k)\right)^2} \\ &\approx 1+\frac{\sum_k r_k^4}{\left(\sum_k r_k^2\right)^2} \\ &= 1 + \frac{\sum_k \lambda_k^4}{\left(\sum_k \lambda_k^2\right)^2} \\ &= 1+\sum_k \lambda_k^4 \\ &= 1+\frac{1}{K} \\ &= 1+P \end{aligned}\]
 
 其中第三个等号用到了结论：对于热光场有 \( \langle n_k^2 \rangle =\langle n_k \rangle + 2\langle n_k\rangle^2\) ，且各个模式之间没有关联 \(\langle n_i n_j\rangle=\langle n_i\rangle\langle n_j\rangle\) 。
 

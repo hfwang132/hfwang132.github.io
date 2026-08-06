@@ -136,7 +136,7 @@ The differential at a point \(p\) on a manifold \(M\) is a linear functional whi
 
 Let us give a more explicit example, again using a function of two variables:
 
-\[\mathrm{d}f|_{p}:\mathrm{d}f|_{p}(v|_p)=v|_p(f)=  (\partial_x f) |_{p} \cdot a+(\partial_y f) |_{p}b\( ，其中 \)v|_p=\left(a\partial_x+b\partial_y\right)|_p\]
+\[\mathrm{d}f|_{p}:\mathrm{d}f|_{p}(v|_p)=v|_p(f)= (\partial_x f)|_{p}\cdot a+(\partial_y f)|_{p}b,\quad \text{where}\quad v|_p=\left(a\partial_x+b\partial_y\right)|_p\]
 
 > Vectors in the tangent space can also be called covariant vectors, and vectors in the cotangent space can also be called covariant vectors. What is going on here?  
 >   

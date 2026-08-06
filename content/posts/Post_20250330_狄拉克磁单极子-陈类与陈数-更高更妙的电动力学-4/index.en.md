@@ -113,7 +113,7 @@ We therefore define the **Chern number** as
 >   
 >  \(\boxed{ C_n = \frac{1}{n!(2\pi)^n}  \int \operatorname{tr}[\underbrace{F\wedge \cdots \wedge F}_{\text{n } F}] = \frac{1}{n!(2\pi)^n}  \int \operatorname{tr}[F^{\wedge n}] }\)   
 >   
-> In the Abelian case, \(C_{n>1} =0\) , because \(F \wedge F=0\) .
+> In the Abelian case, \(C_{n\gt 1} =0\) , because \(F \wedge F=0\) .
 
 Different curvature 2-forms may yield the same Chern number when integrated over a closed surface, so we can classify curvature 2-forms according to their Chern numbers. These equivalence classes are called Chern classes.
 

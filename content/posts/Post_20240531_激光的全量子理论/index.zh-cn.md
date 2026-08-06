@@ -224,7 +224,7 @@ Scully-Lamb 理论对泵浦强度低于或接近阈值时的光子数分布作�
 
 \[\langle n^2\rangle = \langle n \rangle^2 + A\]
 
-此时 \(g^{(2)}(0) = \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1 + \frac{B(1-p_0)}{[A-B(1-p_0)]^2} > 1\)
+此时 \(g^{(2)}(0) = \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1 + \frac{B(1-p_0)}{[A-B(1-p_0)]^2} \gt 1\)
 
 可见当泵浦不强时，光子数分布实际上是超泊松分布。当泵浦越来越强时， \(g^{(2)}(0) \rightarrow 1\) ，趋于泊松分布。如此精细的预言是半经典理论所做不到的。
 
@@ -244,11 +244,11 @@ Scully-Lamb 理论对泵浦强度低于或接近阈值时的光子数分布作�
 
 \[\begin{aligned} \dot{a} &= \frac{\mathrm{d}a}{\mathrm{d}\tau} = -\mathrm{i} \omega a - \frac{\omega}{2Q} \frac{\gamma}{R}a\end{aligned}\]
 
-解得 \(a(t ) =a(0) e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t}, \quad a>0\) 。
+解得 \(a(t ) =a(0) e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t}, \quad a\gt 0\) 。
 
 其一阶关联函数为：
 
-\[\begin{aligned} g^{(1)}(t>0)&=\langle a^\dag(t) a(0)\rangle / \langle a^\dag(0) a(0)\rangle \\ &= \text{tr}[a(0) \rho a^\dag(t)] / \text{tr}[a(0) \rho a^\dag(0)] \\ &= e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t} \end{aligned}\]
+\[\begin{aligned} g^{(1)}(t\gt 0)&=\langle a^\dag(t) a(0)\rangle / \langle a^\dag(0) a(0)\rangle \\ &= \text{tr}[a(0) \rho a^\dag(t)] / \text{tr}[a(0) \rho a^\dag(0)] \\ &= e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t} \end{aligned}\]
 
 时间平移不变性要求 \(g^{(1)}(t) = g^{(1)}(-t)\) ，所以
 

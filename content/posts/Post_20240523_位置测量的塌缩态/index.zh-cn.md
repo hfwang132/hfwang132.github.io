@@ -31,7 +31,7 @@ $\mathcal{L}(\mathcal{H})$ ：希尔伯特空间 $\mathcal{H}$ 上的（有界�
 
 $\mathbb{I}\_{\mathcal{H}}$ ：希尔伯特空间 $\mathcal{H}$ 上的恒等算符。
 
-$\mathcal{E}(\mathcal{H})$ ：希尔伯特空间 $\mathcal{H}$ 上的 effect。定义为 $\mathcal{E}(\mathcal{H}) := \\\\{ E\in \mathcal{L}(\mathcal{H}) | E =E^\*, 0 \le E\le \mathbb{I}\_{\mathcal{H}}\\\\}$ 。
+$\mathcal{E}(\mathcal{H})$ ：希尔伯特空间 $\mathcal{H}$ 上的 effect。定义为 \(\mathcal{E}(\mathcal{H}) := \{ E\in \mathcal{L}(\mathcal{H}) \mid E = E^*,\ 0 \le E\le \mathbb{I}_{\mathcal{H}} \}\) 。
 
 $\text{Leb}(\mathbb{R})$ ： $\mathbb{R}$ 上的 Lebesgue sigma algebra。
 
@@ -54,7 +54,7 @@ $\text{Leb}(\mathbb{R})$ ： $\mathbb{R}$ 上的 Lebesgue sigma algebra。
 ### 1.4 位置与动量算符的谱分解  
 $L^2(\mathbb{R})$ 上的位置算符 $Q \in \mathcal{L}(L^2(\mathbb{R}))$ 有谱分解： $Q = \int\_\mathbb{R} x\mathsf{Q}(\mathrm{d}x)$ 。这是一个勒贝格积分。
 
-其中 $\mathsf{Q}$ 是位置投影测量，即 PVM（Projection Valued Measure，是 POVM，Positive Operator Valued Measure 的特例），它定义为一个 operator-valued 的测度： $\mathsf{Q}: \text{Leb}(\mathbb{R}) \rightarrow \mathcal{E}(L^2(\mathbb{R}))$ ，$\[\mathsf{Q}(A) \varphi\](x):=\chi\_A(x) \varphi(x)$，其中 $\chi\_A(x)=\begin{cases} 1, \quad x\in A \\\\ 0, \quad x \notin A \end{cases}$ 是集合 $A$ 的特征函数。
+其中 $\mathsf{Q}$ 是位置投影测量，即 PVM（Projection Valued Measure，是 POVM，Positive Operator Valued Measure 的特例），它定义为一个 operator-valued 的测度： $\mathsf{Q}: \text{Leb}(\mathbb{R}) \rightarrow \mathcal{E}(L^2(\mathbb{R}))$ ，\(\bigl[\mathsf{Q}(A)\varphi\bigr](x):=\chi_A(x)\varphi(x)\)，其中 $\chi\_A(x)=\begin{cases} 1, \quad x\in A \\\\ 0, \quad x \notin A \end{cases}$ 是集合 $A$ 的特征函数。
 
 
 > 选读：动量 PVM 可以定义为 $\mathsf{P}(A) = F^\* \mathsf{Q}(A) F$ ，其中 $F$ 是 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ ，定义为：  
@@ -150,7 +150,7 @@ $\varphi^{(q)}(x) = \mathcal{A} \exp\left[-\frac{(gx-q)^2}{2\sigma^2}\right] \va
 ## 四、经典仪器  
 为了避免上面说到的问题，我们可以定义一个 course-grained 的经典仪器，它只能区分粒子在或不在某一个区间内：
 
-$\mathsf{Z}: \\{0,1\\} \rightarrow \mathcal{E}(L^2(\mathbb{R}))$ 
+\(\mathsf{Z}: \{0,1\} \rightarrow \mathcal{E}(L^2(\mathbb{R}))\)
 
 $\mathsf{Z}(1) = \int\_a^b \mathsf{Q}(\mathrm{d}x)$ 
 
@@ -165,4 +165,3 @@ $\mathsf{Z}(n) =\int\_{gn}^{g(n+1)} \mathsf{Q}(\mathrm{d}x)$
 注意到它们都是 PVM，因此坍缩后的态也可以确定下来。
 
 这两种情况的计算留给读者作为练习。
-

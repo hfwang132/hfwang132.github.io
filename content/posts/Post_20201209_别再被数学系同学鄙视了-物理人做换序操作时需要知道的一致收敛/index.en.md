@@ -94,7 +94,7 @@ In plain language, if the absolute value of the difference between the partial s
 This definition also applies to ordinary sequences of functions; one need only replace \(S_n(x)\) with the general term of the sequence of functions.
 
 > **Example 1.1**  
-> To show the reader that uniform convergence is stronger than ordinary pointwise convergence, let us give a simple example. Let the partial sum function (or the general term of a sequence of functions) be \(S_n(x)=x^n\). Clearly, on the interval \([0,1]\), it converges pointwise to the function \[  S(x)=  \begin{cases}  0&0\le x<1\\  1&x=1  \end{cases}  \].  
+> To show the reader that uniform convergence is stronger than ordinary pointwise convergence, let us give a simple example. Let the partial sum function (or the general term of a sequence of functions) be \(S_n(x)=x^n\). Clearly, on the interval \([0,1]\), it converges pointwise to the function \[  S(x)=  \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}  \].  
 > However, no matter how large \(n\) is, the partial sum function \(S_n(x)\) can always attain the value \(0.5\) (by the continuity of the partial sum function and the intermediate value theorem). In other words, \(\forall n\exists x_0(S_n(x_0)=0.5)\). This makes it impossible to control the upper bound: there are always some \(x\) that you cannot control. In fact, in this example, no matter how large \(n\) is, the supremum of the error (that is, the \(\sup\) symbol) is always \(1\).  
 > Uniform convergence, on the other hand, allows one to control all \(f(x)\) simultaneously, making them all approach the target function arbitrarily closely according to the desired upper bound \(\epsilon\).
 
@@ -103,7 +103,7 @@ This definition also applies to ordinary sequences of functions; one need only r
 > Suppose we come up with a very foolish idea: using \(y=\mathrm{e}^{\alpha x}\,(\alpha\rightarrow0)\) to approximate \(y=1\).  
 > We can then consider the sequence of functions \(\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}\). Clearly, \(\lim_{k\rightarrow \infty}\mathrm{e}^{\frac{1}{k}x}=1\) holds for all \(x\).  
 > However, as long as \(\frac{1}{k}\ne 0\), \(\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}\) is unbounded on \(\mathbb{R}\).  
-> Suppose your boss sets a target \(\epsilon\) for you and orders you to find an \(N\) such that, when \(k>N\), the error \(\left|\mathrm{e}^{\frac{1}{k}x}-1\right|<\epsilon\) holds for all \(x\). You may want to consider resigning, because this is clearly an impossible task. No matter how large an \(N\) you find, there will certainly be a larger \(x\) that ruins the plan. Suppose that for the case of \(\epsilon =1\), you have found an \(N\) satisfying the requirements; then your boss need only set \(x=2N\), and we have \(\left|\mathrm{e}^{\frac{1}{k}2N}-1\right|>\mathrm{e}-1>1\quad (N<k<2N)\).
+> Suppose your boss sets a target \(\epsilon\) for you and orders you to find an \(N\) such that, when \(k\gt N\), the error \(\left|\mathrm{e}^{\frac{1}{k}x}-1\right|\lt \epsilon\) holds for all \(x\). You may want to consider resigning, because this is clearly an impossible task. No matter how large an \(N\) you find, there will certainly be a larger \(x\) that ruins the plan. Suppose that for the case of \(\epsilon =1\), you have found an \(N\) satisfying the requirements; then your boss need only set \(x=2N\), and we have \(\left|\mathrm{e}^{\frac{1}{k}2N}-1\right|\gt \mathrm{e}-1\gt 1\quad (N\lt k\lt 2N)\).
 
 ### 1.2 Series of Functions: Uniform Convergence and Interchanging Operations  
 
@@ -128,7 +128,7 @@ As can be seen, the various interchanges beloved by physicists can have their le
 > In addition, in Theorem 1.1(b), if the original series converges, then uniform convergence of the series of derivatives together with continuity of each derivative implies uniform convergence of the original series.
 
 > **Example 1.3**  
-> Returning to the previous example \(S(x)=x^1+(x^2-x^1)+(x^3-x^2)+\cdots= \begin{cases}  0&0\le x<1\\  1&x=1  \end{cases}\). Every term of this series is continuous, but its sum is not continuous, so it does not converge uniformly.
+> Returning to the previous example \(S(x)=x^1+(x^2-x^1)+(x^3-x^2)+\cdots= \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}\). Every term of this series is continuous, but its sum is not continuous, so it does not converge uniformly.
 
 In fact, Theorems 1.1(b) and 1.1(c) are direct consequences of the following theorem:
 
@@ -163,7 +163,7 @@ This is an **integral with a parameter**. Here \(x\) is the parameter; choosing 
 
 > **Example 4**  
 > Observe \(\int_{0}^{+\infty}\mathrm{e}^{-x}\mathrm{d}x=1\), \(\int_{0}^{+\infty}\mathrm{e}^{-2x}\mathrm{d}x=\frac{1}{2}\), \(\int_{0}^{+\infty}\mathrm{e}^{-3x}\mathrm{d}x=\frac{1}{3}\), ...  
-> It can be seen that \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x\) should have a functional relationship with \(k\). In fact, this relationship is \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k>0)\), and it is easy to prove.  
+> It can be seen that \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x\) should have a functional relationship with \(k\). In fact, this relationship is \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)\), and it is easy to prove.  
 > Here, \(k\) is the “parameter” of the integral with a parameter.
 
 ### 2.2 Integrals with Parameters: Interchanging Operations  
@@ -174,9 +174,9 @@ There are also more interesting questions, such as whether it can be differentia
 
 > **Example 5**  
 >   
-> Differentiating both sides of \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k>0)\) gives \(\frac{\mathrm{d}}{\mathrm{d}k}\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k>0)\)
+> Differentiating both sides of \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)\) gives \(\frac{\mathrm{d}}{\mathrm{d}k}\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)\)
 
-It is not hard to find that putting the differentiation inside the integral sign also gives the correct result: \(\int_{0}^{+\infty}\frac{\partial}{\partial k}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k>0)\)
+It is not hard to find that putting the differentiation inside the integral sign also gives the correct result: \(\int_{0}^{+\infty}\frac{\partial}{\partial k}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)\)
 
 When is this operation permitted? The following theorem answers this question:
 
@@ -196,7 +196,7 @@ The reader may wonder: there is no uniform convergence here? Of course not. An i
 
 Put simply, improper integrals are integrals over unbounded intervals or bounded open intervals. They may fail to converge!
 
-The convergence of the improper integral \(\int_{a}^{+\infty}f(x)\mathrm{d}x\) over an unbounded interval is defined as follows: for every \(\epsilon>0\), there exists \(N\) such that when \(M>N\), \(\left|\int_{M}^{+\infty}f(x)\mathrm{d}x\right|<\epsilon\).
+The convergence of the improper integral \(\int_{a}^{+\infty}f(x)\mathrm{d}x\) over an unbounded interval is defined as follows: for every \(\epsilon\gt 0\), there exists \(N\) such that when \(M\gt N\), \(\left|\int_{M}^{+\infty}f(x)\mathrm{d}x\right|\lt \epsilon\).
 
 ### 2.4 Improper Integrals with Parameters: Uniform Convergence and Interchanging Operations  
 
@@ -204,7 +204,7 @@ If we add another parameter \(f(x;y)\) to \(f(x)\) (the parameter has changed to
 
 > **Definition 2 (Uniform Convergence of Improper Integrals with Parameters)**  
 >   
-> If, for every \(\epsilon>0\), there exists \(N(\epsilon)\) such that when \(M>N(\epsilon)\), \(\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|<\epsilon\), then the improper integral \(\int_{a}^{+\infty}f(x,y)\mathrm{d}x\) is said to converge uniformly.  
+> If, for every \(\epsilon\gt 0\), there exists \(N(\epsilon)\) such that when \(M\gt N(\epsilon)\), \(\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|\lt \epsilon\), then the improper integral \(\int_{a}^{+\infty}f(x,y)\mathrm{d}x\) is said to converge uniformly.  
 >   
 > (Or \(\lim_{M\rightarrow \infty} \sup_{y\in \beta}\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|=0\))
 

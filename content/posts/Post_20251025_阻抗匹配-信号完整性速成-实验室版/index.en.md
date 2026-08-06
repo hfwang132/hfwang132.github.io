@@ -163,7 +163,7 @@ At this point, when the signal reaches the end of the transmission line, it is r
 
 This formula is the core of impedance matching!
 
-How can you remember this formula? Just remember that the numerator is the terminal load impedance \(Z\) minus the characteristic impedance \(Z_0\). This means that when \(Z > Z_0\), \(R>0\), and the reflected signal is in phase with the incident signal. When \(Z < Z_0\), the reflected signal is out of phase with the incident signal. This is the commonly mentioned “half-wave loss.”
+How can you remember this formula? Just remember that the numerator is the terminal load impedance \(Z\) minus the characteristic impedance \(Z_0\). This means that when \(Z \gt Z_0\), \(R\gt 0\), and the reflected signal is in phase with the incident signal. When \(Z \lt Z_0\), the reflected signal is out of phase with the incident signal. This is the commonly mentioned “half-wave loss.”
 
 ## IV. Transient and Steady-State Signals  
 

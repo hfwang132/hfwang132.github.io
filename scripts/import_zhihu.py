@@ -359,6 +359,67 @@ def normalize_katex_environments(markdown: str) -> str:
     return "".join(result)
 
 
+def normalize_html_sensitive_math(markdown: str) -> str:
+    r"""Keep native passthrough math from being interpreted as HTML tags.
+
+    Hugo preserves ``\(...\)`` and ``\[...\]`` verbatim. A literal ``<`` in
+    that output can therefore start an HTML tag before KaTeX sees the formula.
+    Use the equivalent TeX relation commands while protecting code examples.
+    """
+
+    result: list[str] = []
+    prose: list[str] = []
+    in_fence = False
+    fence_char = ""
+
+    def replace_formula(match: re.Match[str]) -> str:
+        body = match.group("inline_body")
+        inline = body is not None
+        if body is None:
+            body = match.group("display_body")
+        normalized = re.sub(r"<\s*", r"\\lt ", body)
+        normalized = re.sub(r">\s*", r"\\gt ", normalized)
+        normalized = re.sub(r"\\(lt|gt)\s+", r"\\\1 ", normalized)
+        if inline:
+            return rf"\({normalized}\)"
+        return rf"\[{normalized}\]"
+
+    def flush_prose() -> None:
+        if not prose:
+            return
+        block = "".join(prose)
+        segments = re.split(r"(`+[^`]*?`+)", block)
+        for index, segment in enumerate(segments):
+            if not index % 2:
+                segments[index] = KATEX_MATH_DELIMITERS.sub(
+                    replace_formula,
+                    segment,
+                )
+        result.append("".join(segments))
+        prose.clear()
+
+    for line in markdown.splitlines(keepends=True):
+        stripped = line.lstrip()
+        fence_match = re.match(r"(`{3,}|~{3,})", stripped)
+        if fence_match:
+            flush_prose()
+            marker = fence_match.group(1)
+            if not in_fence:
+                in_fence = True
+                fence_char = marker[0]
+            elif marker[0] == fence_char:
+                in_fence = False
+                fence_char = ""
+            result.append(line)
+            continue
+        if in_fence:
+            result.append(line)
+            continue
+        prose.append(line)
+    flush_prose()
+    return "".join(result)
+
+
 def convert_math_delimiters(markdown: str) -> str:
     """Convert downloader-added dollar delimiters to Hugo passthrough delimiters.
 
@@ -423,7 +484,8 @@ def convert_math_delimiters(markdown: str) -> str:
 
         prose.append(line)
     flush_prose()
-    return normalize_katex_environments("".join(result))
+    normalized = normalize_katex_environments("".join(result))
+    return normalize_html_sensitive_math(normalized)
 
 
 def escape_shortcode_parameter(value: str) -> str:

@@ -30,7 +30,7 @@ author: "Haifei"
 然而，解题的时候，我们物理人往往也会用到**复平面**。
 
 > 例 1：给定谐振子的哈密顿方程  
-> \(\cases{ \frac{\mathrm{d}q}{\mathrm{d}t} = \omega p\\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega q }\)   
+> \(\begin{cases} \frac{\mathrm{d}q}{\mathrm{d}t} = \omega p\\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega q \end{cases}\)   
 > 即  
 > \(\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} q \\ p \end{bmatrix} = \begin{bmatrix} 0 & \omega \\ -\omega & 0 \end{bmatrix} \begin{bmatrix} q\\ p \end{bmatrix}\)   
 > 对角化得到特征向量 \(a^{\pm} =  q\pm\mathrm{i}p\) ，于是 \(a^{\pm}\) 的导数就只和自己有关：  

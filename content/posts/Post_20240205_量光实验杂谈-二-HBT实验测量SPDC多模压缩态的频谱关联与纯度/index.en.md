@@ -95,7 +95,7 @@ How exactly can spectral correlations be characterized? We can use the Schmidt n
 > For an uncorrelated joint spectrum, \(\{\lambda_k\}=\{1\}\) , \(K=1\) .  
 > For a joint spectrum with two modes and equal coefficients, \(\{\lambda_k\}=\{\frac{1}{2},\frac{1}{2}\}\) , \(K=2\) .  
 > For a joint spectrum with n modes and equal coefficients, \(K=n\) .  
-> For a joint spectrum with n modes whose coefficients are not all equal, \(1<K<n\) .
+> For a joint spectrum with n modes whose coefficients are not all equal, \(1\lt K\lt n\) .
 
 Why do we care about spectral correlations? This is because they are closely related to photon purity:
 
@@ -118,7 +118,7 @@ where \(C_{12}\) is the coincidence count rate of the two detectors, \(S_1\) and
 
 We say that spectral correlations can be measured with an HBT experiment because \(\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1+\frac{1}{K} \end{aligned}\) . The proof is as follows:
 
-\[\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} &=\frac{\langle n^2\rangle-\langle n\rangle}{\langle n\rangle^2} \\ &=\frac{\sum_{k} \langle n_k^2 \rangle + 2\sum_{i>j} \langle n_i n_j \rangle - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{ \sum_{k} \left(\langle n_k \rangle + 2\langle n_k\rangle^2 \right) + 2\sum_{i>j} \langle n_i \rangle \langle n_j \rangle  - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{\langle n\rangle + \langle n\rangle^2 +\sum_{k} \langle n_k\rangle^2 - \langle n\rangle}{\langle n\rangle^2} \\ &= 1+\frac{\sum_{k} \langle n_k\rangle^2}{ \left\langle \sum_{k} n_k\right\rangle^2} \\ &= 1 + \frac{\sum_k \sinh^4(r_k)}{\left(\sum_k \sinh^2(r_k)\right)^2} \\ &\approx 1+\frac{\sum_k r_k^4}{\left(\sum_k r_k^2\right)^2} \\ &= 1 + \frac{\sum_k \lambda_k^4}{\left(\sum_k \lambda_k^2\right)^2} \\ &= 1+\sum_k \lambda_k^4 \\ &= 1+\frac{1}{K} \\ &= 1+P \end{aligned}\]
+\[\begin{aligned} \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} &=\frac{\langle n^2\rangle-\langle n\rangle}{\langle n\rangle^2} \\ &=\frac{\sum_{k} \langle n_k^2 \rangle + 2\sum_{i\gt j} \langle n_i n_j \rangle - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{ \sum_{k} \left(\langle n_k \rangle + 2\langle n_k\rangle^2 \right) + 2\sum_{i\gt j} \langle n_i \rangle \langle n_j \rangle  - \langle n\rangle}{\langle n\rangle^2} \\ &= \frac{\langle n\rangle + \langle n\rangle^2 +\sum_{k} \langle n_k\rangle^2 - \langle n\rangle}{\langle n\rangle^2} \\ &= 1+\frac{\sum_{k} \langle n_k\rangle^2}{ \left\langle \sum_{k} n_k\right\rangle^2} \\ &= 1 + \frac{\sum_k \sinh^4(r_k)}{\left(\sum_k \sinh^2(r_k)\right)^2} \\ &\approx 1+\frac{\sum_k r_k^4}{\left(\sum_k r_k^2\right)^2} \\ &= 1 + \frac{\sum_k \lambda_k^4}{\left(\sum_k \lambda_k^2\right)^2} \\ &= 1+\sum_k \lambda_k^4 \\ &= 1+\frac{1}{K} \\ &= 1+P \end{aligned}\]
 
 In the third equality, we used the result that for a thermal optical field, \( \langle n_k^2 \rangle =\langle n_k \rangle + 2\langle n_k\rangle^2\) , and that there is no correlation between the modes, \(\langle n_i n_j\rangle=\langle n_i\rangle\langle n_j\rangle\) .
 

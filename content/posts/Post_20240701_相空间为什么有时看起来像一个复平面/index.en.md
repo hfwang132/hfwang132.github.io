@@ -30,7 +30,7 @@ In fact, given a configuration space \(M\), the phase space is the **cotangent b
 However, when solving problems, we physicists also often use the **complex plane**.
 
 > Example 1: Given the Hamiltonian equations of a harmonic oscillator  
-> \(\cases{ \frac{\mathrm{d}q}{\mathrm{d}t} = \omega p\\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega q }\)   
+> \(\begin{cases} \frac{\mathrm{d}q}{\mathrm{d}t} = \omega p\\ \frac{\mathrm{d}p}{\mathrm{d}t} = -\omega q \end{cases}\)   
 > that is,  
 > \(\frac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} q \\ p \end{bmatrix} = \begin{bmatrix} 0 & \omega \\ -\omega & 0 \end{bmatrix} \begin{bmatrix} q\\ p \end{bmatrix}\)   
 > Diagonalization yields the eigenvector \(a^{\pm} =  q\pm\mathrm{i}p\), so the derivative of \(a^{\pm}\) depends only on itself:  

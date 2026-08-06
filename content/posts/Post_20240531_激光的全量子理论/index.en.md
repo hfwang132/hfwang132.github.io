@@ -224,7 +224,7 @@ When the pump is of the same order of magnitude as the threshold, there is an ex
 
 \[\langle n^2\rangle = \langle n \rangle^2 + A\]
 
-In this case, \(g^{(2)}(0) = \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1 + \frac{B(1-p_0)}{[A-B(1-p_0)]^2} > 1\)
+In this case, \(g^{(2)}(0) = \frac{\langle n(n-1)\rangle}{\langle n\rangle^2} = 1 + \frac{B(1-p_0)}{[A-B(1-p_0)]^2} \gt 1\)
 
 Clearly, when the pump is not strong, the photon-number distribution is in fact super-Poissonian. As the pump becomes increasingly strong, \(g^{(2)}(0) \rightarrow 1\), approaching a Poisson distribution. Such precise predictions are beyond the reach of semiclassical theory.
 
@@ -244,11 +244,11 @@ From \(\gamma \mathrm{d}\tau = R\mathrm{d}t_p\), we obtain
 
 \[\begin{aligned} \dot{a} &= \frac{\mathrm{d}a}{\mathrm{d}\tau} = -\mathrm{i} \omega a - \frac{\omega}{2Q} \frac{\gamma}{R}a\end{aligned}\]
 
-Solving yields \(a(t ) =a(0) e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t}, \quad a>0\).
+Solving yields \(a(t ) =a(0) e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t}, \quad a\gt 0\).
 
 Its first-order correlation function is:
 
-\[\begin{aligned} g^{(1)}(t>0)&=\langle a^\dag(t) a(0)\rangle / \langle a^\dag(0) a(0)\rangle \\ &= \text{tr}[a(0) \rho a^\dag(t)] / \text{tr}[a(0) \rho a^\dag(0)] \\ &= e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t} \end{aligned}\]
+\[\begin{aligned} g^{(1)}(t\gt 0)&=\langle a^\dag(t) a(0)\rangle / \langle a^\dag(0) a(0)\rangle \\ &= \text{tr}[a(0) \rho a^\dag(t)] / \text{tr}[a(0) \rho a^\dag(0)] \\ &= e^{-\mathrm{i}\omega t} e^{-\frac{\omega\gamma}{2RQ}t} \end{aligned}\]
 
 Time-translation invariance requires \(g^{(1)}(t) = g^{(1)}(-t)\), so
 

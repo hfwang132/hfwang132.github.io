@@ -68,6 +68,15 @@ class MathDelimiterTests(unittest.TestCase):
         )
         self.assertEqual(MODULE.normalize_katex_environments(source), source)
 
+    def test_normalizes_html_sensitive_relations_in_native_math(self):
+        source = r"Range \(0<x<1\), bound \[y>0\]."
+        expected = r"Range \(0\lt x\lt 1\), bound \[y\gt 0\]."
+        self.assertEqual(MODULE.normalize_html_sensitive_math(source), expected)
+
+    def test_does_not_normalize_html_sensitive_relations_inside_code(self):
+        source = "Use `\\(0<x<1\\)` here.\n```tex\n\\[y>0\\]\n```\n"
+        self.assertEqual(MODULE.normalize_html_sensitive_math(source), source)
+
     def test_removes_nested_delimiters_between_display_environments(self):
         source = (
             r"\[\begin{align}a&=b\end{align}"
@@ -88,6 +97,21 @@ class MathDelimiterTests(unittest.TestCase):
             content = path.read_text(encoding="utf-8")
             if MODULE.normalize_katex_environments(content) != content:
                 invalid.append(str(path.relative_to(posts.parent.parent)))
+        self.assertEqual(invalid, [])
+
+    def test_repository_posts_have_no_legacy_math_escape_artifacts(self):
+        posts = Path(__file__).resolve().parents[1] / "content" / "posts"
+        invalid = []
+        for path in sorted(posts.glob("*/index*.md")):
+            for line_number, line in enumerate(
+                path.read_text(encoding="utf-8").splitlines(),
+                start=1,
+            ):
+                has_nested_passthrough = "$\\[" in line
+                has_overescaped_brace = r"\\\\{" in line or r"\\\\}" in line
+                if has_nested_passthrough or has_overescaped_brace:
+                    relative = path.relative_to(posts.parent.parent)
+                    invalid.append(f"{relative}:{line_number}")
         self.assertEqual(invalid, [])
 
 

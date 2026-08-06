@@ -37,11 +37,11 @@ author: "Haifei"
 等等，真有这么简单吗？我们用本科就学过的概统知识来分析一下，如果一个随机变量服从高斯分布，那么它的平方真的服从指数分布吗？
 
 > 我们写出高斯分布的 cdf（累积密度函数）：  
-> \(p(E<x) = \Phi(x) = \int_{-\infty}^{x} \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{t^2}{2\sigma^2}} \mathrm{d}t\)   
+> \(p(E\lt x) = \Phi(x) = \int_{-\infty}^{x} \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{t^2}{2\sigma^2}} \mathrm{d}t\)   
 > 则光强的 cdf 为  
-> \(p(I<y) = p(E^2 < y) = p(-\sqrt{y}<E<\sqrt{y}) = \Phi(\sqrt{y}) - \Phi(-\sqrt{y}) = 2\Phi(\sqrt{y}) - 1\)   
+> \(p(I\lt y) = p(E^2 \lt y) = p(-\sqrt{y}\lt E\lt \sqrt{y}) = \Phi(\sqrt{y}) - \Phi(-\sqrt{y}) = 2\Phi(\sqrt{y}) - 1\)   
 > 所以光强的 pdf 应该是  
-> \(f(y) = p^\prime(I < y) = 2 \Phi^\prime(\sqrt{y}) = \frac{1}{\sigma\sqrt{2\pi y}} e^{-\frac{y}{2\sigma^2}}\)
+> \(f(y) = p^\prime(I \lt y) = 2 \Phi^\prime(\sqrt{y}) = \frac{1}{\sigma\sqrt{2\pi y}} e^{-\frac{y}{2\sigma^2}}\)
 
 这不是指数分布！和真正的指数分布相比，它多了一个 \(y^{-1/2}\) 因子。
 
@@ -50,11 +50,11 @@ author: "Haifei"
 我们可以换个思路，反过来问：如果一个随机变量服从指数分布，那么它的平方根服从什么分布？
 
 > 指数分布的 cdf 为：  
-> \(p(I<y) = 1 - e^{-\gamma y}\)   
+> \(p(I\lt y) = 1 - e^{-\gamma y}\)   
 > 那么电场的 cdf 为：  
-> \(p(E < x) = \frac{1 + p(-x<E<x)}{2} = \frac{1 + p(I<x^2)}{2}  = \frac{2 - e^{-\gamma x^2}}{2}\)   
+> \(p(E \lt x) = \frac{1 + p(-x\lt E\lt x)}{2} = \frac{1 + p(I\lt x^2)}{2}  = \frac{2 - e^{-\gamma x^2}}{2}\)   
 > 所以电场的 pdf 应该是：  
-> \(f(x) = p^\prime(E<x) = \gamma x e^{-\gamma x^2}\)
+> \(f(x) = p^\prime(E\lt x) = \gamma x e^{-\gamma x^2}\)
 
 这个分布叫做瑞利分布，它比高斯分布多了一个 \(x\) 因子。
 

@@ -118,7 +118,7 @@ c. \(\mathcal{F}\) 中任意多元素的并集仍在 \(\mathcal{F}\) 中。
 >   
 > **例 1.3**  
 >   
-> 在例 1.2 中的拓扑上，映射\(f:\mathbb{R}\rightarrow\mathbb{R},\,f(x)=\begin{cases}1, & x>0 \\ 0, & x=0\\ -1, & x<0\end{cases}\) 不是一个连续映射，因为开集 \(\{x\in \mathbb{R}\mid -1<x<1\}\) 在映射 \(f\) 下的原像为 \(\{0\}\) ，不是一个开集。
+> 在例 1.2 中的拓扑上，映射\(f:\mathbb{R}\rightarrow\mathbb{R},\,f(x)=\begin{cases}1, & x\gt 0 \\ 0, & x=0\\ -1, & x\lt 0\end{cases}\) 不是一个连续映射，因为开集 \(\{x\in \mathbb{R}\mid -1\lt x\lt 1\}\) 在映射 \(f\) 下的原像为 \(\{0\}\) ，不是一个开集。
 
 ### 1.4 同胚（Homeomorphism）  
 
@@ -652,7 +652,7 @@ b)（厄米性） \(\langle x|y\rangle=\langle y|x\rangle^\dagger\)
 
 > **评论**   
 >   
-> 正定是指对于任何的 \(v,w\in V\) 且 \(v,w\neq 0\) ，都有 \(\langle u|v\rangle > 0\) 。   
+> 正定是指对于任何的 \(v,w\in V\) 且 \(v,w\neq 0\) ，都有 \(\langle u|v\rangle \gt 0\) 。   
 >   
 > 从矩阵的观点来看，就是说矩阵的每一个特征值都大于零。   
 >   
@@ -871,9 +871,9 @@ b) \[\begin{aligned} &f(v_1,\cdots,v_i,\cdots,v_j,\cdots,v_n)\\  &=-f(v_1,\cdots
 
 具体地，一个一般的 m 阶微分形式可以写成下式：
 
-\[\omega = \sum_If_I\,\mathrm{d}x^I=\sum_{i_1<\cdots<i_m}f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m}\]
+\[\omega = \sum_If_I\,\mathrm{d}x^I=\sum_{i_1\lt \cdots\lt i_m}f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m}\]
 
-其中 \(I\) 代表一系列指标 \((i_1,i_2,\cdots,i_m),\,  i_1<i_2<\cdots<i_m\) ， \(\mathrm{d}x^I\) 代表 \(\mathrm{d}x^{i_1}\wedge\mathrm{d}x^{i_2}\wedge\cdots\wedge\mathrm{d}x^{i_m}\) 。
+其中 \(I\) 代表一系列指标 \((i_1,i_2,\cdots,i_m),\,  i_1\lt i_2\lt \cdots\lt i_m\) ， \(\mathrm{d}x^I\) 代表 \(\mathrm{d}x^{i_1}\wedge\mathrm{d}x^{i_2}\wedge\cdots\wedge\mathrm{d}x^{i_m}\) 。
 
 > 例如对于 \(\omega=2\,\mathrm{d}x^1\wedge\mathrm{d}x^2\wedge\mathrm{d}x^4+4\,\mathrm{d}x^2\wedge\mathrm{d}x^3\wedge\mathrm{d}x^5\) ，有 \(I=(1,2,4),(2,3,5)\) ， \(f_{(1,2,4)}=2, f_{(2,3,5)}=4\) 。  
 >   
@@ -1570,13 +1570,13 @@ RLC 联络的表达式为 \( \Gamma^i_{jk} = \frac{g^{il}}{2}(g_{lj,k}+g_{lk,j}-
 >   
 >  \( \left\{\begin{aligned} g_{tt} &= - (c^2 - \frac{2GM}{r}) \\ g_{rr} &= \frac{1}{1-\frac{2GM}{rc^2}} \\ g_{\theta\theta} &= r^2 \\ g_{\varphi\varphi} &= r^2 \sin^2 \theta \\ g_{\text{otherwise}} &= 0 \end{aligned}\right. \)   
 >   
->  它是爱因斯坦场方程的第一个非平凡的精确解。注意到 \(r=\frac{2GM}{c^2}\) 是度规的一个奇点。当然，由于施瓦西度规只适用于球体外的时空，当球体的半径 \(R>\frac{2GM}{c^2}\) 时，这不是一个问题。  
+>  它是爱因斯坦场方程的第一个非平凡的精确解。注意到 \(r=\frac{2GM}{c^2}\) 是度规的一个奇点。当然，由于施瓦西度规只适用于球体外的时空，当球体的半径 \(R\gt \frac{2GM}{c^2}\) 时，这不是一个问题。  
 >   
->  然而，如果球体的半径 \(R<\frac{2GM}{c^2}\)，那么该球体外的一个物体就有可能经过 \(r=\frac{2GM}{c^2}\)。  
+>  然而，如果球体的半径 \(R\lt \frac{2GM}{c^2}\)，那么该球体外的一个物体就有可能经过 \(r=\frac{2GM}{c^2}\)。  
 >   
->  而且，当 \(r<\frac{2GM}{c^2}\) 时，\(g_{rr}\) 由正变为负，\(g_{tt}\) 由负变为正，换言之，\(r\) 变成了一个类时坐标，这意味着在某种程度上，径向的空间维度变成了一个时间维度：落入中心将成为不可避免的未来。  
+>  而且，当 \(r\lt \frac{2GM}{c^2}\) 时，\(g_{rr}\) 由正变为负，\(g_{tt}\) 由负变为正，换言之，\(r\) 变成了一个类时坐标，这意味着在某种程度上，径向的空间维度变成了一个时间维度：落入中心将成为不可避免的未来。  
 >   
-> 因此当 \(R<\frac{2GM}{c^2}\) 时，球体会坍缩为一个很小的点（在广义相对论的模型中）。这就是常说的施瓦西黑洞。\(r=\frac{2GM}{c^2}\) 处的球面叫做事件视界。  
+> 因此当 \(R\lt \frac{2GM}{c^2}\) 时，球体会坍缩为一个很小的点（在广义相对论的模型中）。这就是常说的施瓦西黑洞。\(r=\frac{2GM}{c^2}\) 处的球面叫做事件视界。  
 >   
 >  施瓦西解的求解过程过于冗长，本文就不介绍了。
 
@@ -2016,13 +2016,13 @@ m-chain 的集合记作 \(C_m(M)\) 。
 
 根据 **第 3.3 节** 末，我们可以记一个微分形式 \(\omega\) 为：
 
-\[ \begin{aligned} \omega = \sum_{i_1<\cdots<i_m} f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m} \end{aligned} \]
+\[ \begin{aligned} \omega = \sum_{i_1\lt \cdots\lt i_m} f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m} \end{aligned} \]
 
 > 为了确定起见，我们可以规定 \((i_1, \cdots, i_m)\) 是 \((1, \cdots, m)\) 的偶置换。
 
 那么 \(\omega\) 在 \(\sigma\) 上的积分可以显式写成：
 
-\[ \begin{aligned} \int_\sigma \omega=\int_{[0,1]^m}\sum_{i_1<\cdots<i_m} f_{(i_1,\cdots,i_m)}|_{\phi( \mathbf{u})}\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}\mathrm{d}u^1\cdots\mathrm{d}u^m \end{aligned} \]
+\[ \begin{aligned} \int_\sigma \omega=\int_{[0,1]^m}\sum_{i_1\lt \cdots\lt i_m} f_{(i_1,\cdots,i_m)}|_{\phi( \mathbf{u})}\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}\mathrm{d}u^1\cdots\mathrm{d}u^m \end{aligned} \]
 
 其中 \((u^1,\cdots,u^m)\in[0,1]^m\) ；\(\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}\) 是雅可比行列式：
 

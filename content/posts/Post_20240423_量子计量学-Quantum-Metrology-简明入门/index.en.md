@@ -54,7 +54,7 @@ At this point, we have defined the measurement process. Essentially, it is a **p
 >   
 > **Efficiency**: How do we characterize efficiency? As we will introduce later, the variance of an estimator has a CR lower bound: \((\Delta \hat{\theta})^2 \ge \frac{1}{F(\theta)}\), where \(F(\theta)\) is called the Fisher information. Efficiency can be characterized by \(\frac{1}{F(\theta)(\Delta \hat{\theta})^2} \le 1 \). When \(\frac{1}{F(\theta)(\Delta \hat{\theta})^2} = 1 \), we say that the statistic is efficient.  
 >   
-> **Consistency**: Consistency requires that \(\lim_{n\rightarrow \infty} P(|\hat{\theta} - \theta|>\epsilon) = 0\) hold for every positive number \(\epsilon > 0\). Here \(n\) is the sample size. This is also called convergence in probability \(\operatorname{plim}_{n\rightarrow \infty} \hat{\theta} = \theta\).
+> **Consistency**: Consistency requires that \(\lim_{n\rightarrow \infty} P(|\hat{\theta} - \theta|\gt \epsilon) = 0\) hold for every positive number \(\epsilon \gt 0\). Here \(n\) is the sample size. This is also called convergence in probability \(\operatorname{plim}_{n\rightarrow \infty} \hat{\theta} = \theta\).
 
 How do we deal with parameter estimation problems?
 
@@ -268,13 +268,13 @@ We now consider a two-level system of N particles, with Hamiltonian
 
 The quantum Fisher information is then:
 
-\[\begin{aligned} F(\theta) &= \left\langle\left(\sum_k \hat{Z}_k\right)^2\right\rangle -  \left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  &= N+ \left\langle 2\sum_{k > l} \hat{Z}_k \hat{Z}_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
+\[\begin{aligned} F(\theta) &= \left\langle\left(\sum_k \hat{Z}_k\right)^2\right\rangle -  \left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  &= N+ \left\langle 2\sum_{k \gt l} \hat{Z}_k \hat{Z}_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
 
 To maximize the quantum Fisher information, we need \(\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2\) to be zero and \(\left\langle \sum_{k \ne l} Z_k Z_l  \right\rangle\) to be maximal.
 
 What is the maximum value of \(\left\langle \sum_{k \ne l} Z_k Z_l  \right\rangle\)? \(\left\langle Z_k Z_l  \right\rangle\) is called the two-body correlator, representing the correlation of Pauli operators between two qubits. Its range is from -1 to 1, and its maximum is 1, meaning that the Z components of the two qubits are always aligned; its minimum is 1, meaning that the Z components of the two qubits are always opposite. Therefore, the maximum value of \(\left\langle \sum_{k \ne l} Z_k Z_l  \right\rangle\) is \(N(N-1)/2\). Substituting this into the Fisher information gives:
 
-\[\begin{aligned} F(\theta) &=  N+ \left\langle 2\sum_{k > l} Z_k Z_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\ &\le N+N(N-1)-0 \\ &=N^2 \end{aligned}\]
+\[\begin{aligned} F(\theta) &=  N+ \left\langle 2\sum_{k \gt l} Z_k Z_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\ &\le N+N(N-1)-0 \\ &=N^2 \end{aligned}\]
 
 Clearly, at the Heisenberg limit, quantum Fisher information equals the square of the particle number, and the measurement error is inversely proportional to the particle number \(\Delta \theta = \frac{1}{N}\). Therefore, people usually use the Heisenberg limit as a synonym for “error inversely proportional to the particle number.”
 
@@ -320,7 +320,7 @@ However, we generally do not call this the Heisenberg limit, but rather the shot
 
 > Can \(\Delta N\) be proportional to a higher power of \(\bar{n}\)? For example, can \(\Delta N\) be proportional to \(\bar{n}^2\)? Quantum statistics tells us that it cannot. \(\Delta N\) can be at most proportional to \(\bar{n}\).  
 >   
-> This is because \((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\), where \(g^{(2)}\) is the second-order correlation function, whose value at \(t=0\) is fixed. Clearly, when \(g^{(2)}(0) > 1 \), namely, when using bunched light, we have \(\Delta N  \propto \langle \hat{N}\rangle = \bar{n}\). However, the \(g^{(2)}(0)\) of a coherent state is exactly 1, so there is only \(\Delta N  \propto \sqrt{\bar{n}}\).  
+> This is because \((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\), where \(g^{(2)}\) is the second-order correlation function, whose value at \(t=0\) is fixed. Clearly, when \(g^{(2)}(0) \gt 1 \), namely, when using bunched light, we have \(\Delta N  \propto \langle \hat{N}\rangle = \bar{n}\). However, the \(g^{(2)}(0)\) of a coherent state is exactly 1, so there is only \(\Delta N  \propto \sqrt{\bar{n}}\).  
 >   
 > Interestingly, thermal radiation has \(g^{(2)}(0)=2\). That is, disordered thermal radiation is more favorable for phase estimation than coherent laser light (counterintuitive, right?) [[1]](#ref\_1)!  
 >   
@@ -362,7 +362,7 @@ Phase squeezing
 
 In phase space, a coherent state is a Gaussian function with a standard deviation of 1. A squeezed state is actually a coherent state “flattened” along one quadrature, changing from a circle into an ellipse. A squeezed state still satisfies the uncertainty principle; it merely has greater uncertainty in one direction and less uncertainty in the other, with their product fixed (this can also be understood as the area of the ellipse remaining unchanged). Through Phase squeezing as shown above, we can increase \(\Delta N\) and thereby reduce \(\Delta \theta\). Conversely, if we want to reduce \(\Delta N\), we can do so by increasing \(\Delta \theta\); this is Amplitude squeezing.
 
-For amplitude-squeezed states, \(g^{(2)}(0)<1\), whereas for phase-squeezed states, \(g^{(2)}(0) > 1\). Recall that we have \((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\). Clearly, for squeezed states, \(\Delta N \propto \bar{n}\), \(\Delta \theta \propto \frac{1}{\bar{n}}\), attaining the Heisenberg limit. The greater the squeezing strength, the larger \(g^{(2)}(0)\) becomes, and the higher the proportionality coefficient \(k\) of \(\Delta \theta \sim \frac{1}{k\bar{n}}\) becomes.
+For amplitude-squeezed states, \(g^{(2)}(0)\lt 1\), whereas for phase-squeezed states, \(g^{(2)}(0) \gt 1\). Recall that we have \((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\). Clearly, for squeezed states, \(\Delta N \propto \bar{n}\), \(\Delta \theta \propto \frac{1}{\bar{n}}\), attaining the Heisenberg limit. The greater the squeezing strength, the larger \(g^{(2)}(0)\) becomes, and the higher the proportionality coefficient \(k\) of \(\Delta \theta \sim \frac{1}{k\bar{n}}\) becomes.
 
 Compared with fragile NOON states, squeezed states are more practical. As introduced at the beginning of this article, the famous gravitational-wave detector LIGO uses squeezed states. In addition, when the sample damage threshold is low (for example, biological samples), we cannot reduce shot noise by increasing laser power. In this case, people also use squeezed states to further improve imaging precision without increasing power.
 
@@ -442,7 +442,7 @@ For clarity, let us write once again the previous results for two-level systems 
 
 Two-level system:
 
-\[\begin{aligned} F(\theta) &=  N+ 2\left\langle \underbrace{\sum_{k > l} \hat{Z}_k \hat{Z}_l}_{ \frac{N(N-1)}{2} \text{ terms}}  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
+\[\begin{aligned} F(\theta) &=  N+ 2\left\langle \underbrace{\sum_{k \gt l} \hat{Z}_k \hat{Z}_l}_{ \frac{N(N-1)}{2} \text{ terms}}  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
 
 Harmonic-oscillator system:
 

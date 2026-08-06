@@ -221,7 +221,7 @@ The unitary transformation \(U\in U(N)\) induced by parallel transport along the
 
 It is the integral of the non-Abelian connection \(A\) along the path \(\gamma\). Here \(\mathcal{P}\) is the path-ordering operator.
 
-> Its effect is to order the operator products \(A(t_1)A(t_2)\cdots A(t_N)\) in each term of the Taylor-expanded series according to their order along the path, such that \(t_1 > t_2 > \cdots > t_N\). Ordering is needed because the connections \(A(t_1)\) and \(A(t_2)\) at different points do not commute.
+> Its effect is to order the operator products \(A(t_1)A(t_2)\cdots A(t_N)\) in each term of the Taylor-expanded series according to their order along the path, such that \(t_1 \gt t_2 \gt \cdots \gt t_N\). Ordering is needed because the connections \(A(t_1)\) and \(A(t_2)\) at different points do not commute.
 
 The curvature is calculated as follows (see the appendix):
 

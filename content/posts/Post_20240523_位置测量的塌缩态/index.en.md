@@ -31,7 +31,7 @@ $\mathcal{L}(\mathcal{H})$ : (bounded) operators on Hilbert space $\mathcal{H}$.
 
 $\mathbb{I}\_{\mathcal{H}}$ : Identity operator on Hilbert space $\mathcal{H}$.
 
-$\mathcal{E}(\mathcal{H})$ : effect on Hilbert space $\mathcal{H}$. Defined as $\mathcal{E}(\mathcal{H}) := \\\\{ E\in \mathcal{L}(\mathcal{H}) | E =E^\*, 0 \le E\le \mathbb{I}\_{\mathcal{H}}\\\\}$.
+$\mathcal{E}(\mathcal{H})$ : effect on Hilbert space $\mathcal{H}$. Defined as \(\mathcal{E}(\mathcal{H}) := \{ E\in \mathcal{L}(\mathcal{H}) \mid E = E^*,\ 0 \le E\le \mathbb{I}_{\mathcal{H}} \}\).
 
 $\text{Leb}(\mathbb{R})$ : Lebesgue sigma algebra on $\mathbb{R}$.
 
@@ -54,7 +54,7 @@ Moreover, the letter M in PVM and POVM refers to Measure. Quantum mechanics is b
 ### 1.4 Spectral Decomposition of Position and Momentum Operators  
 The position operator $Q \in \mathcal{L}(L^2(\mathbb{R}))$ on $L^2(\mathbb{R})$ has the spectral decomposition: $Q = \int\_\mathbb{R} x\mathsf{Q}(\mathrm{d}x)$. This is a Lebesgue integral.
 
-Here, $\mathsf{Q}$ is the position projection measurement, i.e., PVM (Projection-Valued Measure, a special case of POVM, Positive Operator-Valued Measure), defined as an operator-valued measure: $\mathsf{Q}: \text{Leb}(\mathbb{R}) \rightarrow \mathcal{E}(L^2(\mathbb{R}))$, $\[\mathsf{Q}(A) \varphi\](x):=\chi\_A(x) \varphi(x)$, where $\chi\_A(x)=\begin{cases} 1, \quad x\in A \\\\ 0, \quad x \notin A \end{cases}$ is the characteristic function of set $A$.
+Here, $\mathsf{Q}$ is the position projection measurement, i.e., PVM (Projection-Valued Measure, a special case of POVM, Positive Operator-Valued Measure), defined as an operator-valued measure: $\mathsf{Q}: \text{Leb}(\mathbb{R}) \rightarrow \mathcal{E}(L^2(\mathbb{R}))$, \(\bigl[\mathsf{Q}(A)\varphi\bigr](x):=\chi_A(x)\varphi(x)\), where $\chi\_A(x)=\begin{cases} 1, \quad x\in A \\\\ 0, \quad x \notin A \end{cases}$ is the characteristic function of set $A$.
 
 
 > Selected reading: The momentum PVM can be defined as $\mathsf{P}(A) = F^\* \mathsf{Q}(A) F$, where $F$ is the Fourier-Plancherel operator $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$, defined as:  
@@ -162,7 +162,7 @@ In this way, the measurement model seems to be similar to decoherence, both of w
 ## 4. Classical Instrument  
 To avoid the problem mentioned above, we can define a course-grained classical instrument that can only distinguish whether particles are in a certain interval:
 
-$\mathsf{Z}: \\{0,1\\} \rightarrow \mathcal{E}(L^2(\mathbb{R}))$ 
+\(\mathsf{Z}: \{0,1\} \rightarrow \mathcal{E}(L^2(\mathbb{R}))\)
 
 $\mathsf{Z}(1) = \int\_a^b \mathsf{Q}(\mathrm{d}x)$ 
 
@@ -177,4 +177,3 @@ $\mathsf{Z}(n) =\int\_{gn}^{g(n+1)} \mathsf{Q}(\mathrm{d}x)$
 Note that they are both PVMs, so the collapsed state can also be determined.
 
 The calculation of these two cases is left to the reader as an exercise.
-

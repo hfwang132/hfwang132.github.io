@@ -83,9 +83,9 @@ author: "Haifei"
 
 > **Hoeffding 不等式**  
 > 给定 \(N\) 个独立随机变量 \(X_i,\,i=1,...,N\) ，取值范围分别为 \([a_i,b_i]\) ，那么它们的和 \(S=\sum_iX_i\) 满足  
-> \(\begin{aligned} P(|S-\mathbb{E}(S)| \ge \epsilon) < 2\exp \left[-\frac{2 N^2 \epsilon^2}{\sum_{i}(b_i-a_i)^2}  \right] \end{aligned}\)   
+> \(\begin{aligned} P(|S-\mathbb{E}(S)| \ge \epsilon) \lt 2\exp \left[-\frac{2 N^2 \epsilon^2}{\sum_{i}(b_i-a_i)^2}  \right] \end{aligned}\)   
 > 如果 \(X_1,...,X_N\) 的分布相同，取值范围为 \([a,b]\) ，并且记均值为 \(Y = S/N=\sum_iX_i /N\) ，则有  
->  \(\begin{aligned} P(|Y-\mathbb{E}(Y)| \ge \epsilon) < 2\exp \left[ -\frac{2 N \epsilon^2}{(b-a)^2} \right] \end{aligned}\)
+>  \(\begin{aligned} P(|Y-\mathbb{E}(Y)| \ge \epsilon) \lt 2\exp \left[ -\frac{2 N \epsilon^2}{(b-a)^2} \right] \end{aligned}\)
 
 接下来我们运用 Hoeffding 不等式。
 
@@ -93,13 +93,13 @@ author: "Haifei"
 >   
 > 对 \(\hat{c}_i\) 运用 Hoeffding 不等式，并注意到 \(\hat{c}_i\) 的取值为 \(\pm1\) ，有：  
 >   
-> \(P[|\hat{c}_i-c_i| > \epsilon_i] \le 2 \exp \left[-N\epsilon_i^2/2\right]\)   
+> \(P[|\hat{c}_i-c_i| \gt \epsilon_i] \le 2 \exp \left[-N\epsilon_i^2/2\right]\)   
 >   
 > 其中 \(N\) 为重复测量 \(P_i\) 的次数。  
 >   
-> 于是根据 union bound，在 \((4^n-1)\) 个 \(c_i\) 中，任意一个 \(|\hat{c}_i-c_i| > \epsilon_i\) 的概率为：  
+> 于是根据 union bound，在 \((4^n-1)\) 个 \(c_i\) 中，任意一个 \(|\hat{c}_i-c_i| \gt \epsilon_i\) 的概率为：  
 >   
-> \(P[|\hat{c}_i-c_i| > \epsilon_i, \,\exists \, i] \le (4^n - 1) \cdot 2 \exp \left[-N\delta^2/2\right]\)   
+> \(P[|\hat{c}_i-c_i| \gt \epsilon_i, \,\exists \, i] \le (4^n - 1) \cdot 2 \exp \left[-N\delta^2/2\right]\)   
 >   
 > 现在，我们希望所有的 \(|\hat{c}_i-c_i|\) 都大概率小于 \(\epsilon_1\) 。也就是说，误差大于 \(\epsilon_1\) 的概率为一个很小的数 \(\delta \ll 1\) 。令上式右边为 \(\delta\) 得到：  
 >   
@@ -121,7 +121,7 @@ author: "Haifei"
 >   
 > 并且要求它的 trace norm 小于 \(\epsilon\) ：  
 >   
-> \(||\Delta||_1<\epsilon\)   
+> \(||\Delta||_1\lt \epsilon\)   
 >   
 > 注意到 Hilbert-Schmidt norm 更好计算： \(||\Delta||_2^2 := \operatorname{tr}[A^\dagger A] = \frac{1}{2^n}\sum_i |\hat{c}_i-c_i|^2\) ，因为   
 > \(\operatorname{tr}[P_i^\dagger P_j]=\operatorname{tr}[P_iP_j]=\delta_{ij}\) 。  
@@ -409,17 +409,17 @@ update: 2025 年 2 月，上界的记录已经被刷新了，是 \(\boxed{ N = O
 
 > **平均数中位数估计（Median of means estimation）**  
 > 给定 \(N\) 个独立同分布随机变量 \(X_i,\,i=1,...,N\) ，期望值为 \(\mu\) ，方差为 \(\sigma^2\) 。将它们分成 \(k\) 组，每组 \(m=N/k\) 个随机变量。那么其中一组的平均值 \(\hat{\mu}_j = \sum_{i=j}^{j+m-1} X_i\) 的方差为 \(\sigma^2/m\) 。根据 **Chebyshev 不等式**，有：  
->  \(\begin{aligned} P(|\hat{\mu}_j - \mu| > \epsilon ) \le \frac{\sigma^2}{m \epsilon^2} \end{aligned}\)   
+>  \(\begin{aligned} P(|\hat{\mu}_j - \mu| \gt \epsilon ) \le \frac{\sigma^2}{m \epsilon^2} \end{aligned}\)   
 > 令右边等于 \(p\) ，那么 \(m= \sigma^2/(p\epsilon^2)\) 。  
 > 定义随机变量：  
->  \(Z_j = \begin{cases} 1,& |\hat{\mu}_j - \mu| > \epsilon \\ 0,& |\hat{\mu}_j - \mu| \le \epsilon \end{cases}\)   
-> 由于我们最终取 \(\hat{\mu}_1,...,\hat{\mu}_k\) 的中位数，我们希望一半以上的 \(\hat{\mu}_j\) 误差大于 \(\epsilon\) 的概率 \(P\left(\sum_{j=1}^k Z_j > \frac{k}{2}\right)\) 足够小。  
+>  \(Z_j = \begin{cases} 1,& |\hat{\mu}_j - \mu| \gt \epsilon \\ 0,& |\hat{\mu}_j - \mu| \le \epsilon \end{cases}\)   
+> 由于我们最终取 \(\hat{\mu}_1,...,\hat{\mu}_k\) 的中位数，我们希望一半以上的 \(\hat{\mu}_j\) 误差大于 \(\epsilon\) 的概率 \(P\left(\sum_{j=1}^k Z_j \gt \frac{k}{2}\right)\) 足够小。  
 > 记 \(S=\sum_{j=1}^k Z_j\) ，根据 **Hoeffding 不等式**有：  
->  \(P(S-\mathbb{E}(S)>t)\le \exp\left(-\frac{2t^2}{k}\right)\)   
+>  \(P(S-\mathbb{E}(S)\gt t)\le \exp\left(-\frac{2t^2}{k}\right)\)   
 > 其中 \(\mathbb{E}(S) \le kp\) 。令 \(t = k/2 - kp\) ，于是：  
->  \(P\left(S>\frac{k}{2}\right) \le P(S-\mathbb{E}(S)>t)\le \exp\left(-2k\left(\frac{1}{2}-p\right)^2\right)\)   
+>  \(P\left(S\gt \frac{k}{2}\right) \le P(S-\mathbb{E}(S)\gt t)\le \exp\left(-2k\left(\frac{1}{2}-p\right)^2\right)\)   
 > 不妨令 \(p = 1/4\) ，于是  
->  \(P\left(\sum_{j=1}^k Z_j > \frac{k}{2}\right) \le \exp\left( - \frac{k}{8}\right)\)   
+>  \(P\left(\sum_{j=1}^k Z_j \gt \frac{k}{2}\right) \le \exp\left( - \frac{k}{8}\right)\)   
 >  令右边等于 \(\delta\) 得 \(k =8 \log (1/\delta)\) 。  
 > 又因为 \(m=\sigma^2/(p\epsilon^2) =4\sigma^2/\epsilon^2\) ，所以  
 >  \(\boxed{ N = km =32 \sigma^2 \log(1/\delta)/\epsilon^2 }\)   
@@ -433,11 +433,11 @@ update: 2025 年 2 月，上界的记录已经被刷新了，是 \(\boxed{ N = O
 
 在运用 Hoeffding 不等式的时候：
 
-\[P(S-\mathbb{E}(S)>t)\le \exp\left(-\frac{2t^2}{k}\right)\]
+\[P(S-\mathbb{E}(S)\gt t)\le \exp\left(-\frac{2t^2}{k}\right)\]
 
 我们可以选取 \(M\) 个 \(S_i\) ，即 \(S_1, ..., S_M\) ，并取 union bound：
 
-\[P(S_i-\mathbb{E}(S_i)>t,\ \exists S_i \in\{S_1,...,S_M\})\le M\exp\left(-\frac{2t^2}{k}\right)\]
+\[P(S_i-\mathbb{E}(S_i)\gt t,\ \exists S_i \in\{S_1,...,S_M\})\le M\exp\left(-\frac{2t^2}{k}\right)\]
 
 对数复杂度的关键就在这里：取 union bound 的时候， \(M\) 出现在指数的外面。因此反过来求 \(N\) 的时候， \(M\) 会出现在对数里面。
 

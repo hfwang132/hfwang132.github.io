@@ -136,7 +136,7 @@ categories: ["数学物理方法"]
 
 再举一个更显式的例子，以二元函数为例：
 
-\[\mathrm{d}f|_{p}:\mathrm{d}f|_{p}(v|_p)=v|_p(f)=  (\partial_x f) |_{p} \cdot a+(\partial_y f) |_{p}b\( ，其中 \)v|_p=\left(a\partial_x+b\partial_y\right)|_p\]
+\[\mathrm{d}f|_{p}:\mathrm{d}f|_{p}(v|_p)=v|_p(f)= (\partial_x f)|_{p}\cdot a+(\partial_y f)|_{p}b,\quad \text{其中}\quad v|_p=\left(a\partial_x+b\partial_y\right)|_p\]
 
 > 切空间中的矢量也可以叫协变矢量，余切空间中的矢量也可以叫做协变矢量。这是怎么一回事？  
 >   

@@ -131,11 +131,11 @@ The likelihood function is then:
 
 What kinds of measurement operators are best to choose?
 
-For polarization-encoded photonic qubits, we generally simply use the six projective measurements H, V, D, A, R, and L, together with their combinations (they are easy to implement, requiring only wave plates). For n qubits, we then have \(6^n>4^n\) projection operators, which is sufficient.
+For polarization-encoded photonic qubits, we generally simply use the six projective measurements H, V, D, A, R, and L, together with their combinations (they are easy to implement, requiring only wave plates). For n qubits, we then have \(6^n\gt 4^n\) projection operators, which is sufficient.
 
 Since \((|H\rangle\langle H|, |V\rangle\langle V|)\) constitute a POVM, \((|D\rangle\langle D|, |A\rangle\langle A|)\) constitute a POVM, and \((|R\rangle\langle R|, |L\rangle\langle L|)\) constitute a POVM, that is, six projective measurements correspond to three POVMs, we need \(3^n\) POVMs, which experimentally means \(3^n\) measurement settings (a measurement setting refers to the angles of the wave plates).
 
-But then the question arises: is there a better way to reduce the number of POVMs, thereby reducing the time required for tomography? After all, \(6^n>4^n\) is redundant.
+But then the question arises: is there a better way to reduce the number of POVMs, thereby reducing the time required for tomography? After all, \(6^n\gt 4^n\) is redundant.
 
 From this point onward, this can be considered a frontier problem in academia, and I could promote some work from our group. I will write about it when I have time in the future, haha.
 

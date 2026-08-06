@@ -37,11 +37,11 @@ This argument is very elegant because it makes full use of the “chaotic” nat
 Wait, is it really this simple? Let us analyze this using the probability and statistics knowledge we learned as undergraduates. If a random variable follows a Gaussian distribution, does its square really follow an exponential distribution?
 
 > Let us write down the cdf (cumulative distribution function) of the Gaussian distribution:  
-> \(p(E<x) = \Phi(x) = \int_{-\infty}^{x} \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{t^2}{2\sigma^2}} \mathrm{d}t\)   
+> \(p(E\lt x) = \Phi(x) = \int_{-\infty}^{x} \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{t^2}{2\sigma^2}} \mathrm{d}t\)   
 > Then the cdf of the light intensity is  
-> \(p(I<y) = p(E^2 < y) = p(-\sqrt{y}<E<\sqrt{y}) = \Phi(\sqrt{y}) - \Phi(-\sqrt{y}) = 2\Phi(\sqrt{y}) - 1\)   
+> \(p(I\lt y) = p(E^2 \lt y) = p(-\sqrt{y}\lt E\lt \sqrt{y}) = \Phi(\sqrt{y}) - \Phi(-\sqrt{y}) = 2\Phi(\sqrt{y}) - 1\)   
 > Therefore, the pdf of the light intensity should be  
-> \(f(y) = p^\prime(I < y) = 2 \Phi^\prime(\sqrt{y}) = \frac{1}{\sigma\sqrt{2\pi y}} e^{-\frac{y}{2\sigma^2}}\)
+> \(f(y) = p^\prime(I \lt y) = 2 \Phi^\prime(\sqrt{y}) = \frac{1}{\sigma\sqrt{2\pi y}} e^{-\frac{y}{2\sigma^2}}\)
 
 This is not an exponential distribution! Compared with a true exponential distribution, it has an extra \(y^{-1/2}\) factor.
 
@@ -50,11 +50,11 @@ Where is the problem?
 We can take a different approach and ask the reverse question: if a random variable follows an exponential distribution, what distribution does its square root follow?
 
 > The cdf of the exponential distribution is:  
-> \(p(I<y) = 1 - e^{-\gamma y}\)   
+> \(p(I\lt y) = 1 - e^{-\gamma y}\)   
 > Then the cdf of the electric field is:  
-> \(p(E < x) = \frac{1 + p(-x<E<x)}{2} = \frac{1 + p(I<x^2)}{2}  = \frac{2 - e^{-\gamma x^2}}{2}\)   
+> \(p(E \lt x) = \frac{1 + p(-x\lt E\lt x)}{2} = \frac{1 + p(I\lt x^2)}{2}  = \frac{2 - e^{-\gamma x^2}}{2}\)   
 > Therefore, the pdf of the electric field should be:  
-> \(f(x) = p^\prime(E<x) = \gamma x e^{-\gamma x^2}\)
+> \(f(x) = p^\prime(E\lt x) = \gamma x e^{-\gamma x^2}\)
 
 This distribution is called the Rayleigh distribution, and compared with the Gaussian distribution it has an extra \(x\) factor.
 

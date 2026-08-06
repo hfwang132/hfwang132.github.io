@@ -118,7 +118,7 @@ Let \((X,\mathcal{F})\) and \((Y,\mathcal{S})\) be topological spaces, and let \
 >   
 > **Example 1.3**  
 >   
-> Under the topology in Example 1.2, the map \(f:\mathbb{R}\rightarrow\mathbb{R},\,f(x)=\begin{cases}1, & x>0 \\ 0, & x=0\\ -1, & x<0\end{cases}\) is not continuous, because the inverse image of the open set \(\{x\in \mathbb{R}\mid -1<x<1\}\) under \(f\) is \(\{0\}\), which is not an open set.
+> Under the topology in Example 1.2, the map \(f:\mathbb{R}\rightarrow\mathbb{R},\,f(x)=\begin{cases}1, & x\gt 0 \\ 0, & x=0\\ -1, & x\lt 0\end{cases}\) is not continuous, because the inverse image of the open set \(\{x\in \mathbb{R}\mid -1\lt x\lt 1\}\) under \(f\) is \(\{0\}\), which is not an open set.
 
 ### 1.4 Homeomorphism  
 
@@ -652,7 +652,7 @@ An **inner product** is a **Hermitian form** with the additional condition of **
 
 > **Remark**   
 >   
-> Positive definiteness means that for any \(v,w\in V\) with \(v,w\neq 0\), we have \(\langle u|v\rangle > 0\).   
+> Positive definiteness means that for any \(v,w\in V\) with \(v,w\neq 0\), we have \(\langle u|v\rangle \gt 0\).   
 >   
 > From the matrix perspective, this means that every eigenvalue of the matrix is greater than zero.   
 >   
@@ -871,9 +871,9 @@ Let us use an example to see exactly how an n-form acts on n tangent vectors.
 
 More specifically, a general differential m-form can be written as:
 
-\[\omega = \sum_If_I\,\mathrm{d}x^I=\sum_{i_1<\cdots<i_m}f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m}\]
+\[\omega = \sum_If_I\,\mathrm{d}x^I=\sum_{i_1\lt \cdots\lt i_m}f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m}\]
 
-Here, \(I\) denotes a sequence of indices \((i_1,i_2,\cdots,i_m),\,  i_1<i_2<\cdots<i_m\), and \(\mathrm{d}x^I\) denotes \(\mathrm{d}x^{i_1}\wedge\mathrm{d}x^{i_2}\wedge\cdots\wedge\mathrm{d}x^{i_m}\).
+Here, \(I\) denotes a sequence of indices \((i_1,i_2,\cdots,i_m),\,  i_1\lt i_2\lt \cdots\lt i_m\), and \(\mathrm{d}x^I\) denotes \(\mathrm{d}x^{i_1}\wedge\mathrm{d}x^{i_2}\wedge\cdots\wedge\mathrm{d}x^{i_m}\).
 
 > For example, for \(\omega=2\,\mathrm{d}x^1\wedge\mathrm{d}x^2\wedge\mathrm{d}x^4+4\,\mathrm{d}x^2\wedge\mathrm{d}x^3\wedge\mathrm{d}x^5\), we have \(I=(1,2,4),(2,3,5)\) and \(f_{(1,2,4)}=2, f_{(2,3,5)}=4\).  
 >   
@@ -1570,13 +1570,13 @@ If we regard electrodynamics as Maxwell's equations + solving them + application
 >   
 >  \( \left\{\begin{aligned} g_{tt} &= - (c^2 - \frac{2GM}{r}) \\ g_{rr} &= \frac{1}{1-\frac{2GM}{rc^2}} \\ g_{\theta\theta} &= r^2 \\ g_{\varphi\varphi} &= r^2 \sin^2 \theta \\ g_{\text{otherwise}} &= 0 \end{aligned}\right. \)   
 >   
->  It was the first nontrivial exact solution to the Einstein field equations. Note that \(r=\frac{2GM}{c^2}\) is a singularity of the metric. Of course, since the Schwarzschild metric applies only to the spacetime outside the spherical body, this is not a problem when the radius of the body is \(R>\frac{2GM}{c^2}\).  
+>  It was the first nontrivial exact solution to the Einstein field equations. Note that \(r=\frac{2GM}{c^2}\) is a singularity of the metric. Of course, since the Schwarzschild metric applies only to the spacetime outside the spherical body, this is not a problem when the radius of the body is \(R\gt \frac{2GM}{c^2}\).  
 >   
->  However, if the radius of the body is \(R<\frac{2GM}{c^2}\), an object outside the body may pass through \(r=\frac{2GM}{c^2}\).  
+>  However, if the radius of the body is \(R\lt \frac{2GM}{c^2}\), an object outside the body may pass through \(r=\frac{2GM}{c^2}\).  
 >   
->  Moreover, when \(r<\frac{2GM}{c^2}\), \(g_{rr}\) changes from positive to negative, and \(g_{tt}\) changes from negative to positive. In other words, \(r\) becomes a timelike coordinate, meaning that, in a sense, the radial spatial dimension becomes a time dimension: falling toward the center becomes an unavoidable future.  
+>  Moreover, when \(r\lt \frac{2GM}{c^2}\), \(g_{rr}\) changes from positive to negative, and \(g_{tt}\) changes from negative to positive. In other words, \(r\) becomes a timelike coordinate, meaning that, in a sense, the radial spatial dimension becomes a time dimension: falling toward the center becomes an unavoidable future.  
 >   
-> Therefore, when \(R<\frac{2GM}{c^2}\), the spherical body collapses into a very small point (in the model of general relativity). This is the commonly known Schwarzschild black hole. The spherical surface at \(r=\frac{2GM}{c^2}\) is called the event horizon.  
+> Therefore, when \(R\lt \frac{2GM}{c^2}\), the spherical body collapses into a very small point (in the model of general relativity). This is the commonly known Schwarzschild black hole. The spherical surface at \(r=\frac{2GM}{c^2}\) is called the event horizon.  
 >   
 >  The derivation of the Schwarzschild solution is too lengthy to present here.
 
@@ -2016,13 +2016,13 @@ We now give an explicit formula for the integral of a differential form over an 
 
 As noted at the end of **Section 3.3**, we may write a differential form \(\omega\) as:
 
-\[ \begin{aligned} \omega = \sum_{i_1<\cdots<i_m} f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m} \end{aligned} \]
+\[ \begin{aligned} \omega = \sum_{i_1\lt \cdots\lt i_m} f_{(i_1,\cdots,i_m)}\mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_m} \end{aligned} \]
 
 > For definiteness, we may stipulate that \((i_1, \cdots, i_m)\) is an even permutation of \((1, \cdots, m)\).
 
 Then the integral of \(\omega\) over \(\sigma\) can be written explicitly as:
 
-\[ \begin{aligned} \int_\sigma \omega=\int_{[0,1]^m}\sum_{i_1<\cdots<i_m} f_{(i_1,\cdots,i_m)}|_{\phi( \mathbf{u})}\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}\mathrm{d}u^1\cdots\mathrm{d}u^m \end{aligned} \]
+\[ \begin{aligned} \int_\sigma \omega=\int_{[0,1]^m}\sum_{i_1\lt \cdots\lt i_m} f_{(i_1,\cdots,i_m)}|_{\phi( \mathbf{u})}\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}\mathrm{d}u^1\cdots\mathrm{d}u^m \end{aligned} \]
 
 where \((u^1,\cdots,u^m)\in[0,1]^m\); \(\frac{\partial(x^{i_1},\cdots,x^{i_m})}{\partial(u^1,\cdots,u^m)}\) is the Jacobian determinant:
 

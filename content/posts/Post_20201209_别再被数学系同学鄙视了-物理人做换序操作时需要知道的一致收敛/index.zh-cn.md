@@ -94,7 +94,7 @@ looks good
 这个定义对普通的函数列也适用，只需把 \(S_n(x)\) 换成函数列的一般项即可。
 
 > **例 1.1**  
-> 为了使读者看出，一致收敛比普通的逐点收敛要强，举一个简单的例子。设部分和函数（或函数列的一般项）是 \(S_n(x)=x^n\) ，显然，在区间 \([0,1]\) 上，它逐点收敛于这个函数 ：\[  S(x)=  \begin{cases}  0&0\le x<1\\  1&x=1  \end{cases}  \]   
+> 为了使读者看出，一致收敛比普通的逐点收敛要强，举一个简单的例子。设部分和函数（或函数列的一般项）是 \(S_n(x)=x^n\) ，显然，在区间 \([0,1]\) 上，它逐点收敛于这个函数 ：\[  S(x)=  \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}  \]   
 > 但是不论 \(n\) 多大，部分和函数 \(S_n(x)\) 总是能取到 \(0.5\) 这个值（根据部分和函数连续以及介值定理），换言之， \(\forall n\exists x_0(S_n(x_0)=0.5)\) 。这就使得控制上界成为了不可能的事情，总是有那么一些 \(x\) 你是管不住的。实际上，在这个例子中，不论 \(n\) 多大，误差的上确界（就是那个 \(\sup\) 符号）总是 \(1\) 。  
 > 而一致收敛则可以同时管住所有 \(f(x)\) ，让它们同时按照你想要的上界 \(\epsilon\) ，任意接近目标函数。
 
@@ -103,7 +103,7 @@ looks good
 > 假如我们想到了一个很蠢的点子，用 \(y=\mathrm{e}^{\alpha x}\,(\alpha\rightarrow0)\) 来逼近 \(y=1\)。  
 > 于是我们可以考虑函数列 \(\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}\) 。显然 \(\lim_{k\rightarrow \infty}\mathrm{e}^{\frac{1}{k}x}=1\) 对所有 \(x\) 都成立。  
 > 但是，只要 \(\frac{1}{k}\ne 0\) ， \(\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}\) 在 \(\mathbb{R}\) 上就是无界的。  
-> 假如你的老板给你定下了一个目标 \(\epsilon\) ，并命令你找一个 \(N\) ，使得当 \(k>N\) 时， 误差 \(\left|\mathrm{e}^{\frac{1}{k}x}-1\right|<\epsilon\) 对所有 \(x\) 成立，那么你可能要考虑辞职了，因为这显然是一个不可能完成的任务。不管你找多么大的 \(N\) ，一定会有更大的 \(x\) 导致计划破裂。假设对 \(\epsilon =1\) 的情况，你找到了满足要求的 \(N\) ，那么你的老板只需要令 \(x=2N\) ，就有 \(\left|\mathrm{e}^{\frac{1}{k}2N}-1\right|>\mathrm{e}-1>1\quad (N<k<2N)\) 。
+> 假如你的老板给你定下了一个目标 \(\epsilon\) ，并命令你找一个 \(N\) ，使得当 \(k\gt N\) 时， 误差 \(\left|\mathrm{e}^{\frac{1}{k}x}-1\right|\lt \epsilon\) 对所有 \(x\) 成立，那么你可能要考虑辞职了，因为这显然是一个不可能完成的任务。不管你找多么大的 \(N\) ，一定会有更大的 \(x\) 导致计划破裂。假设对 \(\epsilon =1\) 的情况，你找到了满足要求的 \(N\) ，那么你的老板只需要令 \(x=2N\) ，就有 \(\left|\mathrm{e}^{\frac{1}{k}2N}-1\right|\gt \mathrm{e}-1\gt 1\quad (N\lt k\lt 2N)\) 。
 
 ### 1.2 函数项级数：一致收敛与换序  
 
@@ -128,7 +128,7 @@ looks good
 > 另外，在定理 1.1(b) 中，如果原级数收敛，那么导函数构级数一致收敛加上导函数每项连续，可以推出原级数一致收敛。
 
 > **例 1.3**  
-> 回到之前的例子 \(S(x)=x^1+(x^2-x^1)+(x^3-x^2)+\cdots= \begin{cases}  0&0\le x<1\\  1&x=1  \end{cases}\) 。这个级数的每项都连续，可是和却不连续，所以它不是一致收敛的。
+> 回到之前的例子 \(S(x)=x^1+(x^2-x^1)+(x^3-x^2)+\cdots= \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}\) 。这个级数的每项都连续，可是和却不连续，所以它不是一致收敛的。
 
 实际上，定理 1.1(b) 和 1.1(c) 是如下定理的直接推论：
 
@@ -163,7 +163,7 @@ looks good
 
 > **例 4**  
 > 观察 \(\int_{0}^{+\infty}\mathrm{e}^{-x}\mathrm{d}x=1\) ，\(\int_{0}^{+\infty}\mathrm{e}^{-2x}\mathrm{d}x=\frac{1}{2}\) ，\(\int_{0}^{+\infty}\mathrm{e}^{-3x}\mathrm{d}x=\frac{1}{3}\)，...  
-> 可见 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x\) 对 \(k\) 应该有一个函数关系。实际上这个关系就是 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k>0)\) ，这是很容易证明的。  
+> 可见 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x\) 对 \(k\) 应该有一个函数关系。实际上这个关系就是 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)\) ，这是很容易证明的。  
 > 这里的 \(k\) 就是含参变量积分的“参变量”。
 
 ### 2.2 含参变量积分：换序  
@@ -174,9 +174,9 @@ looks good
 
 > **例 5**  
 >   
-> 对 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k>0)\) 两边求导得 \(\frac{\mathrm{d}}{\mathrm{d}k}\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k>0)\)
+> 对 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)\) 两边求导得 \(\frac{\mathrm{d}}{\mathrm{d}k}\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)\)
 
-不难发现，将求导放到积分号里面去，结果竟然也正确：\(\int_{0}^{+\infty}\frac{\partial}{\partial k}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k>0)\)
+不难发现，将求导放到积分号里面去，结果竟然也正确：\(\int_{0}^{+\infty}\frac{\partial}{\partial k}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)\)
 
 这种操作什么时候是允许的呢？下面的定理回答了这个问题：
 
@@ -196,7 +196,7 @@ looks good
 
 所谓广义积分，简单理解就是指在无界区间或者有界开区间上的积分。它们有可能不收敛！
 
-无界区间上的广义积分\(\int_{a}^{+\infty}f(x)\mathrm{d}x\) 的收敛性定义为，对于任意 \(\epsilon>0\) ，存在 \(N\) ，使得当 \(M>N\) 时， \(\left|\int_{M}^{+\infty}f(x)\mathrm{d}x\right|<\epsilon\) 。
+无界区间上的广义积分\(\int_{a}^{+\infty}f(x)\mathrm{d}x\) 的收敛性定义为，对于任意 \(\epsilon\gt 0\) ，存在 \(N\) ，使得当 \(M\gt N\) 时， \(\left|\int_{M}^{+\infty}f(x)\mathrm{d}x\right|\lt \epsilon\) 。
 
 ### 2.4 含参变量广义积分：一致收敛与换序  
 
@@ -204,7 +204,7 @@ looks good
 
 > **定义二（含参广义积分的一致收敛）**  
 >   
-> 若对于任意 \(\epsilon>0\) ，存在 \(N(\epsilon)\) ，使得当 \(M>N(\epsilon)\) 时， \(\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|<\epsilon\) ，则称广义积分 \(\int_{a}^{+\infty}f(x,y)\mathrm{d}x\) 一致收敛。  
+> 若对于任意 \(\epsilon\gt 0\) ，存在 \(N(\epsilon)\) ，使得当 \(M\gt N(\epsilon)\) 时， \(\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|\lt \epsilon\) ，则称广义积分 \(\int_{a}^{+\infty}f(x,y)\mathrm{d}x\) 一致收敛。  
 >   
 > （或 \(\lim_{M\rightarrow \infty} \sup_{y\in \beta}\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|=0\)）
 

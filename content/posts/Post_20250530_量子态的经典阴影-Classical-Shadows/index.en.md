@@ -83,9 +83,9 @@ We first introduce Hoeffding's inequality, which will be used later:
 
 > **Hoeffding's inequality**  
 > Given \(N\) independent random variables \(X_i,\,i=1,...,N\), with respective ranges \([a_i,b_i]\), their sum \(S=\sum_iX_i\) satisfies  
-> \(\begin{aligned} P(|S-\mathbb{E}(S)| \ge \epsilon) < 2\exp \left[-\frac{2 N^2 \epsilon^2}{\sum_{i}(b_i-a_i)^2}  \right] \end{aligned}\)  
+> \(\begin{aligned} P(|S-\mathbb{E}(S)| \ge \epsilon) \lt 2\exp \left[-\frac{2 N^2 \epsilon^2}{\sum_{i}(b_i-a_i)^2}  \right] \end{aligned}\)  
 > If the \(X_1,...,X_N\) have the same distribution, range \([a,b]\), and mean \(Y = S/N=\sum_iX_i /N\), then  
->  \(\begin{aligned} P(|Y-\mathbb{E}(Y)| \ge \epsilon) < 2\exp \left[ -\frac{2 N \epsilon^2}{(b-a)^2} \right] \end{aligned}\)
+>  \(\begin{aligned} P(|Y-\mathbb{E}(Y)| \ge \epsilon) \lt 2\exp \left[ -\frac{2 N \epsilon^2}{(b-a)^2} \right] \end{aligned}\)
 
 Next, we apply Hoeffding's inequality.
 
@@ -93,13 +93,13 @@ Next, we apply Hoeffding's inequality.
 >   
 > Applying Hoeffding's inequality to \(\hat{c}_i\), and noting that \(\hat{c}_i\) takes values \(\pm1\), gives:  
 >   
-> \(P[|\hat{c}_i-c_i| > \epsilon_i] \le 2 \exp \left[-N\epsilon_i^2/2\right]\)  
+> \(P[|\hat{c}_i-c_i| \gt \epsilon_i] \le 2 \exp \left[-N\epsilon_i^2/2\right]\)  
 >   
 > where \(N\) is the number of repeated measurements of \(P_i\).  
 >   
-> Thus, by the union bound, among the \((4^n-1)\) \(c_i\), the probability that any one \(|\hat{c}_i-c_i| > \epsilon_i\) is:  
+> Thus, by the union bound, among the \((4^n-1)\) \(c_i\), the probability that any one \(|\hat{c}_i-c_i| \gt \epsilon_i\) is:  
 >   
-> \(P[|\hat{c}_i-c_i| > \epsilon_i, \,\exists \, i] \le (4^n - 1) \cdot 2 \exp \left[-N\delta^2/2\right]\)  
+> \(P[|\hat{c}_i-c_i| \gt \epsilon_i, \,\exists \, i] \le (4^n - 1) \cdot 2 \exp \left[-N\delta^2/2\right]\)  
 >   
 > Now, we want all \(|\hat{c}_i-c_i|\) to be smaller than \(\epsilon_1\) with high probability. That is, the probability of an error greater than \(\epsilon_1\) should be a small number \(\delta \ll 1\). Setting the right-hand side above equal to \(\delta\) yields:  
 >   
@@ -121,7 +121,7 @@ Note! Here, \(\epsilon_1\) is only the measurement error of a single Pauli coeff
 >   
 > and require its trace norm to be less than \(\epsilon\):  
 >   
-> \(||\Delta||_1<\epsilon\)  
+> \(||\Delta||_1\lt \epsilon\)  
 >   
 > Note that the Hilbert-Schmidt norm is easier to calculate: \(||\Delta||_2^2 := \operatorname{tr}[A^\dagger A] = \frac{1}{2^n}\sum_i |\hat{c}_i-c_i|^2\), because  
 > \(\operatorname{tr}[P_i^\dagger P_j]=\operatorname{tr}[P_iP_j]=\delta_{ij}\).  
@@ -409,17 +409,17 @@ In Section II, we used Hoeffding's inequality to obtain a loose upper bound on s
 
 > **Median-of-means estimation**  
 > Given \(N\) independent identically distributed random variables \(X_i,\,i=1,...,N\), with expectation \(\mu\) and variance \(\sigma^2\). Divide them into \(k\) groups, each containing \(m=N/k\) random variables. Then the variance of the mean \(\hat{\mu}_j = \sum_{i=j}^{j+m-1} X_i\) of one group is \(\sigma^2/m\). By **Chebyshev's inequality**,  
-> \(\begin{aligned} P(|\hat{\mu}_j - \mu| > \epsilon ) \le \frac{\sigma^2}{m \epsilon^2} \end{aligned}\)  
+> \(\begin{aligned} P(|\hat{\mu}_j - \mu| \gt \epsilon ) \le \frac{\sigma^2}{m \epsilon^2} \end{aligned}\)  
 > Let the right-hand side equal \(p\). Then \(m= \sigma^2/(p\epsilon^2)\).  
 > Define the random variable:  
-> \(Z_j = \begin{cases} 1,& |\hat{\mu}_j - \mu| > \epsilon \\ 0,& |\hat{\mu}_j - \mu| \le \epsilon \end{cases}\)  
-> Since we ultimately take the median of \(\hat{\mu}_1,...,\hat{\mu}_k\), we want the probability \(P\left(\sum_{j=1}^k Z_j > \frac{k}{2}\right)\) that more than half of the \(\hat{\mu}_j\) have an error greater than \(\epsilon\) to be sufficiently small.  
+> \(Z_j = \begin{cases} 1,& |\hat{\mu}_j - \mu| \gt \epsilon \\ 0,& |\hat{\mu}_j - \mu| \le \epsilon \end{cases}\)  
+> Since we ultimately take the median of \(\hat{\mu}_1,...,\hat{\mu}_k\), we want the probability \(P\left(\sum_{j=1}^k Z_j \gt \frac{k}{2}\right)\) that more than half of the \(\hat{\mu}_j\) have an error greater than \(\epsilon\) to be sufficiently small.  
 > Let \(S=\sum_{j=1}^k Z_j\). By **Hoeffding's inequality**,  
-> \(P(S-\mathbb{E}(S)>t)\le \exp\left(-\frac{2t^2}{k}\right)\)  
+> \(P(S-\mathbb{E}(S)\gt t)\le \exp\left(-\frac{2t^2}{k}\right)\)  
 > where \(\mathbb{E}(S) \le kp\). Let \(t = k/2 - kp\). Then:  
-> \(P\left(S>\frac{k}{2}\right) \le P(S-\mathbb{E}(S)>t)\le \exp\left(-2k\left(\frac{1}{2}-p\right)^2\right)\)  
+> \(P\left(S\gt \frac{k}{2}\right) \le P(S-\mathbb{E}(S)\gt t)\le \exp\left(-2k\left(\frac{1}{2}-p\right)^2\right)\)  
 > Without loss of generality, let \(p = 1/4\). Then  
-> \(P\left(\sum_{j=1}^k Z_j > \frac{k}{2}\right) \le \exp\left( - \frac{k}{8}\right)\)  
+> \(P\left(\sum_{j=1}^k Z_j \gt \frac{k}{2}\right) \le \exp\left( - \frac{k}{8}\right)\)  
 > Setting the right-hand side equal to \(\delta\) gives \(k =8 \log (1/\delta)\).  
 > Since \(m=\sigma^2/(p\epsilon^2) =4\sigma^2/\epsilon^2\),  
 > \(\boxed{ N = km =32 \sigma^2 \log(1/\delta)/\epsilon^2 }\)  
@@ -433,11 +433,11 @@ Now we want to simultaneously estimate \(M\) \(\hat{o}_i\), namely \(\hat{o}_1,.
 
 When applying Hoeffding's inequality:
 
-\[P(S-\mathbb{E}(S)>t)\le \exp\left(-\frac{2t^2}{k}\right)\]
+\[P(S-\mathbb{E}(S)\gt t)\le \exp\left(-\frac{2t^2}{k}\right)\]
 
 We can select \(M\) \(S_i\), namely \(S_1, ..., S_M\), and take a union bound:
 
-\[P(S_i-\mathbb{E}(S_i)>t,\ \exists S_i \in\{S_1,...,S_M\})\le M\exp\left(-\frac{2t^2}{k}\right)\]
+\[P(S_i-\mathbb{E}(S_i)\gt t,\ \exists S_i \in\{S_1,...,S_M\})\le M\exp\left(-\frac{2t^2}{k}\right)\]
 
 The key to logarithmic complexity lies here: when taking the union bound, \(M\) appears outside the exponent. Therefore, when solving in reverse for \(N\), \(M\) appears inside the logarithm.
 

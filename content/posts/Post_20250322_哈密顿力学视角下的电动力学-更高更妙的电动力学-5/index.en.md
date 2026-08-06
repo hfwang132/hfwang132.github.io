@@ -139,7 +139,7 @@ The field variables are \(\psi, \bar{\psi}\), and their canonical momenta are:
 
 \[\pi_\psi = \frac{\partial\mathcal{L}}{\partial (\partial_0\psi)} = \mathrm{i}\bar\psi \gamma^0 = \mathrm{i} \psi^\dagger\]
 
-\(\pi_\bar\psi = \frac{\partial\mathcal{L}}{\partial (\partial_0\bar\psi)} = 0\) (Primary constraint)
+\(\pi_{\bar\psi} = \frac{\partial\mathcal{L}}{\partial (\partial_0\bar\psi)} = 0\) (Primary constraint)
 
 Legendre transformation:
 

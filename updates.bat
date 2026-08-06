@@ -1,10 +1,17 @@
 @echo off
 setlocal
 
+set "PYTHON_EXE=python"
+if exist ".venv\Scripts\python.exe" set "PYTHON_EXE=.venv\Scripts\python.exe"
+
 if not "%~1"=="" goto import_zhihu
 
 echo Validating the production site...
 hugo --minify --renderToMemory
+if errorlevel 1 exit /b %errorlevel%
+
+echo Auditing rendered mathematical formulas...
+"%PYTHON_EXE%" scripts\audit_math.py
 if errorlevel 1 exit /b %errorlevel%
 
 echo Staging the current repository changes...
@@ -27,10 +34,5 @@ git push
 exit /b %errorlevel%
 
 :import_zhihu
-if exist ".venv\Scripts\python.exe" goto import_with_venv
-python scripts\import_zhihu.py %*
-exit /b %errorlevel%
-
-:import_with_venv
-".venv\Scripts\python.exe" scripts\import_zhihu.py %*
+"%PYTHON_EXE%" scripts\import_zhihu.py %*
 exit /b %errorlevel%

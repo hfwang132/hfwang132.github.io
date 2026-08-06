@@ -54,7 +54,7 @@ author: "Haifei"
 >   
 > **有效性**：怎样刻画有效性？后面我们会介绍，估计量的方差有 CR 下界：\((\Delta \hat{\theta})^2 \ge \frac{1}{F(\theta)}\)，其中 \(F(\theta)\) 叫做 Fisher 信息。有效性可以用 \(\frac{1}{F(\theta)(\Delta \hat{\theta})^2} \le 1 \) 来刻画。当 \(\frac{1}{F(\theta)(\Delta \hat{\theta})^2} = 1 \) 时，我们称该统计量是有效的。  
 >   
-> **一致性**：一致性要求 \(\lim_{n\rightarrow \infty} P(|\hat{\theta} - \theta|>\epsilon) = 0\) 对于任意正数 \(\epsilon > 0\) 成立。其中 \(n\) 是样本个数。这也叫做依概率收敛 \(\operatorname{plim}_{n\rightarrow \infty} \hat{\theta} = \theta\) 。
+> **一致性**：一致性要求 \(\lim_{n\rightarrow \infty} P(|\hat{\theta} - \theta|\gt \epsilon) = 0\) 对于任意正数 \(\epsilon \gt 0\) 成立。其中 \(n\) 是样本个数。这也叫做依概率收敛 \(\operatorname{plim}_{n\rightarrow \infty} \hat{\theta} = \theta\) 。
 
 如何处理参数估计问题？
 
@@ -268,13 +268,13 @@ Fisher 信息的意义是什么？
 
 此时量子 Fisher 信息为：
 
-\[\begin{aligned} F(\theta) &= \left\langle\left(\sum_k \hat{Z}_k\right)^2\right\rangle -  \left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  &= N+ \left\langle 2\sum_{k > l} \hat{Z}_k \hat{Z}_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
+\[\begin{aligned} F(\theta) &= \left\langle\left(\sum_k \hat{Z}_k\right)^2\right\rangle -  \left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  &= N+ \left\langle 2\sum_{k \gt l} \hat{Z}_k \hat{Z}_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
 
 如果想要最大化量子 Fisher 信息，就要令 \(\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2\) 为零，并且令 \(\left\langle \sum_{k \ne l} Z_k Z_l  \right\rangle\) 最大。
 
 \(\left\langle \sum_{k \ne l} Z_k Z_l  \right\rangle\) 的最大值是多少？ \(\left\langle Z_k Z_l  \right\rangle\) 叫做两体关联函数（two-body correlator），表示两个 qubit 之间的泡利算符的关联，其取值范围是 -1 到 1，最大值是 1，即两个 qubit 的 Z 分量总是同向；最小值为 1；即两个 qubit 的 Z 分量总是反向。因此 \(\left\langle \sum_{k \ne l} Z_k Z_l  \right\rangle\) 的最大值是 \(N(N-1)/2\) 。代入 Fisher 信息得：
 
-\[\begin{aligned} F(\theta) &=  N+ \left\langle 2\sum_{k > l} Z_k Z_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\ &\le N+N(N-1)-0 \\ &=N^2 \end{aligned}\]
+\[\begin{aligned} F(\theta) &=  N+ \left\langle 2\sum_{k \gt l} Z_k Z_l  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\ &\le N+N(N-1)-0 \\ &=N^2 \end{aligned}\]
 
 可见在海森堡极限下，量子 Fisher 信息等于粒子数的平方，测量误差反比于粒子数 \(\Delta \theta = \frac{1}{N}\) 。所以人们通常把海森堡极限作为“误差反比于粒子数”的同义词。
 
@@ -320,7 +320,7 @@ Fisher 信息的意义是什么？
 
 > \(\Delta N\) 还能正比于 \(\bar{n}\) 的更高次方吗？例如， \(\Delta N\) 可以正比于 \(\bar{n}^2\) 吗？量子统计告诉我们不可以。 \(\Delta N\) 最高只能正比于 \(\bar{n}\) 。  
 >   
-> 这是因为 \((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\) ，其中 \(g^{(2)}\) 为二阶关联函数，它在 \(t=0\) 处的取值是一个定值。可见，当 \(g^{(2)}(0) > 1 \) ，也就是使用聚束光（bunched light）时，我们有\(\Delta N  \propto \langle \hat{N}\rangle = \bar{n}\) 。然而，相干态的 \(g^{(2)}(0)\) 正好等于 1，所以只有 \(\Delta N  \propto \sqrt{\bar{n}}\) 。  
+> 这是因为 \((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\) ，其中 \(g^{(2)}\) 为二阶关联函数，它在 \(t=0\) 处的取值是一个定值。可见，当 \(g^{(2)}(0) \gt 1 \) ，也就是使用聚束光（bunched light）时，我们有\(\Delta N  \propto \langle \hat{N}\rangle = \bar{n}\) 。然而，相干态的 \(g^{(2)}(0)\) 正好等于 1，所以只有 \(\Delta N  \propto \sqrt{\bar{n}}\) 。  
 >   
 > 有趣的是，热辐射的 \(g^{(2)}(0)=2\) ，也就是说，混乱的热辐射光比相干的激光更有利于相位估计（很反直觉吧）[[1]](#ref\_1)！  
 >   
@@ -362,7 +362,7 @@ NOON 态是一种粒子数纠缠态 \(|\Psi_0\rangle = \frac{|N\rangle \otimes |
 
 在相空间中，相干态是一个标准差为 1 的高斯函数。而压缩态其实就是将相干态在某一个 quadrature 上“压扁”了，从一个圆形变成了一个椭圆形。压缩态仍然满足不确定性原理，只是在一个方向上的不确定性较大，在另一个方向上的不确定性较小，它们的乘积是一个定值（也可以理解为椭圆的面积不变）。我们可以通过如上图所示的 Phase squeezing（相位压缩）来提高 \(\Delta N\) 从而降低 \(\Delta \theta\) 。反之，如果我们想要降低 \(\Delta N\) ，我们可以通过提高 \(\Delta \theta\) 来实现，这就是 Amplitude squeezing（振幅压缩）。
 
-振幅压缩态的 \(g^{(2)}(0)<1\)，而相位压缩态的 \(g^{(2)}(0) > 1\) 。回想一下，我们有\((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\) 。可见，对于压缩态， \(\Delta N \propto \bar{n}\) ， \(\Delta \theta \propto \frac{1}{\bar{n}}\) ，达到了海森堡极限。压缩强度越大， \(g^{(2)}(0)\) 就越大， \(\Delta \theta \sim \frac{1}{k\bar{n}}\) 的比例系数 \(k\) 就越高。
+振幅压缩态的 \(g^{(2)}(0)\lt 1\)，而相位压缩态的 \(g^{(2)}(0) \gt 1\) 。回想一下，我们有\((\Delta N)^2 = (g^{(2)}(0)-1)\langle \hat{N}\rangle^2 + \langle \hat{N}\rangle\) 。可见，对于压缩态， \(\Delta N \propto \bar{n}\) ， \(\Delta \theta \propto \frac{1}{\bar{n}}\) ，达到了海森堡极限。压缩强度越大， \(g^{(2)}(0)\) 就越大， \(\Delta \theta \sim \frac{1}{k\bar{n}}\) 的比例系数 \(k\) 就越高。
 
 与脆弱的 NOON 态相比，压缩态更加实用一些。在文章开头我们就介绍过，著名的探测引力波的 LIGO 就使用了压缩态。另外，在样品损伤阈值较低的时候（例如生物样品），我们不能通过提高激光功率来降低散粒噪声，此时人们也使用压缩态来在不提升功率的前提下进一步提高成像精度。
 
@@ -442,7 +442,7 @@ Caves 想到了一种不用提高激光功率的办法：与其提高激光功�
 
 二能级系统：
 
-\[\begin{aligned} F(\theta) &=  N+ 2\left\langle \underbrace{\sum_{k > l} \hat{Z}_k \hat{Z}_l}_{ \frac{N(N-1)}{2} \text{ terms}}  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
+\[\begin{aligned} F(\theta) &=  N+ 2\left\langle \underbrace{\sum_{k \gt l} \hat{Z}_k \hat{Z}_l}_{ \frac{N(N-1)}{2} \text{ terms}}  \right\rangle -\left\langle\left(\sum_k \hat{Z}_k\right)\right\rangle ^2 \\  \end{aligned}\]
 
 谐振子系统：
 

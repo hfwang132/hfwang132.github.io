@@ -131,11 +131,11 @@ n 个 qubit 的密度算符有 \(4^n -1\) 个自由度，此时 Bloch vector 的
 
 选取什么样的测量算符才是最好的呢？
 
-一般在偏振编码的光子 qubit 中，我们就简单地使用 H，V，D，A，R，L 这六个投影测量及其组合（它们是很好实现的，只需要使用波片即可）。那么对于 n 个 qubit 而言，此时我们就拥有 \(6^n>4^n\) 个投影算符，就够用了。
+一般在偏振编码的光子 qubit 中，我们就简单地使用 H，V，D，A，R，L 这六个投影测量及其组合（它们是很好实现的，只需要使用波片即可）。那么对于 n 个 qubit 而言，此时我们就拥有 \(6^n\gt 4^n\) 个投影算符，就够用了。
 
 由于 \((|H\rangle\langle H|, |V\rangle\langle V|)\) 构成一个 POVM， \((|D\rangle\langle D|, |A\rangle\langle A|)\) 构成一个 POVM， \((|R\rangle\langle R|, |L\rangle\langle L|)\) 构成一个 POVM，也就是说 6 个投影测量对应 3 个 POVM，所以我们需要 \(3^n\) 个 POVM，实验上就是 \(3^n\) 个 measurement settings（所谓 measurement settings 就是波片的角度）。
 
-但是问题来了，还有没有更好的办法可以减少 POVM 的数量，从而减少 tomography 所需的时间？毕竟 \(6^n>4^n\) 是冗余的。
+但是问题来了，还有没有更好的办法可以减少 POVM 的数量，从而减少 tomography 所需的时间？毕竟 \(6^n\gt 4^n\) 是冗余的。
 
 从这里开始可以说算是学术界的前沿问题了，可以宣传我们组的一些工作。以后有空再写吧，哈哈哈。
 

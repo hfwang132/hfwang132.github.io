@@ -340,6 +340,22 @@ LaTeX line breaks therefore remain `\\`. The legacy whole-file MathJax
 replacement and undo scripts have been removed. Historical posts retain their
 existing `$ ... $` syntax for backward compatibility.
 
+Use `\lt` and `\gt` instead of literal `<` and `>` inside native passthrough
+math. In particular, a literal `<` can be interpreted as the beginning of an
+HTML tag before KaTeX receives the formula. The importer normalizes these
+relations automatically.
+
+The production math audit builds the site, extracts every formula from the
+rendered HTML, and parses it with the same bundled KaTeX version used by the
+theme:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\audit_math.py
+```
+
+`updates.bat` and `updates.sh` run this audit before staging, committing, or
+pushing any changes.
+
 ## Repository layout
 
 - `content/`: posts, CV, publications, and other source content;
@@ -347,6 +363,8 @@ existing `$ ... $` syntax for backward compatibility.
 - `zhihu-download/`: the third-party Zhihu downloader Git submodule;
 - `scripts/import_zhihu.py`: import orchestration, math and image handling,
   validation, and optional publishing;
+- `scripts/audit_math.py`: rendered-HTML delimiter and KaTeX validation for all
+  website formulas;
 - `scripts/translate_posts.py`: protected Markdown translation through the
   OpenAI Responses and Batch APIs;
 - `scripts/migrate_post_names.py`: post bundle naming migration with old URL
