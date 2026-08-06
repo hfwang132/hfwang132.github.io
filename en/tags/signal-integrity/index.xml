@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Signal Integrity on Haifei's Home</title><link>https://haifei.pro/en/tags/signal-integrity/</link><description>Recent content in Signal Integrity on Haifei's Home</description><generator>Hugo</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor><webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 Oct 2025 16:46:08 +0800</lastBuildDate><atom:link href="https://haifei.pro/en/tags/signal-integrity/index.xml" rel="self" type="application/rss+xml"/><item><title>Impedance Matching / Signal Integrity Crash Course (Lab Edition)</title><link>https://haifei.pro/en/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</link><pubDate>Sat, 25 Oct 2025 16:46:08 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author><guid>https://haifei.pro/en/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</guid><description>&lt;h2 id="i-introduction"&gt;I. Introduction&lt;/h2&gt;
+&lt;p&gt;Recently, I found that many colleagues are not very familiar with impedance matching. They only know that “the impedance of (commonly used SMA/BNC) transmission lines is 50 ohms,” but do not know what this really means. The following situations often occur:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A 50-ohm signal source connected to a scope with a 1M-ohm input:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Huh, why did the signal become twice as large?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;A high-frequency square wave connected to a scope with a 1M-ohm input:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Huh, why is the overshoot so severe? Is there something wrong with this signal source?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;The output signal of an MCU / DAC / FPGA connected directly, without a driver, to a 50-ohm load / 50-ohm oscilloscope input:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Huh, why did a signal that was supposed to be 3V become only 30 mV?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of the above result from unfamiliarity with impedance matching and transmission-line theory.&lt;/p&gt;</description></item></channel></rss>

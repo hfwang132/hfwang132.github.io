@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mathematical Analysis on Haifei's Home</title><link>https://haifei.pro/en/tags/mathematical-analysis/</link><description>Recent content in Mathematical Analysis on Haifei's Home</description><generator>Hugo</generator><language>en</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor><webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 09 Dec 2020 00:22:44 +0800</lastBuildDate><atom:link href="https://haifei.pro/en/tags/mathematical-analysis/index.xml" rel="self" type="application/rss+xml"/><item><title>Stop Being Looked Down Upon by Math Majors! What Physicists Need to Know About Uniform Convergence When Interchanging Operations</title><link>https://haifei.pro/en/post_20201209_%E5%88%AB%E5%86%8D%E8%A2%AB%E6%95%B0%E5%AD%A6%E7%B3%BB%E5%90%8C%E5%AD%A6%E9%84%99%E8%A7%86%E4%BA%86-%E7%89%A9%E7%90%86%E4%BA%BA%E5%81%9A%E6%8D%A2%E5%BA%8F%E6%93%8D%E4%BD%9C%E6%97%B6%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B/</link><pubDate>Wed, 09 Dec 2020 00:22:44 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author><guid>https://haifei.pro/en/post_20201209_%E5%88%AB%E5%86%8D%E8%A2%AB%E6%95%B0%E5%AD%A6%E7%B3%BB%E5%90%8C%E5%AD%A6%E9%84%99%E8%A7%86%E4%BA%86-%E7%89%A9%E7%90%86%E4%BA%BA%E5%81%9A%E6%8D%A2%E5%BA%8F%E6%93%8D%E4%BD%9C%E6%97%B6%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B/</guid><description>&lt;h2 id="preface"&gt;Preface&lt;/h2&gt;
+&lt;p&gt;Whenever physicists perform operations such as differentiating under the integral sign or interchanging the order of integration, the mathematicians watching can no longer sit still:&lt;/p&gt;
+&lt;p&gt;“Does your improper integral/series converge uniformly?”&lt;/p&gt;
+&lt;p&gt;The physicist replies:&lt;/p&gt;
+&lt;p&gt;“What is uniform convergence? We have always done it this way.”&lt;/p&gt;
+&lt;p&gt;Or:&lt;/p&gt;
+&lt;p&gt;“Assume that this function has sufficiently nice properties.”&lt;/p&gt;
+&lt;p&gt;Or, even more outrageously:&lt;/p&gt;
+&lt;p&gt;“Assume that this function looks rather pretty.”&lt;/p&gt;
+&lt;figure class="post-figure" style="--post-figure-width: 80%;"&gt;&lt;img
+ src="https://haifei.pro/post_20201209_%E5%88%AB%E5%86%8D%E8%A2%AB%E6%95%B0%E5%AD%A6%E7%B3%BB%E5%90%8C%E5%AD%A6%E9%84%99%E8%A7%86%E4%BA%86-%E7%89%A9%E7%90%86%E4%BA%BA%E5%81%9A%E6%8D%A2%E5%BA%8F%E6%93%8D%E4%BD%9C%E6%97%B6%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E8%87%B4%E6%94%B6%E6%95%9B/images/v2-6c22ef6c5999b623aa4d9488888fba44_r.jpg"
+ loading="lazy"/&gt;&lt;/figure&gt;
+
+&lt;p&gt;looks good&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;</description></item></channel></rss>

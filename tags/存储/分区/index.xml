@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>存储/分区 on Haifei's Home</title><link>https://haifei.pro/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/</link><description>Recent content in 存储/分区 on Haifei's Home</description><generator>Hugo</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor><webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Jun 2023 22:59:29 +0800</lastBuildDate><atom:link href="https://haifei.pro/tags/%E5%AD%98%E5%82%A8/%E5%88%86%E5%8C%BA/index.xml" rel="self" type="application/rss+xml"/><item><title>给 Linux 增加 swapfile</title><link>https://haifei.pro/post_20230612_%E7%BB%99-linux-%E5%A2%9E%E5%8A%A0-swapfile/</link><pubDate>Mon, 12 Jun 2023 22:59:29 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author><guid>https://haifei.pro/post_20230612_%E7%BB%99-linux-%E5%A2%9E%E5%8A%A0-swapfile/</guid><description>&lt;p&gt;Xilinx 的工具链也太占内存了，有时候会导致系统死机。。毕竟我这个小破本才 8G 内存。没办法，只能加虚拟内存了。&lt;/p&gt;
+&lt;p&gt;增加了 swapfile 之后就好很多了：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo swapoff /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo dd &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/dev/zero &lt;span class="nv"&gt;of&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/swapfile &lt;span class="nv"&gt;bs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1M &lt;span class="nv"&gt;count&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;16384&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo mkswap /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo swapon /swapfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>在 Linux 中给 SD 卡分区并创建文件系统</title><link>https://haifei.pro/post_20230612_%E5%9C%A8-linux-%E4%B8%AD%E7%BB%99-sd-%E5%8D%A1%E5%88%86%E5%8C%BA%E5%B9%B6%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link><pubDate>Mon, 12 Jun 2023 22:43:39 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author><guid>https://haifei.pro/post_20230612_%E5%9C%A8-linux-%E4%B8%AD%E7%BB%99-sd-%E5%8D%A1%E5%88%86%E5%8C%BA%E5%B9%B6%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid><description>&lt;p&gt;为了在 Linux 中给 SD 卡分区和格式化，先将 SD 卡接入 PC，然后在 bash 命令行使用 &lt;code&gt;fdisk&lt;/code&gt; 给 SD 卡分区，最后使用 &lt;code&gt;mkfs&lt;/code&gt; 给 SD 卡创建文件系统（即格式化）。&lt;/p&gt;
+&lt;p&gt;主要命令如下：&lt;/p&gt;
+&lt;p&gt;首先，使用 &lt;code&gt;sudo fdisk -l&lt;/code&gt; 确认 SD 卡对应 &lt;code&gt;/dev&lt;/code&gt; 中的哪一个设备。&lt;/p&gt;</description></item><item><title>在 Windows 中挂载 EFI 分区的方法</title><link>https://haifei.pro/post_20230612_%E5%9C%A8-windows-%E4%B8%AD%E6%8C%82%E8%BD%BD-efi-%E5%88%86%E5%8C%BA%E7%9A%84%E6%96%B9%E6%B3%95/</link><pubDate>Mon, 12 Jun 2023 22:17:46 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author><guid>https://haifei.pro/post_20230612_%E5%9C%A8-windows-%E4%B8%AD%E6%8C%82%E8%BD%BD-efi-%E5%88%86%E5%8C%BA%E7%9A%84%E6%96%B9%E6%B3%95/</guid><description>&lt;p&gt;为了在 Windows 中挂载 EFI 分区，我们可以在 PowerShell 中运行如下命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;diskpart&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;disk&lt;/span&gt; &lt;span class="c"&gt;# make sure which is the disk that contains the EFI partition. usually 0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;select &lt;/span&gt;&lt;span class="n"&gt;disk&lt;/span&gt; &lt;span class="mf"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="n"&gt;partition&lt;/span&gt; &lt;span class="c"&gt;# make sure which is the EFI partition. normally 0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;select &lt;/span&gt;&lt;span class="n"&gt;disk&lt;/span&gt; &lt;span class="mf"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;assign&lt;/span&gt; &lt;span class="n"&gt;letter&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后我们就将 EFI 挂载为盘符为 Z 的盘了。&lt;/p&gt;</description></item></channel></rss>

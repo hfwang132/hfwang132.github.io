@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>信号完整性 on Haifei's Home</title><link>https://haifei.pro/tags/%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7/</link><description>Recent content in 信号完整性 on Haifei's Home</description><generator>Hugo</generator><language>zh-CN</language><managingEditor>hfwang132@gmail.com (hfwang132)</managingEditor><webMaster>hfwang132@gmail.com (hfwang132)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 25 Oct 2025 16:46:08 +0800</lastBuildDate><atom:link href="https://haifei.pro/tags/%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7/index.xml" rel="self" type="application/rss+xml"/><item><title>阻抗匹配/信号完整性速成（实验室版）</title><link>https://haifei.pro/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</link><pubDate>Sat, 25 Oct 2025 16:46:08 +0800</pubDate><author>hfwang132@gmail.com (hfwang132)</author><guid>https://haifei.pro/post_20251025_%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D-%E4%BF%A1%E5%8F%B7%E5%AE%8C%E6%95%B4%E6%80%A7%E9%80%9F%E6%88%90-%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%89%88/</guid><description>&lt;h2 id="一前言"&gt;一、前言&lt;/h2&gt;
+&lt;p&gt;最近发现很多同事都不太熟悉阻抗匹配，只知道“（常用的 SMA/BNC）传输线的阻抗是 50 欧姆”，却不知道它的真正含义。经常会出现以下情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;50 欧信号源接示波器 1M 欧输入：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;咦，为什么信号变成了两倍？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;高频方波接示波器 1M 欧输入：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;咦，怎么过冲这么严重？这信号源有问题吧？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;MCU / DAC / FPGA 的输出信号不加驱动就接 50 欧负载 / 示波器 50 欧输入：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;咦，为什么本应该是 3V 的信号变成了只有 30 mV？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上种种，都是不熟悉阻抗匹配以及传输线理论的结果。&lt;/p&gt;</description></item></channel></rss>
