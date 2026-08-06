@@ -108,6 +108,11 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   images = ["/images/avatar.png"]
   # busuanzi
   busuanzi = true
+  # Historical totals from hfwang132.github.io before switching to haifei.pro.
+  # Busuanzi keeps separate counters for different host names.
+  [params.siteStats]
+    pvOffset = 54877
+    uvOffset = 39268
   # Author config
   # 作者配置
   [params.author]

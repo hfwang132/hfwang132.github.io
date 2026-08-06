@@ -1,0 +1,109 @@
+{{- if ne .Site.Params.footer.enable false -}}
+    <footer class="footer">
+        <div class="footer-container">
+            {{- /* Custom Content */ -}}
+            {{- with .Site.Params.footer.custom -}}
+                <div class="footer-line">
+                    {{- safeHTML . -}}
+                </div>
+            {{- end -}}
+
+            {{- if .Site.Params.busuanzi -}}
+                <div class="footer-line">
+                    {{- if eq .Site.Language.Lang "zh-cn" -}}
+                        <span id="busuanzi_container_site_pv">
+                            总访问量：<span id="busuanzi_value_site_pv"></span> 次
+                        </span>
+                        &nbsp;|&nbsp;
+                        <span id="busuanzi_container_site_uv">
+                            你是第 <span id="busuanzi_value_site_uv"></span> 位访客
+                        </span>
+                    {{- else -}}
+                        <span id="busuanzi_container_site_pv">
+                            Visited: <span id="busuanzi_value_site_pv"></span> times
+                        </span>
+                        &nbsp;|&nbsp;
+                        <span id="busuanzi_container_site_uv">
+                            You are the <span id="busuanzi_value_site_uv"></span><span id="busuanzi_site_uv_suffix">th</span> visitor
+                        </span>
+                    {{- end -}}
+                </div>
+                <script>
+                    (() => {
+                        const offsets = {
+                            site_pv: {{ .Site.Params.siteStats.pvOffset | default 0 }},
+                            site_uv: {{ .Site.Params.siteStats.uvOffset | default 0 }}
+                        };
+                        const numberFormat = new Intl.NumberFormat(document.documentElement.lang || undefined);
+
+                        const ordinalSuffix = (value) => {
+                            const lastTwo = value % 100;
+                            if (lastTwo >= 11 && lastTwo <= 13) return "th";
+                            return { 1: "st", 2: "nd", 3: "rd" }[value % 10] || "th";
+                        };
+
+                        Object.entries(offsets).forEach(([counter, offset]) => {
+                            const element = document.getElementById(`busuanzi_value_${counter}`);
+                            if (!element) return;
+
+                            const applyOffset = () => {
+                                const rawValue = element.textContent.replace(/[^0-9]/g, "");
+                                if (!rawValue) return false;
+
+                                const total = Number.parseInt(rawValue, 10) + Number(offset);
+                                element.textContent = numberFormat.format(total);
+
+                                if (counter === "site_uv") {
+                                    const suffix = document.getElementById("busuanzi_site_uv_suffix");
+                                    if (suffix) suffix.textContent = ordinalSuffix(total);
+                                }
+                                return true;
+                            };
+
+                            if (applyOffset()) return;
+
+                            const observer = new MutationObserver(() => {
+                                if (applyOffset()) observer.disconnect();
+                            });
+                            observer.observe(element, {
+                                childList: true,
+                                characterData: true,
+                                subtree: true
+                            });
+                        });
+                    })();
+                </script>
+            {{- end -}}
+
+            <div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork">
+                {{- /* Copyright year */ -}}
+                {{- if ne .Site.Params.footer.copyright false -}}
+                    <i class="far fa-copyright fa-fw" aria-hidden="true"></i>
+                    {{- with .Site.Params.footer.since -}}
+                        <span itemprop="copyrightYear">
+                            {{- if lt . now.Year }}{{ . }} - {{ end }}{{ now.Year -}}
+                        </span>
+                    {{- else -}}
+                        <span itemprop="copyrightYear">{{ now.Year }}</span>
+                    {{- end -}}
+                {{- end -}}
+
+                {{- /* Author */ -}}
+                {{- if ne .Site.Params.footer.author false -}}
+                    <span class="author" itemprop="copyrightHolder">&nbsp;<a href="{{ $.Site.Author.link | default .Site.Home.RelPermalink }}" target="_blank">{{ .Site.Author.name }}</a></span>
+                {{- end -}}
+
+                {{- /* License */ -}}
+                {{- with .Site.Params.footer.license -}}
+                    &nbsp;|&nbsp;<span class="license">{{ . | safeHTML }}</span>
+                {{- end -}}
+
+                {{- /* ICP */ -}}
+                {{- with .Site.Params.footer.icp -}}
+                    <span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp">{{ . | safeHTML }}</span>
+                {{- end -}}
+            </div>
+        </div>
+    </footer>
+{{- end -}}
