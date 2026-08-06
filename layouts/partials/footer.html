@@ -75,6 +75,68 @@
                 </script>
             {{- end -}}
 
+            {{- with .Site.Params.siteStats.startedAt -}}
+                <div
+                    class="footer-line site-uptime"
+                    id="site-uptime"
+                    data-started-at="{{ . }}"
+                    data-language="{{ $.Site.Language.Lang }}"
+                >
+                    {{- if eq $.Site.Language.Lang "zh-cn" -}}
+                        本站已运行 <time id="site-uptime-value" datetime="{{ . }}" aria-live="off">正在计算…</time>
+                    {{- else -}}
+                        Online for <time id="site-uptime-value" datetime="{{ . }}" aria-live="off">calculating…</time>
+                    {{- end -}}
+                </div>
+                <script>
+                    (() => {
+                        const container = document.getElementById("site-uptime");
+                        const output = document.getElementById("site-uptime-value");
+                        if (!container || !output) return;
+
+                        const startedAt = Date.parse(container.dataset.startedAt);
+                        if (!Number.isFinite(startedAt)) {
+                            container.hidden = true;
+                            return;
+                        }
+
+                        const isChinese = container.dataset.language === "zh-cn";
+                        const numberFormat = new Intl.NumberFormat(
+                            document.documentElement.lang || undefined
+                        );
+
+                        const unit = (value, singular, plural) =>
+                            `${numberFormat.format(value)} ${value === 1 ? singular : plural}`;
+
+                        const render = () => {
+                            const totalSeconds = Math.max(
+                                0,
+                                Math.floor((Date.now() - startedAt) / 1000)
+                            );
+                            const days = Math.floor(totalSeconds / 86400);
+                            const hours = Math.floor((totalSeconds % 86400) / 3600);
+                            const minutes = Math.floor((totalSeconds % 3600) / 60);
+                            const seconds = totalSeconds % 60;
+
+                            output.textContent = isChinese
+                                ? `${numberFormat.format(days)} 天 ${hours} 时 ${minutes} 分 ${seconds} 秒`
+                                : [
+                                    unit(days, "day", "days"),
+                                    unit(hours, "hour", "hours"),
+                                    unit(minutes, "minute", "minutes"),
+                                    unit(seconds, "second", "seconds")
+                                ].join(" ");
+                        };
+
+                        const tick = () => {
+                            render();
+                            window.setTimeout(tick, 1000 - (Date.now() % 1000));
+                        };
+                        tick();
+                    })();
+                </script>
+            {{- end -}}
+
             <div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork">
                 {{- /* Copyright year */ -}}
                 {{- if ne .Site.Params.footer.copyright false -}}

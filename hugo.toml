@@ -113,6 +113,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [params.siteStats]
     pvOffset = 54877
     uvOffset = 39268
+    # Displayed by the live footer timer. Keep an explicit offset so every
+    # visitor sees the same instant regardless of their local timezone.
+    startedAt = "2019-01-01T00:00:00+08:00"
   # Author config
   # 作者配置
   [params.author]

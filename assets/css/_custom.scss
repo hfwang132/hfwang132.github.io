@@ -23,6 +23,15 @@
   vertical-align: -0.14em;
 }
 
+footer.footer {
+  height: auto;
+  min-height: 2rem;
+
+  .site-uptime time {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
 .single .content {
   .cv-document {
     --cv-rule-color: #8b969c;
