@@ -1,8 +1,9 @@
 # Haifei's Home
 
 This repository contains the Hugo source for
-[hfwang132.github.io](https://hfwang132.github.io/). The site uses the LoveIt
-theme and is built and deployed by GitHub Actions.
+[haifei.pro](https://haifei.pro/). The site uses the LoveIt theme, is built
+locally, and publishes generated files to the `gh-pages` branch. GitHub Pages
+serves that branch without running a GitHub Actions workflow.
 
 ## Local development
 
@@ -39,10 +40,9 @@ together with:
 ```
 
 On macOS or Linux, run `./preview-drafts.sh`. These commands enable Hugo drafts
-and explicitly load `hugo.private.toml`; regular Hugo builds and GitHub Actions
-continue to read only `content/`. The test suite rejects `draft: true` files in
-`content/` to prevent an unpublished source file from being committed by
-mistake.
+and explicitly load `hugo.private.toml`; regular production builds continue to
+read only `content/`. The test suite rejects `draft: true` files in `content/`
+to prevent an unpublished source file from being committed by mistake.
 
 When a draft is ready, move its complete page bundle from
 `private-content/posts/` to `content/posts/`, set `draft: false`, review it, and
@@ -54,6 +54,20 @@ Create a production build:
 ```powershell
 hugo --minify
 ```
+
+### Local publication
+
+GitHub Pages is configured to serve the root of the `gh-pages` branch. Run the
+complete local validation, build, and deployment without changing source files:
+
+```powershell
+.\deploy-pages.bat
+```
+
+The deployment script builds with `https://haifei.pro/` as the production URL,
+adds `CNAME` and `.nojekyll`, rejects source-like files in the generated output,
+and pushes only the generated site to `gh-pages`. The temporary Git worktree is
+isolated from this source checkout.
 
 ## Importing a post from Zhihu
 
@@ -83,10 +97,10 @@ Use `--slug impedance-matching` to provide a shorter title component, producing
 the importer stops instead of guessing. After verifying the source date, use
 `--published-date 2025-10-25` as an explicit fallback.
 
-Imported posts always use `draft: false`, so a normal GitHub Pages deployment
-includes them. Importing without `--publish` changes only the local worktree.
-Adding `--publish` validates the site, commits only the imported bundle, and
-pushes it:
+Imported posts always use `draft: false`, so a production build includes them.
+Importing without `--publish` changes only the local worktree. Adding
+`--publish` validates the site, commits and pushes the imported bundle, then
+builds locally and pushes the generated website to `gh-pages`:
 
 ```powershell
 .\updates.bat "https://zhuanlan.zhihu.com/p/ARTICLE_ID" --publish
@@ -100,9 +114,10 @@ taxonomy metadata, the existing English translation, and other local bundle
 files. Publish mode also stops when the Git staging area already contains other
 changes, preventing an unrelated staged change from entering the post commit.
 
-Running the update wrapper without a Zhihu URL validates the production site,
-stages all current repository changes, creates a `daily updates` commit when
-needed, and pushes the current branch:
+Running the update wrapper without a Zhihu URL runs unit tests and the formula
+audit, stages all current repository changes, creates a `daily updates` commit
+when needed, pushes `master`, then builds locally and pushes the generated site
+to `gh-pages`:
 
 ```powershell
 .\updates.bat
@@ -384,8 +399,8 @@ theme:
 .\.venv\Scripts\python.exe scripts\audit_math.py
 ```
 
-`updates.bat` and `updates.sh` run this audit before staging, committing, or
-pushing any changes.
+`updates.bat`, `updates.sh`, `deploy-pages.bat`, and `deploy-pages.sh` run this
+audit before publication.
 
 ## Repository layout
 
@@ -402,4 +417,7 @@ pushing any changes.
   aliases;
 - `scripts/sync_zhihu_dates.py`: apply reviewed Zhihu publication metadata to
   historical posts;
-- `.github/workflows/hugo.yml`: GitHub Pages build and deployment.
+- `scripts/deploy_pages.py`: isolated local Hugo build and `gh-pages`
+  publication;
+- `deploy-pages.bat` and `deploy-pages.sh`: validate and publish without
+  committing source changes.

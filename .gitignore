@@ -13,8 +13,10 @@ private-content/
 __pycache__/
 *.py[cod]
 
-# Hugo local output and caches. GitHub Actions builds the site from source.
+# Hugo local output and caches. Local deployment publishes only the generated
+# site to the gh-pages branch.
 .hugo_build.lock
 .hugo-cache/
 public/
+cloudflare-public/
 resources/_gen/
