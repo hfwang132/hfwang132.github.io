@@ -1,0 +1,13 @@
+# Local-only content overlay used by preview-drafts.bat and preview-drafts.sh.
+# The regular Hugo build and GitHub Actions do not load this configuration.
+
+[module]
+  # Defining a content mount removes Hugo's default content mount, so retain
+  # the public content directory explicitly before adding private drafts.
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+
+  [[module.mounts]]
+    source = "private-content"
+    target = "content"

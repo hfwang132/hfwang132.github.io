@@ -18,6 +18,37 @@ Start a local preview:
 hugo server -D
 ```
 
+### Private drafts
+
+Keep unpublished post bundles under `private-content/` using the same layout as
+the public `content/` directory. For example:
+
+```text
+private-content/
+└── posts/
+    └── post_YYYYMMDD_example/
+        ├── index.zh-cn.md
+        └── files/
+```
+
+The entire directory is ignored by Git. Preview public posts and private drafts
+together with:
+
+```powershell
+.\preview-drafts.bat
+```
+
+On macOS or Linux, run `./preview-drafts.sh`. These commands enable Hugo drafts
+and explicitly load `hugo.private.toml`; regular Hugo builds and GitHub Actions
+continue to read only `content/`. The test suite rejects `draft: true` files in
+`content/` to prevent an unpublished source file from being committed by
+mistake.
+
+When a draft is ready, move its complete page bundle from
+`private-content/posts/` to `content/posts/`, set `draft: false`, review it, and
+publish through the normal update workflow. Because ignored drafts are local
+files, back them up separately or keep them in a private repository.
+
 Create a production build:
 
 ```powershell

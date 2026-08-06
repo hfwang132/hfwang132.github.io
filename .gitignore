@@ -1,6 +1,10 @@
 # Local credentials (never commit Zhihu cookies).
 .secrets/
 
+# Unpublished Hugo content. This directory is loaded only by the local
+# draft-preview configuration and must never be committed.
+private-content/
+
 # Local copies of external source projects (for example, the Overleaf CV).
 .external/
 
