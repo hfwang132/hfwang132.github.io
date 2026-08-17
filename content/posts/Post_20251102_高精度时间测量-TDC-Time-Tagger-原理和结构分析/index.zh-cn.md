@@ -5,6 +5,8 @@ draft: false
 math: true
 originalURL: "https://zhuanlan.zhihu.com/p/1967603349005248271"
 author: "Haifei"
+tags: ["Time Tagger", "Time-to-Digital Converter", "TCSPC", "时间相关单光子计数仪"]
+categories: ["实验物理"]
 ---
 
 ## 一、什么是 TDC / Time Tagger  

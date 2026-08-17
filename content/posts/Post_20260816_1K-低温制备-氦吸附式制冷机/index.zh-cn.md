@@ -5,7 +5,7 @@ draft: false
 math: true
 originalURL: "https://zhuanlan.zhihu.com/p/2072359308982067796"
 author: "Haifei"
-tags: ["[制冷机, 氦吸附式制冷机]"]
+tags: ["制冷机", "氦吸附式制冷机"]
 categories: ["实验物理"]
 ---
 
