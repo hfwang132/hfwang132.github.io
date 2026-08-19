@@ -1,0 +1,72 @@
+{{- $publications := site.Data.publications -}}
+{{- if not $publications -}}
+  {{- errorf "Publication data is missing; run sync-publications.bat before building the site" -}}
+{{- end -}}
+{{- $isChinese := eq .Page.Language.Lang "zh-cn" -}}
+{{- $years := slice -}}
+{{- range $publications -}}
+  {{- $years = $years | append .year -}}
+{{- end -}}
+
+<div class="publication-document">
+  {{- range ($years | uniq) }}
+    {{- $year := . -}}
+    <section class="publication-section">
+      <h2 class="publication-year">{{ $year }}</h2>
+      <div class="publication-section-body">
+        {{- range (where $publications "year" $year) }}
+          <article class="publication-entry">
+            <div class="publication-entry-heading">
+              <h3 class="publication-title">
+                <a href="{{ .url | safeURL }}" rel="external">{{ .title }}</a>
+              </h3>
+              <span class="publication-status publication-status-{{ .status }}">
+                {{- if eq .status "published" -}}
+                  {{- if $isChinese }}期刊论文{{ else }}Journal article{{ end -}}
+                {{- else -}}
+                  {{- if $isChinese }}预印本{{ else }}Preprint{{ end -}}
+                {{- end -}}
+              </span>
+            </div>
+
+            <p class="publication-authors">
+              {{- range $index, $author := .authors -}}
+                {{- if gt $index 0 }}, {{ end -}}
+                {{- if eq $author "Haifei Wang" -}}
+                  <strong>{{ $author }}</strong>
+                {{- else -}}
+                  {{ $author }}
+                {{- end -}}
+              {{- end -}}
+            </p>
+
+            <p class="publication-venue">
+              {{- if eq .status "published" -}}
+                <em>{{ .journal }}</em>
+                {{- with .volume }} <strong>{{ . }}</strong>{{ end -}}
+                {{- with .pages }}, {{ . }}{{ end -}}
+                ({{ .year }}).
+              {{- else -}}
+                {{ .archiveprefix }}:{{ .eprint }}
+                {{- with .primaryclass }} [{{ . }}]{{ end }} ({{ .year }}).
+              {{- end -}}
+            </p>
+
+            <div class="publication-links">
+              {{- if eq .status "published" -}}
+                <a href="{{ .url | safeURL }}" rel="external">
+                  {{- if $isChinese }}期刊页面{{ else }}Article{{ end -}}
+                </a>
+              {{- else -}}
+                <a href="{{ .url | safeURL }}" rel="external">arXiv</a>
+              {{- end -}}
+              {{- with .doi }}
+                <a href="https://doi.org/{{ . | safeURL }}" rel="external">DOI</a>
+              {{- end }}
+            </div>
+          </article>
+        {{- end }}
+      </div>
+    </section>
+  {{- end }}
+</div>

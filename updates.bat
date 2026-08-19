@@ -7,6 +7,10 @@ if exist ".venv\Scripts\python.exe" set "PYTHON_EXE=.venv\Scripts\python.exe"
 
 if not "%~1"=="" goto import_zhihu
 
+echo Synchronizing publication data from BibTeX...
+"%PYTHON_EXE%" scripts\sync_publications.py
+if errorlevel 1 exit /b %errorlevel%
+
 echo Validating the production site...
 hugo --minify --renderToMemory
 if errorlevel 1 exit /b %errorlevel%

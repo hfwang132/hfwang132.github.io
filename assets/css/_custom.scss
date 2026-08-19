@@ -131,6 +131,133 @@ footer.footer {
   --cv-muted-color: #a8b0b4;
 }
 
+.single .content .publication-document {
+  --publication-rule-color: #8b969c;
+  --publication-indent-color: #d6dcdf;
+  --publication-muted-color: #5f6a70;
+  --publication-accent-color: #087b9c;
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.55;
+
+  .publication-section {
+    margin: 1.8rem 0 0;
+  }
+
+  .publication-year {
+    margin: 0 0 0.8rem;
+    padding: 0 0 0.25rem;
+    border-bottom: 1px solid var(--publication-rule-color);
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.035em;
+    line-height: 1.25;
+  }
+
+  .publication-section-body {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--publication-indent-color);
+  }
+
+  .publication-entry {
+    padding: 0.2rem 0 1.35rem;
+
+    + .publication-entry {
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--publication-indent-color);
+    }
+  }
+
+  .publication-entry-heading {
+    display: flex;
+    gap: 0.75rem 1.25rem;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .publication-title {
+    min-width: 0;
+    margin: 0;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 1.16rem;
+    font-weight: 600;
+    line-height: 1.35;
+
+    a {
+      color: inherit;
+      text-decoration-color: var(--publication-indent-color);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      color: var(--publication-accent-color);
+      text-decoration-color: var(--publication-accent-color);
+    }
+  }
+
+  .publication-status {
+    flex: 0 0 auto;
+    padding: 0.12rem 0.42rem;
+    border: 1px solid var(--publication-rule-color);
+    color: var(--publication-muted-color);
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.035em;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .publication-status-published {
+    border-color: var(--publication-accent-color);
+    color: var(--publication-accent-color);
+  }
+
+  .publication-authors,
+  .publication-venue {
+    margin: 0.45rem 0 0;
+  }
+
+  .publication-authors {
+    line-height: 1.5;
+  }
+
+  .publication-venue {
+    color: var(--publication-muted-color);
+  }
+
+  .publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.65rem;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 0.72rem;
+
+    a {
+      padding: 0.14rem 0.42rem;
+      border: 1px solid var(--publication-indent-color);
+      color: var(--publication-muted-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      border-color: var(--publication-accent-color);
+      color: var(--publication-accent-color);
+    }
+  }
+}
+
+[theme=dark] .single .content .publication-document {
+  --publication-rule-color: #77848b;
+  --publication-indent-color: #485158;
+  --publication-muted-color: #a8b0b4;
+  --publication-accent-color: #67c7e6;
+}
+
 .single .content .about-profile {
   --about-accent: #087b9c;
   --about-surface: #f7f9fa;
@@ -411,6 +538,33 @@ footer.footer {
       margin-top: 0.2rem;
       margin-left: 0;
       text-align: left;
+      white-space: normal;
+    }
+  }
+
+  .single .content .publication-document {
+    font-size: 1rem;
+
+    .publication-section {
+      margin-top: 1.55rem;
+    }
+
+    .publication-year {
+      font-size: 1.25rem;
+    }
+
+    .publication-section-body {
+      margin-left: 0.35rem;
+      padding-left: 0.7rem;
+    }
+
+    .publication-entry-heading {
+      display: block;
+    }
+
+    .publication-status {
+      display: inline-block;
+      margin-top: 0.45rem;
       white-space: normal;
     }
   }

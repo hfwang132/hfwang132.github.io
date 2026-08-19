@@ -7,6 +7,10 @@ if exist "%~dp0.venv\Scripts\python.exe" set "PYTHON_EXE=%~dp0.venv\Scripts\pyth
 
 if /I "%~1"=="--link" goto deploy
 
+echo Synchronizing publication data from BibTeX...
+"%PYTHON_EXE%" "%~dp0scripts\sync_publications.py"
+if errorlevel 1 exit /b %errorlevel%
+
 echo Running local tests...
 "%PYTHON_EXE%" -m unittest discover -s "%~dp0tests" -v
 if errorlevel 1 exit /b %errorlevel%

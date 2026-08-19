@@ -1,0 +1,53 @@
+[
+  {
+    "key": "Wang2026ExperimentalHighDimensionalQuantumOverlappingTomography",
+    "type": "misc",
+    "status": "preprint",
+    "title": "Experimental High-Dimensional Quantum Overlapping Tomography",
+    "authors": [
+      "Haifei Wang",
+      "Rui Qu",
+      "Zhengning Yang",
+      "Xiaodan Lyu",
+      "Haotao Zhu",
+      "Zitong Xu",
+      "Lianzhen Cao",
+      "Joel Yang",
+      "Otfried Gühne",
+      "Weibo Gao"
+    ],
+    "date": "2026-08-16",
+    "year": 2026,
+    "doi": "10.48550/arXiv.2608.15795",
+    "url": "https://arxiv.org/abs/2608.15795",
+    "eprint": "2608.15795",
+    "archiveprefix": "arXiv",
+    "primaryclass": "quant-ph"
+  },
+  {
+    "key": "Hansenne2025OptimalOverlappingTomography",
+    "type": "article",
+    "status": "published",
+    "title": "Optimal Overlapping Tomography",
+    "authors": [
+      "Kiara Hansenne",
+      "Rui Qu",
+      "Lisa T. Weinbrenner",
+      "Carlos de Gois",
+      "Haifei Wang",
+      "Yang Ming",
+      "Zhengning Yang",
+      "Paweł Horodecki",
+      "Weibo Gao",
+      "Otfried Gühne"
+    ],
+    "date": "2025-08-04",
+    "year": 2025,
+    "journal": "Physical Review Letters",
+    "volume": "135",
+    "number": "6",
+    "pages": "060801",
+    "doi": "10.1103/t6qb-kdcp",
+    "url": "https://doi.org/10.1103/t6qb-kdcp"
+  }
+]

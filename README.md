@@ -176,6 +176,24 @@ available, the sync also compiles `resume.tex` and copies the PDF to
 `static/cv/Haifei-Wang-CV.pdf`. Use `--require-pdf` when a missing or failed PDF
 build should stop the sync.
 
+## Maintaining publications
+
+The canonical publication list is `bibliography/publications.bib`. Both `/publication/`
+and `/en/publication/` are thin language-specific page stubs that render the
+same bibliography through a shared shortcode. Do not edit publication entries
+in either Markdown page or in the generated `data/publications.json` file.
+
+After editing the BibTeX source, regenerate the structured Hugo data with:
+
+```powershell
+.\sync-publications.bat
+```
+
+On macOS or Linux, run `./sync-publications.sh`. The regular `updates`, Vercel,
+and GitHub Pages wrappers also synchronize the bibliography automatically
+before validating or building the site. The test suite rejects a stale JSON
+file, so the two language pages cannot silently diverge from the BibTeX source.
+
 ## English translation with OpenAI
 
 The translation pipeline uses the OpenAI Responses API for a newly imported

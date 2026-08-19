@@ -10,6 +10,9 @@ elif [[ -x "${repo_dir}/.venv/Scripts/python.exe" ]]; then
 fi
 
 if [[ "${1:-}" != "--link" ]]; then
+  echo "Synchronizing publication data from BibTeX..."
+  "${python_cmd}" "${repo_dir}/scripts/sync_publications.py"
+
   echo "Running local tests..."
   "${python_cmd}" -m unittest discover -s "${repo_dir}/tests" -v
 

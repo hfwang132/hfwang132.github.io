@@ -12,6 +12,9 @@ elif [[ -x ".venv/Scripts/python.exe" ]]; then
 fi
 
 if (($# == 0)); then
+  echo "Synchronizing publication data from BibTeX..."
+  "${python_cmd}" scripts/sync_publications.py
+
   echo "Validating the production site..."
   hugo --minify --renderToMemory
 
