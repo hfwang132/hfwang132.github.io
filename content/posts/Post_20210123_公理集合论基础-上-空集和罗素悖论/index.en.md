@@ -41,7 +41,7 @@ More specifically, semantics studies how the human mind interprets (Interpret) a
 
 ## Propositional Logic  
 
-\(\neg a\) denotes “not \(a\).” If \(a\) is true, then \(\neg a\) is false, and vice versa. In other words, the truth table of \(\neg\) is
+$\neg a$ denotes “not $a$.” If $a$ is true, then $\neg a$ is false, and vice versa. In other words, the truth table of $\neg$ is
 
 |  |  |  |
 | --- | --- | --- |
@@ -50,11 +50,11 @@ More specifically, semantics studies how the human mind interprets (Interpret) a
 
 Here T denotes true (True), and F denotes false (False).
 
-\(a \vee b\) denotes “\(a\) or \(b\).”
+$a \vee b$ denotes “$a$ or $b$.”
 
-\(a \wedge b\) denotes “\(a\) and \(b\),” and is equivalent to “\(\neg(\neg a\vee \neg b)\).” Their truth tables are straightforward.
+$a \wedge b$ denotes “$a$ and $b$,” and is equivalent to “$\neg(\neg a\vee \neg b)$.” Their truth tables are straightforward.
 
-\(a\rightarrow b\) denotes “if \(a\), then \(b\),” or “\(a\) implies \(b\).” Its truth table is as follows:
+$a\rightarrow b$ denotes “if $a$, then $b$,” or “$a$ implies $b$.” Its truth table is as follows:
 
 |  |  |  |
 | --- | --- | --- |
@@ -67,13 +67,13 @@ Here T denotes true (True), and F denotes false (False).
 [How should an inference in logic whose premise is false but whose conclusion is true be interpreted?](https://www.zhihu.com/question/21020308/answer/16917222)
 > In addition, in the examples below, readers can also appreciate why we stipulate that “a false proposition implies every proposition.”
 
-> 【Optional Reading 1】“\(a\rightarrow b\)” is equivalent to “\((\neg a)\vee b\).” To see this, you need only substitute the four cases into the truth table.  
+> 【Optional Reading 1】“$a\rightarrow b$” is equivalent to “$(\neg a)\vee b$.” To see this, you need only substitute the four cases into the truth table.  
 >   
-> Specifically, when \(a\) is true, \(\neg a\) is false, so the truth value of “\((\neg a)\vee b\)” depends on \(b\). When \(a\) is false, \(\neg a\) is true, so regardless of the truth value of \(b\), “\((\neg a)\vee b\)” is true. Thus, “\(a\rightarrow b\)” and “\((\neg a)\vee b\)” have the same truth table.
+> Specifically, when $a$ is true, $\neg a$ is false, so the truth value of “$(\neg a)\vee b$” depends on $b$. When $a$ is false, $\neg a$ is true, so regardless of the truth value of $b$, “$(\neg a)\vee b$” is true. Thus, “$a\rightarrow b$” and “$(\neg a)\vee b$” have the same truth table.
 
-Define \(a\leftrightarrow b\) to be \((a\rightarrow b)\wedge(b\rightarrow a)\).
+Define $a\leftrightarrow b$ to be $(a\rightarrow b)\wedge(b\rightarrow a)$.
 
-> 【Optional Reading 2】It can be seen that we need only \(\{\neg,\vee\}\) to obtain all propositional connectives \(\{\neg,\wedge,\vee,\rightarrow, \leftrightarrow \}\). The former is called a functionally complete set of propositional connectives. \(\{\neg,\rightarrow\}\), \(\{\neg,\wedge\}\), and so on are also functionally complete sets of propositional connectives.
+> 【Optional Reading 2】It can be seen that we need only $\{\neg,\vee\}$ to obtain all propositional connectives $\{\neg,\wedge,\vee,\rightarrow, \leftrightarrow \}$. The former is called a functionally complete set of propositional connectives. $\{\neg,\rightarrow\}$, $\{\neg,\wedge\}$, and so on are also functionally complete sets of propositional connectives.
 
 The axiomatic system of propositional logic consists of four parts: a symbol set, formation rules, axioms, and inference rules (see Optional Reading 3). We need not delve here into how the propositional logic system derives those obvious logical rules (in the axiomatic system of propositional logic, an apparently obvious formula such as p→p must be proved). We need only know that the foundations of our symbols and logic are solid. If you are truly concerned about this, you may study mathematical logic before studying axiomatic set theory.
 
@@ -123,39 +123,39 @@ The axiomatic system of propositional logic consists of four parts: a symbol set
 
 ## First-Order Logic  
 
-The \(\{\neg,\wedge,\vee,\rightarrow, \leftrightarrow \}\) introduced above are called propositional connectives. Together with formation rules, axioms, and inference rules, they form a **propositional logic** system. Next, let us look at quantifiers. A propositional logic system, together with quantifiers and their associated rules and axioms, becomes a **first-order logic** system.
+The $\{\neg,\wedge,\vee,\rightarrow, \leftrightarrow \}$ introduced above are called propositional connectives. Together with formation rules, axioms, and inference rules, they form a **propositional logic** system. Next, let us look at quantifiers. A propositional logic system, together with quantifiers and their associated rules and axioms, becomes a **first-order logic** system.
 
-\(\exists x(\varphi(x))\) denotes “there exists \(x\) satisfying \(\varphi(x)\),” where \(\varphi(x)\) is a property of \(x\).
+$\exists x(\varphi(x))$ denotes “there exists $x$ satisfying $\varphi(x)$,” where $\varphi(x)$ is a property of $x$.
 
-\(\forall x(\varphi(x))\) denotes “for every \(x\), \(\varphi(x)\) holds.” It is equivalent to “\(\neg \exists x \neg\varphi(x)\),” that is, “there does not exist an \(x\) that fails to satisfy \(\varphi(x)\).”
+$\forall x(\varphi(x))$ denotes “for every $x$, $\varphi(x)$ holds.” It is equivalent to “$\neg \exists x \neg\varphi(x)$,” that is, “there does not exist an $x$ that fails to satisfy $\varphi(x)$.”
 
-Thus, quantifiers require only \(\exists\) for completeness; \(\forall\) can be expressed using \(\exists\).
+Thus, quantifiers require only $\exists$ for completeness; $\forall$ can be expressed using $\exists$.
 
 Below are some simple exercises that will further help you become familiar with the first-order logic system—the symbolic language of axiomatic set theory.
 
-1) \(\forall x(x\in A\rightarrow \varphi(x))\) can be abbreviated as \(\forall x\in A, \varphi(x)\). It means “for all \(x\) in \(A\), \(\varphi(x)\) holds.”
+1) $\forall x(x\in A\rightarrow \varphi(x))$ can be abbreviated as $\forall x\in A, \varphi(x)$. It means “for all $x$ in $A$, $\varphi(x)$ holds.”
 
-2) \(\forall x(x\in A\leftrightarrow \varphi(x))\) means “for all \(x\) in \(A\), \(\varphi(x)\) holds, and \(x\) satisfying \(\varphi(x)\) belong to \(A\).” In other words, \(A\) contains precisely those elements satisfying property \(\varphi\).
+2) $\forall x(x\in A\leftrightarrow \varphi(x))$ means “for all $x$ in $A$, $\varphi(x)$ holds, and $x$ satisfying $\varphi(x)$ belong to $A$.” In other words, $A$ contains precisely those elements satisfying property $\varphi$.
 
-3) \(\exists x(x\in A \wedge \varphi(x))\) can be abbreviated as \(\exists x\in A, \varphi(x)\). It means “there exists some \(x\) in \(A\) such that \(\varphi(x)\).”
+3) $\exists x(x\in A \wedge \varphi(x))$ can be abbreviated as $\exists x\in A, \varphi(x)$. It means “there exists some $x$ in $A$ such that $\varphi(x)$.”
 
-> 【Optional Reading 4】**Note the contrast between 1) and 3)!** In 3), one cannot replace “\(\wedge\)” with “\(\rightarrow\)” and write \(\exists x(x\in A \rightarrow \varphi(x))\).  
+> 【Optional Reading 4】**Note the contrast between 1) and 3)!** In 3), one cannot replace “$\wedge$” with “$\rightarrow$” and write $\exists x(x\in A \rightarrow \varphi(x))$.  
 >   
-> This is because if there exists an \(x\) that does not belong to \(A\) (and in fact this is inevitable, because we will later prove that no set contains everything), then \(x\in A\) is false. Since a false proposition implies every proposition (see propositional logic), it can also imply \(\varphi(x)\). Thus, the meaning of this expression is “provided \(x\) does not belong to \(A\), it satisfies \(\varphi\),” which is not what we intend.  
+> This is because if there exists an $x$ that does not belong to $A$ (and in fact this is inevitable, because we will later prove that no set contains everything), then $x\in A$ is false. Since a false proposition implies every proposition (see propositional logic), it can also imply $\varphi(x)$. Thus, the meaning of this expression is “provided $x$ does not belong to $A$, it satisfies $\varphi$,” which is not what we intend.  
 >   
-> Then why does 1) use the symbol “\(\rightarrow\)” rather than “\(\wedge\)”?  
+> Then why does 1) use the symbol “$\rightarrow$” rather than “$\wedge$”?  
 >   
-> First, let us see why “\(\rightarrow\)” is used. The quantifier “\(\forall\)” means that all \(x\) are considered, so we discuss the two cases \(x\in A\) and \(x\notin A\).  
+> First, let us see why “$\rightarrow$” is used. The quantifier “$\forall$” means that all $x$ are considered, so we discuss the two cases $x\in A$ and $x\notin A$.  
 >   
-> On the one hand, if \(x\) belongs to \(A\), then \(x\in A\) is true. In order for \(x\in A \rightarrow \varphi(x)\) to be true, according to the truth table, we can only require \(\varphi(x)\) to be true;  
+> On the one hand, if $x$ belongs to $A$, then $x\in A$ is true. In order for $x\in A \rightarrow \varphi(x)$ to be true, according to the truth table, we can only require $\varphi(x)$ to be true;  
 >   
-> On the other hand, if \(x\) does not belong to \(A\), then \(x\in A\) is false. According to the truth table, a false proposition can imply any proposition, so \(x\in A \rightarrow \varphi(x)\) is true; that is, in this case it tells us no further information.  
+> On the other hand, if $x$ does not belong to $A$, then $x\in A$ is false. According to the truth table, a false proposition can imply any proposition, so $x\in A \rightarrow \varphi(x)$ is true; that is, in this case it tells us no further information.  
 >   
-> Combining the two cases above, we conclude that \(x\in A \rightarrow \varphi(x)\) is true if and only if “for all \(x\) in \(A\), \(\varphi(x)\) holds.” This is exactly what we wish to express!  
+> Combining the two cases above, we conclude that $x\in A \rightarrow \varphi(x)$ is true if and only if “for all $x$ in $A$, $\varphi(x)$ holds.” This is exactly what we wish to express!  
 >   
 > From the above analysis, you can appreciate the benefit of stipulating that “a false proposition implies every proposition.”  
 >   
-> Why can “\(\rightarrow\)” not be replaced with “\(\wedge\)” in 1)? This is because if \(x\) does not belong to \(A\), then \(x\in A \wedge \varphi(x)\) must be false. The quantifier “\(\forall\)” means that all \(x\) are considered, and there are always some \(x\) that do not belong to \(A\). Therefore, \(\forall x(x\in A\wedge \varphi(x))\) is a proposition that is always false and is of no use.  
+> Why can “$\rightarrow$” not be replaced with “$\wedge$” in 1)? This is because if $x$ does not belong to $A$, then $x\in A \wedge \varphi(x)$ must be false. The quantifier “$\forall$” means that all $x$ are considered, and there are always some $x$ that do not belong to $A$. Therefore, $\forall x(x\in A\wedge \varphi(x))$ is a proposition that is always false and is of no use.  
 >   
 > **These three examples, 1), 2), and 3), are worth pondering.** If you fully understand them, subsequent learning will be much easier. If you do not wish to analyze them, you may also “take for granted” and remember their corresponding meanings.
 
@@ -175,7 +175,7 @@ These three properties seem to determine the concept of a set. However, from the
 
 To demonstrate this fully, let us look at Russell's paradox. Define the following set:
 
-\[B=\{x|x\notin x\}\]
+$$B=\{x|x\notin x\}$$
 
 That is, B is the set of all “sets that do not belong to themselves.” This object is not prohibited by naïve set theory, yet it is disastrous.
 
@@ -197,11 +197,11 @@ We introduced Russell's paradox first in order to let readers feel the necessity
 
 ## Ontological Commitment (ZF0: Axiom of Existence, Axiom of Existence)  
 
-In the previous section, we saw that \(B=\{x|x\notin x\}\) is an illegitimate definition. A new set theory should avoid this problem. How can it be avoided? Since the problem lies in definitions, we can address it at the root by using a set of axioms to determine the rules for defining new sets. **Then, whenever we define a new set, we need only check whether it follows these axioms. In other words, axioms are our sole basis for defining new sets.**
+In the previous section, we saw that $B=\{x|x\notin x\}$ is an illegitimate definition. A new set theory should avoid this problem. How can it be avoided? Since the problem lies in definitions, we can address it at the root by using a set of axioms to determine the rules for defining new sets. **Then, whenever we define a new set, we need only check whether it follows these axioms. In other words, axioms are our sole basis for defining new sets.**
 
 To define new sets from existing sets, we must first have a set. Therefore, our first axiom is called the “Axiom of Existence”:
 
-> Axiom of Existence: \(\exists x(x=x)\)
+> Axiom of Existence: $\exists x(x=x)$
 
 It states that a set exists.
 
@@ -213,13 +213,13 @@ This is a good start, because for the first time we are using entirely abstract 
 
 In fact, the Axiom of Existence can be derived from other axioms, but for ease of learning, we shall temporarily treat it as the “zeroth” axiom and discard it at an appropriate time later. It is really just scaffolding: once the building is complete, it will be removed.
 
-You may have noticed that “\(x=x\)” is a tautology. Why do this? Because according to the symbolic rules of the axiomatic system, “\(\exists x\)” must be followed by something. Since we merely want to express “there exists a set,” it need only be followed by a true proposition.
+You may have noticed that “$x=x$” is a tautology. Why do this? Because according to the symbolic rules of the axiomatic system, “$\exists x$” must be followed by something. Since we merely want to express “there exists a set,” it need only be followed by a true proposition.
 
-**You may also have noticed that** \(x\) **is merely a symbol; the formula** \(\exists x(x=x)\) **itself does not indicate that it is a “set”—what if it is a number? Do not worry: so far, numbers have not been defined, because we take set theory as our foundation. Starting from the foundation means that we must forget everything else in mathematics.**
+**You may also have noticed that** $x$ **is merely a symbol; the formula** $\exists x(x=x)$ **itself does not indicate that it is a “set”—what if it is a number? Do not worry: so far, numbers have not been defined, because we take set theory as our foundation. Starting from the foundation means that we must forget everything else in mathematics.**
 
 You may imagine the following scene: the world of mathematics has just been born and is almost empty. Only a planet called “first-order logic” floats within it, with an inexhaustible supply of raw materials (a symbol set), foundations (axioms), and some symbolic rules (formation rules and inference rules). However, aimlessly and continuously using rules to generate new formulas (strings of symbols) is of no use. We need to create some axioms so that these symbols can be organized into useful things. These initial axioms are the axioms of set theory. Later, we will see that **numbers too are defined using sets**.
 
-The symbol “\(x\)” is merely a “thing”; we simply call this thing a set. **Essentially, all mathematical objects built upon set theory are sets**: the number “\(3\)” is a set, and the ordered pair \((1,2)\) is also a set... It is merely that when a set acquires a new structure, we give it a new name, such as “integer,” “ordered pair,” “ring,” “probability space,” or “algebra.” If this seems surprising to you now, that is fine; we will understand it later.
+The symbol “$x$” is merely a “thing”; we simply call this thing a set. **Essentially, all mathematical objects built upon set theory are sets**: the number “$3$” is a set, and the ordered pair $(1,2)$ is also a set... It is merely that when a set acquires a new structure, we give it a new name, such as “integer,” “ordered pair,” “ring,” “probability space,” or “algebra.” If this seems surprising to you now, that is fine; we will understand it later.
 
 You may also understand it this way: at the lowest level, even the most complex software on a computer is nothing more than 1s and 0s; they simply possess complex organization and structure.
 
@@ -229,17 +229,17 @@ We now have an axiom. An axiom is something that cannot be proved, but is create
 
 Before creating new sets, we must also define how to determine whether two sets are equal:
 
-> Axiom of Extensionality: \(\forall A \forall B(\forall x(x \in A\leftrightarrow x \in B)\rightarrow A=B)\)
+> Axiom of Extensionality: $\forall A \forall B(\forall x(x \in A\leftrightarrow x \in B)\rightarrow A=B)$
 
 It states that if every element of A belongs to B, and every element of B belongs to A, then A and B are equal.
 
-Wait—we have not defined what “\(\in\)” is! No matter. In mathematical logic, we have a symbol set; symbols such as “\(\forall\),” “\(\exists\),” and even parentheses “\((\)” are all in this symbol set. We need only add a new symbol “\(\in\)” to the symbol set to denote some binary relation ( “\(\notin\)” can be defined using symbols such as “\(\in\)” and “\(\neg\)”). Note that the symbol set itself imposes no stipulations or interpretations upon symbols; axioms associated with them give symbols structure and meaning.
+Wait—we have not defined what “$\in$” is! No matter. In mathematical logic, we have a symbol set; symbols such as “$\forall$,” “$\exists$,” and even parentheses “$($” are all in this symbol set. We need only add a new symbol “$\in$” to the symbol set to denote some binary relation ( “$\notin$” can be defined using symbols such as “$\in$” and “$\neg$”). Note that the symbol set itself imposes no stipulations or interpretations upon symbols; axioms associated with them give symbols structure and meaning.
 
-It should be emphasized that “\(\in\)” represents only a binary relation. People may think of the object before “\(\in\)” as “the thing being contained,” and the object after it as “a thing containing some things,” but for “\(\in\),” the things before and after it are no different: both are some kind of “thing.” And “\(\in\)” itself is merely a predicate obeying certain rules. We must now become accustomed to thinking by forgetting everything, as Descartes did.
+It should be emphasized that “$\in$” represents only a binary relation. People may think of the object before “$\in$” as “the thing being contained,” and the object after it as “a thing containing some things,” but for “$\in$,” the things before and after it are no different: both are some kind of “thing.” And “$\in$” itself is merely a predicate obeying certain rules. We must now become accustomed to thinking by forgetting everything, as Descartes did.
 
-The significance of this axiom is that it specifies the first property of the symbol “\(\in\)”: equality. If every object standing in the “\(\in\)” relation to A also stands in the “\(\in\)” relation to B, and vice versa, then we say that A and B are “equal.”
+The significance of this axiom is that it specifies the first property of the symbol “$\in$”: equality. If every object standing in the “$\in$” relation to A also stands in the “$\in$” relation to B, and vice versa, then we say that A and B are “equal.”
 
-Returning to the main topic, observe how this axiom entails the so-called “definiteness,” “unorderedness,” and “distinctness.” In fact, according to the symbolic rules (which are not listed here), the set \(\{x,x,y\}\) is a legitimate formula; it is simply equal to \(\{x,y\}\) under the Axiom of Extensionality (every element of \(\{x,x,y\}\) belongs to \(\{x,y\}\), and vice versa). We may denote all sets equal to \(\{x,y\}\) by \(\{x,y\}\). This is the so-called distinctness; unorderedness is even simpler: the symbolic rules themselves impose no stipulations about order. For elements within a set, the only useful information is the binary relation “\(\in\)”; no other symbol specifies other relations, such as an order relation (which we will define later). Finally, definiteness is also entailed, because it is plainly determined by the basic rules of logic (the law of excluded middle). Thus, we have no need at all for natural-language expressions such as “distinctness.”
+Returning to the main topic, observe how this axiom entails the so-called “definiteness,” “unorderedness,” and “distinctness.” In fact, according to the symbolic rules (which are not listed here), the set $\{x,x,y\}$ is a legitimate formula; it is simply equal to $\{x,y\}$ under the Axiom of Extensionality (every element of $\{x,x,y\}$ belongs to $\{x,y\}$, and vice versa). We may denote all sets equal to $\{x,y\}$ by $\{x,y\}$. This is the so-called distinctness; unorderedness is even simpler: the symbolic rules themselves impose no stipulations about order. For elements within a set, the only useful information is the binary relation “$\in$”; no other symbol specifies other relations, such as an order relation (which we will define later). Finally, definiteness is also entailed, because it is plainly determined by the basic rules of logic (the law of excluded middle). Thus, we have no need at all for natural-language expressions such as “distinctness.”
 
 ## The Empty Set (ZF2: Axiom Schema of Separation, Axiom Schema of Separation)  
 
@@ -247,37 +247,37 @@ So far, we still do not have a definite set available for use, because the Axiom
 
 However, we cannot define the empty set from the axioms currently available. We need one more axiom:
 
-> Axiom Schema of Separation: \(\forall A \exists B \forall x(x\in B\leftrightarrow x\in A \wedge \varphi(x))\)
+> Axiom Schema of Separation: $\forall A \exists B \forall x(x\in B\leftrightarrow x\in A \wedge \varphi(x))$
 
-It is called the Axiom Schema of Separation because \(\varphi(x)\) represents any legitimate string of symbols (involving x); that is, this one axiom contains infinitely many axioms. Below, we shall simply call it the Axiom of Separation.
+It is called the Axiom Schema of Separation because $\varphi(x)$ represents any legitimate string of symbols (involving x); that is, this one axiom contains infinitely many axioms. Below, we shall simply call it the Axiom of Separation.
 
-The significance of the Axiom of Separation is that, given any set A, we can use property \(\varphi\) to separate all objects in A satisfying \(\varphi\) and form a new set. We denote this new set by \(B=\{x\in A|\varphi(x)\}\).
+The significance of the Axiom of Separation is that, given any set A, we can use property $\varphi$ to separate all objects in A satisfying $\varphi$ and form a new set. We denote this new set by $B=\{x\in A|\varphi(x)\}$.
 
 At last, we have our first **constructive axiom. A constructive axiom is a rule for constructing new sets from old sets.**
 
 Of course, knowing such a rule alone is useless; we must first have an “old set.” Fortunately, the Axiom of Existence tells us that we have at least one “old set” available.
 
-Note! What we usually write as \(B=\{x|\varphi(x)\}\) is, at present, illegitimate, because it is not obtained from an existing set. Instead, it directly stipulates a property \(\varphi\) and extracts from nowhere all elements satisfying \(\varphi\) to form a set. **This is not actually a set, but a “class” (Class). It is the chief culprit behind Russell's paradox!** Russell's paradox forms a set by extracting from nowhere all elements satisfying the property “does not belong to itself.” This is wrong. Doing so can form only a class, not a set.
+Note! What we usually write as $B=\{x|\varphi(x)\}$ is, at present, illegitimate, because it is not obtained from an existing set. Instead, it directly stipulates a property $\varphi$ and extracts from nowhere all elements satisfying $\varphi$ to form a set. **This is not actually a set, but a “class” (Class). It is the chief culprit behind Russell's paradox!** Russell's paradox forms a set by extracting from nowhere all elements satisfying the property “does not belong to itself.” This is wrong. Doing so can form only a class, not a set.
 
 The Axiom of Existence asserts that a set exists. We shall now use the Axiom of Separation to construct a definite set—the empty set.
 
-By the Axiom of Existence, there exists a set \(X\) (although we do not know exactly what it is); then, by the Axiom of Separation, \(\{x\in X|x\neq x\}\) is a set.
+By the Axiom of Existence, there exists a set $X$ (although we do not know exactly what it is); then, by the Axiom of Separation, $\{x\in X|x\neq x\}$ is a set.
 
-The false proposition \(x\neq x\) can imply \(x\in X\), and of course it can also imply \(x\in Y\), \(x\in Z\), and so on, while \(X\), \(Y\), and \(Z\) may be different sets. That is, there may be many such sets, but below we shall use the Axiom of Extensionality to prove that these sets are equal.
+The false proposition $x\neq x$ can imply $x\in X$, and of course it can also imply $x\in Y$, $x\in Z$, and so on, while $X$, $Y$, and $Z$ may be different sets. That is, there may be many such sets, but below we shall use the Axiom of Extensionality to prove that these sets are equal.
 
-Let \(A= \{x\in X|x\neq x\} ,B= \{x\in Y |x\neq x\} \). Here \(X\) and \(Y\) are arbitrary sets. We need only prove \(A=B\).
+Let $A= \{x\in X|x\neq x\} ,B= \{x\in Y |x\neq x\} $. Here $X$ and $Y$ are arbitrary sets. We need only prove $A=B$.
 
-By the Axiom of Extensionality: \(\forall A \forall B(\forall x(x \in A\leftrightarrow x \in B)\rightarrow A=B)\). It is clear that we need only check whether \(\forall u(u \in A\leftrightarrow u \in B)\) holds for arbitrary \(A\) and \(B\).
+By the Axiom of Extensionality: $\forall A \forall B(\forall x(x \in A\leftrightarrow x \in B)\rightarrow A=B)$. It is clear that we need only check whether $\forall u(u \in A\leftrightarrow u \in B)$ holds for arbitrary $A$ and $B$.
 
-In fact, since \(A= \{x\in X|x\neq x\}\), \(x\in A\) is false for every \(x\) (otherwise the contradictory expression \(x\neq x\) would follow). A false proposition can imply every proposition; therefore \(x \in A\rightarrow x \in B\).
+In fact, since $A= \{x\in X|x\neq x\}$, $x\in A$ is false for every $x$ (otherwise the contradictory expression $x\neq x$ would follow). A false proposition can imply every proposition; therefore $x \in A\rightarrow x \in B$.
 
-(Note that \(x \in A\rightarrow x \in B\) being true does not mean that \(x\in A\) is true.)
+(Note that $x \in A\rightarrow x \in B$ being true does not mean that $x\in A$ is true.)
 
-We have just proved \(\forall x (x \in A\rightarrow x \in B)\), and by the same reasoning we can also prove \(\forall x (x \in B\rightarrow x \in A)\). Hence \(\forall x (x \in B\leftrightarrow x \in A)\), and thus \(A=B\).
+We have just proved $\forall x (x \in A\rightarrow x \in B)$, and by the same reasoning we can also prove $\forall x (x \in B\rightarrow x \in A)$. Hence $\forall x (x \in B\leftrightarrow x \in A)$, and thus $A=B$.
 
-In this way, we have proved that \(\{x\in X|x\neq x\}\) is unique; that is, it is independent of what \(X\) specifically is. We denote this uniquely determined set by \(\emptyset\) and call it the empty set.
+In this way, we have proved that $\{x\in X|x\neq x\}$ is unique; that is, it is independent of what $X$ specifically is. We denote this uniquely determined set by $\emptyset$ and call it the empty set.
 
-**From the above analysis, we find that the empty set contains nothing, because for every** \(x\)**,** \(x\in \emptyset \) **is a false proposition.**
+**From the above analysis, we find that the empty set contains nothing, because for every** $x$**,** $x\in \emptyset $ **is a false proposition.**
 
 **Notice that we did not define the empty set using natural language such as “the empty set contains nothing.” Instead, we first defined the empty set with axioms, and then proved that “the empty set contains nothing.”** This illustrates formal axiomatization replacing natural language.
 
@@ -287,28 +287,28 @@ We now finally have a brick. Next, we can use the empty set as this brick to bui
 
 ## The Resolution of Russell's Paradox  
 
-Recall how Russell's paradox arose. We first defined \(B=\{x|x\notin x\}\), and derived \(B\in B\rightarrow B\notin B\) and \(B\in B\leftarrow B\notin B\), thereby producing a contradiction. **To resolve Russell's paradox, we need only make one of them fail. We will make the latter fail.** The derivation is as follows:
+Recall how Russell's paradox arose. We first defined $B=\{x|x\notin x\}$, and derived $B\in B\rightarrow B\notin B$ and $B\in B\leftarrow B\notin B$, thereby producing a contradiction. **To resolve Russell's paradox, we need only make one of them fail. We will make the latter fail.** The derivation is as follows:
 
-> (1) By the Axiom of Separation, we can define \(B=\{x\in A|x\notin x\}\). Call \(x\notin x\) property \(\varphi\).  
+> (1) By the Axiom of Separation, we can define $B=\{x\in A|x\notin x\}$. Call $x\notin x$ property $\varphi$.  
 >   
-> (2) Suppose \(B\in B\). Then, by the definition of \(B\), \(B\) satisfies property \(\varphi\), namely \(B\notin B\)—a contradiction! Thus, we can only have \(B\notin B\).  
+> (2) Suppose $B\in B$. Then, by the definition of $B$, $B$ satisfies property $\varphi$, namely $B\notin B$—a contradiction! Thus, we can only have $B\notin B$.  
 >   
-> (3) Next, we prove \(B\notin A\). We proceed by contradiction. Suppose \(B\in A\).  
+> (3) Next, we prove $B\notin A$. We proceed by contradiction. Suppose $B\in A$.  
 >   
-> On the one hand, by (2), \(B\notin B\); that is, \(B\) satisfies property \(\varphi\).  
+> On the one hand, by (2), $B\notin B$; that is, $B$ satisfies property $\varphi$.  
 >   
-> On the other hand, by our assumption, \(B\in A\).  
-> Therefore, B belongs to A and B satisfies property \(\varphi\). By the definition of \(B\), \(B\in B\), contradicting (2)! Thus \(B\notin A\).  
+> On the other hand, by our assumption, $B\in A$.  
+> Therefore, B belongs to A and B satisfies property $\varphi$. By the definition of $B$, $B\in B$, contradicting (2)! Thus $B\notin A$.  
 >   
-> Since \(B\notin A\), \(B\notin B\) cannot imply \(B\in B\).
+> Since $B\notin A$, $B\notin B$ cannot imply $B\in B$.
 
-Thus, we have resolved Russell's paradox: the set \(B\) does not belong to itself, and that is all; no contradiction occurs.
+Thus, we have resolved Russell's paradox: the set $B$ does not belong to itself, and that is all; no contradiction occurs.
 
 If you feel that all this happened too quickly, I will describe it once more in more natural language below. **Originally, we defined a set B from nowhere using the property “does not belong to itself,” but the Axiom Schema of Separation tells us that this is not permitted.** This is the key point! We must separate the new set B from an existing set A, and A is proved not to contain element B; hence “B does not belong to itself” cannot imply “B belongs to itself.” Notice that **deriving “B belongs to B” from “B does not belong to B” requires another condition: namely, “B belongs to A.”**
 
 **Put another way, the key to Russell's paradox is “self-reference,” and the Axiom of Separation eliminates the possibility of “self-reference.” B refers only to elements of A; not every element can be referred to by the definition of B.**
 
-The above analysis also proves that for every set \(A\), there is always a set \(B=\{x\in A|x\notin x\}\) that does not belong to \(A\) (by (3)). **Therefore, the set of all sets does not exist; or equivalently, a set containing everything does not exist.**
+The above analysis also proves that for every set $A$, there is always a set $B=\{x\in A|x\notin x\}$ that does not belong to $A$ (by (3)). **Therefore, the set of all sets does not exist; or equivalently, a set containing everything does not exist.**
 
 ## Intermission  
 

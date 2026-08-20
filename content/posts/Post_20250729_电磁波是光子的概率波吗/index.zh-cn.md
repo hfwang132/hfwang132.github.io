@@ -44,13 +44,13 @@ author: "Haifei"
 
 $\begin{aligned} w(\mathbf{r},t) \propto |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$
 
-其中 $E^{(+)}$ 是电场湮灭算符： $E^{(+)}(\mathbf{r},t)=\sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}a\_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)}$ ，其中 $\sigma = 0,1$ 代表偏振， $a\_{\mathbf{k},\sigma}$ 是模式 $(\mathbf{k},\sigma)$ 上的湮灭算符， $\mathcal{E}\_\mathbf{k}=\sqrt{\frac{\hbar \omega\_\mathbf{k}}{\epsilon\_0 V}}$ 是单光子振幅，有电场量纲， $V$ 为光场模式体积。
+其中 $E^{(+)}$ 是电场湮灭算符： $E^{(+)}(\mathbf{r},t)=\sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}a_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)}$ ，其中 $\sigma = 0,1$ 代表偏振， $a_{\mathbf{k},\sigma}$ 是模式 $(\mathbf{k},\sigma)$ 上的湮灭算符， $\mathcal{E}_\mathbf{k}=\sqrt{\frac{\hbar \omega_\mathbf{k}}{\epsilon_0 V}}$ 是单光子振幅，有电场量纲， $V$ 为光场模式体积。
 
 > 至于为什么概率正比于 $\begin{aligned} |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$ ，以及正比的比例常数是什么，就要将探测器（通常是一个原子）本身的动力学考虑进来，并且使用完整的量子场论方法了。此处不再赘述（hand-wavingly）。
 
 然而，在探测光子时，我们通常不知道终态是什么，而是只知道探测到了一个光子。因此我们需要对终态 $|f\rangle$ 进行求和：
 
-$\begin{aligned} \sum\_f|\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 &= \sum\_f\langle i | E^{(-)}|f\rangle \langle f| E^{(+)} |  i\rangle \\\\ &= \langle i|E^{(-)}E^{(+)}|i\rangle  \end{aligned}$
+$\begin{aligned} \sum_f|\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 &= \sum_f\langle i | E^{(-)}|f\rangle \langle f| E^{(+)} |  i\rangle \\\\ &= \langle i|E^{(-)}E^{(+)}|i\rangle  \end{aligned}$
 
 所以，光场的量子态的初态 $|i\rangle$ 从 $t$ 到 $t+\mathrm{d}t$ 这段时间在 $\mathbf{r}$ 处被探测（吸收）一个光子变成终态 $|f\rangle$ 的概率为 $w(\mathbf{r},t) \propto \langle i|E^{(-)}E^{(+)}|i\rangle $ 。
 
@@ -60,25 +60,25 @@ $\begin{aligned} \sum\_f|\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 &= \sum\
 
 既然光子数不守恒导致无法标准化，那我们能不能人为限制光子数呢？答案是可以。我们可以限制光子数量为一个，且单光子态为：
 
-$|1\_\psi\rangle = \sum\_{\mathbf{k},\sigma} \psi\_\mathbf{k,\sigma}|1\_\mathbf{k,\sigma}\rangle = \sum\_\mathbf{k,\sigma} \psi\_\mathbf{k,\sigma} a^\dagger\_\mathbf{k,\sigma} |0\rangle$
+$|1_\psi\rangle = \sum_{\mathbf{k},\sigma} \psi_\mathbf{k,\sigma}|1_\mathbf{k,\sigma}\rangle = \sum_\mathbf{k,\sigma} \psi_\mathbf{k,\sigma} a^\dagger_\mathbf{k,\sigma} |0\rangle$
 
-其中 $\sum\_{\mathbf{k},\sigma} |\psi\_\mathbf{k,\sigma}|^2 = 1$ 。
+其中 $\sum_{\mathbf{k},\sigma} |\psi_\mathbf{k,\sigma}|^2 = 1$ 。
 
 于是可以定义一个类似于波函数的东西[3]：
 
-$\psi(\mathbf{r},t) = \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\psi\rangle$
+$\psi(\mathbf{r},t) = \langle 0 | E^{(+)}(\mathbf{r},t) | 1_\psi\rangle$
 
-此时在某个区域 $D$ 中探测到一个光子的概率就正比于 $\int\_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r}$ 。因为：
+此时在某个区域 $D$ 中探测到一个光子的概率就正比于 $\int_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r}$ 。因为：
 
-$\begin{aligned} \int\_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r} &= \langle 1\_\psi | E^{(-)}(\mathbf{r}) | 0\rangle\langle 0 | E^{(+)}(\mathbf{r}) | 1\_\psi\rangle \\\\ &=  \langle 1\_\psi | E^{(-)}(\mathbf{r}) E^{(+)}(\mathbf{r}) | 1\_\psi\rangle \end{aligned}$
+$\begin{aligned} \int_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r} &= \langle 1_\psi | E^{(-)}(\mathbf{r}) | 0\rangle\langle 0 | E^{(+)}(\mathbf{r}) | 1_\psi\rangle \\\\ &=  \langle 1_\psi | E^{(-)}(\mathbf{r}) E^{(+)}(\mathbf{r}) | 1_\psi\rangle \end{aligned}$
 
-> 第二个等号是因为 $E^{(-)}$ 湮灭一个光子，导致 $ E^{(+)}(\mathbf{r}) | 1\_\psi\rangle$ 正比于 $|0\rangle$ 。
+> 第二个等号是因为 $E^{(-)}$ 湮灭一个光子，导致 $ E^{(+)}(\mathbf{r}) | 1_\psi\rangle$ 正比于 $|0\rangle$ 。
 
 为了让 $\psi(\mathbf{r},t)$ 成为真正的概率分布，我们还要标准化消去量纲。我们不妨先展开 $\psi(\mathbf{r},t)$ ：
 
-$\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\psi\rangle \\\\ &= \left\langle 0 \left| \sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}a\_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma} a^\dagger\_\mathbf{k,\sigma} \right| 0 \right\rangle \\\\ &=  \sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma}  \end{aligned}$
+$\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1_\psi\rangle \\\\ &= \left\langle 0 \left| \sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}a_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)} \psi_\mathbf{k,\sigma} a^\dagger_\mathbf{k,\sigma} \right| 0 \right\rangle \\\\ &=  \sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)} \psi_\mathbf{k,\sigma}  \end{aligned}$
 
-其中 $\mathcal{E}\_\mathbf{k}$ 携带电场量纲。我们只要加上对应求和的分母掉就可以得到无量纲的单光子概率分布。
+其中 $\mathcal{E}_\mathbf{k}$ 携带电场量纲。我们只要加上对应求和的分母掉就可以得到无量纲的单光子概率分布。
 
 然而，这只适用于单光子子空间。由于光子数通常不守恒，所以它的应用场景很有限。另外，它也无法像薛定谔波函数那样定义出一个守恒的概率流。
 
@@ -86,7 +86,7 @@ $\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\p
 
 问题 2：既然电磁场不是概率波，那么电磁场究竟是什么？
 
-电磁场本质上就是量子场论中的光子场 $A\_\mu$ ，而光子场和其他各种粒子的场 $\psi$ （狄拉克场、胶子场、夸克场...）一样，都是量子场。
+电磁场本质上就是量子场论中的光子场 $A_\mu$ ，而光子场和其他各种粒子的场 $\psi$ （狄拉克场、胶子场、夸克场...）一样，都是量子场。
 
 至于量子场是什么，就要到量子场论中去寻找答案了。鉴于本文不是量子场论教材，就辛苦读者自己去翻阅了。
 
@@ -98,31 +98,31 @@ $\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\p
 
 ## 附录 1 狄拉克方程如何近似成薛定谔方程 / 量子场如何近似成概率波  
 > 狄拉克方程  
-> $\mathrm{i}\gamma^\mu D\_\mu \psi - m\psi=0$ ，  
+> $\mathrm{i}\gamma^\mu D_\mu \psi - m\psi=0$ ，  
 > 其中  
 > $\gamma^0 = \begin{bmatrix} I & 0 \\\\ 0 &-I \end{bmatrix},\  \gamma^i=\begin{bmatrix} 0 & \sigma^i \\\\ -\sigma^i & 0 \end{bmatrix} \quad(i=1,2,3)$   
 > $\sigma^i $ 是泡利矩阵，  
-> 以及 $\psi = \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix}$ ，其中 $\psi\_1 = \begin{bmatrix}\psi\_{1\uparrow} \\\\ \psi\_{1\downarrow}\end{bmatrix}$ 是电子的两个自旋分量， $\psi\_2 = \begin{bmatrix}\psi\_{2\uparrow} \\\\ \psi\_{2\downarrow}\end{bmatrix}$ 是正电子的两个自旋分量。  
+> 以及 $\psi = \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix}$ ，其中 $\psi_1 = \begin{bmatrix}\psi_{1\uparrow} \\\\ \psi_{1\downarrow}\end{bmatrix}$ 是电子的两个自旋分量， $\psi_2 = \begin{bmatrix}\psi_{2\uparrow} \\\\ \psi_{2\downarrow}\end{bmatrix}$ 是正电子的两个自旋分量。  
 > 代入狄拉克方程得：  
-> $\mathrm{i}\begin{bmatrix} I & 0 \\\\ 0 &-I \end{bmatrix} D\_t \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix} + \mathrm{i} \begin{bmatrix} 0 & \bm\sigma \cdot \mathbf{D} \\\\ -\bm\sigma \cdot \mathbf{D} & 0 \end{bmatrix} \begin{bmatrix}\psi\_1 \\\\ \psi\_2 \end{bmatrix} -m \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix}=0$   
-> 其中 $D\_t =  \partial\_t +\mathrm{i}eA\_0 = \partial\_t - \mathrm{i}e\phi$ ， $\mathbf{D} = \nabla +\mathrm{i}e\mathbf{A}$ （使用 $(-,+,+,+)$ 度规约定）。  
+> $\mathrm{i}\begin{bmatrix} I & 0 \\\\ 0 &-I \end{bmatrix} D_t \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix} + \mathrm{i} \begin{bmatrix} 0 & \bm\sigma \cdot \mathbf{D} \\\\ -\bm\sigma \cdot \mathbf{D} & 0 \end{bmatrix} \begin{bmatrix}\psi_1 \\\\ \psi_2 \end{bmatrix} -m \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix}=0$   
+> 其中 $D_t =  \partial_t +\mathrm{i}eA_0 = \partial_t - \mathrm{i}e\phi$ ， $\mathbf{D} = \nabla +\mathrm{i}e\mathbf{A}$ （使用 $(-,+,+,+)$ 度规约定）。  
 > 化简得  
-> $\mathrm{i} \begin{bmatrix}D\_t\psi\_1 \\\\ -D\_t\psi\_2\end{bmatrix} +\mathrm{i} \begin{bmatrix}\bm\sigma\cdot \mathbf{D} \psi\_2 \\\\ -\bm\sigma\cdot \mathbf{D}\psi\_1\end{bmatrix} -m \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix}=0$   
+> $\mathrm{i} \begin{bmatrix}D_t\psi_1 \\\\ -D_t\psi_2\end{bmatrix} +\mathrm{i} \begin{bmatrix}\bm\sigma\cdot \mathbf{D} \psi_2 \\\\ -\bm\sigma\cdot \mathbf{D}\psi_1\end{bmatrix} -m \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix}=0$   
 > 即  
-> $\boxed{ \begin{aligned} \mathrm{i} D\_t \psi\_1 + \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi\_2 - m\psi\_1 &= 0 \\\\ -\mathrm{i} D\_t \psi\_2 - \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi\_1 - m\psi\_2 &= 0 \end{aligned}  }\quad (\star)$   
-> 这就是狄拉克方程的展开形式：我们把电子项 $\psi\_1$ 和正电子项 $\psi\_2$ 写成两个方程。原来它们在同一个方程里。  
-> 在低能情形下不考虑电子静质量带来的相位变化 $\mathrm{e}^{-\mathrm{i}mt}$ ，因此把它分离出来，也就是把 $\psi = \begin{bmatrix}\psi\_1\\\\ \psi\_2\end{bmatrix}$ 换成 $\psi = \begin{bmatrix}\varphi \mathrm{e}^{-\mathrm{i}mt}\\\\ \chi  \mathrm{e}^{-\mathrm{i}mt}\end{bmatrix}$ ，代入展开后的狄拉克方程 $(\star)$ 得：  
-> $\begin{aligned} &\mathrm{i} D\_t \varphi + \mathrm{i} \bm\sigma \cdot \mathbf{D} \chi  = 0 &(1)\\\\ -&\mathrm{i} D\_t \chi - \mathrm{i} \bm\sigma \cdot \mathbf{D} \varphi - 2m\chi = 0 &(2) \end{aligned}$   
-> 由于低能情形下正电子项 $\chi$ 很小，所以 $D\_t \chi \approx 0$ ，代入 $(2)$ 得：  
+> $\boxed{ \begin{aligned} \mathrm{i} D_t \psi_1 + \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi_2 - m\psi_1 &= 0 \\\\ -\mathrm{i} D_t \psi_2 - \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi_1 - m\psi_2 &= 0 \end{aligned}  }\quad (\star)$   
+> 这就是狄拉克方程的展开形式：我们把电子项 $\psi_1$ 和正电子项 $\psi_2$ 写成两个方程。原来它们在同一个方程里。  
+> 在低能情形下不考虑电子静质量带来的相位变化 $\mathrm{e}^{-\mathrm{i}mt}$ ，因此把它分离出来，也就是把 $\psi = \begin{bmatrix}\psi_1\\\\ \psi_2\end{bmatrix}$ 换成 $\psi = \begin{bmatrix}\varphi \mathrm{e}^{-\mathrm{i}mt}\\\\ \chi  \mathrm{e}^{-\mathrm{i}mt}\end{bmatrix}$ ，代入展开后的狄拉克方程 $(\star)$ 得：  
+> $\begin{aligned} &\mathrm{i} D_t \varphi + \mathrm{i} \bm\sigma \cdot \mathbf{D} \chi  = 0 &(1)\\\\ -&\mathrm{i} D_t \chi - \mathrm{i} \bm\sigma \cdot \mathbf{D} \varphi - 2m\chi = 0 &(2) \end{aligned}$   
+> 由于低能情形下正电子项 $\chi$ 很小，所以 $D_t \chi \approx 0$ ，代入 $(2)$ 得：  
 > $\chi \approx - \frac{\mathrm{i}}{2m} \bm\sigma \cdot \mathbf{D} \varphi$   
 > 将其再代入 $(1)$ 得：  
-> $\mathrm{i} D\_t \varphi +  \frac{1}{2m}(\bm\sigma \cdot \mathbf{D})^2 \varphi = 0 $   
+> $\mathrm{i} D_t \varphi +  \frac{1}{2m}(\bm\sigma \cdot \mathbf{D})^2 \varphi = 0 $   
 > 可以证明（见附录 2）  
 > $\begin{aligned} (\bm \sigma \cdot \mathbf{D})^2 &=\mathbf{D}^2 - \mathrm{i}e \bm\sigma\cdot \mathbf{B} \\\\ &= (\nabla +\mathrm{i}e\mathbf{A})^2 - e \bm\sigma\cdot \mathbf{B} \\\\ &= -(\mathbf{p} + e\mathbf{A})^2 - e \bm\sigma\cdot \mathbf{B}  \end{aligned}$   
 > 所以  
-> $\mathrm{i} D\_t \varphi =  \frac{1}{2m}[(\mathbf{p} + e\mathbf{A})^2 + e \bm\sigma\cdot \mathbf{B} ] \varphi$   
-> 把 $D\_t = \partial\_t - \mathrm{i}e\phi$ 代入得  
-> $\boxed{ \mathrm{i} \partial\_t \varphi =  \left[\frac{1}{2m}(\mathbf{p} + e\mathbf{A})^2+ \frac{e}{2m} \bm\sigma\cdot \mathbf{B}  - e\phi  \right]\varphi }$   
+> $\mathrm{i} D_t \varphi =  \frac{1}{2m}[(\mathbf{p} + e\mathbf{A})^2 + e \bm\sigma\cdot \mathbf{B} ] \varphi$   
+> 把 $D_t = \partial_t - \mathrm{i}e\phi$ 代入得  
+> $\boxed{ \mathrm{i} \partial_t \varphi =  \left[\frac{1}{2m}(\mathbf{p} + e\mathbf{A})^2+ \frac{e}{2m} \bm\sigma\cdot \mathbf{B}  - e\phi  \right]\varphi }$   
 > 这就是（带自旋的）电子的薛定谔方程，也叫做泡利方程。注意此处 $e$ 是正数，而电子 $\varphi$ 带负电荷。  
 > 这里的 $\varphi$ 就是概率波，也就是非相对论量子力学中说的波函数。
 
@@ -140,23 +140,23 @@ $\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\p
 >   
 > 于是我们需要计算 $(\mathbf{D}\times\mathbf{D})$ 。  
 >   
-> 我们先计算 $[D\_i, D\_j]$ ：  
+> 我们先计算 $[D_i, D_j]$ ：  
 >   
-> $\begin{aligned} [D\_i, D\_j] &= [\partial\_i +\mathrm{i}eA\_i, \partial\_j +\mathrm{i}eA\_j] \\\\ &= \cancel{[\partial\_i,\partial\_j]} + \cancel{e^2[A\_i, A\_j]} + \mathrm{i}e[\partial\_i, A\_j] - \mathrm{i}e[\partial\_j,A\_i] \end{aligned}$  
+> $\begin{aligned} [D_i, D_j] &= [\partial_i +\mathrm{i}eA_i, \partial_j +\mathrm{i}eA_j] \\\\ &= \cancel{[\partial_i,\partial_j]} + \cancel{e^2[A_i, A_j]} + \mathrm{i}e[\partial_i, A_j] - \mathrm{i}e[\partial_j,A_i] \end{aligned}$  
 >   
-> 于是我们需要计算 $[\partial\_i, A\_j]$ ：  
+> 于是我们需要计算 $[\partial_i, A_j]$ ：  
 >   
-> $\begin{aligned} [\partial\_i, A\_j] f &= \partial\_i (A\_j f) -A\_j \partial\_i f \\\\ &= (\partial\_i A\_j) f + A\_j \partial\_if - A\_j \partial\_i f \\\\ &= (\partial\_iA\_j)f \end{aligned}$  
+> $\begin{aligned} [\partial_i, A_j] f &= \partial_i (A_j f) -A_j \partial_i f \\\\ &= (\partial_i A_j) f + A_j \partial_if - A_j \partial_i f \\\\ &= (\partial_iA_j)f \end{aligned}$  
 >   
-> 所以 $[\partial\_i, A\_j] = (\partial\_i A\_j)$ 。  
->   
-> 于是  
->   
-> $\begin{aligned} [D\_i, D\_j] &= \mathrm{i}e[\partial\_i, A\_j] -\mathrm{i}e[\partial\_j,A\_i] \\\\ &= \mathrm{i}e (\partial\_i A\_j - \partial\_j A\_i) \\\\ &= \mathrm{i}e \epsilon\_{ijk}B^k \end{aligned}$  
+> 所以 $[\partial_i, A_j] = (\partial_i A_j)$ 。  
 >   
 > 于是  
 >   
-> $\begin{aligned} (\mathbf{D}\times\mathbf{D})^k &=\epsilon^{kij} D\_i D\_j \\\\ &= \frac{1}{2} \epsilon^{kij}[D\_i,D\_j] \\\\ &= \frac{\mathrm{i}e}{2} \epsilon^{kij} \epsilon\_{ijl} B^l \\\\ &= \frac{\mathrm{i}e}{2} (\delta^k\_l \delta^j\_j - \delta^k\_j\delta^j\_l) B^l \\\\ &=\mathrm{i}e \delta^k\_l B^l \\\\ &= \mathrm{i}eB^k \end{aligned}$  
+> $\begin{aligned} [D_i, D_j] &= \mathrm{i}e[\partial_i, A_j] -\mathrm{i}e[\partial_j,A_i] \\\\ &= \mathrm{i}e (\partial_i A_j - \partial_j A_i) \\\\ &= \mathrm{i}e \epsilon_{ijk}B^k \end{aligned}$  
+>   
+> 于是  
+>   
+> $\begin{aligned} (\mathbf{D}\times\mathbf{D})^k &=\epsilon^{kij} D_i D_j \\\\ &= \frac{1}{2} \epsilon^{kij}[D_i,D_j] \\\\ &= \frac{\mathrm{i}e}{2} \epsilon^{kij} \epsilon_{ijl} B^l \\\\ &= \frac{\mathrm{i}e}{2} (\delta^k_l \delta^j_j - \delta^k_j\delta^j_l) B^l \\\\ &=\mathrm{i}e \delta^k_l B^l \\\\ &= \mathrm{i}eB^k \end{aligned}$  
 >   
 > 所以 $\mathbf{D}\times \mathbf{D} = \mathrm{i}e\mathbf{B}$ 。  
 >   

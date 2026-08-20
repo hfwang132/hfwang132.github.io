@@ -258,9 +258,11 @@ def parse_published_date_override(value: str | None) -> datetime | None:
 
 KATEX_MATH_DELIMITERS = re.compile(
     r"(?:"
-    r"(?P<inline_open>\\\()(?P<inline_body>.*?)(?P<inline_close>\\\))"
+    r"(?P<display_open>(?<!\\)\$\$)(?P<display_body>.*?)(?P<display_close>(?<!\\)\$\$)"
     r"|"
-    r"(?P<display_open>\\\[)(?P<display_body>.*?)(?P<display_close>\\\])"
+    r"(?P<inline_open>(?<!\\)(?<!\$)\$(?!\$))"
+    r"(?P<inline_body>(?:\\.|[^$\n])+?)"
+    r"(?P<inline_close>(?<!\\)(?<!\$)\$(?!\$))"
     r")",
     re.DOTALL,
 )
@@ -271,15 +273,24 @@ KATEX_TOP_LEVEL_ENVIRONMENT = re.compile(
 
 def _normalize_katex_formula(match: re.Match[str]) -> str:
     body = match.group("inline_body")
+    inline = body is not None
     if body is None:
         body = match.group("display_body")
-    if not KATEX_TOP_LEVEL_ENVIRONMENT.search(body):
-        return match.group(0)
+
+    # Markdown downloaders escape emphasis characters even inside formulas.
+    # Goldmark passthrough preserves those backslashes, so remove only the
+    # Markdown escapes that would otherwise change or invalidate TeX.
+    normalized = re.sub(r"\\([_*])", r"\1", body)
+    normalized = re.sub(r"\\\\([{}])", r"\\\1", normalized)
+    if not KATEX_TOP_LEVEL_ENVIRONMENT.search(normalized):
+        if inline:
+            return f"${normalized}$"
+        return f"$${normalized}$$"
 
     normalized = re.sub(
         r"\\begin\{align\*?\}",
         r"\\begin{aligned}",
-        body,
+        normalized,
     )
     normalized = re.sub(
         r"\\end\{align\*?\}",
@@ -301,19 +312,23 @@ def _normalize_katex_formula(match: re.Match[str]) -> str:
         "",
         normalized,
     )
-    # A few legacy conversions inserted empty inline delimiters between two
+    # A few downloader conversions insert empty inline delimiters between two
     # display environments. Delimiters cannot be nested inside display math.
-    normalized = re.sub(r"\\\((.*?)\\\)", r"\1", normalized, flags=re.DOTALL)
-    normalized = re.sub(r"\\\[(.*?)\\\]", r"\1", normalized, flags=re.DOTALL)
+    normalized = re.sub(
+        r"(?<!\\)(?<!\$)\$(?!\$)(.*?)(?<!\\)(?<!\$)\$(?!\$)",
+        r"\1",
+        normalized,
+        flags=re.DOTALL,
+    )
     # Multi-line environments are display math even when the downloader
     # originally wrapped them in single-dollar inline delimiters.
-    return rf"\[{normalized}\]"
+    return f"$${normalized}$$"
 
 
 def normalize_katex_environments(markdown: str) -> str:
     r"""Make top-level TeX environments valid inside KaTeX delimiters.
 
-    KaTeX rejects constructs such as ``\(\begin{align}...\end{align}\)``
+    KaTeX rejects top-level ``align`` inside inline dollar math
     because ``align`` and ``equation`` are top-level display environments.
     Convert them to their embeddable equivalents while preserving code.
     """
@@ -360,10 +375,10 @@ def normalize_katex_environments(markdown: str) -> str:
 
 
 def normalize_html_sensitive_math(markdown: str) -> str:
-    r"""Keep native passthrough math from being interpreted as HTML tags.
+    r"""Keep dollar-delimited math from being interpreted as HTML tags.
 
-    Hugo preserves ``\(...\)`` and ``\[...\]`` verbatim. A literal ``<`` in
-    that output can therefore start an HTML tag before KaTeX sees the formula.
+    Hugo preserves dollar-delimited math verbatim. A literal ``<`` in that
+    output can therefore start an HTML tag before KaTeX sees the formula.
     Use the equivalent TeX relation commands while protecting code examples.
     """
 
@@ -381,8 +396,8 @@ def normalize_html_sensitive_math(markdown: str) -> str:
         normalized = re.sub(r">\s*", r"\\gt ", normalized)
         normalized = re.sub(r"\\(lt|gt)\s+", r"\\\1 ", normalized)
         if inline:
-            return rf"\({normalized}\)"
-        return rf"\[{normalized}\]"
+            return f"${normalized}$"
+        return f"$${normalized}$$"
 
     def flush_prose() -> None:
         if not prose:
@@ -421,22 +436,22 @@ def normalize_html_sensitive_math(markdown: str) -> str:
 
 
 def convert_math_delimiters(markdown: str) -> str:
-    """Convert downloader-added dollar delimiters to Hugo passthrough delimiters.
+    """Normalize downloaded formulas to dollar-only Markdown delimiters.
 
-    Fenced and inline code are protected. Display math is converted first.
-    This lets Goldmark preserve LaTeX exactly, including ``\\`` line breaks.
+    Fenced and inline code are protected. A formula occupying a whole line is
+    display math; prose formulas remain inline. Legacy native delimiters are
+    accepted as input but never emitted.
     """
 
     result: list[str] = []
     prose: list[str] = []
     in_fence = False
     fence_char = ""
-    display_pattern = re.compile(r"(?<!\\)\$\$(.+?)(?<!\\)\$\$", re.DOTALL)
+    legacy_display_pattern = re.compile(r"\\\[(.+?)\\\]", re.DOTALL)
+    legacy_inline_pattern = re.compile(r"\\\(([^\n]+?)\\\)")
     standalone_pattern = re.compile(
         r"^(\s*)(?<!\\)\$(?!\$)(.+?)(?<!\\)\$(?!\$)(\s*)$"
     )
-    inline_pattern = re.compile(r"(?<!\\)\$(?!\$)([^\n$]+?)(?<!\\)\$(?!\$)")
-
     def flush_prose() -> None:
         if not prose:
             return
@@ -445,20 +460,20 @@ def convert_math_delimiters(markdown: str) -> str:
         for index, segment in enumerate(segments):
             if index % 2:
                 continue
-            segment = display_pattern.sub(
-                lambda match: rf"\[{match.group(1)}\]", segment
+            segment = legacy_display_pattern.sub(
+                lambda match: f"$${match.group(1)}$$", segment
+            )
+            segment = legacy_inline_pattern.sub(
+                lambda match: f"${match.group(1)}$", segment
             )
             segment = "".join(
                 standalone_pattern.sub(
                     lambda match: (
-                        f"{match.group(1)}\\[{match.group(2)}\\]{match.group(3)}"
+                        f"{match.group(1)}$${match.group(2)}$${match.group(3)}"
                     ),
                     line,
                 )
                 for line in segment.splitlines(keepends=True)
-            )
-            segment = inline_pattern.sub(
-                lambda match: rf"\({match.group(1)}\)", segment
             )
             segments[index] = segment
         result.append("".join(segments))

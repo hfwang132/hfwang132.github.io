@@ -115,25 +115,25 @@ Below is the truth table for a 1-bit full adder:
 
 We can write the logical expressions as follows:
 
-\[\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI} \end{aligned}\]
+$$\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI} \end{aligned}$$
 
-> Here, the symbol \(\oplus\) represents exclusive OR (XOR), the symbol \(\cdot\) represents AND, and the symbol \(+\) represents OR. AND has higher precedence than OR.
+> Here, the symbol $\oplus$ represents exclusive OR (XOR), the symbol $\cdot$ represents AND, and the symbol $+$ represents OR. AND has higher precedence than OR.
 
-With \(1\)-bit full adders, we only need to connect the \(\text{CO}\) of the \((n-1)\)th bit to the \(\text{CI}\) of the \(n\)th bit to implement an \(n\)-bit full adder.
+With $1$-bit full adders, we only need to connect the $\text{CO}$ of the $(n-1)$th bit to the $\text{CI}$ of the $n$th bit to implement an $n$-bit full adder.
 
 In this way, we can use XOR gates, AND gates, and OR gates to perform addition.
 
-However, the above logical expressions can be further simplified, thereby reducing the number of logic gates. Let \(\text{DI}=\text{A}\cdot \text{B}\) and \(\text{S}=\text{A} \oplus \text{B}\). Then
+However, the above logical expressions can be further simplified, thereby reducing the number of logic gates. Let $\text{DI}=\text{A}\cdot \text{B}$ and $\text{S}=\text{A} \oplus \text{B}$. Then
 
-\[\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ &= \text{S}\oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI}\\ &= \text{A}\cdot \text{B} + (\text{A} \oplus \text{B})\cdot \text{CI} \\ &= (\text{A} \oplus \text{B}) \,? \,\text{CI} : (\text{A}\cdot \text{B})\\ &= \text{S} \, ? \, \text{CI}: \text{DI} \end{aligned}\]
+$$\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ &= \text{S}\oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI}\\ &= \text{A}\cdot \text{B} + (\text{A} \oplus \text{B})\cdot \text{CI} \\ &= (\text{A} \oplus \text{B}) \,? \,\text{CI} : (\text{A}\cdot \text{B})\\ &= \text{S} \, ? \, \text{CI}: \text{DI} \end{aligned}$$
 
-> Here, \(a \,?\, b:c\) is a ternary operator, meaning \(\text{if }a,\text{ then }b,\text{ else }c\). This operation is implemented by a MUX (multiplexer).  
+> Here, $a \,?\, b:c$ is a ternary operator, meaning $\text{if }a,\text{ then }b,\text{ else }c$. This operation is implemented by a MUX (multiplexer).  
 >   
 > DI is called the generator, while S is called the propagator. As the names imply, DI generates carries and S propagates carries.
 
 Now, we vectorize the above logical expressions:
 
-\[\begin{aligned} \text{O}[n]&=\text{S}[n] \oplus \text{DI}[n] \\ \text{CO}[n]&= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \end{aligned}\]
+$$\begin{aligned} \text{O}[n]&=\text{S}[n] \oplus \text{DI}[n] \\ \text{CO}[n]&= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \end{aligned}$$
 
 We can then draw the circuit diagram (using a 4-bit full adder as an example):
 
@@ -144,7 +144,7 @@ Circuit diagram of a 4-bit full adder. Image source: created by the author
   
   
 
-This circuit implements the operation \(\{\text{CO}, \,\text{O[3:0]}\} = \text{A[3:0]} + \text{B[3:0]} + \text{CI}\).
+This circuit implements the operation $\{\text{CO}, \,\text{O[3:0]}\} = \text{A[3:0]} + \text{B[3:0]} + \text{CI}$.
 
 ### 3.2 Structure of CARRY4  
 
@@ -170,7 +170,7 @@ Are they exactly the same?
 
 > The only difference is that CI can be overridden by CYINIT. When CYINIT is 1, it outputs 1; when CYINIT is 0, it outputs CI. This is merely for programming convenience.  
 >   
-> For example, when calculating subtraction, the logical expression is \(\text{O} = \text{A} + \sim\text{B} + 1\), where \(\sim\) denotes bit-wise NOT. Therefore, when performing subtraction, it is only necessary to set CYINIT of the CARRY4 at the least significant bit to 1.
+> For example, when calculating subtraction, the logical expression is $\text{O} = \text{A} + \sim\text{B} + 1$, where $\sim$ denotes bit-wise NOT. Therefore, when performing subtraction, it is only necessary to set CYINIT of the CARRY4 at the least significant bit to 1.
 
 ### 3.3 CARRY4 as a High-Precision Delay Line  
 
@@ -178,19 +178,19 @@ In the previous two sections, we introduced the primary function of CARRY4—per
 
 There is a relatively long critical path in CARRY4:
 
-\[\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \text{CO}[3] \]
+$$\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \text{CO}[3] $$
 
 The computation of any combinational logic gate requires picosecond-level time. Specifically, in the path above, each arrow takes from a few picoseconds to several tens of picoseconds.
 
 If we connect multiple CARRY4 units end to end, we obtain a very long delay line with picosecond-level delay resolution:
 
-\[\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \cdots \rightarrow \text{CO}[N-1]\]
+$$\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \cdots \rightarrow \text{CO}[N-1]$$
 
-As can be seen from logical expression \(\text{CO}[n]= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \), as long as we set all \(\text{S}[n]\) to logic high, the carry signal can propagate along this chain. The logic level of \(\text{DI}[n]\) does not matter and does not affect propagation of the carry signal.
+As can be seen from logical expression $\text{CO}[n]= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] $, as long as we set all $\text{S}[n]$ to logic high, the carry signal can propagate along this chain. The logic level of $\text{DI}[n]$ does not matter and does not affect propagation of the carry signal.
 
-This actually simulates how humans propagate carries when performing addition: imagine calculating \(1111_2 + 0001_2 = 10000_2\). We first calculate the least significant digit \(1+1=10\) and find that it generates a carry, so we record it in the next digit. This causes the next digit to generate a carry as well, and so on. The time required for a computer to calculate each of these carries is from a few to several tens of picoseconds.
+This actually simulates how humans propagate carries when performing addition: imagine calculating $1111_2 + 0001_2 = 10000_2$. We first calculate the least significant digit $1+1=10$ and find that it generates a carry, so we record it in the next digit. This causes the next digit to generate a carry as well, and so on. The time required for a computer to calculate each of these carries is from a few to several tens of picoseconds.
 
-As shown below, we connect the input pulse (trigger signal) to \(\text{CI}\) and record \(\text{CO}[N-1:0]\) at the rising edge of the next clock cycle, allowing us to determine the time interval \(\tau\) shown in the figure. This makes it possible to determine the arrival time of the input pulse with picosecond precision.
+As shown below, we connect the input pulse (trigger signal) to $\text{CI}$ and record $\text{CO}[N-1:0]$ at the rising edge of the next clock cycle, allowing us to determine the time interval $\tau$ shown in the figure. This makes it possible to determine the arrival time of the input pulse with picosecond precision.
 
 {{< figure src="images/v2-b7668dd3655a7d6c0414ebf92eb6a7ec_r.png" >}}
 

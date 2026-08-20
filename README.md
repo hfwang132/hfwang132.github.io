@@ -390,35 +390,35 @@ Use the ignored cookie file or hidden prompt in that case. Treat a Zhihu cookie
 as a login credential: never place it in an issue, commit, or terminal
 screenshot.
 
-## Native LaTeX
+## LaTeX math
 
 Hugo Goldmark's passthrough extension preserves math during Markdown parsing,
-and the LoveIt theme renders it with KaTeX. New posts use standard delimiters:
+and the LoveIt theme renders it with KaTeX. Every Markdown source uses dollar
+delimiters exclusively:
 
 ```markdown
-Inline math: \(E = mc^2\)
+Inline math: $E = mc^2$
 
-\[
+$$
 \begin{aligned}
 a &= b \\
 c &= d
 \end{aligned}
-\]
+$$
 ```
 
-KaTeX block environments must not be nested directly inside `\(...\)` or
-`\[...\]`. The importer therefore rewrites `align`, `alignat`, and `equation`
-to embeddable display forms such as `aligned`. The test suite also scans every
-post for invalid legacy nesting before deployment.
+Use one dollar on each side for inline math and two dollars on each side for
+display math. Parenthesis- and bracket-style TeX delimiters are forbidden in
+Markdown. The importer rewrites `align`, `alignat`, and `equation` to
+embeddable display forms such as `aligned`, and the production audit rejects
+any non-dollar delimiter before deployment.
 
 LaTeX line breaks therefore remain `\\`. The legacy whole-file MathJax
-replacement and undo scripts have been removed. Historical posts retain their
-existing `$ ... $` syntax for backward compatibility.
+replacement and undo scripts have been removed.
 
-Use `\lt` and `\gt` instead of literal `<` and `>` inside native passthrough
-math. In particular, a literal `<` can be interpreted as the beginning of an
-HTML tag before KaTeX receives the formula. The importer normalizes these
-relations automatically.
+Use `\lt` and `\gt` instead of literal `<` and `>` inside math. In particular,
+a literal `<` can be interpreted as the beginning of an HTML tag before KaTeX
+receives the formula. The importer normalizes these relations automatically.
 
 The production math audit builds the site, extracts every formula from the
 rendered HTML, and parses it with the same bundled KaTeX version used by the

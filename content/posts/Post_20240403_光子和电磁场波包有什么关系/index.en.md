@@ -14,7 +14,7 @@ author: "Haifei"
 
 ### A Wave Packet Can Correspond to a Photon  
 
-**Example**: A photon can be in a state of **coherent superposition** of different frequencies: \(|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1\). In this case, the photon can manifest as a wave packet.
+**Example**: A photon can be in a state of **coherent superposition** of different frequencies: $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$. In this case, the photon can manifest as a wave packet.
 
 You can imagine **an atom de-exciting and producing a photon**; this photon will of course manifest as a wave packet.
 
@@ -23,7 +23,7 @@ You can imagine **an atom de-exciting and producing a photon**; this photon will
 
 **Definition: Single-Photon State**
 
-A state of the form \(\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle\) is called a single-photon state, where \(|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle\) denotes that there is one photon in the k-th mode, and \(\sum_{k}|c_k|^2=1\).
+A state of the form $\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle$ is called a single-photon state, where $|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle$ denotes that there is one photon in the k-th mode, and $\sum_{k}|c_k|^2=1$.
 
 Intuitively, a coherent superposition of states each having one photon in a different mode is still a single-photon state.
 
@@ -51,19 +51,19 @@ As stated above, a photon can be in a superposition of different frequencies. Mo
 
 When the photon number is very small, the electric and magnetic fields also have significant uncertainty (just as momentum and position have uncertainty). The electric and magnetic fields form a pair of canonical variables.
 
-Schrödinger cat states can be prepared experimentally, in which the electric field is in a superposition of \(|\alpha\rangle\) and \(|-\alpha\rangle\). In this case, if you measure the electric field at a certain point (along the polarization direction), you may obtain either a positive or a negative value.
+Schrödinger cat states can be prepared experimentally, in which the electric field is in a superposition of $|\alpha\rangle$ and $|-\alpha\rangle$. In this case, if you measure the electric field at a certain point (along the polarization direction), you may obtain either a positive or a negative value.
 
-When the photon number is relatively large, such states are very fragile and rapidly decohere into a statistical mixture of \(|\alpha\rangle\) and \(|-\alpha\rangle\).
+When the photon number is relatively large, such states are very fragile and rapidly decohere into a statistical mixture of $|\alpha\rangle$ and $|-\alpha\rangle$.
 
 At lower photon-number levels, such states can be prepared experimentally[[2]](#ref\_2).
 
 **Example 3**: Frequency-entangled state
 
-Two photons can also be in a frequency-entangled state: \(|\psi\rangle=\frac{1}{2}(|\mu\rangle \otimes|\nu\rangle+|\nu\rangle \otimes|\mu\rangle)\). In brief, if the wavelength of one photon is observed to be 1557nm, then the wavelength of the other photon immediately collapses to 1663nm, and vice versa[[1]](#ref\_1).
+Two photons can also be in a frequency-entangled state: $|\psi\rangle=\frac{1}{2}(|\mu\rangle \otimes|\nu\rangle+|\nu\rangle \otimes|\mu\rangle)$. In brief, if the wavelength of one photon is observed to be 1557nm, then the wavelength of the other photon immediately collapses to 1663nm, and vice versa[[1]](#ref\_1).
 
 **Example 4**: Number-entangled state
 
-NOON states can be prepared experimentally: \(|\psi\rangle=\frac{1}{2}(|N,0\rangle + |0,N\rangle)\), meaning that if one mode has N photons, then the other mode has no photons, and vice versa. Moreover, the number can only be 0 or N, not any other value.
+NOON states can be prepared experimentally: $|\psi\rangle=\frac{1}{2}(|N,0\rangle + |0,N\rangle)$, meaning that if one mode has N photons, then the other mode has no photons, and vice versa. Moreover, the number can only be 0 or N, not any other value.
 
 These two modes can be spatial modes. In this case, you can imagine a group of photons in a superposition of all moving left and all moving right. If you detect N photons on one side, then you immediately know that there are no photons at the distant other end, and vice versa.
 
@@ -73,7 +73,7 @@ Of course, when the photon number is relatively large, such states are rather fr
 
 In short, photons have many degrees of freedom. Any degree of freedom you can think of can be superposed and entangled. However, when the photon number is large, there are three difficulties: preparation is difficult, decoherence occurs easily, and characterization is difficult (state tomography).
 
-A photon can be a wave packet, or it may not be a wave packet; a wave packet can be a photon, or it may not be a photon. The key is to understand coherent superposition in quantum mechanics: \(\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle\).
+A photon can be a wave packet, or it may not be a wave packet; a wave packet can be a photon, or it may not be a photon. The key is to understand coherent superposition in quantum mechanics: $\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle$.
 
 ## References  
 

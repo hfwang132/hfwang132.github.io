@@ -89,9 +89,9 @@ The red and green dashed lines in the figure are lines of simultaneity. To measu
 
 From the figure, the moving object appears to be longer (the green dashed line), but the length contraction effect tells us that a moving object becomes shorter.
 
-This is because four-dimensional spacetime is not a Euclidean space, but a Minkowski space. In Euclidean space, the distance between two points is \(s=\sqrt{x^2+y^2}\) , but in Minkowski space, the “spacelike interval” between two points is \(s=\sqrt{x^2-t^2}\) , with a minus sign added to the square of time. Thus, the green dashed line is actually shorter than the red dashed line.
+This is because four-dimensional spacetime is not a Euclidean space, but a Minkowski space. In Euclidean space, the distance between two points is $s=\sqrt{x^2+y^2}$ , but in Minkowski space, the “spacelike interval” between two points is $s=\sqrt{x^2-t^2}$ , with a minus sign added to the square of time. Thus, the green dashed line is actually shorter than the red dashed line.
 
-(Note: Corresponding to the “spacelike interval,” there is also a “timelike interval.” The former represents distance in space, while the latter represents distance in time. The former is defined as \(\sqrt{x^2-t^2}\) , and the latter is defined as \(\sqrt{t^2-x^2}\) )
+(Note: Corresponding to the “spacelike interval,” there is also a “timelike interval.” The former represents distance in space, while the latter represents distance in time. The former is defined as $\sqrt{x^2-t^2}$ , and the latter is defined as $\sqrt{t^2-x^2}$ )
 
 3. It can intuitively explain why velocity addition still cannot exceed the speed of light.
 
@@ -111,4 +111,4 @@ The figure on the right clearly shows that, from Little Blue's perspective, Litt
 
 Q: How is the length of a curve calculated in Minkowski space?
 
-A: Simply divide the curve into many small line segments, calculate their lengths separately according to \(s=\sqrt{x^2-t^2}\) , and then add them together.
+A: Simply divide the curve into many small line segments, calculate their lengths separately according to $s=\sqrt{x^2-t^2}$ , and then add them together.

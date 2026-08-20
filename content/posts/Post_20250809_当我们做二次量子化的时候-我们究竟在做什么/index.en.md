@@ -17,16 +17,16 @@ The terms first quantization and second quantization can easily lead one to beli
 
 Consider a quantum state that is an equal-weight coherent superposition of the following two cases:
 
-1. The particle number is 1, and the wavefunction is $\psi\_1(x\_1)$
-2. The particle number is 2, and the wavefunction is $\psi\_2(x\_1, x\_2)$
+1. The particle number is 1, and the wavefunction is $\psi_1(x_1)$
+2. The particle number is 2, and the wavefunction is $\psi_2(x_1, x_2)$
 
 For such a quantum state, there is no way to write down its wavefunction. Writing it this way is clearly also incorrect:
 
-$\psi(x\_1,x\_2) = \frac{1}{\sqrt{2}}\psi\_1(x\_1)+\frac{1}{\sqrt{2}}\psi\_2(x\_1,x\_2) \quad (\times)$
+$\psi(x_1,x_2) = \frac{1}{\sqrt{2}}\psi_1(x_1)+\frac{1}{\sqrt{2}}\psi_2(x_1,x_2) \quad (\times)$
 
 In fact, the correct expression can only be written in the language of second quantization:
 
-$\begin{aligned} |\psi\rangle = \frac{1}{\sqrt{2}} \int \mathrm{d}x\_1 \psi\_1(x\_1) \hat{\psi}^\dagger(x\_1) |\text{vac}\rangle + \frac{1}{\sqrt{2}} \iint \frac{1}{2}\mathrm{d}x\_1\mathrm{d}x\_2 \psi\_2(x\_1,x\_2) \hat{\psi}^\dagger(x\_1)\hat{\psi}^\dagger(x\_2) | \text{vac}\rangle \end{aligned}$
+$\begin{aligned} |\psi\rangle = \frac{1}{\sqrt{2}} \int \mathrm{d}x_1 \psi_1(x_1) \hat{\psi}^\dagger(x_1) |\text{vac}\rangle + \frac{1}{\sqrt{2}} \iint \frac{1}{2}\mathrm{d}x_1\mathrm{d}x_2 \psi_2(x_1,x_2) \hat{\psi}^\dagger(x_1)\hat{\psi}^\dagger(x_2) | \text{vac}\rangle \end{aligned}$
 
 Here, $\hat{\psi}^\dagger$ is the field creation operator, and $|\text{vac}\rangle$ is the vacuum state.
 
@@ -34,11 +34,11 @@ The reason we need only first quantization most of the time in quantum mechanics
 
 On the other hand, although photon number is usually not conserved, quantum mechanics treats the photon field as a classical electromagnetic field. The classical electromagnetic field happens to approximately characterize the most commonly occurring state of light in the universe—the coherent state:
 
-$\begin{aligned} |\alpha\_\mathbf{k}\rangle &=  \exp(-|\alpha\_\mathbf{k}|^2/2)\exp(\alpha\_\mathbf{k}\hat{a}\_\mathbf{k}) | \text{vac}\rangle \\\\ &= \exp(-|\alpha\_\mathbf{k}|^2/2) \sum\_{n=0}^{\infty} \frac{\alpha^n\_\mathbf{k}}{\sqrt{n!}} |n\_\mathbf{k}\rangle \end{aligned}$
+$\begin{aligned} |\alpha_\mathbf{k}\rangle &=  \exp(-|\alpha_\mathbf{k}|^2/2)\exp(\alpha_\mathbf{k}\hat{a}_\mathbf{k}) | \text{vac}\rangle \\\\ &= \exp(-|\alpha_\mathbf{k}|^2/2) \sum_{n=0}^{\infty} \frac{\alpha^n_\mathbf{k}}{\sqrt{n!}} |n_\mathbf{k}\rangle \end{aligned}$
 
-Here, $\mathbf{k}$ denotes the spatial and polarization modes, $\hat{a}\_\mathbf{k}$ is the creation operator for mode $\mathbf{k}$, $|n\_\mathbf{k}\rangle$ is the $n$-particle number state of mode $\mathbf{k}$, and $\alpha\_\mathbf{k} \in \mathbb{C}$ describes the amplitude and phase of mode $\mathbf{k}$. Thus, with the electromagnetic field $A$ as a superposition of different $\mathbf{k}$ modes, its corresponding quantum state can be written as:
+Here, $\mathbf{k}$ denotes the spatial and polarization modes, $\hat{a}_\mathbf{k}$ is the creation operator for mode $\mathbf{k}$, $|n_\mathbf{k}\rangle$ is the $n$-particle number state of mode $\mathbf{k}$, and $\alpha_\mathbf{k} \in \mathbb{C}$ describes the amplitude and phase of mode $\mathbf{k}$. Thus, with the electromagnetic field $A$ as a superposition of different $\mathbf{k}$ modes, its corresponding quantum state can be written as:
 
-$\begin{aligned} |A\rangle = \exp\left(-\frac{1}{2}\sum\_{\mathbf{k}}|\alpha\_\mathbf{k}|^2\right)\exp\left(\sum\_{\mathbf{k}}\alpha\_\mathbf{k}\hat{a}\_\mathbf{k}\right) | \text{vac}\rangle \end{aligned}$
+$\begin{aligned} |A\rangle = \exp\left(-\frac{1}{2}\sum_{\mathbf{k}}|\alpha_\mathbf{k}|^2\right)\exp\left(\sum_{\mathbf{k}}\alpha_\mathbf{k}\hat{a}_\mathbf{k}\right) | \text{vac}\rangle \end{aligned}$
 
 It can be shown that this is a minimum-uncertainty state for the electric-field and magnetic-field operators, corresponding to a macroscopic classical electromagnetic wave.
 

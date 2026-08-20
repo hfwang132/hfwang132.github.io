@@ -19,18 +19,16 @@ SPEC.loader.exec_module(MODULE)
 class MathDelimiterTests(unittest.TestCase):
     def test_preserves_latex_backslashes(self):
         source = r"$\begin{aligned}a&=b\\c&=d\end{aligned}$"
-        expected = r"\[\begin{aligned}a&=b\\c&=d\end{aligned}\]"
+        expected = r"$$\begin{aligned}a&=b\\c&=d\end{aligned}$$"
         self.assertEqual(MODULE.convert_math_delimiters(source), expected)
 
     def test_keeps_formula_inside_prose_inline(self):
         source = r"Energy is $E=mc^2$ here."
-        expected = r"Energy is \(E=mc^2\) here."
-        self.assertEqual(MODULE.convert_math_delimiters(source), expected)
+        self.assertEqual(MODULE.convert_math_delimiters(source), source)
 
     def test_converts_display_math(self):
         source = "$$x_1 \\\\\ny_2$$\n"
-        expected = "\\[x_1 \\\\\ny_2\\]\n"
-        self.assertEqual(MODULE.convert_math_delimiters(source), expected)
+        self.assertEqual(MODULE.convert_math_delimiters(source), source)
 
     def test_does_not_touch_code(self):
         source = "Use `$x$` here.\n```tex\n$x$\n```\n"
@@ -38,55 +36,60 @@ class MathDelimiterTests(unittest.TestCase):
 
     def test_converts_align_nested_in_inline_math_to_display_aligned(self):
         source = r"> $\begin{align}a&=b\\c&=d\end{align}$"
-        expected = r"> \[\begin{aligned}a&=b\\c&=d\end{aligned}\]"
+        expected = r"> $$\begin{aligned}a&=b\\c&=d\end{aligned}$$"
         self.assertEqual(MODULE.convert_math_delimiters(source), expected)
 
     def test_normalizes_align_nested_in_existing_display_math(self):
         source = (
-            r"\[\left\{\begin{align}a&=b\\c&=d"
-            r"\end{align}\right.\]"
+            r"$$\left\{\begin{align}a&=b\\c&=d"
+            r"\end{align}\right.$$"
         )
         expected = (
-            r"\[\left\{\begin{aligned}a&=b\\c&=d"
-            r"\end{aligned}\right.\]"
+            r"$$\left\{\begin{aligned}a&=b\\c&=d"
+            r"\end{aligned}\right.$$"
         )
         self.assertEqual(MODULE.normalize_katex_environments(source), expected)
 
     def test_removes_equation_environment_nested_in_math_delimiters(self):
         source = (
-            r"Result: \(\begin{equation}x=1\end{equation}\)."
+            r"Result: $\begin{equation}x=1\end{equation}$."
         )
-        expected = r"Result: \[x=1\]."
+        expected = r"Result: $$x=1$$."
         self.assertEqual(MODULE.normalize_katex_environments(source), expected)
 
     def test_does_not_normalize_katex_examples_inside_code(self):
         source = (
-            "Use `\\(\\begin{align}a&=b\\end{align}\\)`.\n"
+            "Use `$\\begin{align}a&=b\\end{align}$`.\n"
             "```tex\n"
-            "\\[\\begin{align}a&=b\\end{align}\\]\n"
+            "$$\\begin{align}a&=b\\end{align}$$\n"
             "```\n"
         )
         self.assertEqual(MODULE.normalize_katex_environments(source), source)
 
-    def test_normalizes_html_sensitive_relations_in_native_math(self):
-        source = r"Range \(0<x<1\), bound \[y>0\]."
-        expected = r"Range \(0\lt x\lt 1\), bound \[y\gt 0\]."
+    def test_normalizes_html_sensitive_relations_in_dollar_math(self):
+        source = r"Range $0<x<1$, bound $$y>0$$."
+        expected = r"Range $0\lt x\lt 1$, bound $$y\gt 0$$."
         self.assertEqual(MODULE.normalize_html_sensitive_math(source), expected)
 
+    def test_removes_markdown_escapes_inside_math_only(self):
+        source = r"Value $a\_i^\* + \left\\{b\right\\}$ and prose \_kept."
+        expected = r"Value $a_i^* + \left\{b\right\}$ and prose \_kept."
+        self.assertEqual(MODULE.normalize_katex_environments(source), expected)
+
     def test_does_not_normalize_html_sensitive_relations_inside_code(self):
-        source = "Use `\\(0<x<1\\)` here.\n```tex\n\\[y>0\\]\n```\n"
+        source = "Use `$0<x<1$` here.\n```tex\n$$y>0$$\n```\n"
         self.assertEqual(MODULE.normalize_html_sensitive_math(source), source)
 
     def test_removes_nested_delimiters_between_display_environments(self):
         source = (
-            r"\[\begin{align}a&=b\end{align}"
-            r"\( \)"
-            r"\begin{align}c&=d\end{align}\]"
+            r"$$\begin{align}a&=b\end{align}"
+            r"$ $"
+            r"\begin{align}c&=d\end{align}$$"
         )
         expected = (
-            r"\[\begin{aligned}a&=b\end{aligned}"
+            r"$$\begin{aligned}a&=b\end{aligned}"
             r" "
-            r"\begin{aligned}c&=d\end{aligned}\]"
+            r"\begin{aligned}c&=d\end{aligned}$$"
         )
         self.assertEqual(MODULE.normalize_katex_environments(source), expected)
 
@@ -343,7 +346,7 @@ class ImportPipelineTests(unittest.TestCase):
             content = post.content_file.read_text(encoding="utf-8")
             self.assertEqual(post.bundle_dir.name, "Post_20260726_Article")
             self.assertIn("draft: false", content)
-            self.assertIn(r"Formula \(x_1\).", content)
+            self.assertIn(r"Formula $x_1$.", content)
             self.assertIn(
                 '{{< figure src="images/figure.png" >}}',
                 content,

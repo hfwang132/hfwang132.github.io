@@ -44,13 +44,13 @@ The correct question should be: what is the probability $w(\mathbf{r},t) \mathrm
 
 $\begin{aligned} w(\mathbf{r},t) \propto |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$
 
-Here $E^{(+)}$ is the electric-field annihilation operator: $E^{(+)}(\mathbf{r},t)=\sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}a\_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)}$, where $\sigma = 0,1$ denotes polarization, $a\_{\mathbf{k},\sigma}$ is the annihilation operator for mode $(\mathbf{k},\sigma)$, $\mathcal{E}\_\mathbf{k}=\sqrt{\frac{\hbar \omega\_\mathbf{k}}{\epsilon\_0 V}}$ is the single-photon amplitude and has the dimensions of an electric field, and $V$ is the mode volume of the optical field.
+Here $E^{(+)}$ is the electric-field annihilation operator: $E^{(+)}(\mathbf{r},t)=\sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}a_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)}$, where $\sigma = 0,1$ denotes polarization, $a_{\mathbf{k},\sigma}$ is the annihilation operator for mode $(\mathbf{k},\sigma)$, $\mathcal{E}_\mathbf{k}=\sqrt{\frac{\hbar \omega_\mathbf{k}}{\epsilon_0 V}}$ is the single-photon amplitude and has the dimensions of an electric field, and $V$ is the mode volume of the optical field.
 
 > As for why the probability is proportional to $\begin{aligned} |\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 \end{aligned}$, and what the proportionality constant is, one must take into account the dynamics of the detector itself (usually an atom) and use the full quantum field theory approach. This will not be discussed further here (hand-wavingly).
 
 However, when detecting a photon, we usually do not know what the final state is; we only know that one photon has been detected. Therefore, we need to sum over the final state $|f\rangle$:
 
-$\begin{aligned} \sum\_f|\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 &= \sum\_f\langle i | E^{(-)}|f\rangle \langle f| E^{(+)} |  i\rangle \\\\ &= \langle i|E^{(-)}E^{(+)}|i\rangle  \end{aligned}$
+$\begin{aligned} \sum_f|\langle f | E^{(+)}(\mathbf{r},t)| i\rangle|^2 &= \sum_f\langle i | E^{(-)}|f\rangle \langle f| E^{(+)} |  i\rangle \\\\ &= \langle i|E^{(-)}E^{(+)}|i\rangle  \end{aligned}$
 
 Therefore, the probability that the quantum state of the optical field, initially in state $|i\rangle$, evolves during the interval from $t$ to $t+\mathrm{d}t$ and has one photon detected (absorbed) at $\mathbf{r}$, becoming the final state $|f\rangle$, is $w(\mathbf{r},t) \propto \langle i|E^{(-)}E^{(+)}|i\rangle $.
 
@@ -60,25 +60,25 @@ Clearly, $\langle E^{(-)}E^{(+)}\rangle $ is the field quantity closest to a pro
 
 Since the nonconservation of photon number prevents normalization, can we artificially restrict the photon number? The answer is yes. We can restrict the number of photons to one, with the single-photon state given by:
 
-$|1\_\psi\rangle = \sum\_{\mathbf{k},\sigma} \psi\_\mathbf{k,\sigma}|1\_\mathbf{k,\sigma}\rangle = \sum\_\mathbf{k,\sigma} \psi\_\mathbf{k,\sigma} a^\dagger\_\mathbf{k,\sigma} |0\rangle$
+$|1_\psi\rangle = \sum_{\mathbf{k},\sigma} \psi_\mathbf{k,\sigma}|1_\mathbf{k,\sigma}\rangle = \sum_\mathbf{k,\sigma} \psi_\mathbf{k,\sigma} a^\dagger_\mathbf{k,\sigma} |0\rangle$
 
-where $\sum\_{\mathbf{k},\sigma} |\psi\_\mathbf{k,\sigma}|^2 = 1$.
+where $\sum_{\mathbf{k},\sigma} |\psi_\mathbf{k,\sigma}|^2 = 1$.
 
 We can then define something resembling a wavefunction [3]:
 
-$\psi(\mathbf{r},t) = \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\psi\rangle$
+$\psi(\mathbf{r},t) = \langle 0 | E^{(+)}(\mathbf{r},t) | 1_\psi\rangle$
 
-The probability of detecting one photon in some region $D$ is then proportional to $\int\_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r}$. This is because:
+The probability of detecting one photon in some region $D$ is then proportional to $\int_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r}$. This is because:
 
-$\begin{aligned} \int\_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r} &= \langle 1\_\psi | E^{(-)}(\mathbf{r}) | 0\rangle\langle 0 | E^{(+)}(\mathbf{r}) | 1\_\psi\rangle \\\\ &=  \langle 1\_\psi | E^{(-)}(\mathbf{r}) E^{(+)}(\mathbf{r}) | 1\_\psi\rangle \end{aligned}$
+$\begin{aligned} \int_D |\psi(\mathbf{r})|^2 \mathrm{d}^3 \mathbf{r} &= \langle 1_\psi | E^{(-)}(\mathbf{r}) | 0\rangle\langle 0 | E^{(+)}(\mathbf{r}) | 1_\psi\rangle \\\\ &=  \langle 1_\psi | E^{(-)}(\mathbf{r}) E^{(+)}(\mathbf{r}) | 1_\psi\rangle \end{aligned}$
 
-> The second equality follows because $E^{(-)}$ annihilates one photon, causing $ E^{(+)}(\mathbf{r}) | 1\_\psi\rangle$ to be proportional to $|0\rangle$.
+> The second equality follows because $E^{(-)}$ annihilates one photon, causing $ E^{(+)}(\mathbf{r}) | 1_\psi\rangle$ to be proportional to $|0\rangle$.
 
 To make $\psi(\mathbf{r},t)$ a genuine probability distribution, we must also normalize it to eliminate the dimensions. Let us first expand $\psi(\mathbf{r},t)$:
 
-$\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1\_\psi\rangle \\\\ &= \left\langle 0 \left| \sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}a\_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma} a^\dagger\_\mathbf{k,\sigma} \right| 0 \right\rangle \\\\ &=  \sum\_\mathbf{k,\sigma} \mathcal{E}\_\mathbf{k}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_\mathbf{k} t)} \psi\_\mathbf{k,\sigma}  \end{aligned}$
+$\begin{aligned} \psi(\mathbf{r},t) &= \langle 0 | E^{(+)}(\mathbf{r},t) | 1_\psi\rangle \\\\ &= \left\langle 0 \left| \sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}a_\mathbf{k,\sigma}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)} \psi_\mathbf{k,\sigma} a^\dagger_\mathbf{k,\sigma} \right| 0 \right\rangle \\\\ &=  \sum_\mathbf{k,\sigma} \mathcal{E}_\mathbf{k}e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_\mathbf{k} t)} \psi_\mathbf{k,\sigma}  \end{aligned}$
 
-Here $\mathcal{E}\_\mathbf{k}$ carries the dimensions of an electric field. We only need to add the denominator corresponding to the sum to obtain a dimensionless single-photon probability distribution.
+Here $\mathcal{E}_\mathbf{k}$ carries the dimensions of an electric field. We only need to add the denominator corresponding to the sum to obtain a dimensionless single-photon probability distribution.
 
 However, this applies only to the single-photon subspace. Since photon number is generally not conserved, its range of application is very limited. Furthermore, unlike the Schrödinger wavefunction, it cannot define a conserved probability current.
 
@@ -86,7 +86,7 @@ However, this applies only to the single-photon subspace. Since photon number is
 
 Question 2: Since the electromagnetic field is not a probability wave, what exactly is the electromagnetic field?
 
-The electromagnetic field is essentially the photon field $A\_\mu$ in quantum field theory. Like the fields $\psi$ of all other kinds of particles (the Dirac field, gluon field, quark field...), the photon field is a quantum field.
+The electromagnetic field is essentially the photon field $A_\mu$ in quantum field theory. Like the fields $\psi$ of all other kinds of particles (the Dirac field, gluon field, quark field...), the photon field is a quantum field.
 
 As for what a quantum field is, the answer must be sought in quantum field theory. Since this article is not a quantum field theory textbook, readers will have to consult one themselves.
 
@@ -98,31 +98,31 @@ As for what a quantum field is, the answer must be sought in quantum field theor
 
 ## Appendix 1: How the Dirac Equation Approximates the Schrödinger Equation / How a Quantum Field Approximates a Probability Wave  
 > The Dirac equation  
-> $\mathrm{i}\gamma^\mu D\_\mu \psi - m\psi=0$,  
+> $\mathrm{i}\gamma^\mu D_\mu \psi - m\psi=0$,  
 > where  
 > $\gamma^0 = \begin{bmatrix} I & 0 \\\\ 0 &-I \end{bmatrix},\  \gamma^i=\begin{bmatrix} 0 & \sigma^i \\\\ -\sigma^i & 0 \end{bmatrix} \quad(i=1,2,3)$   
 > $\sigma^i $ are the Pauli matrices,  
-> and $\psi = \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix}$, where $\psi\_1 = \begin{bmatrix}\psi\_{1\uparrow} \\\\ \psi\_{1\downarrow}\end{bmatrix}$ are the two spin components of the electron, and $\psi\_2 = \begin{bmatrix}\psi\_{2\uparrow} \\\\ \psi\_{2\downarrow}\end{bmatrix}$ are the two spin components of the positron.  
+> and $\psi = \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix}$, where $\psi_1 = \begin{bmatrix}\psi_{1\uparrow} \\\\ \psi_{1\downarrow}\end{bmatrix}$ are the two spin components of the electron, and $\psi_2 = \begin{bmatrix}\psi_{2\uparrow} \\\\ \psi_{2\downarrow}\end{bmatrix}$ are the two spin components of the positron.  
 > Substituting into the Dirac equation gives:  
-> $\mathrm{i}\begin{bmatrix} I & 0 \\\\ 0 &-I \end{bmatrix} D\_t \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix} + \mathrm{i} \begin{bmatrix} 0 & \bm\sigma \cdot \mathbf{D} \\\\ -\bm\sigma \cdot \mathbf{D} & 0 \end{bmatrix} \begin{bmatrix}\psi\_1 \\\\ \psi\_2 \end{bmatrix} -m \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix}=0$   
-> where $D\_t =  \partial\_t +\mathrm{i}eA\_0 = \partial\_t - \mathrm{i}e\phi$, $\mathbf{D} = \nabla +\mathrm{i}e\mathbf{A}$ (using the $(-,+,+,+)$ metric convention).  
+> $\mathrm{i}\begin{bmatrix} I & 0 \\\\ 0 &-I \end{bmatrix} D_t \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix} + \mathrm{i} \begin{bmatrix} 0 & \bm\sigma \cdot \mathbf{D} \\\\ -\bm\sigma \cdot \mathbf{D} & 0 \end{bmatrix} \begin{bmatrix}\psi_1 \\\\ \psi_2 \end{bmatrix} -m \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix}=0$   
+> where $D_t =  \partial_t +\mathrm{i}eA_0 = \partial_t - \mathrm{i}e\phi$, $\mathbf{D} = \nabla +\mathrm{i}e\mathbf{A}$ (using the $(-,+,+,+)$ metric convention).  
 > Simplifying gives  
-> $\mathrm{i} \begin{bmatrix}D\_t\psi\_1 \\\\ -D\_t\psi\_2\end{bmatrix} +\mathrm{i} \begin{bmatrix}\bm\sigma\cdot \mathbf{D} \psi\_2 \\\\ -\bm\sigma\cdot \mathbf{D}\psi\_1\end{bmatrix} -m \begin{bmatrix}\psi\_1 \\\\ \psi\_2\end{bmatrix}=0$   
+> $\mathrm{i} \begin{bmatrix}D_t\psi_1 \\\\ -D_t\psi_2\end{bmatrix} +\mathrm{i} \begin{bmatrix}\bm\sigma\cdot \mathbf{D} \psi_2 \\\\ -\bm\sigma\cdot \mathbf{D}\psi_1\end{bmatrix} -m \begin{bmatrix}\psi_1 \\\\ \psi_2\end{bmatrix}=0$   
 > that is,  
-> $\boxed{ \begin{aligned} \mathrm{i} D\_t \psi\_1 + \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi\_2 - m\psi\_1 &= 0 \\\\ -\mathrm{i} D\_t \psi\_2 - \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi\_1 - m\psi\_2 &= 0 \end{aligned}  }\quad (\star)$   
-> This is the expanded form of the Dirac equation: we write the electron term $\psi\_1$ and the positron term $\psi\_2$ as two equations. Originally, they were in the same equation.  
-> In the low-energy regime, we do not consider the phase change $\mathrm{e}^{-\mathrm{i}mt}$ due to the electron rest mass, so we separate it out; that is, we replace $\psi = \begin{bmatrix}\psi\_1\\\\ \psi\_2\end{bmatrix}$ with $\psi = \begin{bmatrix}\varphi \mathrm{e}^{-\mathrm{i}mt}\\\\ \chi  \mathrm{e}^{-\mathrm{i}mt}\end{bmatrix}$. Substituting this into the expanded Dirac equation $(\star)$ gives:  
-> $\begin{aligned} &\mathrm{i} D\_t \varphi + \mathrm{i} \bm\sigma \cdot \mathbf{D} \chi  = 0 &(1)\\\\ -&\mathrm{i} D\_t \chi - \mathrm{i} \bm\sigma \cdot \mathbf{D} \varphi - 2m\chi = 0 &(2) \end{aligned}$   
-> Since the positron term $\chi$ is small in the low-energy regime, $D\_t \chi \approx 0$. Substituting this into $(2)$ gives:  
+> $\boxed{ \begin{aligned} \mathrm{i} D_t \psi_1 + \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi_2 - m\psi_1 &= 0 \\\\ -\mathrm{i} D_t \psi_2 - \mathrm{i} \bm\sigma \cdot \mathbf{D} \psi_1 - m\psi_2 &= 0 \end{aligned}  }\quad (\star)$   
+> This is the expanded form of the Dirac equation: we write the electron term $\psi_1$ and the positron term $\psi_2$ as two equations. Originally, they were in the same equation.  
+> In the low-energy regime, we do not consider the phase change $\mathrm{e}^{-\mathrm{i}mt}$ due to the electron rest mass, so we separate it out; that is, we replace $\psi = \begin{bmatrix}\psi_1\\\\ \psi_2\end{bmatrix}$ with $\psi = \begin{bmatrix}\varphi \mathrm{e}^{-\mathrm{i}mt}\\\\ \chi  \mathrm{e}^{-\mathrm{i}mt}\end{bmatrix}$. Substituting this into the expanded Dirac equation $(\star)$ gives:  
+> $\begin{aligned} &\mathrm{i} D_t \varphi + \mathrm{i} \bm\sigma \cdot \mathbf{D} \chi  = 0 &(1)\\\\ -&\mathrm{i} D_t \chi - \mathrm{i} \bm\sigma \cdot \mathbf{D} \varphi - 2m\chi = 0 &(2) \end{aligned}$   
+> Since the positron term $\chi$ is small in the low-energy regime, $D_t \chi \approx 0$. Substituting this into $(2)$ gives:  
 > $\chi \approx - \frac{\mathrm{i}}{2m} \bm\sigma \cdot \mathbf{D} \varphi$   
 > Substituting this again into $(1)$ gives:  
-> $\mathrm{i} D\_t \varphi +  \frac{1}{2m}(\bm\sigma \cdot \mathbf{D})^2 \varphi = 0 $   
+> $\mathrm{i} D_t \varphi +  \frac{1}{2m}(\bm\sigma \cdot \mathbf{D})^2 \varphi = 0 $   
 > It can be shown (see Appendix 2) that  
 > $\begin{aligned} (\bm \sigma \cdot \mathbf{D})^2 &=\mathbf{D}^2 - \mathrm{i}e \bm\sigma\cdot \mathbf{B} \\\\ &= (\nabla +\mathrm{i}e\mathbf{A})^2 - e \bm\sigma\cdot \mathbf{B} \\\\ &= -(\mathbf{p} + e\mathbf{A})^2 - e \bm\sigma\cdot \mathbf{B}  \end{aligned}$   
 > Therefore  
-> $\mathrm{i} D\_t \varphi =  \frac{1}{2m}[(\mathbf{p} + e\mathbf{A})^2 + e \bm\sigma\cdot \mathbf{B} ] \varphi$   
-> Substituting $D\_t = \partial\_t - \mathrm{i}e\phi$ gives  
-> $\boxed{ \mathrm{i} \partial\_t \varphi =  \left[\frac{1}{2m}(\mathbf{p} + e\mathbf{A})^2+ \frac{e}{2m} \bm\sigma\cdot \mathbf{B}  - e\phi  \right]\varphi }$   
+> $\mathrm{i} D_t \varphi =  \frac{1}{2m}[(\mathbf{p} + e\mathbf{A})^2 + e \bm\sigma\cdot \mathbf{B} ] \varphi$   
+> Substituting $D_t = \partial_t - \mathrm{i}e\phi$ gives  
+> $\boxed{ \mathrm{i} \partial_t \varphi =  \left[\frac{1}{2m}(\mathbf{p} + e\mathbf{A})^2+ \frac{e}{2m} \bm\sigma\cdot \mathbf{B}  - e\phi  \right]\varphi }$   
 > This is the Schrödinger equation for an electron (with spin), also called the Pauli equation. Note that $e$ is positive here, whereas the electron $\varphi$ carries negative charge.  
 > The $\varphi$ here is the probability wave, namely the wavefunction referred to in nonrelativistic quantum mechanics.
 
@@ -140,23 +140,23 @@ Prove $(\bm\sigma \cdot \mathbf{D})^2 = \mathbf{D}^2 - e \bm\sigma\cdot \mathbf{
 >   
 > Thus we need to calculate $(\mathbf{D}\times\mathbf{D})$.  
 >   
-> We first calculate $[D\_i, D\_j]$:  
+> We first calculate $[D_i, D_j]$:  
 >   
-> $\begin{aligned} [D\_i, D\_j] &= [\partial\_i +\mathrm{i}eA\_i, \partial\_j +\mathrm{i}eA\_j] \\\\ &= \cancel{[\partial\_i,\partial\_j]} + \cancel{e^2[A\_i, A\_j]} + \mathrm{i}e[\partial\_i, A\_j] - \mathrm{i}e[\partial\_j,A\_i] \end{aligned}$  
+> $\begin{aligned} [D_i, D_j] &= [\partial_i +\mathrm{i}eA_i, \partial_j +\mathrm{i}eA_j] \\\\ &= \cancel{[\partial_i,\partial_j]} + \cancel{e^2[A_i, A_j]} + \mathrm{i}e[\partial_i, A_j] - \mathrm{i}e[\partial_j,A_i] \end{aligned}$  
 >   
-> Thus we need to calculate $[\partial\_i, A\_j]$:  
+> Thus we need to calculate $[\partial_i, A_j]$:  
 >   
-> $\begin{aligned} [\partial\_i, A\_j] f &= \partial\_i (A\_j f) -A\_j \partial\_i f \\\\ &= (\partial\_i A\_j) f + A\_j \partial\_if - A\_j \partial\_i f \\\\ &= (\partial\_iA\_j)f \end{aligned}$  
+> $\begin{aligned} [\partial_i, A_j] f &= \partial_i (A_j f) -A_j \partial_i f \\\\ &= (\partial_i A_j) f + A_j \partial_if - A_j \partial_i f \\\\ &= (\partial_iA_j)f \end{aligned}$  
 >   
-> Therefore $[\partial\_i, A\_j] = (\partial\_i A\_j)$.  
->   
-> Thus  
->   
-> $\begin{aligned} [D\_i, D\_j] &= \mathrm{i}e[\partial\_i, A\_j] -\mathrm{i}e[\partial\_j,A\_i] \\\\ &= \mathrm{i}e (\partial\_i A\_j - \partial\_j A\_i) \\\\ &= \mathrm{i}e \epsilon\_{ijk}B^k \end{aligned}$  
+> Therefore $[\partial_i, A_j] = (\partial_i A_j)$.  
 >   
 > Thus  
 >   
-> $\begin{aligned} (\mathbf{D}\times\mathbf{D})^k &=\epsilon^{kij} D\_i D\_j \\\\ &= \frac{1}{2} \epsilon^{kij}[D\_i,D\_j] \\\\ &= \frac{\mathrm{i}e}{2} \epsilon^{kij} \epsilon\_{ijl} B^l \\\\ &= \frac{\mathrm{i}e}{2} (\delta^k\_l \delta^j\_j - \delta^k\_j\delta^j\_l) B^l \\\\ &=\mathrm{i}e \delta^k\_l B^l \\\\ &= \mathrm{i}eB^k \end{aligned}$  
+> $\begin{aligned} [D_i, D_j] &= \mathrm{i}e[\partial_i, A_j] -\mathrm{i}e[\partial_j,A_i] \\\\ &= \mathrm{i}e (\partial_i A_j - \partial_j A_i) \\\\ &= \mathrm{i}e \epsilon_{ijk}B^k \end{aligned}$  
+>   
+> Thus  
+>   
+> $\begin{aligned} (\mathbf{D}\times\mathbf{D})^k &=\epsilon^{kij} D_i D_j \\\\ &= \frac{1}{2} \epsilon^{kij}[D_i,D_j] \\\\ &= \frac{\mathrm{i}e}{2} \epsilon^{kij} \epsilon_{ijl} B^l \\\\ &= \frac{\mathrm{i}e}{2} (\delta^k_l \delta^j_j - \delta^k_j\delta^j_l) B^l \\\\ &=\mathrm{i}e \delta^k_l B^l \\\\ &= \mathrm{i}eB^k \end{aligned}$  
 >   
 > Therefore $\mathbf{D}\times \mathbf{D} = \mathrm{i}e\mathbf{B}$.  
 >   

@@ -13,7 +13,7 @@ author: "Haifei"
 
 个人最喜欢的理解是把 $\Gamma$ 看成标架丛上的联络，这样一来，克氏符的变换规则
 
-$\boxed{ \begin{aligned} \bar{\Gamma}^i\_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k\_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$
+$\boxed{ \begin{aligned} \bar{\Gamma}^i_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$
 
 就只不过是一个规范变换：
 
@@ -45,7 +45,7 @@ $A \mapsto A \color{red}{+ \mathrm{d}\lambda}$
 
 记 $A^\sharp=(\phi,\mathbf{A})$ 并采用 $(+,-,-,-)$ 度规，那么上式就是：
 
-$\boxed{ \begin{aligned} \phi &\mapsto \phi \color{red}{+ \partial\_t \lambda} \\\\ \mathbf{A} &\mapsto \mathbf{A} \color{red}{- \nabla \lambda} \end{aligned} }$
+$\boxed{ \begin{aligned} \phi &\mapsto \phi \color{red}{+ \partial_t \lambda} \\\\ \mathbf{A} &\mapsto \mathbf{A} \color{red}{- \nabla \lambda} \end{aligned} }$
 
 这就是电磁规范变换。注意此处的 $\nabla$ 代表梯度，而非协变导数。
 
@@ -61,13 +61,13 @@ $\boxed{ \begin{aligned} \phi &\mapsto \phi \color{red}{+ \partial\_t \lambda} \
 
 现在，我们把电磁规范变换照搬到克氏符的情况。唯一的区别就是把 $U(1)$ -主丛换成标架丛 $FM$ ，也就是 $GL(n)$ -主丛。
 
-> 标架（frame）定义为基向量的有序组 $f:=(e\_1, e\_2, ...,e\_n)$ 。标架之间的变换用 $GL(n)$ 来描述，并且 $GL(n)$ 的群作用是自由且传递的，因此标架丛是一个 $GL(n)$ -主丛。
+> 标架（frame）定义为基向量的有序组 $f:=(e_1, e_2, ...,e_n)$ 。标架之间的变换用 $GL(n)$ 来描述，并且 $GL(n)$ 的群作用是自由且传递的，因此标架丛是一个 $GL(n)$ -主丛。
 
 此时的联络 $\Gamma$ 是一个主丛上的李代数取值的 1-形式：
 
-$\Gamma\_{\text{global}} \in \Omega^1(FM, \mathfrak{gl}(n))$
+$\Gamma_{\text{global}} \in \Omega^1(FM, \mathfrak{gl}(n))$
 
-选取一组局部标架 $s$ ，可以将其局部平凡化为 $\Gamma = s^\*\Gamma\_{\text{global}} \in \Omega^1(M, \mathfrak{gl}(n))$ 。
+选取一组局部标架 $s$ ，可以将其局部平凡化为 $\Gamma = s^*\Gamma_{\text{global}} \in \Omega^1(M, \mathfrak{gl}(n))$ 。
 
 它的取值作为李代数 $\mathfrak{gl}(n)$ 的元素，可以作用到标架 $f $ 上得到 $\Gamma f $ ，表示标架的无穷小 $GL(n)$ 变换。
 
@@ -75,11 +75,11 @@ $\Gamma\_{\text{global}} \in \Omega^1(FM, \mathfrak{gl}(n))$
 
 $\Gamma(\cdot) f $
 
-也可以把接受的向量 $X$ 写成 $\Gamma$ 的下标 $\Gamma\_X$ ：
+也可以把接受的向量 $X$ 写成 $\Gamma$ 的下标 $\Gamma_X$ ：
 
-$\Gamma\_X f := \Gamma(X)f $
+$\Gamma_X f := \Gamma(X)f $
 
-这样写出来就很清晰了： $\Gamma$ 是李代数取值的 1-形式，它作用到向量 $X$ 上得到李代数的元素 $\Gamma\_X \in \mathfrak{gl}(n)$ ，而它可以进一步作用到 $f$ 身上得到 $\Gamma\_X f$ 。
+这样写出来就很清晰了： $\Gamma$ 是李代数取值的 1-形式，它作用到向量 $X$ 上得到李代数的元素 $\Gamma_X \in \mathfrak{gl}(n)$ ，而它可以进一步作用到 $f$ 身上得到 $\Gamma_X f$ 。
 
 到此为止，没有任何问题， $\Gamma$ 是一个 1-形式，也就是一个 (0,1)-型张量，只不过它作用到向量后的取值是 $\mathfrak{gl}(n)$ 里的一个矩阵。
 
@@ -87,17 +87,17 @@ $\Gamma\_X f := \Gamma(X)f $
 
 作为 1-形式时， $\Gamma$ 可以展开写成：
 
-$\Gamma =\Gamma\_\mu\mathrm{d}x^\mu$
+$\Gamma =\Gamma_\mu\mathrm{d}x^\mu$
 
-其中 $\Gamma\_\mu$ 是李代数 $\mathfrak{gl}(n)$ 中的元素。这里我们说 $\Gamma$ 是 (0,1)-型张量，没有任何问题。而 $\Gamma\_\mu$ 作为分量也的确是按照 (0,1)-型张量场的分量变换规则来变换的。
+其中 $\Gamma_\mu$ 是李代数 $\mathfrak{gl}(n)$ 中的元素。这里我们说 $\Gamma$ 是 (0,1)-型张量，没有任何问题。而 $\Gamma_\mu$ 作为分量也的确是按照 (0,1)-型张量场的分量变换规则来变换的。
 
-但如果我们要把 $\Gamma\_\mu \in \mathfrak{gl}(n)$ 在局部标架下进一步展开呢？此时有
+但如果我们要把 $\Gamma_\mu \in \mathfrak{gl}(n)$ 在局部标架下进一步展开呢？此时有
 
-$\Gamma\_\mu = (\Gamma\_\mu)\_{j}^i\partial\_i \otimes \mathrm{d}x^j = :\Gamma\_{\mu j}^i \partial\_i \otimes \mathrm{d}x^j$
+$\Gamma_\mu = (\Gamma_\mu)_{j}^i\partial_i \otimes \mathrm{d}x^j = :\Gamma_{\mu j}^i \partial_i \otimes \mathrm{d}x^j$
 
-此时如果我们写下 $\Gamma^i\_j := (\Gamma\_\mu)^i\_j \mathrm{d}x^\mu$ ，那么这个 $\Gamma^i\_j$ 就不是李代数取值的 1-形式了，而是实数取值的 1-形式，相当于我们把 $\Gamma$ 的 $\mathfrak{gl}(n)$ 取值的每一个矩阵元 $\Gamma^i\_j$ 拿出来作为 1-形式。
+此时如果我们写下 $\Gamma^i_j := (\Gamma_\mu)^i_j \mathrm{d}x^\mu$ ，那么这个 $\Gamma^i_j$ 就不是李代数取值的 1-形式了，而是实数取值的 1-形式，相当于我们把 $\Gamma$ 的 $\mathfrak{gl}(n)$ 取值的每一个矩阵元 $\Gamma^i_j$ 拿出来作为 1-形式。
 
-问题就出在这里： $\Gamma^i\_j$ 虽然有上下标，但它本身就是一个 1-形式，而不是任何张量场的分量。而 $\Gamma^i\_j$ 作为 1-形式的定义是依赖于坐标系（ $\partial\_i \otimes \mathrm{d}x^j$ ）的选取的。之所以有些人说它是坐标系依赖的张量场，原因就在于此了。
+问题就出在这里： $\Gamma^i_j$ 虽然有上下标，但它本身就是一个 1-形式，而不是任何张量场的分量。而 $\Gamma^i_j$ 作为 1-形式的定义是依赖于坐标系（ $\partial_i \otimes \mathrm{d}x^j$ ）的选取的。之所以有些人说它是坐标系依赖的张量场，原因就在于此了。
 
 ## 三、标架丛上的规范变换  
 
@@ -113,35 +113,35 @@ $\bar{A}  = g^{-1}A g \color{red}{+ g^{-1} \mathrm{d}g}$
 
 $\bar{\Gamma} = g^{-1} \Gamma g \color{red}{+ g^{-1} \mathrm{d}g}$
 
-然后，将 1-形式 $\bar{\Gamma}$ 和 $\mathrm{d}g$ 在局部标架下展开成 $\bar{\Gamma}\_\mu \mathrm{d}\bar{x}^\mu$ 和 $(\bar{\partial}\_\nu g)\mathrm{d}\bar{x}^\nu$ ：
+然后，将 1-形式 $\bar{\Gamma}$ 和 $\mathrm{d}g$ 在局部标架下展开成 $\bar{\Gamma}_\mu \mathrm{d}\bar{x}^\mu$ 和 $(\bar{\partial}_\nu g)\mathrm{d}\bar{x}^\nu$ ：
 
-$\begin{aligned} \bar{\Gamma}\_\mu \mathrm{d}\bar{x}^\mu &\mapsto g^{-1} (\Gamma\_\nu \mathrm{d}x^\nu) g \color{red}{+ g^{-1} (\bar{\partial}\_\mu g)\mathrm{d}\bar{x}^\mu} \\\\ &= g^\nu\_\mu \ g^{-1} \left(\Gamma\_\nu \mathrm{d}\bar{x}^\mu \right) g \color{red}{+ g^{-1} (\bar{\partial}\_\mu g)\mathrm{d}\bar{x}^\mu}  \end{aligned}$
+$\begin{aligned} \bar{\Gamma}_\mu \mathrm{d}\bar{x}^\mu &\mapsto g^{-1} (\Gamma_\nu \mathrm{d}x^\nu) g \color{red}{+ g^{-1} (\bar{\partial}_\mu g)\mathrm{d}\bar{x}^\mu} \\\\ &= g^\nu_\mu \ g^{-1} \left(\Gamma_\nu \mathrm{d}\bar{x}^\mu \right) g \color{red}{+ g^{-1} (\bar{\partial}_\mu g)\mathrm{d}\bar{x}^\mu}  \end{aligned}$
 
-其中 $\bar{\partial}\_\mu :=\frac{\partial}{\partial \bar{x}^\mu}$ ， $g^\nu\_\mu = \frac{\partial x^\nu}{\partial \bar{x}^\mu}$ 。
+其中 $\bar{\partial}_\mu :=\frac{\partial}{\partial \bar{x}^\mu}$ ， $g^\nu_\mu = \frac{\partial x^\nu}{\partial \bar{x}^\mu}$ 。
 
 将 $\mathrm{d}\bar{x}^\mu$ 拿出来，得到：
 
-$\begin{aligned} \bar{\Gamma}\_\mu  &= g^\nu\_\mu \ g^{-1} \left(\Gamma\_\nu \right) g \color{red}{+ g^{-1} (\bar{\partial}\_\mu g)}  \end{aligned}$
+$\begin{aligned} \bar{\Gamma}_\mu  &= g^\nu_\mu \ g^{-1} \left(\Gamma_\nu \right) g \color{red}{+ g^{-1} (\bar{\partial}_\mu g)}  \end{aligned}$
 
 然后，将规范变换
 
-$\begin{aligned} g = g^i\_j  \partial\_i \otimes \mathrm{d}x^j= \frac{\partial x^i}{\partial \bar{x}^j} \partial\_i \otimes \mathrm{d}x^j \end{aligned}$
+$\begin{aligned} g = g^i_j  \partial_i \otimes \mathrm{d}x^j= \frac{\partial x^i}{\partial \bar{x}^j} \partial_i \otimes \mathrm{d}x^j \end{aligned}$
 
 代入，并取分量得：
 
-$\begin{aligned} (\bar{\Gamma}\_\mu )^i\_j &= g^\nu\_\mu(g^{-1})^i\_k \left(\Gamma\_\nu \right)^k\_l g^l\_j \color{red}{+ (g^{-1})^i\_k (\bar{\partial}\_\mu g^k\_l)}  \end{aligned}$
+$\begin{aligned} (\bar{\Gamma}_\mu )^i_j &= g^\nu_\mu(g^{-1})^i_k \left(\Gamma_\nu \right)^k_l g^l_j \color{red}{+ (g^{-1})^i_k (\bar{\partial}_\mu g^k_l)}  \end{aligned}$
 
 最后，将规范变换的分量
 
-$\begin{aligned} g^i\_j = \frac{\partial x^i}{\partial \bar{x}^j} ,\quad (g^{-1})^i\_j = \frac{\partial \bar{x}^i}{\partial x^j} \end{aligned}$
+$\begin{aligned} g^i_j = \frac{\partial x^i}{\partial \bar{x}^j} ,\quad (g^{-1})^i_j = \frac{\partial \bar{x}^i}{\partial x^j} \end{aligned}$
 
 代入得：
 
-$\begin{aligned} (\bar{\Gamma}\_\mu )^i\_j &= \frac{\partial x^\nu}{\partial \bar{x}^\mu}\frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial x^l}{\partial \bar{x}^j} \left(\Gamma\_\nu \right)^k\_l  \color{red}{+ \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial \bar{x}^\mu \partial \bar{x}^j}}  \end{aligned}$
+$\begin{aligned} (\bar{\Gamma}_\mu )^i_j &= \frac{\partial x^\nu}{\partial \bar{x}^\mu}\frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial x^l}{\partial \bar{x}^j} \left(\Gamma_\nu \right)^k_l  \color{red}{+ \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial \bar{x}^\mu \partial \bar{x}^j}}  \end{aligned}$
 
-记 $\Gamma\_{\mu j}^i := (\Gamma\_{\mu})^{i}\_{j}$ ，就得到了克氏符的变换式：
+记 $\Gamma_{\mu j}^i := (\Gamma_{\mu})^{i}_{j}$ ，就得到了克氏符的变换式：
 
-$\boxed{ \begin{aligned} \bar{\Gamma}^i\_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k\_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$
+$\boxed{ \begin{aligned} \bar{\Gamma}^i_{\mu j} = \frac{\partial \bar{x}^i}{\partial x^k}\frac{\partial x^l}{\partial \bar{x}^j} \frac{\partial x^\nu}{\partial \bar{x}^\mu} \Gamma^k_{\nu l}  \color{red}{ + \frac{\partial \bar{x}^i}{\partial x^k} \frac{\partial^2 x^k}{\partial x^\mu \partial \bar{x}^j}} \end{aligned} }$
 
 有必要记住这个式子吗？没必要，只要记住 $\boxed{ \bar{A}  = g^{-1}A g \color{red}{+ g^{-1} \mathrm{d}g} }$ 就可以了。
 
@@ -201,27 +201,27 @@ $\begin{aligned} \mathrm{D}^2 \psi &= (\mathrm{d} + A\ \wedge)^2 \psi \\\\ &= \c
 
 $\boxed{ F=\mathrm{d} A + A \wedge A }$
 
-将 $F$ 展开成 $F = \frac{1}{2}F\_{\mu\nu} \mathrm{d}x^\mu \wedge \mathrm{d}x^\nu$ ， $A$ 展开成 $A = A\_{\mu} \mathrm{d}x^{\mu}$ ，代入上式得：
+将 $F$ 展开成 $F = \frac{1}{2}F_{\mu\nu} \mathrm{d}x^\mu \wedge \mathrm{d}x^\nu$ ， $A$ 展开成 $A = A_{\mu} \mathrm{d}x^{\mu}$ ，代入上式得：
 
-$F\_{\mu\nu} = \partial\_\mu A\_\nu - \partial\_\nu A\_\mu + [A\_\mu , A\_\nu]$
+$F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + [A_\mu , A_\nu]$
 
-以上推导适用于一切主丛。现在，我们考虑标架丛作为主丛，其纤维上有自由且传递的 $GL(n)$ 作用，李代数为 $\mathfrak{gl}(n)$ ，于是上式的左右两边都是 $\mathfrak{gl}(n)$ 中的矩阵： $F\_{\mu\nu} = \{ (F\_{\mu\nu})^i\_j\}, \ \ A\_{\mu}=\{(A\_\mu)^i\_j\}$ 。
+以上推导适用于一切主丛。现在，我们考虑标架丛作为主丛，其纤维上有自由且传递的 $GL(n)$ 作用，李代数为 $\mathfrak{gl}(n)$ ，于是上式的左右两边都是 $\mathfrak{gl}(n)$ 中的矩阵： $F_{\mu\nu} = \{ (F_{\mu\nu})^i_j\}, \ \ A_{\mu}=\{(A_\mu)^i_j\}$ 。
 
-记 $R^i\_{j\mu\nu} := (F\_{\mu\nu})^i\_j$ ， $\Gamma^{i}\_{\mu j}:= (A\_\mu)^i\_j$ ，代入上式得：
+记 $R^i_{j\mu\nu} := (F_{\mu\nu})^i_j$ ， $\Gamma^{i}_{\mu j}:= (A_\mu)^i_j$ ，代入上式得：
 
-$\boxed{ R^i\_{j\mu\nu}= \partial\_\mu \Gamma^i\_{\nu j} - \partial\_\nu \Gamma^i\_{\mu j} + \Gamma^{i}\_{\mu k} F^{k}\_{\nu j} -  \Gamma^{i}\_{\nu k} F^{k}\_{\mu j} }$
+$\boxed{ R^i_{j\mu\nu}= \partial_\mu \Gamma^i_{\nu j} - \partial_\nu \Gamma^i_{\mu j} + \Gamma^{i}_{\mu k} F^{k}_{\nu j} -  \Gamma^{i}_{\nu k} F^{k}_{\mu j} }$
 
 这正是曲率张量。
 
-诶？等等？为什么联络 $\Gamma^i\_{\mu j}$ 不是张量场的分量，但 $R^i\_{j\mu\nu}$ 却是张量场的分量呢？
+诶？等等？为什么联络 $\Gamma^i_{\mu j}$ 不是张量场的分量，但 $R^i_{j\mu\nu}$ 却是张量场的分量呢？
 
 这是因为，虽然联络 $A$ 不是规范不变的，但曲率 $F$ 是规范不变（或者说规范协变）的。从下式可以看出，曲率的变换式只有齐次项：
 
-$\begin{aligned} \mathrm{\bar{\nabla}} &= g^{-1} \mathrm{\nabla} g \\\\ \Rightarrow \bar{F} &= \bar{\nabla}^2 = (g^{-1} \nabla g)^2 = \underbrace{g^{-1} F g}\_{\text{homogeneous}} \end{aligned}$
+$\begin{aligned} \mathrm{\bar{\nabla}} &= g^{-1} \mathrm{\nabla} g \\\\ \Rightarrow \bar{F} &= \bar{\nabla}^2 = (g^{-1} \nabla g)^2 = \underbrace{g^{-1} F g}_{\text{homogeneous}} \end{aligned}$
 
 对比联络的变换式，它有非齐次项：
 
-$A \mapsto \underbrace{g^{-1}A g}\_{\text{homogeneous}} \color{red}{+ \underbrace{g^{-1} \mathrm{d}g}\_{\text{inhomogeneous}}}$
+$A \mapsto \underbrace{g^{-1}A g}_{\text{homogeneous}} \color{red}{+ \underbrace{g^{-1} \mathrm{d}g}_{\text{inhomogeneous}}}$
 
 ## 补充：标架丛 vs 向量丛  
 

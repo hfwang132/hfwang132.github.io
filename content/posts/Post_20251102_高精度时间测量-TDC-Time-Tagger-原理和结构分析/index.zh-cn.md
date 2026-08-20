@@ -115,25 +115,25 @@ CARRY4 CARRY4_inst (
 
 我们写出逻辑式：
 
-\[\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI} \end{aligned}\]
+$$\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI} \end{aligned}$$
 
-> 其中，符号 \(\oplus\) 代表异或（XOR），符号 \(\cdot\) 代表与（AND），符号 \(+\) 代表或（OR）。AND 的优先级高于 OR。
+> 其中，符号 $\oplus$ 代表异或（XOR），符号 $\cdot$ 代表与（AND），符号 $+$ 代表或（OR）。AND 的优先级高于 OR。
 
-有了 \(1\) 位全加器之后，我们只要把第 \((n-1)\) 位的 \(\text{CO}\) 连接到第 \(n\) 位的 \(\text{CI}\) ，就可以实现 \(n\) 位全加器。
+有了 $1$ 位全加器之后，我们只要把第 $(n-1)$ 位的 $\text{CO}$ 连接到第 $n$ 位的 $\text{CI}$ ，就可以实现 $n$ 位全加器。
 
 这样一来，我们就可以用异或门（XOR），与门（AND），或门（OR）计算加法了。
 
-然而，上述逻辑式还可以进一步简化，从而减少逻辑门的数量。令 \(\text{DI}=\text{A}\cdot \text{B}\) ， \(\text{S}=\text{A} \oplus \text{B}\) ，则
+然而，上述逻辑式还可以进一步简化，从而减少逻辑门的数量。令 $\text{DI}=\text{A}\cdot \text{B}$ ， $\text{S}=\text{A} \oplus \text{B}$ ，则
 
-\[\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ &= \text{S}\oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI}\\ &= \text{A}\cdot \text{B} + (\text{A} \oplus \text{B})\cdot \text{CI} \\ &= (\text{A} \oplus \text{B}) \,? \,\text{CI} : (\text{A}\cdot \text{B})\\ &= \text{S} \, ? \, \text{CI}: \text{DI} \end{aligned}\]
+$$\begin{aligned} \text{O}  &= \text{A} \oplus \text{B} \oplus \text{CI} \\ &= \text{S}\oplus \text{CI} \\ \text{CO} &= \text{A} \cdot \text{B} + \text{A} \cdot \text{CI} + \text{B} \cdot \text{CI}\\ &= \text{A}\cdot \text{B} + (\text{A} \oplus \text{B})\cdot \text{CI} \\ &= (\text{A} \oplus \text{B}) \,? \,\text{CI} : (\text{A}\cdot \text{B})\\ &= \text{S} \, ? \, \text{CI}: \text{DI} \end{aligned}$$
 
-> 其中 \(a \,?\, b:c\) 是三元运算符，表示 \(\text{if }a,\text{ then }b,\text{ else }c\) 。这个运算由 MUX（多路选择器，Multiplexer）实现。  
+> 其中 $a \,?\, b:c$ 是三元运算符，表示 $\text{if }a,\text{ then }b,\text{ else }c$ 。这个运算由 MUX（多路选择器，Multiplexer）实现。  
 >   
 > DI 叫做 generator，S 叫做 propagator。顾名思义，DI 产生进位，S 传播进位。
 
 现在，我们将上述逻辑式向量化：
 
-\[\begin{aligned} \text{O}[n]&=\text{S}[n] \oplus \text{DI}[n] \\ \text{CO}[n]&= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \end{aligned}\]
+$$\begin{aligned} \text{O}[n]&=\text{S}[n] \oplus \text{DI}[n] \\ \text{CO}[n]&= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \end{aligned}$$
 
 于是就可以画出电路图了（以 4 位全加器为例）：
 
@@ -144,7 +144,7 @@ CARRY4 CARRY4_inst (
   
   
 
-这个电路实现了 \(\{\text{CO}, \,\text{O[3:0]}\} = \text{A[3:0]} + \text{B[3:0]} + \text{CI}\) 的运算。
+这个电路实现了 $\{\text{CO}, \,\text{O[3:0]}\} = \text{A[3:0]} + \text{B[3:0]} + \text{CI}$ 的运算。
 
 ### 3.2 CARRY4 的结构  
 
@@ -170,7 +170,7 @@ CARRY4 CARRY4_inst (
 
 > 唯一的不同在于 CI 可以被 CYINIT 覆盖。当 CYINIT 为 1 时，输出 1，当 CYINIT 为 0 时，输出 CI。这只是为了编程方便。  
 >   
-> 例如，当计算减法时，逻辑式为 \(\text{O} = \text{A} + \sim\text{B} + 1\) ，其中 \(\sim\) 为按位否（bit-wise NOT）。所以计算减法时只要将最低位的 CARRY4 的 CYINIT 设置为 1 即可。
+> 例如，当计算减法时，逻辑式为 $\text{O} = \text{A} + \sim\text{B} + 1$ ，其中 $\sim$ 为按位否（bit-wise NOT）。所以计算减法时只要将最低位的 CARRY4 的 CYINIT 设置为 1 即可。
 
 ### 3.3 CARRY4 做高精度延时线  
 
@@ -178,19 +178,19 @@ CARRY4 CARRY4_inst (
 
 CARRY4 里有一条较长的关键路径（critical path）：
 
-\[\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \text{CO}[3] \]
+$$\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \text{CO}[3] $$
 
 任何组合逻辑门的计算都需要皮秒量级的时间。具体到上面的路径，每个箭头要花几皮秒到几十皮秒的时间。
 
 如果我们把多个 CARRY4 首尾相连，我们就得到了一条很长的延时线（delay line），并且延时的精度为皮秒量级：
 
-\[\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \cdots \rightarrow \text{CO}[N-1]\]
+$$\text{CI} \rightarrow \text{CO}[0] \rightarrow \text{CO}[1] \rightarrow \text{CO}[2] \rightarrow \cdots \rightarrow \text{CO}[N-1]$$
 
-从逻辑式 \(\text{CO}[n]= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] \) 中可以看出，我们只要将 \(\text{S}[n]\) 全部设置为高电平， 就可以让进位信号沿着这条链传播下去了。而 \(\text{DI}[n]\) 的高低则无所谓，不影响进位信号的传播。
+从逻辑式 $\text{CO}[n]= \text{S}[n]\,?\, \text{CO}[n-1] : \text{DI}[n] $ 中可以看出，我们只要将 $\text{S}[n]$ 全部设置为高电平， 就可以让进位信号沿着这条链传播下去了。而 $\text{DI}[n]$ 的高低则无所谓，不影响进位信号的传播。
 
-这其实模拟了人做加法时传播进位的过程：想象我们计算 \(1111_2 + 0001_2 = 10000_2\) ，我们先计算最低位的 \(1+1=10\) ，发现产生了进位，于是我们把它记录到下一位。这导致下一位又产生进位，以此类推。而计算机计算这每一个进位所需要的时间是几-几十皮秒。
+这其实模拟了人做加法时传播进位的过程：想象我们计算 $1111_2 + 0001_2 = 10000_2$ ，我们先计算最低位的 $1+1=10$ ，发现产生了进位，于是我们把它记录到下一位。这导致下一位又产生进位，以此类推。而计算机计算这每一个进位所需要的时间是几-几十皮秒。
 
-见下图，我们将输入脉冲（trigger 信号）接到 \(\text{CI}\) ，并在下一个时钟上升沿记录 \(\text{CO}[N-1:0]\) ，就可以知道图中的时间间隔 \(\tau\) 。于是就能以皮秒精度确定输入脉冲到达的时间了。
+见下图，我们将输入脉冲（trigger 信号）接到 $\text{CI}$ ，并在下一个时钟上升沿记录 $\text{CO}[N-1:0]$ ，就可以知道图中的时间间隔 $\tau$ 。于是就能以皮秒精度确定输入脉冲到达的时间了。
 
 {{< figure src="images/v2-b7668dd3655a7d6c0414ebf92eb6a7ec_r.png" >}}
 

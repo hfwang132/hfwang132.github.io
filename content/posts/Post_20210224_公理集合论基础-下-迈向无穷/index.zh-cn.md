@@ -14,65 +14,65 @@ categories: ["数学物理方法"]
 
 在上篇文章中，我们成功地定义了一个唯一的集合，叫做空集，并解决了罗素悖论。下面，我们要用空集来建造更多的集合。为此，我们需要更多的构造性公理。
 
-> 对集公理（Axiom of Pairing）： \(\forall a \forall b \exists c \forall x((x\in c)\leftrightarrow (x=a )\vee (x=b))\)
+> 对集公理（Axiom of Pairing）： $\forall a \forall b \exists c \forall x((x\in c)\leftrightarrow (x=a )\vee (x=b))$
 
 它表示，对于任意 a 和 b，可以构造出一个包含且仅包含 a 和 b 的集合 c。这也是一个构造性公理。
 
 由于我们现在只有空集可以用，我们不妨拿它来试一试。
 
-将对集公理中的 a 和 b 替换为空集 \(\emptyset \) ，我们就得到了一个集合 \(\{\emptyset,\emptyset\}\) ，而根据外延公理，它等于 \(\{\emptyset\}\) 。
+将对集公理中的 a 和 b 替换为空集 $\emptyset $ ，我们就得到了一个集合 $\{\emptyset,\emptyset\}$ ，而根据外延公理，它等于 $\{\emptyset\}$ 。
 
-同理，我们还可以建造 \(\{\{\emptyset\}\}\) 、 \(\{\{\{\emptyset\}\}\}\) 等。
+同理，我们还可以建造 $\{\{\emptyset\}\}$ 、 $\{\{\{\emptyset\}\}\}$ 等。
 
-将对集公理中的 a 和 b 替换为 \(\emptyset \) 和 \(\{\emptyset\}\) ，我们又可以得到 \(\{\emptyset,\{\emptyset\}\}\) ，等等。
+将对集公理中的 a 和 b 替换为 $\emptyset $ 和 $\{\emptyset\}$ ，我们又可以得到 $\{\emptyset,\{\emptyset\}\}$ ，等等。
 
-这样做可以建造出很多集合，但是我们还是不能造出元素个数大于二的集合。例如，\(\{\emptyset,\emptyset\}\) 只有一个元素，\(\{\emptyset,\{\emptyset\}\}\) 有两个元素，等等。
+这样做可以建造出很多集合，但是我们还是不能造出元素个数大于二的集合。例如，$\{\emptyset,\emptyset\}$ 只有一个元素，$\{\emptyset,\{\emptyset\}\}$ 有两个元素，等等。
 
 为了造出含有更多元素的集合，我们再创造一条公理：
 
-> 并集公理（Axiom of Union）： \(\forall x \exists X \forall u(\exists t(u\in t\wedge t\in x ) \leftrightarrow  u \in X)\)
+> 并集公理（Axiom of Union）： $\forall x \exists X \forall u(\exists t(u\in t\wedge t\in x ) \leftrightarrow  u \in X)$
 
 直接解读这些符号的含义比较费劲，下面我们通过一个例子来说明这个公理的意思。
 
-假设我们有一个集合 \(x=\{\{a\},\{b,c\}\}\) ，这个集合有两个元素，可以由对集公理得到。并集公理的作用就是，我们可以由它建造出 \(X=\{a,b,c\}\) 。也就是说，我们可以构造一个新的集合，使得 \(x\) 中的每一个元素中的每一个元素都属于 \(X\) 。
+假设我们有一个集合 $x=\{\{a\},\{b,c\}\}$ ，这个集合有两个元素，可以由对集公理得到。并集公理的作用就是，我们可以由它建造出 $X=\{a,b,c\}$ 。也就是说，我们可以构造一个新的集合，使得 $x$ 中的每一个元素中的每一个元素都属于 $X$ 。
 
-记 \(X=\bigcup x\) ，称 \(X\) 为 \(x\) 的并。特别地，记 \(x\cup y=\bigcup \{x,y\}\) 。这是我们所熟悉的集合的并运算。对于上例，意思就是我们可以构造两个集合的并集 \(\{{a,b}\}\cup \{c\} = \{a,b,c\}\) 。
+记 $X=\bigcup x$ ，称 $X$ 为 $x$ 的并。特别地，记 $x\cup y=\bigcup \{x,y\}$ 。这是我们所熟悉的集合的并运算。对于上例，意思就是我们可以构造两个集合的并集 $\{{a,b}\}\cup \{c\} = \{a,b,c\}$ 。
 
 这样一来，我们就可以建造元素个数大于二的集合。实际上，将 n 个元素的集合与一个元素的集合合并，我们可以建造 (n+1) 个元素的集合。可见，只要这样一直做下去，那么给定任意多的对象，我们都能构造以这些对象为元素的集合。
 
 我们现在就可以定义交、差等运算了，此处略去，读者可以自行尝试定义。
 
 > 【选读】现在我们还可以定义子集和真子集，这是很容易的：  
->  \(\forall u(u\in X \rightarrow u\in Y)\rightarrow X\subseteq Y\)   
-> 我们都知道，空集是任何集合的子集。这一串符号同样可以处理空集的情况。因为对任何 \(u\) ，\(u\in \emptyset\) 是假命题，假命题可以推出任何命题，那么它也可以推出 \(u\in Y\) ，（ \(Y\) 是任意集合），从而 \(\emptyset\subseteq Y\) 。可见“假命题蕴涵任何命题”的规定是非常有用的。
+>  $\forall u(u\in X \rightarrow u\in Y)\rightarrow X\subseteq Y$   
+> 我们都知道，空集是任何集合的子集。这一串符号同样可以处理空集的情况。因为对任何 $u$ ，$u\in \emptyset$ 是假命题，假命题可以推出任何命题，那么它也可以推出 $u\in Y$ ，（ $Y$ 是任意集合），从而 $\emptyset\subseteq Y$ 。可见“假命题蕴涵任何命题”的规定是非常有用的。
 
 到此为止，我们已经可以定义自然数了：
 
-> 首先，定义 \(\emptyset=0\) 。  
+> 首先，定义 $\emptyset=0$ 。  
 >   
-> 根据对集公理，可以构造出 \(\{\emptyset\}\) 。定义 \(\{\emptyset\}=1\) ，即 \(\{0\}=1\) 。  
+> 根据对集公理，可以构造出 $\{\emptyset\}$ 。定义 $\{\emptyset\}=1$ ，即 $\{0\}=1$ 。  
 >   
-> 接着还可以定义 \(\{0,1\}=2\) 。  
+> 接着还可以定义 $\{0,1\}=2$ 。  
 >   
-> 根据并集公理，给定任意多的对象，都能构造以这些对象为元素的集合。因此我们可以定义 \(\{0,1,2\}=3\) 。  
+> 根据并集公理，给定任意多的对象，都能构造以这些对象为元素的集合。因此我们可以定义 $\{0,1,2\}=3$ 。  
 >   
 > 以此类推。
 
-注意到这里的“封装”思想，我们一旦定义好了自然数“3”，就不会把它再写成 \(\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}\) 。
+注意到这里的“封装”思想，我们一旦定义好了自然数“3”，就不会把它再写成 $\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}$ 。
 
 你可能不太满足于“以此类推”四个字。因此我们现在定义自然数的后继：
 
-\[S(x):=x\cup\{x\}\]
+$$S(x):=x\cup\{x\}$$
 
-冒号加等于号表示定义的意思。这样我们就有 \(1=S(0)\) ， \(2=S(1)\) 等等。
+冒号加等于号表示定义的意思。这样我们就有 $1=S(0)$ ， $2=S(1)$ 等等。
 
 注意到零不是任何自然数的后继，这在皮亚诺的算术系统中是一条公理，但是在集合论公理系统中，它是可以被证明的。证明留给有兴趣的读者完成（提示：利用反证法，以及空集没有元素的事实）。
 
-为什么要上文那样定义，而不是直接定义 \(1=\{0\},\,2=\{1\},\, 3=\{2\},\cdots\) 呢？因为如果采用之前的定义，我们有 \(1\subseteq2,\, 1\subseteq3,\,2\subseteq3,\cdots\) 等等，这样我们就有了一个自然的序关系。而如果现在用这种定义，虽然仍然有 \(1\subseteq2,\,2\subseteq3,\cdots\) ，但是 \(1\subseteq3\) 就不成立了，这样我们就失去了一个自然的序关系。
+为什么要上文那样定义，而不是直接定义 $1=\{0\},\,2=\{1\},\, 3=\{2\},\cdots$ 呢？因为如果采用之前的定义，我们有 $1\subseteq2,\, 1\subseteq3,\,2\subseteq3,\cdots$ 等等，这样我们就有了一个自然的序关系。而如果现在用这种定义，虽然仍然有 $1\subseteq2,\,2\subseteq3,\cdots$ ，但是 $1\subseteq3$ 就不成立了，这样我们就失去了一个自然的序关系。
 
 现在我们的数学宇宙有了新的对象——自然数，之后我们可以用自然数定义整数、有理数、实数、复数等等。可见数学大厦是一块砖一块砖砌成的。
 
-现在我们定义了自然数，那可不可以定义自然数集 \(\{0,1,2,\cdots\}\) 呢？即任何一个自然数都是这个集合的元素。
+现在我们定义了自然数，那可不可以定义自然数集 $\{0,1,2,\cdots\}$ 呢？即任何一个自然数都是这个集合的元素。
 
 很遗憾，不行。因为并集公理只能保证“任意多”，不能保证“无穷多”。换言之，你给我任意多的自然数，我都可以用并集公理构造出一个集合，使得这些自然数都是它的元素。
 
@@ -83,21 +83,21 @@ categories: ["数学物理方法"]
 但是数学不会止步于此，我们希望研究“实无穷”，也就是真正的无穷，让甲方无可刁难。
 
 ## 迈向无穷（ZF6:无穷公理、ZF5:幂集公理、ZF8：替换公理模式）  
-> 无穷公理（Axiom of Infinity）： \(\exists X(\emptyset \in X \wedge \forall x(x\in X \rightarrow x\cup\{x\}\in X))\) 。
+> 无穷公理（Axiom of Infinity）： $\exists X(\emptyset \in X \wedge \forall x(x\in X \rightarrow x\cup\{x\}\in X))$ 。
 
-它的意思是，存在集合 \(X\) ，空集属于它，且对于它的任何元素，该元素的后继也属于它。这样我们就有了自然数集。这是真正的无穷集。
+它的意思是，存在集合 $X$ ，空集属于它，且对于它的任何元素，该元素的后继也属于它。这样我们就有了自然数集。这是真正的无穷集。
 
-> 替换公理模式（Axiom Schema of Replacement）： \(\forall A\exists B(B=\{y|\exists x(x\in A\wedge\varphi(x,y)\,)\})\)
+> 替换公理模式（Axiom Schema of Replacement）： $\forall A\exists B(B=\{y|\exists x(x\in A\wedge\varphi(x,y)\,)\})$
 
 它的意思是，任何集合在一个函数下的像仍然是一个集合。
 
-将替换公理模式和无穷公理模式配合起来，我们就可以得到各种各样的可数无穷集。例如，要构造偶数集，我们只需要令 \(\varphi\) 为 \(\varphi(x,y):y=2x\) 。
+将替换公理模式和无穷公理模式配合起来，我们就可以得到各种各样的可数无穷集。例如，要构造偶数集，我们只需要令 $\varphi$ 为 $\varphi(x,y):y=2x$ 。
 
 但是这样只能得到可数无穷集。我们能不能构造基数更大的无穷集呢？幂集公理可以做到。
 
-> 幂集公理（Axiom of Power Set）： \(\forall X\exists Y\forall u(u\in Y\leftrightarrow u\subseteq X)\)
+> 幂集公理（Axiom of Power Set）： $\forall X\exists Y\forall u(u\in Y\leftrightarrow u\subseteq X)$
 
-它的意思是，可以将一个集合的所有子集作为元素，构造一个新的集合。我们把这个集合叫做原来集合的幂集，记为 \(\mathcal{P}(X)\) 。
+它的意思是，可以将一个集合的所有子集作为元素，构造一个新的集合。我们把这个集合叫做原来集合的幂集，记为 $\mathcal{P}(X)$ 。
 
 这样就可以生成“更加无穷”的集合。它们的“势”比可数无穷集更大。
 
@@ -107,13 +107,13 @@ categories: ["数学物理方法"]
 
 存在属于自己的集合吗？
 
-存在一个这样的集合 \(\{x_0,x_1,\cdots\}\) ，使得对于所有 \(n\) ，都有 \(x_{n+1}\in x_n\) 吗？换句话说，存在关于属于号的无穷降链吗？
+存在一个这样的集合 $\{x_0,x_1,\cdots\}$ ，使得对于所有 $n$ ，都有 $x_{n+1}\in x_n$ 吗？换句话说，存在关于属于号的无穷降链吗？
 
 上面的两个例子中的集合都是相当病态的。为了消除这种病态，我们需要正则公理。
 
-> 正则公理： \(\forall x(x\neq \emptyset\rightarrow \exists y(y\in x\wedge x\cap y=\emptyset))\)
+> 正则公理： $\forall x(x\neq \emptyset\rightarrow \exists y(y\in x\wedge x\cap y=\emptyset))$
 
-它表明，在任何非空集合 \(x\) 中，都有对于“ \(\in\) ”的最小元素 \(y\) 。换句话说，在任何非空集合 \(x\) 中，都存在这样一个元素 \(y\) ，使得 \(x\) 中没有元素属于 \(y\) 。
+它表明，在任何非空集合 $x$ 中，都有对于“ $\in$ ”的最小元素 $y$ 。换句话说，在任何非空集合 $x$ 中，都存在这样一个元素 $y$ ，使得 $x$ 中没有元素属于 $y$ 。
 
 读者可以尝试利用正则公理证明“没有属于自己的集合”。这也可以解决罗素悖论。
 
@@ -125,9 +125,9 @@ categories: ["数学物理方法"]
 
 选择公理实在太重要，以至于值得将它的大名作为本节的标题。但是，关于它的科普实在太多，本文没有必要重复造轮子。这里仅给出它的表达式：
 
-\[\forall X[\emptyset\notin X\wedge\forall x\forall y(x\in X\wedge y\in X\rightarrow x\cap y=\emptyset)\rightarrow\exists S \forall x(x\in X\rightarrow\exists !y(S\cap x=\{y\}))]\]
+$$\forall X[\emptyset\notin X\wedge\forall x\forall y(x\in X\wedge y\in X\rightarrow x\cap y=\emptyset)\rightarrow\exists S \forall x(x\in X\rightarrow\exists !y(S\cap x=\{y\}))]$$
 
-其中 \(\exists!y\) 的意思是“存在唯一的y”。
+其中 $\exists!y$ 的意思是“存在唯一的y”。
 
 值得注意的是，选择公理不属于 ZF 系统。ZF 系统 + 选择公理 = ZFC 系统。主流数学使用 ZFC 系统。
 

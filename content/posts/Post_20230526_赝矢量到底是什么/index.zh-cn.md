@@ -14,11 +14,11 @@ author: "Haifei"
 
 我们在物理书中经常看到所谓“赝矢量”（pseudo-vector）和“赝标量”（pseudo-scalar）的说法。
 
-其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 \(v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)\) ，“赝标量”是三个切矢量的外积 \(s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)\) 。
+其实，在 3 维流形上，“赝矢量”是两个切矢量的外积 $v\in T_pM\wedge T_pM=\bigwedge^2(T_pM)$ ，“赝标量”是三个切矢量的外积 $s\in T_pM\wedge T_pM\wedge T_pM=\bigwedge^3(T_pM)$ 。
 
-在配备了内积（或者非退化双线性形式）之后， \(\bigwedge^2(T_pM)\) 和 \(\bigwedge^1(T_pM)\) 之间有 Hodge 对偶关系，所以我们“误把”赝矢量当作矢量了。同理，由于 \(\bigwedge^3(T_pM)\) 和 \(\bigwedge^0(T_pM)\) （标量场）之间有 Hodge 对偶关系，所以我们“误把”赝标量当作标量了。
+在配备了内积（或者非退化双线性形式）之后， $\bigwedge^2(T_pM)$ 和 $\bigwedge^1(T_pM)$ 之间有 Hodge 对偶关系，所以我们“误把”赝矢量当作矢量了。同理，由于 $\bigwedge^3(T_pM)$ 和 $\bigwedge^0(T_pM)$ （标量场）之间有 Hodge 对偶关系，所以我们“误把”赝标量当作标量了。
 
-实际上，3 维流形上的赝矢量，在数学上就是 2-矢量（bivector，2-vector）。它和 2-form 的定义是类似的，只不过 2-vector 在切空间的外积中 \(v\in\bigwedge^2(T_pM)\) ，而 2-form 在余切空间的外积中 \(\omega\in\bigwedge^2(T_p^*M)\) 。
+实际上，3 维流形上的赝矢量，在数学上就是 2-矢量（bivector，2-vector）。它和 2-form 的定义是类似的，只不过 2-vector 在切空间的外积中 $v\in\bigwedge^2(T_pM)$ ，而 2-form 在余切空间的外积中 $\omega\in\bigwedge^2(T_p^*M)$ 。
 
 ---
 
@@ -33,7 +33,7 @@ author: "Haifei"
   
   
 
-但实际上，流形 \(M\) 上点 \(p\) 处的磁场并非一个 vector，而是一个 bivector。即 \(B|_p\in (T_pM)\wedge (T_pM)\) 。它的基为 \(\frac{\partial}{\partial x}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial y}\wedge \frac{\partial}{\partial z},\,\frac{\partial}{\partial z}\wedge \frac{\partial}{\partial x}\) 。
+但实际上，流形 $M$ 上点 $p$ 处的磁场并非一个 vector，而是一个 bivector。即 $B|_p\in (T_pM)\wedge (T_pM)$ 。它的基为 $\frac{\partial}{\partial x}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial y}\wedge \frac{\partial}{\partial z},\,\frac{\partial}{\partial z}\wedge \frac{\partial}{\partial x}$ 。
 
 所以说，并没有什么灵异事件（欢迎收看《走近科学》）。在空间反演变换下，磁场对应的两个 vector 分别都朝向了正确的方向，只不过人类非要用右手螺旋定则，将一个 bivector 看成是一个 vector，这才导致了诡异现象的出现。
 
@@ -52,23 +52,23 @@ author: "Haifei"
 
 ---
 
-顺便一提，电场也是一个 bivector，它的基为 \(\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial x},\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial z}\) ，有一个时间维度。之所以它看起来不是“赝矢量”，是因为我们只考虑了空间反演变换，没有考虑时间反演变换。
+顺便一提，电场也是一个 bivector，它的基为 $\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial x},\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial y},\,\frac{\partial}{\partial t}\wedge \frac{\partial}{\partial z}$ ，有一个时间维度。之所以它看起来不是“赝矢量”，是因为我们只考虑了空间反演变换，没有考虑时间反演变换。
 
 如果考虑余切空间中的电磁 2-形式（采取自然单位制）:
 
-\[\begin{aligned} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned}\]
+$$\begin{aligned} F&=E_x\mathrm{d}t\wedge\mathrm{d}x+E_y\mathrm{d}t\wedge\mathrm{d}y+E_z\mathrm{d}t\wedge\mathrm{d}z\\ &+B_x \mathrm{d}y\wedge\mathrm{d}z + B_y \mathrm{d}z\wedge\mathrm{d}x + B_z\mathrm{d}x\wedge\mathrm{d}y \end{aligned}$$
 
-由于我们可以通过度规张量来任意升降一个张量的指标，所以对上式升指标，我们也可以写出一个 \((2,0)\) 型电磁张量，它以 \(\frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\) 的外积为基。
+由于我们可以通过度规张量来任意升降一个张量的指标，所以对上式升指标，我们也可以写出一个 $(2,0)$ 型电磁张量，它以 $\frac{\partial}{\partial t},\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}$ 的外积为基。
 
-不过我们暂时先采用 \((0,2)\) 型反对称张量（微分形式），因为这样做可以利用外微分（Exterior Derivative） \(\mathrm{d}\) 。
+不过我们暂时先采用 $(0,2)$ 型反对称张量（微分形式），因为这样做可以利用外微分（Exterior Derivative） $\mathrm{d}$ 。
 
-现在，再考虑电流 1-形式： \(J=-\rho\mathrm{d}t+J_x\mathrm{d}x+J_y\mathrm{d}y+J_z\mathrm{d}z\)
+现在，再考虑电流 1-形式： $J=-\rho\mathrm{d}t+J_x\mathrm{d}x+J_y\mathrm{d}y+J_z\mathrm{d}z$
 
-于是，在闵可夫斯基度规 \(\text{diag}(-1,1,1,1)\) 下，麦克斯韦方程就可以写成很简洁的形式：
+于是，在闵可夫斯基度规 $\text{diag}(-1,1,1,1)$ 下，麦克斯韦方程就可以写成很简洁的形式：
 
-\[\left\{\quad \begin{aligned} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{aligned} \right.\]
+$$\left\{\quad \begin{aligned} \mathrm{d}F&=0\\ \star\,\mathrm{d}\star F &= J \end{aligned} \right.$$
 
-其中 \(\star\) 是 Hodge 星算子（也就是 Hodge 对偶）。
+其中 $\star$ 是 Hodge 星算子（也就是 Hodge 对偶）。
 
 可以看出，在外代数的语言中，电磁场是一个 2-vector 或者 2-form，而不是一个 vector 或者 1-form。
 

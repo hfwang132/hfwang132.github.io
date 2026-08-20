@@ -20,23 +20,15 @@ KATEX_LIBRARY = REPO_ROOT / "themes" / "LoveIt" / "assets" / "lib" / "katex" / "
 IGNORED_TAGS = {"script", "noscript", "style", "textarea", "pre", "code", "option"}
 DELIMITERS = (
     ("$$", "$$", True),
-    (r"\[", r"\]", True),
-    (r"\begin{equation}", r"\end{equation}", True),
-    (r"\begin{equation*}", r"\end{equation*}", True),
-    (r"\begin{align}", r"\end{align}", True),
-    (r"\begin{align*}", r"\end{align*}", True),
-    (r"\begin{alignat}", r"\end{alignat}", True),
-    (r"\begin{alignat*}", r"\end{alignat*}", True),
-    (r"\begin{gather}", r"\end{gather}", True),
-    (r"\begin{CD}", r"\end{CD}", True),
     ("$", "$", False),
-    (r"\(", r"\)", False),
 )
-NATIVE_MATH = re.compile(
-    r"(?P<inline>\\\((?P<inline_body>.*?)\\\))"
-    r"|(?P<display>\\\[(?P<display_body>.*?)\\\])",
+DOLLAR_MATH = re.compile(
+    r"(?P<display>(?<!\\)\$\$(?P<display_body>.*?)(?<!\\)\$\$)"
+    r"|(?P<inline>(?<!\\)(?<!\$)\$(?!\$)"
+    r"(?P<inline_body>(?:\\.|[^$\n])+?)(?<!\\)(?<!\$)\$(?!\$))",
     re.DOTALL,
 )
+FORBIDDEN_MATH_DELIMITER = re.compile(r"\\(?:\(|\)|\[|\])")
 TEX_COMMAND_OUTSIDE_MATH = re.compile(
     r"\\(?:"
     r"begin|end|frac|dfrac|tfrac|sqrt|mathbb|mathcal|mathrm|mathsf|"
@@ -293,13 +285,36 @@ def audit_site(site_dir: Path, *, require_katex: bool = True) -> list[AuditIssue
     return issues
 
 
-def audit_source_posts() -> list[AuditIssue]:
-    """Catch characters that can corrupt native passthrough math in HTML."""
+def tracked_markdown_files() -> list[Path]:
+    completed = subprocess.run(
+        ["git", "-c", "core.quotepath=false", "ls-files", "-z", "*.md"],
+        cwd=REPO_ROOT,
+        check=True,
+        capture_output=True,
+    )
+    return [
+        REPO_ROOT / raw.decode("utf-8")
+        for raw in completed.stdout.split(b"\0")
+        if raw
+    ]
+
+
+def audit_source_markdown() -> list[AuditIssue]:
+    """Enforce dollar-only source math and HTML-safe formulas."""
 
     issues: list[AuditIssue] = []
-    posts = REPO_ROOT / "content" / "posts"
-    for path in sorted(posts.glob("*/index*.md")):
+    for path in tracked_markdown_files():
         content = path.read_text(encoding="utf-8")
+        for match in FORBIDDEN_MATH_DELIMITER.finditer(content):
+            line_number = content.count("\n", 0, match.start()) + 1
+            issues.append(
+                AuditIssue(
+                    path.relative_to(REPO_ROOT),
+                    line_number,
+                    "source-delimiter",
+                    f"forbidden math delimiter {match.group(0)!r}; use dollars",
+                )
+            )
         in_fence = False
         prose_lines: list[str] = []
         for line in content.splitlines(keepends=True):
@@ -328,7 +343,7 @@ def audit_source_posts() -> list[AuditIssue]:
                         f"odd number of single-dollar delimiters | {preview}",
                     )
                 )
-        for match in NATIVE_MATH.finditer(prose):
+        for match in DOLLAR_MATH.finditer(prose):
             body = match.group("inline_body")
             if body is None:
                 body = match.group("display_body")
@@ -341,7 +356,7 @@ def audit_source_posts() -> list[AuditIssue]:
                     path.relative_to(REPO_ROOT),
                     line_number,
                     "source-html",
-                    f"literal '<' in native math; use \\lt | {preview}",
+                    f"literal '<' in math; use \\lt | {preview}",
                 )
             )
     return issues
@@ -385,7 +400,7 @@ def main(argv: list[str] | None = None) -> int:
                 destination = Path(temporary)
                 build_site(destination)
                 issues = audit_site(destination, require_katex=not args.no_katex)
-        issues.extend(audit_source_posts())
+        issues.extend(audit_source_markdown())
     except (OSError, RuntimeError, subprocess.CalledProcessError) as exc:
         print(f"Math audit failed: {exc}", file=sys.stderr)
         return 2

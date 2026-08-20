@@ -14,7 +14,7 @@ author: "Haifei"
 
 ### 一个波包可以对应一个光子  
 
-**例**：一个光子可以处于不同频率的**相干叠加**态中： \(|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1\) ，此时该光子可以表现为一个波包。
+**例**：一个光子可以处于不同频率的**相干叠加**态中： $|\psi\rangle=\sum_{k}c_k|k\rangle,\quad \sum_k|c_k|^2=1$ ，此时该光子可以表现为一个波包。
 
 你可以想象**一个原子退激发产生一个光子**，这个光子当然会表现为一个波包。
 
@@ -23,7 +23,7 @@ author: "Haifei"
 
 **定义 单光子态**
 
-形如 \(\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle\) 的态叫做单光子态，其中 \(|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle\) 表示第 k 个模式上有一个光子，且 \(\sum_{k}|c_k|^2=1\) 。
+形如 $\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle$ 的态叫做单光子态，其中 $|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle$ 表示第 k 个模式上有一个光子，且 $\sum_{k}|c_k|^2=1$ 。
 
 直观来看，把不同模式上有一个光子的态相干叠加起来，仍然是单光子态。
 
@@ -51,19 +51,19 @@ author: "Haifei"
 
 在光子数很少的情况下，电场和磁场也是有显著的不确定性的（正如动量和位置具有不确定性一样）。电场和磁场构成一对 canonical variables。
 
-实验上可以制备薛定谔猫态，即电场处于 \(|\alpha\rangle\) 和 \(|-\alpha\rangle\) 的叠加态中。此时，如果你测量某一点（沿偏振方向）的电场，可能测到正，也可能测到负。
+实验上可以制备薛定谔猫态，即电场处于 $|\alpha\rangle$ 和 $|-\alpha\rangle$ 的叠加态中。此时，如果你测量某一点（沿偏振方向）的电场，可能测到正，也可能测到负。
 
-当光子数较多时，这样的态是很脆弱的，会快速退相干为 \(|\alpha\rangle\) 和 \(|-\alpha\rangle\) 的统计混合。
+当光子数较多时，这样的态是很脆弱的，会快速退相干为 $|\alpha\rangle$ 和 $|-\alpha\rangle$ 的统计混合。
 
 而在光子数较低的级别下，实验上可以制备这样的态[[2]](#ref\_2)。
 
 **例 3**：频率纠缠态
 
-两个光子还可以处于频率纠缠态： \(|\psi\rangle=\frac{1}{2}(|\mu\rangle \otimes|\nu\rangle+|\nu\rangle \otimes|\mu\rangle)\) 。简而言之，如果观测到一个光子的波长是 1557nm，那么另一个光子的波长立刻就会坍缩到 1663nm，反之亦然[[1]](#ref\_1)。
+两个光子还可以处于频率纠缠态： $|\psi\rangle=\frac{1}{2}(|\mu\rangle \otimes|\nu\rangle+|\nu\rangle \otimes|\mu\rangle)$ 。简而言之，如果观测到一个光子的波长是 1557nm，那么另一个光子的波长立刻就会坍缩到 1663nm，反之亦然[[1]](#ref\_1)。
 
 **例 4**：数量纠缠态
 
-实验上可以制备 NOON 态： \(|\psi\rangle=\frac{1}{2}(|N,0\rangle + |0,N\rangle)\) ，即，如果一个模式有 N 个光子，那么另一个模式就没有光子，反之亦然。而且要么是 0，要么是 N，不能是别的数。
+实验上可以制备 NOON 态： $|\psi\rangle=\frac{1}{2}(|N,0\rangle + |0,N\rangle)$ ，即，如果一个模式有 N 个光子，那么另一个模式就没有光子，反之亦然。而且要么是 0，要么是 N，不能是别的数。
 
 这两个模式可以是空间模式。此时你可以想象一群光子处于全都往左走和全都往右走的叠加态中。如果你在一边探测到 N 个光子，那么你就能立刻知道遥远的彼端没有光子，反之亦然。
 
@@ -73,7 +73,7 @@ author: "Haifei"
 
 总之，光子的自由度是很多的。你能想到的任何自由度，我们都可以进行叠加和纠缠。只是在光子数较大时有三个困难，一是难以制备，二是容易退相干，三是难以表征（state tomography）。
 
-一个光子可以是一个波包，也可以不是一个波包；一个波包可以是一个光子，也可以不是一个光子。重点在于理解量子力学中的相干叠加（coherent superposition）： \(\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle\) 。
+一个光子可以是一个波包，也可以不是一个波包；一个波包可以是一个光子，也可以不是一个光子。重点在于理解量子力学中的相干叠加（coherent superposition）： $\sum_{k}c_k|0,\cdots,\underbrace{1}_{k-\text{th}},\cdots,0\rangle$ 。
 
 ## 参考  
 

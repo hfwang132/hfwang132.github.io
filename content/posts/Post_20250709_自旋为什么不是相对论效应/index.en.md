@@ -27,7 +27,7 @@ Some may say that the Dirac equation predicted spin-1/2, so half-integer spin is
 
 ---
 
-Some say that integer spin is also quantum. That depends on how you define spin. My understanding is that for a purely classical field, such as the electromagnetic field $A\_{\mu}$, we can likewise discuss spin. Of course, if you quantize it and the field can excite particles, then integer spin undoubtedly also has quantum properties—but that quantumness was already contained in your premise, making it equivalent to a tautological piece of nonsense.
+Some say that integer spin is also quantum. That depends on how you define spin. My understanding is that for a purely classical field, such as the electromagnetic field $A_{\mu}$, we can likewise discuss spin. Of course, if you quantize it and the field can excite particles, then integer spin undoubtedly also has quantum properties—but that quantumness was already contained in your premise, making it equivalent to a tautological piece of nonsense.
 
 ---
 

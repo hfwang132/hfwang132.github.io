@@ -21,7 +21,7 @@ author: "Haifei"
 
 $\varphi^{(q)}(x) = \mathcal{A}\psi(q-gx) \varphi(x)$ 
 
-其中 $\psi(x)$ 是仪器指针的初态波函数。 $q$ 是仪器指针的读数。 $g$ 是仪器和待测系统之间的耦合强度。$\begin{aligned} \mathcal{A} = \left[\int\_\mathbb{R}\psi(q-gx) \varphi(x)\right]^{-1} \end{aligned}$ 是合适的归一化常数。
+其中 $\psi(x)$ 是仪器指针的初态波函数。 $q$ 是仪器指针的读数。 $g$ 是仪器和待测系统之间的耦合强度。$\begin{aligned} \mathcal{A} = \left[\int_\mathbb{R}\psi(q-gx) \varphi(x)\right]^{-1} \end{aligned}$ 是合适的归一化常数。
 
 ## 一、前置知识  
 ### 1.1 符号约定  
@@ -29,9 +29,9 @@ $L^2(\mathbb{R})$ ： $\mathbb{R}$ 上平方可积函数构成的希尔伯特空
 
 $\mathcal{L}(\mathcal{H})$ ：希尔伯特空间 $\mathcal{H}$ 上的（有界）算符。
 
-$\mathbb{I}\_{\mathcal{H}}$ ：希尔伯特空间 $\mathcal{H}$ 上的恒等算符。
+$\mathbb{I}_{\mathcal{H}}$ ：希尔伯特空间 $\mathcal{H}$ 上的恒等算符。
 
-$\mathcal{E}(\mathcal{H})$ ：希尔伯特空间 $\mathcal{H}$ 上的 effect。定义为 \(\mathcal{E}(\mathcal{H}) := \{ E\in \mathcal{L}(\mathcal{H}) \mid E = E^*,\ 0 \le E\le \mathbb{I}_{\mathcal{H}} \}\) 。
+$\mathcal{E}(\mathcal{H})$ ：希尔伯特空间 $\mathcal{H}$ 上的 effect。定义为 $\mathcal{E}(\mathcal{H}) := \{ E\in \mathcal{L}(\mathcal{H}) \mid E = E^*,\ 0 \le E\le \mathbb{I}_{\mathcal{H}} \}$ 。
 
 $\text{Leb}(\mathbb{R})$ ： $\mathbb{R}$ 上的 Lebesgue sigma algebra。
 
@@ -52,13 +52,13 @@ $\text{Leb}(\mathbb{R})$ ： $\mathbb{R}$ 上的 Lebesgue sigma algebra。
 另外，PVM 和 POVM 中的字母 M 指的就是测度（Measure）。量子力学建立在概率论的基础上，概率论建立在测度论的基础上。所以关于测度的知识是必要的。
 
 ### 1.4 位置与动量算符的谱分解  
-$L^2(\mathbb{R})$ 上的位置算符 $Q \in \mathcal{L}(L^2(\mathbb{R}))$ 有谱分解： $Q = \int\_\mathbb{R} x\mathsf{Q}(\mathrm{d}x)$ 。这是一个勒贝格积分。
+$L^2(\mathbb{R})$ 上的位置算符 $Q \in \mathcal{L}(L^2(\mathbb{R}))$ 有谱分解： $Q = \int_\mathbb{R} x\mathsf{Q}(\mathrm{d}x)$ 。这是一个勒贝格积分。
 
-其中 $\mathsf{Q}$ 是位置投影测量，即 PVM（Projection Valued Measure，是 POVM，Positive Operator Valued Measure 的特例），它定义为一个 operator-valued 的测度： $\mathsf{Q}: \text{Leb}(\mathbb{R}) \rightarrow \mathcal{E}(L^2(\mathbb{R}))$ ，\(\bigl[\mathsf{Q}(A)\varphi\bigr](x):=\chi_A(x)\varphi(x)\)，其中 $\chi\_A(x)=\begin{cases} 1, \quad x\in A \\\\ 0, \quad x \notin A \end{cases}$ 是集合 $A$ 的特征函数。
+其中 $\mathsf{Q}$ 是位置投影测量，即 PVM（Projection Valued Measure，是 POVM，Positive Operator Valued Measure 的特例），它定义为一个 operator-valued 的测度： $\mathsf{Q}: \text{Leb}(\mathbb{R}) \rightarrow \mathcal{E}(L^2(\mathbb{R}))$ ，$\bigl[\mathsf{Q}(A)\varphi\bigr](x):=\chi_A(x)\varphi(x)$，其中 $\chi_A(x)=\begin{cases} 1, \quad x\in A \\\\ 0, \quad x \notin A \end{cases}$ 是集合 $A$ 的特征函数。
 
 
-> 选读：动量 PVM 可以定义为 $\mathsf{P}(A) = F^\* \mathsf{Q}(A) F$ ，其中 $F$ 是 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ ，定义为：  
-> $(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int\_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$ 
+> 选读：动量 PVM 可以定义为 $\mathsf{P}(A) = F^* \mathsf{Q}(A) F$ ，其中 $F$ 是 Fourier-Plancherel 算子 $\mathcal{F} \in \mathcal{L}(L^2(\mathbb{R}))$ ，定义为：  
+> $(\mathcal{F}\varphi)(p)=\frac{1}{\sqrt{2\pi}}\int_{\mathbb{R}}\mathrm{e}^{-ipx}\varphi(x)\mathrm{d}x$ 
 
 ## 二、测量模型  
 本节的整体思路如下：
@@ -67,11 +67,11 @@ $L^2(\mathbb{R})$ 上的位置算符 $Q \in \mathcal{L}(L^2(\mathbb{R}))$ 有谱
 
 然后，我们让复合系统演化一段时间，于是系统状态变为 $U(\rho\otimes \sigma) U^\dag$ 。
 
-最后，我们对辅助系统 $\mathcal{K}$ 进行 PVM $\mathsf{Z}$ 所给出的测量，根据玻恩规则，得到结果 $x$ 的概率为 $\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}\_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。
+最后，我们对辅助系统 $\mathcal{K}$ 进行 PVM $\mathsf{Z}$ 所给出的测量，根据玻恩规则，得到结果 $x$ 的概率为 $\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。
 
-这样，我们就实现了一个 POVM $\mathsf{E}$ ，满足 $\operatorname{tr}[\rho \mathsf{E(x)}]=\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}\_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。
+这样，我们就实现了一个 POVM $\mathsf{E}$ ，满足 $\operatorname{tr}[\rho \mathsf{E(x)}]=\operatorname{tr}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ 。
 
-定义 $\mathcal{I}\_x(\rho) :=\operatorname{tr}\_\mathcal{K}[\rho \mathsf{E(x)}]=\operatorname{tr}\_\mathcal{K}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}\_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ ，它是测量过程所诱导的 quantum channel。如果我们找到 quantum channel 的 Kraus operator $K\_i$ 使得 $\mathcal{I}\_x(\rho) :=\sum\_i K\_i \rho K\_i^\*$ ，就可以很容易求出 $\mathcal{I}\_x$ 的对偶 channel $\mathcal{I}\_x^\*: \mathcal{I}\_x^\*(\mathcal{M}) =  \sum\_i K\_i^\* \mathcal{M} K\_i$ ，于是测量后的坍缩态就是 $\mathcal{I}\_x^\*(\mathbb{I\_\mathcal{H}}) =  \sum\_i K\_i^\* K\_i$ 。
+定义 $\mathcal{I}_x(\rho) :=\operatorname{tr}_\mathcal{K}[\rho \mathsf{E(x)}]=\operatorname{tr}_\mathcal{K}[U(\rho\otimes \sigma) U^\dag(\mathbb{I}_{\mathcal{H}}\otimes \mathsf{Z(x)})]$ ，它是测量过程所诱导的 quantum channel。如果我们找到 quantum channel 的 Kraus operator $K_i$ 使得 $\mathcal{I}_x(\rho) :=\sum_i K_i \rho K_i^*$ ，就可以很容易求出 $\mathcal{I}_x$ 的对偶 channel $\mathcal{I}_x^*: \mathcal{I}_x^*(\mathcal{M}) =  \sum_i K_i^* \mathcal{M} K_i$ ，于是测量后的坍缩态就是 $\mathcal{I}_x^*(\mathbb{I_\mathcal{H}}) =  \sum_i K_i^* K_i$ 。
 
 以上是整体思路，下面我们给出具体计算过程。
 
@@ -83,39 +83,39 @@ $L^2(\mathbb{R})$ 上的位置算符 $Q \in \mathcal{L}(L^2(\mathbb{R}))$ 有谱
 这个演化过程的哈密顿量为 $U =e^{-\mathrm{i} g Q\otimes P}$ 。其中 $Q$ 是 $\mathcal{H}$ 上的位置算符， $P$ 是 $\mathcal{K}$ 上的动量算符， $g$ 是耦合强度（已经将演化时间 $t$ 吸收进去）。这个哈密顿量不难理解，因为仪器的指针需要在表盘上移动以给出不同的读数，而平移的生成元就是动量算符。因此直观来看， $U$ 可以理解为根据 $|\psi\rangle\in \mathcal{H}$ 的位置生成 $\mathcal{K}$ 上的平移。
 
 ### 2.2 演化  
-根据谱分解 $Q = \int\_{\mathbb{R}} x\mathsf{Q}(\mathrm{d}x)$ ，我们可以把 $U$ 写成：
+根据谱分解 $Q = \int_{\mathbb{R}} x\mathsf{Q}(\mathrm{d}x)$ ，我们可以把 $U$ 写成：
 
-$U = \int\_\mathbb{R} \mathsf{Q}(\mathrm{d}x) \otimes e^{-\mathrm{i}g x P}$ 
+$U = \int_\mathbb{R} \mathsf{Q}(\mathrm{d}x) \otimes e^{-\mathrm{i}g x P}$ 
 
 设 $\mathcal{H}$ 和 $\mathcal{K}$ 的初态分别为 $\rho$ 和 $\sigma = |\psi\rangle\langle\psi|$ ，那么演化后的量子态为：
 
-$\tau = U(\rho \otimes \sigma) U^\*=\int\_{\mathbb{R}^2} \mathsf{Q}(\mathrm{d}x) \rho \mathsf{Q}(\mathrm{d}y) \otimes e^{-\mathrm{i} g x P} |\psi\rangle\langle \psi | e^{-\mathrm{i} g y P}$ 
+$\tau = U(\rho \otimes \sigma) U^*=\int_{\mathbb{R}^2} \mathsf{Q}(\mathrm{d}x) \rho \mathsf{Q}(\mathrm{d}y) \otimes e^{-\mathrm{i} g x P} |\psi\rangle\langle \psi | e^{-\mathrm{i} g y P}$ 
 
 ### 2.3 测量诱导的 Quantum channel 和 POVM  
 此时对系统 $\mathcal{K}$ 进行位置测量会给出如下的 quantum channel：
 
-$ \mathcal{I}\_{A}(\rho)  =\text{tr}\_\mathcal{K}[\tau(\mathbb{I}\_\mathcal{H} \otimes \mathsf{Q}(A)) ] $ 
+$ \mathcal{I}_{A}(\rho)  =\text{tr}_\mathcal{K}[\tau(\mathbb{I}_\mathcal{H} \otimes \mathsf{Q}(A)) ] $ 
 
 计算得：
 
-$\begin{aligned} \mathcal{I}\_{A}(\rho) &= \text{tr}\_\mathcal{K}[\tau(\mathbb{I}\_\mathcal{H} \otimes \mathsf{Q}(A)) ] \\\\  &=\text{tr}\_\mathcal{K}[U(\rho \otimes \sigma) U^\*(\mathbb{I}\_\mathcal{H} \otimes \mathsf{Q}(A)) ] \\\\ &= \int\_{\mathbb{R}^2} \langle e^{-\mathrm{i}g y P} \psi | \mathsf{Q}(A)|e^{-\mathrm{i}g x P }\psi \rangle \mathsf{Q}(\mathrm{d}x) \rho \mathsf{Q}(\mathrm{d}y) \\\\ &= \int\_A \int\_{\mathrm{R}^2} \psi(q-gy)^\*\psi(q-gx) \mathsf{Q}(\mathrm{d}x) \rho \mathsf{Q}(\mathrm{d}y) \mathrm{d}q \\\\ &= \int\_A K(q) \rho K(q)^\* \mathrm{d}q \end{aligned}$ 
+$\begin{aligned} \mathcal{I}_{A}(\rho) &= \text{tr}_\mathcal{K}[\tau(\mathbb{I}_\mathcal{H} \otimes \mathsf{Q}(A)) ] \\\\  &=\text{tr}_\mathcal{K}[U(\rho \otimes \sigma) U^*(\mathbb{I}_\mathcal{H} \otimes \mathsf{Q}(A)) ] \\\\ &= \int_{\mathbb{R}^2} \langle e^{-\mathrm{i}g y P} \psi | \mathsf{Q}(A)|e^{-\mathrm{i}g x P }\psi \rangle \mathsf{Q}(\mathrm{d}x) \rho \mathsf{Q}(\mathrm{d}y) \\\\ &= \int_A \int_{\mathrm{R}^2} \psi(q-gy)^*\psi(q-gx) \mathsf{Q}(\mathrm{d}x) \rho \mathsf{Q}(\mathrm{d}y) \mathrm{d}q \\\\ &= \int_A K(q) \rho K(q)^* \mathrm{d}q \end{aligned}$ 
 
-其中 $K(q) := \int\_{\mathrm{R}} \psi(q - gx)\mathsf{Q}(\mathrm{d}x)$ 是 $\mathcal{I}\_A$ 的 Kraus operator，即 $[K(q) \varphi] (x) := \psi(q - gx) \varphi(x)$ 。
+其中 $K(q) := \int_{\mathrm{R}} \psi(q - gx)\mathsf{Q}(\mathrm{d}x)$ 是 $\mathcal{I}_A$ 的 Kraus operator，即 $[K(q) \varphi] (x) := \psi(q - gx) \varphi(x)$ 。
 
 这个 quantum channel 诱导了一个 $\mathcal{H}$ 上的 POVM：
 
-$\mathsf{E}(A) = \mathcal{I}\_A^\*(\mathbb{I}\_\mathcal{H}) = \int\_A K(q)^\* K(q) \mathrm{d}q = \int\_A\int\_\mathbb{R} |\psi(q - gx)|^2 \mathsf{Q}(\mathrm{d}x) \mathrm{d}q$ 
+$\mathsf{E}(A) = \mathcal{I}_A^*(\mathbb{I}_\mathcal{H}) = \int_A K(q)^* K(q) \mathrm{d}q = \int_A\int_\mathbb{R} |\psi(q - gx)|^2 \mathsf{Q}(\mathrm{d}x) \mathrm{d}q$ 
 
 可以看出，这个测量并不是将量子态坍缩到一个 delta 函数上，而是将 delta 函数与仪器 $\mathcal{K}$ 的初态做了一个卷积，而仪器的初态 $|\psi\rangle \in\mathcal{K}$ 肯定不是一个 delta 函数。所以此时的 POVM 是一个\*\*“被展宽”的测量\*\*。这个展宽来源于仪器探针态本身的展宽。
 
 ### 2.4 坍缩后的态  
-此时，在 $\mathcal{I}\_{A}(\rho)$ 中令 $A=\{q\}$ ，得到待测系统 $\mathcal{H}$ 的量子态坍缩为 $\frac{K(q) \rho K(q)^\*}{\text{tr}[K(q) \rho K(q)^\*]}$ ，其中 $q$ 是仪器的读数。
+此时，在 $\mathcal{I}_{A}(\rho)$ 中令 $A=\{q\}$ ，得到待测系统 $\mathcal{H}$ 的量子态坍缩为 $\frac{K(q) \rho K(q)^*}{\text{tr}[K(q) \rho K(q)^*]}$ ，其中 $q$ 是仪器的读数。
 
 当 $\rho = |\varphi\rangle\langle\varphi|$ 是纯态时，其坍缩后的波函数为：
 
 $\varphi^{(q)}(x) = \mathcal{A}\psi(q-gx) \varphi(x)$ 
 
-其中 $\begin{aligned} \mathcal{A} = \left[\int\_\mathbb{R}\psi(q-gx) \varphi(x)\right]^{-1} \end{aligned}$ 是合适的归一化常数。其中 $q$ 是探针的读数。
+其中 $\begin{aligned} \mathcal{A} = \left[\int_\mathbb{R}\psi(q-gx) \varphi(x)\right]^{-1} \end{aligned}$ 是合适的归一化常数。其中 $q$ 是探针的读数。
 
 如果探针态是一个“展宽”的高斯波包： $\psi(x) = \frac{1}{\sqrt{2\pi}\sigma} \exp\left[-\frac{x^2}{2\sigma^2}\right]$ ，那么
 
@@ -150,17 +150,17 @@ $\varphi^{(q)}(x) = \mathcal{A} \exp\left[-\frac{(gx-q)^2}{2\sigma^2}\right] \va
 ## 四、经典仪器  
 为了避免上面说到的问题，我们可以定义一个 course-grained 的经典仪器，它只能区分粒子在或不在某一个区间内：
 
-\(\mathsf{Z}: \{0,1\} \rightarrow \mathcal{E}(L^2(\mathbb{R}))\)
+$\mathsf{Z}: \{0,1\} \rightarrow \mathcal{E}(L^2(\mathbb{R}))$
 
-$\mathsf{Z}(1) = \int\_a^b \mathsf{Q}(\mathrm{d}x)$ 
+$\mathsf{Z}(1) = \int_a^b \mathsf{Q}(\mathrm{d}x)$ 
 
-$\mathsf{Z}(0) = \mathbb{I}\_{L^2(\mathbb{R})} - \int\_a^b \mathsf{Q}(\mathrm{d}x)$ 
+$\mathsf{Z}(0) = \mathbb{I}_{L^2(\mathbb{R})} - \int_a^b \mathsf{Q}(\mathrm{d}x)$ 
 
 又或者是以一定精度 $g$ 区分粒子的位置：
 
 $\mathsf{Z}: \mathbb{Z} \rightarrow \mathcal{E}(L^2(\mathbb{R}))$ 
 
-$\mathsf{Z}(n) =\int\_{gn}^{g(n+1)} \mathsf{Q}(\mathrm{d}x)$ 
+$\mathsf{Z}(n) =\int_{gn}^{g(n+1)} \mathsf{Q}(\mathrm{d}x)$ 
 
 注意到它们都是 PVM，因此坍缩后的态也可以确定下来。
 

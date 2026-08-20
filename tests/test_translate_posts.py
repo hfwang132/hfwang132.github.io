@@ -36,7 +36,7 @@ class TranslationProtectionTests(unittest.TestCase):
             'categories: ["量子信息"]\n'
             "---\n\n"
             "## 中文标题\n\n"
-            r"正文含有公式 \(a+b=c\\d\)。"
+            r"正文含有公式 $a+b=c\\d$。"
             "\n\n"
             '{{< figure src="images/figure.png" title="实验装置图" >}}\n\n'
             "```python\n"
@@ -77,7 +77,7 @@ class TranslationProtectionTests(unittest.TestCase):
         self.assertIn('title: "Test article"', rendered)
         self.assertIn('tags: ["Quantum Optics"]', rendered)
         self.assertIn('  - "/en/old-path/"', rendered)
-        self.assertIn(r"\(a+b=c\\d\)", rendered)
+        self.assertIn(r"$a+b=c\\d$", rendered)
         self.assertIn('print("不要翻译")', rendered)
         self.assertIn('src="images/figure.png"', rendered)
         self.assertIn('title="Experimental setup"', rendered)
@@ -228,10 +228,10 @@ class TranslationProtectionTests(unittest.TestCase):
     def test_repairs_reused_tokens_for_byte_identical_math_only(self):
         entries = (
             MODULE.ProtectedEntry(
-                "@@HFPROTECT_00000@@", "math", r"\(\mathcal{F}\)"
+                "@@HFPROTECT_00000@@", "math", r"$\mathcal{F}$"
             ),
             MODULE.ProtectedEntry(
-                "@@HFPROTECT_00001@@", "math", r"\(\mathcal{F}\)"
+                "@@HFPROTECT_00001@@", "math", r"$\mathcal{F}$"
             ),
         )
         source = MODULE.TranslationSource(
@@ -257,7 +257,7 @@ class TranslationProtectionTests(unittest.TestCase):
         restored = MODULE.restore_body(source, translated)
         self.assertEqual(
             restored,
-            r"\(\mathcal{F}\) and \(\mathcal{F}\)",
+            r"$\mathcal{F}$ and $\mathcal{F}$",
         )
 
     def test_segment_request_enforces_exact_fragment_count(self):
@@ -536,7 +536,7 @@ class BatchPipelineTests(unittest.TestCase):
             self.assertEqual(written, [source.source_file.with_name("index.en.md")])
             rendered = written[0].read_text(encoding="utf-8")
             self.assertIn('title: "Test article"', rendered)
-            self.assertIn(r"\(a+b=c\\d\)", rendered)
+            self.assertIn(r"$a+b=c\\d$", rendered)
 
 
 if __name__ == "__main__":

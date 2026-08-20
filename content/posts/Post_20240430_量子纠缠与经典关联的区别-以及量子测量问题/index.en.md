@@ -18,23 +18,23 @@ When many physicists popularize quantum entanglement to the general public, they
 
 There must be something wrong with this example... because it does not involve quantum mechanics at all.
 
-Indeed, this example illustrates classical correlation rather than quantum entanglement. Let pizza be \(|0\rangle\) and hamburger be \(|1\rangle\). Then, in the example above, the state of the system is
+Indeed, this example illustrates classical correlation rather than quantum entanglement. Let pizza be $|0\rangle$ and hamburger be $|1\rangle$. Then, in the example above, the state of the system is
 
-\[\rho_{\text{classical correlation}} = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| \right)\]
+$$\rho_{\text{classical correlation}} = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| \right)$$
 
 In matrix form, this is:
 
-\[\rho_{\text{classical correlation}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}\]
+$$\rho_{\text{classical correlation}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
 
 True quantum entanglement, on the other hand, should be as follows:
 
-\[\rho_{\text{quantum entanglement}} = |\psi\rangle\langle\psi | = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| + |01\rangle\langle 10| + |10\rangle\langle 01 | \right)\]
+$$\rho_{\text{quantum entanglement}} = |\psi\rangle\langle\psi | = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| + |01\rangle\langle 10| + |10\rangle\langle 01 | \right)$$
 
-where \(|\psi\rangle = \frac{1}{\sqrt{2}} (|01\rangle + |10 \rangle)\)
+where $|\psi\rangle = \frac{1}{\sqrt{2}} (|01\rangle + |10 \rangle)$
 
 In matrix form, this is:
 
-\[\rho_{\text{quantum entanglement}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}\]
+$$\rho_{\text{quantum entanglement}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
 
 As can be seen, true quantum entanglement has off-diagonal terms. These off-diagonal terms are also called coherences.
 
@@ -44,7 +44,7 @@ Decoherence is also an interpretation of the **quantum measurement problem**: wh
 
 However, decoherence cannot explain the problem of wavefunction collapse. This is because the following process is still caused by the collapse of the overall wavefunction of the system and environment.
 
-\[\begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix} \xrightarrow{\text{collapse}}  \begin{cases} \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \\ \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \end{cases}\]
+$$\begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix} \xrightarrow{\text{collapse}}  \begin{cases} \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \\ \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \end{cases}$$
 
 This step cannot be explained by decoherence. Therefore, the measurement problem remains unsolved to this day. This is easy to understand: decoherence itself is still a unitary evolution process, whereas wavefunction collapse is non-unitary.
 
@@ -54,10 +54,10 @@ This problem is also called the Heisenberg cut: namely, how to find such a “cu
 
 ---
 
-In categorical quantum theory, describing quantum entanglement requires a \(\mathbf{Hilb}\) tensor category, whereas describing classical correlation requires only a \(\mathbf{Rel}\) tensor category. The tensor product of the former is the tensor product of Hilbert spaces, while that of the latter is the Cartesian product of sets.
+In categorical quantum theory, describing quantum entanglement requires a $\mathbf{Hilb}$ tensor category, whereas describing classical correlation requires only a $\mathbf{Rel}$ tensor category. The tensor product of the former is the tensor product of Hilbert spaces, while that of the latter is the Cartesian product of sets.
 
 Cartesian products (as well as direct products and direct sums) cannot describe quantum entanglement. The tensor product of Hilbert spaces is the very root of the existence of entanglement phenomena. The former is a hallmark of the classical and can describe classical correlation; the latter is a hallmark of the quantum and can describe quantum entanglement.
 
-However, true classical physics is deterministic, and it is described by the \(\mathbf{Set}\) category. The \(\mathbf{Rel}\) category, meanwhile, belongs to probability theory; it lies between \(\mathbf{Hilb}\) and \(\mathbf{Set}\). Perhaps the transition from the \(\mathbf{Rel}\) category to the \(\mathbf{Set}\) category is the final step in resolving the measurement problem, and this step itself does not lie within the \(\mathbf{Hilb}\) category.
+However, true classical physics is deterministic, and it is described by the $\mathbf{Set}$ category. The $\mathbf{Rel}$ category, meanwhile, belongs to probability theory; it lies between $\mathbf{Hilb}$ and $\mathbf{Set}$. Perhaps the transition from the $\mathbf{Rel}$ category to the $\mathbf{Set}$ category is the final step in resolving the measurement problem, and this step itself does not lie within the $\mathbf{Hilb}$ category.
 
 The measurement problem is similar to certain problems in statistical mechanics, such as entropy and the arrow of time. The roots of these problems are all Sorites-paradox-like: they emerge only when a system is sufficiently large, such that it is difficult for us to find a boundary between small and large—that is, the Heisenberg cut.

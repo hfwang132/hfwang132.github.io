@@ -18,23 +18,23 @@ author: "Haifei"
 
 这个例子肯定有什么不对...因为它压根就没有涉及到量子力学。
 
-的确如此，这个例子表现的是经典关联，而非量子纠缠。令披萨为 \(|0\rangle\) ，汉堡为 \(|1\rangle\) ，那么在上面这个例子中，系统的状态为
+的确如此，这个例子表现的是经典关联，而非量子纠缠。令披萨为 $|0\rangle$ ，汉堡为 $|1\rangle$ ，那么在上面这个例子中，系统的状态为
 
-\[\rho_{\text{classical correlation}} = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| \right)\]
+$$\rho_{\text{classical correlation}} = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| \right)$$
 
 写成矩阵形式就是：
 
-\[\rho_{\text{classical correlation}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}\]
+$$\rho_{\text{classical correlation}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
 
 而真正的量子纠缠应该如下：
 
-\[\rho_{\text{quantum entanglement}} = |\psi\rangle\langle\psi | = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| + |01\rangle\langle 10| + |10\rangle\langle 01 | \right)\]
+$$\rho_{\text{quantum entanglement}} = |\psi\rangle\langle\psi | = \frac{1}{2} \left( |01\rangle\langle 01| + |10\rangle\langle 10| + |01\rangle\langle 10| + |10\rangle\langle 01 | \right)$$
 
-其中 \(|\psi\rangle = \frac{1}{\sqrt{2}} (|01\rangle + |10 \rangle)\)
+其中 $|\psi\rangle = \frac{1}{\sqrt{2}} (|01\rangle + |10 \rangle)$
 
 写成矩阵形式就是：
 
-\[\rho_{\text{quantum entanglement}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}\]
+$$\rho_{\text{quantum entanglement}} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & \frac{1}{2} & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
 
 可见，真正的量子纠缠是有非对角项的。这些非对角项也叫相干项（coherences）。
 
@@ -44,7 +44,7 @@ author: "Haifei"
 
 但退相干不能解释波函数的坍缩问题。因为下面这个过程仍然是由系统和环境的整体波函数坍缩而导致的。
 
-\[\begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix} \xrightarrow{\text{collapse}}  \begin{cases} \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \\ \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \end{cases}\]
+$$\begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & \frac{1}{2} & 0 & 0 \\ 0 & 0 & \frac{1}{2} & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix} \xrightarrow{\text{collapse}}  \begin{cases} \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \\ \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}, & \text{with }\frac{1}{2} \text{ probability} \end{cases}$$
 
 这一步无法用退相干来解释。因此测量问题至今尚未解决。这也很好理解：退相干本身仍然是一个酉的演化过程，而波函数坍缩是非酉的。
 
@@ -54,10 +54,10 @@ author: "Haifei"
 
 ---
 
-在 categorical quantum theory 中，描述量子纠缠需要 \(\mathbf{Hilb}\) 张量范畴，而描述经典关联只需要 \(\mathbf{Rel}\) 张量范畴。前者的张量积是希尔伯特空间的张量积，而后者的张量积是集合的笛卡尔积。
+在 categorical quantum theory 中，描述量子纠缠需要 $\mathbf{Hilb}$ 张量范畴，而描述经典关联只需要 $\mathbf{Rel}$ 张量范畴。前者的张量积是希尔伯特空间的张量积，而后者的张量积是集合的笛卡尔积。
 
 笛卡尔积（以及直积、直和）是无法描述量子纠缠的。希尔伯特空间的张量积才是纠缠现象得以存在的根源。前者是经典的标志，可以描述经典关联，后者是量子的标志，可以描述量子纠缠。
 
-然而，真正的经典物理是决定论的，它由 \(\mathbf{Set}\) 范畴描述。而 \(\mathbf{Rel}\) 范畴是概率论的，它介于 \(\mathbf{Hilb}\) 和 \(\mathbf{Set}\) 之间。也许，如何从 \(\mathbf{Rel}\) 范畴过渡到 \(\mathbf{Set}\) 范畴，才是解决测量问题的最后一步，而这一步本身就不在 \(\mathbf{Hilb}\) 范畴之内。
+然而，真正的经典物理是决定论的，它由 $\mathbf{Set}$ 范畴描述。而 $\mathbf{Rel}$ 范畴是概率论的，它介于 $\mathbf{Hilb}$ 和 $\mathbf{Set}$ 之间。也许，如何从 $\mathbf{Rel}$ 范畴过渡到 $\mathbf{Set}$ 范畴，才是解决测量问题的最后一步，而这一步本身就不在 $\mathbf{Hilb}$ 范畴之内。
 
 测量问题和统计力学中的一些问题比较相似，例如熵与时间之矢。这些问题的根源都是谷堆悖论式的：它们只在系统足够大时才涌现出来，以至于我们难以找到一个小与大的界限，也即 Heisenberg cut。

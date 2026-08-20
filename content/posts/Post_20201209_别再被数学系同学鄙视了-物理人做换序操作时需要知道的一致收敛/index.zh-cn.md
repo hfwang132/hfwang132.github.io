@@ -87,23 +87,23 @@ looks good
 没错，就是一致收敛。
 
 > **定义 1.1（函数项级数的一致收敛）**  
-> 设 \(S_n(x)\) 为函数项级数的部分和，则称满足 \(\lim_{n\rightarrow \infty} \sup_{x\in D}|S_n(x)-S(x)|=0\) 的级数在 \(D\) 上一致收敛于 \(S(x)\) 。
+> 设 $S_n(x)$ 为函数项级数的部分和，则称满足 $\lim_{n\rightarrow \infty} \sup_{x\in D}|S_n(x)-S(x)|=0$ 的级数在 $D$ 上一致收敛于 $S(x)$ 。
 
-翻译成自然语言就是，如果部分和函数与 \(S(x)\) 的差的绝对值（也是一个函数）存在一个可以控制的（与自变量 \(x\) 无关的）上界，那么部分和函数一致收敛于\(S(x)\)。
+翻译成自然语言就是，如果部分和函数与 $S(x)$ 的差的绝对值（也是一个函数）存在一个可以控制的（与自变量 $x$ 无关的）上界，那么部分和函数一致收敛于$S(x)$。
 
-这个定义对普通的函数列也适用，只需把 \(S_n(x)\) 换成函数列的一般项即可。
+这个定义对普通的函数列也适用，只需把 $S_n(x)$ 换成函数列的一般项即可。
 
 > **例 1.1**  
-> 为了使读者看出，一致收敛比普通的逐点收敛要强，举一个简单的例子。设部分和函数（或函数列的一般项）是 \(S_n(x)=x^n\) ，显然，在区间 \([0,1]\) 上，它逐点收敛于这个函数 ：\[  S(x)=  \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}  \]   
-> 但是不论 \(n\) 多大，部分和函数 \(S_n(x)\) 总是能取到 \(0.5\) 这个值（根据部分和函数连续以及介值定理），换言之， \(\forall n\exists x_0(S_n(x_0)=0.5)\) 。这就使得控制上界成为了不可能的事情，总是有那么一些 \(x\) 你是管不住的。实际上，在这个例子中，不论 \(n\) 多大，误差的上确界（就是那个 \(\sup\) 符号）总是 \(1\) 。  
-> 而一致收敛则可以同时管住所有 \(f(x)\) ，让它们同时按照你想要的上界 \(\epsilon\) ，任意接近目标函数。
+> 为了使读者看出，一致收敛比普通的逐点收敛要强，举一个简单的例子。设部分和函数（或函数列的一般项）是 $S_n(x)=x^n$ ，显然，在区间 $[0,1]$ 上，它逐点收敛于这个函数 ：$$  S(x)=  \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}  $$   
+> 但是不论 $n$ 多大，部分和函数 $S_n(x)$ 总是能取到 $0.5$ 这个值（根据部分和函数连续以及介值定理），换言之， $\forall n\exists x_0(S_n(x_0)=0.5)$ 。这就使得控制上界成为了不可能的事情，总是有那么一些 $x$ 你是管不住的。实际上，在这个例子中，不论 $n$ 多大，误差的上确界（就是那个 $\sup$ 符号）总是 $1$ 。  
+> 而一致收敛则可以同时管住所有 $f(x)$ ，让它们同时按照你想要的上界 $\epsilon$ ，任意接近目标函数。
 
 > **例 1.2**  
 > 再举一个简单的例子。  
-> 假如我们想到了一个很蠢的点子，用 \(y=\mathrm{e}^{\alpha x}\,(\alpha\rightarrow0)\) 来逼近 \(y=1\)。  
-> 于是我们可以考虑函数列 \(\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}\) 。显然 \(\lim_{k\rightarrow \infty}\mathrm{e}^{\frac{1}{k}x}=1\) 对所有 \(x\) 都成立。  
-> 但是，只要 \(\frac{1}{k}\ne 0\) ， \(\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}\) 在 \(\mathbb{R}\) 上就是无界的。  
-> 假如你的老板给你定下了一个目标 \(\epsilon\) ，并命令你找一个 \(N\) ，使得当 \(k\gt N\) 时， 误差 \(\left|\mathrm{e}^{\frac{1}{k}x}-1\right|\lt \epsilon\) 对所有 \(x\) 成立，那么你可能要考虑辞职了，因为这显然是一个不可能完成的任务。不管你找多么大的 \(N\) ，一定会有更大的 \(x\) 导致计划破裂。假设对 \(\epsilon =1\) 的情况，你找到了满足要求的 \(N\) ，那么你的老板只需要令 \(x=2N\) ，就有 \(\left|\mathrm{e}^{\frac{1}{k}2N}-1\right|\gt \mathrm{e}-1\gt 1\quad (N\lt k\lt 2N)\) 。
+> 假如我们想到了一个很蠢的点子，用 $y=\mathrm{e}^{\alpha x}\,(\alpha\rightarrow0)$ 来逼近 $y=1$。  
+> 于是我们可以考虑函数列 $\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}$ 。显然 $\lim_{k\rightarrow \infty}\mathrm{e}^{\frac{1}{k}x}=1$ 对所有 $x$ 都成立。  
+> 但是，只要 $\frac{1}{k}\ne 0$ ， $\varphi_k(x)=\mathrm{e}^{\frac{1}{k}x}$ 在 $\mathbb{R}$ 上就是无界的。  
+> 假如你的老板给你定下了一个目标 $\epsilon$ ，并命令你找一个 $N$ ，使得当 $k\gt N$ 时， 误差 $\left|\mathrm{e}^{\frac{1}{k}x}-1\right|\lt \epsilon$ 对所有 $x$ 成立，那么你可能要考虑辞职了，因为这显然是一个不可能完成的任务。不管你找多么大的 $N$ ，一定会有更大的 $x$ 导致计划破裂。假设对 $\epsilon =1$ 的情况，你找到了满足要求的 $N$ ，那么你的老板只需要令 $x=2N$ ，就有 $\left|\mathrm{e}^{\frac{1}{k}2N}-1\right|\gt \mathrm{e}-1\gt 1\quad (N\lt k\lt 2N)$ 。
 
 ### 1.2 函数项级数：一致收敛与换序  
 
@@ -111,16 +111,16 @@ looks good
 
 > **定理 1.1（函数项级数的连续性、可微性、可积性）**  
 >   
-> 如果级数 \(\sum_{k}f_k(x)\) 一致收敛，则  
+> 如果级数 $\sum_{k}f_k(x)$ 一致收敛，则  
 >   
 > (a) 若级数的每项连续，则级数的和连续。换言之，**求和号可以与极限符号换序**：  
->  \(\lim_{x\rightarrow x_0}\sum_{k} f_k(x)=\sum_{k} \lim_{x\rightarrow x_0} f_k(x)\) 。  
+>  $\lim_{x\rightarrow x_0}\sum_{k} f_k(x)=\sum_{k} \lim_{x\rightarrow x_0} f_k(x)$ 。  
 >   
 > (b) 若级数的每项的导函数连续，且导函数构成的级数一致收敛，则级数可以逐项求导。换言之，**求和号可以与求导符号换序**：  
-> \(\frac{\mathrm{d}}{\mathrm{d}x}\sum_{k} f_k(x)=\sum_{k} \frac{\mathrm{d}}{\mathrm{d}x} f_k(x) \) 。  
+> $\frac{\mathrm{d}}{\mathrm{d}x}\sum_{k} f_k(x)=\sum_{k} \frac{\mathrm{d}}{\mathrm{d}x} f_k(x) $ 。  
 >   
 > (c) 若级数的每项连续，则级数可以逐项积分。换言之，**求和号可以与积分号换序**：  
->  \(\int_{M}\sum_{k} f_k(x)  \mathrm{d}x=\sum_{k} \int_{M}f_k(x) \mathrm{d}x\) （下标M表示在区间M上的定积分）。
+>  $\int_{M}\sum_{k} f_k(x)  \mathrm{d}x=\sum_{k} \int_{M}f_k(x) \mathrm{d}x$ （下标M表示在区间M上的定积分）。
 
 可以看到，物理人喜闻乐见的各种换序，可以由一致收敛来保证其正当性。
 
@@ -128,13 +128,13 @@ looks good
 > 另外，在定理 1.1(b) 中，如果原级数收敛，那么导函数构级数一致收敛加上导函数每项连续，可以推出原级数一致收敛。
 
 > **例 1.3**  
-> 回到之前的例子 \(S(x)=x^1+(x^2-x^1)+(x^3-x^2)+\cdots= \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}\) 。这个级数的每项都连续，可是和却不连续，所以它不是一致收敛的。
+> 回到之前的例子 $S(x)=x^1+(x^2-x^1)+(x^3-x^2)+\cdots= \begin{cases}  0&0\le x\lt 1\\  1&x=1  \end{cases}$ 。这个级数的每项都连续，可是和却不连续，所以它不是一致收敛的。
 
 实际上，定理 1.1(b) 和 1.1(c) 是如下定理的直接推论：
 
-若 \(\{\varphi_k(x)\}\) 一致收敛于 \(f(x)\) ，且对所有 \(k\) ，\(\varphi_k{(x)}\) 连续，则有：\(\frac{\mathrm{d}}{\mathrm{d}x}f(x)=\frac{\mathrm{d}}{\mathrm{d}x}\lim_{k\rightarrow \infty} \varphi_k(x)=\lim_{k\rightarrow \infty}  \frac{\mathrm{d}}{\mathrm{d}x} \varphi_k(x) \) ，以及\(\int_{M}f(x){\mathrm{d}x}=\int_{M}\lim_{k\rightarrow \infty} \varphi_k(x){\mathrm{d}x}=\lim_{k\rightarrow \infty} \int_{M} \varphi_k(x) {\mathrm{d}x}\)
+若 $\{\varphi_k(x)\}$ 一致收敛于 $f(x)$ ，且对所有 $k$ ，$\varphi_k{(x)}$ 连续，则有：$\frac{\mathrm{d}}{\mathrm{d}x}f(x)=\frac{\mathrm{d}}{\mathrm{d}x}\lim_{k\rightarrow \infty} \varphi_k(x)=\lim_{k\rightarrow \infty}  \frac{\mathrm{d}}{\mathrm{d}x} \varphi_k(x) $ ，以及$\int_{M}f(x){\mathrm{d}x}=\int_{M}\lim_{k\rightarrow \infty} \varphi_k(x){\mathrm{d}x}=\lim_{k\rightarrow \infty} \int_{M} \varphi_k(x) {\mathrm{d}x}$
 
-只要将该定理的一般项 \(\varphi_k(x)\) 换成部分和 \(S_k(x)\) 即可。于是我们又掌握了极限号与求导号换序，以及极限号与积分号换序。由于函数列在物理里通常是以部分和的形式出现的，所以这两个换序不会怎么用到。
+只要将该定理的一般项 $\varphi_k(x)$ 换成部分和 $S_k(x)$ 即可。于是我们又掌握了极限号与求导号换序，以及极限号与积分号换序。由于函数列在物理里通常是以部分和的形式出现的，所以这两个换序不会怎么用到。
 
 值得一提的是，上述换序时所说的“求和号”，是指无穷求和。如果只是对有限项求和，那就根本算不上级数，收敛也就无从谈起。当然，有限项的换序是很安全的，直接换就可以了。
 
@@ -143,52 +143,52 @@ looks good
 
 在求级数和的时候，我们可以这样想，函数项级数的每一项本来与序数和自变量都有关，即
 
-\[\varphi(x;k)=\varphi_k(x)\]
+$$\varphi(x;k)=\varphi_k(x)$$
 
-而对 \(k\) 求和，就让 \(k\) 这个字母消失了：
+而对 $k$ 求和，就让 $k$ 这个字母消失了：
 
-\[\sum_{k}\varphi_k(x)=S(x)\]
+$$\sum_{k}\varphi_k(x)=S(x)$$
 
-只剩下了 \(x\) 。
+只剩下了 $x$ 。
 
-类似地，对积分也可以这么做，设想某个量与两个量有关： \(y=\varphi(x,s)\)
+类似地，对积分也可以这么做，设想某个量与两个量有关： $y=\varphi(x,s)$
 
-现在我们不对 \(s\) 求和了，而是对 \(s\) 求积分：
+现在我们不对 $s$ 求和了，而是对 $s$ 求积分：
 
-\[\int_{a}^{b}\varphi(x,s)\mathrm{d}s=f(x)\]
+$$\int_{a}^{b}\varphi(x,s)\mathrm{d}s=f(x)$$
 
-这样就让 \(s\) 消失，只留下了 \(x\) 。
+这样就让 $s$ 消失，只留下了 $x$ 。
 
-这就是**含参变量积分**。在这里 \(x\) 是参数，选取不同的 \(x\) ，可以让该积分有不同的值。
+这就是**含参变量积分**。在这里 $x$ 是参数，选取不同的 $x$ ，可以让该积分有不同的值。
 
 > **例 4**  
-> 观察 \(\int_{0}^{+\infty}\mathrm{e}^{-x}\mathrm{d}x=1\) ，\(\int_{0}^{+\infty}\mathrm{e}^{-2x}\mathrm{d}x=\frac{1}{2}\) ，\(\int_{0}^{+\infty}\mathrm{e}^{-3x}\mathrm{d}x=\frac{1}{3}\)，...  
-> 可见 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x\) 对 \(k\) 应该有一个函数关系。实际上这个关系就是 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)\) ，这是很容易证明的。  
-> 这里的 \(k\) 就是含参变量积分的“参变量”。
+> 观察 $\int_{0}^{+\infty}\mathrm{e}^{-x}\mathrm{d}x=1$ ，$\int_{0}^{+\infty}\mathrm{e}^{-2x}\mathrm{d}x=\frac{1}{2}$ ，$\int_{0}^{+\infty}\mathrm{e}^{-3x}\mathrm{d}x=\frac{1}{3}$，...  
+> 可见 $\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x$ 对 $k$ 应该有一个函数关系。实际上这个关系就是 $\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)$ ，这是很容易证明的。  
+> 这里的 $k$ 就是含参变量积分的“参变量”。
 
 ### 2.2 含参变量积分：换序  
 
-我们感兴趣的是，含参变量积分关于参数有什么样的性质，比如它对参变量连续吗？即 \(\int_{a}^{b}\varphi(x,s)\mathrm{d}s=f(x)\) 连续吗？
+我们感兴趣的是，含参变量积分关于参数有什么样的性质，比如它对参变量连续吗？即 $\int_{a}^{b}\varphi(x,s)\mathrm{d}s=f(x)$ 连续吗？
 
 还有一些更有趣的问题，比如它可以积分号下求导吗？
 
 > **例 5**  
 >   
-> 对 \(\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)\) 两边求导得 \(\frac{\mathrm{d}}{\mathrm{d}k}\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)\)
+> 对 $\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=\frac{1}{k}\quad (k\gt 0)$ 两边求导得 $\frac{\mathrm{d}}{\mathrm{d}k}\int_{0}^{+\infty}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)$
 
-不难发现，将求导放到积分号里面去，结果竟然也正确：\(\int_{0}^{+\infty}\frac{\partial}{\partial k}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)\)
+不难发现，将求导放到积分号里面去，结果竟然也正确：$\int_{0}^{+\infty}\frac{\partial}{\partial k}\mathrm{e}^{-kx}\mathrm{d}x=-\frac{1}{k^2}\quad (k\gt 0)$
 
 这种操作什么时候是允许的呢？下面的定理回答了这个问题：
 
 > **定理 2.1（含参黎曼积分的连续性、可微性、可积性）**  
 >   
->  \(I(y)=\int_{\alpha}f(x,y)\mathrm{d}x, \, x\in \alpha, \, y \in \beta\) ， \(\alpha\) 和 \(\beta\) 是有界闭区间。  
+>  $I(y)=\int_{\alpha}f(x,y)\mathrm{d}x, \, x\in \alpha, \, y \in \beta$ ， $\alpha$ 和 $\beta$ 是有界闭区间。  
 >   
-> (a) 若 \(f\) 在 \(\alpha \times \beta\) 上连续，则 \(I(y)\) 在 \(\beta\) 上连续。换言之，**极限号和积分号可以换序**。  
+> (a) 若 $f$ 在 $\alpha \times \beta$ 上连续，则 $I(y)$ 在 $\beta$ 上连续。换言之，**极限号和积分号可以换序**。  
 >   
-> (b) 若 \(f\) 和 \(\frac{\partial f}{\partial y}\) 在 \(\alpha \times \beta\) 上连续，则 \(I(y)\) 在 \(\beta\) 上可微，且 \(\frac{\mathrm{d}}{\mathrm{d}y}I(y)=\int_{\alpha}\frac{\partial}{\partial y}f(x,y)\mathrm{d}y\) 。换言之，**求导和积分可以换序**。  
+> (b) 若 $f$ 和 $\frac{\partial f}{\partial y}$ 在 $\alpha \times \beta$ 上连续，则 $I(y)$ 在 $\beta$ 上可微，且 $\frac{\mathrm{d}}{\mathrm{d}y}I(y)=\int_{\alpha}\frac{\partial}{\partial y}f(x,y)\mathrm{d}y$ 。换言之，**求导和积分可以换序**。  
 >   
-> (c) 若 \(f\) 在 \(\alpha \times \beta\) 上连续，则 \(I(y)\) 在 \(\beta\) 上可积，且 \(\int_{\beta}\mathrm{d}y\int_{\alpha}f(x,y)\mathrm{d}x=\int_{\alpha}\mathrm{d}x\int_{\beta}f(x,y)\mathrm{d}y\) 。换言之，**积分号之间可以换序**。
+> (c) 若 $f$ 在 $\alpha \times \beta$ 上连续，则 $I(y)$ 在 $\beta$ 上可积，且 $\int_{\beta}\mathrm{d}y\int_{\alpha}f(x,y)\mathrm{d}x=\int_{\alpha}\mathrm{d}x\int_{\beta}f(x,y)\mathrm{d}y$ 。换言之，**积分号之间可以换序**。
 
 读者可能心生疑问：这里并没有一致收敛啊？那是当然的。闭区间上的积分总是有界的，根本不会发散，也就没有收敛的概念，更不用说一致收敛了。但是，广义积分不一定收敛。下面我们就来看看广义积分。
 
@@ -196,19 +196,19 @@ looks good
 
 所谓广义积分，简单理解就是指在无界区间或者有界开区间上的积分。它们有可能不收敛！
 
-无界区间上的广义积分\(\int_{a}^{+\infty}f(x)\mathrm{d}x\) 的收敛性定义为，对于任意 \(\epsilon\gt 0\) ，存在 \(N\) ，使得当 \(M\gt N\) 时， \(\left|\int_{M}^{+\infty}f(x)\mathrm{d}x\right|\lt \epsilon\) 。
+无界区间上的广义积分$\int_{a}^{+\infty}f(x)\mathrm{d}x$ 的收敛性定义为，对于任意 $\epsilon\gt 0$ ，存在 $N$ ，使得当 $M\gt N$ 时， $\left|\int_{M}^{+\infty}f(x)\mathrm{d}x\right|\lt \epsilon$ 。
 
 ### 2.4 含参变量广义积分：一致收敛与换序  
 
-如果给 \(f(x)\) 再加一个参数 \(f(x;y)\) （这里参数又换成 \(y\) 了，希望你没有被搞晕），同样的问题又出现了：是否对于所有不同的参数 \(y\) ，我们都能用一个 \(N\) 控制住误差？这就是广义积分的一致收敛问题。
+如果给 $f(x)$ 再加一个参数 $f(x;y)$ （这里参数又换成 $y$ 了，希望你没有被搞晕），同样的问题又出现了：是否对于所有不同的参数 $y$ ，我们都能用一个 $N$ 控制住误差？这就是广义积分的一致收敛问题。
 
 > **定义二（含参广义积分的一致收敛）**  
 >   
-> 若对于任意 \(\epsilon\gt 0\) ，存在 \(N(\epsilon)\) ，使得当 \(M\gt N(\epsilon)\) 时， \(\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|\lt \epsilon\) ，则称广义积分 \(\int_{a}^{+\infty}f(x,y)\mathrm{d}x\) 一致收敛。  
+> 若对于任意 $\epsilon\gt 0$ ，存在 $N(\epsilon)$ ，使得当 $M\gt N(\epsilon)$ 时， $\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|\lt \epsilon$ ，则称广义积分 $\int_{a}^{+\infty}f(x,y)\mathrm{d}x$ 一致收敛。  
 >   
-> （或 \(\lim_{M\rightarrow \infty} \sup_{y\in \beta}\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|=0\)）
+> （或 $\lim_{M\rightarrow \infty} \sup_{y\in \beta}\left|\int_{M}^{+\infty}f(x,y)\mathrm{d}x\right|=0$）
 
-可见，如果广义积分一致收敛，由于 \(N(\epsilon)\) 与 \(y\) 无关，对于任意给定的上界 \(\epsilon\) ，我们都可以只用一个 \(N(\epsilon)\) ，一次性管住所有 \(y\) ，而不需要为每个 \(y\) 量身定制一套 \(N(\epsilon,y)\) 。这与前面函数项级数的情况是类似的。
+可见，如果广义积分一致收敛，由于 $N(\epsilon)$ 与 $y$ 无关，对于任意给定的上界 $\epsilon$ ，我们都可以只用一个 $N(\epsilon)$ ，一次性管住所有 $y$ ，而不需要为每个 $y$ 量身定制一套 $N(\epsilon,y)$ 。这与前面函数项级数的情况是类似的。
 
 对于其他类型的广义积分，如**有界开区间**上的广义积分，讨论方法类似，不再赘述。
 
@@ -216,13 +216,13 @@ looks good
 
 > **定理 2.3（含参广义积分的连续性、可微性、可积性）**   
 >   
-> 已知广义积分 \(I(y)=\int_{\alpha}f(x,y)\mathrm{d}x, \, x\in \alpha, \, y \in \beta\) ，\(\beta\) 是有界闭区间，**且** \(I(y)\) **一致收敛**。  
+> 已知广义积分 $I(y)=\int_{\alpha}f(x,y)\mathrm{d}x, \, x\in \alpha, \, y \in \beta$ ，$\beta$ 是有界闭区间，**且** $I(y)$ **一致收敛**。  
 >   
->  a) 若 \(f\) 在 \(\alpha \times \beta\) 上连续，则 \(I(y)\) 在 \(\beta\) 上连续。换言之，**极限号和积分号可以换序**。  
+>  a) 若 $f$ 在 $\alpha \times \beta$ 上连续，则 $I(y)$ 在 $\beta$ 上连续。换言之，**极限号和积分号可以换序**。  
 >   
->  b) 若 \(f\) 和 \(\frac{\partial f}{\partial y}\) 在 \(\alpha \times \beta\) 上连续，且\(\int_{\alpha}\frac{\partial f}{\partial y}(x,y)\mathrm{d}x\) 一致收敛，则 \(I(y)\) 在 \(\beta\) 上可微，且 \(\frac{\mathrm{d}}{\mathrm{d}y}I(y)=\int_{\alpha}\frac{\partial}{\partial y}f(x,y)\mathrm{d}y\) 。换言之，**求导和积分可以换序**。  
+>  b) 若 $f$ 和 $\frac{\partial f}{\partial y}$ 在 $\alpha \times \beta$ 上连续，且$\int_{\alpha}\frac{\partial f}{\partial y}(x,y)\mathrm{d}x$ 一致收敛，则 $I(y)$ 在 $\beta$ 上可微，且 $\frac{\mathrm{d}}{\mathrm{d}y}I(y)=\int_{\alpha}\frac{\partial}{\partial y}f(x,y)\mathrm{d}y$ 。换言之，**求导和积分可以换序**。  
 >   
->  c) 若 \(f\) 在 \(\alpha \times \beta\) 上连续，则 \(I(y)\) 在 \(\beta\) 上可积，且 \(\int_{\beta}\mathrm{d}y\int_{\alpha}f(x,y)\mathrm{d}x=\int_{\alpha}\mathrm{d}x\int_{\beta}f(x,y)\mathrm{d}y\) 。换言之，**积分号之间可以换序**。
+>  c) 若 $f$ 在 $\alpha \times \beta$ 上连续，则 $I(y)$ 在 $\beta$ 上可积，且 $\int_{\beta}\mathrm{d}y\int_{\alpha}f(x,y)\mathrm{d}x=\int_{\alpha}\mathrm{d}x\int_{\beta}f(x,y)\mathrm{d}y$ 。换言之，**积分号之间可以换序**。
 
 所以，对于普通的黎曼积分，只需要连续即可各种换序，不需要一致收敛（也不存在一致收敛的概念，正如有限项函数求和不需要收敛）。但对于广义积分来说，换序的操作还是要求一致收敛的。
 

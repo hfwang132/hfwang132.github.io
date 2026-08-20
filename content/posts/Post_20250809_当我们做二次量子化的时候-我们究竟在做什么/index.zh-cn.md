@@ -17,16 +17,16 @@ author: "Haifei"
 
 考虑这样一个量子态，它是以下两种情形的等权相干叠加：
 
-1. 粒子数为 1，且波函数为 $\psi\_1(x\_1)$
-2. 粒子数为 2，且波函数为 $\psi\_2(x\_1, x\_2)$
+1. 粒子数为 1，且波函数为 $\psi_1(x_1)$
+2. 粒子数为 2，且波函数为 $\psi_2(x_1, x_2)$
 
 对于这样一个量子态，你是没办法写下它的波函数的。这样写很明显也不对：
 
-$\psi(x\_1,x\_2) = \frac{1}{\sqrt{2}}\psi\_1(x\_1)+\frac{1}{\sqrt{2}}\psi\_2(x\_1,x\_2) \quad (\times)$
+$\psi(x_1,x_2) = \frac{1}{\sqrt{2}}\psi_1(x_1)+\frac{1}{\sqrt{2}}\psi_2(x_1,x_2) \quad (\times)$
 
 实际上，正确的写法只能使用二次量子化的语言：
 
-$\begin{aligned} |\psi\rangle = \frac{1}{\sqrt{2}} \int \mathrm{d}x\_1 \psi\_1(x\_1) \hat{\psi}^\dagger(x\_1) |\text{vac}\rangle + \frac{1}{\sqrt{2}} \iint \frac{1}{2}\mathrm{d}x\_1\mathrm{d}x\_2 \psi\_2(x\_1,x\_2) \hat{\psi}^\dagger(x\_1)\hat{\psi}^\dagger(x\_2) | \text{vac}\rangle \end{aligned}$
+$\begin{aligned} |\psi\rangle = \frac{1}{\sqrt{2}} \int \mathrm{d}x_1 \psi_1(x_1) \hat{\psi}^\dagger(x_1) |\text{vac}\rangle + \frac{1}{\sqrt{2}} \iint \frac{1}{2}\mathrm{d}x_1\mathrm{d}x_2 \psi_2(x_1,x_2) \hat{\psi}^\dagger(x_1)\hat{\psi}^\dagger(x_2) | \text{vac}\rangle \end{aligned}$
 
 其中 $\hat{\psi}^\dagger$ 是场的产生算符， $|\text{vac}\rangle$ 是真空态。
 
@@ -34,11 +34,11 @@ $\begin{aligned} |\psi\rangle = \frac{1}{\sqrt{2}} \int \mathrm{d}x\_1 \psi\_1(x
 
 另一方面，光子虽然通常粒子数不守恒，但量子力学是将光子场作为经典电磁场来处理，而经典电磁场正好近似刻画了宇宙中最常出现的光场态——相干态：
 
-$\begin{aligned} |\alpha\_\mathbf{k}\rangle &=  \exp(-|\alpha\_\mathbf{k}|^2/2)\exp(\alpha\_\mathbf{k}\hat{a}\_\mathbf{k}) | \text{vac}\rangle \\\\ &= \exp(-|\alpha\_\mathbf{k}|^2/2) \sum\_{n=0}^{\infty} \frac{\alpha^n\_\mathbf{k}}{\sqrt{n!}} |n\_\mathbf{k}\rangle \end{aligned}$
+$\begin{aligned} |\alpha_\mathbf{k}\rangle &=  \exp(-|\alpha_\mathbf{k}|^2/2)\exp(\alpha_\mathbf{k}\hat{a}_\mathbf{k}) | \text{vac}\rangle \\\\ &= \exp(-|\alpha_\mathbf{k}|^2/2) \sum_{n=0}^{\infty} \frac{\alpha^n_\mathbf{k}}{\sqrt{n!}} |n_\mathbf{k}\rangle \end{aligned}$
 
-其中 $\mathbf{k}$ 代表空间模式和偏振模式， $\hat{a}\_\mathbf{k}$ 是模式 $\mathbf{k}$ 上的产生算符， $|n\_\mathbf{k}\rangle$ 是模式 $\mathbf{k}$ 上的 $n$ 粒子数态， $\alpha\_\mathbf{k} \in \mathbb{C}$ 描述模式 $\mathbf{k}$ 的振幅和相位。于是电磁场 $A$ 作为不同 $\mathbf{k}$ 模式的叠加，其对应的量子态可以写成：
+其中 $\mathbf{k}$ 代表空间模式和偏振模式， $\hat{a}_\mathbf{k}$ 是模式 $\mathbf{k}$ 上的产生算符， $|n_\mathbf{k}\rangle$ 是模式 $\mathbf{k}$ 上的 $n$ 粒子数态， $\alpha_\mathbf{k} \in \mathbb{C}$ 描述模式 $\mathbf{k}$ 的振幅和相位。于是电磁场 $A$ 作为不同 $\mathbf{k}$ 模式的叠加，其对应的量子态可以写成：
 
-$\begin{aligned} |A\rangle = \exp\left(-\frac{1}{2}\sum\_{\mathbf{k}}|\alpha\_\mathbf{k}|^2\right)\exp\left(\sum\_{\mathbf{k}}\alpha\_\mathbf{k}\hat{a}\_\mathbf{k}\right) | \text{vac}\rangle \end{aligned}$
+$\begin{aligned} |A\rangle = \exp\left(-\frac{1}{2}\sum_{\mathbf{k}}|\alpha_\mathbf{k}|^2\right)\exp\left(\sum_{\mathbf{k}}\alpha_\mathbf{k}\hat{a}_\mathbf{k}\right) | \text{vac}\rangle \end{aligned}$
 
 可以证明，这是电场算符和磁场算符的最小不确定性态，对应宏观经典电磁波。
 

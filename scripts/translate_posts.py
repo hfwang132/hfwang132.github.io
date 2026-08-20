@@ -270,8 +270,6 @@ def protect_markdown(body: str) -> tuple[str, tuple[ProtectedEntry, ...]]:
 
     patterns: list[tuple[str, str, int]] = [
         (r"{{[<%].*?[>%]}}", "shortcode", re.DOTALL),
-        (r"\\\[(?:.|\n)*?\\\]", "math", 0),
-        (r"\\\((?:.|\n)*?\\\)", "math", 0),
         (r"\$\$(?:.|\n)*?\$\$", "math", 0),
         (r"(?<!\\)\$(?!\$)(?:\\.|[^$\n])+?(?<!\\)\$(?!\$)", "math", 0),
         (r"(`+)(?:(?!\1).)*?\1", "code", re.DOTALL),

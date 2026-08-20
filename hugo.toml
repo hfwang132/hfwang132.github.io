@@ -427,12 +427,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # KaTeX 数学公式配置 (KaTeX https://katex.org/)
     [params.page.math]
       enable = true
-      # default inline delimiter is $ ... $ and \( ... \)
-      # 默认行内定界符是 $ ... $ 和 \( ... \)
+      # the only inline delimiter is $ ... $
+      # 唯一的行内定界符是 $ ... $
       inlineLeftDelimiter = ""
       inlineRightDelimiter = ""
-      # default block delimiter is $$ ... $$, \[ ... \], \begin{equation} ... \end{equation} and some other functions
-      # 默认块定界符是 $$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数
+      # the only block delimiter is $$ ... $$
+      # 唯一的块级定界符是 $$ ... $$
       blockLeftDelimiter = ""
       blockRightDelimiter = ""
       # KaTeX extension copy_tex
@@ -738,14 +738,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       table = true
       taskList = true
       typographer = true
-      # Preserve standard LaTeX verbatim before KaTeX renders it in the browser.
-      # New imports use \( ... \) and \[ ... \], while legacy $ ... $ content
-      # keeps its existing behavior.
+      # Preserve dollar-delimited LaTeX verbatim before KaTeX renders it.
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]']]
-          inline = [['\(', '\)']]
+          block = [['$$', '$$']]
+          inline = [['$', '$']]
     [markup.goldmark.renderer]
       # whether to use HTML tags directly in the document
       # 是否在文档中直接使用 HTML 标签

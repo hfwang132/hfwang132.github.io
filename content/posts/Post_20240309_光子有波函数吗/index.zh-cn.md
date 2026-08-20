@@ -14,7 +14,7 @@ author: "Haifei"
 
 $\Psi(\mathbf{r},t)=\langle \mathbf{r},t|\psi\rangle=\langle 0 |E^{+}(\mathbf{r},t)|\psi\rangle$ 
 
-其中 $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum\_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon\_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega\_{\mathbf{k}} t)} a^\dag\_{\mathbf{k},\lambda} |0\rangle \end{aligned}$ 。
+其中 $\begin{aligned} |\mathbf{r},t\rangle = E^{-}(\mathbf{r},t) |0\rangle = \sum_{\mathbf{k},\lambda} \sqrt{\frac{\hbar \omega}{2 \epsilon_0 V}} e^{\mathrm{i}(\mathbf{k}\cdot \mathbf{r}-\omega_{\mathbf{k}} t)} a^\dag_{\mathbf{k},\lambda} |0\rangle \end{aligned}$ 。
 
 直观来看，就是让场算符 $E^{-}(\mathbf{r},t)$ 在时空点 $(\mathbf{r},t)$ 处创造一个态 $|\mathbf{r},t\rangle$ ，再求这个态和 $|\psi\rangle$ 之间的 overlap。
 
