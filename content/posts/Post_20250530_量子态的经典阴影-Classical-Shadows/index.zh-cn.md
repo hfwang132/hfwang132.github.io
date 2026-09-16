@@ -142,17 +142,33 @@ $$1-\sqrt{F} \le T \le \sqrt{1-F}$$
 
 $$\boxed{ N = O(\log d  \cdot d^{3.585} /\epsilon^{2}) = O(N \cdot 12^N/\epsilon^2)} $$
 
-update: 2025 年 2 月，上界的记录已经被刷新了，是 $\boxed{ N = O(\log d  \cdot d^{3.322} /\epsilon^{2}) = O(N \cdot 10^N/\epsilon^2)} $ ，而下界则被证明是 $\Omega(d^{3.188}\log (d)/\epsilon^2)=\Omega(N \cdot 9.118^N /\epsilon^2)$ [[2]](#ref\_2)。
+update（2026 年 9 月）：上面用 Hoeffding 不等式加 union bound 推出来的 $O(n \cdot 12^n/\epsilon^2)$ 是一个宽松的上界，它松在两处。
 
-### 2.3 单样本测量的样本复杂度  
+一是每个泡利系数其实不止能从一个测量基得到。权重为 $w$ 的泡利算符，也就是 $n$ 个因子里有 $w$ 个不是单位阵的那些，在 $3^n$ 个测量基里有 $3^{n-w}$ 个都能测到它。也就是说，它的有效样本数是单个测量基的 $3^{n-w}$ 倍。二是 union bound 带来的 $\log d$ 因子。改用 Hilbert–Schmidt 范数的二阶矩来控制误差，这个因子就省掉了。
 
-实际上，我们可以做得更好：上述上界可以降低到 $\boxed{O(\log d \cdot d^3 / \epsilon^{2})}$ 。
+把这两点代回前面的推导。每个测量基各测 $N_0$ 次，权重为 $w$ 的泡利算符共有 $\binom{n}{w}3^w$ 个，每个的方差约为 $1/(3^{n-w}N_0)$，于是
 
-这是因为 $3^n$ 个测量基（measuremet settings）给出了 $3^n \cdot 2^n = 6^n = d^{2.585}$ 个 POVM 元素，但保证 informationally complete 所需要的最少的 POVM 元素数量是 $4^n = d^2$ 个。可见，我们可以使用正好拥有 $d^2$ 个元素的 SIC-POVM，或者使用 MUB (Mutually Unbiased Bases)，它包含 $(d+1)$ 个测量基，每个测量基有 $d$ 个元素，共 $d(d+1)$ 个 POVM 元素。不管用哪种方法，都可以将样本复杂度上界降低到 $O(\log d \cdot d^3 /\epsilon^{2})$ 。
+$$\|\Delta\|_1^2 \le d\,\|\Delta\|_2^2 \approx \sum_{w=0}^{n} \binom{n}{w}\, 3^w \cdot \frac{1}{3^{n-w} N_0} = \frac{10^n}{3^n N_0}.$$
 
-下界则被证明是 $\Omega(d^3 /\epsilon^{2})$ [[3]](#ref\_3)，但尚未发现具体的测量方法。与上界相比，下界只是少了 $\log(d)$ ，对于一般实验来说影响不大。
+令右边小于 $\epsilon^2$，得到 $N_0 = 10^n/(3^n\epsilon^2)$，总样本数 $3^n N_0 = 10^n/\epsilon^2$。这只是方差层面的估算，严格的证明见 [[8]](#ref\_8) 和 [[2]](#ref\_2)。
 
-### 2.4 多样本测量的样本复杂度  
+这个 $\boxed{N = O(10^n/\epsilon^2) = O(d^{3.322}/\epsilon^2)}$ 的上界，Yu 在 2020 年就已经证明了 [[8]](#ref\_8)。Acharya、Dharmavarapu、Liu、Yu 在 2025 年重新给出了它，并证明了第一个专门针对泡利测量的下界 $\Omega(9.118^n/\epsilon^2)$，其中 $9.118 \approx 2^{\,4 - h(1/4)}$，$h$ 是二元熵函数 [[2]](#ref\_2)。这两个界都没有 $\log d$ 因子。
+
+同年 7 月，同一组作者又把下界推到了 $\Omega\big(10^n/(\sqrt{n}\,\epsilon^2)\big)$ [[9]](#ref\_9)。这个下界对任何只用单比特测量的方案都成立，不限于泡利基。每个 qubit 可以用任意的单比特 POVM，测量基还可以根据之前的测量结果自适应地选。也就是说，泡利测量在所有单比特测量方案里已经是近似最优的，上下界只差一个 $\sqrt{n} = \sqrt{\log_2 d}$ 的因子。这个 $\sqrt{n}$ 能不能去掉，目前还没有答案。
+
+### 2.4 单样本测量的样本复杂度  
+
+实际上，我们可以做得更好：上述上界可以降低到 $\boxed{O(d^3 / \epsilon^{2})}$ 。
+
+这是因为 $3^n$ 个测量基（measuremet settings）给出了 $3^n \cdot 2^n = 6^n = d^{2.585}$ 个 POVM 元素，但保证 informationally complete 所需要的最少的 POVM 元素数量是 $4^n = d^2$ 个。可见，我们可以使用正好拥有 $d^2$ 个元素的 SIC-POVM，或者使用 MUB (Mutually Unbiased Bases)，它包含 $(d+1)$ 个测量基，每个测量基有 $d$ 个元素，共 $d(d+1)$ 个 POVM 元素。
+
+用 SIC-POVM 或 MUB 这类 2-design 测量，再配合投影最小二乘（projected least squares）估计量，样本复杂度的上界可以降到 $O(d^3 \log d/\epsilon^2)$ [[10]](#ref\_10)。如果换成 uniform POVM，也就是按 Haar 测度随机取的秩一 POVM，同一篇文章证明 $\log d$ 也可以去掉，得到 $O(d^3/\epsilon^2)$。只是 uniform POVM 有无穷多个元素，实验上做不了。
+
+下界方面，Haah 等人在 2017 年就证明了非自适应的单样本测量需要 $\Omega(d^3/\epsilon^2)$ 个样本 [[5]](#ref\_5)。Chen 等人在 2023 年证明，就算允许根据之前的测量结果自适应地选择下一次测量，这个下界也不变 [[11]](#ref\_11)。Lowe 与 Nayak 后来给出了非自适应情形的一个简短证明 [[3]](#ref\_3)。
+
+所以单样本测量的样本复杂度是 $\boxed{\Theta(d^3/\epsilon^2)}$，上下界已经重合。而且 2025 年 Cho 与 Kim 证明，用深度 $O(\log n)$ 的局域线路做测量就能达到这个界，不需要 uniform POVM [[12]](#ref\_12)。
+
+### 2.5 多样本测量的样本复杂度  
 
 以上的测量方法都属于单样本测量（Single-copy measurements），因为我们一次只测量一个样本。我们可以考虑更一般的情况——通过纠缠多个样本 $\rho^{\otimes n}$ 进行联合测量，这叫做多样本测量（Multi-copy measurements）。这样的测量需要量子存储器（quantum memory），在目前的量子硬件中基本很难实现。
 
@@ -160,9 +176,21 @@ update: 2025 年 2 月，上界的记录已经被刷新了，是 $\boxed{ N = O(
 
 总结：
 
-$$\begin{aligned} \hline & \text{POVM} & \quad & \text{Sample Complexity}\,(d=2^n)\\ \hline  & \text{Pauli Measurements} & \quad & O(d^{3.322}\log (d)/\epsilon^2), \, \Omega(d^{3.188}\log (d)/\epsilon^2) \\ & \text{Single-copy measurements} & \quad & O(d^{3}\log (d)/\epsilon^2),\,\Omega(d^3 / \epsilon^2) \\ & \text{Multi-copy measurements} & \quad & \Theta(d^2/\epsilon^2)\\ \hline \end{aligned}$$
+$$\begin{aligned} \hline & \text{POVM} & \quad & \text{Sample Complexity}\,(d=2^n)\\ \hline  & \text{Pauli Measurements} & \quad & O(10^n/\epsilon^2) = O(d^{3.322}/\epsilon^2),\ \ \Omega\big(10^n/(\sqrt{n}\,\epsilon^2)\big) \\ & \text{Single-copy measurements} & \quad & \Theta(d^{3}/\epsilon^2) \\ & \text{Multi-copy measurements} & \quad & \Theta(d^2/\epsilon^2)\\ \hline \end{aligned}$$
 
-注意，该表中 $O(\cdot)$ 代表上界， $\Omega(\cdot)$ 代表下界， $\Theta(\cdot)$ 代表紧确界。
+注意，该表中 $O(\cdot)$ 代表上界， $\Omega(\cdot)$ 代表下界， $\Theta(\cdot)$ 代表紧确界。Pauli 行的下界对任何只用单比特测量的方案都成立，Pauli 测量只是其中最常用的一种。
+
+表格三行里，只有 Pauli 行还没有封口。目前有两个问题是开放的。
+
+一是满秩情形的 $\sqrt{n}$ 因子。上界 $10^n/\epsilon^2$ 与下界 $10^n/(\sqrt{n}\,\epsilon^2)$ 之间差的这个因子，很可能只是证明技术上的损失，但目前谁也没有把它去掉。[[9]](#ref\_9) 还问了另一个问题，允许任意单比特 POVM，是否能比泡利基省下超过常数倍的样本。
+
+二是低秩情形。如果事先知道 $\rho$ 的秩不超过 $r$，泡利测量需要多少样本？两个端点是清楚的。纯态（$r=1$）只要 $\tilde O(2^n/\epsilon^2)$ 个样本，而且非自适应的泡利测量就够 [[13]](#ref\_13)。满秩（$r=d$）就是上面的 $\tilde\Theta(10^n/\epsilon^2)$。中间的秩，已知的只有
+
+$$\Omega\!\left(\frac{2^n r^2}{\epsilon^2}\right) \;\le\; N \;\le\; O\!\left(\frac{\min\{\,n\,3^n r^2,\ 10^n\,\}}{\epsilon^2}\right),$$
+
+其中下界是对所有非自适应单样本测量都成立的通用下界 [[3]](#ref\_3)，上界的两项分别来自 [[10]](#ref\_10) 和 [[8]](#ref\_8)。取 $r = \sqrt d$ 看一下，下界是 $4^n/\epsilon^2$，上界是 $n \cdot 6^n/\epsilon^2$，差一个 $(3/2)^n$。这个差距是指数级的，而且目前没有任何专门针对泡利测量、依赖于 $r$ 的下界。
+
+这里的泡利测量指的是本文一开始定义的那种，每个 qubit 在 $X$、$Y$、$Z$ 基下测量，并保留全部 $2^n$ 个结果。文献里还有另一种也叫 Pauli measurement 的模型，每个样本只测一个泡利算符的 $\pm 1$ 本征值，只有两个结果。那种模型的低秩复杂度早在 2012 年就定为 $\tilde\Theta(r^2 d^2/\epsilon^2)$ 了 [[14]](#ref\_14)，满秩时是 $16^n$，比这里的 $10^n$ 大得多。两个模型不要混。
 
 ## 三、经典阴影（Classical Shadows）  
 
@@ -464,9 +492,16 @@ $$\boxed{ N  = O\left( \log(M/\delta)\max_i||O_i||^2 /\epsilon^2 \right) }$$
 ## 参考  
 
 1. [^](#ref\_1\_0)Cotler, J. & Wilczek, F. Quantum Overlapping Tomography. Phys. Rev. Lett. 124, 100401 (2020).
-2. [^](#ref\_2\_0)Acharya, Jayadev, et al. "Pauli measurements are not optimal for single-copy tomography." Proceedings of the 57th Annual ACM Symposium on Theory of Computing. 2025.
-3. [^](#ref\_3\_0)Nayak, A., & Lowe, A. (2025). Lower bounds for learning quantum states with single-copy measurements. ACM Transactions on Computation Theory.
+2. [^](#ref\_2\_0)Acharya, J., Dharmavarapu, A., Liu, Y. & Yu, N. Pauli measurements are not optimal for single-copy tomography. in Proceedings of the 57th Annual ACM Symposium on Theory of Computing (STOC 2025) 718–729. doi:10.1145/3717823.3718248. arXiv:2502.18170.
+3. [^](#ref\_3\_0)Lowe, A. & Nayak, A. Lower bounds for learning quantum states with single-copy measurements. ACM Trans. Comput. Theory 17(1), Art. 7 (2025). doi:10.1145/3717450. arXiv:2207.14438.
 4. [^](#ref\_4\_0)O’Donnell, R. & Wright, J. Efficient quantum tomography. in Proceedings of the forty-eighth annual ACM symposium on Theory of Computing 899–912 (ACM, Cambridge MA USA, 2016). doi:10.1145/2897518.2897544.
 5. [^](#ref\_5\_0)Haah, J., Harrow, A. W., Ji, Z., Wu, X. & Yu, N. Sample-optimal tomography of quantum states. in Proceedings of the forty-eighth annual ACM symposium on Theory of Computing 913–925 (ACM, Cambridge MA USA, 2016). doi:10.1145/2897518.2897585.
 6. [^](#ref\_6\_0)Huang, H.-Y., Kueng, R. & Preskill, J. Predicting many properties of a quantum system from very few measurements. Nat. Phys. 16, 1050–1057 (2020).
 7. [^](#ref\_7\_0)Aaronson, Scott. "Shadow tomography of quantum states." Proceedings of the 50th annual ACM SIGACT symposium on theory of computing. 2018.
+8. [^](#ref\_8\_0)Yu, N. Sample efficient tomography via Pauli measurements. arXiv:2009.04610 (2020).
+9. [^](#ref\_9\_0)Acharya, J., Dharmavarapu, A., Liu, Y. & Yu, N. Pauli measurements are near-optimal for single-qubit tomography. arXiv:2507.22001 (2025).
+10. [^](#ref\_10\_0)Guţă, M., Kahn, J., Kueng, R. & Tropp, J. A. Fast state tomography with optimal error bounds. J. Phys. A: Math. Theor. 53, 204001 (2020). arXiv:1809.11162.
+11. [^](#ref\_11\_0)Chen, S., Huang, B., Li, J., Liu, A. & Sellke, M. When does adaptivity help for quantum state learning? in 64th IEEE Annual Symposium on Foundations of Computer Science (FOCS 2023) 391–404. doi:10.1109/FOCS57990.2023.00029. arXiv:2206.05265.
+12. [^](#ref\_12\_0)Cho, G. & Kim, D. Sample-optimal single-copy quantum state tomography with shallow-depth measurements. arXiv:2509.12703 (2025).
+13. [^](#ref\_13\_0)Grewal, S., Gupta, M., He, W., Sen, A. & Singhal, M. Nearly time-optimal pure state tomography with Pauli measurements. arXiv:2601.04444 (2026).
+14. [^](#ref\_14\_0)Flammia, S. T., Gross, D., Liu, Y.-K. & Eisert, J. Quantum tomography via compressed sensing: error bounds, sample complexity, and efficient estimators. New J. Phys. 14, 095022 (2012). arXiv:1205.2300.
